@@ -115,12 +115,14 @@
     #slide-counter { font-size: 12px; color: var(--text4); flex: 1; text-align: center; }
     #fs-btn { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
     #fs-btn:hover { background: var(--border); color: var(--text); }
+    #fs-btn-edges { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+    #fs-btn-edges:hover { background: var(--border); color: var(--text); }
     #song-nav { display: flex; gap: 6px; margin-top: .75rem; }
     .snav-btn { flex: 1; background: var(--bg2); border: 0.5px solid var(--border); color: var(--text4); font-size: 12px; padding: 7px 8px; border-radius: 8px; cursor: pointer; text-align: center; transition: background .12s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .snav-btn:hover:not(:disabled) { background: var(--bg4); color: var(--text2); }
     .snav-btn:disabled { opacity: .2; cursor: default; }
 
-    /* ── Fullscreen ── */
+
     #fso {
       display: none; position: fixed; inset: 0; background: #000; z-index: 9999;
       flex-direction: column; align-items: stretch;
@@ -236,6 +238,7 @@
       <span id="slide-counter"></span>
       <button class="nav-btn" id="next">&#8594;</button>
       <button id="fs-btn">&#9654; Proyectar</button>
+      <button id="fs-btn-edges" title="Proyectar con pantalla negra al inicio y al final">&#9654; Con pausas</button>
     </div>
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
@@ -353,25 +356,34 @@ function aplicarFontSize(size) {
 }
 
 // ── Slides ─────────────────────────────────────────────────────
-function buildSlides(queue) {
+function buildSlides(queue, pauseEdges) {
   const slides = [];
   for (let si = 0; si < queue.length; si++) {
     const song = SONGS.find(s => s.titulo === queue[si]); if (!song) continue;
+    // Entre canciones: siempre una sola pausa
     if (si > 0) slides.push({ type:"pause", songIdx:si });
+    // Pausa al inicio de la primera canción (solo con pauseEdges)
+    if (pauseEdges && si === 0) slides.push({ type:"pause", songIdx:si });
     song.slides.forEach((html, i) =>
       slides.push({ type:"slide", html, songIdx:si, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
     );
+    // Pausa al final de la última canción (solo con pauseEdges)
+    if (pauseEdges && si === queue.length - 1) slides.push({ type:"pause", songIdx:si });
   }
   return slides;
 }
-function buildSingle(song) {
-  return song.slides.map((html, i) => ({
-    type:"slide", html, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides
-  }));
+function buildSingle(song, pauseEdges) {
+  const slides = [];
+  if (pauseEdges) slides.push({ type:"pause", songIdx:0 });
+  song.slides.forEach((html, i) =>
+    slides.push({ type:"slide", html, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
+  );
+  if (pauseEdges) slides.push({ type:"pause", songIdx:0 });
+  return slides;
 }
 
 // ── Carga canciones.json ───────────────────────────────────────
-async function cargarCanciones() {
+async function cargarCanciones() { // retorna promesa — cargarSetlist() se encadena después
   try {
     const res = await fetch("canciones.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -390,7 +402,20 @@ async function cargarCanciones() {
   }
 }
 
-// ── Tabs ───────────────────────────────────────────────────────
+// ── Carga setlist.json del repositorio ────────────────────────
+async function cargarSetlist() {
+  try {
+    const res = await fetch("setlist.json");
+    if (!res.ok) return; // no existe setlist.json, no pasa nada
+    const d = await res.json();
+    if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
+    if (Array.isArray(d.songs)) {
+      setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
+      updateBadge();
+      if (activeTab === "setlist") renderSetlist();
+    }
+  } catch(e) { /* setlist.json no existe o es inválido — ignorar silenciosamente */ }
+}
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
   activeTab = t.dataset.tab;
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("active")); t.classList.add("active");
@@ -463,7 +488,7 @@ function setupDrag(el, idx) {
   });
 }
 document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); });
-document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist]); });
+document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist], false); });
 document.getElementById("clear-btn").addEventListener("click", () => {
   if (confirm("¿Limpiar la lista?")) { setlist = []; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
 });
@@ -487,14 +512,14 @@ document.getElementById("file-input").addEventListener("change", e => {
 });
 
 // ── Viewer ─────────────────────────────────────────────────────
-function openSong(song, queue) {
+function openSong(song, queue, pauseEdges) {
   viewerQueue = queue || null;
-  viewerSlides = queue ? buildSlides(queue) : buildSingle(song);
+  viewerSlides = queue ? buildSlides(queue, pauseEdges) : buildSingle(song, pauseEdges);
   viewerIdx = queue ? viewerSlides.findIndex(s => s.type === "slide" && s.songTitle === song.titulo) : 0;
   if (viewerIdx < 0) viewerIdx = 0;
   showViewer(queue ? "&#8592; Setlist" : "&#8592; Cancionero");
 }
-function openSetlist(queue) { viewerQueue = queue; viewerSlides = buildSlides(queue); viewerIdx = 0; showViewer("&#8592; Setlist"); }
+function openSetlist(queue, pauseEdges) { viewerQueue = queue; viewerSlides = buildSlides(queue, pauseEdges); viewerIdx = 0; showViewer("&#8592; Setlist"); }
 function showViewer(label) {
   document.getElementById("cancionero-panel").style.display = "none";
   document.getElementById("setlist-panel").style.display = "none";
@@ -554,7 +579,7 @@ function renderFS() {
   const s = viewerSlides[viewerIdx]; if (!s) return;
   const isPause = s.type === "pause";
 
-  document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle;
+  document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle + (viewerQueue && viewerQueue.length > 1 ? ` · ${s.songIdx + 1}/${viewerQueue.length}` : "");
   document.getElementById("fs-content").innerHTML = isPause ? "" : htmlParaFS(s.html);
   aplicarFontSize(FS_SIZE);
 
@@ -588,9 +613,23 @@ function aplicarFontSize(size) {
 }
 
 document.getElementById("fs-btn").addEventListener("click", () => {
+  viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
-  renderFSNewSong(); // calcular tamaño al abrir
+  renderFSNewSong();
+});
+document.getElementById("fs-btn-edges").addEventListener("click", () => {
+  const curSlide = viewerSlides.find(s => s.type === "slide");
+  const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
+  if (viewerQueue && viewerQueue.length > 0) {
+    viewerSlides = buildSlides(viewerQueue, true);
+  } else if (curSong) {
+    viewerSlides = buildSingle(curSong, true);
+  } else { return; }
+  viewerIdx = 0;
+  const o = document.getElementById("fso"); o.style.display = "flex";
+  if (o.requestFullscreen) o.requestFullscreen();
+  renderFSNewSong();
 });
 document.getElementById("fs-cl").addEventListener("click", () => {
   document.getElementById("fso").style.display = "none";
@@ -622,7 +661,8 @@ document.addEventListener("keydown", e => {
 
 // ── Init ───────────────────────────────────────────────────────
 document.getElementById("setlist-panel").style.display = "none";
-loadFromStorage(); updateBadge(); cargarCanciones();
+updateBadge();
+cargarCanciones().then(() => cargarSetlist());
 </script>
 </body>
 </html>
