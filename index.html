@@ -105,8 +105,9 @@
     #slide-box { border-radius: var(--radius-lg); padding: 2rem 1.5rem; min-height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; }
     #slide-box.normal { background: var(--bg2); border: 0.5px solid var(--border); }
     #slide-box.pause { background: #0d0d0d; border: 0.5px solid #181818; }
-    #slide-content { font-size: clamp(15px, 4vw, 28px); color: #ddd; }
-    #slide-content span[class^="fs-"] { font-size: inherit; }
+    #slide-content { font-size: clamp(18px, 5vw, 28px); color: #ddd; }
+    #slide-content span[class^="fs-"] { font-size: inherit !important; }
+    #fs-content span[class^="fs-"] { font-size: inherit !important; }
     .fs-12{font-size:12px}.fs-14{font-size:14px}.fs-16{font-size:16px}.fs-18{font-size:18px}.fs-20{font-size:20px}.fs-24{font-size:24px}.fs-28{font-size:28px}.fs-32{font-size:32px}.fs-36{font-size:36px}.fs-40{font-size:40px}.fs-44{font-size:44px}.fs-48{font-size:48px}.fs-54{font-size:54px}.fs-60{font-size:60px}.fs-72{font-size:72px}
     #nav { display: flex; align-items: center; gap: 6px; margin-top: .75rem; }
     .nav-btn { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 16px; width: 38px; height: 38px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .12s; }
@@ -148,12 +149,11 @@
       display: flex; align-items: center; justify-content: center;
       padding: 0 80px;
       overflow: hidden;
-      min-height: 0; /* necesario para que flex no desborde */
+      min-height: 0;
     }
     #fs-content {
       color: #f0f0f0; text-align: center;
       max-width: 900px; width: 100%;
-      /* font-size se setea dinámicamente */
     }
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
 
@@ -167,6 +167,12 @@
     .fs-side-btn:disabled { opacity: .15; cursor: default; }
     #fs-prev-slide { left: .5rem; }
     #fs-next-slide { right: .5rem; }
+
+    /* En móvil y tablet: ocultar flechas y aprovechar todo el ancho */
+    @media (max-width: 1023px) {
+      .fs-side-btn { display: none; }
+      #fs-center { padding: 0; }
+    }
 
     /* Franja inferior: paginador + nav canciones */
     #fs-bottom {
@@ -283,7 +289,14 @@ const LS_KEY = "cancionero_setlist";
 let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "Setlist";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
 
-const FS_SIZE = 40; // tamaño fijo de fuente en proyección (px)
+// Tamaño de fuente en proyección — escala con el ancho de pantalla
+function getFsSize() {
+  const w = window.innerWidth;
+  if (w < 480) return 24;       // celular
+  if (w < 768) return 30;       // tablet chica
+  if (w < 1024) return 36;      // tablet grande
+  return 40;                    // desktop
+}
 
 // ── localStorage ───────────────────────────────────────────────
 function saveToStorage() {
@@ -327,32 +340,16 @@ function htmlParaFS(html) {
   return result;
 }
 
-// ── Font scaling — tamaño único para todas las slides de la canción ──
-function calcFontSizeParaCancion(slides) {
-  const el = document.getElementById("fs-content");
-  const container = document.getElementById("fs-center");
-  const maxW = container.clientWidth;
-  const maxH = container.clientHeight;
-
-  let tamanio = FS_MAX;
-
-  // Probar cada slide con este tamaño — usar el que haga entrar a todas
-  for (const html of slides) {
-    el.style.fontSize = tamanio + "px";
-    el.innerHTML = htmlParaFS(html);
-
-    // Reducir hasta que entre esta slide
-    while (tamanio > FS_MIN && (el.scrollHeight > maxH || el.scrollWidth > maxW)) {
-      tamanio -= 1;
-      el.style.fontSize = tamanio + "px";
-    }
-  }
-
-  return tamanio;
+// ── Tamaño de fuente en proyección ────────────────────────────
+function getFsSize() {
+  const w = window.innerWidth;
+  if (w < 480) return 24;
+  if (w < 768) return 30;
+  if (w < 1024) return 36;
+  return 40;
 }
-
-function aplicarFontSize(size) {
-  document.getElementById("fs-content").style.fontSize = size + "px";
+function aplicarFontSize() {
+  document.getElementById("fs-content").style.fontSize = getFsSize() + "px";
 }
 
 // ── Slides ─────────────────────────────────────────────────────
@@ -581,7 +578,7 @@ function renderFS() {
 
   document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle + (viewerQueue && viewerQueue.length > 1 ? ` · ${s.songIdx + 1}/${viewerQueue.length}` : "");
   document.getElementById("fs-content").innerHTML = isPause ? "" : htmlParaFS(s.html);
-  aplicarFontSize(FS_SIZE);
+  aplicarFontSize();
 
   // Paginador de puntos
   const dotsEl = document.getElementById("fs-dots");
@@ -606,10 +603,6 @@ function renderFS() {
     document.getElementById("fs-ps").disabled = ci === 0;
     document.getElementById("fs-ns").disabled = ci === viewerQueue.length-1;
   }
-}
-
-function aplicarFontSize(size) {
-  document.getElementById("fs-content").style.fontSize = size + "px";
 }
 
 document.getElementById("fs-btn").addEventListener("click", () => {
@@ -641,7 +634,7 @@ document.getElementById("fs-ps").addEventListener("click", () => goSong(-1));
 document.getElementById("fs-ns").addEventListener("click", () => goSong(1));
 
 window.addEventListener("resize", () => {
-  if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
+  if (document.getElementById("fso").style.display === "flex") aplicarFontSize();
 });
 
 document.addEventListener("keydown", e => {
