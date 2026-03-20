@@ -105,7 +105,7 @@
     #slide-box { border-radius: var(--radius-lg); padding: 2rem 1.5rem; min-height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; }
     #slide-box.normal { background: var(--bg2); border: 0.5px solid var(--border); }
     #slide-box.pause { background: #0d0d0d; border: 0.5px solid #181818; }
-    #slide-content { font-size: 28px; color: #ddd; }
+    #slide-content { font-size: clamp(15px, 4vw, 28px); color: #ddd; }
     #slide-content span[class^="fs-"] { font-size: inherit; }
     .fs-12{font-size:12px}.fs-14{font-size:14px}.fs-16{font-size:16px}.fs-18{font-size:18px}.fs-20{font-size:20px}.fs-24{font-size:24px}.fs-28{font-size:28px}.fs-32{font-size:32px}.fs-36{font-size:36px}.fs-40{font-size:40px}.fs-44{font-size:44px}.fs-48{font-size:48px}.fs-54{font-size:54px}.fs-60{font-size:60px}.fs-72{font-size:72px}
     #nav { display: flex; align-items: center; gap: 6px; margin-top: .75rem; }
@@ -659,7 +659,26 @@ document.addEventListener("keydown", e => {
   }
 });
 
-// ── Init ───────────────────────────────────────────────────────
+// ── Swipe táctil ───────────────────────────────────────────────
+let touchStartX = 0, touchStartY = 0;
+const SWIPE_MIN = 50;   // px mínimos para considerar swipe
+const SWIPE_RATIO = 1.5; // debe ser más horizontal que vertical
+
+function onTouchStart(e) {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}
+function onTouchEnd(e, context) {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) < Math.abs(dy) * SWIPE_RATIO) return;
+  if (dx < 0) goSlide(1); else goSlide(-1);
+}
+
+document.getElementById("slide-box").addEventListener("touchstart", onTouchStart, { passive: true });
+document.getElementById("slide-box").addEventListener("touchend", e => onTouchEnd(e, "viewer"), { passive: true });
+document.getElementById("fs-center").addEventListener("touchstart", onTouchStart, { passive: true });
+document.getElementById("fs-center").addEventListener("touchend", e => onTouchEnd(e, "fs"), { passive: true });
 document.getElementById("setlist-panel").style.display = "none";
 updateBadge();
 cargarCanciones().then(() => cargarSetlist());
