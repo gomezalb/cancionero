@@ -156,6 +156,7 @@
       max-width: 900px; width: 100%;
     }
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
+    #fs-content .stanza-sep { display: block; height: 1.5em; }
 
     /* Botones laterales de diapositiva */
     .fs-side-btn {
@@ -339,8 +340,8 @@ function updateBadge() { document.getElementById("tab-badge").textContent = setl
 
 // ── HTML para fullscreen ───────────────────────────────────────
 function htmlParaFS(html) {
-  let result = html.replace(/<br><br>/gi, '<br class="stanza">');
-  result = result.replace(/(<br class="stanza">)<br>/gi, '$1');
+  let result = html.replace(/<br><br>/gi, '<span class="stanza-sep"></span>');
+  result = result.replace(/(<span class="stanza-sep"><\/span>)<br>/gi, '$1');
   return result;
 }
 
@@ -582,9 +583,8 @@ function renderFSNewSong() {
 }
 
 function buildFullSongHtml(songIdx) {
-  // Concatena todas las slides de una canción en un solo bloque HTML
   const slides = viewerSlides.filter(s => s.type === "slide" && s.songIdx === songIdx);
-  return slides.map(s => htmlParaFS(s.html)).join('<br class="stanza">');
+  return slides.map(s => htmlParaFS(s.html)).join('<span class="stanza-sep"></span>');
 }
 
 function renderFS() {
