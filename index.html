@@ -171,7 +171,10 @@
     /* En móvil y tablet: ocultar flechas y aprovechar todo el ancho */
     @media (max-width: 1023px) {
       .fs-side-btn { display: none; }
-      #fs-center { padding: 0; }
+      #fs-center { padding: 0; overflow-y: auto; align-items: flex-start; }
+      #fs-content { padding: 1rem; }
+      #fs-dots { display: none; }
+      #fs-slide-ctr { display: none; }
     }
 
     /* Franja inferior: paginador + nav canciones */
@@ -567,23 +570,43 @@ document.getElementById("next").addEventListener("click", () => goSlide(1));
 document.getElementById("prev-song").addEventListener("click", () => goSong(-1));
 document.getElementById("next-song").addEventListener("click", () => goSong(1));
 
+function isMobile() { return window.innerWidth < 1024; }
+
 // ── Fullscreen ─────────────────────────────────────────────────
 function renderFSNewSong() {
+  // En móvil volver al tope al cambiar de canción
+  if (isMobile()) document.getElementById("fs-center").scrollTop = 0;
   renderFS();
+}
+
+function buildFullSongHtml(songIdx) {
+  // Concatena todas las slides de una canción en un solo bloque HTML
+  const slides = viewerSlides.filter(s => s.type === "slide" && s.songIdx === songIdx);
+  return slides.map(s => htmlParaFS(s.html)).join('<br class="stanza">');
 }
 
 function renderFS() {
   const s = viewerSlides[viewerIdx]; if (!s) return;
   const isPause = s.type === "pause";
+  const mobile = isMobile();
 
   document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle + (viewerQueue && viewerQueue.length > 1 ? ` · ${s.songIdx + 1}/${viewerQueue.length}` : "");
-  document.getElementById("fs-content").innerHTML = isPause ? "" : htmlParaFS(s.html);
+
+  if (isPause) {
+    document.getElementById("fs-content").innerHTML = "";
+  } else if (mobile) {
+    // Móvil: mostrar toda la canción de una vez
+    document.getElementById("fs-content").innerHTML = buildFullSongHtml(s.songIdx);
+  } else {
+    // Desktop: mostrar diapositiva actual
+    document.getElementById("fs-content").innerHTML = htmlParaFS(s.html);
+  }
   aplicarFontSize();
 
-  // Paginador de puntos
+  // Paginador de puntos — solo desktop
   const dotsEl = document.getElementById("fs-dots");
   dotsEl.innerHTML = "";
-  if (!isPause && s.totalSlides > 1) {
+  if (!mobile && !isPause && s.totalSlides > 1) {
     for (let i = 0; i < s.totalSlides; i++) {
       const dot = document.createElement("div");
       dot.className = "fs-dot" + (i === s.slideNum-1 ? " active" : "");
@@ -591,8 +614,8 @@ function renderFS() {
     }
   }
 
-  // Contador numérico
-  document.getElementById("fs-slide-ctr").textContent = isPause ? "" : (s.slideNum + " / " + s.totalSlides);
+  // Contador numérico — solo desktop
+  document.getElementById("fs-slide-ctr").textContent = (!mobile && !isPause) ? (s.slideNum + " / " + s.totalSlides) : "";
 
   // Nav canciones
   document.getElementById("fs-prev-slide").disabled = viewerIdx === 0;
@@ -661,17 +684,23 @@ function onTouchStart(e) {
   touchStartX = e.touches[0].clientX;
   touchStartY = e.touches[0].clientY;
 }
-function onTouchEnd(e, context) {
+function onTouchEnd(e) {
   const dx = e.changedTouches[0].clientX - touchStartX;
   const dy = e.changedTouches[0].clientY - touchStartY;
   if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) < Math.abs(dy) * SWIPE_RATIO) return;
-  if (dx < 0) goSlide(1); else goSlide(-1);
+  if (isMobile()) {
+    // En móvil: swipe cambia de canción
+    if (dx < 0) goSong(1); else goSong(-1);
+  } else {
+    // En desktop: swipe cambia de diapositiva
+    if (dx < 0) goSlide(1); else goSlide(-1);
+  }
 }
 
 document.getElementById("slide-box").addEventListener("touchstart", onTouchStart, { passive: true });
-document.getElementById("slide-box").addEventListener("touchend", e => onTouchEnd(e, "viewer"), { passive: true });
+document.getElementById("slide-box").addEventListener("touchend", onTouchEnd, { passive: true });
 document.getElementById("fs-center").addEventListener("touchstart", onTouchStart, { passive: true });
-document.getElementById("fs-center").addEventListener("touchend", e => onTouchEnd(e, "fs"), { passive: true });
+document.getElementById("fs-center").addEventListener("touchend", onTouchEnd, { passive: true });
 document.getElementById("setlist-panel").style.display = "none";
 updateBadge();
 cargarCanciones().then(() => cargarSetlist());
