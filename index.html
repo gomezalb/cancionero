@@ -175,6 +175,7 @@
       #fs-content { padding: 1rem; }
       #fs-dots { display: none; }
       #fs-slide-ctr { display: none; }
+      #fs-btn-edges { display: none; }
     }
 
     /* Franja inferior: paginador + nav canciones */
@@ -358,27 +359,28 @@ function aplicarFontSize() {
 // ── Slides ─────────────────────────────────────────────────────
 function buildSlides(queue, pauseEdges) {
   const slides = [];
+  const mobile = isMobile();
   for (let si = 0; si < queue.length; si++) {
     const song = SONGS.find(s => s.titulo === queue[si]); if (!song) continue;
-    // Entre canciones: siempre una sola pausa
-    if (si > 0) slides.push({ type:"pause", songIdx:si });
-    // Pausa al inicio de la primera canción (solo con pauseEdges)
-    if (pauseEdges && si === 0) slides.push({ type:"pause", songIdx:si });
+    if (!mobile) {
+      if (si > 0) slides.push({ type:"pause", songIdx:si });
+      if (pauseEdges && si === 0) slides.push({ type:"pause", songIdx:si });
+    }
     song.slides.forEach((html, i) =>
       slides.push({ type:"slide", html, songIdx:si, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
     );
-    // Pausa al final de la última canción (solo con pauseEdges)
-    if (pauseEdges && si === queue.length - 1) slides.push({ type:"pause", songIdx:si });
+    if (!mobile && pauseEdges && si === queue.length - 1) slides.push({ type:"pause", songIdx:si });
   }
   return slides;
 }
 function buildSingle(song, pauseEdges) {
   const slides = [];
-  if (pauseEdges) slides.push({ type:"pause", songIdx:0 });
+  const mobile = isMobile();
+  if (!mobile && pauseEdges) slides.push({ type:"pause", songIdx:0 });
   song.slides.forEach((html, i) =>
     slides.push({ type:"slide", html, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
   );
-  if (pauseEdges) slides.push({ type:"pause", songIdx:0 });
+  if (!mobile && pauseEdges) slides.push({ type:"pause", songIdx:0 });
   return slides;
 }
 
