@@ -209,7 +209,7 @@
 <div id="app">
   <div id="tabs">
     <div class="tab active" data-tab="cancionero">Cancionero</div>
-    <div class="tab" data-tab="setlist">Setlist <span class="badge" id="tab-badge">0</span></div>
+    <div class="tab" data-tab="setlist">Lista <span class="badge" id="tab-badge">0</span></div>
   </div>
 
   <div id="cancionero-panel">
@@ -500,7 +500,6 @@ document.getElementById("export-btn").addEventListener("click", () => {
   const blob = new Blob([JSON.stringify({name, songs:setlist}, null, 2)], {type:"application/json"});
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name.replace(/\s+/g,"_")+".json"; a.click();
 });
-document.getElementById("import-btn").addEventListener("click", () => document.getElementById("file-input").click());
 document.getElementById("file-input").addEventListener("change", e => {
   const file = e.target.files[0]; if (!file) return;
   const reader = new FileReader();
