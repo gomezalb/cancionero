@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cancionero</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1a1a1a;
+      --bg2:       #242424;
+      --bg3:       #252525;
+      --bg4:       #2c2c2c;
+      --border:    #333;
+      --border2:   #3a3a3a;
+      --text:      #e8e8e8;
+      --text2:     #aaa;
+      --text3:     #888;
+      --text4:     #555;
+      --text5:     #333;
+      --green-bg:  #1f3a1f;
+      --green-bd:  #2a5a2a;
+      --green-tx:  #5cb85c;
+      --red-bg:    #2a1a1a;
+      --red-bd:    #5a2a2a;
+      --red-tx:    #c0392b;
+      --hl-bg:     #4a3800;
+      --hl-tx:     #FAC775;
+      --radius:    10px;
+      --radius-lg: 12px;
+    }
+
+    html, body { height: 100%; background: #111; font-family: system-ui, -apple-system, sans-serif; color: var(--text); }
+    #app { max-width: 680px; margin: 0 auto; padding: 1.25rem; min-height: 100vh; }
+
+    /* Tabs */
+    #tabs { display: flex; gap: 6px; margin-bottom: 1.25rem; }
+    .tab { padding: 6px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; border: 0.5px solid var(--border); background: var(--bg2); color: var(--text4); transition: all .12s; user-select: none; }
+    .tab.active { background: #2e2e2e; color: var(--text); border-color: #555; }
+    .tab .badge { display: inline-block; background: var(--green-bg); color: var(--green-tx); font-size: 10px; padding: 1px 6px; border-radius: 10px; margin-left: 5px; }
+
+    /* Search */
+    #search-wrap { position: relative; margin-bottom: .875rem; }
+    #search { width: 100%; padding: 9px 16px 9px 38px; font-size: 14px; border-radius: var(--radius); border: 0.5px solid var(--border2); background: var(--bg3); color: var(--text); outline: none; }
+    #search::placeholder { color: var(--text4); }
+    #search:focus { border-color: #555; }
+    .si { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text4); font-size: 14px; pointer-events: none; }
+    #count { font-size: 12px; color: var(--text4); margin-bottom: .75rem; }
+
+    /* Song list */
+    #song-list { display: flex; flex-direction: column; gap: 5px; }
+    .sc { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: .65rem 1rem; display: flex; align-items: center; gap: 8px; }
+    .sc-info { flex: 1; min-width: 0; cursor: pointer; }
+    .sc-info:hover .st { color: var(--text2); }
+    .st { font-size: 14px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sm { font-size: 11px; color: var(--text4); margin-top: 2px; }
+    .sp { font-size: 12px; color: var(--text3); margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .add-btn { background: var(--green-bg); border: 0.5px solid var(--green-bd); color: var(--green-tx); font-size: 18px; width: 28px; height: 28px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .12s; }
+    .add-btn:hover { background: #254a25; }
+    .in-list .add-btn { background: var(--red-bg); border-color: var(--red-bd); color: var(--red-tx); }
+    .hl { background: var(--hl-bg); color: var(--hl-tx); border-radius: 2px; padding: 0 2px; }
+
+    /* Loading / error */
+    #loading { text-align: center; padding: 3rem 0; color: var(--text4); font-size: 14px; }
+    #error-msg { background: var(--red-bg); border: 0.5px solid var(--red-bd); color: var(--red-tx); padding: 1rem 1.25rem; border-radius: var(--radius); font-size: 13px; line-height: 1.6; display: none; }
+    #error-msg code { font-family: monospace; font-size: 12px; }
+
+    /* Setlist */
+    #setlist-panel { display: none; flex-direction: column; gap: .875rem; }
+    #sl-name-wrap { display: flex; gap: 6px; align-items: center; background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: .65rem 1rem; }
+    #sl-name-label { font-size: 12px; color: var(--text4); flex-shrink: 0; }
+    #sl-name { background: none; border: none; color: var(--text); font-size: 14px; font-weight: 500; outline: none; flex: 1; }
+    #sl-name::placeholder { color: #444; }
+    #sl-saved { font-size: 11px; color: var(--green-tx); opacity: 0; transition: opacity .4s; flex-shrink: 0; }
+    #sl-count { font-size: 12px; color: var(--text4); flex-shrink: 0; }
+    #sl-toolbar { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    .sl-btn { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: background .12s; white-space: nowrap; }
+    .sl-btn:hover { background: var(--border); color: var(--text); }
+    .sl-btn.primary { background: var(--green-bg); border-color: var(--green-bd); color: var(--green-tx); }
+    .sl-btn.primary:hover { background: #254a25; }
+    .sl-btn.primary:disabled { opacity: .3; cursor: default; }
+    .sl-btn.danger { color: var(--red-tx); border-color: #3a1a1a; }
+    .sl-btn.danger:hover { background: var(--red-bg); }
+    #sl-items { display: flex; flex-direction: column; gap: 5px; min-height: 40px; }
+    .sl-item { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: .65rem 1rem; display: flex; align-items: center; gap: 8px; cursor: grab; }
+    .sl-item:active { cursor: grabbing; }
+    .sl-item.dragging { opacity: .35; }
+    .sl-item.drag-over { border-color: #555; background: var(--bg4); }
+    .drag-handle { color: #444; font-size: 13px; flex-shrink: 0; }
+    .sl-num { font-size: 11px; color: var(--text4); min-width: 18px; flex-shrink: 0; text-align: right; }
+    .sl-title { flex: 1; font-size: 14px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+    .sl-title:hover { color: var(--text2); }
+    .sl-meta { font-size: 11px; color: var(--text4); flex-shrink: 0; }
+    .sl-remove { background: none; border: none; color: var(--text5); font-size: 15px; cursor: pointer; padding: 0 2px; transition: color .12s; }
+    .sl-remove:hover { color: var(--red-tx); }
+    #sl-empty { font-size: 13px; color: #444; text-align: center; padding: 2rem 0; border: 0.5px dashed #2a2a2a; border-radius: var(--radius); }
+
+    /* Viewer */
+    #viewer { display: none; flex-direction: column; }
+    #back { font-size: 13px; color: var(--text4); cursor: pointer; margin-bottom: 1rem; display: flex; align-items: center; gap: 5px; border: none; background: none; padding: 0; }
+    #back:hover { color: var(--text2); }
+    #vtitle { font-size: 17px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+    #vmeta { font-size: 12px; color: var(--text4); margin-bottom: 1rem; }
+    #slide-box { border-radius: var(--radius-lg); padding: 2rem 1.5rem; min-height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    #slide-box.normal { background: var(--bg2); border: 0.5px solid var(--border); }
+    #slide-box.pause { background: #0d0d0d; border: 0.5px solid #181818; }
+    #slide-content { font-size: 28px; color: #ddd; }
+    #slide-content span[class^="fs-"] { font-size: inherit; }
+    .fs-12{font-size:12px}.fs-14{font-size:14px}.fs-16{font-size:16px}.fs-18{font-size:18px}.fs-20{font-size:20px}.fs-24{font-size:24px}.fs-28{font-size:28px}.fs-32{font-size:32px}.fs-36{font-size:36px}.fs-40{font-size:40px}.fs-44{font-size:44px}.fs-48{font-size:48px}.fs-54{font-size:54px}.fs-60{font-size:60px}.fs-72{font-size:72px}
+    #nav { display: flex; align-items: center; gap: 6px; margin-top: .75rem; }
+    .nav-btn { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 16px; width: 38px; height: 38px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .12s; }
+    .nav-btn:hover:not(:disabled) { background: var(--border); color: var(--text); }
+    .nav-btn:disabled { opacity: .3; cursor: default; }
+    #slide-counter { font-size: 12px; color: var(--text4); flex: 1; text-align: center; }
+    #fs-btn { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+    #fs-btn:hover { background: var(--border); color: var(--text); }
+    #song-nav { display: flex; gap: 6px; margin-top: .75rem; }
+    .snav-btn { flex: 1; background: var(--bg2); border: 0.5px solid var(--border); color: var(--text4); font-size: 12px; padding: 7px 8px; border-radius: 8px; cursor: pointer; text-align: center; transition: background .12s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .snav-btn:hover:not(:disabled) { background: var(--bg4); color: var(--text2); }
+    .snav-btn:disabled { opacity: .2; cursor: default; }
+
+    /* ── Fullscreen ── */
+    #fso {
+      display: none; position: fixed; inset: 0; background: #000; z-index: 9999;
+      flex-direction: column; align-items: stretch;
+    }
+
+    /* Franja superior: título + cerrar */
+    #fs-top {
+      display: flex; align-items: center; justify-content: center;
+      padding: .75rem 3rem;
+      flex-shrink: 0;
+      position: relative;
+    }
+    #fs-song-title { font-size: 13px; color: #666; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    #fs-cl {
+      position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: #666; font-size: 20px; cursor: pointer; transition: color .12s;
+    }
+    #fs-cl:hover { color: #aaa; }
+
+    /* Área central de contenido */
+    #fs-center {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      padding: 0 80px;
+      overflow: hidden;
+      min-height: 0; /* necesario para que flex no desborde */
+    }
+    #fs-content {
+      color: #f0f0f0; text-align: center;
+      max-width: 900px; width: 100%;
+      /* font-size se setea dinámicamente */
+    }
+    #fs-content br.stanza { display: block; margin-top: 1.5em; }
+
+    /* Botones laterales de diapositiva */
+    .fs-side-btn {
+      position: fixed; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: #555; font-size: 28px;
+      cursor: pointer; padding: 1rem .75rem; transition: color .15s; line-height: 1;
+    }
+    .fs-side-btn:hover:not(:disabled) { color: #aaa; }
+    .fs-side-btn:disabled { opacity: .15; cursor: default; }
+    #fs-prev-slide { left: .5rem; }
+    #fs-next-slide { right: .5rem; }
+
+    /* Franja inferior: paginador + nav canciones */
+    #fs-bottom {
+      flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      padding: .6rem 0 .75rem;
+    }
+    /* Paginador de diapositivas */
+    #fs-dots { display: flex; gap: 7px; align-items: center; }
+    .fs-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #333; transition: background .15s;
+      flex-shrink: 0;
+    }
+    .fs-dot.active { background: #777; }
+    /* Nav canciones */
+    #fs-song-nav { display: flex; align-items: center; gap: 1.5rem; }
+    .fs-snb {
+      background: none; border: none; color: #444; font-size: 12px;
+      cursor: pointer; transition: color .12s; white-space: nowrap; padding: 2px 0;
+    }
+    .fs-snb:hover:not(:disabled) { color: #aaa; }
+    .fs-snb:disabled { opacity: .2; cursor: default; }
+    #fs-slide-ctr { font-size: 11px; color: #333; min-width: 48px; text-align: center; }
+    #fs-hint { font-size: 10px; color: #1e1e1e; }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="tabs">
+    <div class="tab active" data-tab="cancionero">Cancionero</div>
+    <div class="tab" data-tab="setlist">Setlist <span class="badge" id="tab-badge">0</span></div>
+  </div>
+
+  <div id="cancionero-panel">
+    <div id="search-wrap">
+      <span class="si">&#9906;</span>
+      <input id="search" type="text" placeholder="Buscar canción o letra..." autocomplete="off"/>
+    </div>
+    <div id="count"></div>
+    <div id="loading">Cargando canciones...</div>
+    <div id="error-msg"></div>
+    <div id="song-list"></div>
+  </div>
+
+  <div id="setlist-panel">
+    <div id="sl-name-wrap">
+      <span id="sl-name-label">Nombre:</span>
+      <input id="sl-name" type="text" placeholder="Mi setlist..." value="Setlist"/>
+      <span id="sl-saved">&#10003; guardado</span>
+      <span id="sl-count"></span>
+    </div>
+    <div id="sl-toolbar">
+      <button class="sl-btn primary" id="play-btn" disabled>&#9654; Proyectar</button>
+      <button class="sl-btn" id="export-btn">&#8595; Exportar</button>
+      <button class="sl-btn" id="import-btn">&#8593; Importar</button>
+      <button class="sl-btn danger" id="clear-btn">Limpiar lista</button>
+    </div>
+    <div id="sl-items"></div>
+  </div>
+
+  <div id="viewer">
+    <button id="back"></button>
+    <div id="vtitle"></div>
+    <div id="vmeta"></div>
+    <div id="slide-box" class="normal"><div id="slide-content"></div></div>
+    <div id="nav">
+      <button class="nav-btn" id="prev">&#8592;</button>
+      <span id="slide-counter"></span>
+      <button class="nav-btn" id="next">&#8594;</button>
+      <button id="fs-btn">&#9654; Proyectar</button>
+    </div>
+    <div id="song-nav">
+      <button class="snav-btn" id="prev-song" disabled></button>
+      <button class="snav-btn" id="next-song" disabled></button>
+    </div>
+  </div>
+</div>
+
+<!-- Fullscreen -->
+<div id="fso">
+  <!-- Top: título + cerrar -->
+  <div id="fs-top">
+    <div id="fs-song-title"></div>
+    <button id="fs-cl">&#10005;</button>
+  </div>
+
+  <!-- Flechas laterales -->
+  <button class="fs-side-btn" id="fs-prev-slide">&#8592;</button>
+  <button class="fs-side-btn" id="fs-next-slide">&#8594;</button>
+
+  <!-- Centro: letra -->
+  <div id="fs-center">
+    <div id="fs-content"></div>
+  </div>
+
+  <!-- Bottom: paginador + nav canciones + hint -->
+  <div id="fs-bottom">
+    <div id="fs-dots"></div>
+    <div id="fs-song-nav">
+      <button class="fs-snb" id="fs-ps">&#8592; anterior</button>
+      <span id="fs-slide-ctr"></span>
+      <button class="fs-snb" id="fs-ns">siguiente &#8594;</button>
+    </div>
+    <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
+  </div>
+</div>
+
+<input type="file" id="file-input" accept=".json" style="display:none"/>
+
+<script>
+const LS_KEY = "cancionero_setlist";
+let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "Setlist";
+let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
+
+const FS_SIZE = 40; // tamaño fijo de fuente en proyección (px)
+
+// ── localStorage ───────────────────────────────────────────────
+function saveToStorage() {
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({ name: slName, songs: setlist }));
+    const ind = document.getElementById("sl-saved");
+    ind.style.opacity = "1"; clearTimeout(ind._t);
+    ind._t = setTimeout(() => ind.style.opacity = "0", 1800);
+  } catch(e) {}
+}
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem(LS_KEY); if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
+    if (Array.isArray(d.songs)) setlist = d.songs;
+  } catch(e) {}
+}
+
+// ── Utilidades ─────────────────────────────────────────────────
+function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+function hlTexto(text, q) {
+  if (!q) return text;
+  const nq = norm(q), nt = norm(text);
+  let r = "", i = 0;
+  while (i < text.length) {
+    const idx = nt.indexOf(nq, i);
+    if (idx === -1) { r += text.slice(i); break; }
+    r += text.slice(i, idx) + '<span class="hl">' + text.slice(idx, idx+nq.length) + "</span>";
+    i = idx + nq.length;
+  }
+  return r;
+}
+function inList(t) { return setlist.includes(t); }
+function updateBadge() { document.getElementById("tab-badge").textContent = setlist.length; }
+
+// ── HTML para fullscreen ───────────────────────────────────────
+function htmlParaFS(html) {
+  let result = html.replace(/<br><br>/gi, '<br class="stanza">');
+  result = result.replace(/(<br class="stanza">)<br>/gi, '$1');
+  return result;
+}
+
+// ── Font scaling — tamaño único para todas las slides de la canción ──
+function calcFontSizeParaCancion(slides) {
+  const el = document.getElementById("fs-content");
+  const container = document.getElementById("fs-center");
+  const maxW = container.clientWidth;
+  const maxH = container.clientHeight;
+
+  let tamanio = FS_MAX;
+
+  // Probar cada slide con este tamaño — usar el que haga entrar a todas
+  for (const html of slides) {
+    el.style.fontSize = tamanio + "px";
+    el.innerHTML = htmlParaFS(html);
+
+    // Reducir hasta que entre esta slide
+    while (tamanio > FS_MIN && (el.scrollHeight > maxH || el.scrollWidth > maxW)) {
+      tamanio -= 1;
+      el.style.fontSize = tamanio + "px";
+    }
+  }
+
+  return tamanio;
+}
+
+function aplicarFontSize(size) {
+  document.getElementById("fs-content").style.fontSize = size + "px";
+}
+
+// ── Slides ─────────────────────────────────────────────────────
+function buildSlides(queue) {
+  const slides = [];
+  for (let si = 0; si < queue.length; si++) {
+    const song = SONGS.find(s => s.titulo === queue[si]); if (!song) continue;
+    if (si > 0) slides.push({ type:"pause", songIdx:si });
+    song.slides.forEach((html, i) =>
+      slides.push({ type:"slide", html, songIdx:si, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
+    );
+  }
+  return slides;
+}
+function buildSingle(song) {
+  return song.slides.map((html, i) => ({
+    type:"slide", html, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides
+  }));
+}
+
+// ── Carga canciones.json ───────────────────────────────────────
+async function cargarCanciones() {
+  try {
+    const res = await fetch("canciones.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    SONGS = await res.json();
+    setlist = setlist.filter(t => SONGS.some(s => s.titulo === t));
+    document.getElementById("loading").style.display = "none";
+    updateBadge(); renderList();
+    if (activeTab === "setlist") renderSetlist();
+  } catch(e) {
+    document.getElementById("loading").style.display = "none";
+    const err = document.getElementById("error-msg"); err.style.display = "block";
+    err.innerHTML = `<strong>No se pudo cargar canciones.json</strong><br><br>
+      Asegurate de que <code>canciones.json</code> esté en la misma carpeta que
+      <code>index.html</code> y que el sitio esté siendo servido desde un servidor web.<br><br>
+      Error: <code>${e.message}</code>`;
+  }
+}
+
+// ── Tabs ───────────────────────────────────────────────────────
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+  activeTab = t.dataset.tab;
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove("active")); t.classList.add("active");
+  document.getElementById("cancionero-panel").style.display = activeTab === "cancionero" ? "block" : "none";
+  document.getElementById("setlist-panel").style.display = activeTab === "setlist" ? "flex" : "none";
+  if (activeTab === "setlist") renderSetlist();
+}));
+
+// ── Cancionero ─────────────────────────────────────────────────
+function renderList() {
+  const q = norm(query);
+  const filtered = SONGS.filter(c => norm(c.titulo).includes(q) || (c.preview && norm(c.preview).includes(q)));
+  document.getElementById("count").textContent =
+    filtered.length === SONGS.length ? SONGS.length + " canciones"
+    : filtered.length + " resultado" + (filtered.length !== 1 ? "s" : "");
+  const list = document.getElementById("song-list"); list.innerHTML = "";
+  filtered.forEach(c => {
+    const inL = inList(c.titulo);
+    const card = document.createElement("div"); card.className = "sc" + (inL ? " in-list" : "");
+    let previewHtml = "";
+    if (q && c.preview && norm(c.preview).includes(q)) {
+      const linea = c.preview.split(/\n/).find(l => norm(l).includes(q));
+      if (linea) previewHtml = `<div class="sp">${hlTexto(linea.trim(), query)}...</div>`;
+    }
+    card.innerHTML = `
+      <div class="sc-info">
+        <div class="st">${hlTexto(c.titulo, query)}</div>
+        <div class="sm">Carpeta ${c.carpeta} &middot; ${c.slides.length} diapositiva${c.slides.length !== 1 ? "s" : ""}</div>
+        ${previewHtml}
+      </div>
+      <button class="add-btn">${inL ? "&#8722;" : "&#43;"}</button>`;
+    card.querySelector(".add-btn").addEventListener("click", e => { e.stopPropagation(); toggleSL(c.titulo); });
+    card.querySelector(".sc-info").addEventListener("click", () => openSong(c, null));
+    list.appendChild(card);
+  });
+}
+function toggleSL(t) {
+  const idx = setlist.indexOf(t);
+  if (idx === -1) setlist.push(t); else setlist.splice(idx, 1);
+  saveToStorage(); updateBadge(); renderList();
+  if (activeTab === "setlist") renderSetlist();
+}
+document.getElementById("search").addEventListener("input", e => { query = e.target.value; renderList(); });
+
+// ── Setlist ────────────────────────────────────────────────────
+function renderSetlist() {
+  document.getElementById("sl-count").textContent = setlist.length + " canción" + (setlist.length !== 1 ? "es" : "");
+  document.getElementById("play-btn").disabled = setlist.length === 0;
+  const items = document.getElementById("sl-items"); items.innerHTML = "";
+  if (!setlist.length) { items.innerHTML = '<div id="sl-empty">Sin canciones. Agregá desde el Cancionero.</div>'; return; }
+  setlist.forEach((titulo, i) => {
+    const song = SONGS.find(s => s.titulo === titulo);
+    const div = document.createElement("div"); div.className = "sl-item"; div.draggable = true;
+    div.innerHTML = `<span class="drag-handle">&#9776;</span><span class="sl-num">${i+1}</span><span class="sl-title">${titulo}</span><span class="sl-meta">${song ? song.slides.length+" diap." : ""}</span><button class="sl-remove">&#10005;</button>`;
+    div.querySelector(".sl-remove").addEventListener("click", () => { setlist.splice(i,1); saveToStorage(); updateBadge(); renderSetlist(); renderList(); });
+    div.querySelector(".sl-title").addEventListener("click", () => { if (song) openSong(song, [...setlist]); });
+    setupDrag(div, i); items.appendChild(div);
+  });
+}
+let dragSrc = -1;
+function setupDrag(el, idx) {
+  el.addEventListener("dragstart", () => { dragSrc = idx; setTimeout(() => el.classList.add("dragging"), 0); });
+  el.addEventListener("dragend", () => { el.classList.remove("dragging"); document.querySelectorAll(".sl-item").forEach(x => x.classList.remove("drag-over")); });
+  el.addEventListener("dragover", e => { e.preventDefault(); el.classList.add("drag-over"); });
+  el.addEventListener("dragleave", () => el.classList.remove("drag-over"));
+  el.addEventListener("drop", e => {
+    e.preventDefault(); el.classList.remove("drag-over");
+    if (dragSrc === idx) return;
+    const m = setlist.splice(dragSrc,1)[0]; setlist.splice(idx,0,m); saveToStorage(); renderSetlist();
+  });
+}
+document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); });
+document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist]); });
+document.getElementById("clear-btn").addEventListener("click", () => {
+  if (confirm("¿Limpiar la lista?")) { setlist = []; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
+});
+document.getElementById("export-btn").addEventListener("click", () => {
+  const name = document.getElementById("sl-name").value.trim() || "setlist";
+  const blob = new Blob([JSON.stringify({name, songs:setlist}, null, 2)], {type:"application/json"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name.replace(/\s+/g,"_")+".json"; a.click();
+});
+document.getElementById("import-btn").addEventListener("click", () => document.getElementById("file-input").click());
+document.getElementById("file-input").addEventListener("change", e => {
+  const file = e.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const d = JSON.parse(ev.target.result);
+      if (d.name) { document.getElementById("sl-name").value = d.name; slName = d.name; }
+      if (Array.isArray(d.songs)) { setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t)); saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
+    } catch(e) { alert("Archivo inválido."); }
+  };
+  reader.readAsText(file); e.target.value = "";
+});
+
+// ── Viewer ─────────────────────────────────────────────────────
+function openSong(song, queue) {
+  viewerQueue = queue || null;
+  viewerSlides = queue ? buildSlides(queue) : buildSingle(song);
+  viewerIdx = queue ? viewerSlides.findIndex(s => s.type === "slide" && s.songTitle === song.titulo) : 0;
+  if (viewerIdx < 0) viewerIdx = 0;
+  showViewer(queue ? "&#8592; Setlist" : "&#8592; Cancionero");
+}
+function openSetlist(queue) { viewerQueue = queue; viewerSlides = buildSlides(queue); viewerIdx = 0; showViewer("&#8592; Setlist"); }
+function showViewer(label) {
+  document.getElementById("cancionero-panel").style.display = "none";
+  document.getElementById("setlist-panel").style.display = "none";
+  document.getElementById("tabs").style.display = "none";
+  document.getElementById("viewer").style.display = "flex";
+  document.getElementById("back").innerHTML = label;
+  renderViewerSlide();
+}
+function renderViewerSlide() {
+  const s = viewerSlides[viewerIdx]; if (!s) return;
+  const isPause = s.type === "pause";
+  document.getElementById("slide-box").className = isPause ? "pause" : "normal";
+  document.getElementById("slide-content").innerHTML = isPause ? "" : s.html.replace(/(<br>){3}/gi, '<br><br>');
+  document.getElementById("vtitle").textContent = isPause ? "— pausa —" : s.songTitle + (viewerQueue ? ` · ${s.songIdx+1}/${viewerQueue.length}` : "");
+  document.getElementById("vtitle").style.color = isPause ? "#333" : "";
+  document.getElementById("vmeta").textContent = isPause ? "Pantalla negra" : s.slideNum + " / " + s.totalSlides;
+  document.getElementById("prev").disabled = viewerIdx === 0;
+  document.getElementById("next").disabled = viewerIdx === viewerSlides.length - 1;
+  const ps = document.getElementById("prev-song"), ns = document.getElementById("next-song");
+  if (viewerQueue && viewerQueue.length > 1) {
+    const ci = s.songIdx, hasPrev = ci > 0, hasNext = ci < viewerQueue.length-1;
+    ps.style.display = ns.style.display = "";
+    ps.disabled = !hasPrev; ns.disabled = !hasNext;
+    ps.innerHTML = hasPrev ? "&#8592; "+viewerQueue[ci-1] : "";
+    ns.innerHTML = hasNext ? viewerQueue[ci+1]+" &#8594;" : "";
+  } else { ps.style.display = ns.style.display = "none"; }
+}
+function goSlide(d) {
+  viewerIdx = Math.max(0, Math.min(viewerSlides.length-1, viewerIdx+d));
+  renderViewerSlide();
+  if (document.getElementById("fso").style.display === "flex") renderFS();
+}
+function goSong(d) {
+  if (!viewerQueue) return;
+  const ci = viewerSlides[viewerIdx]?.songIdx || 0;
+  const ni = ci+d; if (ni < 0 || ni >= viewerQueue.length) return;
+  let t = viewerSlides.findIndex(sl => sl.songIdx === ni && (sl.type === "pause" || sl.slideNum === 1));
+  if (t < 0) t = 0; viewerIdx = t; renderViewerSlide();
+  if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
+}
+document.getElementById("back").addEventListener("click", () => {
+  document.getElementById("viewer").style.display = "none"; document.getElementById("tabs").style.display = "flex";
+  if (activeTab === "cancionero") document.getElementById("cancionero-panel").style.display = "block";
+  else { document.getElementById("setlist-panel").style.display = "flex"; renderSetlist(); }
+});
+document.getElementById("prev").addEventListener("click", () => goSlide(-1));
+document.getElementById("next").addEventListener("click", () => goSlide(1));
+document.getElementById("prev-song").addEventListener("click", () => goSong(-1));
+document.getElementById("next-song").addEventListener("click", () => goSong(1));
+
+// ── Fullscreen ─────────────────────────────────────────────────
+function renderFSNewSong() {
+  renderFS();
+}
+
+function renderFS() {
+  const s = viewerSlides[viewerIdx]; if (!s) return;
+  const isPause = s.type === "pause";
+
+  document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle;
+  document.getElementById("fs-content").innerHTML = isPause ? "" : htmlParaFS(s.html);
+  aplicarFontSize(FS_SIZE);
+
+  // Paginador de puntos
+  const dotsEl = document.getElementById("fs-dots");
+  dotsEl.innerHTML = "";
+  if (!isPause && s.totalSlides > 1) {
+    for (let i = 0; i < s.totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.className = "fs-dot" + (i === s.slideNum-1 ? " active" : "");
+      dotsEl.appendChild(dot);
+    }
+  }
+
+  // Contador numérico
+  document.getElementById("fs-slide-ctr").textContent = isPause ? "" : (s.slideNum + " / " + s.totalSlides);
+
+  // Nav canciones
+  document.getElementById("fs-prev-slide").disabled = viewerIdx === 0;
+  document.getElementById("fs-next-slide").disabled = viewerIdx === viewerSlides.length-1;
+  const ci = s.songIdx, hasSongNav = viewerQueue && viewerQueue.length > 1;
+  document.getElementById("fs-song-nav").style.display = hasSongNav ? "flex" : "none";
+  if (hasSongNav) {
+    document.getElementById("fs-ps").disabled = ci === 0;
+    document.getElementById("fs-ns").disabled = ci === viewerQueue.length-1;
+  }
+}
+
+function aplicarFontSize(size) {
+  document.getElementById("fs-content").style.fontSize = size + "px";
+}
+
+document.getElementById("fs-btn").addEventListener("click", () => {
+  const o = document.getElementById("fso"); o.style.display = "flex";
+  if (o.requestFullscreen) o.requestFullscreen();
+  renderFSNewSong(); // calcular tamaño al abrir
+});
+document.getElementById("fs-cl").addEventListener("click", () => {
+  document.getElementById("fso").style.display = "none";
+  if (document.fullscreenElement) document.exitFullscreen();
+});
+document.getElementById("fs-prev-slide").addEventListener("click", () => goSlide(-1));
+document.getElementById("fs-next-slide").addEventListener("click", () => goSlide(1));
+document.getElementById("fs-ps").addEventListener("click", () => goSong(-1));
+document.getElementById("fs-ns").addEventListener("click", () => goSong(1));
+
+window.addEventListener("resize", () => {
+  if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
+});
+
+document.addEventListener("keydown", e => {
+  const fsOpen = document.getElementById("fso").style.display === "flex";
+  const inViewer = document.getElementById("viewer").style.display === "flex";
+  if (fsOpen || inViewer) {
+    if (e.key === "ArrowLeft" && !e.shiftKey) goSlide(-1);
+    else if (e.key === "ArrowRight" && !e.shiftKey) goSlide(1);
+    else if (e.key === "ArrowLeft" && e.shiftKey) goSong(-1);
+    else if (e.key === "ArrowRight" && e.shiftKey) goSong(1);
+    else if (e.key === "Escape" && fsOpen) {
+      document.getElementById("fso").style.display = "none";
+      if (document.fullscreenElement) document.exitFullscreen();
+    }
+  }
+});
+
+// ── Init ───────────────────────────────────────────────────────
+document.getElementById("setlist-panel").style.display = "none";
+loadFromStorage(); updateBadge(); cargarCanciones();
+</script>
+</body>
+</html>
