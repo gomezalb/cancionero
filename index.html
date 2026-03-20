@@ -519,9 +519,9 @@ function openSong(song, queue, pauseEdges) {
   viewerSlides = queue ? buildSlides(queue, pauseEdges) : buildSingle(song, pauseEdges);
   viewerIdx = queue ? viewerSlides.findIndex(s => s.type === "slide" && s.songTitle === song.titulo) : 0;
   if (viewerIdx < 0) viewerIdx = 0;
-  showViewer(queue ? "&#8592; Setlist" : "&#8592; Cancionero");
+  showViewer(queue ? "&#8592; Lista" : "&#8592; Cancionero");
 }
-function openSetlist(queue, pauseEdges) { viewerQueue = queue; viewerSlides = buildSlides(queue, pauseEdges); viewerIdx = 0; showViewer("&#8592; Setlist"); }
+function openSetlist(queue, pauseEdges) { viewerQueue = queue; viewerSlides = buildSlides(queue, pauseEdges); viewerIdx = 0; showViewer("&#8592; Lista"); }
 function showViewer(label) {
   document.getElementById("cancionero-panel").style.display = "none";
   document.getElementById("setlist-panel").style.display = "none";
@@ -558,7 +558,7 @@ function goSong(d) {
   if (!viewerQueue) return;
   const ci = viewerSlides[viewerIdx]?.songIdx || 0;
   const ni = ci+d; if (ni < 0 || ni >= viewerQueue.length) return;
-  let t = viewerSlides.findIndex(sl => sl.songIdx === ni && (sl.type === "pause" || sl.slideNum === 1));
+  let t = viewerSlides.findIndex(sl => sl.songIdx === ni && sl.type === "slide");
   if (t < 0) t = 0; viewerIdx = t; renderViewerSlide();
   if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
 }
@@ -630,6 +630,14 @@ function renderFS() {
 }
 
 document.getElementById("fs-btn").addEventListener("click", () => {
+  // Reconstruir siempre sin pausas para asegurar modo normal
+  const curSlide = viewerSlides.find(s => s.type === "slide");
+  const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
+  if (viewerQueue && viewerQueue.length > 0) {
+    viewerSlides = buildSlides(viewerQueue, false);
+  } else if (curSong) {
+    viewerSlides = buildSingle(curSong, false);
+  }
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
