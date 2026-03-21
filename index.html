@@ -239,7 +239,7 @@
 <div id="app">
   <div id="tabs">
     <div class="tab active" data-tab="cancionero">Cancionero</div>
-    <div class="tab" data-tab="setlist">Lista <span class="badge" id="tab-badge">0</span></div>
+    <div class="tab" data-tab="setlist" id="tab-setlist">Crear lista</div>
   </div>
 
   <div id="cancionero-panel">
@@ -263,7 +263,7 @@
   <div id="setlist-panel">
     <div id="sl-name-wrap">
       <span id="sl-name-label">Nombre:</span>
-      <input id="sl-name" type="text" placeholder="Mi setlist..." value="Setlist"/>
+      <input id="sl-name" type="text" placeholder="" value=""/>
       <span id="sl-saved">&#10003; guardado</span>
       <span id="sl-count"></span>
     </div>
@@ -341,7 +341,7 @@
 
 <script>
 const LS_KEY = "cancionero_setlist";
-let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "Setlist";
+let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
 let activeFilter = "todas";
 
@@ -397,7 +397,15 @@ function hlTexto(text, q) {
   return r;
 }
 function inList(t) { return setlist.includes(t); }
-function updateBadge() { document.getElementById("tab-badge").textContent = setlist.length; }
+function updateBadge() {
+  const tab = document.getElementById("tab-setlist");
+  if (setlist.length === 0) {
+    tab.textContent = "Crear lista";
+  } else {
+    const nombre = slName && slName !== "Setlist" ? slName : "";
+    tab.textContent = nombre ? `Lista: ${nombre}` : `Lista (${setlist.length})`;
+  }
+}
 
 // ── HTML para fullscreen ───────────────────────────────────────
 function htmlParaFS(html) {
@@ -467,19 +475,70 @@ async function cargarCanciones() { // retorna promesa — cargarSetlist() se enc
 }
 
 // ── Carga setlist.json del repositorio ────────────────────────
+function limpiarLista() {
+  setlist = []; slName = "";
+  const slNameEl = document.getElementById("sl-name");
+  slNameEl.value = "";
+  slNameEl.placeholder = "";
+  updateBadge(); renderList();
+  if (activeTab === "setlist") renderSetlist();
+}
+
+function aplicarSetlist(d) {
+  if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
+  if (Array.isArray(d.songs)) {
+    setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
+  }
+  updateBadge(); renderList();
+  if (activeTab === "setlist") renderSetlist();
+}
+
 async function cargarSetlist() {
   try {
     const res = await fetch("setlist.json");
-    if (!res.ok) return; // no existe setlist.json, no pasa nada
-    const d = await res.json();
-    if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
-    if (Array.isArray(d.songs)) {
-      setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
-      updateBadge();
-      renderList(); // refrescar cancionero para mostrar botones rojos
+    if (!res.ok) {
+      // No existe setlist.json — usar localStorage si hay
+      loadFromStorage(); updateBadge(); renderList();
       if (activeTab === "setlist") renderSetlist();
+      return;
     }
-  } catch(e) { /* setlist.json no existe o es inválido — ignorar silenciosamente */ }
+    const d = await res.json();
+
+    // Verificar vencimiento
+    if (d.expira) {
+      const hoy = new Date(); hoy.setHours(0,0,0,0);
+      const expira = new Date(d.expira); expira.setHours(0,0,0,0);
+      if (hoy > expira) {
+        // Setlist vencida — usar localStorage si hay, sino vacío
+        const raw = localStorage.getItem(LS_KEY);
+        if (raw) { loadFromStorage(); }
+        else { limpiarLista(); return; }
+        updateBadge(); renderList();
+        if (activeTab === "setlist") renderSetlist();
+        return;
+      }
+    }
+
+    // Setlist del repo válida — verificar si tiene canciones
+    const songs = Array.isArray(d.songs) ? d.songs.filter(t => SONGS.some(s => s.titulo === t)) : [];
+    if (songs.length === 0) {
+      // Sin canciones en repo — usar localStorage si hay
+      const raw = localStorage.getItem(LS_KEY);
+      if (raw) { loadFromStorage(); }
+      else { limpiarLista(); return; }
+      updateBadge(); renderList();
+      if (activeTab === "setlist") renderSetlist();
+      return;
+    }
+
+    // Repo tiene canciones válidas y no vencida — tiene prioridad
+    aplicarSetlist(d);
+
+  } catch(e) {
+    // Error de red — usar localStorage
+    loadFromStorage(); updateBadge(); renderList();
+    if (activeTab === "setlist") renderSetlist();
+  }
 }
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
   activeTab = t.dataset.tab;
@@ -560,7 +619,7 @@ function setupDrag(el, idx) {
     const m = setlist.splice(dragSrc,1)[0]; setlist.splice(idx,0,m); saveToStorage(); renderSetlist();
   });
 }
-document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); });
+document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); updateBadge(); });
 document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist], false); });
 document.getElementById("clear-btn").addEventListener("click", () => {
   if (confirm("¿Limpiar la lista?")) { setlist = []; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
@@ -901,9 +960,26 @@ document.getElementById("setlist-panel").style.display = "none";
 updateBadge();
 cargarCanciones().then(() => cargarSetlist());
 
-// ── Service Worker (offline) ───────────────────────────────────
+// ── Service Worker (offline + auto-actualización) ──────────────
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js").catch(() => {});
+  navigator.serviceWorker.register("./sw.js").then(reg => {
+    // Detectar cuando hay un nuevo SW instalado y listo
+    reg.addEventListener("updatefound", () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener("statechange", () => {
+        // Cuando el nuevo SW está instalado y hay uno previo activo → recargar
+        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          newWorker.postMessage("skipWaiting");
+        }
+      });
+    });
+  }).catch(() => {});
+
+  // Cuando el SW toma control (después de skipWaiting) → recargar la página
+  let recargando = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (!recargando) { recargando = true; window.location.reload(); }
+  });
 }
 </script>
 </body>
