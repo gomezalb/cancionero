@@ -102,6 +102,27 @@
     .sl-remove:hover { color: var(--red-tx); }
     #sl-empty { font-size: 13px; color: #444; text-align: center; padding: 2rem 0; border: 0.5px dashed #2a2a2a; border-radius: var(--radius); }
 
+    /* Panel importar desde texto */
+    #txt-panel { display: none; flex-direction: column; gap: .75rem; background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+    #txt-input { width: 100%; background: var(--bg3); border: 0.5px solid var(--border2); color: var(--text); border-radius: var(--radius); padding: .75rem; font-size: 13px; resize: vertical; min-height: 100px; outline: none; font-family: inherit; }
+    #txt-input::placeholder { color: var(--text4); }
+    #txt-input:focus { border-color: #555; }
+    #txt-actions { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    #txt-status { font-size: 12px; color: var(--text4); flex: 1; }
+    /* Resultados de matching */
+    #txt-results { display: flex; flex-direction: column; gap: 5px; }
+    .match-item { background: var(--bg3); border: 0.5px solid var(--border); border-radius: var(--radius); padding: .6rem 1rem; display: flex; align-items: center; gap: 8px; }
+    .match-item.ok { border-color: var(--green-bd); }
+    .match-item.warn { border-color: #5a4a00; }
+    .match-item.err { border-color: var(--red-bd); }
+    .match-icon { font-size: 13px; flex-shrink: 0; }
+    .match-original { font-size: 11px; color: var(--text4); }
+    .match-found { font-size: 13px; font-weight: 500; color: var(--text); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .match-found.err { color: var(--red-tx); }
+    .match-select { background: var(--bg2); border: 0.5px solid var(--border2); color: var(--text); font-size: 12px; border-radius: 6px; padding: 3px 6px; max-width: 160px; outline: none; display: none; }
+    .match-item.warn .match-select,
+    .match-item.err .match-select { display: block; }
+
     /* Viewer */
     #viewer { display: none; flex-direction: column; }
     #back { font-size: 13px; color: var(--text4); cursor: pointer; margin-bottom: 1rem; display: flex; align-items: center; gap: 5px; border: none; background: none; padding: 0; }
@@ -248,7 +269,20 @@
       <button class="sl-btn primary" id="play-btn" disabled>&#9654; Proyectar</button>
       <button class="sl-btn" id="export-btn">&#8595; Exportar</button>
       <button class="sl-btn" id="import-btn">&#8593; Importar</button>
+      <button class="sl-btn" id="txt-btn">&#9881; Desde texto</button>
       <button class="sl-btn danger" id="clear-btn">Limpiar lista</button>
+    </div>
+    <div id="txt-panel">
+      <textarea id="txt-input" placeholder="Pegá o escribí la lista de canciones, una por línea:&#10;&#10;Bésame&#10;Alfonsina&#10;gracia a la vida&#10;..."></textarea>
+      <div id="txt-actions">
+        <button class="sl-btn primary" id="txt-interpretar">Interpretar lista</button>
+        <button class="sl-btn" id="txt-cancelar">Cancelar</button>
+        <span id="txt-status"></span>
+      </div>
+      <div id="txt-results"></div>
+      <div id="txt-confirm-wrap" style="display:none">
+        <button class="sl-btn primary" id="txt-confirmar">Usar esta lista</button>
+      </div>
     </div>
     <div id="sl-items"></div>
   </div>
@@ -546,7 +580,124 @@ document.getElementById("file-input").addEventListener("change", e => {
   reader.readAsText(file); e.target.value = "";
 });
 
-// ── Viewer ─────────────────────────────────────────────────────
+// ── Importar desde texto ───────────────────────────────────────
+
+document.getElementById("txt-btn").addEventListener("click", () => {
+  const panel = document.getElementById("txt-panel");
+  const visible = panel.style.display === "flex";
+  panel.style.display = visible ? "none" : "flex";
+  if (!visible) {
+    document.getElementById("txt-results").innerHTML = "";
+    document.getElementById("txt-confirm-wrap").style.display = "none";
+    document.getElementById("txt-status").textContent = "";
+    // Placeholder dinámico con 3 canciones al azar del cancionero
+    if (SONGS.length > 0) {
+      const muestra = [...SONGS].sort(() => Math.random() - 0.5).slice(0, 3);
+      document.getElementById("txt-input").placeholder =
+        "Pegá o escribí la lista de canciones, una por línea:\n\n" +
+        muestra.map(s => s.titulo).join("\n") + "\n...";
+    }
+  }
+});
+document.getElementById("txt-cancelar").addEventListener("click", () => {
+  document.getElementById("txt-panel").style.display = "none";
+});
+
+function fuzzyScore(a, b) {
+  a = norm(a); b = norm(b);
+  if (b.includes(a) || a.includes(b)) return 1;
+  const wa = a.split(/\s+/), wb = b.split(/\s+/);
+  const comunes = wa.filter(w => w.length > 2 && wb.some(bw => bw.includes(w) || w.includes(bw)));
+  if (comunes.length === 0) return 0;
+  return comunes.length / Math.max(wa.length, wb.length);
+}
+
+function buscarFuzzy(linea) {
+  let mejor = null, mejorScore = 0;
+  for (const song of SONGS) {
+    let score = fuzzyScore(linea, song.titulo);
+    if (song.preview) score = Math.max(score, fuzzyScore(linea, song.preview) * 0.85);
+    if (score > mejorScore) { mejorScore = score; mejor = song; }
+  }
+  return { song: mejor, score: mejorScore };
+}
+
+let matchResults = [];
+
+document.getElementById("txt-interpretar").addEventListener("click", () => {
+  const texto = document.getElementById("txt-input").value.trim();
+  if (!texto) return;
+
+  const lineas = texto.split("\n")
+    .map(l => l
+      .trim()
+      .replace(/^[\d]+[.\-\)]\s*/, "")      // numeración: "1. " "1- " "1) "
+      .replace(/^[•\-\*\+►▶→»·–—]\s*/, "") // viñetas y flechas
+      .replace(/^\p{Emoji}+\s*/u, "")        // emojis al inicio
+      .replace(/_/g, " ")                    // guiones bajos → espacio
+      .replace(/\s+[A-Ga-g](?:do|re|mi|fa|sol|la|si|DO|RE|MI|FA|SOL|LA|SI)?-?\s*$/i, "") // tonalidad al final
+      .replace(/\s+(do|re|mi|fa|sol|la|si)m?\s*$/i, "") // tonalidades en español al final (Do, LAm, MIm, etc.)
+      .trim()
+    )
+    .filter(l => l.length > 0);
+  const status = document.getElementById("txt-status");
+  const resultsEl = document.getElementById("txt-results");
+  resultsEl.innerHTML = "";
+  document.getElementById("txt-confirm-wrap").style.display = "none";
+  matchResults = [];
+
+  matchResults = lineas.map(linea => {
+    const { song, score } = buscarFuzzy(linea);
+    if (score >= 0.6) return { linea, song, tipo: "ok" };
+    if (score >= 0.3) return { linea, song, tipo: "warn" };
+    return { linea, song, tipo: "err" };
+  });
+
+  const ok = matchResults.filter(r => r.tipo === "ok").length;
+  const warn = matchResults.filter(r => r.tipo === "warn").length;
+  const err = matchResults.filter(r => r.tipo === "err").length;
+  status.textContent = `${ok} encontradas, ${warn} con dudas, ${err} sin resultado.`;
+
+  matchResults.forEach((r, i) => {
+    const div = document.createElement("div");
+    div.className = `match-item ${r.tipo}`;
+    const icon = r.tipo === "ok" ? "✓" : r.tipo === "warn" ? "?" : "✗";
+    const foundText = r.song ? r.song.titulo : "No encontrada";
+    const options = SONGS.map(s =>
+      `<option value="${s.titulo}" ${r.song?.titulo === s.titulo ? "selected" : ""}>${s.titulo}</option>`
+    ).join("");
+
+    div.innerHTML = `
+      <span class="match-icon">${icon}</span>
+      <div style="flex:1;min-width:0">
+        <div class="match-original">${r.linea}</div>
+        <div class="match-found ${r.tipo === "err" ? "err" : ""}">${foundText}</div>
+      </div>
+      <select class="match-select" data-idx="${i}">
+        <option value="">— no incluir —</option>
+        ${options}
+      </select>`;
+
+    div.querySelector(".match-select")?.addEventListener("change", e => {
+      matchResults[i].song = SONGS.find(s => s.titulo === e.target.value) || null;
+      matchResults[i].tipo = e.target.value ? "warn" : "err";
+    });
+
+    resultsEl.appendChild(div);
+  });
+
+  document.getElementById("txt-confirm-wrap").style.display = "block";
+});
+
+document.getElementById("txt-confirmar").addEventListener("click", () => {
+  const nuevaLista = matchResults.filter(r => r.song).map(r => r.song.titulo);
+  if (nuevaLista.length === 0) { alert("No hay canciones para agregar."); return; }
+  setlist = nuevaLista;
+  saveToStorage(); updateBadge(); renderSetlist(); renderList();
+  document.getElementById("txt-panel").style.display = "none";
+  document.getElementById("txt-input").value = "";
+  document.getElementById("txt-results").innerHTML = "";
+});
 function openSong(song, queue, pauseEdges) {
   viewerQueue = queue || null;
   viewerSlides = queue ? buildSlides(queue, pauseEdges) : buildSingle(song, pauseEdges);
