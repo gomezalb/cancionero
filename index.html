@@ -509,12 +509,22 @@ async function cargarSetlist() {
       const hoy = new Date(); hoy.setHours(0,0,0,0);
       const expira = new Date(d.expira); expira.setHours(0,0,0,0);
       if (hoy > expira) {
-        // Setlist vencida — usar localStorage si hay, sino vacío
+        // Verificar si el usuario ya creó algo nuevo después del vencimiento
         const raw = localStorage.getItem(LS_KEY);
-        if (raw) { loadFromStorage(); }
-        else { limpiarLista(); return; }
-        updateBadge(); renderList();
-        if (activeTab === "setlist") renderSetlist();
+        if (raw) {
+          try {
+            const local = JSON.parse(raw);
+            // Si hay canciones en localStorage, el usuario ya creó una lista nueva → respetarla
+            if (Array.isArray(local.songs) && local.songs.length > 0) {
+              loadFromStorage(); updateBadge(); renderList();
+              if (activeTab === "setlist") renderSetlist();
+              return;
+            }
+          } catch(e) {}
+        }
+        // No hay lista nueva del usuario — limpiar todo
+        try { localStorage.removeItem(LS_KEY); } catch(e) {}
+        limpiarLista();
         return;
       }
     }
