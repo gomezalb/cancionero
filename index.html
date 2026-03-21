@@ -476,6 +476,7 @@ async function cargarSetlist() {
     if (Array.isArray(d.songs)) {
       setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
       updateBadge();
+      renderList(); // refrescar cancionero para mostrar botones rojos
       if (activeTab === "setlist") renderSetlist();
     }
   } catch(e) { /* setlist.json no existe o es inválido — ignorar silenciosamente */ }
