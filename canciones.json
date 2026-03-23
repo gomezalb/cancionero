@@ -40,12 +40,13 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "A quien iré en necesidad",
+    "titulo": "A quién iré en necesidad",
     "preview": "A quién iré en necesidad,\na quién iré en busca de paz,\ny quién podrá mi vida saciar de verdad.\n\nQuién más tendrá de mi compasión,\ny entenderá mi corazón.\nQuién cambiará mi eternidad, \nsino tú Jesús",
     "slides": [
       "<span class=\"fs-40\"><b>A </b></span><span class=\"fs-40\"><b>quién </b></span><span class=\"fs-40\"><b>iré en necesidad,</b></span><br><span class=\"fs-40\"><b>a </b></span><span class=\"fs-40\"><b>quién </b></span><span class=\"fs-40\"><b>iré en busca de </b></span><span class=\"fs-40\"><b>paz,</b></span><br><span class=\"fs-40\"><b>y </b></span><span class=\"fs-40\"><b>quién </b></span><span class=\"fs-40\"><b>podrá mi vida saciar de </b></span><span class=\"fs-40\"><b>verdad.</b></span><br><br><br><span class=\"fs-40\"><b>Quién </b></span><span class=\"fs-40\"><b>más tendrá de </b></span><span class=\"fs-40\"><b>mi compasión,</b></span><br><span class=\"fs-40\"><b>y </b></span><span class=\"fs-40\"><b>entenderá mi </b></span><span class=\"fs-40\"><b>corazón.</b></span><br><span class=\"fs-40\"><b>Quién </b></span><span class=\"fs-40\"><b>cambiará mi </b></span><span class=\"fs-40\"><b>eternidad, </b></span><br><span class=\"fs-40\"><b>sino </b></span><span class=\"fs-40\"><b>tú </b></span><span class=\"fs-40\"><b>Jesús</b></span>",
       "<span class=\"fs-40\"><b>//</b></span><span class=\"fs-40\"><b>Cristo ¿A dónde más podría ir?</b></span><br><span class=\"fs-40\"><b>Cristo ¿Qué otro lugar puede existir?</b></span><br><span class=\"fs-40\"><b>Sólo tu tienes palabras de amor</b></span><br><span class=\"fs-40\"><b>Camino al Padre y verdad eres tú.</b></span><br><span class=\"fs-40\"><b>Cristo ¿Adónde más podría ir?</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "A"
   },
   {
@@ -55,6 +56,7 @@
       "<span class=\"fs-40\"><b>A ti, el alfa y la omega</b></span><br><span class=\"fs-40\"><b>El principio y el fin</b></span><br><span class=\"fs-40\"><b>Y el gran yo soy</b></span><br><span class=\"fs-40\"><b>me rindo</b></span><br><br><br><span class=\"fs-40\"><b>A ti, el Todopoderoso</b></span><br><span class=\"fs-40\"><b>El que es y que será</b></span><br><span class=\"fs-40\"><b>Y el gran yo soy</b></span><br><span class=\"fs-40\"><b>Me entrego</b></span>",
       "<span class=\"fs-40\"><b>Yo quiero que gobiernes mi vida</b></span><br><span class=\"fs-40\"><b>Me doy en sacrificio a ti</b></span><br><span class=\"fs-40\"><b>Yo quiero que tú ordenes mi caminar</b></span><br><span class=\"fs-40\"><b>que siempre viva en tu voluntad</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "A"
   },
   {
@@ -74,6 +76,7 @@
       "<span class=\"fs-40\"><b> A tus pies arde mi corazón</b></span><br><span class=\"fs-40\"><b>A tus pies entrego lo que soy</b></span><br><span class=\"fs-40\"><b>Es el lugar de mi seguridad</b></span><br><span class=\"fs-40\"><b>Donde nadie me puede señalar</b></span><br><br><br><span class=\"fs-40\"><b>Me perdonaste</b></span><br><span class=\"fs-40\"><b>Me acercaste a tu presencia</b></span><br><span class=\"fs-40\"><b>Me levantaste</b></span><br><span class=\"fs-40\"><b>Hoy me postro adorarte</b></span>",
       "<span class=\"fs-40\"><b>/No hay lugar más alto</b></span><br><span class=\"fs-40\"><b>Más grande</b></span><br><span class=\"fs-40\"><b>Que estar a tus pies</b></span><br><span class=\"fs-40\"><b>Que estar a tus pies/</b></span><br><br><br><span class=\"fs-40\"><b>/Y aquí permaneceré</b></span><br><span class=\"fs-40\"><b>Postrado a tus pies</b></span><br><span class=\"fs-40\"><b>Y aquí permaneceré</b></span><br><span class=\"fs-40\"><b>A los pies de Cristo/</b></span><br><br><br><span class=\"fs-40\"><b>No hay lugar más alto...</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "A"
   },
   {
@@ -82,6 +85,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Abre mis ojos, oh Cristo,</b></span><br><span class=\"fs-40\"><b>abre mis ojos te pido,</b></span><br><span class=\"fs-40\"><b>yo quiero verte, yo quiero verte/</b></span><br><br><br><span class=\"fs-40\"><b>/Y contemplar tu majestad,</b></span><br><span class=\"fs-40\"><b>y el resplandor de tu gloria,</b></span><br><span class=\"fs-40\"><b>derrama tu amor y poder</b></span><br><span class=\"fs-40\"><b>cuando cantamos, Santo, Santo/</b></span><br><br><br><span class=\"fs-40\"><b>//Santo, Santo, Santo//</b></span><br><span class=\"fs-40\"><b>yo quiero verte.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "A"
   },
   {
@@ -90,6 +94,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Abre mis ojos, </b></span><br><span class=\"fs-40\"><b>quiero ver a Cristo.</b></span><br><span class=\"fs-40\"><b>Y contemplarle, </b></span><br><span class=\"fs-40\"><b>decirle te amo.</b></span><br><br><br><span class=\"fs-40\"><b>Abre mi oído, </b></span><br><span class=\"fs-40\"><b>enséñame a oírle,</b></span><br><span class=\"fs-40\"><b>abre mis ojos, </b></span><br><span class=\"fs-40\"><b>quiero ver a Cristo.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "A"
   },
   {
@@ -99,6 +104,7 @@
       "<span class=\"fs-40\"><b>Aclamad a Dios con alegría, </b></span><br><span class=\"fs-40\"><b>toda la tierra, toda la tierra</b></span><br><span class=\"fs-40\"><b>cantad la gloria de su nombre,</b></span><br><span class=\"fs-40\"><b>poned gloria en su alabanza</b></span><br><br><span class=\"fs-40\"><b>Decid a Dios cuán asombrosas </b></span><br><span class=\"fs-40\"><b>son tus obras </b></span><br><span class=\"fs-40\"><b>por la grandeza de tu poder </b></span><br><span class=\"fs-40\"><b>Se someterán a tí tus enemigos, </b></span><br><span class=\"fs-40\"><b>toda la tierra te adorará</b></span>",
       "<span class=\"fs-40\"><b>/Y cantarán a tí, y cantarán a tí, </b></span><br><span class=\"fs-40\"><b>y cantarán a tí,</b></span><br><span class=\"fs-40\"><b>A tu nombre, a tu nombre cantarán/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "A"
   },
   {
@@ -116,6 +122,7 @@
       "<span class=\"fs-40\"><b>Adorarte quiero hoy, </b></span><br><span class=\"fs-40\"><b>entregarme a tu amor,</b></span><br><span class=\"fs-40\"><b>llenarme del calor de tu presencia.</b></span><br><br><span class=\"fs-40\"><b>Amarte es un placer,</b></span><br><span class=\"fs-40\"><b>conocerte es mi querer,</b></span><br><span class=\"fs-40\"><b>descansar en el saber que tú me amas.</b></span>",
       "<span class=\"fs-40\"><b>/Amarte más y darte más mi corazón,</b></span><br><span class=\"fs-40\"><b>mi amado Dios es mi oración</b></span><br><span class=\"fs-40\"><b>rendirme a ti, de corazón.</b></span><br><span class=\"fs-40\"><b>nadie es igual a ti, por eso canto así,</b></span><br><span class=\"fs-40\"><b>de tu amor por mí,</b></span><br><span class=\"fs-40\"><b>y de mi dulce amor por ti/</b></span><br><br><br><span class=\"fs-40\"><b>/Y de mi dulce amor por ti/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "A"
   },
   {
@@ -125,6 +132,7 @@
       "<span class=\"fs-40\"><b>Al entrar en tu santo lugar,</b></span><br><span class=\"fs-40\"><b>me asombra que me pueda acercar,</b></span><br><span class=\"fs-40\"><b>para ver tu gloria y tu belleza</b></span><br><span class=\"fs-40\"><b>y adorarte en intimidad</b></span><br><br><span class=\"fs-40\"><b>En confianza yo me puedo acercar,</b></span><br><span class=\"fs-40\"><b>de tu mesa quiero participar,</b></span><br><span class=\"fs-40\"><b>todo lo que puedo hacer</b></span><br><span class=\"fs-40\"><b>es postrarme, </b></span><br><span class=\"fs-40\"><b>y con mis labios proclamar</b></span>",
       "<span class=\"fs-40\"><b>Mi pan, mi luz, mi oración</b></span><br><span class=\"fs-40\"><b>eres tu Jesús</b></span><br><span class=\"fs-40\"><b>Mi Dios, mi amor y mi canción</b></span><br><span class=\"fs-40\"><b>eres tú, Jesús solo tú</b></span><br><br><span class=\"fs-40\"><b>/Me cuidas, me abrazas, </b></span><br><span class=\"fs-40\"><b>me cantas, me amas/</b></span><br><br><br><span class=\"fs-40\"><b>Mi pan, mi luz…</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "A"
   },
   {
@@ -134,6 +142,7 @@
       "<span class=\"fs-40\"><b>Al estar ante Ti</b></span><br><span class=\"fs-40\"><b>Adorando frente al mar de cristal</b></span><br><span class=\"fs-40\"><b>Entre la multitud</b></span><br><span class=\"fs-40\"><b>En asombro allí me habré de postrar</b></span><br><span class=\"fs-40\"><b>Y mi canto uniré</b></span><br><span class=\"fs-40\"><b>A millones proclamándote rey</b></span><br><span class=\"fs-40\"><b>Y mi voz oirás</b></span><br><span class=\"fs-40\"><b>Entre las multitudes </b></span><span class=\"fs-40\"><b>cantar</b></span>",
       "<span class=\"fs-40\"><b>Digno es el cordero de Dios</b></span><br><span class=\"fs-40\"><b>El que fué inmolado en la cruz</b></span><br><span class=\"fs-40\"><b>Digno de la honra y el poder</b></span><br><span class=\"fs-40\"><b>La sabiduría suya es</b></span><br><br><br><span class=\"fs-40\"><b>Y al que está en el trono sea el honor</b></span><br><span class=\"fs-40\"><b>Santo, santo, santo es el Señor</b></span><br><span class=\"fs-40\"><b>Reina por los siglos con poder</b></span><br><span class=\"fs-40\"><b>Todo lo que existe es por Él</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "A"
   },
   {
@@ -143,6 +152,7 @@
       "<span class=\"fs-40\"><b>Al estar en la presencia de tu divinidad,</b></span><br><span class=\"fs-40\"><b>y al contemplar la hermosura </b></span><br><span class=\"fs-40\"><b>de tu santidad,</b></span><br><span class=\"fs-40\"><b>mi espíritu se alegra en tu majestad.</b></span><br><span class=\"fs-40\"><b>Te adoro a ti, te adoro a ti.</b></span><br><br><span class=\"fs-40\"><b>Cuando veo la grandeza de tu dulce amor,</b></span><br><span class=\"fs-40\"><b>y comprendo la pureza de tu corazón,</b></span><br><span class=\"fs-40\"><b>mi espíritu se alegra en tu majestad.</b></span><br><span class=\"fs-40\"><b>Te adoro a ti, te adoro a ti. </b></span>",
       "<span class=\"fs-40\"><b>/Y al estar aquí, delante de tí adoraré,</b></span><br><span class=\"fs-40\"><b>postrado ante ti, mi corazón </b></span><br><span class=\"fs-40\"><b>te adora oh Dios.</b></span><br><span class=\"fs-40\"><b>Y siempre quiero estar para adorar, </b></span><br><span class=\"fs-40\"><b>y contemplar tu santidad.</b></span><br><span class=\"fs-40\"><b>Te adoro a ti, Señor, te adoro a ti./</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "A"
   },
   {
@@ -154,6 +164,7 @@
       "<span class=\"fs-40\"><b>La gloriosa plenitud de la divinidad</b></span><br><span class=\"fs-40\"><b>en Cristo es por su virtud</b></span><br><span class=\"fs-40\"><b>me da la santidad.</b></span><br><br><span class=\"fs-40\"><b>Oh que amor, que inmenso amor, </b></span><br><span class=\"fs-40\"><b>no hay otro amor así,</b></span><br><span class=\"fs-40\"><b>Dios desde el cielo al Salvador</b></span><br><span class=\"fs-40\"><b>mando a morir por mi.</b></span>",
       "<span class=\"fs-40\"><b>Aliéntate, oh alma fiel,  </b></span><br><span class=\"fs-40\"><b>pues cristo te dará</b></span><br><span class=\"fs-40\"><b>felicidad aquí con él, </b></span><br><span class=\"fs-40\"><b>y gloria eterna allá.</b></span><br><br><span class=\"fs-40\"><b>Oh que amor, que inmenso amor, </b></span><br><span class=\"fs-40\"><b>no hay otro amor así,</b></span><br><span class=\"fs-40\"><b>Dios desde el cielo al Salvador</b></span><br><span class=\"fs-40\"><b>mando a morir por mi.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "Himnos"
   },
   {
@@ -172,6 +183,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Al que es Digno, de recibir la gloria.</b></span><br><span class=\"fs-40\"><b>Al que es Digno, de recibir el honor/</b></span><br><br><span class=\"fs-40\"><b>Levantemos nuestras manos y adoremos,</b></span><br><span class=\"fs-40\"><b>A Jesús, Cordero de gloria.</b></span><br><span class=\"fs-40\"><b>Y exaltemos su incomparable majestad</b></span><br><br><span class=\"fs-40\"><b>Al que vive por siempre, al gran Yo Soy,</b></span><br><span class=\"fs-40\"><b>a Jesús.</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "A"
   },
   {
@@ -180,6 +192,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Al que me ciñe de poder,</b></span><br><span class=\"fs-40\"><b>aquel que mi victoria es,</b></span><br><span class=\"fs-40\"><b>solo a él alabaré, </b></span><br><span class=\"fs-40\"><b>solo a él exaltaré/</b></span><br><br><span class=\"fs-40\"><b>de ti será mi alabanza,</b></span><br><span class=\"fs-40\"><b>en la congregación,</b></span><br><span class=\"fs-40\"><b>cantaré y alabare</b></span><br><span class=\"fs-40\"><b>//tu nombre Señor.//</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "A"
   },
   {
@@ -198,6 +211,7 @@
       "<span class=\"fs-40\"><b>Al único que es digno de recibir</b></span><br><span class=\"fs-40\"><b>gloria y honra, fuerza y poder.</b></span><br><span class=\"fs-40\"><b>Al Dios y Padre eternal, </b></span><br><span class=\"fs-40\"><b>invisible pero real</b></span><br><span class=\"fs-40\"><b>a él hoy ministramos loor.</b></span>",
       "<span class=\"fs-40\"><b>/Te coronamos, Señor y Rey Jesús/</b></span><br><span class=\"fs-40\"><b>Adoramos tu nombre,</b></span><br><span class=\"fs-40\"><b>nos rendimos a tus pies.</b></span><br><span class=\"fs-40\"><b>//Consagramos todo nuestro ser a ti//</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "A"
   },
   {
@@ -217,6 +231,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Allá en el cielo hay un dulce hogar</b></span><br><span class=\"fs-40\"><b>Y una corona para heredar</b></span><br><span class=\"fs-40\"><b>Si tu te duermes otro vendrá </b></span><br><span class=\"fs-40\"><b>Y tu corona heredará heredará heredará.</b></span><br><br><br><span class=\"fs-40\"><b>Despierta hermano, hay que trabajar</b></span><br><span class=\"fs-40\"><b>Hay muchas almas para salvar</b></span><br><span class=\"fs-40\"><b>Redime el tiempo que Dios te da</b></span><br><span class=\"fs-40\"><b>Y tu corona recibirás recibirás recibirás.</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "A"
   },
   {
@@ -226,6 +241,7 @@
       "<span class=\"fs-40\"><b>Alza tus ojos y mira</b></span><br><span class=\"fs-40\"><b>la cosecha está lista,</b></span><br><span class=\"fs-40\"><b>el tiempo ha llegado,</b></span><br><span class=\"fs-40\"><b>la mies está madura.</b></span><br><br><span class=\"fs-40\"><b>Esfuérzate y se valiente,</b></span><br><span class=\"fs-40\"><b>levántate y predica</b></span><br><span class=\"fs-40\"><b>a todas las naciones</b></span><br><span class=\"fs-40\"><b>que Cristo es la vida.</b></span>",
       "<span class=\"fs-40\"><b>/Y será</b></span><br><span class=\"fs-40\"><b>llena la tierra de su gloria</b></span><br><span class=\"fs-40\"><b>y se cubrirá</b></span><br><span class=\"fs-40\"><b>como las aguas cubren al mar/ </b></span><br><br><span class=\"fs-40\"><b>No, no hay otro nombre</b></span><br><span class=\"fs-40\"><b>dado a los hombres, </b></span><br><span class=\"fs-40\"><b>Jesucristo es el Señor.</b></span><br><br><br><span class=\"fs-40\"><b>Y será..</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "A"
   },
   {
@@ -243,6 +259,7 @@
       "<span class=\"fs-40\"><b>/Aquel que la buena obra empezó/ </b></span><br><span class=\"fs-40\"><b>será fiel en completarla, </b></span><br><span class=\"fs-40\"><b>él es fiel en completarla.</b></span><br><span class=\"fs-40\"><b>El que la comenzó </b></span><br><span class=\"fs-40\"><b>será fiel en completarla en ti.</b></span>",
       "<span class=\"fs-40\"><b>Si la lucha que enfrentas</b></span><br><span class=\"fs-40\"><b>a tu esperanza tornó ya sin paz</b></span><br><span class=\"fs-40\"><b>o de tanto esperar</b></span><br><span class=\"fs-40\"><b>ya perdiendo tu canción estás,</b></span><br><span class=\"fs-40\"><b>puedes creer que en sus manos estás, </b></span><br><span class=\"fs-40\"><b>seguro estarás</b></span><br><span class=\"fs-40\"><b>nunca te ha de abandonar,</b></span><br><span class=\"fs-40\"><b>eres su gozo, y su gran tesoro aquí.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "A"
   },
   {
@@ -255,6 +272,7 @@
       "<span class=\"fs-40\"><b>///Así eres tú, así eres tú</b></span><span class=\"fs-40\"><b>///</b></span><br><br><br><span class=\"fs-40\"><b>/</b></span><span class=\"fs-40\"><b>Aunque no pueda ver estás </b></span><span class=\"fs-40\"><b>obrando</b></span><br><span class=\"fs-40\"><b>Aunque </b></span><span class=\"fs-40\"><b>no pueda ver estás </b></span><span class=\"fs-40\"><b>obrando</b></span><br><span class=\"fs-40\"><b>Siempre </b></span><span class=\"fs-40\"><b>estás, siempre estás </b></span><span class=\"fs-40\"><b>obrando</b></span><br><span class=\"fs-40\"><b>Siempre </b></span><span class=\"fs-40\"><b>estás, siempre estás obrando/</b></span>"
     ],
     "nueva": true,
+    "tono": "LA",
     "carpeta": "A"
   },
   {
@@ -274,10 +292,11 @@
       "<span class=\"fs-40\"><b>Aunque mis ojos no te puedan </b></span><span class=\"fs-40\"><b>ver,</b></span><br><span class=\"fs-40\"><b>te </b></span><span class=\"fs-40\"><b>puedo sentir, se que estas aquí,</b></span><br><span class=\"fs-40\"><b>aunque mis manos no puedan tocar</b></span><br><span class=\"fs-40\"><b>tu rostro Señor, se que estás aquí.</b></span><br><br><span class=\"fs-40\"><b>Mi corazón puede sentir tu presencia.</b></span><br><span class=\"fs-40\"><b>/Tu estás aquí/.</b></span><br><span class=\"fs-40\"><b>Puedo sentir tu majestad.</b></span><br><span class=\"fs-40\"><b>/Tu estás aquí/</b></span>",
       "<span class=\"fs-40\"><b>Mi corazón puede mirar tu hermosura.</b></span><br><span class=\"fs-40\"><b>/Tu estás aquí/.</b></span><br><span class=\"fs-40\"><b>Puedo sentir tu majestad.</b></span><br><span class=\"fs-40\"><b>/Tu estás aquí/</b></span><br><br><br><span class=\"fs-40\"><b>///Tu estás aquí///</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "A"
   },
   {
-    "titulo": "Aunque un ejercito acampe contra mi",
+    "titulo": "Aunque un ejército acampe contra mi.FA#",
     "preview": "Aunque un ejército acampe contra mí, \u000bno temeré.\u000bAunque haya guerra hoy alrededor de mí, \u000ben ti confiaré.\u000bNo temeré a diez mil gentes\u000bque hagan sitio contra mí,\u000baunque la tierra se estremezca,\u000bmi salvación esta en ti.",
     "slides": [
       "<span class=\"fs-40\"><b>Aunque un ejército acampe contra mí, </b></span><br><span class=\"fs-40\"><b>no temeré.</b></span><br><span class=\"fs-40\"><b>Aunque haya guerra hoy alrededor de mí, </b></span><br><span class=\"fs-40\"><b>en ti confiaré.</b></span><br><span class=\"fs-40\"><b>No temeré a diez mil gentes</b></span><br><span class=\"fs-40\"><b>que hagan sitio contra mí,</b></span><br><span class=\"fs-40\"><b>aunque la tierra se estremezca,</b></span><br><span class=\"fs-40\"><b>mi salvación esta </b></span><span class=\"fs-40\"><b>en ti.</b></span>",
@@ -294,6 +313,7 @@
       "<span class=\"fs-40\"><b>/Ayúdame a mirar con tus ojos,</b></span><br><span class=\"fs-40\"><b>Yo quiero sentir con tu corazón,</b></span><br><span class=\"fs-40\"><b>No quiero vivir más siendo insensible,</b></span><br><span class=\"fs-40\"><b>Tanta necesidad, oh Jesucristo/</b></span>",
       "<span class=\"fs-40\"><b>/Te pido la paz para mi ciudad, </b></span><br><span class=\"fs-40\"><b>Te pido perdón por mi ciudad </b></span><br><span class=\"fs-40\"><b>Ahora me humillo y busco Tu rostro</b></span><br><span class=\"fs-40\"><b>A quién iré, Señor, si no a tí/</b></span><br><br><br><span class=\"fs-40\"><b>/A quién iré, Señor, si no a tí/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "A"
   },
   {
@@ -302,6 +322,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Bellas palabras de vida </b></span><br><span class=\"fs-40\"><b>Son las de Cristo Jesús,</b></span><br><br><span class=\"fs-40\"><b>Ellas alientan mi alma,</b></span><br><span class=\"fs-40\"><b>dan fortaleza y luz.</b></span><br><br><span class=\"fs-40\"><b>Bellas palabras de vida </b></span><br><span class=\"fs-40\"><b>Resplandecen en mi ser</b></span><br><br><span class=\"fs-40\"><b>/Bellas palabras que nunca en la vida </b></span><br><span class=\"fs-40\"><b>Había escuchado hasta hoy/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "B"
   },
   {
@@ -310,6 +331,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Bendeciré a Jehová en todo tiempo</b></span><br><span class=\"fs-40\"><b>su alabanza en mi boca estará.</b></span><br><span class=\"fs-40\"><b>En Jehová se gloriará mi alma</b></span><br><span class=\"fs-40\"><b>lo oirán los mansos y se alegrarán.</b></span><br><br><span class=\"fs-40\"><b>Engrandeced a Jehová conmigo</b></span><br><span class=\"fs-40\"><b>y exaltemos a una su nombre.</b></span><br><span class=\"fs-40\"><b>Busqué a Jehová y el me oyó</b></span><br><span class=\"fs-40\"><b>y de todos mis temores me libró.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "B"
   },
   {
@@ -318,6 +340,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Bendice </b></span><span class=\"fs-40\"><b>oh alma mia</b></span><br><span class=\"fs-40\"><b>bendice, alaba a Dios</b></span><br><span class=\"fs-40\"><b>bendice, canta alabanzas </b></span><br><span class=\"fs-40\"><b>a aquel que es único Señor</b></span><br><br><span class=\"fs-40\"><b>Bendice oh alma mía</b></span><br><span class=\"fs-40\"><b>permanece en oración</b></span><br><span class=\"fs-40\"><b>/no olvides que la batalla</b></span><br><span class=\"fs-40\"><b>ya fue ganada por el Señor/</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "B"
   },
   {
@@ -329,12 +352,13 @@
     "carpeta": "B"
   },
   {
-    "titulo": "Bueno es alabar oh señor",
+    "titulo": "Bueno es alabar oh Señor",
     "preview": "/Bueno es alabar oh Señor tu nombre.\u000bDarte gloria, honra y honor, por siempre.\u000bBueno es alabarte Jesús\u000by gozarme en tu poder/",
     "slides": [
       "<span class=\"fs-40\"><b>/Bueno es alabar oh Señor tu nombre.</b></span><br><span class=\"fs-40\"><b>Darte gloria, honra y honor, por siempre.</b></span><br><span class=\"fs-40\"><b>Bueno es alabarte Jesús</b></span><br><span class=\"fs-40\"><b>y gozarme en tu poder/</b></span>",
       "<span class=\"fs-40\"><b>/Porque grande eres tú,</b></span><br><span class=\"fs-40\"><b>grandes  son tus obras,</b></span><br><span class=\"fs-40\"><b>porque grande eres tú, </b></span><br><span class=\"fs-40\"><b>grande es tu amor, </b></span><span class=\"fs-40\"><b>grande es </b></span><span class=\"fs-40\"><b>tu gloria/. </b></span><br><br><span class=\"fs-40\"><b>Bueno es alabarte Señor.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "B"
   },
   {
@@ -344,6 +368,7 @@
       "<span class=\"fs-40\"><b>Busca la voluntad del Señor</b></span><br><span class=\"fs-40\"><b>búscala porque la suya es mejor, </b></span><br><span class=\"fs-40\"><b>búscala y no te arrepentirás</b></span><br><span class=\"fs-40\"><b>porque Cristo siempre a tu lado estará.</b></span><br><br><span class=\"fs-40\"><b>Pero búscala de corazón</b></span><br><span class=\"fs-40\"><b>no pretendas engañar al Señor</b></span><br><span class=\"fs-40\"><b>y espérala aunque tarde en llegar</b></span><br><span class=\"fs-40\"><b>porque Cristo siempre a tu lado estará.</b></span>",
       "<span class=\"fs-40\"><b>Busca la voluntad del Señor</b></span><br><span class=\"fs-40\"><b>búscala aunque te cause dolor</b></span><br><span class=\"fs-40\"><b>búscala aunque tengas que sufrir</b></span><br><span class=\"fs-40\"><b>y no comprendas por que ella es así.</b></span><br><br><span class=\"fs-40\"><b> Pero búscala de corazón</b></span><br><span class=\"fs-40\"><b>no pretendas engañar al Señor</b></span><br><span class=\"fs-40\"><b>y espérala aunque tarde en llegar</b></span><br><span class=\"fs-40\"><b>porque Cristo siempre a tu lado estará.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "B"
   },
   {
@@ -353,6 +378,7 @@
       "<span class=\"fs-40\"><b>Buscad primero el reino de Dios</b></span><br><span class=\"fs-40\"><b>y su perfecta justicia</b></span><br><span class=\"fs-40\"><b>y lo demás añadido será</b></span><br><span class=\"fs-40\"><b>aleluya, aleluya.</b></span><br><br><span class=\"fs-40\"><b>No solo de pan el hombre vivirá</b></span><br><span class=\"fs-40\"><b>sino de toda palabra</b></span><br><span class=\"fs-40\"><b>que sale de la boca de Dios</b></span><br><span class=\"fs-40\"><b>aleluya, aleluya.</b></span>",
       "<span class=\"fs-40\"><b>Pedid, pedid y se os dará</b></span><br><span class=\"fs-40\"><b>buscad, buscad y hallareis</b></span><br><span class=\"fs-40\"><b>llamad, llamad y se os abrirá</b></span><br><span class=\"fs-40\"><b>aleluya, aleluya.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "B"
   },
   {
@@ -363,6 +389,7 @@
       "<span class=\"fs-40\"><b>/Enséñame a vivir el hoy de tal manera</b></span><br><span class=\"fs-40\"><b>que mañana no tenga</b></span><br><span class=\"fs-40\"><b>que reprocharme el ayer/.</b></span><br><br><br><span class=\"fs-40\"><b>Enséñame</b></span><br><br><br><span class=\"fs-40\"><b>Tiempo de nacer, tiempo de morir;</b></span><br><span class=\"fs-40\"><b>tiempo de llorar, también de reír.</b></span><br><span class=\"fs-40\"><b>Tiempo de buscar, tiempo de perder;</b></span><br><span class=\"fs-40\"><b>tiempo de saber lo que hay que hacer.</b></span>",
       "<span class=\"fs-40\"><b>Es por eso que preciso</b></span><br><span class=\"fs-40\"><b>Que me enseñes a vivir</b></span><br><span class=\"fs-40\"><b>Y a no equivocarme</b></span><br><span class=\"fs-40\"><b>Cuando tenga que elegir.</b></span><br><br><br><span class=\"fs-40\"><b>/Enséñame a vivir el hoy de tal manera</b></span><br><span class=\"fs-40\"><b>Que mañana no tenga</b></span><br><span class=\"fs-40\"><b>Que reprocharme el ayer/.</b></span><br><br><br><span class=\"fs-40\"><b>Enséñame</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "C"
   },
   {
@@ -371,6 +398,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>Cansado del camino, sediento de tí</b></span><br><span class=\"fs-36\"><b>un desierto he cruzado,</b></span><br><span class=\"fs-36\"><b>sin fuerzas he quedado, vengo a tí.</b></span><br><span class=\"fs-36\"><b>Luché como soldado y a veces sufrí</b></span><br><span class=\"fs-36\"><b>y aunque la lucha he ganado,</b></span><br><span class=\"fs-36\"><b>mi armadura he desgastado,</b></span><br><span class=\"fs-36\"><b>vengo a tí.</b></span><br><br><span class=\"fs-36\"><b>/Sumérgeme en el río de tu Espíritu,</b></span><br><span class=\"fs-36\"><b>necesito refrescar este seco corazón, </b></span><br><span class=\"fs-36\"><b>sediento de tí/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "C"
   },
   {
@@ -389,6 +417,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Cantemos a Jesús/</b></span><br><span class=\"fs-40\"><b>Señor de toda creación,</b></span><br><span class=\"fs-40\"><b>Dios de mi corazón</b></span><br><br><span class=\"fs-40\"><b>/Cantemos a Jesús/</b></span><br><span class=\"fs-40\"><b>victorioso mas que vencedor</b></span><br><span class=\"fs-40\"><b>Rey sobre toda nación</b></span><br><br><span class=\"fs-40\"><b>/Digno de loor/</b></span><br><span class=\"fs-40\"><b>/Rey de mi corazón/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "C"
   },
   {
@@ -408,6 +437,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Celebrad a Cristo, celebrad;</b></span><br><span class=\"fs-40\"><b>celebrad a Cristo, celebrad/</b></span><br><br><span class=\"fs-40\"><b>Resucitó, resucitó.</b></span><br><span class=\"fs-40\"><b>Él vive para siempre; </b></span><br><span class=\"fs-40\"><b>resucitó, resucitó.</b></span><br><br><span class=\"fs-40\"><b>Vamos a celebrar, ¡si!, </b></span><br><span class=\"fs-40\"><b>Vamos a celebrar, ¡si!</b></span><br><span class=\"fs-40\"><b>Vamos a celebrar, </b></span><br><span class=\"fs-40\"><b>resucitó el Señor.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "C"
   },
   {
@@ -416,6 +446,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Cerca de tí yo quiero estar</b></span><br><span class=\"fs-40\"><b>para escuchar tu voz</b></span><br><span class=\"fs-40\"><b>y aprender de tí.</b></span><br><span class=\"fs-40\"><b>Quiero ser un reflejo de tu amor,</b></span><br><span class=\"fs-40\"><b>yo quiero vivir solo en tu voluntad.</b></span><br><br><span class=\"fs-40\"><b>Jesús, eres mi buen pastor,</b></span><br><span class=\"fs-40\"><b>tú conoces mi camino.</b></span><br><span class=\"fs-40\"><b>Jesús, puedo confiar en tí.</b></span><br><span class=\"fs-40\"><b>Oh mi Dios, me rindo hoy.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "C"
   },
   {
@@ -433,6 +464,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Como el ciervo, busca por las aguas,</b></span><br><span class=\"fs-40\"><b>así clama mi alma por tí Señor,</b></span><br><span class=\"fs-40\"><b>día y noche yo tengo sed de tí,</b></span><br><span class=\"fs-40\"><b>y solo a tí buscaré</b></span><br><span class=\"fs-40\"><b>lléname, lléname Señor,</b></span><br><span class=\"fs-40\"><b>dame más, más de tu amor,</b></span><br><span class=\"fs-40\"><b>yo tengo sed, solo de tí,</b></span><br><span class=\"fs-40\"><b>lléname Señor.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "C"
   },
   {
@@ -451,6 +483,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Con mi Dios yo saltaré los muros,</b></span><br><span class=\"fs-40\"><b>con mi Dios ejércitos derribaré/</b></span><br><br><span class=\"fs-40\"><b>Él adiestra mis manos para la batalla,</b></span><br><span class=\"fs-40\"><b>puedo tomar con mis manos</b></span><br><span class=\"fs-40\"><b>el arco de bronce.</b></span><br><br><span class=\"fs-40\"><b>Él es escudo, la roca mía,</b></span><br><span class=\"fs-40\"><b>él es la fuerza de mi salvación,</b></span><br><span class=\"fs-40\"><b>mi alto refugio y mi fortaleza.</b></span><br><span class=\"fs-40\"><b>Él es mi libertador.</b></span>"
     ],
+    "tono": "DOm",
     "carpeta": "C"
   },
   {
@@ -459,6 +492,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Con mis manos levantadas hacia el cielo</b></span><br><span class=\"fs-40\"><b>Me presento ante ti hoy mi Señor</b></span><br><span class=\"fs-40\"><b>Para recibir de ti la fuerza y el poder</b></span><br><span class=\"fs-40\"><b>Para vivir junto a ti</b></span><br><br><br><span class=\"fs-40\"><b>Llenas hoy mi corazón con tu presencia</b></span><br><span class=\"fs-40\"><b>Llenas de alegría y paz todo mi ser</b></span><br><span class=\"fs-40\"><b>De cualquier necesidad tú me responderás</b></span><br><span class=\"fs-40\"><b>Porque me amas, me amas</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "C"
   },
   {
@@ -479,6 +513,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Cristo es el nombre sin igual</b></span><br><span class=\"fs-40\"><b>vence, hoy y por la eternidad.</b></span><br><span class=\"fs-40\"><b>Cristo resplandece por su amor</b></span><br><span class=\"fs-40\"><b>yo su nombre glorificaré.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "C"
   },
   {
@@ -487,6 +522,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>/Cristo es la peña de Horeb que está brotando</b></span><br><span class=\"fs-36\"><b>agua de vida saludable para ti/</b></span><br><br><span class=\"fs-36\"><b>Ven a tomarla que es mas dulce que la miel,</b></span><br><span class=\"fs-36\"><b>refresca el alma, refresca todo tu ser</b></span><br><br><span class=\"fs-36\"><b>Cristo es la peña de horeb que está brotando</b></span><br><span class=\"fs-36\"><b>agua de vida saludable para ti.</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "C"
   },
   {
@@ -495,6 +531,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Cristo moriste en una cruz,</b></span><br><span class=\"fs-40\"><b>Resucitaste con poder,</b></span><br><span class=\"fs-40\"><b>Perdona mis pecados hoy,</b></span><br><span class=\"fs-40\"><b>Se mi Señor y salvador.</b></span><br><br><br><span class=\"fs-40\"><b>/Cámbiame y hazme otra vez,</b></span><br><span class=\"fs-40\"><b>Y ayúdame a serte fiel/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "C"
   },
   {
@@ -503,6 +540,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/</b></span><span class=\"fs-40\"><b>Cristo quiero caminar siempre contigo,</b></span><br><span class=\"fs-40\"><b>y tomarte fuerte de la mano,</b></span><br><span class=\"fs-40\"><b>y sentir tu fortaleza en mi/</b></span><br><br><span class=\"fs-40\"><b>Porque en ti se encuentra</b></span><br><span class=\"fs-40\"><b>toda fuerza de victoria…</b></span><br><span class=\"fs-40\"><b>Porque el santo nombre</b></span><br><span class=\"fs-40\"><b>de Jesús me liberó….</b></span><br><br><span class=\"fs-40\"><b>/Porque en Cristo</b></span><br><span class=\"fs-40\"><b>mi carga es ligera/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "C"
   },
   {
@@ -521,6 +559,7 @@
       "<span class=\"fs-40\"><b>Antes vivía en el pecado,</b></span><br><span class=\"fs-40\"><b>Mi corazón de Dios alejado;</b></span><br><span class=\"fs-40\"><b>Mas mi vergüenza él me quitó:</b></span><br><span class=\"fs-40\"><b>Ya pertenezco a él.</b></span><br><br><span class=\"fs-40\"><b>Ahora soy de Cristo,</b></span><br><span class=\"fs-40\"><b>Mío también es él,</b></span><br><span class=\"fs-40\"><b>Puedo gozar de su amistad</b></span><br><span class=\"fs-40\"><b>Por la eternidad</b></span>",
       "<span class=\"fs-40\"><b>Mi ser rebosa de pleno gozo,</b></span><br><span class=\"fs-40\"><b>Dios me liberta, me da reposo;</b></span><br><span class=\"fs-40\"><b>Pues con su sangre me redimió:</b></span><br><span class=\"fs-40\"><b>Ahora soy de El.</b></span><br><br><span class=\"fs-40\"><b>Ahora soy de Cristo,</b></span><br><span class=\"fs-40\"><b>Mío también es él,</b></span><br><span class=\"fs-40\"><b>Puedo gozar de su amistad</b></span><br><span class=\"fs-40\"><b>Por la eternidad</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "Himnos"
   },
   {
@@ -529,6 +568,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>/Cristo te necesita para amar, para amar,</b></span><br><span class=\"fs-36\"><b>Cristo te necesita para amar/</b></span><br><br><span class=\"fs-36\"><b>/No te importe la raza ni el color de la piel</b></span><br><span class=\"fs-36\"><b>ama a todos por igual y haz el bien/</b></span><br><br><span class=\"fs-36\"><b>/Al que está a tu lado dale amor, dale amor</b></span><br><span class=\"fs-36\"><b>al que esta a tu lado dale amor/</b></span><br><br><span class=\"fs-36\"><b>/Al que viene desde lejos dale amor, dale amor</b></span><br><span class=\"fs-36\"><b>al que viene desde lejos dale amor/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "C"
   },
   {
@@ -547,6 +587,7 @@
       "<span class=\"fs-40\"><b>Cual la quietud de un arroyo</b></span><br><span class=\"fs-40\"><b>es la paz que yo siento</b></span><br><span class=\"fs-40\"><b>cuando estoy con mi Jesús.</b></span><br><br><span class=\"fs-40\"><b>y su amor tan sublime</b></span><br><span class=\"fs-40\"><b>es un gozo indecible</b></span><br><span class=\"fs-40\"><b>que hace feliz mi corazón.</b></span>",
       "<span class=\"fs-40\"><b>Yo anhelo más de mi Cristo,</b></span><br><span class=\"fs-40\"><b>más del Maestro, más del Señor</b></span><br><span class=\"fs-40\"><b>más por siempre.</b></span><br><br><span class=\"fs-40\"><b>Cual la quietud de un arroyo</b></span><br><span class=\"fs-40\"><b>es la paz que yo siento</b></span><br><span class=\"fs-40\"><b>cuando estoy con mi Jesús.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "C"
   },
   {
@@ -555,6 +596,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Cuan bello es el Señor,</b></span><br><span class=\"fs-40\"><b>cuan hermoso es el Señor.</b></span><br><span class=\"fs-40\"><b>Cuan bello es el Señor,</b></span><br><span class=\"fs-40\"><b>hoy le quiero adorar.</b></span><br><br><span class=\"fs-40\"><b>/La belleza de mi Señor</b></span><br><span class=\"fs-40\"><b>nunca se agotará.</b></span><br><span class=\"fs-40\"><b>La hermosura de mi Señor</b></span><br><span class=\"fs-40\"><b>siempre resplandecerá./</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "C"
   },
   {
@@ -581,6 +623,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Cuan grande es mi Dios,</b></span><br><span class=\"fs-40\"><b>Cuan fuerte es </b></span><span class=\"fs-40\"><b>E</b></span><span class=\"fs-40\"><b>l </b></span><br><span class=\"fs-40\"><b>y no hay nada que no pueda hacer/</b></span><br><br><br><span class=\"fs-40\"><b>Los montes son de El,</b></span><br><span class=\"fs-40\"><b>Los</b></span><span class=\"fs-40\"><b> ríos también, los cielos y su creación</b></span><br><br><br><span class=\"fs-40\"><b>Cuan grande es mi Dios,</b></span><br><span class=\"fs-40\"><b>Cuan fuerte es El </b></span><br><span class=\"fs-40\"><b>y no hay nada que no pueda hacer</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Escuela bíblica"
   },
   {
@@ -591,6 +634,7 @@
       "<span class=\"fs-40\"><b>Cuando todas sombras huyan </b></span><br><span class=\"fs-40\"><b>en la gran resurrección</b></span><br><span class=\"fs-40\"><b>de los muertos en Jesús sin corrupción,</b></span><br><span class=\"fs-40\"><b>y en las nubes al Señor reciban, </b></span><br><span class=\"fs-40\"><b>¡qué consolación!,</b></span><br><span class=\"fs-40\"><b>cuando allá se pase lista yo estaré.</b></span><br><br><br><span class=\"fs-40\"><b>//Cuando allá se pase lista//</b></span><br><span class=\"fs-40\"><b>cierto estoy que por su gracia allí estaré</b></span>",
       "<span class=\"fs-40\"><b>Trabajar es mi deseo </b></span><br><span class=\"fs-40\"><b>sin cesar por el Señor,</b></span><br><span class=\"fs-40\"><b>siempre hablando de su gracia </b></span><br><span class=\"fs-40\"><b>y de su amor.</b></span><br><span class=\"fs-40\"><b>Cuando acabe aquí mi obra </b></span><br><span class=\"fs-40\"><b>y me llame el Salvador,</b></span><br><span class=\"fs-40\"><b>cuando allá se pase lista yo estaré.</b></span><br><br><br><span class=\"fs-40\"><b>//Cuando allá se pase lista//</b></span><br><span class=\"fs-40\"><b>cierto estoy que por su gracia allí estaré</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Himnos"
   },
   {
@@ -601,6 +645,7 @@
       "<span class=\"fs-40\"><b>Andas agobiado por algún pesar</b></span><br><span class=\"fs-40\"><b>Duro te parece amarga cruz llevar</b></span><br><span class=\"fs-40\"><b>Cuenta las promesas del Señor Jesús,</b></span><br><span class=\"fs-40\"><b>Y de las tinieblas nacerá la luz.</b></span><br><br><br><span class=\"fs-40\"><b>Bendiciones, cuántas tienes ya</b></span><br><span class=\"fs-40\"><b>Bendiciones, Dios te manda más,</b></span><br><span class=\"fs-40\"><b>Bendiciones, te sorprenderás</b></span><br><span class=\"fs-40\"><b>Cuando veas lo que Dios por ti hará.</b></span>",
       "<span class=\"fs-40\"><b>Cuando de otros veas la prosperidad,</b></span><br><span class=\"fs-40\"><b>Y tus pies claudiquen tras de su maldad,</b></span><br><span class=\"fs-40\"><b>Cuenta las riquezas que tendrás por fe,</b></span><br><span class=\"fs-40\"><b>Donde el oro es polvo que hollará tu pie.</b></span><br><br><br><span class=\"fs-40\"><b>Bendiciones, cuántas tienes ya</b></span><br><span class=\"fs-40\"><b>Bendiciones, Dios te manda más,</b></span><br><span class=\"fs-40\"><b>Bendiciones, te sorprenderás</b></span><br><span class=\"fs-40\"><b>Cuando veas lo que Dios por ti hará.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "Himnos"
   },
   {
@@ -610,6 +655,7 @@
       "<span class=\"fs-40\"><b>Cuando Cristo vino a mi corazón,</b></span><br><span class=\"fs-40\"><b>mi vida entera cambió.</b></span><br><span class=\"fs-40\"><b>Su paz y su amor alejaron de mi</b></span><br><span class=\"fs-40\"><b>las dudas, las sombras y el temor.</b></span><br><br><span class=\"fs-40\"><b>/Mi vida comenzó cuando el Señor llegó,</b></span><br><span class=\"fs-40\"><b>y hoy puedo cantar de su amor/.</b></span>",
       "<span class=\"fs-40\"><b>Hoy quiero que Cristo te transforme a ti, </b></span><br><span class=\"fs-40\"><b>que cambie tu vida también,</b></span><br><span class=\"fs-40\"><b>piensa en la cruz donde murió por ti, </b></span><br><span class=\"fs-40\"><b>y ábrele tu corazón.</b></span><br><br><span class=\"fs-40\"><b>/ Y así comenzará la vida para ti,</b></span><br><span class=\"fs-40\"><b>y así podrás cantar de su amor/.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "C"
   },
   {
@@ -621,6 +667,7 @@
       "<span class=\"fs-40\"><b>Cuando pienso en tu cruz </b></span><br><span class=\"fs-40\"><b>y en todo lo que has dado,</b></span><br><span class=\"fs-40\"><b>tu sangre por mi, </b></span><br><span class=\"fs-40\"><b>por llevar mi pecado.</b></span><br><span class=\"fs-40\"><b>Cuando pienso en tu mano, </b></span><br><span class=\"fs-40\"><b>que hasta aquí hemos llegado, </b></span><br><span class=\"fs-40\"><b>por tu fidelidad.</b></span><br><br><span class=\"fs-40\"><b>/No me quiero conformar, </b></span><br><span class=\"fs-40\"><b>he probado y quiero más/</b></span>",
       "<span class=\"fs-40\"><b>Yo quiero enamorarme más de tí,</b></span><br><span class=\"fs-40\"><b>enseñame a amarte y a vivir</b></span><br><span class=\"fs-40\"><b>conforme a tu justicia y tu verdad, </b></span><br><span class=\"fs-40\"><b>con mi vida quiero adorar</b></span><br><br><span class=\"fs-40\"><b>Con todo lo que tengo y lo que soy,</b></span><br><span class=\"fs-40\"><b>todo lo que he sido te lo doy.</b></span><br><span class=\"fs-40\"><b>Que mi vida sea para ti </b></span><br><span class=\"fs-40\"><b>como un perfume a tus pies.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "C"
   },
   {
@@ -632,6 +679,7 @@
       "<span class=\"fs-36\"><b>Cuando vengas a buscarme</b></span><br><span class=\"fs-36\"><b>te voy a estar esperando,</b></span><br><span class=\"fs-36\"><b>haciendo el bien sin distingo</b></span><br><span class=\"fs-36\"><b>al opresor o al hermano.</b></span><br><br><span class=\"fs-36\"><b>Cuando vengas a buscarme</b></span><br><span class=\"fs-36\"><b>quiero que me halles velando</b></span><br><span class=\"fs-36\"><b>practicando tu palabra</b></span><br><span class=\"fs-36\"><b>y el evangelio llevando.</b></span><br><br><span class=\"fs-36\"><b>Cuando vengas a buscarme</b></span><br><span class=\"fs-36\"><b>te voy a estar esperando.</b></span>",
       "<span class=\"fs-36\"><b>En que lugar me encontraré </b></span><br><span class=\"fs-36\"><b>quizás durmiendo, no lo sé</b></span><br><span class=\"fs-36\"><b>será mañana, tal vez hoy,</b></span><br><span class=\"fs-36\"><b>nadie lo sabe Señor</b></span><br><br><span class=\"fs-36\"><b>Me prometiste regresar,</b></span><br><span class=\"fs-36\"><b>como ladrón sin avisar</b></span><br><span class=\"fs-36\"><b>y yo te espero mi Señor,</b></span><br><span class=\"fs-36\"><b>porque confío en tu amor</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "C"
   },
   {
@@ -640,6 +688,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/¿Cuantas veces Señor perdonaré?/</b></span><br><br><span class=\"fs-40\"><b>Yo quiero perdonar para estar cerca de ti,</b></span><br><span class=\"fs-40\"><b>¿cuantas veces Señor perdonaré?</b></span><br><br><span class=\"fs-40\"><b>//Setenta veces siete//</b></span><br><span class=\"fs-40\"><b>Señor perdonaré</b></span><br><br><span class=\"fs-40\"><b>Yo quiero perdonar para estar cerca de ti,</b></span><br><span class=\"fs-40\"><b>¿cuantas veces Señor perdonaré?</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "C"
   },
   {
@@ -661,6 +710,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Cúbreme con tu poder,</b></span><br><span class=\"fs-40\"><b>tómame y no me dejes ir.</b></span><br><br><span class=\"fs-40\"><b>Aún en tempestad te buscaré</b></span><br><span class=\"fs-40\"><b>a ti clamaré y te encontraré</b></span><br><span class=\"fs-40\"><b>sobre la tormenta tu eres rey</b></span><br><span class=\"fs-40\"><b>eres </b></span><span class=\"fs-40\"><b>mi Dios</b></span><span class=\"fs-40\"><b>, no callaré.</b></span><br><br><span class=\"fs-40\"><b>Descansaré en ti, Jesús</b></span><br><span class=\"fs-40\"><b>solo en ti seguro estaré.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "C"
   },
   {
@@ -669,6 +719,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Damos honor a ti, damos honor a ti,</b></span><br><span class=\"fs-40\"><b>creador de vida eres tú.</b></span><br><span class=\"fs-40\"><b>Damos honor a ti, damos honor a ti,</b></span><br><span class=\"fs-40\"><b>porque no hay otro Dios como tú.</b></span><br><br><span class=\"fs-40\"><b>Rey de reyes, admirable, </b></span><br><span class=\"fs-40\"><b>eres el principio y fin.</b></span><br><span class=\"fs-40\"><b> Soberano y sublime, eres nuestro Salvador</b></span><br><br><span class=\"fs-40\"><b> Damos honor a ti, damos honor a ti,</b></span><br><span class=\"fs-40\"><b>//porque no hay otro Dios como tú// </b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -678,6 +729,7 @@
       "<span class=\"fs-40\"><b>De gloria en gloria te veo.</b></span><br><span class=\"fs-40\"><b>Cuanto más te conozco, </b></span><br><span class=\"fs-40\"><b>quiero saber más de tí.</b></span><br><br><span class=\"fs-40\"><b>Mi Dios cual buen alfarero</b></span><br><span class=\"fs-40\"><b>quebrántame, transfórmame,</b></span><br><span class=\"fs-40\"><b>moldéame a tu imagen Señor.</b></span>",
       "<span class=\"fs-40\"><b>Quiero ser más como tú.</b></span><br><span class=\"fs-40\"><b> Ver la vida como tú. </b></span><br><span class=\"fs-40\"><b>Saturarme de tu espíritu,</b></span><br><span class=\"fs-40\"><b>y reflejar al mundo tu amor.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "D"
   },
   {
@@ -687,6 +739,7 @@
       "<span class=\"fs-40\"><b>De tal manera al mundo tú amaste</b></span><br><span class=\"fs-40\"><b>que hasta tu vida entregaste</b></span><br><span class=\"fs-40\"><b>tu costado abierto fue.</b></span><br><span class=\"fs-40\"><b>Y fueron esas gotas de tu sangre</b></span><br><span class=\"fs-40\"><b>que mi corazón limpiaron</b></span><br><span class=\"fs-40\"><b>me hiciste un nuevo ser</b></span>",
       "<span class=\"fs-40\"><b>Gracias, te doy gracias</b></span><br><span class=\"fs-40\"><b>por tu amor sin condición en esa cruz</b></span><br><span class=\"fs-40\"><b>gracias, te doy gracias</b></span><br><span class=\"fs-40\"><b>por tu perdón, la salvación en esa cruz</b></span><br><br><span class=\"fs-40\"><b>/Amor sin condición, </b></span><br><span class=\"fs-40\"><b>amor sin condición/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "D"
   },
   {
@@ -696,6 +749,7 @@
       "<span class=\"fs-40\"><b>De tal manera me amó,</b></span><br><span class=\"fs-40\"><b>que su vida no escatimó,</b></span><br><span class=\"fs-40\"><b>hasta el final él se entregó,</b></span><br><span class=\"fs-40\"><b>y a la muerte fue porque me amó.</b></span><br><br><span class=\"fs-40\"><b>De tal manera me amó,</b></span><br><span class=\"fs-40\"><b>que no hay forma en que podré pagar,</b></span><br><span class=\"fs-40\"><b>el precio de su grande amor,</b></span><br><span class=\"fs-40\"><b>pero toda mi alma quiero dar.</b></span>",
       "<span class=\"fs-40\"><b>Por su amor yo viviré, </b></span><br><span class=\"fs-40\"><b>de su amor yo cantaré,</b></span><br><span class=\"fs-40\"><b>con mi Jesús caminaré, </b></span><br><span class=\"fs-40\"><b>porque él me amó a mi.</b></span><br><br><span class=\"fs-40\"><b>Por su amor yo viviré, </b></span><br><span class=\"fs-40\"><b>de su amor yo cantaré, </b></span><br><span class=\"fs-40\"><b>con mi Jesús caminaré,</b></span><br><span class=\"fs-40\"><b>porque  él murió por mi,</b></span><br><span class=\"fs-40\"><b>le seguiré.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -704,6 +758,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Dicen que no existes,</b></span><br><span class=\"fs-40\"><b>que no eres realidad,</b></span><br><span class=\"fs-40\"><b>pero estás obrando dentro mío </b></span><br><span class=\"fs-40\"><b>una vez más;</b></span><br><span class=\"fs-40\"><b>obras en tu pueblo,</b></span><br><span class=\"fs-40\"><b>con amor y santidad, </b></span><br><span class=\"fs-40\"><b>y te siento más y mas.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -712,6 +767,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Digno eres de gloria, de alabanza.</b></span><br><span class=\"fs-40\"><b>Elevamos nuestras manos, </b></span><br><span class=\"fs-40\"><b>te exaltamos Señor/</b></span><br><br><span class=\"fs-40\"><b>/Grande </b></span><span class=\"fs-40\"><b>eres tú, </b></span><br><span class=\"fs-40\"><b>maravillas haces tú,</b></span><br><span class=\"fs-40\"><b>no hay otro como tú, </b></span><br><span class=\"fs-40\"><b>no hay otro como tú/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "D"
   },
   {
@@ -720,6 +776,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Digno es el Cordero Santo, </b></span><br><span class=\"fs-40\"><b>Santo</b></span><span class=\"fs-40\"><b>, </b></span><span class=\"fs-40\"><b>Santo </b></span><span class=\"fs-40\"><b>es él. </b></span><br><span class=\"fs-40\"><b>Levantamos nuestra alabanza, </b></span><br><span class=\"fs-40\"><b>al que en el trono está.</b></span><br><br><span class=\"fs-40\"><b>Santo, santo, santo, </b></span><br><span class=\"fs-40\"><b>Dios todopoderoso. </b></span><br><span class=\"fs-40\"><b>Quien fue, quien es y quien vendrá.</b></span><br><br><span class=\"fs-40\"><b>La creación hoy canta, y damos gloria a él. </b></span><br><span class=\"fs-40\"><b>Tu eres </b></span><span class=\"fs-40\"><b>digno, por </b></span><span class=\"fs-40\"><b>siempre  y siempre.  </b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -737,6 +794,7 @@
       "<span class=\"fs-40\"><b>Dios de mi corazón, </b></span><br><span class=\"fs-40\"><b>en ti encontré mi salvación</b></span><br><span class=\"fs-40\"><b>Tu gloria y majestad, </b></span><br><span class=\"fs-40\"><b>Quiero siempre contemplar</b></span><br><br><span class=\"fs-40\"><b>Tú eres mi adoración,</b></span><br><span class=\"fs-40\"><b> y mi eterna canción</b></span><br><span class=\"fs-40\"><b>Todo mi interior, </b></span><br><span class=\"fs-40\"><b>es cautivado por tu amor</b></span>",
       "<span class=\"fs-40\"><b>Eres Dios eterno</b></span><br><span class=\"fs-40\"><b>Solo Tú eres bueno</b></span><br><span class=\"fs-40\"><b>Dios incomparable eres Tú</b></span><br><span class=\"fs-40\"><b>Nunca me separaré de tu gran amor</b></span><br><span class=\"fs-40\"><b>Eres mi Señor, mi salvador</b></span><br><br><span class=\"fs-40\"><b>Aleluya, Aleluya</b></span><br><span class=\"fs-40\"><b>Aleluya, Aleluya</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "D"
   },
   {
@@ -745,6 +803,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>Dios </b></span><span class=\"fs-36\"><b>de pactos que guardas tus promesas,</b></span><br><span class=\"fs-36\"><b>que cumples tu palabra, que guías mi destino.</b></span><br><span class=\"fs-36\"><b>Dios de pactos, confío en tus promesas,</b></span><br><span class=\"fs-36\"><b>descanso en tu palabra,</b></span><br><span class=\"fs-36\"><b>por tu gracia estoy aquí.</b></span><br><br><span class=\"fs-36\"><b>En la intimidad, al abrigo de tu gloria</b></span><br><span class=\"fs-36\"><b>puedo estar junto a ti</b></span><br><span class=\"fs-36\"><b>al ver tu santidad estoy maravillado</b></span><br><span class=\"fs-36\"><b>ante ti y tu amor</b></span><br><span class=\"fs-36\"><b>nunca mas seré igual al salir de este</b></span><br><span class=\"fs-36\"><b>santísimo lugar..</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "D"
   },
   {
@@ -753,6 +812,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Dios es nuestro amparo y fortaleza</b></span><br><span class=\"fs-40\"><b>nuestro pronto auxilio en las tribulaciones</b></span><br><br><br><span class=\"fs-40\"><b>Por tanto no temeremos </b></span><br><span class=\"fs-40\"><b>aunque la tierra sea removida </b></span><br><span class=\"fs-40\"><b>y se traspasen los montes </b></span><br><span class=\"fs-40\"><b>al corazón del mar</b></span><br><br><br><span class=\"fs-40\"><b>/Cielo y tierra pasará </b></span><br><span class=\"fs-40\"><b>más su palabra no pasará/</b></span><br><span class=\"fs-40\"><b>/No, no, no pasará./</b></span>"
     ],
+    "tono": "DOm",
     "carpeta": "D"
   },
   {
@@ -762,6 +822,7 @@
       "<span class=\"fs-40\"><b>/Dios esta aquí </b></span><br><span class=\"fs-40\"><b>tan cierto como el aire que respiro,</b></span><br><span class=\"fs-40\"><b>tan cierto como la mañana se levanta</b></span><br><span class=\"fs-40\"><b>tan cierto como que le canto </b></span><br><span class=\"fs-40\"><b>y me puede oír/</b></span>",
       "<span class=\"fs-40\"><b>Lo puedes notar, </b></span><br><span class=\"fs-40\"><b>a tu lado en este mismo instante.</b></span><br><span class=\"fs-40\"><b>Lo puedes sentir, </b></span><br><span class=\"fs-40\"><b>en ese problema que tienes.</b></span><br><span class=\"fs-40\"><b>Lo puedes llevar, </b></span><br><span class=\"fs-40\"><b>muy dentro de tu corazón,</b></span><br><span class=\"fs-40\"><b>Jesús esta aquí, </b></span><br><span class=\"fs-40\"><b>si tu quieres lo puedes seguir</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -771,6 +832,7 @@
       "<span class=\"fs-40\"><b>Dios está aquí, qué precioso es</b></span><br><span class=\"fs-40\"><b>Él lo prometió donde están dos o tres</b></span><br><span class=\"fs-40\"><b>Quédate Señor con tu bendición</b></span><br><span class=\"fs-40\"><b>Quédate Señor en cada corazón</b></span><br><span class=\"fs-40\"><b>Quédate Señor con tu bendición</b></span><br><span class=\"fs-40\"><b>Quédate Señor aquí</b></span>",
       "<span class=\"fs-40\"><b>/Oh Cristo mío haz de mi alma un altar</b></span><br><span class=\"fs-40\"><b>para adorarte con devoción.</b></span><br><span class=\"fs-40\"><b>Para beber del agua de la vida </b></span><br><span class=\"fs-40\"><b>y así saciar siempre </b></span><span class=\"fs-40\"><b>mi corazón/</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "D"
   },
   {
@@ -780,6 +842,7 @@
       "<span class=\"fs-40\"><b>//Dios ha sido bueno//</b></span><br><span class=\"fs-40\"><b>bueno es Dios</b></span><br><br><span class=\"fs-40\"><b>Su bondad me alcanzó</b></span><br><span class=\"fs-40\"><b>su amor me rescató</b></span><br><span class=\"fs-40\"><b>su gracia me salvó</b></span><br><span class=\"fs-40\"><b>bueno es Dios</b></span><br><br><br><span class=\"fs-40\"><b>//Dios ha sido bueno//</b></span><br><span class=\"fs-40\"><b>bueno es Dios</b></span>",
       "<span class=\"fs-40\"><b>Por eso cantaré </b></span><br><span class=\"fs-40\"><b>y siempre alabaré</b></span><br><span class=\"fs-40\"><b>y nunca olvidaré </b></span><br><span class=\"fs-40\"><b>bueno es Dios</b></span><br><br><br><span class=\"fs-40\"><b>//Dios ha sido bueno//</b></span><br><span class=\"fs-40\"><b>//bueno es Dios//</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "D"
   },
   {
@@ -791,7 +854,7 @@
     "carpeta": "Escuela bíblica"
   },
   {
-    "titulo": "Dios no nos trajo hasta aqui para volver atrás",
+    "titulo": "Dios no nos trajo hasta aquí para volver atrás,MIm",
     "preview": "/Dios no nos trajo hasta aquí\u000bpara volver atrás.\u000b Nos trajo a aquí a poseer\u000bla tierra que él nos dio/\u000b\u000b /Y aunque el gigante se encuentre allá \u000b yo nunca temeré, nos trajo aquí,\u000ba poseer la tierra que él nos dio/",
     "slides": [
       "<span class=\"fs-40\"><b>/Dios no nos trajo hasta aquí</b></span><br><span class=\"fs-40\"><b>para volver atrás.</b></span><br><span class=\"fs-40\"><b> Nos trajo a aquí a poseer</b></span><br><span class=\"fs-40\"><b>la tierra que él nos dio/</b></span><br><br><span class=\"fs-40\"><b> /Y aunque el gigante se encuentre allá </b></span><br><span class=\"fs-40\"><b> yo nunca temeré, nos trajo aquí,</b></span><br><span class=\"fs-40\"><b>a poseer la tierra que él nos dio/</b></span>"
@@ -805,6 +868,7 @@
       "<span class=\"fs-40\"><b>Dios nos envió a su hijo Cristo, </b></span><br><span class=\"fs-40\"><b>el es salud, paz y perdón, </b></span><br><span class=\"fs-40\"><b>sufrió y murió por mis pecados</b></span><br><span class=\"fs-40\"><b>vacía esta la tumba</b></span><br><span class=\"fs-40\"><b>porque él triunfó.</b></span><br><br><span class=\"fs-40\"><b>Porque él vive triunfaré mañana</b></span><br><span class=\"fs-40\"><b>porque él vive  ya no hay temor</b></span><br><span class=\"fs-40\"><b>porque yo se, yo se</b></span><br><span class=\"fs-40\"><b>que el futuro es suyo</b></span><br><span class=\"fs-40\"><b>la vida vale mas y mas solo por él.</b></span>",
       "<span class=\"fs-40\"><b>Yo se que un día el río cruzaré,</b></span><br><span class=\"fs-40\"><b>con el dolor batallaré,</b></span><br><span class=\"fs-40\"><b>y al ver la vida triunfando invicta,</b></span><br><span class=\"fs-40\"><b>veré gloriosas luces y veré al Rey.</b></span><br><br><span class=\"fs-40\"><b>Porque él vive triunfaré mañana</b></span><br><span class=\"fs-40\"><b>porque él vive ya no hay temor</b></span><br><span class=\"fs-40\"><b>porque yo se, yo se</b></span><br><span class=\"fs-40\"><b>que el futuro es suyo</b></span><br><span class=\"fs-40\"><b>la vida vale mas y mas solo por él.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "D"
   },
   {
@@ -813,6 +877,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>Dulce refugio en la tormenta,</b></span><br><span class=\"fs-36\"><b>es Jesucristo el salvador.</b></span><br><span class=\"fs-36\"><b>El me alienta y alimenta</b></span><br><span class=\"fs-36\"><b>con su palabra y su amor.</b></span><br><br><span class=\"fs-36\"><b>Vengo a reposar en él,</b></span><br><span class=\"fs-36\"><b>él es mi amigo fiel.</b></span><br><span class=\"fs-36\"><b>Una poderosa y fresca unción,</b></span><br><span class=\"fs-36\"><b>llenará mi corazón</b></span><br><br><br><span class=\"fs-36\"><b>Dulce refugio en la tormenta,</b></span><br><span class=\"fs-36\"><b>//es Jesucristo el salvador//</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "D"
   },
   {
@@ -821,6 +886,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Día a día te anhelo más,</b></span><br><span class=\"fs-40\"><b>día a día más te buscaré/</b></span><br><span class=\"fs-40\"><b>porque tú has sido tan bueno,</b></span><br><span class=\"fs-40\"><b>porque tú has sido tan bello.</b></span><br><br><span class=\"fs-40\"><b>Te necesito más que a mi vida,</b></span><br><span class=\"fs-40\"><b>te necesito más que a mi ser;</b></span><br><span class=\"fs-40\"><b>te necesito más y más cada día,</b></span><br><br><span class=\"fs-40\"><b>/Quiero vivir bajo tu amor./</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "D"
   },
   {
@@ -829,6 +895,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/El brillo de este mundo se opaca ante ti</b></span><br><span class=\"fs-40\"><b>La gloria de esta tierra nada es.</b></span><br><span class=\"fs-40\"><b>Todo cae en tu presencia, oh Rey.</b></span><br><span class=\"fs-40\"><b>Que hermosa es tu presencia Señor/</b></span><br><br><span class=\"fs-40\"><b>/Tu presencia esta aquí,</b></span><br><span class=\"fs-40\"><b>Tu presencia esta en mi,</b></span><br><span class=\"fs-40\"><b>Y tu pueblo te recibe alabándote,</b></span><br><span class=\"fs-40\"><b>Que hermosa es tu presencia, Señor/</b></span><br><br><span class=\"fs-40\"><b>/Que hermosa es tu presencia, Señor/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "E"
   },
   {
@@ -841,6 +908,7 @@
       "<span class=\"fs-40\"><b>Tú eres el Dios que adoramos</b></span><br><span class=\"fs-40\"><b>Todopoderoso y soberano</b></span><br><span class=\"fs-40\"><b>Grande en misericordia </b></span><br><span class=\"fs-40\"><b>y poder para salvar</b></span><br><span class=\"fs-40\"><b>Tú eres el Dios que adoramos</b></span><br><span class=\"fs-40\"><b>Quien derrotó la muerte y el pecado</b></span><br><span class=\"fs-40\"><b>Glorioso redentor y rey, te adoramos</b></span>",
       "<span class=\"fs-40\"><b>/A él sea la gloria y el poder</b></span><br><span class=\"fs-40\"><b>Todo es de él y para él/</b></span><br><br><br><span class=\"fs-40\"><b>Tú eres el Dios que adoramos</b></span><br><span class=\"fs-40\"><b>Todopoderoso y soberano</b></span><br><span class=\"fs-40\"><b>Grande en misericordia </b></span><br><span class=\"fs-40\"><b>y poder para salvar</b></span><br><span class=\"fs-40\"><b>Tú eres el Dios que adoramos</b></span><br><span class=\"fs-40\"><b>Quien derrotó la muerte y el pecado</b></span><br><span class=\"fs-40\"><b>Glorioso redentor y rey, te adoramos</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "E"
   },
   {
@@ -849,6 +917,7 @@
     "slides": [
       "<span class=\"fs-38\"><b>/El es el Rey de reyes</b></span><br><span class=\"fs-38\"><b>el es Señor de los señores</b></span><br><span class=\"fs-38\"><b>su nombre es Cristo, Cristo, </b></span><br><span class=\"fs-38\"><b>Cristo, Cristo, sí, el es el Rey/</b></span><br><br><span class=\"fs-38\"><b>/Maravilloso Jesús es para mi,</b></span><br><span class=\"fs-38\"><b>mas dulce que la miel</b></span><br><span class=\"fs-38\"><b>que mana del panal/</b></span><br><br><span class=\"fs-38\"><b>/Me libertó, el me libertó</b></span><br><span class=\"fs-38\"><b>y yo le alabaré</b></span><br><span class=\"fs-38\"><b>por toda la eternidad/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -858,6 +927,7 @@
       "<span class=\"fs-40\"><b>El es el rey infinito en poder, </b></span><br><span class=\"fs-40\"><b>él es el rey de los cielos. </b></span><br><span class=\"fs-40\"><b>Seré para el siervo fiel, </b></span><br><span class=\"fs-40\"><b>pues mi vida compró con su amor.</b></span><br><br><span class=\"fs-40\"><b>El es el rey lo confiesa mi ser, </b></span><br><span class=\"fs-40\"><b>él es el rey de los siglos. </b></span><br><span class=\"fs-40\"><b>Mi vida la rindo a sus pies, </b></span><br><span class=\"fs-40\"><b>él </b></span><span class=\"fs-40\"><b>es rey sobre mi corazón.</b></span>",
       "<span class=\"fs-40\"><b>/El es el rey/</b></span><br><span class=\"fs-40\"><b>él es el rey de mi vida.</b></span><br><span class=\"fs-40\"><b>/El es el rey/</b></span><br><span class=\"fs-40\"><b>reina con autoridad.</b></span><br><span class=\"fs-40\"><b>Su reino eterno es, </b></span><br><span class=\"fs-40\"><b>su trono el cielo es.</b></span><br><span class=\"fs-40\"><b>El es el rey que viene a su pueblo a llevar.</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "E"
   },
   {
@@ -866,6 +936,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/El gozo que el Señor ha puesto en mi</b></span><br><span class=\"fs-40\"><b>es la fuerza de mi vida/</b></span><br><span class=\"fs-40\"><b>Por </b></span><span class=\"fs-40\"><b>eso, yo me gozaré en él</b></span><br><span class=\"fs-40\"><b>y él pondrá su risa en mi boca</b></span><br><span class=\"fs-40\"><b>yo cantaré, yo gritaré,</b></span><br><span class=\"fs-40\"><b>y me alegraré solo en él.</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "E"
   },
   {
@@ -874,6 +945,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/El justo florecerá como la palmera,</b></span><br><span class=\"fs-40\"><b>crecerá como cedro en el Líbano/</b></span><br><br><span class=\"fs-40\"><b>/Plantados en la casa de Jehová,</b></span><br><span class=\"fs-40\"><b>en los atrios de nuestro Dios,</b></span><br><span class=\"fs-40\"><b>en los atrios de nuestro Dios,</b></span><br><span class=\"fs-40\"><b>el justo florecerá/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "E"
   },
   {
@@ -882,6 +954,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>/</b></span><span class=\"fs-36\"><b>El rey de reyes es </b></span><span class=\"fs-36\"><b>el Señor/</b></span><br><span class=\"fs-36\"><b>/que </b></span><span class=\"fs-36\"><b>lo digan las hermanas</b></span><br><span class=\"fs-36\"><b>quien es el rey de </b></span><span class=\"fs-36\"><b>reyes/</b></span><br><span class=\"fs-36\"><b>/El </b></span><span class=\"fs-36\"><b>rey de reyes es </b></span><span class=\"fs-36\"><b>el Señor/</b></span><br><br><span class=\"fs-36\"><b>/Que </b></span><span class=\"fs-36\"><b>lo digan los hermanos</b></span><br><span class=\"fs-36\"><b>quien es el rey de </b></span><span class=\"fs-36\"><b>reyes/</b></span><br><span class=\"fs-36\"><b>/El </b></span><span class=\"fs-36\"><b>rey de reyes es </b></span><span class=\"fs-36\"><b>el Señor/</b></span><br><br><span class=\"fs-36\"><b>/Que </b></span><span class=\"fs-36\"><b>lo digan todos juntos</b></span><br><span class=\"fs-36\"><b>quien es el rey </b></span><span class=\"fs-36\"><b>de reyes/</b></span><br><span class=\"fs-36\"><b>/El </b></span><span class=\"fs-36\"><b>rey de reyes es el </b></span><span class=\"fs-36\"><b>Señor/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -898,6 +971,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>El Señor es mi rey, mi todo</b></span><br><span class=\"fs-40\"><b>el Señor es mi luz, mi rey</b></span><br><span class=\"fs-40\"><b>él me hace vibrar de gozo</b></span><br><span class=\"fs-40\"><b>él guia mis pasos,</b></span><br><span class=\"fs-40\"><b>extiende sus brazos,</b></span><br><span class=\"fs-40\"><b>el creador de los cielos</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "E"
   },
   {
@@ -906,6 +980,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/El Señor está con nosotros,</b></span><br><span class=\"fs-40\"><b>el Señor está con nosotros,</b></span><br><span class=\"fs-40\"><b>siento su presencia</b></span><br><span class=\"fs-40\"><b>él está aquí/</b></span><br><br><span class=\"fs-40\"><b>/Que maravilloso es decir</b></span><br><span class=\"fs-40\"><b>hermano te amo,</b></span><br><span class=\"fs-40\"><b>mirarte a los ojos y ver en ti</b></span><br><span class=\"fs-40\"><b>el amor de Dios/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -914,13 +989,14 @@
     "slides": [
       "<span class=\"fs-40\"><b>///El Señor está en este lugar///</b></span><br><span class=\"fs-40\"><b>para sanar, para librar,</b></span><br><span class=\"fs-40\"><b>para romper toda obra de maldad.</b></span><br><span class=\"fs-40\"><b>Para sanar, para librar mi alma.</b></span><br><br><span class=\"fs-40\"><b>El Señor, el Señor,</b></span><br><span class=\"fs-40\"><b>el Señor está aquí.</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "E"
   },
   {
     "titulo": "El Señor ha sido tan bueno",
-    "preview": "El Señor ha sido tan bueno que\u000bquiero alabar su nombre\u000bquiero alabar su nombre\u000bquiero alabar su nombre\u000b\u000bEl señor ha sido tan bueno que\u000bquiero alabar su nombre\u000balelu, alelu, aleluya.",
+    "preview": "El Señor ha sido tan bueno que\u000bquiero alabar su nombre\u000bquiero alabar su nombre\u000bquiero alabar su nombre\u000b\u000bEl Señor ha sido tan bueno que\u000bquiero alabar su nombre\u000balelu, alelu, aleluya.",
     "slides": [
-      "<span class=\"fs-40\"><b>El Señor ha sido tan bueno que</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><br><span class=\"fs-40\"><b>El señor ha sido tan bueno que</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>alelu, alelu, aleluya.</b></span>"
+      "<span class=\"fs-40\"><b>El Señor ha sido tan bueno que</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><br><span class=\"fs-40\"><b>El </b></span><span class=\"fs-40\"><b>S</b></span><span class=\"fs-40\"><b>eñor </b></span><span class=\"fs-40\"><b>ha sido tan bueno que</b></span><br><span class=\"fs-40\"><b>quiero alabar su nombre</b></span><br><span class=\"fs-40\"><b>alelu</b></span><span class=\"fs-40\"><b>, </b></span><span class=\"fs-40\"><b>alelu</b></span><span class=\"fs-40\"><b>, aleluya.</b></span>"
     ],
     "carpeta": "E"
   },
@@ -949,6 +1025,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>En este día feliz, en este Santo lugar,</b></span><br><span class=\"fs-40\"><b>Quiero tener un encuentro con Dios;</b></span><br><span class=\"fs-40\"><b>Su amor es real y su paz gozaré,</b></span><br><span class=\"fs-40\"><b>Quiero tener un encuentro con Dios.</b></span><br><br><span class=\"fs-40\"><b>Quiero tener un encuentro con Dios</b></span><br><span class=\"fs-40\"><b>En este santo lugar de oración,</b></span><br><span class=\"fs-40\"><b>Su amor es real y su paz gozaré,</b></span><br><span class=\"fs-40\"><b>Quiero tener un encuentro con Dios.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "E"
   },
   {
@@ -993,6 +1070,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Enséñame tu camino Señor</b></span><br><span class=\"fs-40\"><b>y andaré en tu luz, </b></span><br><span class=\"fs-40\"><b>dame un corazón entregado a ti</b></span><br><span class=\"fs-40\"><b>para honrarte oh Dios.</b></span><br><br><span class=\"fs-40\"><b> /Purifícame, límpiame Señor,</b></span><br><span class=\"fs-40\"><b>y líbrame de lo que impida el fluir/ </b></span><br><span class=\"fs-40\"><b>de tu amor.</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "E"
   },
   {
@@ -1001,6 +1079,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Entra en la presencia del Señor</b></span><br><span class=\"fs-40\"><b>con gratitud,</b></span><br><span class=\"fs-40\"><b>y adórale de corazón;</b></span><br><span class=\"fs-40\"><b>entra en la presencia del Señor </b></span><br><span class=\"fs-40\"><b>con gratitud,</b></span><br><span class=\"fs-40\"><b>y alza tu voz con loor.</b></span><br><br><span class=\"fs-40\"><b>Dad gloria y honra y alabanzas al Señor.</b></span><br><span class=\"fs-40\"><b>/Oh Cristo, Nombre sin igual/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "E"
   },
   {
@@ -1010,6 +1089,7 @@
       "<span class=\"fs-40\"><b>Eres tú la unica razón </b></span><br><span class=\"fs-40\"><b>de mi adoración oh Jesús,</b></span><br><span class=\"fs-40\"><b>Eres tú la esperanza que </b></span><br><span class=\"fs-40\"><b>anhelé tener oh jesús.</b></span><br><span class=\"fs-40\"><b>Confíe en tí me has ayudado,</b></span><br><span class=\"fs-40\"><b>tu salvación me has regalado.</b></span><br><span class=\"fs-40\"><b>Hoy hay gozo en mi corazón,</b></span><br><span class=\"fs-40\"><b>con mi canto te alabaré…</b></span>",
       "<span class=\"fs-40\"><b>/Te alabaré, te glorificaré,</b></span><br><span class=\"fs-40\"><b>te alabaré, mi buen Jesús/</b></span><br><br><span class=\"fs-40\"><b>/En todo tiempo te alabaré,</b></span><br><span class=\"fs-40\"><b>en todo tiempo te adoraré/</b></span><br><br><span class=\"fs-40\"><b>/Te alabaré, te glorificaré,</b></span><br><span class=\"fs-40\"><b>te alabaré, mi buen Jesús/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "E"
   },
   {
@@ -1028,6 +1108,7 @@
       "<span class=\"fs-40\"><b>Es por tí, que juntos hoy estamos aquí</b></span><br><span class=\"fs-40\"><b>Fue tu amor que de la oscuridad nos sacó</b></span><br><span class=\"fs-40\"><b>A una voz venimos hoy delante de tí</b></span><br><span class=\"fs-40\"><b>Para darte el honor</b></span><br><br><span class=\"fs-40\"><b>/No a nosotros, oh Dios,</b></span><br><span class=\"fs-40\"><b>sino a tu nombre sea dada la gloria/</b></span>",
       "<span class=\"fs-40\"><b>Eres tú, motivo de nuestra adoración</b></span><br><span class=\"fs-40\"><b>La verdad que nuestro corazón liberó</b></span><br><span class=\"fs-40\"><b>Nadie más es digno del honor recibir</b></span><br><span class=\"fs-40\"><b>Te lo damos a tí</b></span><br><br><span class=\"fs-40\"><b>/No a nosotros, oh Dios,</b></span><br><span class=\"fs-40\"><b>sino a tu nombre sea dada la gloria/</b></span><br><span class=\"fs-40\"><b>/A tu nombre sea dada la gloria/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -1037,6 +1118,7 @@
       "<span class=\"fs-40\"><b>Es tu amor que rompe mi corazón </b></span><br><span class=\"fs-40\"><b>y lo hace pedazos.</b></span><br><span class=\"fs-40\"><b>Tómalo y hazlo nuevo en ti, Señor.</b></span><br><span class=\"fs-40\"><b>Y caigo a tus pies, para alabarte, </b></span><br><span class=\"fs-40\"><b>y para adorarte.</b></span><br><span class=\"fs-40\"><b>Es tu amor que rompe mi corazón. </b></span>",
       "<span class=\"fs-40\"><b>Y cuando vienes oh Cristo,</b></span><br><span class=\"fs-40\"><b>no hay forma de resistir.</b></span><br><span class=\"fs-40\"><b>Y caigo ante tu trono, </b></span><br><span class=\"fs-40\"><b>y es allí donde soy feliz,</b></span><br><span class=\"fs-40\"><b>junto a ti, mi Señor.</b></span><br><span class=\"fs-40\"><b> Es tu amor que rompe mi corazón. </b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -1056,6 +1138,7 @@
       "<span class=\"fs-40\"><b>Escudriñemos nuestros caminos</b></span><br><span class=\"fs-40\"><b>y volvamos a Jehová,</b></span><br><span class=\"fs-40\"><b>levantemos nuestras manos a Dios</b></span><br><span class=\"fs-40\"><b>levantemos nuestras manos</b></span><br><span class=\"fs-40\"><b>a Dios en los cielos</b></span><br><span class=\"fs-40\"><b>y volvamos a Jehová nuestro Dios.</b></span>",
       "<span class=\"fs-40\"><b>Por la bondad de Jehová </b></span><br><span class=\"fs-40\"><b>no hemos sido consumidos,</b></span><br><span class=\"fs-40\"><b>porque nunca decayó su bondad.</b></span><br><span class=\"fs-40\"><b>/Nueva es cada mañana/</b></span><br><br><br><span class=\"fs-40\"><b>Grande es Jehová nuestro Dios</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "E"
   },
   {
@@ -1065,6 +1148,7 @@
       "<span class=\"fs-40\"><b>Esperar en ti, difícil se que es,</b></span><br><span class=\"fs-40\"><b>mi mente dice no, no es posible,</b></span><br><span class=\"fs-40\"><b>pero mi corazón, confiado está en ti,</b></span><br><span class=\"fs-40\"><b>tú siempre has sido fiel, me has sostenido.</b></span><br><br><span class=\"fs-40\"><b>Y esperaré, pacientemente,</b></span><br><span class=\"fs-40\"><b>aunque la duda me atormente, </b></span><br><span class=\"fs-40\"><b>yo no confío con la mente,</b></span><br><span class=\"fs-40\"><b>lo hago con el corazón</b></span>",
       "<span class=\"fs-40\"><b>Y esperaré, en la tormenta,</b></span><br><span class=\"fs-40\"><b>aunque tardare tu respuesta,</b></span><br><span class=\"fs-40\"><b>yo confiaré en tu providencia,</b></span><br><span class=\"fs-40\"><b>tú siempre tienes el control.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -1081,6 +1165,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>Este es mi deseo, honrarte a ti,</b></span><br><span class=\"fs-36\"><b>con todo mi ser, te adoraré,</b></span><br><span class=\"fs-36\"><b>con todas mis fuerzas, te alabaré.</b></span><br><span class=\"fs-36\"><b>Mi adoración eres tú.</b></span><br><br><span class=\"fs-36\"><b>Hoy te rindo mi ser,</b></span><br><span class=\"fs-36\"><b>te doy mi corazón, </b></span><br><span class=\"fs-36\"><b>yo vivo para ti.</b></span><br><span class=\"fs-36\"><b>En cada palpitar, </b></span><br><span class=\"fs-36\"><b>mientras haya aliento en mi,</b></span><br><span class=\"fs-36\"><b>Dios </b></span><span class=\"fs-36\"><b>haz tu obra en mi.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "E"
   },
   {
@@ -1090,6 +1175,7 @@
       "<span class=\"fs-40\"><b>Este pueblo que has formado </b></span><br><span class=\"fs-40\"><b>hoy viene a entregar</b></span><br><span class=\"fs-40\"><b>las ofrendas de sus labios</b></span><br><span class=\"fs-40\"><b> puestas en tu altar.</b></span><br><br><span class=\"fs-40\"><b>Este pueblo es tu iglesia </b></span><br><span class=\"fs-40\"><b>que hoy viene a adorar,</b></span><br><span class=\"fs-40\"><b>al único, a su amado </b></span><br><span class=\"fs-40\"><b>al Rey de la libertad.</b></span>",
       "<span class=\"fs-40\"><b>/ Y canta hosanna, gloria, aleluya,</b></span><br><span class=\"fs-40\"><b>¡oh</b></span><span class=\"fs-40\"><b>! Jesús </b></span><span class=\"fs-40\"><b>amado tu amor me ha cautivado.</b></span><br><span class=\"fs-40\"><b>Y canta hosanna, gloria, aleluya,</b></span><br><span class=\"fs-40\"><b>alabanzas hoy yo traigo </b></span><br><span class=\"fs-40\"><b>a tu nombre, Jesús./</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "E"
   },
   {
@@ -1108,6 +1194,7 @@
       "<span class=\"fs-40\"><b>Muévese potente la iglesia de Dios</b></span><br><span class=\"fs-40\"><b>de los ya gloriosos marchamos en pos.</b></span><br><span class=\"fs-40\"><b>Somos solo un cuerpo y uno es el Señor,</b></span><br><span class=\"fs-40\"><b>una la esperanza y uno nuestro amor.</b></span><br><br><span class=\"fs-40\"><b> Firmes y adelante,</b></span><br><span class=\"fs-40\"><b>huestes de la fe</b></span><br><span class=\"fs-40\"><b>sin temor alguno</b></span><br><span class=\"fs-40\"><b>que Jesús nos ve.</b></span>",
       "<span class=\"fs-40\"><b>Tronos y coronas pueden perecer,</b></span><br><span class=\"fs-40\"><b>de Jesús la iglesia constante ha de ser.</b></span><br><span class=\"fs-40\"><b>Nada en contra suya prevalecerá</b></span><br><span class=\"fs-40\"><b>porque la promesa nunca faltará.</b></span><br><br><span class=\"fs-40\"><b> Firmes y adelante,</b></span><br><span class=\"fs-40\"><b>huestes de la fe</b></span><br><span class=\"fs-40\"><b>sin temor alguno</b></span><br><span class=\"fs-40\"><b>que Jesús nos ve.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "Himnos"
   },
   {
@@ -1116,6 +1203,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Fuerte Dios, Consolador</b></span><br><span class=\"fs-40\"><b>Príncipe de paz.</b></span><br><span class=\"fs-40\"><b>Gran Señor, vencedor,</b></span><br><span class=\"fs-40\"><b>siempre vives y siempre reinarás…</b></span><br><br><br><span class=\"fs-40\"><b>Yo te exalto, Dios te exalto.</b></span><br><span class=\"fs-40\"><b>Eres todo para mí,</b></span><br><span class=\"fs-40\"><b>la creación canta de tí;</b></span><br><br><br><span class=\"fs-40\"><b>Yo te exalto, Dios te exalto.</b></span><br><span class=\"fs-40\"><b>//Te exalto Cristo mi Rey//</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "F"
   },
   {
@@ -1144,6 +1232,7 @@
       "<span class=\"fs-40\"><b>Gracias por la cruz, oh Dios</b></span><br><span class=\"fs-40\"><b>El precio que pagaste por mí</b></span><br><span class=\"fs-40\"><b>Llevando mi pecado allí</b></span><br><span class=\"fs-40\"><b>Sublime amor, tu gracia me salvó</b></span><br><br><span class=\"fs-40\"><b>Gracias por tu amor, oh Dios</b></span><br><span class=\"fs-40\"><b>Tus manos clavadas por mí</b></span><br><span class=\"fs-40\"><b>Me haz lavado, oh Señor</b></span><br><span class=\"fs-40\"><b>Conozco hoy </b></span><br><span class=\"fs-40\"><b>tu abrazo y tu perdón</b></span>",
       "<span class=\"fs-40\"><b>Digno es el Señor</b></span><br><span class=\"fs-40\"><b>En su trono está</b></span><br><span class=\"fs-40\"><b>Hoy te coronamos Rey</b></span><br><span class=\"fs-40\"><b>Y reinas con poder</b></span><br><span class=\"fs-40\"><b>Altísimo Señor</b></span><br><span class=\"fs-40\"><b>Jesús hijo de Dios</b></span><br><span class=\"fs-40\"><b>El amado del cielo en la cruz murió</b></span><br><span class=\"fs-40\"><b>//Digno es el Señor//</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "G"
   },
   {
@@ -1170,6 +1259,7 @@
       "<span class=\"fs-40\"><b>Jesús jamás me falta, jamás me dejará</b></span><br><span class=\"fs-40\"><b>Es mi fuerte y poderoso protector</b></span><br><span class=\"fs-40\"><b>Del mundo yo me aparto y toda vanidad</b></span><br><span class=\"fs-40\"><b>Para consagrar mi vida a mi Señor</b></span><br><br><br><span class=\"fs-40\"><b>Si el mundo me persigue, si sufro tentación</b></span><br><span class=\"fs-40\"><b>Confiado en Cristo puedo resistir,</b></span><br><span class=\"fs-40\"><b>La victoria me es segura y elevo mi canción</b></span><br><span class=\"fs-40\"><b>Grandes cosa Cristo ha hecho para mi</b></span>",
       "<span class=\"fs-40\"><b>Yo se que Jesucristo muy pronto volverá</b></span><br><span class=\"fs-40\"><b>Y entretanto me prepara un lugar</b></span><br><span class=\"fs-40\"><b>En la casa de mi Padre, </b></span><br><span class=\"fs-40\"><b>mansión de luz y paz,</b></span><br><span class=\"fs-40\"><b>Do el creyente fiel con él ha de morar</b></span><br><br><br><span class=\"fs-40\"><b>Llegándome a la , con él yo estaré,</b></span><br><span class=\"fs-40\"><b>Y contemplaré su rostro siempre allí</b></span><br><span class=\"fs-40\"><b>Con los santos redimidos gozoso cantaré</b></span><br><span class=\"fs-40\"><b>Grandes cosas Cristo ha hecho para mí.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "Himnos"
   },
   {
@@ -1260,6 +1350,7 @@
       "<span class=\"fs-40\"><b>Hoy tu pueblo se ha reunido ante ti,</b></span><br><span class=\"fs-40\"><b>y juntos te queremos adorar.</b></span><br><span class=\"fs-40\"><b>Unidos por un solo amor,</b></span><br><span class=\"fs-40\"><b>deseamos rendirte loor.</b></span><br><br><span class=\"fs-40\"><b>Nuestras voces a ti quieren cantar,</b></span><br><span class=\"fs-40\"><b>tu dulce y Santo nombre exaltar,</b></span><br><span class=\"fs-40\"><b>armonía intentamos construir,</b></span><br><span class=\"fs-40\"><b>y tu hermosa presencia sentir.</b></span>",
       "<span class=\"fs-40\"><b>/Gloria al Dios de la verdad,</b></span><br><span class=\"fs-40\"><b>el sol que brilla en la oscuridad,</b></span><br><span class=\"fs-40\"><b>el calor del invierno,</b></span><br><span class=\"fs-40\"><b>el Señor del universo,</b></span><br><span class=\"fs-40\"><b>te magnificamos, nuestro Rey/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "H"
   },
   {
@@ -1281,6 +1372,7 @@
       "<span class=\"fs-32\"><b>/Tal </b></span><span class=\"fs-32\"><b>y como somos nos amó</b></span><br><span class=\"fs-32\"><b>Hoy nos acercamos sin </b></span><span class=\"fs-32\"><b>temor/</b></span><br><br><br><span class=\"fs-32\"><b>Él es el agua que al beber</b></span><br><span class=\"fs-32\"><b>Nunca más tendremos sed</b></span><br><span class=\"fs-32\"><b>Jesucristo </b></span><span class=\"fs-32\"><b>basta, </b></span><span class=\"fs-32\"><b>Jesucristo basta</b></span><br><span class=\"fs-32\"><b>Mi castigo recibió</b></span><br><span class=\"fs-32\"><b>Y su herencia me entregó</b></span><br><span class=\"fs-32\"><b>Jesucristo </b></span><span class=\"fs-32\"><b>basta, Jesucristo </b></span><span class=\"fs-32\"><b>basta</b></span><br><br><br><span class=\"fs-32\"><b>Ahora hay un futuro</b></span><br><span class=\"fs-32\"><b>Y esperanza fiel</b></span><br><span class=\"fs-32\"><b>En su amor confiamos</b></span><br><span class=\"fs-32\"><b>Hay descanso en Él</b></span>"
     ],
     "nueva": true,
+    "tono": "LA",
     "carpeta": "J"
   },
   {
@@ -1326,6 +1418,7 @@
       "<span class=\"fs-36\"><b>Junto a la cruz hay el manantial</b></span><br><span class=\"fs-36\"><b>de agua de vida, cual el cristal.</b></span><br><span class=\"fs-36\"><b>Mi sed allí Cristo pudo apagar,</b></span><br><span class=\"fs-36\"><b>A su nombre gloria</b></span><br><br><span class=\"fs-36\"><b>  /A su nombre gloria/</b></span><br><span class=\"fs-36\"><b>Qué maravilla, Jesús me salvó</b></span><br><span class=\"fs-36\"><b>A su nombre gloria</b></span>",
       "<span class=\"fs-36\"><b>Ven sin tardar a la cruz, pecador,</b></span><br><span class=\"fs-36\"><b>donde te espera el gran Redentor.</b></span><br><span class=\"fs-36\"><b>Allí de Dios hallarás el amor;</b></span><br><span class=\"fs-36\"><b>A su nombre gloria</b></span><br><br><span class=\"fs-36\"><b> /A su nombre gloria/</b></span><br><span class=\"fs-36\"><b>Qué maravilla, Jesús me salvó</b></span><br><span class=\"fs-36\"><b>A su nombre gloria</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "Himnos"
   },
   {
@@ -1389,6 +1482,7 @@
       "<span class=\"fs-36\"><b>Rompió mis cadenas, me dio vida nueva</b></span><br><span class=\"fs-36\"><b>Y al fondo del mar echó mi maldad</b></span><br><span class=\"fs-36\"><b>Lavó mis pecados y me ha perdonado</b></span><br><span class=\"fs-36\"><b>Sólo en el nombre de Jesús</b></span><br><span class=\"fs-36\"><b>Hay libertad</b></span>",
       "<span class=\"fs-36\"><b>///Al que el Hijo hace libre</b></span><br><span class=\"fs-36\"><b>Es libre en verdad///</b></span><br><br><br><span class=\"fs-36\"><b>Rompió mis cadenas, </b></span><span class=\"fs-36\"><b>me dio </b></span><span class=\"fs-36\"><b>vida nueva</b></span><br><span class=\"fs-36\"><b>Y al fondo del mar echó mi maldad</b></span><br><span class=\"fs-36\"><b>Lavó mis pecados y me ha perdonado</b></span><br><span class=\"fs-36\"><b>Sólo en el nombre de Jesús</b></span><br><span class=\"fs-36\"><b>Hay libertad</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "L"
   },
   {
@@ -1398,6 +1492,7 @@
       "<span class=\"fs-40\"><b>Levanto mis manos, </b></span><br><span class=\"fs-40\"><b>aunque </b></span><span class=\"fs-40\"><b>no tenga fuerzas</b></span><br><span class=\"fs-40\"><b>Levanto mis manos, </b></span><br><span class=\"fs-40\"><b>aunque </b></span><span class=\"fs-40\"><b>tenga mil problemas</b></span><br><br><br><span class=\"fs-40\"><b>Cuando levanto mis manos, </b></span><br><span class=\"fs-40\"><b>comienzo </b></span><span class=\"fs-40\"><b>a sentir</b></span><br><span class=\"fs-40\"><b>Una unción que me hace cantar</b></span><br><span class=\"fs-40\"><b>Cuando levanto mis manos, </b></span><br><span class=\"fs-40\"><b>comienzo </b></span><span class=\"fs-40\"><b>a sentir el fuego</b></span><span class=\"fs-40\"><b>.</b></span>",
       "<span class=\"fs-40\"><b>Cuando </b></span><span class=\"fs-40\"><b>levanto mis manos </b></span><br><span class=\"fs-40\"><b>mis </b></span><span class=\"fs-40\"><b>cargas se van</b></span><br><span class=\"fs-40\"><b>Nuevas fuerzas tú me das</b></span><br><span class=\"fs-40\"><b>Todo esto es posible, </b></span><br><span class=\"fs-40\"><b>todo </b></span><span class=\"fs-40\"><b>esto es posible </b></span><br><span class=\"fs-40\"><b>cuando </b></span><span class=\"fs-40\"><b>levanto mis manos.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "L"
   },
   {
@@ -1407,6 +1502,7 @@
       "<span class=\"fs-40\"><b>/Los que esperan,</b></span><br><span class=\"fs-40\"><b>los que esperan en Jehová/</b></span><br><br><span class=\"fs-40\"><b>/Como las águilas, </b></span><br><span class=\"fs-40\"><b>como las águilas,</b></span><br><span class=\"fs-40\"><b>sus alas levantarán/</b></span>",
       "<span class=\"fs-40\"><b>Correrán y no se cansarán</b></span><br><span class=\"fs-40\"><b>caminarán y no se fatigarán</b></span><br><br><span class=\"fs-40\"><b>/Nuevas fuerzas tendrán, </b></span><br><span class=\"fs-40\"><b>nuevas fuerzas tendrán</b></span><br><span class=\"fs-40\"><b>los que esperan,</b></span><br><span class=\"fs-40\"><b>los que esperan en Jehová/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "L"
   },
   {
@@ -1416,6 +1512,7 @@
       "<span class=\"fs-40\"><b>Majestad, gloria a su majestad</b></span><br><span class=\"fs-40\"><b>Jesucristo merece todo honor.</b></span><br><span class=\"fs-40\"><b>Majestad, reino y autoridad,</b></span><br><span class=\"fs-40\"><b>suyo el honor, suyo el poder</b></span><span class=\"fs-40\"><b>, gloria </b></span><span class=\"fs-40\"><b>a él.</b></span>",
       "<span class=\"fs-40\"><b>Exaltad, engrandeced su Santo Nombre,</b></span><br><span class=\"fs-40\"><b>adorad, magnificad a Cristo el rey.</b></span><br><span class=\"fs-40\"><b>Majestad, gloria a su majestad.</b></span><br><br><br><span class=\"fs-40\"><b>//Cristo murió, resucito, hoy es Señor//</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "M"
   },
   {
@@ -1424,6 +1521,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Majestuoso, poderoso,</b></span><br><span class=\"fs-40\"><b>digno de loor.</b></span><br><span class=\"fs-40\"><b>Proclamemos su grandeza hoy/</b></span><br><br><span class=\"fs-40\"><b>/Jesucristo es Rey/</b></span><br><span class=\"fs-40\"><b>postrados hoy ante sus pies</b></span><br><span class=\"fs-40\"><b>Jesucristo es Rey</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "M"
   },
   {
@@ -1432,6 +1530,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Maravilloso Dios,</b></span><br><span class=\"fs-40\"><b>tú permaneces siempre fiel.</b></span><br><span class=\"fs-40\"><b>Tu gloria y tu poder</b></span><br><span class=\"fs-40\"><b>llenan mi vida de tu ser.</b></span><br><span class=\"fs-40\"><b>Sostenme con tu amor</b></span><br><span class=\"fs-40\"><b>con tu victoria y tu perdón.</b></span><br><span class=\"fs-40\"><b>Desde mi corazón te canto hoy./</b></span><br><br><span class=\"fs-40\"><b>/Desde mi corazón te canto hoy/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "M"
   },
   {
@@ -1440,6 +1539,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Mas el Dios de toda gracia,</b></span><br><span class=\"fs-40\"><b>que nos llamó a su gloria eterna,</b></span><br><span class=\"fs-40\"><b>os perfeccione y afirme,</b></span><br><span class=\"fs-40\"><b>fortalezca y establezca.</b></span><br><br><span class=\"fs-40\"><b>A él sea la gloria,</b></span><br><span class=\"fs-40\"><b>a él sea el imperio,</b></span><br><span class=\"fs-40\"><b>por los siglos de los siglos.</b></span><br><span class=\"fs-40\"><b>/Amén/</b></span><br><span class=\"fs-40\"><b>Amén y amén </b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "M"
   },
   {
@@ -1448,6 +1548,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Me gozaré, me alegraré</b></span><br><span class=\"fs-40\"><b>y cantaré al Señor</b></span><br><span class=\"fs-40\"><b>porque han llegado las bodas</b></span><br><span class=\"fs-40\"><b>del cordero de Dios/</b></span><br><br><span class=\"fs-40\"><b>/Y a su esposa se le ha concedido</b></span><br><span class=\"fs-40\"><b>que se vista de lino fino,</b></span><br><span class=\"fs-40\"><b>lino fino y resplandeciente</b></span><br><span class=\"fs-40\"><b>para recibir al Rey/</b></span><br><br><span class=\"fs-40\"><b>Me gozaré…</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "M"
   },
   {
@@ -1468,6 +1569,7 @@
       "<span class=\"fs-40\"><b>Me has tomado en tus brazos</b></span><br><span class=\"fs-40\"><b>y me has dado salvación,</b></span><br><span class=\"fs-40\"><b>de tu amor has derramado en mi corazón.</b></span><br><span class=\"fs-40\"><b>No sabré agradecerte </b></span><br><span class=\"fs-40\"><b>lo que has hecho por mí,</b></span><br><span class=\"fs-40\"><b>solo puedo darte ahora mi canción.</b></span><br><br><span class=\"fs-40\"><b>/Gracias, gracias Señor, </b></span><br><span class=\"fs-40\"><b>gracias mi Señor Jesús/</b></span>",
       "<span class=\"fs-40\"><b>En la cruz diste tu vida,</b></span><br><span class=\"fs-40\"><b>entregaste todo allí,</b></span><br><span class=\"fs-40\"><b>vida eterna regalaste al morir</b></span><br><span class=\"fs-40\"><b>por tu sangre tengo entrada,</b></span><br><span class=\"fs-40\"><b>ante el trono celestial,</b></span><br><span class=\"fs-40\"><b>puedo entrar confiadamente ante ti.</b></span><br><br><span class=\"fs-40\"><b>/Gracias, gracias Señor, </b></span><br><span class=\"fs-40\"><b>gracias mi Señor Jesús/</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "M"
   },
   {
@@ -1491,6 +1593,7 @@
       "<span class=\"fs-40\"><b>Arde mi alma, </b></span><br><span class=\"fs-40\"><b>arde de amor</b></span><br><span class=\"fs-40\"><b>por aquel que me dio la vida</b></span><br><span class=\"fs-40\"><b>por eso le anhela mi corazón</b></span><br><span class=\"fs-40\"><b>anhela de su compañía</b></span><br><span class=\"fs-40\"><b>anhela de su compañía</b></span>",
       "<span class=\"fs-40\"><b>Ven conmigo a la casa de Dios, </b></span><br><span class=\"fs-40\"><b>celebraremos juntos su amor</b></span><br><span class=\"fs-40\"><b>haremos fiesta en honor</b></span><br><span class=\"fs-40\"><b>de aquel que nos amó.</b></span><br><span class=\"fs-40\"><b>Estando aquí en la casa de Dios, </b></span><br><span class=\"fs-40\"><b>alegraremos su corazón</b></span><br><span class=\"fs-40\"><b>le brindaremos ofrenda</b></span><br><span class=\"fs-40\"><b>de obediencia y amor</b></span><br><span class=\"fs-40\"><b>///en la casa de Dios///</b></span><br><span class=\"fs-40\"><b>En la casa de Dios</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "M"
   },
   {
@@ -1499,6 +1602,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/</b></span><span class=\"fs-40\"><b>Mirad cuál </b></span><span class=\"fs-40\"><b>amor nos ha dado el Padre</b></span><br><span class=\"fs-40\"><b>al hacernos hijos de Dios/</b></span><br><br><span class=\"fs-40\"><b>/Oh, oh, ser llamados hijos de Dios/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "M"
   },
   {
@@ -1507,6 +1611,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>//Mirarte solo a ti, Señor//</b></span><br><span class=\"fs-40\"><b>y no mirar atrás.</b></span><br><br><span class=\"fs-40\"><b>/Seguir tu caminar, Señor.</b></span><br><span class=\"fs-40\"><b>Seguir sin desmayar, Señor.</b></span><br><span class=\"fs-40\"><b>Postrarme ante tu altar, Señor, </b></span><br><span class=\"fs-40\"><b>y no mirar atrás./</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "M"
   },
   {
@@ -1516,6 +1621,7 @@
       "<span class=\"fs-40\"><b>Ningún problema es tan grande que Dios</b></span><br><span class=\"fs-40\"><b>no pueda resolverlo,</b></span><br><span class=\"fs-40\"><b>ninguna montaña es tan alta que él</b></span><br><span class=\"fs-40\"><b>no pueda moverla.</b></span><br><span class=\"fs-40\"><b>Ninguna tormenta es tan oscura que Dios</b></span><br><span class=\"fs-40\"><b>no pueda calmarla.</b></span><br><span class=\"fs-40\"><b>Ninguna tristeza es tan profunda que él</b></span><br><span class=\"fs-40\"><b>no pueda aliviarla</b></span><span class=\"fs-40\"><b>.</b></span>",
       "<span class=\"fs-40\"><b>/Si sobre sus hombros llevó</b></span><br><span class=\"fs-40\"><b>el pecado del mundo,</b></span><br><span class=\"fs-40\"><b>yo sé mi hermano tus cargas él las llevará/</b></span><br><br><br><span class=\"fs-40\"><b>Dijo </b></span><span class=\"fs-40\"><b>Jesús: “venid a mi,</b></span><br><span class=\"fs-40\"><b>todos los que estáis cargados,</b></span><br><span class=\"fs-40\"><b>y yo os haré descansar”</b></span><br><br><span class=\"fs-40\"><b>/Si sobre sus hombros llevó</b></span><br><span class=\"fs-40\"><b>el pecado del mundo</b></span><br><span class=\"fs-40\"><b>yo sé mi hermano tus cargas él las llevará/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "N"
   },
   {
@@ -1525,6 +1631,7 @@
       "<span class=\"fs-40\"><b>No existe bien para mí que esté fuera de tí</b></span><br><span class=\"fs-40\"><b>gracias Dios mío, me siento feliz.</b></span><br><span class=\"fs-40\"><b>Cuan dulce amor tú me diste, </b></span><br><span class=\"fs-40\"><b>me asombra Señor</b></span><br><span class=\"fs-40\"><b>y hoy quiero darte lo poco que soy.</b></span><br><br><span class=\"fs-40\"><b>Puedo sentir en el viento la lluvia y el sol</b></span><br><span class=\"fs-40\"><b>que cada día me muestran tu amor,</b></span><br><span class=\"fs-40\"><b>como la arena en el mar, las aves al cantar</b></span><br><span class=\"fs-40\"><b>y la pureza de un manantial,</b></span>",
       "<span class=\"fs-40\"><b>Así eres dulce Jesús </b></span><br><span class=\"fs-40\"><b>cuando me das tu amor</b></span><br><span class=\"fs-40\"><b>/Gracias Señor (por tu amor)/</b></span><br><span class=\"fs-40\"><b>Gracias te doy.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "N"
   },
   {
@@ -1533,6 +1640,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>No existen más motivos Señor,</b></span><br><span class=\"fs-40\"><b>venimos hoy rendidos a ti.</b></span><br><span class=\"fs-40\"><b>La única razón de nuestra adoración</b></span><br><span class=\"fs-40\"><b>hoy eres tú.</b></span><br><span class=\"fs-40\"><b>Elevamos olor fragante para ti, para ti.</b></span><br><br><span class=\"fs-40\"><b>/Solo a ti, sea la gloria Señor,</b></span><br><span class=\"fs-40\"><b>la alabanza y la adoración.</b></span><br><span class=\"fs-40\"><b>Toda rodilla se doble ante el único Rey y Dios/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "N"
   },
   {
@@ -1541,6 +1649,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/No hay Dios tan grande como tú, </b></span><br><span class=\"fs-40\"><b>no lo hay, no lo hay./</b></span><br><span class=\"fs-40\"><b>/No hay Dios que pueda hacer las obras,</b></span><br><span class=\"fs-40\"><b>como las que haces tú./</b></span><br><br><span class=\"fs-40\"><b>/No es con ejército, ni con espada,</b></span><br><span class=\"fs-40\"><b>mas con tu Santo Espíritu./</b></span><br><span class=\"fs-40\"><b>//Y esos montes se moverán//</b></span><br><span class=\"fs-40\"><b>por tu Santo Espíritu.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "N"
   },
   {
@@ -1560,6 +1669,7 @@
       "<span class=\"fs-40\"><b>Tu eres Señor</b></span><br><span class=\"fs-40\"><b>mi gozo y mi alegría,</b></span><br><span class=\"fs-40\"><b>tu estás Señor</b></span><br><span class=\"fs-40\"><b>conmigo todo el día</b></span><br><span class=\"fs-40\"><b>contigo siempre quiero Señor estar.</b></span>",
       "<span class=\"fs-40\"><b>/Porque fuera de ti</b></span><br><span class=\"fs-40\"><b> nada deseo en la tierra,</b></span><br><span class=\"fs-40\"><b>tu presencia es mas hermosa</b></span><br><span class=\"fs-40\"><b>que cualquier cosa/</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "N"
   },
   {
@@ -1579,6 +1689,7 @@
       "<span class=\"fs-40\"><b>Nombre sobre todo nombre</b></span><br><span class=\"fs-40\"><b>es el nombre de mi Cristo,</b></span><br><span class=\"fs-40\"><b>ante tan glorioso nombre</b></span><br><span class=\"fs-40\"><b>todos se postrarán.</b></span><br><br><span class=\"fs-40\"><b>Todas las fuerzas de oscuridad,</b></span><br><span class=\"fs-40\"><b>de todo el mundo la humanidad,</b></span><br><span class=\"fs-40\"><b>todos los cielos y su potestad,</b></span><br><span class=\"fs-40\"><b>todos se postrarán.</b></span>",
       "<span class=\"fs-40\"><b>Nuestros ojos le contemplan,</b></span><br><span class=\"fs-40\"><b>nuestro corazón le adora,</b></span><br><span class=\"fs-40\"><b>nuestra lengua hoy proclama:</b></span><br><span class=\"fs-40\"><b>Jesucristo es Señor.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "N"
   },
   {
@@ -1590,6 +1701,7 @@
       "<span class=\"fs-40\"><b>Las manos levantadas,</b></span><br><span class=\"fs-40\"><b>corazones hacia el cielo esperando,</b></span><br><span class=\"fs-40\"><b>sin duda lo sabremos,</b></span><br><span class=\"fs-40\"><b>que su presencia se esta manifestando.</b></span><br><span class=\"fs-40\"><b>Sentado sobre el trono de nuestra adoración, </b></span><br><span class=\"fs-40\"><b>dejamos que el gobierne sobre toda creación.</b></span>",
       "<span class=\"fs-40\"><b>Alabadle</b></span><span class=\"fs-40\"><b>, alabadle, solo a él.</b></span><br><span class=\"fs-40\"><b>Adoradle, adoradle, él ha sido fiel.</b></span><br><span class=\"fs-40\"><b>Cantad la gloria de su nombre,</b></span><br><span class=\"fs-40\"><b>pues es digno de exaltar;</b></span><br><span class=\"fs-40\"><b>declaremos a los pueblos </b></span><br><span class=\"fs-40\"><b>de su amor y majestad.</b></span><br><br><span class=\"fs-40\"><b> Alabadle, adorad a Jesús el rey.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "N"
   },
   {
@@ -1599,6 +1711,7 @@
       "<span class=\"fs-40\"><b>Nunca se apartará de tu boca </b></span><br><span class=\"fs-40\"><b>este libro de la ley, </b></span><br><span class=\"fs-40\"><b>sino que de día y de noche </b></span><br><span class=\"fs-40\"><b>meditarás en él,</b></span><br><span class=\"fs-40\"><b>para que guardes y hagas conforme </b></span><br><span class=\"fs-40\"><b>a todo lo que en él está escrito;</b></span><br><span class=\"fs-40\"><b>porque entonces harás </b></span><br><span class=\"fs-40\"><b>prosperar  tu camino </b></span><br><span class=\"fs-40\"><b>y todo te saldrá bien</b></span>",
       "<span class=\"fs-40\"><b>/Mira que te mando que te esfuerces</b></span><br><span class=\"fs-40\"><b>que seas valiente; no temas, ni desmayes</b></span><br><span class=\"fs-40\"><b>porque Jehová tú Dios</b></span><br><span class=\"fs-40\"><b>estará contigo en donde quiera que vallas./</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "N"
   },
   {
@@ -1616,6 +1729,7 @@
       "<span class=\"fs-40\"><b>Oh deja que el Señor te mueva</b></span><br><span class=\"fs-40\"><b>en su espíritu de amor,</b></span><br><span class=\"fs-40\"><b>satisfaga hoy tu alma y corazón.</b></span><br><span class=\"fs-40\"><b>Entrégale le que hoy te pide</b></span><br><span class=\"fs-40\"><b>y su espíritu vendrá sobre ti,</b></span><br><span class=\"fs-40\"><b>vida nueva te dará.</b></span><br><br><span class=\"fs-40\"><b>Cristo, oh Cristo ven y llénanos.</b></span><br><span class=\"fs-40\"><b>Cristo, oh Cristo, llénanos de ti.</b></span>",
       "<span class=\"fs-40\"><b>Alzamos nuestra voz con gozo,</b></span><br><span class=\"fs-40\"><b>nuestra alabanza a ti.</b></span><br><span class=\"fs-40\"><b>Con dulzura te entregamos nuestro ser.</b></span><br><span class=\"fs-40\"><b>Entrega todas tus tristezas</b></span><br><span class=\"fs-40\"><b>en el nombre de Jesús</b></span><br><span class=\"fs-40\"><b>y abundante vida hoy tendrás de él.</b></span><br><br><span class=\"fs-40\"><b>Cristo, oh Cristo ven y llénanos.</b></span><br><span class=\"fs-40\"><b>Cristo, oh Cristo, llénanos de ti.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "O"
   },
   {
@@ -1644,6 +1758,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Oh que bueno es cantar a mi Dios</b></span><br><span class=\"fs-40\"><b>bendecir el nombre de Jehová</b></span><br><span class=\"fs-40\"><b>y cantar alegre su canción</b></span><br><span class=\"fs-40\"><b>por su bondad/</b></span><br><br><span class=\"fs-40\"><b>//Porque que él renueva </b></span><br><span class=\"fs-40\"><b>su misericordia//</b></span><br><span class=\"fs-40\"><b>cada mañana</b></span><br><span class=\"fs-40\"><b>//Porque que él renueva</b></span><br><span class=\"fs-40\"><b>su misericordia//</b></span><br><span class=\"fs-40\"><b>cada mañana</b></span>"
     ],
+    "tono": "LAm",
     "carpeta": "O"
   },
   {
@@ -1652,6 +1767,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Oh Señor, ya se abrieron las puertas,</b></span><br><span class=\"fs-40\"><b>oh mi Dios venimos a adorar,</b></span><br><span class=\"fs-40\"><b>a cantar y alabar tu nombre</b></span><br><span class=\"fs-40\"><b>porque tu presencia aquí </b></span><br><span class=\"fs-40\"><b>es realidad.</b></span><br><br><span class=\"fs-40\"><b>/Aleluya, te adoramos Señor/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "O"
   },
   {
@@ -1660,6 +1776,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Oh ven, ven y deléitate en el Señor</b></span><br><span class=\"fs-40\"><b>y él te concederá,</b></span><br><span class=\"fs-40\"><b>las peticiones de tu corazón/</b></span><br><br><span class=\"fs-40\"><b>Confía solo en él, y él te dará,</b></span><br><span class=\"fs-40\"><b>espera solo en él y él hará.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "O"
   },
   {
@@ -1668,6 +1785,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Padre del cielo te adoramos,</b></span><br><span class=\"fs-40\"><b>alzamos hoy tu nombre en alto</b></span><br><span class=\"fs-40\"><b>que tu reino se establezca  </b></span><br><span class=\"fs-40\"><b>en la alabanza de tu pueblo,</b></span><br><span class=\"fs-40\"><b>que declara tu poder.</b></span><br><br><span class=\"fs-40\"><b>Bendito sea el Señor, Dios poderoso,</b></span><br><span class=\"fs-40\"><b>quien fue, quién es y quién vendrá.</b></span><br><span class=\"fs-40\"><b>Bendito sea el Señor, Dios poderoso,</b></span><br><span class=\"fs-40\"><b>por siempre reinarás. </b></span>"
     ],
+    "tono": "DO",
     "carpeta": "P"
   },
   {
@@ -1676,6 +1794,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Padre únenos</b></span><br><span class=\"fs-40\"><b>Padre únenos      </b></span><br><span class=\"fs-40\"><b>que el mundo crea     </b></span><br><span class=\"fs-40\"><b>que enviaste a Jesús</b></span><br><span class=\"fs-40\"><b>Padre únenos </b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "P"
   },
   {
@@ -1694,6 +1813,7 @@
       "<span class=\"fs-40\"><b>Pertenezco a tí Señor Jesús,</b></span><br><span class=\"fs-40\"><b>y no hay nada que pueda borrar,</b></span><br><span class=\"fs-40\"><b>ese amor que un día tú </b></span><br><span class=\"fs-40\"><b>pusiste dentro de mí,</b></span><br><span class=\"fs-40\"><b>y que ahora quiero recordar.</b></span><br><br><span class=\"fs-40\"><b>Hoy mi vaso cae ante ti,</b></span><br><span class=\"fs-40\"><b>derramado a tus pies Señor.</b></span><br><span class=\"fs-40\"><b>A rogarte tú perdón, por tanta rebelión</b></span><br><span class=\"fs-40\"><b>que impide que pueda</b></span><br><span class=\"fs-40\"><b>darte mi amor.</b></span>",
       "<b>/Alcanza oh Dios, mi corazón.</b><br><b>Rómpelo y límpialo,</b><br><b>que tu puedas a través de mí,</b><br><b>reflejar tu gloria y tu amor/</b><br><br><b>/Reflejar tu gloria y tu amor/</b>"
     ],
+    "tono": "SOL",
     "carpeta": "P"
   },
   {
@@ -1703,6 +1823,7 @@
       "<span class=\"fs-40\"><b>Por mucho tiempo busqué, </b></span><br><span class=\"fs-40\"><b>una razón de vivir</b></span><br><span class=\"fs-40\"><b>En medio de mil preguntas, </b></span><br><span class=\"fs-40\"><b>tu amor me respondió</b></span><br><br><span class=\"fs-40\"><b>Ahora veo la Luz, </b></span><br><span class=\"fs-40\"><b>y ya no tengo temor</b></span><br><span class=\"fs-40\"><b>Tu reino vino a mi vida, </b></span><br><span class=\"fs-40\"><b>y ahora vivo para ti</b></span>",
       "<span class=\"fs-40\"><b>Cantaré de tu amor, </b></span><br><span class=\"fs-40\"><b>rendiré mi corazón ante ti</b></span><br><span class=\"fs-40\"><b>Tú serás mi pasión </b></span><br><span class=\"fs-40\"><b>y mis pasos se guiarán por tu voz</b></span><br><br><span class=\"fs-40\"><b>Mi Jesús, y mi Rey</b></span><br><span class=\"fs-40\"><b>De tu gran amor cantaré</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "P"
   },
   {
@@ -1711,6 +1832,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Porque grande es Jehová, </b></span><br><span class=\"fs-40\"><b>y digno de suprema alabanza.</b></span><br><span class=\"fs-40\"><b>Adorad a Jehová, </b></span><br><span class=\"fs-40\"><b>en la hermosura de su santidad./</b></span><br><br><span class=\"fs-40\"><b>//Y temed delante de </b></span><span class=\"fs-40\"><b>él, toda </b></span><span class=\"fs-40\"><b>la tierra//</b></span><br><span class=\"fs-40\"><b>//Porque grande es Jehová</b></span><span class=\"fs-40\"><b>//, </b></span><br><span class=\"fs-40\"><b>nuestro </b></span><span class=\"fs-40\"><b>Dios.</b></span><br><br><br><span class=\"fs-40\"><b>//</b></span><span class=\"fs-40\"><b>Porque grande es Jehová//,</b></span><br><span class=\"fs-40\"><b>nuestro Dios.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "P"
   },
   {
@@ -1720,6 +1842,7 @@
       "<span class=\"fs-40\"><b>/Porque para siempre oh Dios</b></span><br><span class=\"fs-40\"><b> tu misericordia es/</b></span><br><br><span class=\"fs-40\"><b>Mejor que la vida es</b></span><br><span class=\"fs-40\"><b>mi alma lo sabe bien</b></span><br><span class=\"fs-40\"><b>porque para siempre oh Dios</b></span><br><span class=\"fs-40\"><b>tu misericordia es.</b></span>",
       "<span class=\"fs-40\"><b>Mas basta que el ancho mar</b></span><br><span class=\"fs-40\"><b>mas alta que el cielo está.</b></span><br><span class=\"fs-40\"><b>Porque para siempre oh Dios</b></span><br><span class=\"fs-40\"><b>tu misericordia es.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "P"
   },
   {
@@ -1729,6 +1852,7 @@
       "<span class=\"fs-40\"><b>Porque tú eres bueno,</b></span><br><span class=\"fs-40\"><b>porque para </b></span><span class=\"fs-40\"><b>siempre, tú </b></span><span class=\"fs-40\"><b>misericordia es.</b></span><br><span class=\"fs-40\"><b>Cada mañana al despertar</b></span><br><span class=\"fs-40\"><b>se que en ti puedo confiar,</b></span><br><span class=\"fs-40\"><b>me sostienes por tu gran fidelidad.</b></span><br><br><span class=\"fs-40\"><b>Porque tú eres bueno,</b></span><br><span class=\"fs-40\"><b>porque tu </b></span><span class=\"fs-40\"><b>justicia, justicia </b></span><span class=\"fs-40\"><b>eterna es,</b></span><br><span class=\"fs-40\"><b>y en ella yo me deleitaré</b></span><br><span class=\"fs-40\"><b>en tu verdad caminaré</b></span><br><span class=\"fs-40\"><b>por tu senda de justicia, </b></span><span class=\"fs-40\"><b>guíame</b></span>",
       "<span class=\"fs-40\"><b>Porque tu eres bueno,</b></span><br><span class=\"fs-40\"><b>porque para siempre, </b></span><span class=\"fs-40\"><b>tu </b></span><span class=\"fs-40\"><b>misericordia es.</b></span><br><span class=\"fs-40\"><b>Cada mañana al despertar, </b></span><br><span class=\"fs-40\"><b>se que en ti puedo confiar,</b></span><br><span class=\"fs-40\"><b>me sostienes por tu gran fidelidad,</b></span><br><br><span class=\"fs-40\"><b>Y </b></span><span class=\"fs-40\"><b>cada mañana al despertar, </b></span><br><span class=\"fs-40\"><b>se que en ti puedo confiar,</b></span><br><span class=\"fs-40\"><b>me sostienes por tu gran fidelidad</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "P"
   },
   {
@@ -1737,6 +1861,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Porque tú eres el gozo de mi corazón/</b></span><br><span class=\"fs-40\"><b> /Yo te bendeciré y me alegraré/</b></span><br><span class=\"fs-40\"><b>/Porque tú eres el canto de todo mi ser/</b></span><br><span class=\"fs-40\"><b>/Mis labios te alabarán solo a ti/</b></span><br><br><span class=\"fs-40\"><b>/Tú eres mi roca, mi torre fuerte,</b></span><br><span class=\"fs-40\"><b>y en todo tiempo yo, en ti me gozaré/</b></span><br><span class=\"fs-40\"><b>/En ti me gozaré/</b></span><br><span class=\"fs-40\"><b>Me gozaré en el Señor</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "P"
   },
   {
@@ -1745,6 +1870,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Pronto vendrá el Señor</b></span><br><span class=\"fs-40\"><b>su Iglesia a levantar gloriosa.</b></span><br><span class=\"fs-40\"><b>La Iglesia que compró</b></span><br><span class=\"fs-40\"><b>a precio de sangre preciosa.</b></span><br><span class=\"fs-40\"><b>Los ángeles vendrán,</b></span><br><span class=\"fs-40\"><b>Allí se reunirá su pueblo.</b></span><br><br><span class=\"fs-40\"><b>/Allí yo quiero estar para escuchar su voz</b></span><br><span class=\"fs-40\"><b>Cuando me diga: «ven, buen siervo»/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "P"
   },
   {
@@ -1754,6 +1880,7 @@
       "<span class=\"fs-39\"><b>/Puedo confiar en el Señor, </b></span><br><span class=\"fs-39\"><b>que me va a cuidar/</b></span><br><span class=\"fs-39\"><b>si el sol llegara a oscurecer, y no brille más,</b></span><br><span class=\"fs-39\"><b>yo igual confío en el Señor</b></span><br><span class=\"fs-39\"><b>que me va a cuidar.</b></span>",
       "<span class=\"fs-39\"><b>/Puedo descansar/</b></span><br><span class=\"fs-39\"><b>que una mansión Cristo me dará</b></span><br><span class=\"fs-39\"><b>si el sol llegara a oscurecer y no brille más,</b></span><br><span class=\"fs-39\"><b>yo igual confío en el Señor</b></span><br><span class=\"fs-39\"><b>que me va a cuidar</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "P"
   },
   {
@@ -1763,6 +1890,7 @@
       "<span class=\"fs-40\"><b>Que sería de mí</b></span><br><span class=\"fs-40\"><b>si no me hubieras alcanzado,</b></span><br><span class=\"fs-40\"><b>donde estaría hoy</b></span><br><span class=\"fs-40\"><b>si no hubieras perdonado,</b></span><br><span class=\"fs-40\"><b>habría un vacío en mi corazón</b></span><br><span class=\"fs-40\"><b>vagaría sin rumbo, sin dirección.</b></span><br><br><span class=\"fs-40\"><b>/Si no fuera por tu gracia</b></span><br><span class=\"fs-40\"><b>y por tu amor/</b></span>",
       "<span class=\"fs-40\"><b>Sería como un pájaro herido</b></span><br><span class=\"fs-40\"><b>que se muere en el suelo.</b></span><br><span class=\"fs-40\"><b>Sería como un ciervo que brama,</b></span><br><span class=\"fs-40\"><b>por agua en el desierto.</b></span><br><br><span class=\"fs-40\"><b>/Si no fuera por tu gracia</b></span><br><span class=\"fs-40\"><b>y por tu amor/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Q"
   },
   {
@@ -1776,6 +1904,7 @@
       "<span class=\"fs-40\"><b>/Digno, solo tú eres digno</b></span><br><span class=\"fs-40\"><b>Solo tú eres digno</b></span><br><span class=\"fs-40\"><b>Solo tú eres Dios/</b></span><br><br><span class=\"fs-40\"><b>/Gloria, gloria en lo alto</b></span><br><span class=\"fs-40\"><b>Gloria en lo alto, gloria al rey</b></span><br><span class=\"fs-40\"><b>Gloria, gloria a tí, mi Cristo</b></span><br><span class=\"fs-40\"><b>Tu nombre por siempre exaltaré/</b></span>"
     ],
     "nueva": true,
+    "tono": "MI",
     "carpeta": "Q"
   },
   {
@@ -1785,6 +1914,7 @@
       "<span class=\"fs-40\"><b>Quiero cantar una linda canción</b></span><br><span class=\"fs-40\"><b>de un hombre que me transformó.</b></span><br><span class=\"fs-40\"><b>Quiero cantar una linda canción</b></span><br><span class=\"fs-40\"><b>de aquel que mi vida cambió.</b></span><br><br><span class=\"fs-40\"><b>Es mi amigo Jesús, es mi amigo Jesús;</b></span><br><span class=\"fs-40\"><b>él es Dios, él es Rey,</b></span><br><span class=\"fs-40\"><b> es amor y es verdad.</b></span><br><span class=\"fs-40\"><b>Sólo en él encontré </b></span><br><span class=\"fs-40\"><b>esa paz que busqué,</b></span><br><span class=\"fs-40\"><b>sólo en él encontré la felicidad.</b></span>",
       "<span class=\"fs-40\"><b>¿Quieres amigo, cantar y alabar </b></span><br><span class=\"fs-40\"><b>a quién puede tu vida salvar?</b></span><br><span class=\"fs-40\"><b>¿Quieres amigo, cantar y alabar </b></span><br><span class=\"fs-40\"><b>a quién puede tu vida cambiar?</b></span><br><br><span class=\"fs-40\"><b>Él será para ti el amigo más fiel,</b></span><br><span class=\"fs-40\"><b>él es Dios, él es Rey, </b></span><br><span class=\"fs-40\"><b>es amor y es verdad;</b></span><br><span class=\"fs-40\"><b>sólo en él encontré </b></span><br><span class=\"fs-40\"><b>esa paz que busqué,</b></span><br><span class=\"fs-40\"><b>sólo en él encontré //la felicidad//</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "Q"
   },
   {
@@ -1809,6 +1939,7 @@
       "<span class=\"fs-40\"><b>Gracia sublime es</b></span><br><span class=\"fs-40\"><b>Perfecto es tu amor</b></span><br><span class=\"fs-40\"><b>Tomaste mi lugar</b></span><br><span class=\"fs-40\"><b>Cargaste tú mi cruz</b></span><br><span class=\"fs-40\"><b>Tu vida diste ahí</b></span><br><span class=\"fs-40\"><b>Y ahora libre soy</b></span><br><span class=\"fs-40\"><b>Jesús te adoro</b></span><br><span class=\"fs-40\"><b>Por lo que hiciste en mí</b></span>"
     ],
     "nueva": true,
+    "tono": "MI",
     "carpeta": "Q"
   },
   {
@@ -1818,10 +1949,11 @@
       "<span class=\"fs-40\"><b>Quiero escuchar tu dulce voz</b></span><br><span class=\"fs-40\"><b>rompiendo el silencio en mi ser,</b></span><br><span class=\"fs-40\"><b>se que me haría estremecer,</b></span><br><span class=\"fs-40\"><b>me haría llorar o reir</b></span><br><span class=\"fs-40\"><b>y caería rendido ante tí</b></span>",
       "<span class=\"fs-40\"><b>Y no podría estar ante tí</b></span><br><span class=\"fs-40\"><b>escuchandote hablar</b></span><br><span class=\"fs-40\"><b>sin llorar como un niño</b></span><br><span class=\"fs-40\"><b>y pasaría el tiempo así</b></span><br><span class=\"fs-40\"><b>sin querer nada más,</b></span><br><span class=\"fs-40\"><b>nada más que escucharte hablar.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Q"
   },
   {
-    "titulo": "Quiero levantar a ti mis manos maravilloso Jesus",
+    "titulo": "Quiero levantar a ti mis manos maravilloso Jesus.FA#m",
     "preview": "Quiero levantar a ti mis manos\u000bMaravilloso Jesús, milagroso Señor\u000bllena este lugar de tu presencia\u000bY haz descender tu poder \na los que estamos aquí",
     "slides": [
       "<span class=\"fs-40\"><b>Quiero levantar a ti mis manos</b></span><br><span class=\"fs-40\"><b>Maravilloso Jesús, milagroso Señor</b></span><br><span class=\"fs-40\"><b>llena este lugar de tu presencia</b></span><br><span class=\"fs-40\"><b>Y haz descender tu poder </b></span><br><span class=\"fs-40\"><b>a los que estamos aquí</b></span>",
@@ -1835,6 +1967,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Regocíjate y canta, </b></span><br><span class=\"fs-40\"><b>Oh moradora de </b></span><span class=\"fs-40\"><b>Sión</b></span><span class=\"fs-40\"><b>/</b></span><br><br><br><span class=\"fs-40\"><b>/Por que grande es, </b></span><br><span class=\"fs-40\"><b>porque grande es, </b></span><br><span class=\"fs-40\"><b>por que grande es </b></span><br><span class=\"fs-40\"><b>en </b></span><span class=\"fs-40\"><b>medio de ti </b></span><br><span class=\"fs-40\"><b>el santo de Israel/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "R"
   },
   {
@@ -1844,6 +1977,7 @@
       "<span class=\"fs-40\"><b>Renuévame Señor Jesús.</b></span><br><span class=\"fs-40\"><b>Ya no quiero ser igual.</b></span><br><span class=\"fs-40\"><b>Renuévame Señor Jesús,</b></span><br><span class=\"fs-40\"><b>pon en mi tu corazón.</b></span>",
       "<span class=\"fs-40\"><b>Porque todo lo que hay,</b></span><br><span class=\"fs-40\"><b>dentro de mi,</b></span><br><span class=\"fs-40\"><b>necesita ser cambiado Señor.</b></span><br><span class=\"fs-40\"><b>Porque todo lo que hay</b></span><br><span class=\"fs-40\"><b>dentro de mi corazón,</b></span><br><span class=\"fs-40\"><b>//necesita más de ti//</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "R"
   },
   {
@@ -1852,6 +1986,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Resucitó, resucitó</b></span><br><span class=\"fs-40\"><b>y ya no hay nada que lo pueda vencer</b></span><br><span class=\"fs-40\"><b>resucitó, resucitó</b></span><br><span class=\"fs-40\"><b>no hay enemigo que lo pueda destruir.</b></span><br><br><span class=\"fs-40\"><b>/El es la fuerza, es el poder</b></span><br><span class=\"fs-40\"><b>y juntos le adoramos </b></span><br><span class=\"fs-40\"><b>con todo nuestro ser/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "R"
   },
   {
@@ -1860,6 +1995,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Reunidos aquí para alabar al Señor,</b></span><br><span class=\"fs-40\"><b>nuevamente aquí, en unidad.</b></span><br><span class=\"fs-40\"><b>Algo hermoso ha de acontecer,</b></span><br><span class=\"fs-40\"><b>algo tiene Dios para ti,</b></span><br><span class=\"fs-40\"><b>reunidos aquí </b></span><span class=\"fs-40\"><b>para alabar al Señor </b></span>"
     ],
+    "tono": "MI",
     "carpeta": "R"
   },
   {
@@ -1889,6 +2025,7 @@
       "<span class=\"fs-40\"><b>Roca eterna, verdadero y fiel,</b></span><br><span class=\"fs-40\"><b>tú prometes cumplir con tu palabra.</b></span><br><span class=\"fs-40\"><b>Roca eterna, eres justo y fiel,</b></span><br><span class=\"fs-40\"><b>mi confianza siempre en ti pondré.</b></span><br><br><br><span class=\"fs-40\"><b>Mi refugio contra la tormenta,</b></span><br><span class=\"fs-40\"><b>la torre de mi protección, </b></span><br><span class=\"fs-40\"><b>fortaleza en dificultades, </b></span><br><span class=\"fs-40\"><b>mi escondedero eres tú.</b></span>",
       "<span class=\"fs-40\"><b>Sanas todas mis enfermedades, </b></span><br><span class=\"fs-40\"><b>consuelas todo mi dolor.</b></span><br><span class=\"fs-40\"><b>Eres fuerza al sentirme débil,</b></span><br><span class=\"fs-40\"><b>mi ayuda en necesidad.</b></span><br><br><br><span class=\"fs-40\"><b>Roca eterna, verdadero y fiel,</b></span><br><span class=\"fs-40\"><b>tú prometes cumplir con tu palabra.</b></span><br><span class=\"fs-40\"><b>Roca eterna, eres justo y fiel,</b></span><br><span class=\"fs-40\"><b>/mi confianza siempre en ti pondré/.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "R"
   },
   {
@@ -1902,6 +2039,7 @@
       "<span class=\"fs-40\"><b>//Santo, Santo, Santo</b></span><br><span class=\"fs-40\"><b>es </b></span><span class=\"fs-40\"><b>Jesús</b></span><span class=\"fs-40\"><b> de Nazareth//</b></span>"
     ],
     "nueva": true,
+    "tono": "MIm",
     "carpeta": "S"
   },
   {
@@ -1922,6 +2060,7 @@
     "slides": [
       "<span class=\"fs-43\"><b>Santo, Santo,  Santo es el Señor/</b></span><br><span class=\"fs-43\"><b>Y le alabo, y le alabo, y le alabo.</b></span><br><br><br><span class=\"fs-43\"><b>/Misericordioso es el Señor/</b></span><br><span class=\"fs-43\"><b>Y le alabo, y le alabo, y le alabo.</b></span><br><br><br><span class=\"fs-43\"><b>/Fiel y verdadero es el Señor/</b></span><br><span class=\"fs-43\"><b>Y le alabo, y le alabo, y le alabo.</b></span><br><br><br><span class=\"fs-43\"><b>/Todopoderoso es el Señor/</b></span><br><span class=\"fs-43\"><b>Y le alabo, y le alabo, y le alabo</b></span><span class=\"fs-43\"><b>.</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "S"
   },
   {
@@ -1939,6 +2078,7 @@
       "<span class=\"fs-40\"><b>/Se exalta a nuestro Dios entre el júbilo,</b></span><br><span class=\"fs-40\"><b>se exalta a nuestro Dios </b></span><br><span class=\"fs-40\"><b>al sonar de las trompetas,</b></span><br><span class=\"fs-40\"><b>se exalta a nuestro Dios entre el júbilo,</b></span><br><span class=\"fs-40\"><b>con júbilo cantad a él/</b></span><br><br><span class=\"fs-40\"><b>Con júbilo cantad a él</b></span>",
       "<span class=\"fs-40\"><b>Con trompetas hay que celebrar,</b></span><br><span class=\"fs-40\"><b>y aplaudamos a nuestro Señor,</b></span><br><br><span class=\"fs-40\"><b>//Se exalta nuestro Dios// ¡Oh si!</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "S"
   },
   {
@@ -1947,6 +2087,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Seas exaltado oh Dios</b></span><br><span class=\"fs-40\"><b>sobre los cielos,</b></span><br><span class=\"fs-40\"><b>sobre la tierra tu gloria esté/</b></span><br><br><span class=\"fs-40\"><b>/Te exaltamos, te exaltamos,</b></span><br><span class=\"fs-40\"><b>te exaltamos, oh Señor/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "S"
   },
   {
@@ -1956,6 +2097,7 @@
       "<span class=\"fs-36\"><b>Sendas Dios hará,</b></span><br><span class=\"fs-36\"><b>donde piensas que no hay,</b></span><br><span class=\"fs-36\"><b>él obra de maneras que,</b></span><br><span class=\"fs-36\"><b>no podemos entender.</b></span><br><span class=\"fs-36\"><b>Él me guiará, a su lado estaré,</b></span><br><span class=\"fs-36\"><b>amor y fuerzas me dará,</b></span><br><span class=\"fs-36\"><b>un camino hará, donde no lo hay.</b></span>",
       "<span class=\"fs-40\"><b>Por caminos en la soledad me guiará,</b></span><br><span class=\"fs-40\"><b>y agua en el desierto encontraré.</b></span><br><span class=\"fs-40\"><b>La tierra pasará, su Palabra eterna es,</b></span><br><span class=\"fs-40\"><b>él hará algo nuevo hoy.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "S"
   },
   {
@@ -1974,6 +2116,7 @@
       "<span class=\"fs-40\"><b>/Señor eres fiel y tu misericordia es eterna/</b></span><br><span class=\"fs-40\"><b>Gente de toda lengua y nación </b></span><br><span class=\"fs-40\"><b>de generación a generación.</b></span>",
       "<span class=\"fs-40\"><b>Te adoramos hoy, aleluya, aleluya</b></span><br><span class=\"fs-40\"><b>te adoramos hoy, eres Señor.</b></span><br><span class=\"fs-40\"><b>Te adoramos hoy aleluya, aleluya.</b></span><br><span class=\"fs-40\"><b>te adoramos hoy, eres Señor.... eres fiel</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "S"
   },
   {
@@ -1983,6 +2126,7 @@
       "<span class=\"fs-40\"><b>Señor me alegro en tí</b></span><br><span class=\"fs-40\"><b>y de júbilo canta mi corazón</b></span><br><span class=\"fs-40\"><b>/pues victoria recibí y también perdón/</b></span><br><br><span class=\"fs-40\"><b>///Aleluya/// </b></span><br><span class=\"fs-40\"><b>///Aleluya///</b></span>",
       "<span class=\"fs-40\"><b>En la multitud de santos</b></span><br><span class=\"fs-40\"><b>hoy yo quiero declarar</b></span><br><span class=\"fs-40\"><b>no tan solo con mi boca</b></span><br><span class=\"fs-40\"><b>más también con mi vivir</b></span><br><span class=\"fs-40\"><b>que en mi vida eres todo Señor</b></span><br><br><span class=\"fs-40\"><b>///Aleluya///</b></span><br><span class=\"fs-40\"><b>///Aleluya///</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "S"
   },
   {
@@ -2015,16 +2159,6 @@
     "carpeta": "S"
   },
   {
-    "titulo": "SI DECIDIERA NEGAR MI FÉ",
-    "preview": "SI DECIDIERA NEGAR MI FE,\u000bY NO CONFIAR NUNCA MÁS EN ÉL.\u000b//NO TENGO A DONDE IR.//\u000bSI DESPRECIARA EN MI CORAZÓN,\u000bLA SANTA GRACIA QUE ME SALVÓ,\u000b//NO TENGO A DONDE IR.//",
-    "slides": [
-      "<span class=\"fs-28\">SI DECIDIERA NEGAR MI FE,</span><br><span class=\"fs-28\">Y NO CONFIAR NUNCA MÁS EN ÉL.</span><br><span class=\"fs-28\">//NO TENGO A DONDE IR.//</span><br><span class=\"fs-28\">SI DESPRECIARA EN MI CORAZÓN,</span><br><span class=\"fs-28\">LA SANTA GRACIA QUE ME SALVÓ,</span><br><span class=\"fs-28\">//NO TENGO A DONDE IR.//</span>",
-      "<span class=\"fs-28\">CONVENCIDO ESTOY</span><br><span class=\"fs-28\">QUE SIN TU AMOR,</span><br><span class=\"fs-28\">SE ACABARÍAN MIS FUERZAS,</span><br><span class=\"fs-28\">Y SIN TI MI CORAZÓN SEDIENTO</span><br><span class=\"fs-28\">SE MUERE, SE SECA.</span>",
-      "<span class=\"fs-28\">/CERCA DE TI, JESÚS,</span><br><span class=\"fs-28\">YO QUIERO ESTAR,</span><br><span class=\"fs-28\">DE TU PRESENCIA</span><br><span class=\"fs-28\">NO ME QUIERO ALEJAR/</span><br>"
-    ],
-    "carpeta": "S"
-  },
-  {
     "titulo": "Si paz cual un río",
     "preview": "Si paz cual un río es aquí mi porción\u000bsi es como las olas del mar,\u000bcualquiera mi suerte, es ya mi canción:\u000bestá bien, con mi alma está bien.\u000b\u000bEstá bien… está bien…\u000bestá bien con mi alma, está bien.",
     "slides": [
@@ -2034,6 +2168,7 @@
       "<span class=\"fs-40\"><b>Que viva por Cristo, y sólo por él;</b></span><br><span class=\"fs-40\"><b>y si yo muriese bien sé</b></span><br><span class=\"fs-40\"><b>que no temeré, porque Cristo es fiel</b></span><br><span class=\"fs-40\"><b>y mi alma en su paz guardará.</b></span><br><br><span class=\"fs-40\"><b> Está bien… está bien…</b></span><br><span class=\"fs-40\"><b>está bien con mi alma, está bien.</b></span>",
       "<span class=\"fs-40\"><b>Mas no es la muerte que espero, Señor,</b></span><br><span class=\"fs-40\"><b>la tumba mi meta no es,</b></span><br><span class=\"fs-40\"><b>tu pronta venida, en tu tierno amor,</b></span><br><span class=\"fs-40\"><b>esperando mi alma hoy está.</b></span><br><br><span class=\"fs-40\"><b> Está bien… está bien…</b></span><br><span class=\"fs-40\"><b>está bien con mi alma, está bien.</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "Himnos"
   },
   {
@@ -2043,6 +2178,7 @@
       "<span class=\"fs-40\"><b>Siempre estarás a mi lado</b></span><br><span class=\"fs-40\"><b>todo tu amor me cubrirá.</b></span><br><span class=\"fs-40\"><b>Mientras yo tome de tu mano</b></span><br><span class=\"fs-40\"><b>seguro yo, voy a estar.</b></span>",
       "<span class=\"fs-40\"><b>Guía mis caminos, corrige mis pasos</b></span><br><span class=\"fs-40\"><b>no quiero fallarte Señor Jesús,</b></span><br><span class=\"fs-40\"><b>yo voy a alabarte mientras tenga vida,</b></span><br><span class=\"fs-40\"><b>y cuando se acabe por la eternidad</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "S"
   },
   {
@@ -2051,6 +2187,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Siempre te alabaré/</b></span><br><span class=\"fs-40\"><b>hay pruebas, problemas que quieren </b></span><br><span class=\"fs-40\"><b>que no sea así,</b></span><br><span class=\"fs-40\"><b>/igual te alabaré/</b></span><br><span class=\"fs-40\"><b>tu eres mi Rey mientras viva </b></span><br><span class=\"fs-40\"><b>yo no callaré.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "S"
   },
   {
@@ -2059,6 +2196,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Soberano, soberano, </b></span><br><span class=\"fs-40\"><b>cielo y tierra están en tus manos.</b></span><br><span class=\"fs-40\"><b>El trono y la corona tuyas son. </b></span><br><span class=\"fs-40\"><b>Somos tus siervos, </b></span><br><span class=\"fs-40\"><b>tu eres el amo/</b></span><br><span class=\"fs-40\"><b>Señor</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "S"
   },
   {
@@ -2074,6 +2212,7 @@
       "<span class=\"fs-38\"><b>Alzaré mis manos a los cielos</b></span><br><span class=\"fs-38\"><b>Te veré obrando a mi favor</b></span><br><span class=\"fs-38\"><b>Seguiré tomado de tu mano</b></span><br><span class=\"fs-38\"><b>Porque sé que tú sigues siendo Dios</b></span><br><span class=\"fs-38\"><b>/Tú sigues siendo Dios/</b></span><br><br><span class=\"fs-38\"><b>Si me encuentro perdido</b></span><br><span class=\"fs-38\"><b>Sé dónde te puedo encontrar</b></span>"
     ],
     "nueva": true,
+    "tono": "RE",
     "carpeta": "S"
   },
   {
@@ -2082,6 +2221,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Solamente en Cristo, </b></span><br><span class=\"fs-40\"><b>solamente en él.</b></span><br><span class=\"fs-40\"><b>Solamente en Cristo,</b></span><br><span class=\"fs-40\"><b>hay Salvación.</b></span><br><span class=\"fs-40\"><b>No hay otro nombre dado a los hombres,</b></span><br><span class=\"fs-40\"><b>solamente en Cristo,</b></span><br><span class=\"fs-40\"><b>Hay Salvación. </b></span><br><span class=\"fs-40\"><b>No hay otro nombre dado a los hombres,</b></span><br><span class=\"fs-40\"><b>solamente en Cristo,</b></span><br><span class=\"fs-40\"><b>Solamente en él</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "S"
   },
   {
@@ -2091,6 +2231,7 @@
       "<span class=\"fs-40\"><b>Somos el pueblo de Dios,</b></span><br><span class=\"fs-40\"><b>somos un pueblo especial,</b></span><br><span class=\"fs-40\"><b>llamados para anunciar</b></span><br><span class=\"fs-40\"><b>las virtudes de aquel,</b></span><br><span class=\"fs-40\"><b>que nos llamó a su luz.</b></span><br><br><span class=\"fs-40\"><b>Somos el pueblo de Dios,</b></span><br><span class=\"fs-40\"><b>su sangre nos redimió,</b></span><br><span class=\"fs-40\"><b>y su espíritu dio,</b></span><br><span class=\"fs-40\"><b>para darnos poder,</b></span><br><span class=\"fs-40\"><b>y ser testigos de él.</b></span>",
       "<span class=\"fs-40\"><b>Y llevaremos su gloria,</b></span><br><span class=\"fs-40\"><b>a cada pueblo y nación,</b></span><br><span class=\"fs-40\"><b>trayéndoles esperanzas,</b></span><br><span class=\"fs-40\"><b>y nuevas de salvación.</b></span><br><span class=\"fs-40\"><b>Y su amor nos impulsa,</b></span><br><span class=\"fs-40\"><b>no nos podemos callar.</b></span><br><span class=\"fs-40\"><b>Anunciaremos al mundo </b></span><br><span class=\"fs-40\"><b>de su amor y verdad.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "S"
   },
   {
@@ -2102,6 +2243,7 @@
       "<span class=\"fs-28\"><b>Somos iglesia, reino de luz</b></span><br><span class=\"fs-28\"><b>Nuestra bandera la Cruz de Jesús</b></span><br><span class=\"fs-28\"><b>Somos iglesia, somos nación</b></span><br><span class=\"fs-28\"><b>La tumba vacía es nuestra canción</b></span><br><span class=\"fs-28\"><b>La tumba vacía es nuestra canción</b></span><br><br><span class=\"fs-28\"><b>/Vivo </b></span><span class=\"fs-28\"><b>estás en gloria y honor</b></span><br><span class=\"fs-28\"><b>Reinas en victoria Señor</b></span><br><span class=\"fs-28\"><b>Nuestro ser entona a una vos</b></span><br><span class=\"fs-28\"><b>Cristo eres </b></span><span class=\"fs-28\"><b>Dios/</b></span><br><span class=\"fs-28\"><b>Cristo eres </b></span><span class=\"fs-28\"><b>Dios</b></span>"
     ],
     "nueva": true,
+    "tono": "RE",
     "carpeta": "S"
   },
   {
@@ -2119,6 +2261,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Somos un cuerpo en Cristo,</b></span><br><span class=\"fs-40\"><b>¡aleluya!/</b></span><br><br><span class=\"fs-40\"><b>Cuando estamos juntos,</b></span><br><span class=\"fs-40\"><b>entre nosotros Jesús está.</b></span><br><span class=\"fs-40\"><b>Cuando estamos juntos,</b></span><br><span class=\"fs-40\"><b>hay poder y autoridad,</b></span><br><span class=\"fs-40\"><b>en su nombre.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "S"
   },
   {
@@ -2129,6 +2272,7 @@
       "<span class=\"fs-36\"><b>/Soy yo, soy yo, soy yo Señor</b></span><br><span class=\"fs-36\"><b>el que necesita orar/</b></span><br><br><span class=\"fs-36\"><b>/No es mi hermano ni mi hermana, </b></span><br><span class=\"fs-36\"><b>sino yo Señor</b></span><br><span class=\"fs-36\"><b>el que necesita orar/</b></span>",
       "<span class=\"fs-36\"><b>/Soy yo, soy yo, soy yo Señor</b></span><br><span class=\"fs-36\"><b>el que necesita orar/</b></span><br><br><span class=\"fs-36\"><b>/No es mi hijo ni mi hija sino yo, Señor</b></span><br><span class=\"fs-36\"><b>el que necesita orar/</b></span><br><br><span class=\"fs-36\"><b>/Soy yo, soy yo, soy yo Señor</b></span><br><span class=\"fs-36\"><b>el que necesita orar/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "S"
   },
   {
@@ -2183,6 +2327,7 @@
       "<span class=\"fs-40\"><b>Tal como soy, Señor,</b></span><br><span class=\"fs-40\"><b>sin nada que ofrecer más que mi canción.</b></span><br><span class=\"fs-40\"><b>No tengo más que darte pues todo es</b></span><br><span class=\"fs-40\"><b>Tuyo Señor.</b></span><br><br><br><span class=\"fs-40\"><b>Tal como soy, Señor,</b></span><br><span class=\"fs-40\"><b>sin nada que entregar más que el corazón.</b></span><br><span class=\"fs-40\"><b>Me rindo todo a ti; tómame Señor,</b></span><br><span class=\"fs-40\"><b>tal como soy.</b></span>",
       "<span class=\"fs-40\"><b>/Acéptame como ofrenda de amor,</b></span><br><span class=\"fs-40\"><b>como un sacrificio agradable en tu honor;</b></span><br><span class=\"fs-40\"><b>grato perfume yo quiero ser, Señor./</b></span><br><span class=\"fs-40\"><b>Grato perfume yo quiero ser, Señor</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "T"
   },
   {
@@ -2192,6 +2337,7 @@
       "<span class=\"fs-38\"><b>Te alabaré, no importa como esté</b></span><br><span class=\"fs-38\"><b>te alabaré, en ti yo tengo fe.</b></span><br><span class=\"fs-38\"><b>/Aunque los ojos dejen de brillar,</b></span><br><span class=\"fs-38\"><b>aunque la voz se apague y no quiera cantar/</b></span><br><br><span class=\"fs-38\"><b>Te serviré, no importa como esté</b></span><br><span class=\"fs-38\"><b>te serviré, en ti yo tengo fe,</b></span><br><span class=\"fs-38\"><b>/Aunque el dolor comience a preguntar,</b></span><br><span class=\"fs-38\"><b>aunque la luz se apague y no quiera brillar/</b></span>",
       "<span class=\"fs-38\"><b>Me alegraré en Cristo mi Señor,</b></span><br><span class=\"fs-38\"><b>me alegraré en ti mi salvador.</b></span><br><span class=\"fs-38\"><b>/Si alguna vez sin fuerza he de quedar,</b></span><br><span class=\"fs-38\"><b>tu eres mi fortaleza y tu me haras andar/</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2200,6 +2346,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Te alabaré oh Señor,</b></span><br><span class=\"fs-40\"><b>invocaré tu santo nombre.</b></span><br><span class=\"fs-40\"><b>Siempre daré a conocer </b></span><br><span class=\"fs-40\"><b>en los pueblos tus obras./</b></span><br><br><span class=\"fs-40\"><b>//Grandes son// </b></span><br><span class=\"fs-40\"><b>tus maravillas.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2208,6 +2355,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Te amo, te amo. </b></span><br><span class=\"fs-40\"><b>Es todo lo que puedo decir.</b></span><br><span class=\"fs-40\"><b>Te adoro, te adoro.</b></span><br><span class=\"fs-40\"><b>Todo mi ser confía en ti.</b></span><br><br><span class=\"fs-40\"><b>Yo te amaré y te adoraré,</b></span><br><span class=\"fs-40\"><b>no importa lo que pueda venir.</b></span><br><span class=\"fs-40\"><b>En </b></span><span class=\"fs-40\"><b>ti Señor </b></span><span class=\"fs-40\"><b>siempre confiaré,</b></span><br><span class=\"fs-40\"><b>y te amaré hasta el fin.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2217,6 +2365,7 @@
       "<span class=\"fs-40\"><b>Te exaltaré mi Dios mi Rey,</b></span><br><span class=\"fs-40\"><b>y bendeciré tu nombre,</b></span><br><span class=\"fs-40\"><b>eternamente y para siempre</b></span><br><span class=\"fs-40\"><b>cada día te bendeciré.</b></span><br><span class=\"fs-40\"><b>Y alabaré tu nombre,</b></span><br><span class=\"fs-40\"><b>eternamente y para siempre.</b></span><br><br><span class=\"fs-40\"><b>Grande es Jehová </b></span><br><span class=\"fs-40\"><b>y digno de suprema alabanza,</b></span><br><span class=\"fs-40\"><b>y su grandeza es inescrutable,</b></span><br><span class=\"fs-40\"><b>cada día te bendeciré.</b></span>",
       "<span class=\"fs-40\"><b>Generación a generación,</b></span><br><span class=\"fs-40\"><b>celebrará tus obras,</b></span><br><span class=\"fs-40\"><b>y anunciará tus poderosos hechos,</b></span><br><span class=\"fs-40\"><b>cada día te bendeciré,</b></span><br><span class=\"fs-40\"><b>y alabaré tu nombre,</b></span><br><span class=\"fs-40\"><b>eternamente y para siempre.</b></span><br><br><span class=\"fs-40\"><b>Grande es Jehová </b></span><br><span class=\"fs-40\"><b>y digno de suprema alabanza,</b></span><br><span class=\"fs-40\"><b>y su grandeza es inescrutable,</b></span><br><span class=\"fs-40\"><b>//cada día te bendeciré//</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "T"
   },
   {
@@ -2226,6 +2375,7 @@
       "<span class=\"fs-40\"><b>/Te vengo a decir/ oh mi Salvador,</b></span><br><span class=\"fs-40\"><b>/que yo te amo a tí/ con el corazón.</b></span><br><span class=\"fs-40\"><b>/Te vengo a decir/ toda la verdad</b></span><br><span class=\"fs-40\"><b>te quiero Señor, te amo Señor </b></span><br><span class=\"fs-40\"><b>con el corazón.</b></span><br><br><span class=\"fs-40\"><b>/Yo quiero cantar/ de gozo y de paz,</b></span><br><span class=\"fs-40\"><b>/yo quiero llorar/ de felicidad.</b></span><br><span class=\"fs-40\"><b>/Te vengo a decir/ toda la verdad</b></span><br><span class=\"fs-40\"><b>te quiero Señor, te amo Señor </b></span><br><span class=\"fs-40\"><b>con el corazón.</b></span>",
       "<span class=\"fs-40\"><b>/Te quiero seguir/ oh mi Salvador</b></span><br><span class=\"fs-40\"><b>/y darte mi ser/ mi amigo, mi Dios</b></span><br><span class=\"fs-40\"><b>/te quiero servir/ mi Rey, mi Señor</b></span><br><span class=\"fs-40\"><b>te vengo a poner todo lo que soy, </b></span><br><span class=\"fs-40\"><b>recíbelo Dios.</b></span><br><br><span class=\"fs-40\"><b>/Yo quiero cantar/ de gozo y de paz,</b></span><br><span class=\"fs-40\"><b>/yo quiero llorar/ de felicidad.</b></span><br><span class=\"fs-40\"><b>/Te vengo a decir/ toda la verdad</b></span><br><span class=\"fs-40\"><b>te quiero Señor, te amo Señor </b></span><br><span class=\"fs-40\"><b>con el corazón.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "T"
   },
   {
@@ -2234,6 +2384,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Temprano yo te buscaré,</b></span><br><span class=\"fs-40\"><b>de madrugada yo me acercaré a ti</b></span><br><span class=\"fs-40\"><b>mi alma te anhela y tiene sed</b></span><br><span class=\"fs-40\"><b>para ver tu gloria y tu poder.</b></span><br><br><span class=\"fs-40\"><b>Mi socorro has sido tu</b></span><br><span class=\"fs-40\"><b>y en la sombra de tus alas yo me gozaré,</b></span><br><span class=\"fs-40\"><b>mi alma está apegada a ti,</b></span><br><span class=\"fs-40\"><b>porque tu diestra me ha sostenido</b></span><br><span class=\"fs-40\"><b>oh tu diestra me ha sostenido.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "T"
   },
   {
@@ -2243,6 +2394,7 @@
       "<span class=\"fs-40\"><b>Tenme brillando, </b></span><br><span class=\"fs-40\"><b>Señor tenme brillando por ti</b></span><br><span class=\"fs-40\"><b>puro y limpio seré si tu brillas en mi</b></span><br><span class=\"fs-40\"><b>tenme brillando, </b></span><br><span class=\"fs-40\"><b>Señor tenme brillando por ti</b></span><br><span class=\"fs-40\"><b>hasta que vuelvas pronto con poder.</b></span>",
       "<span class=\"fs-40\"><b>Oh llévame a la roca mas alta Señor,</b></span><br><span class=\"fs-40\"><b>llévame Señor, yo te seguiré</b></span><br><span class=\"fs-40\"><b>oh llévame a la roca mas alta Señor,</b></span><br><span class=\"fs-40\"><b>solo en ti refugio tendré</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2253,6 +2405,7 @@
       "<span class=\"fs-40\"><b>Cuenta la historia del pasado</b></span><br><span class=\"fs-40\"><b>que en tu seno sagrado</b></span><br><span class=\"fs-40\"><b>vivió el salvador.</b></span><br><span class=\"fs-40\"><b>Y en tus hermosos olivares</b></span><br><span class=\"fs-40\"><b>habló a los millares la palabra de amor.</b></span><br><br><span class=\"fs-40\"><b> Eres la historia inolvidable</b></span><br><span class=\"fs-40\"><b>porque en tu seno se derramó</b></span><br><span class=\"fs-40\"><b>/la sangre, preciosa sangre</b></span><br><span class=\"fs-40\"><b>del unigénito Hijo de Dios./</b></span>",
       "<span class=\"fs-40\"><b>Quedan en ti testigos mudos</b></span><br><span class=\"fs-40\"><b>que son los viejos muros</b></span><br><span class=\"fs-40\"><b>de la Jerusalén, </b></span><br><span class=\"fs-40\"><b>viejas paredes destruidas</b></span><br><span class=\"fs-40\"><b>que si tuvieran vida nos hablarían también.</b></span><br><br><span class=\"fs-40\"><b> Eres la historia inolvidable</b></span><br><span class=\"fs-40\"><b>porque en tu seno se derramó</b></span><br><span class=\"fs-40\"><b>/la sangre, preciosa sangre</b></span><br><span class=\"fs-40\"><b>del unigénito Hijo de Dios./</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "T"
   },
   {
@@ -2272,6 +2425,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Todo es posible, </b></span><br><span class=\"fs-40\"><b>si puedes creer/</b></span><br><br><span class=\"fs-40\"><b>/Fe mueve la mano de Dios,</b></span><br><span class=\"fs-40\"><b>fe en su Palabra viva,</b></span><br><span class=\"fs-40\"><b>todo es posible, </b></span><br><span class=\"fs-40\"><b>si puedes creer/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "T"
   },
   {
@@ -2280,6 +2434,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Torre fuerte es tu nombre oh Dios,</b></span><br><span class=\"fs-40\"><b>mi refugio has sido tu Señor,</b></span><br><span class=\"fs-40\"><b>en tu nombre mis manos alzaré</b></span><br><span class=\"fs-40\"><b>y mi gloria serás tu Señor.</b></span><br><br><span class=\"fs-40\"><b>Mi corazón en ti Señor confiará,</b></span><br><span class=\"fs-40\"><b>mi fortaleza eres tu.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "T"
   },
   {
@@ -2290,6 +2445,7 @@
       "<span class=\"fs-40\"><b>Traemos hoy ante tu altar </b></span><br><span class=\"fs-40\"><b>nuestras coronas,</b></span><br><span class=\"fs-40\"><b>queremos darte lo mejor </b></span><br><span class=\"fs-40\"><b>de nuestras vidas,</b></span><br><span class=\"fs-40\"><b>daremos solo las primicias</b></span><br><span class=\"fs-40\"><b>pues tu mereces lo mejor.</b></span><br><br><span class=\"fs-40\"><b>Te daré lo mejor de mi vida,</b></span><br><span class=\"fs-40\"><b>te daré lo mejor cada día,</b></span><br><span class=\"fs-40\"><b>será mucho mas que una canción</b></span><br><span class=\"fs-40\"><b>mi obediencia es mi mejor adoración</b></span>",
       "<span class=\"fs-40\"><b>//Te daré lo mejor de mi// </b></span><br><br><br><span class=\"fs-40\"><b>Te daré lo mejor.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "T"
   },
   {
@@ -2324,6 +2480,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Tu amor por mi,</b></span><br><span class=\"fs-40\"><b>es más dulce que la miel,</b></span><br><span class=\"fs-40\"><b>y tu misericordia es,</b></span><br><span class=\"fs-40\"><b>nueva cada día./</b></span><br><br><span class=\"fs-40\"><b>/Es por eso que te alabo, </b></span><br><span class=\"fs-40\"><b>es por eso que te sirvo,</b></span><br><span class=\"fs-40\"><b>es por eso que te doy</b></span><br><span class=\"fs-40\"><b>todo mi amor/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "T"
   },
   {
@@ -2332,16 +2489,18 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Tu eres escudo alrededor de mi/</b></span><br><span class=\"fs-40\"><b>eres mi gloria, </b></span><br><span class=\"fs-40\"><b>el que levanta mi cabeza/</b></span><br><br><span class=\"fs-40\"><b>No temeré a diez millares de pueblos, </b></span><br><span class=\"fs-40\"><b>que hagan sitio contra mi.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "T"
   },
   {
-    "titulo": "Tu eres la luz que  brillo (vine a adorarte)",
+    "titulo": "Tu eres la luz que brillo (vine a adorarte)",
     "preview": "Tú eres la luz que brilló en las tinieblas,\u000babrió mis ojos pude ver.\u000bMi corazón adora tu hermosura\u000besperanza de vida eres tú\u000b\u000bVine a adorarte, vine a postrarme\u000bvine a decir que eres mi Dios,\u000bsolo tú eres grande, solo tú eres digno\u000beres asombroso para mí",
     "slides": [
       "<span class=\"fs-40\"><b>Tú eres la luz que brilló en las tinieblas,</b></span><br><span class=\"fs-40\"><b>abrió mis ojos pude ver.</b></span><br><span class=\"fs-40\"><b>Mi corazón adora tu hermosura</b></span><br><span class=\"fs-40\"><b>esperanza de vida eres tú</b></span><br><br><span class=\"fs-40\"><b>Vine a adorarte, vine a postrarme</b></span><br><span class=\"fs-40\"><b>vine a decir que eres mi Dios,</b></span><br><span class=\"fs-40\"><b>solo tú eres grande, solo tú eres digno</b></span><br><span class=\"fs-40\"><b>eres asombroso para mí</b></span>",
       "<span class=\"fs-40\"><b>Tú eres el Rey grandemente exaltado,</b></span><br><span class=\"fs-40\"><b>glorioso por siempre Señor,</b></span><br><span class=\"fs-40\"><b>al mundo que creaste humilde viniste,</b></span><br><span class=\"fs-40\"><b>y pobre te hiciste por amor.</b></span><br><br><span class=\"fs-40\"><b>Vine a adorarte, vine a postrarme</b></span><br><span class=\"fs-40\"><b>vine a decir que eres mi Dios,</b></span><br><span class=\"fs-40\"><b>solo tú eres grande, solo tú eres digno</b></span><br><span class=\"fs-40\"><b>eres asombroso para mí </b></span>",
       "<span class=\"fs-40\"><b>/Nunca sabré cuanto costó</b></span><br><span class=\"fs-40\"><b>ver mi maldad sobre esa cruz/</b></span><br><br><span class=\"fs-40\"><b>Vine a adorarte, vine a postrarme</b></span><br><span class=\"fs-40\"><b>vine a decir que eres mi Dios,</b></span><br><span class=\"fs-40\"><b>solo tú eres grande, solo tú eres digno</b></span><br><span class=\"fs-40\"><b>eres asombroso para mí </b></span>"
     ],
+    "tono": "RE",
     "carpeta": "T"
   },
   {
@@ -2350,6 +2509,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Tu fidelidad es grande,</b></span><br><span class=\"fs-40\"><b>tu fidelidad incomparable es.</b></span><br><span class=\"fs-40\"><b>Nadie como tú, bendito Dios,</b></span><br><span class=\"fs-40\"><b>grande es tú fidelidad./</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2358,6 +2518,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Tu hermano soy,</b></span><br><span class=\"fs-40\"><b>pues Cristo nos ha comprado.</b></span><br><span class=\"fs-40\"><b>Tu hermano soy,</b></span><br><span class=\"fs-40\"><b>su Espíritu nos ha ligado.</b></span><br><span class=\"fs-40\"><b>Que gozo tengo al tenerte a mi lado.</b></span><br><br><span class=\"fs-40\"><b>/Te doy la mano, querido hermano</b></span><br><span class=\"fs-40\"><b>y alabemos al Señor/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "T"
   },
   {
@@ -2366,6 +2527,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Tu nombre oh Dios exaltaré,</b></span><br><span class=\"fs-40\"><b>tu majestad levantaré.</b></span><br><span class=\"fs-40\"><b>Por siempre te proclamaré,</b></span><br><span class=\"fs-40\"><b>mi alabanza elevaré.</b></span><br><br><span class=\"fs-40\"><b>Porque digno, digno eres tú,</b></span><br><span class=\"fs-40\"><b>a ti sea honor y poder.</b></span><br><span class=\"fs-40\"><b>Digno, digno eres tú,</b></span><br><span class=\"fs-40\"><b>recibe adoración, Señor./</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "T"
   },
   {
@@ -2378,6 +2540,7 @@
       "<span class=\"fs-40\"><b>/Queremos darte gloria y honor,</b></span><br><span class=\"fs-40\"><b>queremos darte la adoración,</b></span><br><span class=\"fs-40\"><b>queremos exaltarte por siempre/</b></span>",
       "<span class=\"fs-40\"><b>A tus pies rindo todo lo que tengo Señor,</b></span><br><span class=\"fs-40\"><b>y mi devoción entera solo a tí te la doy.</b></span><br><br><span class=\"fs-40\"><b>/Queremos darte gloria y honor,</b></span><br><span class=\"fs-40\"><b>queremos darte la adoración,</b></span><br><span class=\"fs-40\"><b>queremos exaltarte por siempre/</b></span><br><span class=\"fs-40\"><b>//Por siempre, y siempre//</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2386,6 +2549,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Tu pueblo está clamando, </b></span><br><span class=\"fs-40\"><b>te estamos esperando,</b></span><br><span class=\"fs-40\"><b>queremos ver lo que vas a hacer.</b></span><br><span class=\"fs-40\"><b>Envíanos tu fuego,</b></span><br><span class=\"fs-40\"><b>que todos seamos llenos,</b></span><br><span class=\"fs-40\"><b>de tu espíritu y de tu amor.</b></span><br><br><br><span class=\"fs-40\"><b>/Aviva tu obra, en medio de los tiempos,</b></span><br><span class=\"fs-40\"><b>aviva tu obra, da nuevos sentimientos,</b></span><br><span class=\"fs-40\"><b>danos hoy Señor, un despertar, </b></span><br><span class=\"fs-40\"><b>danos un nuevo cantar/</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "T"
   },
   {
@@ -2395,6 +2559,7 @@
       "<span class=\"fs-40\"><b>Tus ojos revelan que yo, </b></span><br><span class=\"fs-40\"><b>nada puedo esconder</b></span><br><span class=\"fs-40\"><b>Que no soy nada sin tí, oh fiel Señor.</b></span><br><span class=\"fs-40\"><b>Todo lo sabes de mí, </b></span><br><span class=\"fs-40\"><b>cuando miras el corazón</b></span><br><span class=\"fs-40\"><b>Todo lo puedes ver muy dentro de mí.</b></span><br><br><br><span class=\"fs-40\"><b>Llevas mi vida a una sola verdad,</b></span><br><span class=\"fs-40\"><b>Que cuando me miras </b></span><br><span class=\"fs-40\"><b>nada puedo ocultar.</b></span>",
       "<span class=\"fs-40\"><b>/Sé que es tu fidelidad, </b></span><br><span class=\"fs-40\"><b>que lleva mi vida más allá </b></span><br><span class=\"fs-40\"><b>De lo que puedo imaginar.</b></span><br><span class=\"fs-40\"><b>Sé que no puedo negar,</b></span><br><span class=\"fs-40\"><b>Que tu mirada puesta en mí, </b></span><br><span class=\"fs-40\"><b>Me llena de tu paz/</b></span><br><br><br><span class=\"fs-40\"><b>/Que tu mirada puesta en mí, </b></span><br><span class=\"fs-40\"><b>Me llena de tu paz/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "T"
   },
   {
@@ -2403,6 +2568,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Tuya es, oh Señor</b></span><br><span class=\"fs-40\"><b>la magnificencia y el poder</b></span><br><span class=\"fs-40\"><b>la gloria, la victoria y el honor</b></span><br><span class=\"fs-40\"><b>porque todas las cosas </b></span><br><span class=\"fs-40\"><b>que están en los cielos</b></span><br><span class=\"fs-40\"><b>y en la tierra son tuyas.</b></span><br><br><span class=\"fs-40\"><b>Tuyo oh Señor es el reino,</b></span><br><span class=\"fs-40\"><b>y tu eres excelso sobre todos.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "T"
   },
   {
@@ -2412,6 +2578,7 @@
       "<span class=\"fs-40\"><b>Tú estas sentado, en tu trono</b></span><br><span class=\"fs-40\"><b>siempre reinando, soberano.</b></span><br><span class=\"fs-40\"><b>Ángeles cantan, hombres alaban,</b></span><br><span class=\"fs-40\"><b>Dios reunido con su pueblo.</b></span><br><br><span class=\"fs-40\"><b> Oh, oh alfa, omega, Cristo, Santo,</b></span><br><span class=\"fs-40\"><b>//oh, oh ven// </b></span><br><span class=\"fs-40\"><b>Señor Jesús.</b></span>",
       "<span class=\"fs-40\"><b>Con muchas ansias, esperamos</b></span><br><span class=\"fs-40\"><b>ese gran día de tu vuelta.</b></span><br><span class=\"fs-40\"><b>Y subiremos a estar contigo</b></span><br><span class=\"fs-40\"><b>para siempre</b></span><br><br><span class=\"fs-40\"><b>Maranata, ven señor, Cristo, Santo,</b></span><br><span class=\"fs-40\"><b>//Oh, oh ven// </b></span><br><span class=\"fs-40\"><b>Señor Jesús.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "T"
   },
   {
@@ -2420,6 +2587,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Una mirada de fe, una mirada al Señor, </b></span><br><span class=\"fs-40\"><b>es la que puede salvar al pecador./</b></span><br><br><span class=\"fs-40\"><b>/Y si tu vienes a Cristo Jesús,</b></span><br><span class=\"fs-40\"><b> él te perdonará;</b></span><br><span class=\"fs-40\"><b>porque una mirada de fe </b></span><br><span class=\"fs-40\"><b>es aquella que puede salvar/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "U"
   },
   {
@@ -2432,6 +2600,7 @@
       "<span class=\"fs-40\"><b>Y vamos a cantar</b></span><br><span class=\"fs-40\"><b>Con la música del cielo</b></span><br><span class=\"fs-40\"><b>Vamos a cantar</b></span><br><span class=\"fs-40\"><b>Alegres porque escuchas cuando</b></span><br><span class=\"fs-40\"><b>Cantamos para exaltar</b></span><br><br><br><span class=\"fs-40\"><b>Y vamos a cantar</b></span><br><span class=\"fs-40\"><b>Con la música del cielo</b></span><br><span class=\"fs-40\"><b>Vamos a cantar</b></span><br><span class=\"fs-40\"><b>Alegres porque escuchas cuando</b></span><br><span class=\"fs-40\"><b>Cantamos para exaltar tu nombre</b></span>"
     ],
     "nueva": true,
+    "tono": "MI",
     "carpeta": "V"
   },
   {
@@ -2441,6 +2610,7 @@
       "<span class=\"fs-40\"><b>Vamos escalando peldaños</b></span><br><span class=\"fs-40\"><b>vamos llevando la cruz</b></span><br><span class=\"fs-40\"><b>sigamos el camino angosto</b></span><br><span class=\"fs-40\"><b>que con Cristo es mucho mejor</b></span><br><br><br><span class=\"fs-40\"><b>/Ya viene la recompensa</b></span><br><span class=\"fs-40\"><b>ya no voy a llorar</b></span><br><span class=\"fs-40\"><b>tengo a Cristo en mi vida</b></span><br><span class=\"fs-40\"><b>y por eso puedo escalar/</b></span>",
       "<span class=\"fs-40\"><b>A veces me siento débil</b></span><br><span class=\"fs-40\"><b>ya no puedo escalar</b></span><br><span class=\"fs-40\"><b>alzo mis manos al cielo</b></span><br><span class=\"fs-40\"><b>viene Cristo y fuerzas me da</b></span><br><br><br><span class=\"fs-40\"><b>/Ya viene la recompensa</b></span><br><span class=\"fs-40\"><b>ya no voy a llorar</b></span><br><span class=\"fs-40\"><b>tengo a Cristo en mi vida</b></span><br><span class=\"fs-40\"><b>y por eso puedo escalar./</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "V"
   },
   {
@@ -2460,6 +2630,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Vengo hoy a postrarme</b></span><br><span class=\"fs-40\"><b>a tus pies mi Cristo,</b></span><br><span class=\"fs-40\"><b>solo en ti hay plenitud de amor.</b></span><br><br><span class=\"fs-40\"><b>/No hay nada, no hay nadie</b></span><br><span class=\"fs-40\"><b>comparable a ti,</b></span><br><span class=\"fs-40\"><b>me deleito adorándote Señor/</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "V"
   },
   {
@@ -2468,6 +2639,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Venimos a </b></span><span class=\"fs-40\"><b>tí </b></span><span class=\"fs-40\"><b>oh Señor,</b></span><br><span class=\"fs-40\"><b>con el alma llena de gozo,</b></span><br><span class=\"fs-40\"><b>y juntos queremos agradecerte/</b></span><br><br><span class=\"fs-40\"><b>Por darnos la vida, te agradecemos.</b></span><br><span class=\"fs-40\"><b>Por darnos la fe, te agradecemos.</b></span><br><span class=\"fs-40\"><b>Por darnos el gozo, te agradecemos.</b></span><br><span class=\"fs-40\"><b>Y por el amor que nos une…</b></span><br><br><span class=\"fs-40\"><b>Venimos </b></span><span class=\"fs-40\"><b>a ti…</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "V"
   },
   {
@@ -2476,6 +2648,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Ver tu faz mi alma anhela</b></span><br><span class=\"fs-40\"><b>ver ansío a mi Jesús</b></span><br><span class=\"fs-40\"><b>va cesando ya la espera</b></span><br><span class=\"fs-40\"><b>pronto resplandecerá su luz.</b></span><br><br><span class=\"fs-40\"><b>Y cuando al fin apunte el día, </b></span><br><span class=\"fs-40\"><b>y las sombras huirán</b></span><br><span class=\"fs-40\"><b>esta esperanza mía</b></span><br><span class=\"fs-40\"><b>tornarase en realidad.</b></span><br><br><span class=\"fs-40\"><b>/Ven</b></span><span class=\"fs-40\"><b>, sí </b></span><span class=\"fs-40\"><b>oh ven</b></span><span class=\"fs-40\"><b>, ven </b></span><span class=\"fs-40\"><b>Señor Jesús/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "V"
   },
   {
@@ -2484,6 +2657,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Vine a adorar a Dios/</b></span><br><span class=\"fs-40\"><b>vine a adorar su santo nombre,</b></span><br><span class=\"fs-40\"><b>vine a adorar a Dios.</b></span><br><br><span class=\"fs-40\"><b>Él vino a mi vida en un día muy especial, </b></span><br><span class=\"fs-40\"><b>cambió mi corazón en un nuevo corazón,</b></span><br><span class=\"fs-40\"><b>y esa es la razón por la que digo que:</b></span><br><span class=\"fs-40\"><b>//Vine a adorar a Dios//</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "V"
   },
   {
@@ -2500,6 +2674,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Yo cantaré, yo alabaré</b></span><br><span class=\"fs-40\"><b>y se que nadie me podrá apartar</b></span><br><span class=\"fs-40\"><b>del amor de Jesús</b></span><br><span class=\"fs-40\"><b>y nunca nadie me podrá apartar </b></span><span class=\"fs-40\"><b>de él.</b></span><br><br><span class=\"fs-40\"><b>Por </b></span><span class=\"fs-40\"><b>siempre yo con Cristo,</b></span><br><span class=\"fs-40\"><b>por siempre yo con Cristo,</b></span><br><span class=\"fs-40\"><b>Por siempre yo con Cristo viviré.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "Y"
   },
   {
@@ -2508,6 +2683,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>/Yo le alabo con el corazón, </b></span><br><span class=\"fs-36\"><b>yo le alabo con mi voz/</b></span><br><br><span class=\"fs-36\"><b>Y si me falta la voz,  </b></span><br><span class=\"fs-36\"><b>yo le alabo con las manos,</b></span><br><span class=\"fs-36\"><b>y si me faltan las manos, </b></span><br><span class=\"fs-36\"><b>yo le alabo con los pies,</b></span><br><br><span class=\"fs-36\"><b>Y si me faltan los pies, </b></span><br><span class=\"fs-36\"><b>yo le alabo con el alma,</b></span><br><span class=\"fs-36\"><b>y si me falta el alma, </b></span><br><span class=\"fs-36\"><b>es que ya me fui con Él.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "Y"
   },
   {
@@ -2516,6 +2692,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Yo me alegré, yo me alegré</b></span><br><span class=\"fs-40\"><b>con los que me decían</b></span><br><span class=\"fs-40\"><b>a la casa de Jehová iremos/</b></span><br><br><span class=\"fs-40\"><b>/Por amor, por amor de mis hermanos</b></span><br><span class=\"fs-40\"><b>de mis hermanos y mis compañeros/</b></span><br><br><span class=\"fs-40\"><b>/Por amor, por amor</b></span><br><span class=\"fs-40\"><b>a la casa de Jehová nuestro Dios</b></span><br><span class=\"fs-40\"><b>buscaré, buscaré tu bien/</b></span>"
     ],
+    "tono": "REm",
     "carpeta": "Y"
   },
   {
@@ -2532,6 +2709,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Yo quiero más de ti,</b></span><br><span class=\"fs-40\"><b>y habitar en tu presencia,</b></span><br><span class=\"fs-40\"><b>menguar, para que crezcas tú</b></span><br><span class=\"fs-40\"><b>y cada día ser más como tú/</b></span><br><br><span class=\"fs-40\"><b>Quebranta mi corazón, </b></span><span class=\"fs-40\"><b>quebranta </b></span><span class=\"fs-40\"><b>mi vida.</b></span><br><span class=\"fs-40\"><b>Te entrego mi voluntad a ti,</b></span><br><span class=\"fs-40\"><b>todo lo que soy, Señor,</b></span><br><span class=\"fs-40\"><b>todo cuanto tengo es tuyo.</b></span><br><span class=\"fs-40\"><b>/Yo quiero menguar </b></span><br><span class=\"fs-40\"><b>para que crezcas tú/.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "Y"
   },
   {
@@ -2540,6 +2718,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>Yo quiero más y más de Cristo,</b></span><br><span class=\"fs-36\"><b>yo quiero más de su poder,</b></span><br><span class=\"fs-36\"><b>yo quiero más de su presencia,</b></span><br><span class=\"fs-36\"><b>yo quiero más y más de él.</b></span><br><br><span class=\"fs-36\"><b>Si quieres más y más de Cristo,</b></span><br><span class=\"fs-36\"><b>si quieres más de su poder,</b></span><br><span class=\"fs-36\"><b>acude más a su presencia</b></span><br><span class=\"fs-36\"><b>y tendrás más y más de él.</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Y"
   },
   {
@@ -2548,6 +2727,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Yo quiero ser, Señor amado,</b></span><br><span class=\"fs-40\"><b>como el barro en las manos del alfarero.</b></span><br><span class=\"fs-40\"><b>Toma mi vida y hazla de nuevo.</b></span><br><span class=\"fs-40\"><b>Yo quiero ser, yo quiero ser,</b></span><br><span class=\"fs-40\"><b>un vaso nuevo/</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "Y"
   },
   {
@@ -2567,6 +2747,7 @@
       "<span class=\"fs-40\"><b>/Yo sé que fue pagado un alto precio</b></span><br><span class=\"fs-40\"><b>para que seamos uno tu y yo.</b></span><br><span class=\"fs-40\"><b>Cuando Jesús derramaba su vida,</b></span><br><span class=\"fs-40\"><b>él pensaba en ti, él pensaba en mi,</b></span><br><span class=\"fs-40\"><b>en nuestra unidad/</b></span><br><br><span class=\"fs-40\"><b>Nos veía redimidos por su sangre,</b></span><br><span class=\"fs-40\"><b>combatiendo la batalla de la fe,</b></span><br><span class=\"fs-40\"><b>codo a codo trabajando, </b></span><br><span class=\"fs-40\"><b>su iglesia edificando,</b></span><br><span class=\"fs-40\"><b>y rompiendo las cadenas por amor.</b></span>",
       "<span class=\"fs-40\"><b>/Y mediante el Espíritu Santo</b></span><br><span class=\"fs-40\"><b>proclamamos hoy aquí,</b></span><br><span class=\"fs-40\"><b>que pagaremos el precio de ser</b></span><br><span class=\"fs-40\"><b>todos un corazón en Jesús</b></span><br><span class=\"fs-40\"><b>y si las tinieblas militan</b></span><br><span class=\"fs-40\"><b>y nos quieren separar,</b></span><br><span class=\"fs-40\"><b>con nuestros ojos en Cristo</b></span><br><span class=\"fs-40\"><b>marchamos a la unidad/</b></span><br><br><span class=\"fs-40\"><b>/Marchamos a la unidad/</b></span>"
     ],
+    "tono": "MIm",
     "carpeta": "Y"
   },
   {
@@ -2575,6 +2756,7 @@
     "slides": [
       "<span class=\"fs-36\"><b>/Yo sé que mi redentor me tiene que levantar/</b></span><br><span class=\"fs-36\"><b>/Del polvo de donde estoy</b></span><br><span class=\"fs-36\"><b> ponerme en un buen lugar/</b></span><br><br><span class=\"fs-36\"><b>/Si quieres también confiar en esa promesa fiel/</b></span><br><span class=\"fs-36\"><b>/Tendrás que ser como Job y estar esperando en él/</b></span><br><br><span class=\"fs-36\"><b>/No pierdas la fe, te tienes que levantar/</b></span><br><span class=\"fs-36\"><b>/confía, pero confía, te tienes que levantar/</b></span>"
     ],
+    "tono": "MI",
     "carpeta": "Y"
   },
   {
@@ -2583,6 +2765,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>/Yo te alabaré Señor</b></span><br><span class=\"fs-40\"><b>con todo mi corazón/</b></span><br><br><span class=\"fs-40\"><b>/Con todos los santos a tí cantaré</b></span><br><span class=\"fs-40\"><b>loores/</b></span>"
     ],
+    "tono": "LA",
     "carpeta": "Y"
   },
   {
@@ -2599,6 +2782,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Yo te busco, yo te busco</b></span><br><span class=\"fs-40\"><b>con fuego en mi corazón.</b></span><br><span class=\"fs-40\"><b>Yo te busco, yo te busco</b></span><br><span class=\"fs-40\"><b>recibe mi adoración.</b></span><br><br><span class=\"fs-40\"><b>/Te anhelo, te necesito</b></span><br><span class=\"fs-40\"><b>te amo más que a mi ser/.</b></span>"
     ],
+    "tono": "DO",
     "carpeta": "Y"
   },
   {
@@ -2607,6 +2791,7 @@
     "slides": [
       "<span class=\"fs-40\"><b>Yo te sirvo porque te amo</b></span><br><span class=\"fs-40\"><b>tu me has dado vida a mí.</b></span><br><span class=\"fs-40\"><b>No era nada y me buscaste</b></span><br><span class=\"fs-40\"><b>tu me has dado vida a mí.</b></span><br><br><span class=\"fs-40\"><b>Vidas hechas pedazos</b></span><br><span class=\"fs-40\"><b>te llevaron al cruel calvario</b></span><br><span class=\"fs-40\"><b>tu amor, será mi anhelo</b></span><br><span class=\"fs-40\"><b>tu me has dado vida a mí.</b></span>"
     ],
+    "tono": "RE",
     "carpeta": "Y"
   },
   {
@@ -2616,6 +2801,7 @@
       "<span class=\"fs-40\"><b>Yo tengo, </b></span><br><span class=\"fs-40\"><b>/gozo en mi alma/ </b></span><br><span class=\"fs-40\"><b>gozo en mi alma y en mi ser</b></span><br><br><span class=\"fs-40\"><b>Corren </b></span><br><span class=\"fs-40\"><b>/ríos de agua viva/</b></span><br><span class=\"fs-40\"><b>ríos de agua viva en mi ser.</b></span><br><br><span class=\"fs-40\"><b>/Con alegría alabemos al Señor/</b></span><br><span class=\"fs-40\"><b>/dad gloria a él/</b></span><br><span class=\"fs-40\"><b>con alegría alabemos al Señor.</b></span>",
       "<span class=\"fs-40\"><b>Yo tengo </b></span><br><span class=\"fs-40\"><b>/gozo en mi alma/ </b></span><br><span class=\"fs-40\"><b>gozo en mi alma y en mi ser</b></span><br><br><span class=\"fs-40\"><b>corren </b></span><br><span class=\"fs-40\"><b>/ríos de agua viva/ </b></span><br><span class=\"fs-40\"><b>ríos de agua viva en mi ser.</b></span><br><br><span class=\"fs-40\"><b>/Ama a tu hermano y alaba a tu Señor/</b></span><br><span class=\"fs-40\"><b>/dad gloria a él/</b></span><br><span class=\"fs-40\"><b>ama a tu hermano y alaba a tu Señor.</b></span>"
     ],
+    "tono": "SOL",
     "carpeta": "Y"
   },
   {
