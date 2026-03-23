@@ -1,6 +1,6 @@
 // sw.js — Service Worker del Cancionero
 // Versión del caché — cambiá este número cada vez que subas cambios a GitHub
-const CACHE_VERSION = "cancionero-v23";
+const CACHE_VERSION = "cancionero-v24";
 
 const ARCHIVOS = [
   "./",
@@ -8,9 +8,9 @@ const ARCHIVOS = [
   "./canciones.json",
   "./setlist.json",
   "./manifest.json",
-  "./favicon-32.png",
-  "./icon-192.png",
-  "./icon-512.png",
+  "./logo-32.png",
+  "./logo-192.png",
+  "./logo-512.png",
 ];
 
 // Instalación: cachear todos los archivos
