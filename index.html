@@ -174,6 +174,15 @@
     }
     #fs-song-title { font-size: 20px; font-weight: 500; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
     #fs-song-counter { font-size: 13px; color: #555; white-space: nowrap; flex-shrink: 0; }
+
+    /* Controles de transposición */
+    .transp-ctrl { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .transp-btn { background: none; border: 0.5px solid #333; color: #777; font-size: 13px; width: 24px; height: 24px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .12s; line-height: 1; }
+    .transp-btn:hover { border-color: #666; color: #ccc; }
+    .transp-tono { font-size: 13px; font-weight: 600; color: #7eb8f7; min-width: 36px; text-align: center; }
+    /* Versión fullscreen — un poco más grande */
+    #fs-transp .transp-btn { width: 28px; height: 28px; font-size: 14px; border-color: #444; }
+    #fs-transp .transp-tono { font-size: 15px; min-width: 42px; }
     #fs-minimize, #fs-cl {
       background: none; border: none; color: #888; cursor: pointer; transition: color .12s;
       flex-shrink: 0; padding: 0 4px; line-height: 1;
@@ -219,7 +228,9 @@
       #fs-content .slide-divider { display: block; border: none; border-top: 0.5px solid #2a2a2a; margin: 1.25em 2rem; }
       #export-btn { display: none; }
       .sl-meta { display: none; }
-      #fs-btn-edges { display: none; }
+      #fs-song-title { font-size: 13px; }
+      #fs-song-counter { font-size: 11px; }
+      #sl-count { display: none; }
     }
 
     /* Franja inferior: paginador + nav canciones */
@@ -304,7 +315,14 @@
       <div id="vtitle"></div>
       <div id="vtitle-counter" style="font-size:12px;color:var(--text4);white-space:nowrap;flex-shrink:0"></div>
     </div>
-    <div id="vmeta"></div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem">
+      <div id="vmeta" style="margin-bottom:0"></div>
+      <div id="v-transp" class="transp-ctrl" style="display:none">
+        <button class="transp-btn" id="v-transp-down">&#9660;</button>
+        <span class="transp-tono" id="v-transp-tono"></span>
+        <button class="transp-btn" id="v-transp-up">&#9650;</button>
+      </div>
+    </div>
     <div id="slide-box" class="normal"><div id="slide-content"></div></div>
     <div id="nav">
       <button class="nav-btn" id="prev">&#8592;</button>
@@ -328,6 +346,11 @@
   <div id="fs-top">
     <div id="fs-song-title"></div>
     <div id="fs-song-counter"></div>
+    <div id="fs-transp" class="transp-ctrl" style="display:none">
+      <button class="transp-btn" id="fs-transp-down">&#9660;</button>
+      <span class="transp-tono" id="fs-transp-tono"></span>
+      <button class="transp-btn" id="fs-transp-up">&#9650;</button>
+    </div>
     <button id="fs-minimize" title="Minimizar">&#8722;</button>
     <button id="fs-cl">&#10005;</button>
   </div>
@@ -364,6 +387,95 @@ let mostrarAcordes = false;
 let fsMinimizado = false;
 let fsMostrarAcordes = false;
 let fsConAcordes = false;
+
+// ── Transposición ──────────────────────────────────────────────
+// Tabla cromática con notación latina
+const CROMATICA = ["DO","DO#","RE","RE#","MI","FA","FA#","SOL","SOL#","LA","LA#","SI"];
+const CROMATICA_B = ["DO","REb","RE","MIb","MI","FA","SOLb","SOL","LAb","LA","SIb","SI"];
+
+// Mapa de todos los nombres posibles → índice cromático
+const NOTA_A_IDX = {};
+CROMATICA.forEach((n,i) => { NOTA_A_IDX[n] = i; NOTA_A_IDX[n.toLowerCase()] = i; });
+CROMATICA_B.forEach((n,i) => { NOTA_A_IDX[n] = i; NOTA_A_IDX[n.toLowerCase()] = i; });
+// Aliases extra
+const ALIASES = {
+  "DOb":11,"DOB":11,"SIS":0,"SIS#":1,
+  "MIS":4,"MIS#":5,"FAb":4,"FAB":4
+};
+Object.assign(NOTA_A_IDX, ALIASES);
+
+// Estado de transposición por canción (en memoria, se resetea al cambiar de canción)
+let transposicionActual = {}; // { [titulo]: semitono_offset }
+
+function getOffset(titulo) { return transposicionActual[titulo] || 0; }
+
+function transponerNota(nota, semis) {
+  // Detectar si es menor (m al final)
+  const esM = /m$/.test(nota) && !/maj/.test(nota);
+  const base = esM ? nota.slice(0, -1) : nota;
+  const idx = NOTA_A_IDX[base];
+  if (idx === undefined) return nota; // no reconocida, devolver igual
+  const nuevo = (idx + semis + 12) % 12;
+  return CROMATICA[nuevo] + (esM ? "m" : "");
+}
+
+function transponerTexto(texto, semis) {
+  if (!semis) return texto;
+  // Reemplazar acordes entre corchetes
+  return texto.replace(/\[([^\]]+)\]/g, (_, acorde) => {
+    return "[" + transponerNota(acorde, semis) + "]";
+  });
+}
+
+function transponerTono(tono, semis) {
+  if (!tono || !semis) return tono;
+  return transponerNota(tono, semis);
+}
+
+function cambiarTransposicion(titulo, delta) {
+  const actual = getOffset(titulo);
+  transposicionActual[titulo] = actual + delta;
+  // Refrescar ambas vistas
+  renderViewerSlide();
+  if (document.getElementById("fso").style.display === "flex") renderFS();
+}
+
+function actualizarCtrlTransp(titulo, tono) {
+  const offset = getOffset(titulo);
+  const tonoTransp = transponerTono(tono, offset);
+  const mostrar = !!tono; // solo si la canción tiene tono definido
+
+  // Visor
+  const vCtrl = document.getElementById("v-transp");
+  if (vCtrl) {
+    vCtrl.style.display = mostrar ? "flex" : "none";
+    if (mostrar) document.getElementById("v-transp-tono").textContent = tonoTransp || "";
+  }
+  // Fullscreen
+  const fsCtrl = document.getElementById("fs-transp");
+  if (fsCtrl) {
+    fsCtrl.style.display = mostrar ? "flex" : "none";
+    if (mostrar) document.getElementById("fs-transp-tono").textContent = tonoTransp || "";
+  }
+}
+
+// Listeners de transposición
+document.getElementById("v-transp-down").addEventListener("click", () => {
+  const s = viewerSlides[viewerIdx]; if (!s || s.type === "pause") return;
+  cambiarTransposicion(s.songTitle, -1);
+});
+document.getElementById("v-transp-up").addEventListener("click", () => {
+  const s = viewerSlides[viewerIdx]; if (!s || s.type === "pause") return;
+  cambiarTransposicion(s.songTitle, 1);
+});
+document.getElementById("fs-transp-down").addEventListener("click", () => {
+  const s = viewerSlides[viewerIdx]; if (!s || s.type === "pause") return;
+  cambiarTransposicion(s.songTitle, -1);
+});
+document.getElementById("fs-transp-up").addEventListener("click", () => {
+  const s = viewerSlides[viewerIdx]; if (!s || s.type === "pause") return;
+  cambiarTransposicion(s.songTitle, 1);
+});
 
 function actualizarBotonRetomar() {
   document.getElementById("fs-retomar").style.display = fsMinimizado ? "" : "none";
@@ -847,14 +959,15 @@ function showViewer(label) {
 function renderViewerSlide() {
   const s = viewerSlides[viewerIdx]; if (!s) return;
   const isPause = s.type === "pause";
+  const song = isPause ? null : SONGS.find(c => c.titulo === s.songTitle);
+  const offset = song ? getOffset(song.titulo) : 0;
+
   document.getElementById("slide-box").className = isPause ? "pause" : "normal";
 
   if (!isPause && mostrarAcordes && isMobile()) {
-    // Mostrar con acordes — usar campo acordes si existe, sino slides normal
-    const song = SONGS.find(c => c.titulo === s.songTitle);
     const slideAcordes = song?.acordes?.[s.slideNum - 1];
     document.getElementById("slide-content").innerHTML = slideAcordes
-      ? renderizarAcordes(slideAcordes)
+      ? renderizarAcordes(transponerTexto(slideAcordes, offset))
       : s.html.replace(/(<br>){3}/gi, "<br><br>");
   } else {
     document.getElementById("slide-content").innerHTML = isPause ? "" : s.html.replace(/(<br>){3}/gi, "<br><br>");
@@ -863,18 +976,17 @@ function renderViewerSlide() {
   document.getElementById("vtitle").textContent = isPause ? "— pausa —" : s.songTitle;
   document.getElementById("vtitle").style.color = isPause ? "#333" : "";
   document.getElementById("vtitle-counter").textContent = (!isPause && viewerQueue && viewerQueue.length > 1) ? `Canción ${s.songIdx+1} de ${viewerQueue.length}` : "";
-  const song = isPause ? null : SONGS.find(c => c.titulo === s.songTitle);
-  const tonoStr = song?.tono ? ` · Tono: ${song.tono}` : "";
+  const tonoTransp = song?.tono ? transponerTono(song.tono, offset) : null;
+  const tonoStr = tonoTransp ? ` · Tono: ${tonoTransp}` : "";
   document.getElementById("vmeta").textContent = isPause ? "Pantalla negra" : s.slideNum + " / " + s.totalSlides + tonoStr;
   document.getElementById("prev").disabled = viewerIdx === 0;
   document.getElementById("next").disabled = viewerIdx === viewerSlides.length - 1;
 
+  // Controles de transposición
+  actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
+
   // Botón Con acordes — siempre visible excepto en pausa
-  if (!isPause) {
-    document.getElementById("fs-btn-acordes").style.display = "";
-  } else {
-    document.getElementById("fs-btn-acordes").style.display = "none";
-  }
+  document.getElementById("fs-btn-acordes").style.display = isPause ? "none" : "";
 
   const ps = document.getElementById("prev-song"), ns = document.getElementById("next-song");
   if (viewerQueue && viewerQueue.length > 1) {
@@ -917,13 +1029,16 @@ function renderFSNewSong() {
   renderFS();
 }
 
-function buildFullSongHtml(songIdx, conAcordes) {
+function buildFullSongHtml(songIdx, conAcordes, offset) {
+  offset = offset || 0;
   const slides = viewerSlides.filter(s => s.type === "slide" && s.songIdx === songIdx);
   if (conAcordes) {
     const song = SONGS.find(s => s.titulo === slides[0]?.songTitle);
     return slides.map((s, i) => {
       const slideAcordes = song?.acordes?.[s.slideNum - 1];
-      return slideAcordes ? renderizarAcordes(slideAcordes) : htmlParaFS(s.html);
+      return slideAcordes
+        ? renderizarAcordes(transponerTexto(slideAcordes, offset))
+        : htmlParaFS(s.html);
     }).join('<hr class="slide-divider">');
   }
   return slides.map(s => htmlParaFS(s.html)).join('<hr class="slide-divider">');
@@ -933,6 +1048,8 @@ function renderFS() {
   const s = viewerSlides[viewerIdx]; if (!s) return;
   const isPause = s.type === "pause";
   const mobile = isMobile();
+  const song = isPause ? null : SONGS.find(c => c.titulo === s.songTitle);
+  const offset = song ? getOffset(song.titulo) : 0;
 
   document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle;
   document.getElementById("fs-song-counter").textContent = (!isPause && viewerQueue && viewerQueue.length > 1) ? `Canción ${s.songIdx + 1} de ${viewerQueue.length}` : "";
@@ -940,17 +1057,19 @@ function renderFS() {
   if (isPause) {
     document.getElementById("fs-content").innerHTML = "";
   } else if (mobile) {
-    document.getElementById("fs-content").innerHTML = buildFullSongHtml(s.songIdx, fsMostrarAcordes);
+    document.getElementById("fs-content").innerHTML = buildFullSongHtml(s.songIdx, fsMostrarAcordes, offset);
   } else if (fsMostrarAcordes) {
-    const song = SONGS.find(c => c.titulo === s.songTitle);
     const slideAcordes = song?.acordes?.[s.slideNum - 1];
     document.getElementById("fs-content").innerHTML = slideAcordes
-      ? renderizarAcordes(slideAcordes)
+      ? renderizarAcordes(transponerTexto(slideAcordes, offset))
       : htmlParaFS(s.html);
   } else {
     document.getElementById("fs-content").innerHTML = htmlParaFS(s.html);
   }
   aplicarFontSize();
+
+  // Controles de transposición en fullscreen
+  actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
 
   // Paginador de puntos — solo desktop
   const dotsEl = document.getElementById("fs-dots");
