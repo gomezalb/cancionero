@@ -676,7 +676,7 @@ function renderSetlist() {
   document.getElementById("sl-count").textContent = setlist.length + " canción" + (setlist.length !== 1 ? "es" : "");
   document.getElementById("play-btn").disabled = setlist.length === 0;
   const items = document.getElementById("sl-items"); items.innerHTML = "";
-  if (!setlist.length) { items.innerHTML = '<div id="sl-empty">Sin canciones. Agregá desde el Cancionero.</div>'; return; }
+  if (!setlist.length) { items.innerHTML = '<div id="sl-empty">Sin canciones. Agregá desde el Cancionero o cargá una lista.</div>'; return; }
   setlist.forEach((titulo, i) => {
     const song = SONGS.find(s => s.titulo === titulo);
     const div = document.createElement("div"); div.className = "sl-item"; div.draggable = true;
