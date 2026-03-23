@@ -653,7 +653,7 @@ function renderList() {
     }
     card.innerHTML = `
       <div class="sc-info">
-        <div class="st">${hlTexto(c.titulo, query)}</div>
+        <div class="st">${hlTexto(c.titulo, query)}${c.acordes ? ' <span style="color:#7eb8f7;font-size:12px">♫</span>' : ""}</div>
         <div class="sm">${c.tono ? `<span style="color:var(--green-tx);font-weight:500">${c.tono}</span> &middot; ` : ""}Carpeta ${c.carpeta} &middot; ${c.slides.length} diapositiva${c.slides.length !== 1 ? "s" : ""}</div>
         ${previewHtml}
       </div>
