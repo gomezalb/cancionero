@@ -1,6 +1,6 @@
 // sw.js — Service Worker del Cancionero
 // Versión del caché — cambiá este número cada vez que subas cambios a GitHub
-const CACHE_VERSION = "cancionero-v29";
+const CACHE_VERSION = "cancionero-v30";
 
 const ARCHIVOS = [
   "./",
@@ -44,8 +44,8 @@ self.addEventListener("fetch", e => {
   // Nunca interceptar sw.js — el navegador debe poder compararlo siempre con la red
   if (url.pathname.endsWith("sw.js")) return;
 
-  // index.html: network-first para detectar cambios rápido
-  if (url.pathname.endsWith("/") || url.pathname.endsWith("index.html")) {
+  // index.html y manifest.json: network-first para detectar cambios rápido
+  if (url.pathname.endsWith("/") || url.pathname.endsWith("index.html") || url.pathname.endsWith("manifest.json")) {
     e.respondWith(
       fetch(e.request)
         .then(response => {
