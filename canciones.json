@@ -2172,20 +2172,20 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "SEÑOR QUIEN ENTRARA",
-    "preview": "/ SEÑOR, ¿QUIÉN ENTRARÁ\u000bEN TU SANTUARIO PARA ADORAR? /\u000b\u000b/ EL DE MANOS LIMPIAS\u000bY UN CORAZON PURO\u000bY SIN VANIDADES, \u000bQUE SEPA AMAR. /",
+    "titulo": "Señor quién entrará en tu santuario para adorar",
+    "preview": "/Señor, ¿quién entrará\u000ben tu santuario para adorar?/\u000b\u000b/El de manos limpias\u000by un corazón puro\u000by sin vanidades, \u000bque sepa amar/",
     "slides": [
-      "/ SEÑOR, ¿QUIÉN ENTRARÁ<br>EN TU SANTUARIO PARA ADORAR? /<br><br>/ EL DE MANOS LIMPIAS<br>Y UN CORAZON PURO<br>Y SIN VANIDADES, <br>QUE SEPA AMAR. /",
-      "/ SEÑOR, YO QUIERO ENTRAR<br>EN TU SANTUARIO PARA ADORAR. /<br><br>/ DAME MANOS LIMPIAS<br>Y UN CORAZÓN PURO<br>Y SIN VANIDADES,<br> ENSEÑAME A AMAR. /",
-      "/ SEÑOR, YA PUEDO ENTRAR<br>EN TU SANTUARIO PARA ADORAR/<br><br>/ TU SANGRE ME LIMPIA, <br>ME OTORGA EL PERDÓN,<br>TU ESPÍRITU SANTO, <br>ME LLENA DE AMOR. /"
+      "<b>/Señor, ¿quién entrará<br>en tu santuario para adorar?/<br><br>/El de manos limpias<br>y un corazón puro<br>y sin vanidades, <br>que sepa amar/</b>",
+      "<b>/Señor, yo quiero entrar<br>en tu santuario para adorar/<br><br>/Dame manos limpias<br>y un corazón puro<br>y sin vanidades,<br> enséñame a amar/</b>",
+      "<b>/Señor, ya puedo entrar<br>en tu santuario para adorar/<br><br>/Tu sangre me limpia, <br>me otorga el perdón,<br>tu Espíritu Santo, <br>me llena de amor/</b>"
     ],
     "carpeta": "S"
   },
   {
-    "titulo": "SEÑOR TE ADORAMOS PROCLAMAMOS",
-    "preview": "SEÑOR, TE ADORAMOS,\u000bPROCLAMAMOS QUE ERES REY.\u000bPARADO AQUÍ, ENTRE NOSOTROS,\u000bCON ALABANZAS TE ADORAMOS.\u000b\u000b//MIENTRAS TE ADORAMOS CONSTRUYES TU TRONO//\u000b\u000b/VEN, SEÑOR JESÚS, Y TOMA TU LUGAR/",
+    "titulo": "Señor te adoramos, proclamamos que eres rey",
+    "preview": "Señor, te adoramos,\u000bproclamamos que eres rey.\u000bParado aquí, entre nosotros,\u000bcon alabanzas te adoramos.\u000b\u000b//Mientras te adoramos construyes tu trono//\u000b\u000b/ven, Señor Jesús, y toma tu lugar/",
     "slides": [
-      "SEÑOR, TE ADORAMOS,<br>PROCLAMAMOS QUE ERES REY.<br>PARADO AQUÍ, ENTRE NOSOTROS,<br>CON ALABANZAS TE ADORAMOS.<br><br>//MIENTRAS TE ADORAMOS CONSTRUYES TU TRONO//<br><br>/VEN, SEÑOR JESÚS, Y TOMA TU LUGAR/"
+      "<b>Señor, te adoramos,<br>proclamamos que eres rey.<br>Parado aquí, entre nosotros,<br>con alabanzas te adoramos.<br><br>//Mientras te adoramos construyes tu trono//<br><br>/ven, Señor Jesús, y toma tu lugar/</b>"
     ],
     "carpeta": "S"
   },
@@ -2296,7 +2296,7 @@
     "carpeta": "S"
   },
   {
-    "titulo": "SOY YO, SOY YO",
+    "titulo": "Soy yo, soy yo, soy yo Señor, el que necesita orar",
     "preview": "/Soy yo, soy yo, soy yo Señor\u000bel que necesita orar/\u000b\u000b/No es mi padre, ni mi madre, \u000bsino yo Señor\u000bel que necesita orar/",
     "slides": [
       "<b>/Soy yo, soy yo, soy yo Señor<br>el que necesita orar/<br><br>/No es mi padre, ni mi madre, <br>sino yo Señor<br>el que necesita orar/</b>",
@@ -2692,10 +2692,11 @@
     "carpeta": "V"
   },
   {
-    "titulo": "VOY EN EL CAMINO",
+    "titulo": "Voy en el camino del hogar de gloria",
     "preview": "/Voy en el camino del hogar de gloria/\u000b/Voy en el camino/\nVoy en el camino, del hogar de gloria\n\n/Veré a Jesús, llegando allá/\u000b/Veré a Jesús/\nVeré a Jesús, llegando allá\n\n/No habrá tristeza del otro lado/\n/No habrá tristeza/\nNo habrá tristeza, del otro lado",
     "slides": [
-      "<b>/Voy en el camino del hogar de gloria/<br>/Voy en el camino/<br>Voy en el camino, del hogar de gloria<br><br><br>/Veré a Jesús, llegando allá/<br>/Veré a Jesús/<br>Veré a Jesús, llegando allá<br><br><br>/No habrá tristeza del otro lado/<br>/No habrá tristeza/<br>No habrá tristeza, del otro lado</b>"
+      "<b>/Voy en el camino del hogar de gloria/<br>/Voy en el camino/<br>Voy en el camino, del hogar de gloria<br><br><br>/Veré a Jesús, llegando allá/<br>/Veré a Jesús/<br>Veré a Jesús, llegando allá<br><br><br>/No habrá tristeza del otro lado/<br>/No habrá tristeza/<br>No habrá tristeza, del otro lado</b>",
+      "<b>Voy en el camino del hogar de gloria<br>Veré a Jesús, llegando allá<br>/No habrá tristeza/<br>No habrá tristeza, del otro lado</b>"
     ],
     "carpeta": "V"
   },
