@@ -278,6 +278,15 @@
     .fs-snb:disabled { opacity: .2; cursor: default; }
     #fs-slide-ctr { font-size: 18px; color: #555; min-width: 64px; text-align: center; }
     #fs-hint { font-size: 12px; color: #222; }
+
+    /* Controles de tamaño de fuente en fullscreen */
+    #fs-size-ctrl { display: flex; align-items: center; gap: 4px; }
+    #fs-size-ctrl button { background: none; border: 0.5px solid #333; color: #666; border-radius: 5px; cursor: pointer; transition: all .12s; line-height: 1; padding: 3px 7px; }
+    #fs-size-ctrl button:hover { border-color: #666; color: #ccc; }
+    #fs-size-down { font-size: 11px; }
+    #fs-size-reset { font-size: 13px; font-weight: 600; }
+    #fs-size-up { font-size: 15px; font-weight: 600; }
+    #fs-size-reset.auto { color: #444; border-color: #2a2a2a; }
   </style>
 </head>
 <body>
@@ -413,6 +422,11 @@
       <button class="fs-snb" id="fs-ps">&#9664; canción ant.</button>
       <span id="fs-slide-ctr"></span>
       <button class="fs-snb" id="fs-ns">canción sig. &#9654;</button>
+    </div>
+    <div id="fs-size-ctrl">
+      <button id="fs-size-down" title="Reducir texto">A&#8722;</button>
+      <button id="fs-size-reset" title="Tamaño automático">A</button>
+      <button id="fs-size-up" title="Agrandar texto">A&#43;</button>
     </div>
     <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
   </div>
@@ -638,7 +652,19 @@ function htmlParaFS(html) {
 }
 
 // ── Tamaño de fuente en proyección ────────────────────────────
-function getFsSize() {
+const LS_FONT_SIZE = "cancionero_fs_size";
+const FS_STEP = 3;
+const FS_MIN = 14;
+const FS_MAX = 80;
+let fsSizeOffset = 0; // delta respecto al tamaño automático
+
+function cargarFontOffset() {
+  try { fsSizeOffset = parseInt(localStorage.getItem(LS_FONT_SIZE)) || 0; } catch(e) {}
+}
+function guardarFontOffset() {
+  try { localStorage.setItem(LS_FONT_SIZE, fsSizeOffset); } catch(e) {}
+}
+function getFsBaseSize() {
   const w = window.innerWidth;
   if (w < 480) return 24;
   if (w < 768) return 30;
@@ -646,8 +672,24 @@ function getFsSize() {
   return 40;
 }
 function aplicarFontSize() {
-  document.getElementById("fs-content").style.fontSize = getFsSize() + "px";
+  const size = Math.min(FS_MAX, Math.max(FS_MIN, getFsBaseSize() + fsSizeOffset));
+  document.getElementById("fs-content").style.fontSize = size + "px";
+  // Botón reset: apagado si estamos en automático
+  document.getElementById("fs-size-reset").classList.toggle("auto", fsSizeOffset === 0);
 }
+
+document.getElementById("fs-size-down").addEventListener("click", () => {
+  fsSizeOffset = Math.max(FS_MIN - getFsBaseSize(), fsSizeOffset - FS_STEP);
+  guardarFontOffset(); aplicarFontSize();
+});
+document.getElementById("fs-size-up").addEventListener("click", () => {
+  fsSizeOffset = Math.min(FS_MAX - getFsBaseSize(), fsSizeOffset + FS_STEP);
+  guardarFontOffset(); aplicarFontSize();
+});
+document.getElementById("fs-size-reset").addEventListener("click", () => {
+  fsSizeOffset = 0; guardarFontOffset(); aplicarFontSize();
+});
+cargarFontOffset();
 
 // ── Slides ─────────────────────────────────────────────────────
 function buildSlides(queue, pauseEdges) {
