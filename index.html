@@ -230,6 +230,22 @@
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
     #fs-content .stanza-sep { display: block; height: 1.5em; }
 
+    /* Modo acordes: alineado a la izquierda, fuente monoespaciada */
+    #fso.modo-acordes #fs-center {
+      justify-content: flex-start;
+      padding: 0;
+      overflow-y: auto;
+    }
+    #fso.modo-acordes #fs-content {
+      text-align: left;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 0 1.25rem;
+      max-width: 100%;
+    }
+    #fso.modo-acordes .acorde-txt {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
     /* Botones laterales de diapositiva */
     .fs-side-btn {
       position: fixed; top: 50%; transform: translateY(-50%);
@@ -1415,6 +1431,7 @@ document.getElementById("fs-btn").addEventListener("click", () => {
   else if (curSong) viewerSlides = buildSingle(curSong, false);
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
+  o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
   liberarOrientacion();
   renderFSNewSong();
@@ -1427,6 +1444,7 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   else if (curSong) viewerSlides = buildSingle(curSong, false);
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
+  o.classList.add("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
   liberarOrientacion();
   renderFSNewSong();
@@ -1442,12 +1460,15 @@ document.getElementById("fs-btn-edges").addEventListener("click", () => {
   } else { return; }
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
+  o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
   liberarOrientacion();
   renderFSNewSong();
 });
 document.getElementById("fs-cl").addEventListener("click", () => {
-  document.getElementById("fso").style.display = "none";
+  const o = document.getElementById("fso");
+  o.style.display = "none";
+  o.classList.remove("modo-acordes");
   if (document.fullscreenElement) document.exitFullscreen();
   bloquearPortrait();
   fsMinimizado = false; actualizarBotonRetomar();
