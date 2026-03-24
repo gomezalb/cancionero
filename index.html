@@ -1349,6 +1349,28 @@ function liberarOrientacion() {
   try { screen.orientation.unlock(); } catch(e) {}
 }
 
+// ── Wake Lock (prevención de bloqueo de pantalla) ──────────────
+let wakeLock = null;
+
+async function activarWakeLock() {
+  if (!("wakeLock" in navigator)) return;
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+  } catch(e) {}
+}
+
+function liberarWakeLock() {
+  if (wakeLock) { wakeLock.release(); wakeLock = null; }
+}
+
+// Si la pantalla se bloquea automáticamente (cambio de pestaña, etc.)
+// y el fullscreen sigue abierto, retomar el wake lock al volver
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" &&
+      document.getElementById("fso").style.display === "flex") {
+    activarWakeLock();
+  }
+});
 
 function renderFSNewSong() {
   // En móvil volver al tope al cambiar de canción
@@ -1433,7 +1455,7 @@ document.getElementById("fs-btn").addEventListener("click", () => {
   const o = document.getElementById("fso"); o.style.display = "flex";
   o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
-  liberarOrientacion();
+  liberarOrientacion(); activarWakeLock();
   renderFSNewSong();
 });
 document.getElementById("fs-btn-acordes").addEventListener("click", () => {
@@ -1446,7 +1468,7 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   const o = document.getElementById("fso"); o.style.display = "flex";
   o.classList.add("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
-  liberarOrientacion();
+  liberarOrientacion(); activarWakeLock();
   renderFSNewSong();
 });
 document.getElementById("fs-btn-edges").addEventListener("click", () => {
@@ -1462,7 +1484,7 @@ document.getElementById("fs-btn-edges").addEventListener("click", () => {
   const o = document.getElementById("fso"); o.style.display = "flex";
   o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
-  liberarOrientacion();
+  liberarOrientacion(); activarWakeLock();
   renderFSNewSong();
 });
 document.getElementById("fs-cl").addEventListener("click", () => {
@@ -1470,7 +1492,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
   o.style.display = "none";
   o.classList.remove("modo-acordes");
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait();
+  bloquearPortrait(); liberarWakeLock();
   fsMinimizado = false; actualizarBotonRetomar();
   // Si el índice actual apunta a una pausa, buscar el próximo slide con contenido
   if (viewerSlides[viewerIdx]?.type === "pause") {
@@ -1484,17 +1506,15 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 });
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait();
-  document.getElementById("fso").style.display = "none";
+  bloquearPortrait(); liberarWakeLock();
   document.getElementById("viewer").style.display = "flex";
   document.getElementById("tabs").style.display = "none";
   fsMinimizado = true; actualizarBotonRetomar();
 });
 document.getElementById("fs-retomar").addEventListener("click", () => {
-  // Retomar en la diapositiva exacta donde se minimizó
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
-  liberarOrientacion();
+  liberarOrientacion(); activarWakeLock();
   renderFS();
 });
 document.getElementById("fs-prev-slide").addEventListener("click", () => goSlide(-1));
