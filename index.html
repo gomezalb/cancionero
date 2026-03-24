@@ -1507,9 +1507,14 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
   bloquearPortrait(); liberarWakeLock();
-  document.getElementById("viewer").style.display = "flex";
+  const o = document.getElementById("fso");
+  o.style.display = "none";
+  document.getElementById("cancionero-panel").style.display = "none";
+  document.getElementById("setlist-panel").style.display = "none";
   document.getElementById("tabs").style.display = "none";
+  document.getElementById("viewer").style.display = "flex";
   fsMinimizado = true; actualizarBotonRetomar();
+  renderViewerSlide();
 });
 document.getElementById("fs-retomar").addEventListener("click", () => {
   const o = document.getElementById("fso"); o.style.display = "flex";
