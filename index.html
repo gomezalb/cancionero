@@ -155,6 +155,30 @@
     #fs-btn-edges:hover { background: var(--border); color: var(--text); }
     #fs-btn-acordes { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
     #song-nav { display: flex; gap: 6px; margin-top: .75rem; }
+
+    /* Editor de slide */
+    #edit-btn { background: none; border: none; color: var(--text5); font-size: 15px; cursor: pointer; padding: 4px 6px; border-radius: 6px; transition: color .12s, background .12s; line-height: 1; }
+    #edit-btn:hover { color: var(--text2); background: var(--bg4); }
+    #edit-btn.editado { color: #f0a030; }
+    #edit-modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 8000; align-items: center; justify-content: center; padding: 1rem; }
+    #edit-modal-bg.open { display: flex; }
+    #edit-modal { background: var(--bg2); border: 0.5px solid var(--border2); border-radius: var(--radius-lg); padding: 1.25rem; width: 100%; max-width: 520px; display: flex; flex-direction: column; gap: .875rem; }
+    #edit-modal-title { font-size: 14px; font-weight: 500; color: var(--text); }
+    #edit-modal-sub { font-size: 11px; color: var(--text4); margin-top: -6px; }
+    #edit-textarea { width: 100%; min-height: 180px; background: var(--bg3); border: 0.5px solid var(--border2); color: var(--text); border-radius: var(--radius); padding: .75rem; font-size: 14px; line-height: 1.6; resize: vertical; outline: none; font-family: inherit; }
+    #edit-textarea:focus { border-color: #555; }
+    #edit-modal-actions { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+    #edit-guardar { background: var(--green-bg); border: 0.5px solid var(--green-bd); color: var(--green-tx); font-size: 12px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+    #edit-guardar:hover { background: #254a25; }
+    #edit-cancelar { background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+    #edit-cancelar:hover { background: var(--border); }
+    #edit-descartar { background: none; border: none; color: var(--red-tx); font-size: 12px; padding: 6px 10px; cursor: pointer; margin-left: auto; opacity: .7; }
+    #edit-descartar:hover { opacity: 1; }
+    #edit-descartar.hidden { display: none; }
+    #edit-modal-footer { border-top: 0.5px solid var(--border); padding-top: .75rem; }
+    #edit-modal-footer.hidden { display: none; }
+    #edit-limpiar-todas { background: none; border: none; color: var(--text4); font-size: 11px; cursor: pointer; padding: 0; }
+    #edit-limpiar-todas:hover { color: var(--red-tx); }
     .snav-btn { flex: 1; background: var(--bg2); border: 0.5px solid var(--border); color: var(--text4); font-size: 12px; padding: 7px 8px; border-radius: 8px; cursor: pointer; text-align: center; transition: background .12s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .snav-btn:hover:not(:disabled) { background: var(--bg4); color: var(--text2); }
     .snav-btn:disabled { opacity: .2; cursor: default; }
@@ -328,6 +352,7 @@
       <button class="nav-btn" id="prev">&#8592;</button>
       <span id="slide-counter"></span>
       <button class="nav-btn" id="next">&#8594;</button>
+      <button id="edit-btn" title="Editar esta diapositiva">&#9998;</button>
       <button id="fs-retomar" style="display:none">&#9654; Retomar</button>
       <button id="fs-btn">&#9654; Proyectar</button>
       <button id="fs-btn-acordes">&#9654; Con acordes</button>
@@ -336,6 +361,23 @@
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
       <button class="snav-btn" id="next-song" disabled></button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal editor de slide -->
+<div id="edit-modal-bg">
+  <div id="edit-modal">
+    <div id="edit-modal-title"></div>
+    <div id="edit-modal-sub"></div>
+    <textarea id="edit-textarea" spellcheck="true"></textarea>
+    <div id="edit-modal-actions">
+      <button id="edit-guardar">Guardar</button>
+      <button id="edit-cancelar">Cancelar</button>
+      <button id="edit-descartar" class="hidden">&#10006; Descartar corrección</button>
+    </div>
+    <div id="edit-modal-footer" class="hidden">
+      <button id="edit-limpiar-todas">&#10227; Limpiar todas las correcciones</button>
     </div>
   </div>
 </div>
@@ -611,15 +653,17 @@ function aplicarFontSize() {
 function buildSlides(queue, pauseEdges) {
   const slides = [];
   const mobile = isMobile();
+  const ediciones = cargarEdiciones();
   for (let si = 0; si < queue.length; si++) {
     const song = SONGS.find(s => s.titulo === queue[si]); if (!song) continue;
     if (!mobile) {
       if (si > 0) slides.push({ type:"pause", songIdx:si });
       if (pauseEdges && si === 0) slides.push({ type:"pause", songIdx:si });
     }
-    song.slides.forEach((html, i) =>
-      slides.push({ type:"slide", html, songIdx:si, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
-    );
+    song.slides.forEach((html, i) => {
+      const htmlEfectivo = ediciones[song.titulo]?.[i] ?? html;
+      slides.push({ type:"slide", html:htmlEfectivo, songIdx:si, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides });
+    });
     if (!mobile && pauseEdges && si === queue.length - 1) slides.push({ type:"pause", songIdx:si });
   }
   return slides;
@@ -627,10 +671,12 @@ function buildSlides(queue, pauseEdges) {
 function buildSingle(song, pauseEdges) {
   const slides = [];
   const mobile = isMobile();
+  const ediciones = cargarEdiciones();
   if (!mobile && pauseEdges) slides.push({ type:"pause", songIdx:0 });
-  song.slides.forEach((html, i) =>
-    slides.push({ type:"slide", html, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides })
-  );
+  song.slides.forEach((html, i) => {
+    const htmlEfectivo = ediciones[song.titulo]?.[i] ?? html;
+    slides.push({ type:"slide", html:htmlEfectivo, songIdx:0, slideNum:i+1, totalSlides:song.slides.length, songTitle:song.titulo, songSlides:song.slides });
+  });
   if (!mobile && pauseEdges) slides.push({ type:"pause", songIdx:0 });
   return slides;
 }
@@ -982,11 +1028,37 @@ function renderViewerSlide() {
   document.getElementById("prev").disabled = viewerIdx === 0;
   document.getElementById("next").disabled = viewerIdx === viewerSlides.length - 1;
 
+  // Botón editar — oculto solo si no hay ningún slide con contenido cerca
+  const editBtn = document.getElementById("edit-btn");
+  const slideRef = isPause
+    ? (viewerSlides.slice(0, viewerIdx).reverse().find(sl => sl.type === "slide")
+    || viewerSlides.slice(viewerIdx + 1).find(sl => sl.type === "slide"))
+    : s;
+  if (!slideRef) {
+    editBtn.style.display = "none";
+  } else {
+    editBtn.style.display = "";
+    const ediciones = cargarEdiciones();
+    const tieneEdicion = ediciones[slideRef.songTitle]?.[slideRef.slideNum - 1] !== undefined;
+    editBtn.classList.toggle("editado", tieneEdicion);
+    editBtn.title = tieneEdicion ? "Editar (corregida)" : "Editar esta diapositiva";
+  }
+
   // Controles de transposición
   actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
 
-  // Botón Con acordes — siempre visible excepto en pausa
-  document.getElementById("fs-btn-acordes").style.display = isPause ? "none" : "";
+  // Botón Con acordes:
+  //   - Canción sola: visible solo si tiene acordes en el JSON
+  //   - Lista con más de una canción: siempre visible
+  // En slides de pausa, buscar la canción más cercana para evaluar acordes
+  const esLista = viewerQueue && viewerQueue.length > 1;
+  const songParaAcordes = song || (() => {
+    const ref = viewerSlides.slice(0, viewerIdx).reverse().find(sl => sl.type === "slide")
+             || viewerSlides.slice(viewerIdx + 1).find(sl => sl.type === "slide");
+    return ref ? SONGS.find(c => c.titulo === ref.songTitle) : null;
+  })();
+  const tieneAcordes = !!songParaAcordes?.acordes;
+  document.getElementById("fs-btn-acordes").style.display = (esLista || tieneAcordes) ? "" : "none";
 
   const ps = document.getElementById("prev-song"), ns = document.getElementById("next-song");
   if (viewerQueue && viewerQueue.length > 1) {
@@ -1010,6 +1082,151 @@ function goSong(d) {
   if (t < 0) t = 0; viewerIdx = t; renderViewerSlide();
   if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
 }
+// ── Editor de slides ───────────────────────────────────────────
+const LS_EDICIONES = "cancionero_ediciones"; // { "Titulo": ["html slide 0", null, "html slide 2", ...] }
+
+function cargarEdiciones() {
+  try { return JSON.parse(localStorage.getItem(LS_EDICIONES)) || {}; } catch(e) { return {}; }
+}
+function guardarEdiciones(obj) {
+  try { localStorage.setItem(LS_EDICIONES, JSON.stringify(obj)); } catch(e) {}
+}
+
+// Convierte HTML de slide a texto plano editable (quita <b>, convierte <br> en salto de línea)
+function htmlATexto(html) {
+  return html
+    .replace(/<b>/gi, "").replace(/<\/b>/gi, "")
+    .replace(/<br>/gi, "\n")
+    .trim();
+}
+
+// Convierte texto plano de vuelta a HTML (saltos de línea → <br>, envuelve en <b> si el original los tenía)
+function textoAHtml(texto, htmlOriginal) {
+  const teniaBold = /<b>/i.test(htmlOriginal);
+  const lineas = texto.split("\n");
+  const inner = lineas.join("<br>");
+  return teniaBold ? `<b>${inner}</b>` : inner;
+}
+
+// Devuelve el html efectivo de un slide (edición si existe, original si no)
+function getSlideHtml(songTitulo, slideIdx, htmlOriginal) {
+  const ediciones = cargarEdiciones();
+  return ediciones[songTitulo]?.[slideIdx] ?? htmlOriginal;
+}
+
+// Aplica ediciones guardadas a viewerSlides
+function aplicarEdicionesAViewerSlides() {
+  viewerSlides.forEach(s => {
+    if (s.type !== "slide") return;
+    const ediciones = cargarEdiciones();
+    const editado = ediciones[s.songTitle]?.[s.slideNum - 1];
+    if (editado !== undefined && editado !== null) s.html = editado;
+  });
+}
+
+let editSlideIdx = null; // índice en viewerSlides del slide que se está editando
+
+function abrirEditor() {
+  const s = viewerSlides[viewerIdx];
+  if (!s) return;
+
+  // Si estamos en pausa, buscar el slide más cercano
+  const slideRef = s.type === "pause"
+    ? (viewerSlides.slice(0, viewerIdx).reverse().find(sl => sl.type === "slide")
+    || viewerSlides.slice(viewerIdx + 1).find(sl => sl.type === "slide"))
+    : s;
+  if (!slideRef) return;
+
+  editSlideIdx = viewerSlides.indexOf(slideRef);
+
+  const ediciones = cargarEdiciones();
+  const htmlActual = ediciones[s.songTitle]?.[s.slideNum - 1] ?? s.html;
+  const tieneEdicion = ediciones[s.songTitle]?.[s.slideNum - 1] !== undefined;
+
+  document.getElementById("edit-modal-title").textContent = s.songTitle;
+  document.getElementById("edit-modal-sub").textContent =
+    `Diapositiva ${s.slideNum} de ${s.totalSlides}`;
+  document.getElementById("edit-textarea").value = htmlATexto(htmlActual);
+  document.getElementById("edit-descartar").classList.toggle("hidden", !tieneEdicion);
+  const totalEdiciones = Object.keys(cargarEdiciones()).length;
+  document.getElementById("edit-modal-footer").classList.toggle("hidden", totalEdiciones === 0);
+  document.getElementById("edit-modal-bg").classList.add("open");
+  document.getElementById("edit-textarea").focus();
+}
+
+function cerrarEditor() {
+  document.getElementById("edit-modal-bg").classList.remove("open");
+  editSlideIdx = null;
+}
+
+function guardarEdicion() {
+  const s = viewerSlides[editSlideIdx];
+  if (!s || s.type === "pause") return;
+
+  const textoNuevo = document.getElementById("edit-textarea").value;
+  const htmlOriginal = s.songSlides[s.slideNum - 1]; // html original de SONGS
+  const htmlNuevo = textoAHtml(textoNuevo, htmlOriginal);
+
+  // Persistir en localStorage
+  const ediciones = cargarEdiciones();
+  if (!ediciones[s.songTitle]) ediciones[s.songTitle] = {};
+  ediciones[s.songTitle][s.slideNum - 1] = htmlNuevo;
+  guardarEdiciones(ediciones);
+
+  // Actualizar el slide en memoria
+  s.html = htmlNuevo;
+
+  cerrarEditor();
+  renderViewerSlide();
+}
+
+function descartarEdicion() {
+  const s = viewerSlides[editSlideIdx];
+  if (!s) return;
+
+  const ediciones = cargarEdiciones();
+  if (ediciones[s.songTitle]) {
+    delete ediciones[s.songTitle][s.slideNum - 1];
+    if (Object.keys(ediciones[s.songTitle]).length === 0) delete ediciones[s.songTitle];
+    guardarEdiciones(ediciones);
+  }
+
+  // Restaurar html original en el slide en memoria
+  s.html = s.songSlides[s.slideNum - 1];
+
+  cerrarEditor();
+  renderViewerSlide();
+}
+
+document.getElementById("edit-btn").addEventListener("click", abrirEditor);
+document.getElementById("edit-guardar").addEventListener("click", guardarEdicion);
+document.getElementById("edit-cancelar").addEventListener("click", cerrarEditor);
+document.getElementById("edit-descartar").addEventListener("click", descartarEdicion);
+document.getElementById("edit-modal-bg").addEventListener("click", e => {
+  if (e.target === document.getElementById("edit-modal-bg")) cerrarEditor();
+});
+document.getElementById("edit-textarea").addEventListener("keydown", e => {
+  if (e.key === "Enter" && e.ctrlKey) { e.preventDefault(); guardarEdicion(); }
+  if (e.key === "Escape") { e.preventDefault(); cerrarEditor(); }
+});
+
+document.getElementById("edit-limpiar-todas").addEventListener("click", () => {
+  const total = Object.values(cargarEdiciones()).reduce((acc, v) => acc + Object.keys(v).length, 0);
+  if (!confirm(`¿Limpiar todas las correcciones? (${total} slide${total !== 1 ? "s" : ""} editado${total !== 1 ? "s" : ""})`)) return;
+  try { localStorage.removeItem(LS_EDICIONES); } catch(e) {}
+  // Reconstruir viewerSlides desde los originales
+  const curSlide = viewerSlides[viewerIdx];
+  if (viewerQueue && viewerQueue.length > 0) {
+    const pauseEdges = viewerSlides.some(s => s.type === "pause");
+    viewerSlides = buildSlides(viewerQueue, pauseEdges);
+  } else if (curSlide) {
+    const song = SONGS.find(c => c.titulo === curSlide.songTitle);
+    if (song) viewerSlides = buildSingle(song, false);
+  }
+  cerrarEditor();
+  renderViewerSlide();
+});
+
 document.getElementById("back").addEventListener("click", () => {
   document.getElementById("viewer").style.display = "none"; document.getElementById("tabs").style.display = "flex";
   if (activeTab === "cancionero") document.getElementById("cancionero-panel").style.display = "block";
@@ -1022,7 +1239,15 @@ document.getElementById("next-song").addEventListener("click", () => goSong(1));
 
 function isMobile() { return window.innerWidth < 1024; }
 
-// ── Fullscreen ─────────────────────────────────────────────────
+// ── Orientación ────────────────────────────────────────────────
+function bloquearPortrait() {
+  try { screen.orientation.lock("portrait").catch(() => {}); } catch(e) {}
+}
+function liberarOrientacion() {
+  try { screen.orientation.unlock(); } catch(e) {}
+}
+
+
 function renderFSNewSong() {
   // En móvil volver al tope al cambiar de canción
   if (isMobile()) document.getElementById("fs-center").scrollTop = 0;
@@ -1105,6 +1330,7 @@ document.getElementById("fs-btn").addEventListener("click", () => {
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
+  liberarOrientacion();
   renderFSNewSong();
 });
 document.getElementById("fs-btn-acordes").addEventListener("click", () => {
@@ -1116,6 +1342,7 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
+  liberarOrientacion();
   renderFSNewSong();
 });
 document.getElementById("fs-btn-edges").addEventListener("click", () => {
@@ -1130,11 +1357,13 @@ document.getElementById("fs-btn-edges").addEventListener("click", () => {
   viewerIdx = 0;
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
+  liberarOrientacion();
   renderFSNewSong();
 });
 document.getElementById("fs-cl").addEventListener("click", () => {
   document.getElementById("fso").style.display = "none";
   if (document.fullscreenElement) document.exitFullscreen();
+  bloquearPortrait();
   fsMinimizado = false; actualizarBotonRetomar();
   // Si el índice actual apunta a una pausa, buscar el próximo slide con contenido
   if (viewerSlides[viewerIdx]?.type === "pause") {
@@ -1148,6 +1377,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 });
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
+  bloquearPortrait();
   document.getElementById("fso").style.display = "none";
   document.getElementById("viewer").style.display = "flex";
   document.getElementById("tabs").style.display = "none";
@@ -1157,6 +1387,7 @@ document.getElementById("fs-retomar").addEventListener("click", () => {
   // Retomar en la diapositiva exacta donde se minimizó
   const o = document.getElementById("fso"); o.style.display = "flex";
   if (o.requestFullscreen) o.requestFullscreen();
+  liberarOrientacion();
   renderFS();
 });
 document.getElementById("fs-prev-slide").addEventListener("click", () => goSlide(-1));
