@@ -287,6 +287,8 @@
     #fs-size-reset { font-size: 13px; font-weight: 600; }
     #fs-size-up { font-size: 15px; font-weight: 600; }
     #fs-size-reset.auto { color: #444; border-color: #2a2a2a; }
+    #fs-lh-down, #fs-lh-reset, #fs-lh-up { font-size: 13px; }
+    #fs-lh-reset.auto { color: #444; border-color: #2a2a2a; }
   </style>
 </head>
 <body>
@@ -427,6 +429,10 @@
       <button id="fs-size-down" title="Reducir texto">A&#8722;</button>
       <button id="fs-size-reset" title="Tamaño automático">A</button>
       <button id="fs-size-up" title="Agrandar texto">A&#43;</button>
+      <span style="display:inline-block;width:1px;height:16px;background:#2a2a2a;margin:0 4px"></span>
+      <button id="fs-lh-down" title="Reducir interlineado">&#8801;&#8722;</button>
+      <button id="fs-lh-reset" title="Interlineado automático">&#8801;</button>
+      <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
     </div>
     <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
   </div>
@@ -674,6 +680,7 @@ function getFsBaseSize() {
 function aplicarFontSize() {
   const size = Math.min(FS_MAX, Math.max(FS_MIN, getFsBaseSize() + fsSizeOffset));
   document.getElementById("fs-content").style.fontSize = size + "px";
+  document.getElementById("fs-content").style.lineHeight = fsLineHeight;
   // Botón reset: apagado si estamos en automático
   document.getElementById("fs-size-reset").classList.toggle("auto", fsSizeOffset === 0);
 }
@@ -690,6 +697,41 @@ document.getElementById("fs-size-reset").addEventListener("click", () => {
   fsSizeOffset = 0; guardarFontOffset(); aplicarFontSize();
 });
 cargarFontOffset();
+
+// ── Interlineado en proyección ─────────────────────────────────
+const LS_LINE_HEIGHT = "cancionero_fs_lh";
+const LH_BASE = 1.4;
+const LH_STEP = 0.15;
+const LH_MIN  = 1.0;
+const LH_MAX  = 2.5;
+let fsLineHeight = LH_BASE;
+
+function cargarLineHeight() {
+  try {
+    const v = parseFloat(localStorage.getItem(LS_LINE_HEIGHT));
+    if (!isNaN(v)) fsLineHeight = v;
+  } catch(e) {}
+}
+function guardarLineHeight() {
+  try { localStorage.setItem(LS_LINE_HEIGHT, fsLineHeight); } catch(e) {}
+}
+function aplicarLineHeight() {
+  document.getElementById("fs-content").style.lineHeight = fsLineHeight;
+  document.getElementById("fs-lh-reset").classList.toggle("auto", fsLineHeight === LH_BASE);
+}
+
+document.getElementById("fs-lh-down").addEventListener("click", () => {
+  fsLineHeight = Math.round(Math.max(LH_MIN, fsLineHeight - LH_STEP) * 100) / 100;
+  guardarLineHeight(); aplicarLineHeight();
+});
+document.getElementById("fs-lh-up").addEventListener("click", () => {
+  fsLineHeight = Math.round(Math.min(LH_MAX, fsLineHeight + LH_STEP) * 100) / 100;
+  guardarLineHeight(); aplicarLineHeight();
+});
+document.getElementById("fs-lh-reset").addEventListener("click", () => {
+  fsLineHeight = LH_BASE; guardarLineHeight(); aplicarLineHeight();
+});
+cargarLineHeight();
 
 // ── Slides ─────────────────────────────────────────────────────
 function buildSlides(queue, pauseEdges) {
