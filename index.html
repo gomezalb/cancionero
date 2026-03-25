@@ -230,16 +230,17 @@
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
     #fs-content .stanza-sep { display: block; height: 1.5em; }
 
-    /* Modo acordes: alineado a la izquierda, fuente monoespaciada */
+    /* Modo acordes: alineado a la izquierda, fuente monoespaciada, scroll en desktop y móvil */
     #fso.modo-acordes #fs-center {
       justify-content: flex-start;
+      align-items: flex-start;
       padding: 0;
       overflow-y: auto;
     }
     #fso.modo-acordes #fs-content {
       text-align: left;
       font-family: 'Courier New', Courier, monospace;
-      padding: 0 1.25rem;
+      padding: 1rem 1.25rem;
       max-width: 100%;
     }
     #fso.modo-acordes .acorde-txt {
@@ -322,11 +323,12 @@
       <input id="search" type="text" placeholder="Buscar canción o letra..." autocomplete="off"/>
     </div>
     <div id="filters">
-      <button class="filter-btn active" data-filter="todas">Todas</button>
-      <button class="filter-btn" data-filter="himnos">Himnos</button>
+      <button class="filter-btn active" data-filter="alabanza">Alabanza / Adoración</button>
       <button class="filter-btn" data-filter="nuevas">Nuevas</button>
+      <button class="filter-btn" data-filter="himnos">Himnos</button>
       <button class="filter-btn" data-filter="escuela">Esc. bíblica</button>
       <button class="filter-btn" data-filter="navidad">Navidad</button>
+      <button class="filter-btn" data-filter="todas">Todas</button>
     </div>
     <div id="count"></div>
     <div id="loading">Cargando canciones...</div>
@@ -462,7 +464,7 @@
 const LS_KEY = "cancionero_setlist";
 let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
-let activeFilter = "todas";
+let activeFilter = "alabanza";
 let mostrarAcordes = false;
 let fsMinimizado = false;
 let fsMostrarAcordes = false;
@@ -900,6 +902,7 @@ function renderList() {
   const q = norm(query);
   const filtered = SONGS.filter(c => {
     // Filtro de categoría
+    if (activeFilter === "alabanza" && ["Himnos","Escuela bíblica","Navidad"].includes(c.carpeta)) return false;
     if (activeFilter === "himnos" && c.carpeta !== "Himnos") return false;
     if (activeFilter === "nuevas" && !c.nueva) return false;
     if (activeFilter === "escuela" && c.carpeta !== "Escuela bíblica") return false;
@@ -1381,8 +1384,8 @@ document.addEventListener("visibilitychange", () => {
 });
 
 function renderFSNewSong() {
-  // En móvil volver al tope al cambiar de canción
-  if (isMobile()) {
+  // En móvil y en modo acordes desktop: volver al tope al cambiar de canción
+  if (isMobile() || fsMostrarAcordes) {
     document.getElementById("fs-center").scrollTop = 0;
   }
   renderFS();
@@ -1415,13 +1418,9 @@ function renderFS() {
 
   if (isPause) {
     document.getElementById("fs-content").innerHTML = "";
-  } else if (mobile) {
+  } else if (mobile || fsMostrarAcordes) {
+    // Modo acordes (desktop y móvil): canción completa con scroll
     document.getElementById("fs-content").innerHTML = buildFullSongHtml(s.songIdx, fsMostrarAcordes, offset);
-  } else if (fsMostrarAcordes) {
-    const slideAcordes = song?.acordes?.[s.slideNum - 1];
-    document.getElementById("fs-content").innerHTML = slideAcordes
-      ? renderizarAcordes(transponerTexto(slideAcordes, offset))
-      : htmlParaFS(s.html);
   } else {
     document.getElementById("fs-content").innerHTML = htmlParaFS(s.html);
   }

@@ -226,12 +226,12 @@
       "<b>Al único que es digno de recibir<br>gloria y honra, fuerza y poder.<br>Al Dios y Padre eternal, <br>invisible pero real<br>a él hoy ministramos loor.</b>",
       "<b>/Te coronamos, Señor y Rey Jesús/<br>Adoramos tu nombre,<br>nos rendimos a tus pies.<br>//Consagramos todo nuestro ser a ti//</b>"
     ],
+    "tono": "DO",
+    "carpeta": "A",
     "acordes": [
       "<b>Al [DO]único que es [DO/SI]digno de [LAm]recibir [LAm/SOL]<br>[FA]gloria y [DO]honra, [LA#]fuerza y [SOL]poder.<br>Al [DO]Dios y Padre [DO7]eternal, <br>[FA]invisible pero [FAm]real<br>a [DO]él hoy [SOL]ministramos [DO]loor.</b>",
       "<b>/Te [LAm]corona[MIm]mos, [FA]Señor y [SOL]Rey [DO]Jesús/<br>[FA]Adoramos tu [SOL]nombre,<br>nos [MI]rendimos a tus [LAm]pies [RE]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti [DO/SI] [LAm]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti [DO/SI] [LAm]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti</b>"
-    ],
-    "tono": "DO",
-    "carpeta": "A"
+    ]
   },
   {
     "titulo": "Alabanzas al Rey",
@@ -1947,7 +1947,7 @@
     "carpeta": "Q"
   },
   {
-    "titulo": "Quebrantado fuiste oh Jesús (gloria en lo alto)",
+    "titulo": "Quebrantado fuiste oh Jesús (Gloria en lo alto)",
     "preview": "Quebrantado fuiste, oh Jesús \u000bpor mi rebelión\u000bResucitaste y hoy puedo vivir \u000by de nuevo nacer\u000b\u000bCuánto amaste al mundo, Dios\u000bCuánto te quiero agradecer",
     "slides": [
       "<b>Quebrantado fuiste, oh Jesús <br>por mi rebelión<br>Resucitaste y hoy puedo vivir <br>y de nuevo nacer<br><br>Cuánto amaste al mundo, Dios<br>Cuánto te quiero agradecer</b>",
@@ -1988,7 +1988,7 @@
     "carpeta": "Escuela bíblica"
   },
   {
-    "titulo": "Quien rompe el poder del pecado (gracia sublime)",
+    "titulo": "Quien rompe el poder del pecado (Gracia sublime es)",
     "preview": "Quién rompe el poder de el pecado\u000bSu amor es fuerte y poderoso\u000bEl rey de gloria, el rey de majestad\u000b\u000bConmueve el mundo con su estruendo\u000bY nos asombra con maravillas\u000bEl rey de gloria, el rey de majestad",
     "slides": [
       "<b>Quién rompe el poder de el pecado<br>Su amor es fuerte y poderoso<br>El rey de gloria, el rey de majestad<br><br>Conmueve el mundo con su estruendo<br>Y nos asombra con maravillas<br>El rey de gloria, el rey de majestad</b>",
