@@ -226,7 +226,11 @@
       "<b>Al único que es digno de recibir<br>gloria y honra, fuerza y poder.<br>Al Dios y Padre eternal, <br>invisible pero real<br>a él hoy ministramos loor.</b>",
       "<b>/Te coronamos, Señor y Rey Jesús/<br>Adoramos tu nombre,<br>nos rendimos a tus pies.<br>//Consagramos todo nuestro ser a ti//</b>"
     ],
-    "tono": "RE",
+    "acordes": [
+      "<b>Al [DO]único que es [DO/SI]digno de [LAm]recibir [LAm/SOL]<br>[FA]gloria y [DO]honra, [LA#]fuerza y [SOL]poder.<br>Al [DO]Dios y Padre [DO7]eternal, <br>[FA]invisible pero [FAm]real<br>a [DO]él hoy [SOL]ministramos [DO]loor.</b>",
+      "<b>/Te [LAm]corona[MIm]mos, [FA]Señor y [SOL]Rey [DO]Jesús/<br>[FA]Adoramos tu [SOL]nombre,<br>nos [MI]rendimos a tus [LAm]pies [RE]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti [DO/SI] [LAm]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti [DO/SI] [LAm]<br>[REm]Consagramos todo [SOL]nuestro ser a [DO]ti</b>"
+    ],
+    "tono": "DO",
     "carpeta": "A"
   },
   {

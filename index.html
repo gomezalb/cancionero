@@ -1381,10 +1381,9 @@ document.addEventListener("visibilitychange", () => {
 });
 
 function renderFSNewSong() {
-  // En móvil volver al tope al cambiar de canción y detener scroll
+  // En móvil volver al tope al cambiar de canción
   if (isMobile()) {
     document.getElementById("fs-center").scrollTop = 0;
-    detenerScroll();
   }
   renderFS();
 }
@@ -1503,7 +1502,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
   o.style.display = "none";
   o.classList.remove("modo-acordes");
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait(); liberarWakeLock(); detenerScroll();
+  bloquearPortrait(); liberarWakeLock();
   fsMinimizado = false; actualizarBotonRetomar();
   // Si el índice actual apunta a una pausa, buscar el próximo slide con contenido
   if (viewerSlides[viewerIdx]?.type === "pause") {
@@ -1517,7 +1516,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 });
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait(); liberarWakeLock(); detenerScroll();
+  bloquearPortrait(); liberarWakeLock();
   const o = document.getElementById("fso");
   o.style.display = "none";
   document.getElementById("cancionero-panel").style.display = "none";
