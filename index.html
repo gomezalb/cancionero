@@ -490,13 +490,21 @@ let transposicionActual = {}; // { [titulo]: semitono_offset }
 function getOffset(titulo) { return transposicionActual[titulo] || 0; }
 
 function transponerNota(nota, semis) {
-  // Detectar si es menor (m al final)
-  const esM = /m$/.test(nota) && !/maj/.test(nota);
-  const base = esM ? nota.slice(0, -1) : nota;
-  const idx = NOTA_A_IDX[base];
-  if (idx === undefined) return nota; // no reconocida, devolver igual
+  // Acordes con bajo: LA/DO# → transponer fundamental y bajo por separado
+  if (nota.includes("/")) {
+    const [fundamental, bajo] = nota.split("/");
+    return transponerNota(fundamental, semis) + "/" + transponerNota(bajo, semis);
+  }
+  // Extraer nota base y sufijo (7, m7, maj7, sus4, add9, dim, aug, etc.)
+  // Orden: primero SOL (3 letras) para no confundir con SO, luego el resto
+  const match = nota.match(/^(SOL[#b]?|DO[#b]?|RE[#b]?|MI[#b]?|FA[#b]?|LA[#b]?|SI[#b]?)(.*)$/i);
+  if (!match) return nota;
+  const base = match[1].toUpperCase();
+  const sufijo = match[2];
+  const idx = NOTA_A_IDX[base] ?? NOTA_A_IDX[base.toUpperCase()];
+  if (idx === undefined) return nota;
   const nuevo = (idx + semis + 12) % 12;
-  return CROMATICA[nuevo] + (esM ? "m" : "");
+  return CROMATICA[nuevo] + sufijo;
 }
 
 function transponerTexto(texto, semis) {
@@ -1373,8 +1381,11 @@ document.addEventListener("visibilitychange", () => {
 });
 
 function renderFSNewSong() {
-  // En móvil volver al tope al cambiar de canción
-  if (isMobile()) document.getElementById("fs-center").scrollTop = 0;
+  // En móvil volver al tope al cambiar de canción y detener scroll
+  if (isMobile()) {
+    document.getElementById("fs-center").scrollTop = 0;
+    detenerScroll();
+  }
   renderFS();
 }
 
@@ -1492,7 +1503,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
   o.style.display = "none";
   o.classList.remove("modo-acordes");
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait(); liberarWakeLock();
+  bloquearPortrait(); liberarWakeLock(); detenerScroll();
   fsMinimizado = false; actualizarBotonRetomar();
   // Si el índice actual apunta a una pausa, buscar el próximo slide con contenido
   if (viewerSlides[viewerIdx]?.type === "pause") {
@@ -1506,7 +1517,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 });
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
-  bloquearPortrait(); liberarWakeLock();
+  bloquearPortrait(); liberarWakeLock(); detenerScroll();
   const o = document.getElementById("fso");
   o.style.display = "none";
   document.getElementById("cancionero-panel").style.display = "none";

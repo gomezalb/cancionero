@@ -257,7 +257,11 @@
       "<b>/Y será<br>llena la tierra de su gloria<br>y se cubrirá<br>como las aguas cubren al mar/ <br><br>No, no hay otro nombre<br>dado a los hombres, <br>Jesucristo es el Señor.<br><br><br>Y será..</b>"
     ],
     "tono": "MIm",
-    "carpeta": "A"
+    "carpeta": "A",
+    "acordes": [
+      "<b>[MIm]Alza tus ojos y [DO]mira<br>[SOL]la cosecha está [SI]lista,<br>el [DO]tiempo ha lle[RE]gado,<br>la [DO]mies está [SI]madura.<br><br>[MIm]Esfuérzate y se va[DO]liente,<br>le[SOL]vántate y pre[SI]dica<br>a [DO]todas las na[RE]ciones<br>que [DO]Cristo es la [SI]vida.</b>",
+      "<b>/Y [DO]será[RE]<br>llena la [MIm]tierra de [RE]su [MIm]gloria<br>y se cubri[DO]rá[RE]<br>como las [SI]aguas cubren al [MIm]mar/ <br><br>[SI]No, no hay otro [MIm]nombre<br>[SI]dado a los [MIm]hombres, <br>[DO]Jesu[MIm]cristo [DO]es el Se[SI]ñor.<br><br><br>Y [DO]será..</b>"
+    ]
   },
   {
     "titulo": "Amor, amor, amor",
@@ -288,7 +292,13 @@
     ],
     "nueva": true,
     "tono": "LA",
-    "carpeta": "A"
+    "carpeta": "A",
+    "acordes": [
+      "<b>Aquí [RE]estás, te vemos mo[LA]ver<br>Te ado[MI]raré, Te ado[FA#m]raré<br>Aquí [RE]estás, obrando en [LA]mí<br>Te ado[MI]raré, Te ado[FA#m]raré<br><br><br>/[RE]Milagroso, abres camino<br>[LA]Cumples promesas, luz en tinieblas[MI]<br>Mi Dios, así eres [FA#m]tú/</b>",
+      "<b>Aquí [RE]estás, sanando mi cora[LA]zón<br>Te adora[MI]ré, te adora[FA#m]ré<br>Aquí [RE]estás, tocando mi cora[LA]zón<br>Te adora[MI]ré, Te adora[FA#m]ré<br><br><br>/[RE]Milagroso, abres camino<br>[LA]Cumples promesas, luz en tinieblas[MI]<br>Mi Dios, así eres [FA#m]tú/</b>",
+      "<b>Aquí [RE]estás, tocando mi cora[LA]zón<br>Te adora[MI]ré, Te adora[FA#m]ré<br>Aquí [RE]estás, sanando mi cora[LA]zón<br>Te adora[MI]ré, Te adora[FA#m]ré <br><br><br>[RE]Milagroso, abres camino<br>[LA]Cumples promesas, luz en tinieblas[MI]<br>Mi Dios, así eres [FA#m]tú</b>",
+      "<b>///Así eres [RE]tú, así eres [LA]tú, así eres [MI]tú, así eres [FA#m]tú///<br><br><br>/[RE]Aunque no pueda ver estás obrando<br>[LA]Aunque no pueda ver estás obrando<br>[MI]Siempre estás, siempre estás obrando<br>[FA#m]Siempre estás, siempre estás obrando/</b>"
+    ]
   },
   {
     "titulo": "Aquí tu rostro puedo ver",
@@ -1319,6 +1329,7 @@
       "<b>/Hay victoria, <br>hay victoria<br>hay victoria en el Nombre de Jesús/<br><br>No podrá el enemigo<br>dañas a nuestras almas,<br>/porque hay victoria, <br>porque hay victoria<br>porque hay victoria en el nombre de Jesús/</b>",
       "<b>Si me preguntan porque estoy contento,<br>si me preguntan porque canto así,<br>/Es porque Cristo me ha lavado con su sangre<br>y en una nube blanca volverá por mí/</b>"
     ],
+    "tono": "REm",
     "carpeta": "H"
   },
   {
@@ -1327,7 +1338,11 @@
     "slides": [
       "<b>/He decidido no salir de la roca, <br>No seré movido/<br>me he propuesto en mi corazón,<br>ser santo como él.<br>He decidido no salir de la roca, Jesús…<br><br>/Jesús tu eres la roca,<br>Jesús mi santo refugio<br>Jesús el poder<br>para vencer y destruir, <br>fortalezas del mal/</b>"
     ],
-    "carpeta": "H"
+    "tono": "DO",
+    "carpeta": "H",
+    "acordes": [
+      "<b>/He [DO]decidido no salir de la [REm]roca, <br>No [SOL]seré [DO]movido/<br>me he [FA]propuesto en mi [SOL]corazón,<br>ser [MIm]santo como [LAm]él.<br>He [REm]decidido no salir de la [SOL]roca, [DO]Jesús…<br><br>/[REm]Jesús [SOL]tu eres la [DO]roca,<br>[REm]Jesús [SOL]mi santo [DO]refugio [DO7]<br>[FA]Jesús el [SOL]poder<br>para [MIm]vencer y [LAm]destruir, <br>[REm]fortalezas [SOL]del [DO]mal/</b>"
+    ]
   },
   {
     "titulo": "Hemos venido a este lugar",
@@ -1395,7 +1410,12 @@
     ],
     "nueva": true,
     "tono": "LA",
-    "carpeta": "J"
+    "carpeta": "J",
+    "acordes": [
+      "<b>[FA#m]Nuestros [RE]cora[LA]zones<br>[FA#m]Insa[RE]ciables [LA]son<br>[FA#m]Hasta [RE]que [LA]conocen<br>A su [MI]salva[FA#m]dor [RE] [LA] [MI]<br><br><br>[RE]Tal y como somos nos [FA#m]amó [MI]<br>[RE]Hoy nos acercamos sin [FA#m]temor[MI]<br><br><br>[LA]Él es el [MI]agua que al [FA#m]beber<br>Nunca [RE]más tendremos [LA]sed<br>Jesu[MI]cristo [FA#m]basta, Jesu[RE]cristo [LA]basta<br>Mi [MI]castigo [FA#m]recibió<br>Y su [RE]herencia me entre[LA]gó<br>Jesu[MI]cristo [FA#m]basta, Jesu[RE]cristo [FA#m]basta [MI] [RE]</b>",
+      "<b>[FA#m]Fuimos [RE]alcan[LA]zados<br>[FA#m]Por su [RE]gran amor[LA]<br>[FA#m]Con bra[RE]zos abier[LA]tos<br>Nos [MI]recibe [FA#m]hoy [RE] [LA] [MI]<br><br><br>[RE]Tal y como somos nos [FA#m]amó [MI]<br>[RE]Hoy nos acercamos sin [FA#m]temor[MI]<br><br><br>[LA]Él es el [MI]agua que al [FA#m]beber<br>Nunca [RE]más tendremos [LA]sed<br>[MI]Jesucristo [FA#m]basta, Jesu[RE]cristo [LA]basta<br>Mi [MI]castigo [FA#m]recibió<br>Y su [RE]herencia me [FA#m]entregó<br>/[RE]Jesucristo [FA#m]basta, [RE]Jesucristo [FA#m]basta/ [MI] [RE]</b>",
+      "<b>/[RE]Tal y como somos nos [FA#m]amó [MI]<br>[RE]Hoy nos acercamos sin [FA#m]temor[MI]/<br><br><br>[LA]Él es el [MI]agua que al [FA#m]beber<br>Nunca [RE]más tendremos [FA#m]sed<br>[RE]Jesucristo [FA#m]basta, [RE]Jesucristo [LA]basta<br>Mi [MI]castigo [FA#m]recibió<br>Y su [RE]herencia me [FA#m]entregó<br>[RE]Jesucristo [FA#m]basta, [RE]Jesucristo [FA#m]basta[MI][RE]<br><br><br>[FA#m]Ahora hay [RE]un [LA]futuro<br>[FA#m]Y [RE]esperanza [LA]fiel[FA#m]<br>En su [RE]amor [LA]confiamos<br>Hay [MI]descanso en [LA]Él</b>"
+    ]
   },
   {
     "titulo": "Jesus mi buen pastor",
@@ -1474,7 +1494,13 @@
     ],
     "nueva": true,
     "tono": "LA",
-    "carpeta": "L"
+    "carpeta": "L",
+    "acordes": [
+      "<b>Te amo [LA]Dios<br>Tu [RE]amor nunca me [LA]falla<br>Mi [FA#m]existir<br>En tus [RE]manos [MI]está<br>Desde el momento en que [FA#m]despierto[RE]<br>Hasta el [LA]anochecer[FA#m]<br>Yo [SIm]cantaré de la [MI]bondad de [LA]Dios</b>",
+      "<b>[RE]En mi vida has sido [LA]bueno<br>[RE]En mi vida has sido [LA]tan, tan [MI]fiel<br>[RE]Con mi ser con cada [LA]aliento [FA#m]<br>Yo [SIm]cantaré de [MI]la bondad de [LA]Dios</b>",
+      "<b>Yo amo tu [LA]voz<br>Me has [RE]guiado por el [LA]fuego<br>Tú cerca [FA#m]estás<br>En [RE]la [MI]oscuridad<br><br><br>Te conozco como [FA#m]Padre[RE]<br>Y como [LA]amigo [FA#m]fiel<br>Mi vida [SI]está<br>En la [MI]bondad de [LA]Dios</b>",
+      "<b>[RE]En mi vida has sido [LA]bueno<br>[RE]En mi vida has sido [LA]tan, tan [MI]fiel<br>[RE]Con mi ser con cada [LA]aliento [FA#m]<br>Yo [SIm]cantaré de [MI]la bondad de [LA]Dios<br><br><br>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]<br>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[FA#m]<br>Todo [LA]lo que soy te lo [RE]entrego hoy<br>A [MI]ti me [FA#m]rendiré<br>[LA]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]</b>"
+    ]
   },
   {
     "titulo": "La luz del sol está entrando (hay algo nuevo en la biblia cada mañana)",
@@ -1928,7 +1954,14 @@
     ],
     "nueva": true,
     "tono": "MI",
-    "carpeta": "Q"
+    "carpeta": "Q",
+    "acordes": [
+      "<b>[MI]Quebrantado fuiste, oh [SOL#m]Jesús <br>por mi [LA]rebelión<br>[MI]Resucitaste y hoy puedo [SOL#m]vivir <br>y de nuevo [LA]nacer<br><br>[FA#m]Cuánto [LA]amaste al mundo, [MI]Dios<br>[FA#m]Cuánto te [LA]quiero [MI]agradecer[SI]</b>",
+      "<b>[DO#m]Gloria, gloria en lo [LA]alto<br>Gloria en lo [MI]alto, gloria al [SI]Rey<br>[DO#]Gloria, gloria a tí, mi [LA]Cristo<br>Tu nombre por [MI]siempre [SI]exaltaré</b>",
+      "<b>[MI]Venciste el mundo [SOL#m]pecador<br>Con tu gran [LA]amor<br>Ahora el [MI]Padre te ha [SOL#m]exaltado<br>Al más alto [LA]lugar<br><br>[FA#m]Cuánto [LA]amaste al mundo [MI]Dios<br>[FA#m]Cuánto te [LA]quiero [MI]enaltecer[SI]</b>",
+      "<b>/[DO#m]Gloria, gloria en lo [LA]alto<br>Gloria en lo [MI]alto, gloria al [SI]Rey<br>[DO#m]Gloria, gloria a tí mi [LA]Cristo<br>Tu nombre por [MI]siempre [SI]exaltaré/</b>",
+      "<b>/[DO#m]Digno, solo tú eres [LA]digno<br>Solo tú eres [MI]digno<br>Solo tú eres [SI]Dios/<br><br>/[DO#m]Gloria, gloria en lo [LA]alto<br>Gloria en lo [MI]alto, gloria al [SI]rey<br>[DO#m]Gloria, gloria a tí, mi [LA]Cristo<br>Tu nombre por [MI]siempre [SI]exaltaré/</b>"
+    ]
   },
   {
     "titulo": "Quero cantar una linda canción",
@@ -1963,7 +1996,15 @@
     ],
     "nueva": true,
     "tono": "MI",
-    "carpeta": "Q"
+    "carpeta": "Q",
+    "acordes": [
+      "<b>[MI]Quién rompe el poder de el pecado<br>[LA]Su amor es fuerte y poderoso<br>El [DO#m]rey de gloria, [SI]el rey de majes[LA]tad<br><br>[MI]Conmueve el mundo con su estruendo<br>[LA]Y nos asombra con maravillas<br>El [DO#m]rey de gloria, [SI]el rey de majes[LA]tad</b>",
+      "<b>Gracia sublime [MI]es<br>Perfecto es tu [LA]amor<br>Tomaste mi [DO#m]lugar<br>Cargaste tú mi [SI]cruz<br>Tu vida diste [MI]ahí<br>Y ahora libre [LA]soy<br>[DO#m]Jesús te adoro<br>[SI]Por lo que hiciste en [MI]mí</b>",
+      "<b>[MI]Pusiste en orden todo el caos<br>[LA]Nos adoptaste como tus hijos<br>[DO#m]El rey de gloria, [SI]el rey de majes[LA]tad.<br><br>[MI]El que gobierna con su justicia<br>[LA]Y resplandece con su belleza<br>[DO#m]El rey de gloria, [SI]el rey de majes[LA]tad</b>",
+      "<b>Gracia sublime [MI]es<br>Perfecto es tu [LA]amor<br>Tomaste mi [DO#m]lugar<br>Cargaste tú mi [SI]cruz<br>Tu vida diste [MI]ahí<br>Y ahora libre [LA]soy<br>[DO#m]Jesús te adoro<br>[SI]Por lo que hiciste en [MI]mí</b>",
+      "<b>[MI]/Digno es el Cordero de Dios<br>[LA]Digno es el rey que la muerte venció/<br><br>[DO#m]Digno es el Cordero de Dios<br>[SI]¡Digno! ¡Digno! ¡Digno!</b>",
+      "<b>Gracia sublime [MI]es<br>Perfecto es tu [LA]amor<br>Tomaste mi [DO#m]lugar<br>Cargaste tú mi [SI]cruz<br>Tu vida diste [MI]ahí<br>Y ahora libre [LA]soy<br>[DO#m]Jesús te adoro<br>[SI]Por lo que hiciste en [MI]mí</b>"
+    ]
   },
   {
     "titulo": "Quiero escuchar tu dulce voz",
@@ -2067,7 +2108,14 @@
     ],
     "nueva": true,
     "tono": "MIm",
-    "carpeta": "S"
+    "carpeta": "S",
+    "acordes": [
+      "<b>[MIm]Corrió su sangre por un madero<br>A él no lo [RE]mataron, se entregó primero<br>De tal [DO]manera amó [LAm]Jesús<br>Que [SI7]entregó su vida en la cruz<br><br>[MIm]No dijo nada, no abrió su boca<br>Le hieren, le [RE]golpean, pero Él perdona<br>De tal [DO]manera amó [LAm]Jesús<br>Que [SI7]entregó su vida en la cruz</b>",
+      "<b>/[MIm]Santo es el que vive, <br>santo es el que reina<br><br>[RE]Santo en las alturas, <br>santo aquí en la tierra<br><br>[DO]Santo en el pesebre, <br>[LAm]santo en el sepulcro<br><br>[SI7]Santa es su sangre <br>derramada en la Cruz/</b>",
+      "<b>/[DO]Todos lo verán<br>Como un rey en las nubes [RE]volverá<br>Coronado en poder y [DO]autoridad<br>El [LAm]cordero y [SI7]león reinará/</b>",
+      "<b>/[MIm]Santo es el que vive, <br>santo es el que reina<br><br>[RE]Santo en las alturas, <br>santo aquí en la tierra<br><br>[DO]Santo en el pesebre, <br>[LAm]santo en el sepulcro<br><br>[SI7]Santa es su sangre <br>derramada en la Cruz/</b>",
+      "<b>//[MIm]Santo, [RE]Santo, [DO]Santo [SI7]<br>es Jesús de [MIm]Nazareth//</b>"
+    ]
   },
   {
     "titulo": "Santo santo santo",
@@ -2267,15 +2315,22 @@
   },
   {
     "titulo": "Somos iglesia",
-    "preview": "Desolados ya no más\u000bSomos herederos con Jesús\u000bExtranjeros ya no más\u000bAhora somos hijos por la Cruz\u000b\u000bSomos iglesia, reino de luz\u000bNuestra bandera la Cruz de Jesús\u000bSomos iglesia, somos nación\u000bLa tumba vacía es nuestra canción\u000b\u000bExtraviados ya no más\u000bNos llamas de vuelta a nuestro hogar\u000bSeparados ya no más\u000bSiempre a nuestro lado Tú estás",
+    "preview": "Desolados ya no más\u000bSomos herederos con Jesús\u000bExtranjeros ya no más\u000bAhora somos hijos por la Cruz\u000b\u000bSomos iglesia, reino de luz\u000bNuestra bandera la Cruz de Jesús\u000bSomos iglesia, somos nación\u000bLa tumba vacía es nuestra canción",
     "slides": [
-      "<b>Desolados ya no más<br>Somos herederos con Jesús<br>Extranjeros ya no más<br>Ahora somos hijos por la Cruz<br><br>Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción<br><br>Extraviados ya no más<br>Nos llamas de vuelta a nuestro hogar<br>Separados ya no más<br>Siempre a nuestro lado Tú estás</b>",
-      "<b><br>/Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción/<br>La tumba vacía es nuestra canción<br><br>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios/<br>Cristo eres Dios</b>",
-      "<b>Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción<br>La tumba vacía es nuestra canción<br><br>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios/<br>Cristo eres Dios</b>"
+      "<b>Desolados ya no más<br>Somos herederos con Jesús<br>Extranjeros ya no más<br>Ahora somos hijos por la Cruz<br><br>Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción</b>",
+      "<b>Extraviados ya no más<br>Nos llamas de vuelta a nuestro hogar<br>Separados ya no más<br>Siempre a nuestro lado tú estás<br><br>/Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción/<br>La tumba vacía es nuestra canción</b>",
+      "<b>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>",
+      "<b>Somos iglesia, reino de luz<br>Nuestra bandera la cruz de Jesús<br>Somos iglesia, somos nación<br>/La tumba vacía es nuestra canción/<br><br>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>"
     ],
     "nueva": true,
     "tono": "RE",
-    "carpeta": "S"
+    "carpeta": "S",
+    "acordes": [
+      "<b>[SOL]Desolados [SIm]ya no más<br>[RE]Somos [LA]herederos con [SOL]Jesús<br>Extranjeros [SIm]ya no más<br>[RE]Ahora somos [LA]hijos por la [SOL]Cruz<br><br>[RE]Somos iglesia, reino de [LA]luz<br>Nuestra [SIm]bandera la [SOL]Cruz de [LA]Jesús<br>Somos [RE]iglesia, somos [LA]nación<br>La tumba [SIm]vacía es [SOL]nuestra [LA]canción</b>",
+      "<b>[SOL]Extraviados [SIm]ya no más<br>[RE]Nos llamas de [LA]vuelta a nuestro [SOL]hogar<br>Separados [SIm]ya no más<br>[RE]Siempre a nuestro [LA]lado tú [SOL]estás [LA]<br><br>/[RE]Somos iglesia, reino de [LA]luz<br>Nuestra [SIm]bandera la [SOL]Cruz de [LA]Jesús<br>Somos [RE]iglesia, somos [LA]nación<br>La tumba [SIm]vacía es [SOL]nuestra [LA]canción/<br>La tumba [SI]vacía es [SOL]nuestra [LA]canción</b>",
+      "<b>/Vivo estás en [RE]gloria y [SOL]honor<br>Reinas en [RE]victoria [LA]Señor<br>Nuestro ser [SIm]entona a una [SOL]voz<br>Cristo eres [RE]Dios<br>Cristo eres [LA]Dios/</b>",
+      "<b>[RE]Somos iglesia, reino de [LA]luz<br>Nuestra [SIm]bandera la cruz de [LA]Jesús<br>Somos [RE]iglesia, somos [LA]nación<br>/La tumba [SIm]vacía es [SOL]nuestra [LA]canción/<br><br>/Vivo estás en [RE]gloria y [SOL]honor<br>Reinas en [RE]victoria [LA]Señor<br>Nuestro ser [SIm]entona a una [SOL]voz<br>Cristo eres [RE]Dios<br>Cristo eres [LA]Dios/</b>"
+    ]
   },
   {
     "titulo": "Somos soldaditos",
@@ -2626,13 +2681,15 @@
     "preview": "Vamos a cantar\nCon la música del cielo\nVamos a cantar\nAlegres porque escuchas cuando\nCantamos para exaltar tu nombre\n\nAmamos todo de ti\nTu creación, te adora\nEn los reinos se rinden\nHijo de Dios, eres por quien\nEres por quien vivimos hoy",
     "slides": [
       "<b>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>Cantamos para exaltar tu nombre<br><br><br>Amamos todo de ti<br>Tu creación, te adora<br>En los reinos se rinden<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy</b>",
-      "<b>Eres quien nos liberta<br>Eres la luz que guía<br>Y con un fuego ardiente<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy<br><br><br>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>cantamos para exaltar tu nombre</b>",
-      "<b>Amamos todo de ti<br>Tu creación, te adora<br>En los reinos se rinden<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy<br><br><br>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>Cantamos para exaltar tu nombre</b>",
-      "<b>Y vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>Cantamos para exaltar<br><br><br>Y vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>Cantamos para exaltar tu nombre</b>"
+      "<b>Eres quien nos liberta<br>Eres la luz que guía<br>Y con un fuego ardiente<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy<br><br><br>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>cantamos para exaltar tu nombre</b>"
     ],
     "nueva": true,
     "tono": "MI",
-    "carpeta": "V"
+    "carpeta": "V",
+    "acordes": [
+      "<b>[MI]Vamos a cantar<br>Con la música del cielo<br>Vamos a [DO#m]cantar<br>Alegres porque escuchas [SI]cuando<br>Cantamos [LA]para exaltar tu [MI]nombre<br><br><br>[MI]Amamos todo de ti<br>Tu creación, te adora<br>[DO#m]En los reinos se rinden<br>Hijo de Dios, eres por [SI]quien<br>Eres por [LA]vivimos [MI]hoy</b>",
+      "<b>[MI]Eres quien nos liberta<br>Eres la luz que guía<br>[DO#m]Y con un fuego ardiente<br>Hijo de Dios, eres por [SI]quien<br>Eres por [LA]vivimos [MI]hoy<br><br><br>[MI]Vamos a cantar<br>Con la música del cielo<br>Vamos a [DO#m]cantar<br>Alegres porque escuchas [SI]cuando<br>[LA]cantamos para exaltar tu [MI]nombre</b>"
+    ]
   },
   {
     "titulo": "Vamos escalando peldaños",
