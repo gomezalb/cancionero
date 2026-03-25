@@ -1429,10 +1429,10 @@ function renderFS() {
   // Controles de transposición en fullscreen
   actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
 
-  // Paginador de puntos — solo desktop
+  // Paginador de puntos — solo desktop y fuera de modo acordes
   const dotsEl = document.getElementById("fs-dots");
   dotsEl.innerHTML = "";
-  if (!mobile && !isPause && s.totalSlides > 1) {
+  if (!mobile && !isPause && !fsMostrarAcordes && s.totalSlides > 1) {
     for (let i = 0; i < s.totalSlides; i++) {
       const dot = document.createElement("div");
       dot.className = "fs-dot" + (i === s.slideNum-1 ? " active" : "");
@@ -1440,8 +1440,12 @@ function renderFS() {
     }
   }
 
-  // Contador numérico — solo desktop
-  document.getElementById("fs-slide-ctr").textContent = (!mobile && !isPause) ? (s.slideNum + " / " + s.totalSlides) : "";
+  // Contador numérico — solo desktop y fuera de modo acordes
+  document.getElementById("fs-slide-ctr").textContent = (!mobile && !isPause && !fsMostrarAcordes) ? (s.slideNum + " / " + s.totalSlides) : "";
+
+  // Flechas laterales — ocultar en modo acordes desktop (navegan por diapositiva, no tiene sentido)
+  document.getElementById("fs-prev-slide").style.display = (!mobile && fsMostrarAcordes) ? "none" : "";
+  document.getElementById("fs-next-slide").style.display = (!mobile && fsMostrarAcordes) ? "none" : "";
 
   // Nav canciones
   document.getElementById("fs-prev-slide").disabled = viewerIdx === 0;
@@ -1456,6 +1460,7 @@ function renderFS() {
 
 document.getElementById("fs-btn").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
+  document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) viewerSlides = buildSlides(viewerQueue, false);
@@ -1469,6 +1474,7 @@ document.getElementById("fs-btn").addEventListener("click", () => {
 });
 document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = true; actualizarBotonRetomar();
+  document.getElementById("fs-hint").textContent = "← → canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) viewerSlides = buildSlides(viewerQueue, false);
@@ -1482,6 +1488,7 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
 });
 document.getElementById("fs-btn-edges").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
+  document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) {
@@ -1544,8 +1551,9 @@ document.addEventListener("keydown", e => {
   const fsOpen = document.getElementById("fso").style.display === "flex";
   const inViewer = document.getElementById("viewer").style.display === "flex";
   if (fsOpen || inViewer) {
-    if (e.key === "ArrowLeft" && !e.shiftKey) goSlide(-1);
-    else if (e.key === "ArrowRight" && !e.shiftKey) goSlide(1);
+    const acordesDesktop = fsOpen && fsMostrarAcordes && !isMobile();
+    if (e.key === "ArrowLeft" && !e.shiftKey) { acordesDesktop ? goSong(-1) : goSlide(-1); }
+    else if (e.key === "ArrowRight" && !e.shiftKey) { acordesDesktop ? goSong(1) : goSlide(1); }
     else if (e.key === "ArrowLeft" && e.shiftKey) goSong(-1);
     else if (e.key === "ArrowRight" && e.shiftKey) goSong(1);
     else if (e.key === "Escape" && fsOpen) {
