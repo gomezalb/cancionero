@@ -308,6 +308,40 @@
     #fs-lh-reset.auto { color: #444; border-color: #2a2a2a; }
     /* Solo visible en móvil */
     @media (min-width: 1024px) { #fs-size-ctrl { display: none; } }
+  /* ── Metrónomo ─────────────────────────────────────────────── */
+  #metronomo {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 10000;
+    display: none; flex-direction: column; align-items: center; gap: 6px;
+    background: rgba(0,0,0,.6); border: 0.5px solid #2a2a2a;
+    border-radius: 14px; padding: 10px 12px; user-select: none;
+  }
+  #metronomo.visible { display: flex; }
+  #metro-beat {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #2a2a2a; border: 2px solid #3a3a3a;
+    transition: background .06s, border-color .06s, box-shadow .06s;
+    cursor: pointer;
+  }
+  #metro-beat.pulse { background: #7eb8f7; border-color: #aad4ff; box-shadow: 0 0 14px #7eb8f7aa; }
+  #metro-beat.pulse-acento { background: #ffffff; border-color: #ffffff; box-shadow: 0 0 20px #ffffffcc; }
+  #metro-controls { display: flex; align-items: center; gap: 5px; }
+  .metro-btn {
+    background: none; border: 0.5px solid #333; color: #777;
+    font-size: 14px; width: 22px; height: 22px; border-radius: 5px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    line-height: 1; transition: all .12s;
+  }
+  .metro-btn:hover { border-color: #666; color: #ccc; }
+  #metro-bpm-val { font-size: 13px; font-weight: 600; color: #aaa; min-width: 34px; text-align: center; }
+  #metro-play {
+    background: none; border: 0.5px solid #333; color: #777;
+    font-size: 11px; padding: 3px 8px; border-radius: 6px;
+    cursor: pointer; transition: all .12s; white-space: nowrap;
+  }
+  #metro-play:hover { border-color: #666; color: #ccc; }
+  #metro-play.running { border-color: #7eb8f7; color: #7eb8f7; }
+  #metro-progress-wrap { width: 100%; height: 2px; background: #222; border-radius: 2px; overflow: hidden; }
+  #metro-progress { height: 100%; width: 0%; background: #7eb8f7; }
   </style>
 </head>
 <body>
@@ -456,7 +490,20 @@
     </div>
     <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
   </div>
+
+  <!-- Metrónomo flotante -->
+  <div id="metronomo">
+    <div id="metro-beat" title="Click para play/stop"></div>
+    <div id="metro-controls">
+      <button class="metro-btn" id="metro-down">&#8722;</button>
+      <span id="metro-bpm-val">120</span>
+      <button class="metro-btn" id="metro-up">&#43;</button>
+    </div>
+    <button id="metro-play">&#9654; Play</button>
+    <div id="metro-progress-wrap"><div id="metro-progress"></div></div>
+  </div>
 </div>
+
 
 
 
@@ -1194,6 +1241,12 @@ function goSong(d) {
   let t = viewerSlides.findIndex(sl => sl.songIdx === ni && sl.type === "slide");
   if (t < 0) t = 0; viewerIdx = t; renderViewerSlide();
   if (document.getElementById("fso").style.display === "flex") renderFSNewSong();
+  // Actualizar metrónomo al cambiar de canción en modo acordes
+  if (fsMostrarAcordes) {
+    const newSong = SONGS.find(c => c.titulo === viewerQueue[ni]);
+    metroOcultar();
+    if (newSong?.bpm) metroMostrar(newSong.bpm);
+  }
 }
 // ── Editor de slides ───────────────────────────────────────────
 const LS_EDICIONES = "cancionero_ediciones"; // { "Titulo": ["html slide 0", null, "html slide 2", ...] }
@@ -1460,6 +1513,7 @@ function renderFS() {
 
 document.getElementById("fs-btn").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
+  metroOcultar();
   document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
@@ -1480,6 +1534,11 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   if (viewerQueue && viewerQueue.length > 0) viewerSlides = buildSlides(viewerQueue, false);
   else if (curSong) viewerSlides = buildSingle(curSong, false);
   viewerIdx = 0;
+  // Metrónomo: mostrar solo si la canción tiene BPM definido
+  const primerSlide = viewerSlides.find(s => s.type === "slide");
+  const primeraSong = primerSlide ? SONGS.find(c => c.titulo === primerSlide.songTitle) : null;
+  metroOcultar();
+  if (primeraSong?.bpm) metroMostrar(primeraSong.bpm);
   const o = document.getElementById("fso"); o.style.display = "flex";
   o.classList.add("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
@@ -1488,6 +1547,7 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
 });
 document.getElementById("fs-btn-edges").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
+  metroOcultar();
   document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
@@ -1509,6 +1569,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
   o.classList.remove("modo-acordes");
   if (document.fullscreenElement) document.exitFullscreen();
   bloquearPortrait(); liberarWakeLock();
+  metroOcultar();
   fsMinimizado = false; actualizarBotonRetomar();
   // Si el índice actual apunta a una pausa, buscar el próximo slide con contenido
   if (viewerSlides[viewerIdx]?.type === "pause") {
@@ -1523,6 +1584,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
 document.getElementById("fs-minimize").addEventListener("click", () => {
   if (document.fullscreenElement) document.exitFullscreen();
   bloquearPortrait(); liberarWakeLock();
+  metroOcultar();
   const o = document.getElementById("fso");
   o.style.display = "none";
   document.getElementById("cancionero-panel").style.display = "none";
@@ -1592,6 +1654,100 @@ document.getElementById("fs-center").addEventListener("touchend", onTouchEnd, { 
 document.getElementById("setlist-panel").style.display = "none";
 updateBadge();
 cargarCanciones().then(() => cargarSetlist());
+
+
+// ── Metrónomo ──────────────────────────────────────────────────
+const METRO_DURACION = 10; // segundos
+const METRO_BPM_MIN = 40;
+const METRO_BPM_MAX = 240;
+const METRO_PULSE_MS = 80; // duración del flash visual
+
+let metroBpm = 120;
+let metroRunning = false;
+let metroTimeout = null;
+let metroStopTimeout = null;
+let metroStartTime = null;
+let metroBeatCount = 0;
+let metroProgressInterval = null;
+
+function metroSetBpm(bpm) {
+  metroBpm = Math.min(METRO_BPM_MAX, Math.max(METRO_BPM_MIN, bpm));
+  document.getElementById("metro-bpm-val").textContent = metroBpm;
+  // Si está corriendo, reiniciar para aplicar nuevo BPM
+  if (metroRunning) { metroStop(); metroStart(); }
+}
+
+function metroFlash(esAcento) {
+  const beat = document.getElementById("metro-beat");
+  beat.classList.add(esAcento ? "pulse-acento" : "pulse");
+  setTimeout(() => beat.classList.remove("pulse", "pulse-acento"), METRO_PULSE_MS);
+}
+
+function metroTick() {
+  if (!metroRunning) return;
+  const elapsed = (Date.now() - metroStartTime) / 1000;
+  if (elapsed >= METRO_DURACION) { metroStop(); return; }
+
+  metroBeatCount++;
+  metroFlash(metroBeatCount % 4 === 1); // acento en primer tiempo
+
+  const intervalo = 60000 / metroBpm;
+  // Corrección de drift: calcular cuándo debería haber sonado el próximo beat
+  const siguiente = metroStartTime + (metroBeatCount * intervalo);
+  const demora = Math.max(0, siguiente - Date.now());
+  metroTimeout = setTimeout(metroTick, demora);
+}
+
+function metroStart() {
+  metroRunning = true;
+  metroStartTime = Date.now();
+  metroBeatCount = 0;
+  document.getElementById("metro-play").textContent = "◼ Stop";
+  document.getElementById("metro-play").classList.add("running");
+  document.getElementById("metro-progress").style.width = "0%";
+
+  // Barra de progreso
+  metroProgressInterval = setInterval(() => {
+    if (!metroRunning) { clearInterval(metroProgressInterval); return; }
+    const pct = Math.min(100, ((Date.now() - metroStartTime) / (METRO_DURACION * 1000)) * 100);
+    document.getElementById("metro-progress").style.width = pct + "%";
+  }, 100);
+
+  metroFlash(true); // primer beat inmediato con acento
+  metroBeatCount = 1;
+  const intervalo = 60000 / metroBpm;
+  metroTimeout = setTimeout(metroTick, intervalo);
+}
+
+function metroStop() {
+  metroRunning = false;
+  clearTimeout(metroTimeout);
+  clearInterval(metroProgressInterval);
+  document.getElementById("metro-play").textContent = "▶ Play";
+  document.getElementById("metro-play").classList.remove("running");
+  document.getElementById("metro-progress").style.width = "0%";
+  document.getElementById("metro-beat").classList.remove("pulse", "pulse-acento");
+}
+
+function metroToggle() {
+  if (metroRunning) metroStop(); else metroStart();
+}
+
+function metroMostrar(bpm) {
+  metroBpm = bpm || metroBpm;
+  document.getElementById("metro-bpm-val").textContent = metroBpm;
+  document.getElementById("metronomo").classList.add("visible");
+}
+
+function metroOcultar() {
+  metroStop();
+  document.getElementById("metronomo").classList.remove("visible");
+}
+
+document.getElementById("metro-beat").addEventListener("click", metroToggle);
+document.getElementById("metro-play").addEventListener("click", metroToggle);
+document.getElementById("metro-up").addEventListener("click", () => metroSetBpm(metroBpm + 5));
+document.getElementById("metro-down").addEventListener("click", () => metroSetBpm(metroBpm - 5));
 
 // ── Service Worker (offline + auto-actualización) ──────────────
 if ("serviceWorker" in navigator) {
