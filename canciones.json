@@ -173,7 +173,7 @@
     "carpeta": "A",
     "acordes": [
       "<b>Al es[SOL]tar en la pre[SIm]sencia de tu divini[MIm]dad,<br>y al con[DO]templar la hermo[LAm]sura <br>de tu santi[RE]dad,<br>mi es[SOL]píritu se [SI]alegra en tu [MIm]majestad.<br>Te [DO]adoro a ti,[LAm] te [RE]adoro a ti.<br><br>Cuando [SOL]veo la gran[SIm]deza de tu [MIm]dulce amor,<br>y com[DO]prendo la pu[LAm]reza de tu [RE]corazón,<br>mi es[SOL]píritu se [SI]alegra en tu [MIm]majestad.<br>Te [DO]adoro a ti,[LAm] te [RE]adoro a ti.</b>",
-      "<b>/Y al es[SOL]tar aquí, [SIm]delante de tí ado[DO]raré,<br>postrado [LAm]ante ti, mi corazón <br>te [RE]adora oh Dios.<br>Y siempre [SOL]quiero estar [SOL7]para adorar,<br>y [DO]contemplar tu [DOm]santidad.<br>Te [SOL]adoro a ti, [RE]Señor, te [DO]adoro a [SOL]ti./<br><br><br>Te [DO]adoro a ti, [RE]Señor, te [FA]adoro a [SOL]ti</b>"
+      "<b>/Y al es[SOL]tar aquí, [SOL7]delante de tí ado[DO]raré,<br>postrado [LAm]ante ti, mi corazón <br>te [RE]adora oh Dios.<br>Y siempre [SOL]quiero estar [SOL7]para adorar,<br>y [DO]contemplar tu [DOm]santidad.<br>Te [SOL]adoro a ti, [RE]Señor, te [DO]adoro a [SOL]ti./<br><br><br>Te [DO]adoro a ti, [RE]Señor, te [FA]adoro a [SOL]ti</b>"
     ]
   },
   {
@@ -563,6 +563,9 @@
     "preview": "/Cristo es la peña de Horeb que está brotando\u000bagua de vida saludable para ti/\u000b\u000bVen a tomarla que es mas dulce que la miel,\u000brefresca el alma, refresca todo tu ser\u000b\u000bCristo es la peña de horeb que está brotando\u000bagua de vida saludable para ti.",
     "slides": [
       "<b>/Cristo es la peña de Horeb que está brotando<br>agua de vida saludable para ti/<br><br>Ven a tomarla que es mas dulce que la miel,<br>refresca el alma, refresca todo tu ser<br><br>Cristo es la peña de horeb que está brotando<br>agua de vida saludable para ti.</b>"
+    ],
+    "acordes": [
+      "<b>[REm]Cristo es la peña de Horeb que está [LA7]brotando<br>agua de [LA7]vida saludable para [REm]ti<br>[RE7]Cristo es la peña de Horeb que está [SOLm]brotando<br>agua de [REm]vida [LA7]saludable para [REm]ti<br><br>Ven a [DO]tomarla que es mas dulce que la [FA]miel,<br>refresca el [LA7]alma, refresca todo tu [REm]ser<br><br>[REm]Cristo es la peña de [RE7]horeb que está [SOLm]brotando<br>agua de [REm]vida [LA]saludable para [REm]ti.</b>"
     ],
     "tono": "REm",
     "carpeta": "C"
@@ -1244,6 +1247,9 @@
     "preview": "Fuerte Dios, Consolador\nPríncipe de paz.\nGran Señor, vencedor,\nsiempre vives y siempre reinarás…\n\nYo te exalto, Dios te exalto.\nEres todo para mí,\nla creación canta de tí;\n\nYo te exalto, Dios te exalto.\n//Te exalto Cristo mi Rey//",
     "slides": [
       "<b>Fuerte Dios, Consolador<br>Príncipe de paz.<br>Gran Señor, vencedor,<br>siempre vives y siempre reinarás…<br><br><br>Yo te exalto, Dios te exalto.<br>Eres todo para mí,<br>la creación canta de tí;<br><br><br>Yo te exalto, Dios te exalto.<br>//Te exalto Cristo mi Rey//</b>"
+    ],
+    "acordes": [
+      "<b>[LA]Fuerte Dios, [DO#m]Consolador<br>[RE]Prínci[SIm]pe de [MI]paz.<br>[LA]Gran Señor, [DO#m]vencedor,<br>[RE]siempre [SIm]vives y [RE]siempre [MI]reinarás…<br><br><br>Yo te [LA]exalto, Dios te [DO#m]exalto.<br>Eres [RE]todo para [SIm]mí,<br>la [RE]creación canta de [MI]tí;<br><br><br>Yo te [LA]exalto, Dios te [DO#m]exalto.<br>Te [RE]exalto [MI]Cristo mi [FA#m]Rey [SI]<br>Te [SIm]exalto [MI]Cristo mi [FA#m]Rey [SI]<br>Te [SIm]exalto [MI]Cristo mi [RE]Rey [LA]</b>"
     ],
     "tono": "LA",
     "carpeta": "F"
@@ -2073,6 +2079,9 @@
     "slides": [
       "<b>Reunidos aquí para alabar al Señor,<br>nuevamente aquí, en unidad.<br>Algo hermoso ha de acontecer,<br>algo tiene Dios para ti,<br>reunidos aquí para alabar al Señor </b>"
     ],
+    "acordes": [
+      "<b>Reunidos [RE]aquí para alabar al [MIm]Señor,<br>nuevamente [LA]aquí, en [RE]unidad.<br>Algo [RE]hermoso ha de acontecer,<br>algo [SIm]tiene Dios para ti,<br>reunidos [MIm]aquí [LA] para alabar al [RE]Señor </b>"
+    ],
     "tono": "RE",
     "carpeta": "R"
   },
@@ -2520,6 +2529,9 @@
     "preview": "/Todo es posible, \nsi puedes creer/\u000b\u000b/Fe mueve la mano de Dios,\u000bfe en su Palabra viva,\u000btodo es posible, \nsi puedes creer/",
     "slides": [
       "<b>/Todo es posible, <br>si puedes creer/<br><br>/Fe mueve la mano de Dios,<br>fe en su Palabra viva,<br>todo es posible, <br>si puedes creer/</b>"
+    ],
+    "acordes": [
+      "<b>Todo es [FA#m]posible, [SI]<br>si puedes [MI]creer<br>Todo es [FA#m]posible, [SI]<br>si puedes [MI]creer [MI7]<br><br>Fe mueve la [LA]mano de Dios, [LAm]<br>fe en su Palabra [SOL#m]viva, [DO#m]<br>todo es [FA#m]posible, [SI]<br>si puedes [MI]creer [MI7]<br> Fe mueve la [LA]mano de Dios, [LAm]<br>fe en su [SOL#m]Palabra viva, [DO#m]<br>todo es [FA#m]posible, [SI]<br>si puedes [MI]creer</b>"
     ],
     "tono": "MI",
     "carpeta": "T"
