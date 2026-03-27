@@ -2054,8 +2054,8 @@
     "tono": "RE",
     "carpeta": "R",
     "acordes": [
-      "<b>[RE]Renuéva[SOL]me Se[LA]ñor Je[RE]sús.</b><br><b>[SOL]Ya no [MIm]quiero ser i[LA]gual.</b><br><b>[RE]Renuéva[SOL]me Se[LA]ñor Je[RE]sús,</b><br><b>[SOL]pon en [MIm]mi tu cora[LA]zón.</b>",
-      "<b>Porque [RE]todo lo que [FA#m]hay,</b><br><b>[SIm]dentro de [FA#m]mi,</b><br><b>[SOL]nece[MIm]sita ser cam[SOL]biado Se[LA]ñor.</b><br><b>Porque [RE]todo lo que [FA#m]hay</b><br><b>dentro de [SIm]mi cora[FA#m]zón,</b><br><b>//[SOL]nece[LA]sita más de [RE]ti//</b>"
+      "<b>[RE]Renuéva[SOL]me Se[LA]ñor Je[RE]sús.</b><br><b>[SOL]Ya no [MIm]quiero ser i[LA]gual.</b><br><b>[RE]Renuéva[SOL]me Se[LA]ñor Je[SIm]sús,</b><br><b>[SOL]pon en [MIm]mi tu cora[LA]zón.</b>",
+      "<b>Porque [RE]todo lo que [FA#m]hay,</b><br><b>[SIm]dentro de [FA#m]mi,</b><br><b>[SOL]nece[MIm]sita ser cam[SOL]biado Se[LA]ñor.</b><br><b>Porque [RE]todo lo que [FA#m]hay</b><br><b>dentro de [SIm]mi cora[FA#m]zón,</b><br><b>[SOL]nece[LA]sita más de [SIm]ti</b><br><b>[SOL]nece[LA]sita más de [SIm]ti</b><br><b>[SOL]nece[LA]sita más de [SOL]ti [RE]</b>"
     ]
   },
   {
@@ -2073,7 +2073,7 @@
     "slides": [
       "<b>Reunidos aquí para alabar al Señor,<br>nuevamente aquí, en unidad.<br>Algo hermoso ha de acontecer,<br>algo tiene Dios para ti,<br>reunidos aquí para alabar al Señor </b>"
     ],
-    "tono": "MI",
+    "tono": "RE",
     "carpeta": "R"
   },
   {
@@ -2521,7 +2521,7 @@
     "slides": [
       "<b>/Todo es posible, <br>si puedes creer/<br><br>/Fe mueve la mano de Dios,<br>fe en su Palabra viva,<br>todo es posible, <br>si puedes creer/</b>"
     ],
-    "tono": "RE",
+    "tono": "MI",
     "carpeta": "T"
   },
   {
