@@ -309,21 +309,24 @@
     /* Solo visible en móvil */
     @media (min-width: 1024px) { #fs-size-ctrl { display: none; } }
   /* ── Metrónomo ─────────────────────────────────────────────── */
+
+  /* ── Metrónomo desktop: flotante, solo ≥1024px ── */
   #metronomo {
     position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 10000;
     display: none; flex-direction: column; align-items: center; gap: 6px;
     background: rgba(0,0,0,.6); border: 0.5px solid #2a2a2a;
     border-radius: 14px; padding: 10px 12px; user-select: none;
   }
-  #metronomo.visible { display: flex; }
+  @media (min-width: 1024px) { #metronomo.visible { display: flex; } }
+
   #metro-beat {
     width: 36px; height: 36px; border-radius: 50%;
     background: #2a2a2a; border: 2px solid #3a3a3a;
     transition: background .06s, border-color .06s, box-shadow .06s;
-    cursor: pointer;
+    cursor: pointer; flex-shrink: 0;
   }
   #metro-beat.pulse { background: #7eb8f7; border-color: #aad4ff; box-shadow: 0 0 14px #7eb8f7aa; }
-  #metro-beat.pulse-acento { background: #ffffff; border-color: #ffffff; box-shadow: 0 0 20px #ffffffcc; }
+  #metro-beat.pulse-acento { background: #fff; border-color: #fff; box-shadow: 0 0 20px #ffffffcc; }
   #metro-controls { display: flex; align-items: center; gap: 5px; }
   .metro-btn {
     background: none; border: 0.5px solid #333; color: #777;
@@ -342,6 +345,16 @@
   #metro-play.running { border-color: #7eb8f7; color: #7eb8f7; }
   #metro-progress-wrap { width: 100%; height: 2px; background: #222; border-radius: 2px; overflow: hidden; }
   #metro-progress { height: 100%; width: 0%; background: #7eb8f7; }
+
+  /* ── Metrónomo móvil: inline en #fs-size-ctrl, solo <1024px ── */
+  #metro-mob-beat {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: #3a3a3a; border: 2px solid #555;
+    cursor: pointer; transition: background .06s, box-shadow .06s, border-color .06s; flex-shrink: 0;
+  }
+  #metro-mob-beat.pulse { background: #7eb8f7; box-shadow: 0 0 14px #7eb8f7cc; border-color: #aad4ff; }
+  #metro-mob-beat.pulse-acento { background: #fff; box-shadow: 0 0 18px #ffffffee; border-color: #fff; }
+  @media (max-width: 1023px) { #fs-size-ctrl { justify-content: flex-start; } }
   </style>
 </head>
 <body>
@@ -487,11 +500,16 @@
       <button id="fs-lh-down" title="Reducir interlineado">&#8801;&#8722;</button>
       <button id="fs-lh-reset" title="Interlineado automático">&#8801;</button>
       <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
+      <span id="metro-mob-sep" style="display:none;width:1px;height:16px;background:#2a2a2a;margin:0 4px;vertical-align:middle"></span>
+      <div id="metro-mob-beat" title="Play/Stop" style="display:none"></div>
+      <span id="metro-mob-bpm" style="display:none;font-size:11px;font-weight:600;color:#aaa;min-width:26px;text-align:center">120</span>
+      <button class="metro-btn" id="metro-mob-down" style="display:none">&#8722;</button>
+      <button class="metro-btn" id="metro-mob-up" style="display:none">&#43;</button>
     </div>
     <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
   </div>
 
-  <!-- Metrónomo flotante -->
+  <!-- Metrónomo flotante (solo desktop) -->
   <div id="metronomo">
     <div id="metro-beat" title="Click para play/stop"></div>
     <div id="metro-controls">
@@ -1657,42 +1675,49 @@ cargarCanciones().then(() => cargarSetlist());
 
 
 // ── Metrónomo ──────────────────────────────────────────────────
+// Desktop: widget flotante (#metronomo) dentro de #fso
+// Móvil:   controles inline en #fs-size-ctrl (#metro-mob-*)
 const METRO_DURACION = 10; // segundos
 const METRO_BPM_MIN = 40;
 const METRO_BPM_MAX = 240;
-const METRO_PULSE_MS = 80; // duración del flash visual
+const METRO_PULSE_MS = 80;
 
 let metroBpm = 120;
 let metroRunning = false;
 let metroTimeout = null;
-let metroStopTimeout = null;
 let metroStartTime = null;
 let metroBeatCount = 0;
 let metroProgressInterval = null;
 
+function metroUpdateBpmDisplay() {
+  document.getElementById("metro-bpm-val").textContent = metroBpm;
+  document.getElementById("metro-mob-bpm").textContent = metroBpm;
+}
+
 function metroSetBpm(bpm) {
   metroBpm = Math.min(METRO_BPM_MAX, Math.max(METRO_BPM_MIN, bpm));
-  document.getElementById("metro-bpm-val").textContent = metroBpm;
-  // Si está corriendo, reiniciar para aplicar nuevo BPM
+  metroUpdateBpmDisplay();
   if (metroRunning) { metroStop(); metroStart(); }
 }
 
 function metroFlash(esAcento) {
-  const beat = document.getElementById("metro-beat");
-  beat.classList.add(esAcento ? "pulse-acento" : "pulse");
-  setTimeout(() => beat.classList.remove("pulse", "pulse-acento"), METRO_PULSE_MS);
+  // Desktop
+  const bd = document.getElementById("metro-beat");
+  bd.classList.add(esAcento ? "pulse-acento" : "pulse");
+  setTimeout(() => bd.classList.remove("pulse", "pulse-acento"), METRO_PULSE_MS);
+  // Móvil
+  const bm = document.getElementById("metro-mob-beat");
+  bm.classList.add(esAcento ? "pulse-acento" : "pulse");
+  setTimeout(() => bm.classList.remove("pulse", "pulse-acento"), METRO_PULSE_MS);
 }
 
 function metroTick() {
   if (!metroRunning) return;
   const elapsed = (Date.now() - metroStartTime) / 1000;
   if (elapsed >= METRO_DURACION) { metroStop(); return; }
-
   metroBeatCount++;
-  metroFlash(metroBeatCount % 4 === 1); // acento en primer tiempo
-
+  metroFlash(metroBeatCount % 4 === 1);
   const intervalo = 60000 / metroBpm;
-  // Corrección de drift: calcular cuándo debería haber sonado el próximo beat
   const siguiente = metroStartTime + (metroBeatCount * intervalo);
   const demora = Math.max(0, siguiente - Date.now());
   metroTimeout = setTimeout(metroTick, demora);
@@ -1705,18 +1730,14 @@ function metroStart() {
   document.getElementById("metro-play").textContent = "◼ Stop";
   document.getElementById("metro-play").classList.add("running");
   document.getElementById("metro-progress").style.width = "0%";
-
-  // Barra de progreso
   metroProgressInterval = setInterval(() => {
     if (!metroRunning) { clearInterval(metroProgressInterval); return; }
     const pct = Math.min(100, ((Date.now() - metroStartTime) / (METRO_DURACION * 1000)) * 100);
     document.getElementById("metro-progress").style.width = pct + "%";
   }, 100);
-
-  metroFlash(true); // primer beat inmediato con acento
+  metroFlash(true);
   metroBeatCount = 1;
-  const intervalo = 60000 / metroBpm;
-  metroTimeout = setTimeout(metroTick, intervalo);
+  metroTimeout = setTimeout(metroTick, 60000 / metroBpm);
 }
 
 function metroStop() {
@@ -1727,6 +1748,7 @@ function metroStop() {
   document.getElementById("metro-play").classList.remove("running");
   document.getElementById("metro-progress").style.width = "0%";
   document.getElementById("metro-beat").classList.remove("pulse", "pulse-acento");
+  document.getElementById("metro-mob-beat").classList.remove("pulse", "pulse-acento");
 }
 
 function metroToggle() {
@@ -1735,19 +1757,30 @@ function metroToggle() {
 
 function metroMostrar(bpm) {
   metroBpm = bpm || metroBpm;
-  document.getElementById("metro-bpm-val").textContent = metroBpm;
+  metroUpdateBpmDisplay();
+  // Desktop: widget flotante
   document.getElementById("metronomo").classList.add("visible");
+  // Móvil: controles inline
+  const inlineParts = ["metro-mob-sep","metro-mob-beat","metro-mob-bpm","metro-mob-down","metro-mob-up"];
+  inlineParts.forEach(id => { document.getElementById(id).style.display = ""; });
 }
 
 function metroOcultar() {
   metroStop();
   document.getElementById("metronomo").classList.remove("visible");
+  const inlineParts = ["metro-mob-sep","metro-mob-beat","metro-mob-bpm","metro-mob-down","metro-mob-up"];
+  inlineParts.forEach(id => { document.getElementById(id).style.display = "none"; });
 }
 
+// Listeners desktop
 document.getElementById("metro-beat").addEventListener("click", metroToggle);
 document.getElementById("metro-play").addEventListener("click", metroToggle);
 document.getElementById("metro-up").addEventListener("click", () => metroSetBpm(metroBpm + 5));
 document.getElementById("metro-down").addEventListener("click", () => metroSetBpm(metroBpm - 5));
+// Listeners móvil
+document.getElementById("metro-mob-beat").addEventListener("click", metroToggle);
+document.getElementById("metro-mob-up").addEventListener("click", () => metroSetBpm(metroBpm + 5));
+document.getElementById("metro-mob-down").addEventListener("click", () => metroSetBpm(metroBpm - 5));
 
 // ── Service Worker (offline + auto-actualización) ──────────────
 if ("serviceWorker" in navigator) {
