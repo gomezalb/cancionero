@@ -355,6 +355,57 @@
   #metro-mob-beat.pulse { background: #7eb8f7; box-shadow: 0 0 14px #7eb8f7cc; border-color: #aad4ff; }
   #metro-mob-beat.pulse-acento { background: #fff; box-shadow: 0 0 18px #ffffffee; border-color: #fff; }
   @media (max-width: 1023px) { #fs-size-ctrl { justify-content: flex-start; } }
+
+  /* ── Botón ayuda ── */
+  #help-btn {
+    margin-left: auto; background: none; border: 0.5px solid var(--border);
+    color: var(--text4); font-size: 13px; font-weight: 700;
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+    transition: all .12s; flex-shrink: 0; line-height: 1;
+  }
+  #help-btn:hover { border-color: #555; color: var(--text2); }
+
+  /* ── Modal de ayuda ── */
+  #help-modal-bg {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.75); z-index: 9000;
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  #help-modal-bg.open { display: flex; }
+  #help-modal {
+    background: var(--bg2); border: 0.5px solid var(--border2);
+    border-radius: var(--radius-lg); width: 100%; max-width: 560px;
+    max-height: 88vh; display: flex; flex-direction: column; overflow: hidden;
+  }
+  #help-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.25rem .75rem; border-bottom: 0.5px solid var(--border); flex-shrink: 0;
+  }
+  #help-header h2 { font-size: 15px; font-weight: 600; color: var(--text); margin: 0; }
+  #help-close {
+    background: none; border: none; color: var(--text4);
+    font-size: 20px; cursor: pointer; padding: 0 2px; line-height: 1;
+  }
+  #help-close:hover { color: var(--text2); }
+  #help-body {
+    overflow-y: auto; padding: 1rem 1.25rem 1.25rem; display: flex;
+    flex-direction: column; gap: 1.1rem;
+  }
+  .help-section { display: flex; flex-direction: column; gap: .4rem; }
+  .help-section h3 {
+    font-size: 11px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--text3); margin: 0;
+  }
+  .help-row { display: flex; gap: .6rem; align-items: flex-start; }
+  .help-icon { font-size: 15px; flex-shrink: 0; width: 22px; text-align: center; margin-top: 1px; }
+  .help-text { font-size: 13px; color: var(--text2); line-height: 1.55; }
+  .help-text b { color: var(--text); font-weight: 500; }
+  .help-kbd {
+    display: inline-block; background: #2a2a2a; border: 0.5px solid #444;
+    border-radius: 4px; padding: 1px 5px; font-size: 11px;
+    color: var(--text3); font-family: monospace; white-space: nowrap;
+  }
+  .help-divider { border: none; border-top: 0.5px solid var(--border); margin: 0; }
   </style>
 </head>
 <body>
@@ -362,6 +413,7 @@
   <div id="tabs">
     <div class="tab active" data-tab="cancionero">Cancionero</div>
     <div class="tab" data-tab="setlist" id="tab-setlist">Crear lista</div>
+    <button id="help-btn" title="Ayuda">?</button>
   </div>
 
   <div id="cancionero-panel">
@@ -439,6 +491,109 @@
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
       <button class="snav-btn" id="next-song" disabled></button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de ayuda -->
+<div id="help-modal-bg">
+  <div id="help-modal">
+    <div id="help-header">
+      <h2>&#9432; Cómo usar el Cancionero</h2>
+      <button id="help-close">&#10005;</button>
+    </div>
+    <div id="help-body">
+
+      <div class="help-section">
+        <h3>Buscar canciones</h3>
+        <div class="help-row">
+          <span class="help-icon">&#9906;</span>
+          <span class="help-text">Escribí cualquier palabra del <b>título o de la letra</b> para encontrar una canción. Los filtros de arriba (Alabanza, Himnos, etc.) te ayudan a acotar la búsqueda.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9834;</span>
+          <span class="help-text">Las canciones con el ícono <b>♫</b> tienen acordes disponibles para proyectar.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
+
+      <div class="help-section">
+        <h3>Ver una canción</h3>
+        <div class="help-row">
+          <span class="help-icon">&#128196;</span>
+          <span class="help-text">Tocá el nombre de cualquier canción para ver su letra diapositiva por diapositiva. Usá las <b>flechas ← →</b> para navegar.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9654;</span>
+          <span class="help-text"><b>Proyectar</b> abre la pantalla completa con la letra grande, ideal para mostrar en una pantalla o TV. <b>Con acordes</b> muestra toda la canción con los acordes para los músicos. <b>Con pausas</b> agrega una pantalla negra al inicio y al final.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9998;</span>
+          <span class="help-text">El botón de <b>editar</b> (lápiz) te permite corregir el texto de una diapositiva. Los cambios se guardan solo en este dispositivo y no afectan el archivo original.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
+
+      <div class="help-section">
+        <h3>Lista de canciones</h3>
+        <div class="help-row">
+          <span class="help-icon">&#43;</span>
+          <span class="help-text">Tocá el <b>+</b> en cualquier canción para agregarla a tu lista. Desde la pestaña <b>Crear lista</b> podés ordenarlas arrastrándolas y luego proyectarlas en secuencia.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9776;</span>
+          <span class="help-text"><b>Cargar lista</b> te permite pegar los nombres de las canciones como texto (uno por línea) y el cancionero las busca automáticamente, incluso si los nombres no son exactos.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#128190;</span>
+          <span class="help-text">La lista se guarda automáticamente en el dispositivo. Si hay una lista cargada para una reunión, aparece sola al abrir la app.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
+
+      <div class="help-section">
+        <h3>En la proyección</h3>
+        <div class="help-row">
+          <span class="help-icon">&#9700;</span>
+          <span class="help-text">En <b>modo letra</b> (pantalla completa): <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian de diapositiva, <span class="help-kbd">Shift ←</span> <span class="help-kbd">Shift →</span> cambian de canción, <span class="help-kbd">Esc</span> sale. En <b>modo acordes</b>: <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian directamente de canción.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#128241;</span>
+          <span class="help-text">En el celular podés <b>deslizar</b> hacia los costados para cambiar de canción.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9837;</span>
+          <span class="help-text">Las canciones con tono definido muestran controles de <b>transposición</b> (▲▼) para subir o bajar semitonos en el momento, sin modificar nada permanente.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#8722;</span>
+          <span class="help-text">El botón <b>−</b> (minimizar) te deja volver al cancionero sin cerrar la proyección. Podés retomarla con el botón <b>▶ Retomar</b>.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
+
+      <div class="help-section">
+        <h3>Metrónomo visual</h3>
+        <div class="help-row">
+          <span class="help-icon">&#9711;</span>
+          <span class="help-text">En <b>modo acordes</b>, las canciones con tempo definido muestran un metrónomo visual (un círculo que pulsa). Dura <b>10 segundos</b> para ayudar a encontrar el ritmo al inicio. Podés ajustar el tempo con <b>+ −</b> o tocando el círculo para iniciarlo.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
+
+      <div class="help-section">
+        <h3>Funciona sin internet</h3>
+        <div class="help-row">
+          <span class="help-icon">&#128267;</span>
+          <span class="help-text">El cancionero se puede <b>instalar en el celular o la computadora</b> como una app (buscá la opción "Agregar a pantalla de inicio" o "Instalar" en el navegador) y funciona completamente <b>sin conexión a internet</b>.</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -1781,6 +1936,18 @@ document.getElementById("metro-down").addEventListener("click", () => metroSetBp
 document.getElementById("metro-mob-beat").addEventListener("click", metroToggle);
 document.getElementById("metro-mob-up").addEventListener("click", () => metroSetBpm(metroBpm + 5));
 document.getElementById("metro-mob-down").addEventListener("click", () => metroSetBpm(metroBpm - 5));
+
+// ── Ayuda ─────────────────────────────────────────────────────
+function helpAbrir() { document.getElementById("help-modal-bg").classList.add("open"); }
+function helpCerrar() { document.getElementById("help-modal-bg").classList.remove("open"); }
+document.getElementById("help-btn").addEventListener("click", helpAbrir);
+document.getElementById("help-close").addEventListener("click", helpCerrar);
+document.getElementById("help-modal-bg").addEventListener("click", e => {
+  if (e.target === document.getElementById("help-modal-bg")) helpCerrar();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && document.getElementById("help-modal-bg").classList.contains("open")) helpCerrar();
+});
 
 // ── Service Worker (offline + auto-actualización) ──────────────
 if ("serviceWorker" in navigator) {
