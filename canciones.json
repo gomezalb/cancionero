@@ -565,11 +565,11 @@
     "slides": [
       "<b>/Cristo es la peña de Horeb que está brotando<br>agua de vida saludable para ti/<br><br>Ven a tomarla que es mas dulce que la miel,<br>refresca el alma, refresca todo tu ser<br><br>Cristo es la peña de Horeb que está brotando<br>agua de vida saludable para ti.</b>"
     ],
-     "acordes": [
-      "<b>[REm]Cristo es la peña de Horeb que está [LA7]brotando<br>agua de [LA7]vida saludable para [REm]ti<br>[RE7]Cristo es la peña de Horeb que está [SOLm]brotando<br>agua de [REm]vida [LA7]saludable para [REm]ti<br><br>Ven a [DO]tomarla que es mas dulce que la [FA]miel,<br>refresca el [LA7]alma, refresca todo tu [REm]ser<br><br>[REm]Cristo es la peña de [RE7]Horeb que está [SOLm]brotando<br>agua de [REm]vida [LA]saludable para [REm]ti.</b>"
-    ],
     "tono": "REm",
-    "carpeta": "C"
+    "carpeta": "C",
+    "acordes": [
+      "<b>[REm]Cristo es la peña de Horeb que está [LA7]brotando<br>agua de [LA7]vida saludable para [REm]ti<br>[RE7]Cristo es la peña de Horeb que está [SOLm]brotando<br>agua de [REm]vida [LA7]saludable para [REm]ti<br><br>Ven a [DO]tomarla que es mas dulce que la [FA]miel,<br>refresca el [LA7]alma, refresca todo tu [REm]ser<br><br>[REm]Cristo es la peña de [RE7]Horeb que está [SOLm]brotando<br>agua de [REm]vida [LA]saludable para [REm]ti.</b>"
+    ]
   },
   {
     "titulo": "Cristo moriste en una cruz",
@@ -1601,6 +1601,17 @@
       "<b>/Majestuoso, poderoso,<br>digno de loor.<br>Proclamemos su grandeza hoy/<br><br>/Jesucristo es Rey/<br>postrados hoy ante sus pies<br>Jesucristo es Rey</b>"
     ],
     "tono": "RE",
+    "carpeta": "M"
+  },
+  {
+    "titulo": "Mantos y palmas desplegando van",
+    "preview": "Mantos y palmas desplegando van,\u000balegre el pueblo de Jerusalén,\u000by allá a lo lejos se comienza ver,\u000ba Jesucristo que llegando está",
+    "slides": [
+      "<b>Mantos y palmas desplegando van,<br>alegre el pueblo de Jerusalén,<br>y allá a lo lejos se comienza ver,<br>a Jesucristo que llegando está</b>",
+      "<b>Y mientras mil voces resuenan por allí, <br>hosanna al que viene <br>en el nombre del Señor.<br>Y como un estruendo de gran aclamación,<br>prorrumpen en voz triunfal<br><br>/Hosanna<br>oh, oh, oh, hosanna al Rey/</b>",
+      "<b>Como en la entrada de Jerusalén<br>un día nosotros vamos a cantar<br>a Jesucristo que vendrá otra vez<br>para llevarnos a su eterno hogar</b>",
+      "<b>Y mientras mil voces resuenan por allí <br>Hosanna al que viene <br>en el nombre del Señor<br>Y como un estruendo de gran aclamación<br>Prorrumpen en voz triunfal<br><br>/Hosanna<br>oh, oh, oh, hosanna al Rey/</b>"
+    ],
     "carpeta": "M"
   },
   {
