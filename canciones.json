@@ -159,6 +159,10 @@
       "<b>Al estar ante ti<br>Adorando frente al mar de cristal<br>Entre la multitud<br>En asombro allí me habré de postrar<br>Y mi canto uniré<br>A millones proclamándote rey<br>Y mi voz oirás<br>Entre las multitudes cantar</b>",
       "<b>Digno es el cordero de Dios<br>El que fué inmolado en la cruz<br>Digno de la honra y el poder<br>La sabiduría suya es<br><br><br>Y al que está en el trono sea el honor<br>Santo, santo, santo es el Señor<br>Reina por los siglos con poder<br>Todo lo que existe es por él</b>"
     ],
+     "acordes": [
+      "<b>Al [DO]estar ante [SOL]ti<br>[REm]Adorando frente al mar de [LAm]cristal<br>Entre [DO]la multi[SOL]tud<br>En [REm]asombro allí me habré de [LAm]postrar<br>Y mi [DO]canto [SOL]uniré<br>A [REm]millones proclamándote [LAm]rey<br>Y mi [DO]voz [SOL]oirás<br>Entre [REm]las multitudes [LAm]cantar [SOL]</b>",
+      "<b>Digno es el [FA]cordero de [DO/MI]Dios<br>El que fué [FA]inmolado [MI]en la [LAm]cruz<br>Digno de la [FA]honra y [SOL]el [DO]poder<br>La [REm]sabiduría suya [SOL]es<br><br><br>Y al que está en el [FA]trono sea el [DO/MI]honor<br>Santo, santo, [FA]santo es [MI]el [LAm]Señor<br>Reina por los [FA]siglos [SOL]con [DO]poder<br>Todo lo que [REm]existe es por [LA#]él [SOL]</b>"
+    ],
     "tono": "DO",
     "carpeta": "A"
   },
@@ -476,6 +480,9 @@
     "preview": "/Celebrad a Cristo, celebrad;\u000bcelebrad a Cristo, celebrad/\n\u000bResucitó, resucitó.\u000bÉl vive para siempre; \u000bresucitó, resucitó.\n\u000bVamos a celebrar, ¡si!, \u000bVamos a celebrar, ¡si!\u000bVamos a celebrar, \nresucitó el Señor.",
     "slides": [
       "<b>/Celebrad a Cristo, celebrad;<br>celebrad a Cristo, celebrad/<br><br>Resucitó, resucitó.<br>Él vive para siempre; <br>resucitó, resucitó.<br><br>Vamos a celebrar, ¡si!, <br>Vamos a celebrar, ¡si!<br>Vamos a celebrar, <br>resucitó el Señor.</b>"
+    ],
+    "acordes": [
+      "<b>[MI]Cele[LA]brad a [SI]Cristo, [MI]celebrad [SOL] [LA] [MI]<br>cele[LA]brad a [SI]Cristo, [MI]celebrad [SOL] [LA] [MI]<br>Cele[LA]brad a [SI]Cristo, [MI]celebrad [SOL] [LA] [MI]<br>cele[LA]brad a [SI]Cristo, [MI]celebrad<br>[SI]Resucitó, [DO#m]resucitó.<br>Él [SI]vive para [DO#m]siempre; <br>[SI]resucitó, [DO#m]resucitó.<br><br>[LA]Vamos a [SI]celebrar, ¡si!, <br>[LA]Vamos a [SI]celebrar, ¡si!<br>[LA]Vamos a [SI]celebrar, <br>resucitó el [MI]Señor [SOL] [LA] [MI]</b>"
     ],
     "tono": "MI",
     "carpeta": "C"
@@ -1609,9 +1616,16 @@
     "slides": [
       "<b>Mantos y palmas desplegando van,<br>alegre el pueblo de Jerusalén,<br>y allá a lo lejos se comienza ver,<br>a Jesucristo que llegando está</b>",
       "<b>Y mientras mil voces resuenan por allí, <br>hosanna al que viene <br>en el nombre del Señor.<br>Y como un estruendo de gran aclamación,<br>prorrumpen en voz triunfal<br><br>/Hosanna<br>oh, oh, oh, hosanna al Rey/</b>",
-      "<b>Como en la entrada de Jerusalén<br>un día nosotros vamos a cantar<br>a Jesucristo que vendrá otra vez<br>para llevarnos a su eterno hogar</b>",
-      "<b>Y mientras mil voces resuenan por allí <br>Hosanna al que viene <br>en el nombre del Señor<br>Y como un estruendo de gran aclamación<br>Prorrumpen en voz triunfal<br><br>/Hosanna<br>oh, oh, oh, hosanna al Rey/</b>"
+      "<b>Como en la entrada de Jerusalén,<br>un día nosotros vamos a cantar,<br>a Jesucristo que vendrá otra vez,<br>para llevarnos a su eterno hogar</b>",
+      "<b>Y mientras mil voces resuenan por allí, <br>hosanna al que viene <br>en el nombre del Señor.<br>Y como un estruendo de gran aclamación,<br>prorrumpen en voz triunfal<br><br>/Hosanna<br>oh, oh, oh, hosanna al Rey/</b>"
     ],
+    "acordes": [
+      "<b>[LA]Mantos y [FA#m]palmas [SIm]desplegando van,<br>[MI]alegre el pueblo de [LA]Jerusalén,<br>y [LA]allá a lo [FA#m]lejos se [SIm]comienza ver,<br>[MI]a Jesucristo que [LA]llegando está</b>",
+      "<b>Y [FA#m]mientras mil voces [DO#m]resuenan por allí, <br>[RE]hosanna al que viene <br>en el [LA]nombre del Señor.<br>Y [FA#m]como un estruendo de [DO#m]gran aclamación,<br>[RE]prorrumpen en [SI]voz [MI]triunfal<br><br>/[LA]Hosa[RE]nna<br>oh, oh, [MI]oh, ho[RE]sanna al [LA]Rey/</b>",
+      "<b>[LA]Como en la [FA#m]entrada de [SIm]Jerusalén,<br>un [MI]día nosotros vamos a [LA]cantar,<br>a [LA]Jesu[FA#m]cristo que [SIm]vendrá otra vez,<br>[MI]para llevarnos a su [LA]eterno hogar</b>",
+      "<b>Y [FA#m]mientras mil voces [DO#m]resuenan por allí, <br>[RE]hosanna al que viene <br>en el [LA]nombre del Señor.<br>Y [FA#m]como un estruendo de [DO#m]gran aclamación,<br>[RE]prorrumpen en [SI]voz [MI]triunfal<br><br>/[LA]Hosa[RE]nna<br>oh, oh, [MI]oh, ho[RE]sanna al [LA]Rey/</b>"
+    ],
+    "tono": "LA",
     "carpeta": "M"
   },
   {
@@ -2279,6 +2293,10 @@
     "slides": [
       "<b>Señor, te adoramos,<br>proclamamos que eres rey.<br>Parado aquí, entre nosotros,<br>con alabanzas te adoramos.<br><br>//Mientras te adoramos construyes tu trono//<br><br>/ven, Señor Jesús, y toma tu lugar/</b>"
     ],
+    "acordes": [
+      "<b>[SOL]Señor, te [SIm]adora[MIm]mos,<br>[DO]procla[LAm]mamos que eres [RE]rey.<br>[MIm]Parado aquí, entre [SIm]noso[MIm]tros,<br>[DO]con ala[LAm]banzas te [RE]adoramos.<br><br>[SOL]Mientras te adoramos [MIm]construyes tu trono<br>[DO]Mientras te [RE]adoramos [SOL]construyes tu [MIm]trono<br>[DO]Mientras te [RE]adoramos [SOL]construyes tu [MIm]trono<br>/ven, [DO]Señor Jesús, y [RE]toma tu [SOL]lugar/</b>"
+    ],
+    "tono": "SOL",
     "carpeta": "S"
   },
   {
@@ -2343,6 +2361,9 @@
     "preview": "Solamente en Cristo, \u000bsolamente en él.\u000bSolamente en Cristo,\u000bhay Salvación.\u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo,\u000bHay Salvación. \u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo,\u000bSolamente en él",
     "slides": [
       "<b>Solamente en Cristo, <br>solamente en él.<br>Solamente en Cristo,<br>hay Salvación.<br>No hay otro nombre dado a los hombres,<br>solamente en Cristo,<br>Hay Salvación. <br>No hay otro nombre dado a los hombres,<br>solamente en Cristo,<br>Solamente en él</b>"
+    ],
+    "acordes": [
+      "<b>Solamente en [DO]Cristo, <br>solamente en [REm]él.<br>Solamente en [SOL]Cristo,<br>hay [DO]Salvación. [DO7]<br>No hay otro [FA]nombre [SOL] dado a los [MIm]hombres, [LAm]<br>solamente en [REm]Cristo, [SOL]<br>Hay [DO]Salvación. [DO7] <br>No hay otro [FA]nombre [SOL] dado a los [MIm]hombres, [LAm]<br>solamente en [REm]Cristo, [SOL]<br>Solamente en [DO]él</b>"
     ],
     "tono": "DO",
     "carpeta": "S"
