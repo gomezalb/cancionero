@@ -213,9 +213,10 @@
   },
   {
     "titulo": "Al que me ciñe de poder",
-    "preview": "/Al que me ciñe de poder,\u000baquel que mi victoria es,\u000bsolo a él alabaré, \u000bsolo a él exaltaré/\u000b\u000bde ti será mi alabanza,\u000ben la congregación,\u000bcantaré y alabare\u000b//tu nombre Señor.//",
+    "preview": "/Al que me ciñe de poder,\u000baquel que mi victoria es,\u000bsolo a él alabaré, \u000bsolo a él exaltaré/",
     "slides": [
-      "<b>/Al que me ciñe de poder,<br>aquel que mi victoria es,<br>solo a él alabaré, <br>solo a él exaltaré/<br><br>de ti será mi alabanza,<br>en la congregación,<br>cantaré y alabare<br>//tu nombre Señor.//</b>"
+      "<b>/Al que me ciñe de poder,<br>aquel que mi victoria es,<br>solo a él alabaré, <br>solo a él exaltaré/</b>",
+      "<b>De ti será mi alabanza,<br>en la congregación,<br>cantaré y alabare.<br><br>//Tu nombre Señor//</b>"
     ],
     "tono": "MI",
     "carpeta": "A"
@@ -589,9 +590,10 @@
   },
   {
     "titulo": "Cristo quiero caminar siempre contigo",
-    "preview": "/Cristo quiero caminar siempre contigo,\u000by tomarte fuerte de la mano,\u000by sentir tu fortaleza en mí/\u000b\u000bPorque en ti se encuentra\u000btoda fuerza de victoria…\u000bPorque el santo nombre\u000bde Jesús me liberó….\u000b\u000b/Porque en Cristo\u000bmi carga es ligera/",
+    "preview": "/Cristo quiero caminar siempre contigo,\u000by tomarte fuerte de la mano,\u000by sentir tu fortaleza en mí/",
     "slides": [
-      "<b>/Cristo quiero caminar siempre contigo,<br>y tomarte fuerte de la mano,<br>y sentir tu fortaleza en mí/<br><br>Porque en ti se encuentra<br>toda fuerza de victoria…<br>Porque el santo nombre<br>de Jesús me liberó….<br><br>/Porque en Cristo<br>mi carga es ligera/</b>"
+      "<b>/Cristo quiero caminar siempre contigo,<br>y tomarte fuerte de la mano,<br>y sentir tu fortaleza en mí/</b>",
+      "<b>Porque en ti se encuentra<br>toda fuerza de victoria.<br>Porque el santo nombre<br>de Jesús me liberó<br><br>/Porque en Cristo<br>mi carga es ligera/</b>"
     ],
     "tono": "LA",
     "carpeta": "C"
@@ -2739,9 +2741,9 @@
   },
   {
     "titulo": "Una mirada de fe",
-    "preview": "/Una mirada de fe, una mirada al Señor, \u000bes la que puede salvar al pecador./\u000b\u000b/Y si tu vienes a Cristo Jesús,\u000b él te perdonará;\u000bporque una mirada de fe \u000bes aquella que puede salvar/",
+    "preview": "/Una mirada de fe, una mirada al Señor, \u000bes la que puede salvar al pecador/\u000b\u000b/Y si tu vienes a Cristo Jesús,\u000b él te perdonará;\u000bporque una mirada de fe \u000bes aquella que puede salvar/",
     "slides": [
-      "<b>/Una mirada de fe, una mirada al Señor, <br>es la que puede salvar al pecador./<br><br>/Y si tu vienes a Cristo Jesús,<br> él te perdonará;<br>porque una mirada de fe <br>es aquella que puede salvar/</b>"
+      "<b>/Una mirada de fe, una mirada al Señor, <br>es la que puede salvar al pecador/<br><br>/Y si tu vienes a Cristo Jesús,<br> él te perdonará;<br>porque una mirada de fe <br>es aquella que puede salvar/</b>"
     ],
     "tono": "RE",
     "carpeta": "U"
