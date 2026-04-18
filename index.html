@@ -1231,7 +1231,17 @@ function fuzzyScore(a, b) {
   a = norm(a); b = norm(b);
   if (b.includes(a) || a.includes(b)) return 1;
   const wa = a.split(/\s+/), wb = b.split(/\s+/);
-  const comunes = wa.filter(w => w.length > 2 && wb.some(bw => bw.includes(w) || w.includes(bw)));
+  // Ambas palabras deben tener más de 2 chars para evitar que artículos como "a", "de" matcheen todo
+  const comunes = wa.filter(w => w.length > 2 && wb.some(bw => bw.length > 2 && (bw.includes(w) || w.includes(bw))));
+  if (comunes.length === 0) return 0;
+  return comunes.length / Math.max(wa.length, wb.length);
+}
+
+function fuzzyScorePreview(a, b) {
+  // Para previews: no usar includes() completo (demasiado permisivo en textos largos)
+  a = norm(a); b = norm(b);
+  const wa = a.split(/\s+/), wb = b.split(/\s+/);
+  const comunes = wa.filter(w => w.length > 3 && wb.some(bw => bw.length > 3 && (bw.includes(w) || w.includes(bw))));
   if (comunes.length === 0) return 0;
   return comunes.length / Math.max(wa.length, wb.length);
 }
@@ -1240,7 +1250,7 @@ function buscarFuzzy(linea) {
   let mejor = null, mejorScore = 0;
   for (const song of SONGS) {
     let score = fuzzyScore(linea, song.titulo);
-    if (song.preview) score = Math.max(score, fuzzyScore(linea, song.preview) * 0.85);
+    if (song.preview) score = Math.max(score, fuzzyScorePreview(linea, song.preview) * 0.85);
     if (score > mejorScore) { mejorScore = score; mejor = song; }
   }
   return { song: mejor, score: mejorScore };
