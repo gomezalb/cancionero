@@ -874,7 +874,11 @@ function loadFromStorage() {
 }
 
 // ── Utilidades ─────────────────────────────────────────────────
-function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+function norm(s) {
+  return s.toLowerCase()
+    .replace(/ñ/g, "n").replace(/ü/g, "u") // caracteres que NFD no elimina bien
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 function hlTexto(text, q) {
   if (!q) return text;
   const nq = norm(q), nt = norm(text);
@@ -1253,7 +1257,7 @@ document.getElementById("txt-interpretar").addEventListener("click", () => {
       .trim()
       .replace(/^[\d]+[.\-\)]\s*/, "")      // numeración: "1. " "1- " "1) "
       .replace(/^[•\-\*\+►▶→»·–—]\s*/, "") // viñetas y flechas
-      .replace(/^\p{Emoji}+\s*/u, "")        // emojis al inicio
+      .replace(/^[\p{Emoji}\uFE0F\u20E3\u200D\uFE0E\u2600-\u27BF]+\s*/u, "") // emojis al inicio (incl. variantes)
       .replace(/_/g, " ")                    // guiones bajos → espacio
       .replace(/\s+[A-Ga-g](?:do|re|mi|fa|sol|la|si|DO|RE|MI|FA|SOL|LA|SI)?-?\s*$/i, "") // tonalidad al final
       .replace(/\s+(do|re|mi|fa|sol|la|si)m?\s*$/i, "") // tonalidades en español al final (Do, LAm, MIm, etc.)
