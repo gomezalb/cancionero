@@ -2197,21 +2197,47 @@ function acordesTextoFromArray(acordesArr) {
   }).join("\n---\n");
 }
 
+function slidesATextoPlano(slides) {
+  // Convierte array de slides HTML a texto plano separado por ---
+  return slides.map(html =>
+    html.replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<[^>]+>/g, "")
+        .trim()
+  ).join("\n---\n");
+}
+
 function abrirEditorAcordes(cancion) {
   acordeCancionActual = cancion;
   const acordesLS = getAcordesLS();
   const override = acordesLS[cancion.titulo] || {};
   document.getElementById("acorde-form-titulo").textContent = cancion.titulo;
   document.getElementById("acorde-tono-input").value = override.tono ?? cancion.tono ?? "";
-  // Acordes: prioridad localStorage, luego JSON
+
+  // Prioridad: 1) localStorage, 2) acordes del JSON, 3) letra plana de los slides
   let textoAcordes = override.acordes_texto || "";
+  let sinAcordes = false;
   if (!textoAcordes && cancion.acordes) {
     textoAcordes = acordesTextoFromArray(cancion.acordes);
   }
-  document.getElementById("acorde-textarea").value = textoAcordes;
+  if (!textoAcordes && cancion.slides && cancion.slides.length) {
+    textoAcordes = slidesATextoPlano(cancion.slides);
+    sinAcordes = true;
+  }
+
+  const textarea = document.getElementById("acorde-textarea");
+  textarea.value = textoAcordes;
+
+  // Hint dinámico según si ya tiene acordes o no
+  const hint = document.querySelector(".acorde-hint");
+  if (sinAcordes) {
+    hint.innerHTML = `La letra ya está cargada. Agregá los acordes escribiendo <strong>[SOL]</strong>, <strong>[LAm]</strong>, etc. justo antes de la sílaba donde cambia. Separá las diapositivas con <strong>---</strong> en una línea sola.`;
+  } else {
+    hint.innerHTML = `Separá las diapositivas con <strong>---</strong> en una línea sola.`;
+  }
+
   document.getElementById("acorde-msg").textContent = "";
   document.getElementById("acorde-form").classList.add("visible");
-  document.getElementById("acorde-textarea").focus();
+  textarea.focus();
 }
 
 function cerrarEditorAcordes() {
