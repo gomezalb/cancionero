@@ -406,6 +406,123 @@
     color: var(--text3); font-family: monospace; white-space: nowrap;
   }
   .help-divider { border: none; border-top: 0.5px solid var(--border); margin: 0; }
+
+  /* ── Panel Editar ─────────────────────────────────────────── */
+  #editar-panel { display: none; flex-direction: column; gap: 1rem; }
+  .edit-section {
+    background: var(--bg2); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); overflow: hidden;
+  }
+  .edit-section-header {
+    padding: .75rem 1rem; font-size: 13px; font-weight: 500;
+    color: var(--text2); border-bottom: 0.5px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .edit-section-body { padding: .875rem 1rem; display: flex; flex-direction: column; gap: .75rem; }
+
+  /* Buscador interno del panel editar */
+  #edit-search-wrap { position: relative; }
+  #edit-search {
+    width: 100%; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .5rem .75rem;
+    font-size: 13px; outline: none; font-family: inherit; box-sizing: border-box;
+  }
+  #edit-search:focus { border-color: #555; }
+  #edit-search-results {
+    display: flex; flex-direction: column; gap: 4px; max-height: 220px;
+    overflow-y: auto; margin-top: 4px;
+  }
+  .edit-song-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 6px 10px; background: var(--bg3); border-radius: var(--radius);
+    border: 0.5px solid var(--border); cursor: pointer; transition: all .12s;
+    gap: .5rem;
+  }
+  .edit-song-row:hover { border-color: #444; background: #222; }
+  .edit-song-row-title { font-size: 13px; color: var(--text2); flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .edit-song-row-tono { font-size: 11px; color: var(--green-tx); font-weight: 500; flex-shrink: 0; }
+  .edit-song-row-acorde { font-size: 11px; color: #7eb8f7; flex-shrink: 0; }
+
+  /* Formulario edición de acordes/tono */
+  #acorde-form { display: none; flex-direction: column; gap: .75rem; }
+  #acorde-form.visible { display: flex; }
+  #acorde-form-titulo {
+    font-size: 14px; font-weight: 500; color: var(--text);
+    padding-bottom: .5rem; border-bottom: 0.5px solid var(--border);
+  }
+  .acorde-field label { font-size: 11px; color: var(--text4); display: block; margin-bottom: 4px; }
+  .acorde-field input, .acorde-field select {
+    width: 100%; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .45rem .75rem;
+    font-size: 13px; outline: none; font-family: inherit; box-sizing: border-box;
+  }
+  .acorde-field input:focus, .acorde-field select:focus { border-color: #555; }
+  #acorde-textarea {
+    width: 100%; min-height: 200px; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .65rem .75rem;
+    font-size: 13px; line-height: 1.7; resize: vertical; outline: none;
+    font-family: monospace; box-sizing: border-box;
+  }
+  #acorde-textarea:focus { border-color: #555; }
+  .acorde-hint { font-size: 11px; color: var(--text4); line-height: 1.5; }
+  .acorde-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  /* Nueva canción */
+  #nueva-form { display: flex; flex-direction: column; gap: .75rem; }
+  #nueva-titulo-input {
+    width: 100%; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .5rem .75rem;
+    font-size: 13px; outline: none; font-family: inherit; box-sizing: border-box;
+  }
+  #nueva-titulo-input:focus { border-color: #555; }
+  #nueva-tono-input {
+    width: 100%; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .5rem .75rem;
+    font-size: 13px; outline: none; font-family: inherit; box-sizing: border-box;
+  }
+  #nueva-tono-input:focus { border-color: #555; }
+  #nueva-letra-textarea {
+    width: 100%; min-height: 240px; background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text); border-radius: var(--radius); padding: .65rem .75rem;
+    font-size: 13px; line-height: 1.7; resize: vertical; outline: none;
+    font-family: inherit; box-sizing: border-box;
+  }
+  #nueva-letra-textarea:focus { border-color: #555; }
+
+  /* Botón exportar */
+  #export-section {
+    background: var(--bg2); border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg); padding: .875rem 1rem;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  }
+  #export-section p { font-size: 12px; color: var(--text4); margin: 0; line-height: 1.5; flex: 1; }
+  #btn-export-json {
+    background: var(--bg3); border: 0.5px solid var(--border2); color: var(--text2);
+    font-size: 12px; padding: 7px 14px; border-radius: 8px; cursor: pointer;
+    transition: all .12s; white-space: nowrap; flex-shrink: 0;
+  }
+  #btn-export-json:hover { border-color: #555; color: var(--text); }
+
+  /* Botones compartidos */
+  .btn-primary {
+    background: var(--green-bg); border: 0.5px solid var(--green-bd);
+    color: var(--green-tx); font-size: 12px; padding: 6px 14px;
+    border-radius: 8px; cursor: pointer; transition: all .12s;
+  }
+  .btn-primary:hover { background: #254a25; }
+  .btn-secondary {
+    background: none; border: 0.5px solid var(--border2); color: var(--text4);
+    font-size: 12px; padding: 6px 14px; border-radius: 8px; cursor: pointer; transition: all .12s;
+  }
+  .btn-secondary:hover { border-color: #555; color: var(--text2); }
+  .btn-danger {
+    background: none; border: 0.5px solid #5a2020; color: #c07070;
+    font-size: 12px; padding: 6px 14px; border-radius: 8px; cursor: pointer; transition: all .12s;
+  }
+  .btn-danger:hover { border-color: #8a3030; color: #e09090; }
+  .edit-msg { font-size: 12px; padding: 5px 0; }
+  .edit-msg.ok { color: var(--green-tx); }
+  .edit-msg.err { color: #c07070; }
   </style>
 </head>
 <body>
@@ -413,6 +530,7 @@
   <div id="tabs">
     <div class="tab active" data-tab="cancionero">Cancionero</div>
     <div class="tab" data-tab="setlist" id="tab-setlist">Crear lista</div>
+    <div class="tab" data-tab="editar">Editar</div>
     <button id="help-btn" title="Ayuda">?</button>
   </div>
 
@@ -494,6 +612,81 @@
     </div>
   </div>
 </div>
+
+  <!-- Panel Editar -->
+  <div id="editar-panel">
+
+    <!-- Sección: acordes y tonalidad -->
+    <div class="edit-section">
+      <div class="edit-section-header">
+        <span>Acordes y tonalidad</span>
+      </div>
+      <div class="edit-section-body">
+        <div id="edit-search-wrap">
+          <input id="edit-search" type="text" placeholder="Buscar canción..." autocomplete="off"/>
+        </div>
+        <div id="edit-search-results"></div>
+
+        <!-- Formulario de edición -->
+        <div id="acorde-form">
+          <div id="acorde-form-titulo"></div>
+          <div class="acorde-field">
+            <label>Tonalidad (ej: SOL, LAm, FA#)</label>
+            <input id="acorde-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
+          </div>
+          <div class="acorde-field">
+            <label>Acordes — escribí la letra con los acordes entre corchetes [SOL] en la línea correspondiente</label>
+            <textarea id="acorde-textarea" placeholder="Ejemplo:&#10;[SOL]Sublime gracia del [RE]Señor&#10;[DO]que a un [SOL]pecador salvó&#10;---&#10;[SOL]Cuán dulce el [RE]nombre de Jesús&#10;[DO]al [SOL]oído del [RE]creyente"></textarea>
+          </div>
+          <p class="acorde-hint">Separá las diapositivas con <strong>---</strong> en una línea sola.</p>
+          <div class="acorde-actions">
+            <button class="btn-primary" id="acorde-guardar">Guardar</button>
+            <button class="btn-secondary" id="acorde-cancelar">Cancelar</button>
+            <button class="btn-danger" id="acorde-borrar">Borrar acordes</button>
+          </div>
+          <div id="acorde-msg" class="edit-msg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección: nueva canción -->
+    <div class="edit-section">
+      <div class="edit-section-header">
+        <span>Agregar canción nueva</span>
+      </div>
+      <div class="edit-section-body">
+        <div id="nueva-form">
+          <div class="acorde-field">
+            <label>Título</label>
+            <input id="nueva-titulo-input" type="text" placeholder="Nombre de la canción"/>
+          </div>
+          <div class="acorde-field">
+            <label>Tonalidad (opcional, ej: SOL, LAm)</label>
+            <input id="nueva-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
+          </div>
+          <div class="acorde-field">
+            <label>Letra — separá las diapositivas con <strong>---</strong> en una línea sola</label>
+            <textarea id="nueva-letra-textarea" placeholder="Escribí o pegá la letra aquí&#10;&#10;---&#10;&#10;Segunda diapositiva..."></textarea>
+          </div>
+          <div class="acorde-actions">
+            <button class="btn-primary" id="nueva-guardar">Guardar canción</button>
+            <button class="btn-secondary" id="nueva-limpiar">Limpiar</button>
+          </div>
+          <div id="nueva-msg" class="edit-msg"></div>
+        </div>
+
+        <!-- Lista de canciones nuevas guardadas -->
+        <div id="nuevas-guardadas"></div>
+      </div>
+    </div>
+
+    <!-- Exportar JSON -->
+    <div id="export-section">
+      <p>Exportá el cancionero completo con todos los cambios para hacer push desde tu computadora.</p>
+      <button id="btn-export-json">&#8595; Exportar canciones.json</button>
+    </div>
+
+  </div>
 
 <!-- Modal de ayuda -->
 <div id="help-modal-bg">
@@ -1024,6 +1217,7 @@ async function cargarCanciones() { // retorna promesa — cargarSetlist() se enc
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     SONGS = await res.json();
     setlist = setlist.filter(t => SONGS.some(s => s.titulo === t));
+    aplicarLocalStorageAlInicio();
     document.getElementById("loading").style.display = "none";
     updateBadge(); renderList();
     if (activeTab === "setlist") renderSetlist();
@@ -1118,7 +1312,9 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("active")); t.classList.add("active");
   document.getElementById("cancionero-panel").style.display = activeTab === "cancionero" ? "block" : "none";
   document.getElementById("setlist-panel").style.display = activeTab === "setlist" ? "flex" : "none";
+  document.getElementById("editar-panel").style.display = activeTab === "editar" ? "flex" : "none";
   if (activeTab === "setlist") renderSetlist();
+  if (activeTab === "editar") renderNuevasGuardadas();
 }));
 
 // ── Cancionero ─────────────────────────────────────────────────
@@ -1344,6 +1540,7 @@ function openSetlist(queue, pauseEdges) { mostrarAcordes = false; viewerQueue = 
 function showViewer(label) {
   document.getElementById("cancionero-panel").style.display = "none";
   document.getElementById("setlist-panel").style.display = "none";
+  document.getElementById("editar-panel").style.display = "none";
   document.getElementById("tabs").style.display = "none";
   document.getElementById("viewer").style.display = "flex";
   document.getElementById("back").innerHTML = label;
@@ -1583,7 +1780,8 @@ document.getElementById("edit-limpiar-todas").addEventListener("click", () => {
 document.getElementById("back").addEventListener("click", () => {
   document.getElementById("viewer").style.display = "none"; document.getElementById("tabs").style.display = "flex";
   if (activeTab === "cancionero") document.getElementById("cancionero-panel").style.display = "block";
-  else { document.getElementById("setlist-panel").style.display = "flex"; renderSetlist(); }
+  else if (activeTab === "setlist") { document.getElementById("setlist-panel").style.display = "flex"; renderSetlist(); }
+  else if (activeTab === "editar") { document.getElementById("editar-panel").style.display = "flex"; renderNuevasGuardadas(); }
 });
 document.getElementById("prev").addEventListener("click", () => goSlide(-1));
 document.getElementById("next").addEventListener("click", () => goSlide(1));
@@ -1776,6 +1974,7 @@ document.getElementById("fs-minimize").addEventListener("click", () => {
   o.style.display = "none";
   document.getElementById("cancionero-panel").style.display = "none";
   document.getElementById("setlist-panel").style.display = "none";
+  document.getElementById("editar-panel").style.display = "none";
   document.getElementById("tabs").style.display = "none";
   document.getElementById("viewer").style.display = "flex";
   fsMinimizado = true; actualizarBotonRetomar();
@@ -1950,6 +2149,246 @@ document.getElementById("metro-down").addEventListener("click", () => metroSetBp
 document.getElementById("metro-mob-beat").addEventListener("click", metroToggle);
 document.getElementById("metro-mob-up").addEventListener("click", () => metroSetBpm(metroBpm + 5));
 document.getElementById("metro-mob-down").addEventListener("click", () => metroSetBpm(metroBpm - 5));
+
+
+// ── Panel Editar ───────────────────────────────────────────────
+const LS_ACORDES  = "cancionero_acordes";  // { titulo: { tono, acordes_texto } }
+const LS_NUEVAS   = "cancionero_nuevas";   // [ { titulo, tono, slides, preview, carpeta } ]
+
+function getAcordesLS() { try { return JSON.parse(localStorage.getItem(LS_ACORDES)) || {}; } catch(e) { return {}; } }
+function setAcordesLS(obj) { try { localStorage.setItem(LS_ACORDES, JSON.stringify(obj)); } catch(e) {} }
+function getNuevasLS() { try { return JSON.parse(localStorage.getItem(LS_NUEVAS)) || []; } catch(e) { return []; } }
+function setNuevasLS(arr) { try { localStorage.setItem(LS_NUEVAS, JSON.stringify(arr)); } catch(e) {} }
+
+// ── Sección acordes/tono ───────────────────────────────────────
+let acordeCancionActual = null;
+
+function renderEditSearch(q) {
+  const wrap = document.getElementById("edit-search-results");
+  wrap.innerHTML = "";
+  if (!q || q.length < 1) return;
+  const qn = norm(q);
+  // Buscar en SONGS + nuevas del LS
+  const todas = [...SONGS, ...getNuevasLS().filter(n => !SONGS.find(s => s.titulo === n.titulo))];
+  const encontradas = todas.filter(c => norm(c.titulo).includes(qn)).slice(0, 8);
+  const acordesLS = getAcordesLS();
+  encontradas.forEach(c => {
+    const override = acordesLS[c.titulo] || {};
+    const tono = override.tono ?? c.tono ?? "";
+    const tieneAcordes = override.acordes_texto || c.acordes;
+    const row = document.createElement("div");
+    row.className = "edit-song-row";
+    row.innerHTML = `
+      <span class="edit-song-row-title">${c.titulo}</span>
+      ${tono ? `<span class="edit-song-row-tono">${tono}</span>` : ""}
+      ${tieneAcordes ? `<span class="edit-song-row-acorde">♫</span>` : ""}`;
+    row.addEventListener("click", () => abrirEditorAcordes(c));
+    wrap.appendChild(row);
+  });
+  if (!encontradas.length) wrap.innerHTML = `<div style="font-size:12px;color:var(--text4);padding:6px 0">Sin resultados</div>`;
+}
+
+function acordesTextoFromArray(acordesArr) {
+  // Convertir array de slides a texto editable
+  if (!acordesArr || !acordesArr.length) return "";
+  return acordesArr.map(slide => {
+    // slide puede ser string HTML o array de líneas
+    if (typeof slide === "string") {
+      return slide.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
+    }
+    return slide.join("\n");
+  }).join("\n---\n");
+}
+
+function abrirEditorAcordes(cancion) {
+  acordeCancionActual = cancion;
+  const acordesLS = getAcordesLS();
+  const override = acordesLS[cancion.titulo] || {};
+  document.getElementById("acorde-form-titulo").textContent = cancion.titulo;
+  document.getElementById("acorde-tono-input").value = override.tono ?? cancion.tono ?? "";
+  // Acordes: prioridad localStorage, luego JSON
+  let textoAcordes = override.acordes_texto || "";
+  if (!textoAcordes && cancion.acordes) {
+    textoAcordes = acordesTextoFromArray(cancion.acordes);
+  }
+  document.getElementById("acorde-textarea").value = textoAcordes;
+  document.getElementById("acorde-msg").textContent = "";
+  document.getElementById("acorde-form").classList.add("visible");
+  document.getElementById("acorde-textarea").focus();
+}
+
+function cerrarEditorAcordes() {
+  document.getElementById("acorde-form").classList.remove("visible");
+  acordeCancionActual = null;
+  document.getElementById("edit-search").value = "";
+  document.getElementById("edit-search-results").innerHTML = "";
+}
+
+document.getElementById("edit-search").addEventListener("input", e => renderEditSearch(e.target.value));
+
+document.getElementById("acorde-guardar").addEventListener("click", () => {
+  if (!acordeCancionActual) return;
+  const tono = document.getElementById("acorde-tono-input").value.trim();
+  const texto = document.getElementById("acorde-textarea").value.trim();
+  const obj = getAcordesLS();
+  obj[acordeCancionActual.titulo] = { tono, acordes_texto: texto };
+  setAcordesLS(obj);
+  // Actualizar SONGS en memoria
+  const song = SONGS.find(s => s.titulo === acordeCancionActual.titulo);
+  if (song) {
+    if (tono) song.tono = tono; else delete song.tono;
+    if (texto) song.acordes = textoToAcordesArray(texto); else delete song.acordes;
+  }
+  document.getElementById("acorde-msg").textContent = "✓ Guardado";
+  document.getElementById("acorde-msg").className = "edit-msg ok";
+  renderList();
+});
+
+document.getElementById("acorde-cancelar").addEventListener("click", cerrarEditorAcordes);
+
+document.getElementById("acorde-borrar").addEventListener("click", () => {
+  if (!acordeCancionActual) return;
+  const obj = getAcordesLS();
+  delete obj[acordeCancionActual.titulo];
+  setAcordesLS(obj);
+  const song = SONGS.find(s => s.titulo === acordeCancionActual.titulo);
+  if (song) { delete song.tono; delete song.acordes; }
+  document.getElementById("acorde-msg").textContent = "Acordes eliminados";
+  document.getElementById("acorde-msg").className = "edit-msg";
+  document.getElementById("acorde-tono-input").value = "";
+  document.getElementById("acorde-textarea").value = "";
+  renderList();
+});
+
+// Convertir texto con --- a array de slides (igual que generar_canciones.py)
+function textoToAcordesArray(texto) {
+  return texto.split(/^---$/m).map(bloque => bloque.trim()).filter(Boolean);
+}
+
+// ── Sección nueva canción ──────────────────────────────────────
+function textoToSlides(texto) {
+  // Divide por --- y convierte cada bloque a HTML en negrita
+  return texto.split(/^---$/m).map(bloque => {
+    const lineas = bloque.trim().split(/\n/);
+    const html = lineas.map((l, i) => {
+      const t = l.trim();
+      if (!t) return i === 0 ? "" : "<br>";
+      return `<b>${t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</b>`;
+    }).filter((l, i, arr) => !(l === "" && (i === 0 || i === arr.length - 1)));
+    return html.join("<br>");
+  }).filter(Boolean);
+}
+
+document.getElementById("nueva-guardar").addEventListener("click", () => {
+  const titulo = document.getElementById("nueva-titulo-input").value.trim();
+  const tono   = document.getElementById("nueva-tono-input").value.trim();
+  const texto  = document.getElementById("nueva-letra-textarea").value.trim();
+  const msg    = document.getElementById("nueva-msg");
+  if (!titulo) { msg.textContent = "El título es obligatorio."; msg.className = "edit-msg err"; return; }
+  if (!texto)  { msg.textContent = "La letra no puede estar vacía."; msg.className = "edit-msg err"; return; }
+  if (SONGS.find(s => norm(s.titulo) === norm(titulo))) {
+    msg.textContent = "Ya existe una canción con ese nombre."; msg.className = "edit-msg err"; return;
+  }
+  const slides  = textoToSlides(texto);
+  const preview = texto.split(/^---$/m)[0].trim();
+  const nueva = { titulo, preview, slides, carpeta: "Nuevas", nueva: true };
+  if (tono) nueva.tono = tono;
+  // Guardar en LS y en SONGS
+  const arr = getNuevasLS();
+  arr.push(nueva);
+  setNuevasLS(arr);
+  SONGS.push(nueva);
+  SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
+  // Limpiar form
+  document.getElementById("nueva-titulo-input").value = "";
+  document.getElementById("nueva-tono-input").value = "";
+  document.getElementById("nueva-letra-textarea").value = "";
+  msg.textContent = `✓ "${titulo}" guardada`;
+  msg.className = "edit-msg ok";
+  renderList();
+  renderNuevasGuardadas();
+});
+
+document.getElementById("nueva-limpiar").addEventListener("click", () => {
+  document.getElementById("nueva-titulo-input").value = "";
+  document.getElementById("nueva-tono-input").value = "";
+  document.getElementById("nueva-letra-textarea").value = "";
+  document.getElementById("nueva-msg").textContent = "";
+});
+
+function renderNuevasGuardadas() {
+  const wrap = document.getElementById("nuevas-guardadas");
+  const nuevas = getNuevasLS();
+  if (!nuevas.length) { wrap.innerHTML = ""; return; }
+  wrap.innerHTML = `<div style="font-size:11px;color:var(--text4);margin-top:.5rem;margin-bottom:.35rem">Guardadas en este dispositivo (${nuevas.length}):</div>` +
+    nuevas.map((c, i) => `
+      <div class="edit-song-row" style="cursor:default">
+        <span class="edit-song-row-title">${c.titulo}</span>
+        ${c.tono ? `<span class="edit-song-row-tono">${c.tono}</span>` : ""}
+        <button class="btn-danger" style="padding:2px 8px;font-size:11px" data-i="${i}">&#10005;</button>
+      </div>`).join("");
+  wrap.querySelectorAll(".btn-danger").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const i = parseInt(btn.dataset.i);
+      const arr = getNuevasLS();
+      const titulo = arr[i].titulo;
+      arr.splice(i, 1);
+      setNuevasLS(arr);
+      // Quitar de SONGS
+      const idx = SONGS.findIndex(s => s.titulo === titulo && s.carpeta === "Nuevas");
+      if (idx >= 0) SONGS.splice(idx, 1);
+      renderNuevasGuardadas();
+      renderList();
+    });
+  });
+}
+
+// ── Exportar JSON ──────────────────────────────────────────────
+document.getElementById("btn-export-json").addEventListener("click", () => {
+  const acordesLS = getAcordesLS();
+  const nuevasLS  = getNuevasLS();
+  // Partir de los SONGS originales (sin las nuevas del LS que ya pueden estar en SONGS)
+  const exportado = SONGS
+    .filter(s => s.carpeta !== "Nuevas" || !getNuevasLS().find(n => n.titulo === s.titulo))
+    .map(s => {
+      const c = { ...s };
+      const ov = acordesLS[s.titulo];
+      if (ov) {
+        if (ov.tono) c.tono = ov.tono; else delete c.tono;
+        if (ov.acordes_texto) c.acordes = textoToAcordesArray(ov.acordes_texto); else delete c.acordes;
+      }
+      return c;
+    });
+  // Agregar canciones nuevas
+  nuevasLS.forEach(n => {
+    if (!exportado.find(s => s.titulo === n.titulo)) exportado.push(n);
+  });
+  exportado.sort((a,b) => a.titulo.localeCompare(b.titulo));
+  const blob = new Blob([JSON.stringify(exportado, null, 2)], { type: "application/json" });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement("a");
+  a.href = url; a.download = "canciones.json"; a.click();
+  URL.revokeObjectURL(url);
+});
+
+// ── Cargar acordes y canciones nuevas del LS al iniciar ────────
+function aplicarLocalStorageAlInicio() {
+  const acordesLS = getAcordesLS();
+  Object.entries(acordesLS).forEach(([titulo, ov]) => {
+    const song = SONGS.find(s => s.titulo === titulo);
+    if (!song) return;
+    if (ov.tono !== undefined) { if (ov.tono) song.tono = ov.tono; else delete song.tono; }
+    if (ov.acordes_texto !== undefined) {
+      if (ov.acordes_texto) song.acordes = textoToAcordesArray(ov.acordes_texto);
+      else delete song.acordes;
+    }
+  });
+  const nuevasLS = getNuevasLS();
+  nuevasLS.forEach(n => {
+    if (!SONGS.find(s => s.titulo === n.titulo)) SONGS.push(n);
+  });
+  SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
+}
 
 // ── Ayuda ─────────────────────────────────────────────────────
 function helpAbrir() { document.getElementById("help-modal-bg").classList.add("open"); }
