@@ -523,6 +523,41 @@
   .edit-msg { font-size: 12px; padding: 5px 0; }
   .edit-msg.ok { color: var(--green-tx); }
   .edit-msg.err { color: #c07070; }
+
+  /* ── Popup de acordes ────────────────────────────────────── */
+  #acorde-popup {
+    position: fixed; z-index: 9500;
+    background: var(--bg2); border: 0.5px solid var(--border2);
+    border-radius: var(--radius-lg); padding: .65rem .75rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,.6);
+    display: none; flex-direction: column; gap: .5rem;
+    min-width: 260px; max-width: 320px;
+    touch-action: none;
+  }
+  #acorde-popup.open { display: flex; }
+  #acorde-popup-title {
+    font-size: 10px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: .06em; color: var(--text4); margin-bottom: 2px;
+  }
+  .acorde-popup-group { display: flex; flex-direction: column; gap: 3px; }
+  .acorde-popup-group-label {
+    font-size: 10px; color: var(--text4); margin-top: 2px;
+  }
+  .acorde-popup-row { display: flex; flex-wrap: wrap; gap: 4px; }
+  .acorde-popup-btn {
+    background: var(--bg3); border: 0.5px solid var(--border2);
+    color: var(--text2); font-size: 12px; font-weight: 500;
+    padding: 4px 8px; border-radius: 6px; cursor: pointer;
+    transition: all .1s; white-space: nowrap; line-height: 1.4;
+  }
+  .acorde-popup-btn:hover, .acorde-popup-btn:active {
+    background: #2e2e2e; border-color: #555; color: var(--text);
+  }
+  #acorde-popup-close {
+    align-self: flex-end; background: none; border: none;
+    color: var(--text4); font-size: 16px; cursor: pointer;
+    padding: 0; line-height: 1; margin-top: -2px;
+  }
   </style>
 </head>
 <body>
@@ -684,6 +719,16 @@
   </div>
 </div>
 
+
+
+<!-- Popup selector de acordes -->
+<div id="acorde-popup">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <span id="acorde-popup-title">Insertar acorde</span>
+    <button id="acorde-popup-close">&#10005;</button>
+  </div>
+  <div id="acorde-popup-grupos"></div>
+</div>
 
 <!-- Modal de ayuda -->
 <div id="help-modal-bg">
@@ -2267,6 +2312,40 @@ function cerrarEditorAcordes() {
 
 document.getElementById("edit-search").addEventListener("input", e => renderEditSearch(e.target.value));
 
+// Transposición automática al cambiar tonalidad en el editor de acordes
+let acordeTonoPrevio = "";
+document.getElementById("acorde-tono-input").addEventListener("focus", function() {
+  acordeTonoPrevio = this.value.trim();
+});
+document.getElementById("acorde-tono-input").addEventListener("change", function() {
+  const tonoNuevo   = this.value.trim();
+  const tonoOriginal = acordeTonoPrevio;
+  if (!tonoOriginal || !tonoNuevo || tonoOriginal === tonoNuevo) {
+    acordeTonoPrevio = tonoNuevo;
+    return;
+  }
+  const idxOrig = NOTA_A_IDX[tonoOriginal.replace(/m$/,"").replace(/maj.*/,"").trim()];
+  const idxNuevo = NOTA_A_IDX[tonoNuevo.replace(/m$/,"").replace(/maj.*/,"").trim()];
+  if (idxOrig === undefined || idxNuevo === undefined) {
+    acordeTonoPrevio = tonoNuevo;
+    return;
+  }
+  const semis = ((idxNuevo - idxOrig) + 12) % 12;
+  if (semis === 0) { acordeTonoPrevio = tonoNuevo; return; }
+  // Transponer todos los acordes [XXX] en el textarea
+  const textarea = document.getElementById("acorde-textarea");
+  if (!textarea.value.trim()) { acordeTonoPrevio = tonoNuevo; return; }
+  textarea.value = textarea.value.replace(/\[([^\]]+)\]/g, (_, acorde) => {
+    return "[" + transponerNota(acorde, semis) + "]";
+  });
+  acordeTonoPrevio = tonoNuevo;
+  // Feedback visual
+  const msg = document.getElementById("acorde-msg");
+  msg.textContent = `Acordes transposicionados ${semis > 6 ? semis - 12 : semis > 0 ? "+" + semis : semis} semitono${Math.abs(semis) !== 1 ? "s" : ""}`;
+  msg.className = "edit-msg ok";
+  setTimeout(() => { if (msg.textContent.startsWith("Acordes")) msg.textContent = ""; }, 3000);
+});
+
 document.getElementById("acorde-guardar").addEventListener("click", () => {
   if (!acordeCancionActual) return;
   const tono = document.getElementById("acorde-tono-input").value.trim();
@@ -2430,6 +2509,148 @@ function aplicarLocalStorageAlInicio() {
   });
   SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
 }
+
+
+// ── Popup selector de acordes ──────────────────────────────────
+const ACORDES_GRUPOS = [
+  {
+    label: "Mayor",
+    acordes: ["DO","DO#","RE","RE#","MI","FA","FA#","SOL","SOL#","LA","LA#","SI"]
+  },
+  {
+    label: "Menor",
+    acordes: ["DOm","DO#m","REm","RE#m","MIm","FAm","FA#m","SOLm","SOL#m","LAm","LA#m","SIm"]
+  },
+  {
+    label: "Séptima dominante",
+    acordes: ["DO7","DO#7","RE7","RE#7","MI7","FA7","FA#7","SOL7","SOL#7","LA7","LA#7","SI7"]
+  },
+  {
+    label: "Menor séptima",
+    acordes: ["DOm7","DO#m7","REm7","RE#m7","MIm7","FAm7","FA#m7","SOLm7","SOL#m7","LAm7","LA#m7","SIm7"]
+  },
+  {
+    label: "Mayor séptima",
+    acordes: ["DOmaj7","DO#maj7","REmaj7","RE#maj7","MImaj7","FAmaj7","FA#maj7","SOLmaj7","SOL#maj7","LAmaj7","LA#maj7","SImaj7"]
+  },
+  {
+    label: "Suspendido",
+    acordes: ["DOsus2","DOsus4","REsus2","REsus4","MIsus4","FAsus2","FAsus4","SOLsus2","SOLsus4","LAsus2","LAsus4","SIsus4"]
+  }
+];
+
+let popupCursorPos = null; // posición donde se va a insertar
+
+function buildPopupGrupos() {
+  const wrap = document.getElementById("acorde-popup-grupos");
+  wrap.innerHTML = "";
+  ACORDES_GRUPOS.forEach(g => {
+    const grp = document.createElement("div");
+    grp.className = "acorde-popup-group";
+    grp.innerHTML = `<div class="acorde-popup-group-label">${g.label}</div><div class="acorde-popup-row"></div>`;
+    const row = grp.querySelector(".acorde-popup-row");
+    g.acordes.forEach(a => {
+      const btn = document.createElement("button");
+      btn.className = "acorde-popup-btn";
+      btn.textContent = a;
+      btn.addEventListener("mousedown", e => {
+        e.preventDefault(); // evitar que el textarea pierda foco
+        insertarAcordeEnTexarea(a);
+        cerrarAcordePopup();
+      });
+      row.appendChild(btn);
+    });
+    wrap.appendChild(grp);
+  });
+}
+
+function abrirAcordePopup(x, y, posicionCursor) {
+  popupCursorPos = posicionCursor;
+  buildPopupGrupos();
+  const popup = document.getElementById("acorde-popup");
+  popup.classList.add("open");
+
+  // Posicionar evitando que se salga de la pantalla
+  const vw = window.innerWidth, vh = window.innerHeight;
+  let left = x, top = y + 8;
+  popup.style.left = "0"; popup.style.top = "0"; // reset para medir
+  const pw = popup.offsetWidth || 280;
+  const ph = popup.offsetHeight || 300;
+  if (left + pw > vw - 8) left = vw - pw - 8;
+  if (top + ph > vh - 8) top = y - ph - 8;
+  if (left < 8) left = 8;
+  if (top < 8) top = 8;
+  popup.style.left = left + "px";
+  popup.style.top  = top  + "px";
+}
+
+function cerrarAcordePopup() {
+  document.getElementById("acorde-popup").classList.remove("open");
+  popupCursorPos = null;
+}
+
+function insertarAcordeEnTexarea(acorde) {
+  const ta = document.getElementById("acorde-textarea");
+  const texto = ta.value;
+  const pos = popupCursorPos !== null ? popupCursorPos : ta.selectionStart;
+  const insercion = "[" + acorde + "]";
+  ta.value = texto.slice(0, pos) + insercion + texto.slice(pos);
+  const nuevaPos = pos + insercion.length;
+  ta.focus();
+  ta.setSelectionRange(nuevaPos, nuevaPos);
+}
+
+// Cerrar al hacer clic fuera
+document.addEventListener("mousedown", e => {
+  const popup = document.getElementById("acorde-popup");
+  if (popup.classList.contains("open") && !popup.contains(e.target)) {
+    cerrarAcordePopup();
+  }
+});
+document.getElementById("acorde-popup-close").addEventListener("click", cerrarAcordePopup);
+
+// ── Desktop: clic derecho en el textarea ──────────────────────
+document.getElementById("acorde-textarea").addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const ta = e.currentTarget;
+  abrirAcordePopup(e.clientX, e.clientY, ta.selectionStart);
+});
+
+// ── Móvil/tablet: long press en el textarea ───────────────────
+(function() {
+  const ta = document.getElementById("acorde-textarea");
+  let longPressTimer = null;
+  let longPressFired = false;
+  let touchX = 0, touchY = 0;
+
+  ta.addEventListener("touchstart", e => {
+    longPressFired = false;
+    const touch = e.touches[0];
+    touchX = touch.clientX;
+    touchY = touch.clientY;
+
+    longPressTimer = setTimeout(() => {
+      longPressFired = true;
+      // Obtener posición del cursor en el textarea al momento del toque
+      // Usamos selectionStart como mejor aproximación disponible
+      const pos = ta.selectionStart;
+      abrirAcordePopup(touchX, touchY, pos);
+    }, 600);
+  }, { passive: true });
+
+  ta.addEventListener("touchmove", e => {
+    // Cancelar si se mueve mucho
+    const touch = e.touches[0];
+    if (Math.abs(touch.clientX - touchX) > 10 || Math.abs(touch.clientY - touchY) > 10) {
+      clearTimeout(longPressTimer);
+    }
+  }, { passive: true });
+
+  ta.addEventListener("touchend", e => {
+    clearTimeout(longPressTimer);
+    if (longPressFired) e.preventDefault();
+  });
+})();
 
 // ── Ayuda ─────────────────────────────────────────────────────
 function helpAbrir() { document.getElementById("help-modal-bg").classList.add("open"); }
