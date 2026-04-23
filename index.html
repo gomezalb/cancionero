@@ -667,7 +667,10 @@
             <input id="acorde-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
           </div>
           <div class="acorde-field">
-            <label>Acordes — escribí la letra con los acordes entre corchetes [SOL] en la línea correspondiente</label>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+              <label style="margin:0">Acordes — escribí la letra con los acordes entre corchetes [SOL] en la línea correspondiente</label>
+              <button id="btn-insertar-acorde" class="btn-secondary" style="flex-shrink:0;margin-left:8px;padding:3px 10px;font-size:11px">+ Acorde</button>
+            </div>
             <textarea id="acorde-textarea" placeholder="Ejemplo:&#10;[SOL]Sublime gracia del [RE]Señor&#10;[DO]que a un [SOL]pecador salvó&#10;---&#10;[SOL]Cuán dulce el [RE]nombre de Jesús&#10;[DO]al [SOL]oído del [RE]creyente"></textarea>
           </div>
           <p class="acorde-hint">Separá las diapositivas con <strong>---</strong> en una línea sola.</p>
@@ -2609,41 +2612,13 @@ document.getElementById("acorde-textarea").addEventListener("contextmenu", e => 
   abrirAcordePopup(e.clientX, e.clientY, ta.selectionStart);
 });
 
-// ── Móvil/tablet: long press en el textarea ───────────────────
-(function() {
+// ── Botón insertar acorde (móvil y desktop) ───────────────────
+document.getElementById("btn-insertar-acorde").addEventListener("click", () => {
   const ta = document.getElementById("acorde-textarea");
-  let longPressTimer = null;
-  let longPressFired = false;
-  let touchX = 0, touchY = 0;
-
-  ta.addEventListener("touchstart", e => {
-    longPressFired = false;
-    const touch = e.touches[0];
-    touchX = touch.clientX;
-    touchY = touch.clientY;
-
-    longPressTimer = setTimeout(() => {
-      longPressFired = true;
-      // Obtener posición del cursor en el textarea al momento del toque
-      // Usamos selectionStart como mejor aproximación disponible
-      const pos = ta.selectionStart;
-      abrirAcordePopup(touchX, touchY, pos);
-    }, 600);
-  }, { passive: true });
-
-  ta.addEventListener("touchmove", e => {
-    // Cancelar si se mueve mucho
-    const touch = e.touches[0];
-    if (Math.abs(touch.clientX - touchX) > 10 || Math.abs(touch.clientY - touchY) > 10) {
-      clearTimeout(longPressTimer);
-    }
-  }, { passive: true });
-
-  ta.addEventListener("touchend", e => {
-    clearTimeout(longPressTimer);
-    if (longPressFired) e.preventDefault();
-  });
-})();
+  const btn = document.getElementById("btn-insertar-acorde");
+  const rect = btn.getBoundingClientRect();
+  abrirAcordePopup(rect.left, rect.bottom, ta.selectionStart);
+});
 
 // ── Ayuda ─────────────────────────────────────────────────────
 function helpAbrir() { document.getElementById("help-modal-bg").classList.add("open"); }
