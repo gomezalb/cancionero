@@ -573,6 +573,34 @@
     background: #e05050; display: none;
   }
   #tab-setlist .notif-dot.visible { display: block; }
+
+  /* ── Popup novedad ──────────────────────────────────────── */
+  #novedad-bg {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.7); z-index: 9100;
+    align-items: flex-end; justify-content: center;
+    padding: 0 0 1.5rem;
+  }
+  #novedad-bg.open { display: flex; }
+  #novedad-card {
+    background: var(--bg2); border: 0.5px solid var(--border2);
+    border-radius: var(--radius-lg); width: 100%; max-width: 480px;
+    padding: 1.25rem; display: flex; flex-direction: column; gap: .85rem;
+    margin: 0 1rem;
+    animation: slideUp .25s ease;
+  }
+  @keyframes slideUp { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  #novedad-card h3 {
+    font-size: 14px; font-weight: 600; color: var(--text); margin: 0;
+    display: flex; align-items: center; gap: .4rem;
+  }
+  #novedad-card p { font-size: 13px; color: var(--text2); line-height: 1.6; margin: 0; }
+  #novedad-card p b { color: var(--text); font-weight: 500; }
+  #novedad-actions { display: flex; gap: 8px; justify-content: flex-end; }
+  #novedad-help { background: none; border: 0.5px solid var(--border2); color: var(--text4); font-size: 12px; padding: 6px 14px; border-radius: 8px; cursor: pointer; transition: all .12s; }
+  #novedad-help:hover { border-color: #555; color: var(--text2); }
+  #novedad-ok { background: var(--green-bg); border: 0.5px solid var(--green-bd); color: var(--green-tx); font-size: 12px; padding: 6px 16px; border-radius: 8px; cursor: pointer; transition: all .12s; }
+  #novedad-ok:hover { background: #254a25; }
   </style>
 </head>
 <body>
@@ -770,6 +798,24 @@
   <div id="acorde-popup-grupos"></div>
 </div>
 
+
+<!-- Popup novedad -->
+<div id="novedad-bg">
+  <div id="novedad-card">
+    <h3>&#127381; Novedades del Cancionero</h3>
+    <p>
+      Ahora podés crear <b>tu propia lista de canciones</b> en la pestaña <b>Listas</b>.<br><br>
+      Tu lista es completamente independiente de la <b>lista fijada</b> para una reunión — podés armarla, modificarla o borrarla sin afectar nada.<br><br>
+      Para cargarla tenés dos opciones: pegá los nombres de las canciones como texto (uno por línea) y el cancionero las busca automáticamente, o agregá canciones una por una tocando el <b>+</b> desde la pestaña <b>Cancionero</b>.<br><br>
+      Reordená arrastrando y proyectá cuando quieras.
+    </p>
+    <div id="novedad-actions">
+      <button id="novedad-help">Ver ayuda completa</button>
+      <button id="novedad-ok">&#10003; Entendido</button>
+    </div>
+  </div>
+</div>
+
 <!-- Modal de ayuda -->
 <div id="help-modal-bg">
   <div id="help-modal">
@@ -778,6 +824,28 @@
       <button id="help-close">&#10005;</button>
     </div>
     <div id="help-body">
+
+      <div class="help-section">
+        <h3>Listas de canciones</h3>
+        <div class="help-row">
+          <span class="help-icon">&#128204;</span>
+          <span class="help-text"><b>Lista fijada</b> — si hay una lista preparada para la reunión, aparece automáticamente en la pestaña <b>Listas</b> y un punto rojo en la pestaña avisa que está disponible. Es de solo lectura: nadie puede modificarla ni borrarla por accidente.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9776;</span>
+          <span class="help-text"><b>Mi lista</b> es tuya y solo tuya. Agregá canciones tocando el <b>+</b> en el cancionero, reordenalas arrastrando, y proyectá cuando quieras. Podés limpiarla o armar una nueva en cualquier momento sin que eso afecte la lista fijada.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9997;</span>
+          <span class="help-text"><b>Cargar lista</b> te permite pegar los nombres de las canciones como texto (uno por línea) y el cancionero las busca automáticamente, incluso si los nombres no son exactos. El resultado se carga en <b>Mi lista</b>.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#128190;</span>
+          <span class="help-text">Mi lista se guarda automáticamente en el dispositivo y persiste aunque cierres la app.</span>
+        </div>
+      </div>
+
+      <hr class="help-divider"/>
 
       <div class="help-section">
         <h3>Buscar canciones</h3>
@@ -812,28 +880,10 @@
       <hr class="help-divider"/>
 
       <div class="help-section">
-        <h3>Lista de canciones</h3>
-        <div class="help-row">
-          <span class="help-icon">&#43;</span>
-          <span class="help-text">Tocá el <b>+</b> en cualquier canción para agregarla a tu lista. Desde la pestaña <b>Crear lista</b> podés ordenarlas arrastrándolas y luego proyectarlas en secuencia.</span>
-        </div>
-        <div class="help-row">
-          <span class="help-icon">&#9776;</span>
-          <span class="help-text"><b>Cargar lista</b> te permite pegar los nombres de las canciones como texto (uno por línea) y el cancionero las busca automáticamente, incluso si los nombres no son exactos.</span>
-        </div>
-        <div class="help-row">
-          <span class="help-icon">&#128190;</span>
-          <span class="help-text">La lista se guarda automáticamente en el dispositivo. Si hay una lista cargada para una reunión, aparece sola al abrir la app.</span>
-        </div>
-      </div>
-
-      <hr class="help-divider"/>
-
-      <div class="help-section">
         <h3>En la proyección</h3>
         <div class="help-row">
           <span class="help-icon">&#9700;</span>
-          <span class="help-text">En <b>modo letra</b> (pantalla completa): <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian de diapositiva, <span class="help-kbd">Shift ←</span> <span class="help-kbd">Shift →</span> cambian de canción, <span class="help-kbd">Esc</span> sale.<br>En <b>modo acordes</b>: <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian directamente de canción.</span>
+          <span class="help-text">En <b>modo letra</b>: <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian de diapositiva, <span class="help-kbd">Shift ←</span> <span class="help-kbd">Shift →</span> cambian de canción, <span class="help-kbd">Esc</span> sale.<br>En <b>modo acordes</b>: <span class="help-kbd">←</span> <span class="help-kbd">→</span> cambian directamente de canción.</span>
         </div>
         <div class="help-row">
           <span class="help-icon">&#128241;</span>
@@ -862,18 +912,18 @@
       <hr class="help-divider"/>
 
       <div class="help-section">
-        <h3>Editar acordes y agregar canciones</h3>
+        <h3>Pestaña Editar</h3>
         <div class="help-row">
-          <span class="help-icon">&#9999;</span>
-          <span class="help-text">Desde la pestaña <b>Editar</b> podés agregar o modificar acordes y tonalidad de cualquier canción. Buscá la canción, editá la letra con los acordes entre corchetes (ej: <b>[SOL]</b>, <b>[LAm]</b>) justo antes de la sílaba donde cambia, y guardá. Si la canción no tiene acordes, la letra ya aparece cargada para que solo tengas que agregar los acordes.</span>
+          <span class="help-icon">&#9835;</span>
+          <span class="help-text"><b>Acordes y tonalidad</b> — buscá cualquier canción y editá sus acordes escribiendo la letra con los acordes entre corchetes (ej: <b>[SOL]</b>, <b>[LAm]</b>) justo antes de la sílaba donde cambia. Si la canción no tiene acordes todavía, la letra aparece cargada para que solo tengas que agregarlos. Al cambiar la tonalidad, los acordes se transponen automáticamente.</span>
         </div>
         <div class="help-row">
           <span class="help-icon">&#43;</span>
-          <span class="help-text">También podés <b>agregar canciones nuevas</b> directamente en la app escribiendo o pegando la letra. Separá las diapositivas con <strong>---</strong> en una línea sola. Todo se guarda en el dispositivo.</span>
+          <span class="help-text"><b>Agregar canción nueva</b> — escribí o pegá la letra directamente en la app. Separá las diapositivas con <b>---</b> en una línea sola. La canción queda disponible en el cancionero de inmediato.</span>
         </div>
         <div class="help-row">
           <span class="help-icon">&#8595;</span>
-          <span class="help-text"><b>Exportar canciones.json</b> descarga el cancionero completo con todos los cambios incorporados, listo para reemplazar el archivo del repositorio y hacer push desde tu computadora.</span>
+          <span class="help-text"><b>Exportar canciones.json</b> — descarga el cancionero completo con todos los cambios (acordes, tonalidades y canciones nuevas) listo para hacer push desde tu computadora y que quede permanente para todos.</span>
         </div>
       </div>
 
@@ -1320,6 +1370,7 @@ async function cargarCanciones() { // retorna promesa — cargarSetlist() se enc
     document.getElementById("loading").style.display = "none";
     updateBadge(); renderList();
     if (activeTab === "setlist") renderSetlist();
+    mostrarNovedadSiCorresponde();
   } catch(e) {
     document.getElementById("loading").style.display = "none";
     const err = document.getElementById("error-msg"); err.style.display = "block";
@@ -2663,6 +2714,34 @@ document.getElementById("btn-insertar-acorde").addEventListener("click", () => {
   const btn = document.getElementById("btn-insertar-acorde");
   const rect = btn.getBoundingClientRect();
   abrirAcordePopup(rect.left, rect.bottom, ta.selectionStart);
+});
+
+
+// ── Popup novedad (se muestra una sola vez) ────────────────────
+const LS_NOVEDAD = "cancionero_novedad_v1"; // cambiar versión para volver a mostrar
+
+function mostrarNovedadSiCorresponde() {
+  if (localStorage.getItem(LS_NOVEDAD)) return; // ya fue visto
+  document.getElementById("novedad-bg").classList.add("open");
+}
+
+document.getElementById("novedad-ok").addEventListener("click", () => {
+  localStorage.setItem(LS_NOVEDAD, "1");
+  document.getElementById("novedad-bg").classList.remove("open");
+});
+
+document.getElementById("novedad-help").addEventListener("click", () => {
+  localStorage.setItem(LS_NOVEDAD, "1");
+  document.getElementById("novedad-bg").classList.remove("open");
+  helpAbrir();
+});
+
+// Cerrar al tocar fuera
+document.getElementById("novedad-bg").addEventListener("click", e => {
+  if (e.target === document.getElementById("novedad-bg")) {
+    localStorage.setItem(LS_NOVEDAD, "1");
+    document.getElementById("novedad-bg").classList.remove("open");
+  }
 });
 
 // ── Ayuda ─────────────────────────────────────────────────────
