@@ -90,6 +90,12 @@
     .sl-btn.danger { color: var(--red-tx); border-color: #3a1a1a; }
     .sl-btn.danger:hover { background: var(--red-bg); }
     #sl-items { display: flex; flex-direction: column; gap: 5px; min-height: 40px; }
+    .sl-section { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .sl-section-header { padding: .65rem 1rem; font-size: 12px; font-weight: 600; color: var(--text3); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .sl-section-header span { font-size: 11px; color: var(--text4); font-weight: 400; }
+    .sl-section-body { padding: .75rem; display: flex; flex-direction: column; gap: .5rem; }
+    .sl-section-empty { font-size: 12px; color: var(--text4); padding: .25rem 0; }
+    .sl-section-btns { display: flex; gap: 6px; flex-wrap: wrap; }
     .sl-item { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: .65rem 1rem; display: flex; align-items: center; gap: 8px; cursor: grab; }
     .sl-item:active { cursor: grabbing; }
     .sl-item.dragging { opacity: .35; }
@@ -589,31 +595,53 @@
   </div>
 
   <div id="setlist-panel">
-    <div id="sl-name-wrap">
-      <span id="sl-name-label">Nombre:</span>
-      <input id="sl-name" type="text" placeholder="" value=""/>
-      <span id="sl-saved">&#10003; guardado</span>
-      <span id="sl-count"></span>
-    </div>
-    <div id="sl-toolbar">
-      <button class="sl-btn primary" id="play-btn" disabled>&#9654; Proyectar</button>
-      <button class="sl-btn" id="txt-btn">&#9776; Cargar lista</button>
-      <button class="sl-btn danger" id="clear-btn">Limpiar lista</button>
-      <button class="sl-btn" id="export-btn" style="margin-left:auto;opacity:.45;font-size:11px">&#8595; Json</button>
-    </div>
-    <div id="txt-panel">
-      <textarea id="txt-input" placeholder="Pegá o escribí la lista de canciones, una por línea:&#10;&#10;Bésame&#10;Alfonsina&#10;gracia a la vida&#10;..."></textarea>
-      <div id="txt-actions">
-        <button class="sl-btn primary" id="txt-interpretar">Interpretar lista</button>
-        <button class="sl-btn" id="txt-cancelar">Cancelar</button>
-        <span id="txt-status"></span>
+
+    <!-- Lista del servicio (setlist.json) -->
+    <div class="sl-section" id="sl-servicio-section" style="display:none">
+      <div class="sl-section-header">
+        Lista del servicio <span id="sl-servicio-nombre"></span>
       </div>
-      <div id="txt-results"></div>
-      <div id="txt-confirm-wrap" style="display:none">
-        <button class="sl-btn primary" id="txt-confirmar">Usar esta lista</button>
+      <div class="sl-section-body">
+        <div id="sl-servicio-items"></div>
+        <div class="sl-section-btns">
+          <button class="sl-btn primary" id="play-servicio-btn">&#9654; Proyectar esta lista</button>
+        </div>
       </div>
     </div>
-    <div id="sl-items"></div>
+
+    <!-- Mi lista (usuario) -->
+    <div class="sl-section">
+      <div class="sl-section-header">
+        Mi lista <span id="sl-count"></span>
+      </div>
+      <div class="sl-section-body">
+        <div id="sl-name-wrap" style="display:flex;gap:6px;align-items:center">
+          <span style="font-size:12px;color:var(--text4);flex-shrink:0">Nombre:</span>
+          <input id="sl-name" type="text" placeholder="Nombre de la lista..." value="" style="background:none;border:none;color:var(--text);font-size:13px;outline:none;flex:1"/>
+          <span id="sl-saved" style="font-size:11px;color:var(--text4)">&#10003; guardado</span>
+        </div>
+        <div id="sl-toolbar" style="display:flex;gap:6px;flex-wrap:wrap">
+          <button class="sl-btn primary" id="play-btn" disabled>&#9654; Proyectar mi lista</button>
+          <button class="sl-btn" id="txt-btn">&#9776; Cargar lista</button>
+          <button class="sl-btn danger" id="clear-btn">Limpiar</button>
+          <button class="sl-btn" id="export-btn" style="margin-left:auto;opacity:.45;font-size:11px">&#8595; Json</button>
+        </div>
+        <div id="txt-panel">
+          <textarea id="txt-input" placeholder="Pegá o escribí la lista de canciones, una por línea:&#10;&#10;Bésame&#10;Alfonsina&#10;gracia a la vida&#10;..."></textarea>
+          <div id="txt-actions">
+            <button class="sl-btn primary" id="txt-interpretar">Interpretar lista</button>
+            <button class="sl-btn" id="txt-cancelar">Cancelar</button>
+            <span id="txt-status"></span>
+          </div>
+          <div id="txt-results"></div>
+          <div id="txt-confirm-wrap" style="display:none">
+            <button class="sl-btn primary" id="txt-confirmar">Usar esta lista</button>
+          </div>
+        </div>
+        <div id="sl-items"></div>
+      </div>
+    </div>
+
   </div>
 
   <div id="viewer">
@@ -938,8 +966,11 @@
 
 <script>
 const LS_KEY = "cancionero_setlist";
+const LS_MI_LISTA = "cancionero_mi_lista"; // lista del usuario, independiente
 let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
+// Lista del servicio (setlist.json) — solo lectura, nunca se mezcla con la del usuario
+let servicioSetlist = [], servicioNombre = "";
 let activeFilter = "alabanza";
 let mostrarAcordes = false;
 let fsMinimizado = false;
@@ -1114,7 +1145,7 @@ function getFsSize() {
 // ── localStorage ───────────────────────────────────────────────
 function saveToStorage() {
   try {
-    localStorage.setItem(LS_KEY, JSON.stringify({ name: slName, songs: setlist }));
+    localStorage.setItem(LS_MI_LISTA, JSON.stringify({ name: slName, songs: setlist }));
     const ind = document.getElementById("sl-saved");
     ind.style.opacity = "1"; clearTimeout(ind._t);
     ind._t = setTimeout(() => ind.style.opacity = "0", 1800);
@@ -1122,7 +1153,7 @@ function saveToStorage() {
 }
 function loadFromStorage() {
   try {
-    const raw = localStorage.getItem(LS_KEY); if (!raw) return;
+    const raw = localStorage.getItem(LS_MI_LISTA); if (!raw) return;
     const d = JSON.parse(raw);
     if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
     if (Array.isArray(d.songs)) setlist = d.songs;
@@ -1297,6 +1328,7 @@ async function cargarCanciones() { // retorna promesa — cargarSetlist() se enc
 // ── Carga setlist.json del repositorio ────────────────────────
 function limpiarLista() {
   setlist = []; slName = "";
+  try { localStorage.removeItem(LS_MI_LISTA); } catch(e) {}
   const slNameEl = document.getElementById("sl-name");
   slNameEl.value = "";
   slNameEl.placeholder = "";
@@ -1305,6 +1337,7 @@ function limpiarLista() {
 }
 
 function aplicarSetlist(d) {
+  // Aplica una lista al "mi lista" del usuario (ej: desde txt-confirmar)
   if (d.name) { slName = d.name; document.getElementById("sl-name").value = d.name; }
   if (Array.isArray(d.songs)) {
     setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
@@ -1314,61 +1347,44 @@ function aplicarSetlist(d) {
 }
 
 async function cargarSetlist() {
+  // Siempre cargar "mi lista" del usuario desde LS_MI_LISTA (independiente del servicio)
+  cargarMiLista();
+
   try {
     const res = await fetch("setlist.json");
-    if (!res.ok) {
-      // No existe setlist.json — usar localStorage si hay
-      loadFromStorage(); updateBadge(); renderList();
-      if (activeTab === "setlist") renderSetlist();
-      return;
-    }
+    if (!res.ok) { updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist(); return; }
     const d = await res.json();
 
-    // Verificar vencimiento
+    // Verificar vencimiento — si venció, no mostrar la lista del servicio
     if (d.expira) {
       const hoy = new Date(); hoy.setHours(0,0,0,0);
       const expira = new Date(d.expira); expira.setHours(0,0,0,0);
       if (hoy > expira) {
-        // Verificar si el usuario ya creó algo nuevo después del vencimiento
-        const raw = localStorage.getItem(LS_KEY);
-        if (raw) {
-          try {
-            const local = JSON.parse(raw);
-            // Si hay canciones en localStorage, el usuario ya creó una lista nueva → respetarla
-            if (Array.isArray(local.songs) && local.songs.length > 0) {
-              loadFromStorage(); updateBadge(); renderList();
-              if (activeTab === "setlist") renderSetlist();
-              return;
-            }
-          } catch(e) {}
-        }
-        // No hay lista nueva del usuario — limpiar todo
-        try { localStorage.removeItem(LS_KEY); } catch(e) {}
-        limpiarLista();
-        return;
+        updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist(); return;
       }
     }
 
-    // Setlist del repo válida — verificar si tiene canciones
+    // Setlist del servicio válida — cargarla en sección separada
     const songs = Array.isArray(d.songs) ? d.songs.filter(t => SONGS.some(s => s.titulo === t)) : [];
-    if (songs.length === 0) {
-      // Sin canciones en repo — usar localStorage si hay
-      const raw = localStorage.getItem(LS_KEY);
-      if (raw) { loadFromStorage(); }
-      else { limpiarLista(); return; }
-      updateBadge(); renderList();
-      if (activeTab === "setlist") renderSetlist();
-      return;
+    if (songs.length > 0) {
+      servicioSetlist = songs;
+      servicioNombre = d.name || "";
     }
 
-    // Repo tiene canciones válidas y no vencida — tiene prioridad
-    aplicarSetlist(d);
-
+    updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist();
   } catch(e) {
-    // Error de red — usar localStorage
-    loadFromStorage(); updateBadge(); renderList();
-    if (activeTab === "setlist") renderSetlist();
+    updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist();
   }
+}
+
+function cargarMiLista() {
+  try {
+    const raw = localStorage.getItem(LS_MI_LISTA);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d.name) slName = d.name;
+    if (Array.isArray(d.songs)) setlist = d.songs.filter(t => SONGS.some(s => s.titulo === t));
+  } catch(e) {}
 }
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
   activeTab = t.dataset.tab;
@@ -1426,18 +1442,41 @@ function toggleSL(t) {
 document.getElementById("search").addEventListener("input", e => { query = e.target.value; renderList(); });
 
 // ── Setlist ────────────────────────────────────────────────────
-function renderSetlist() {
-  document.getElementById("sl-count").textContent = setlist.length + " canción" + (setlist.length !== 1 ? "es" : "");
-  document.getElementById("play-btn").disabled = setlist.length === 0;
-  const items = document.getElementById("sl-items"); items.innerHTML = "";
-  if (!setlist.length) { items.innerHTML = '<div id="sl-empty">Sin canciones. Agregá desde el Cancionero o cargá una lista.</div>'; return; }
-  setlist.forEach((titulo, i) => {
+function renderSetlistItems(lista, container, removable, onRemove) {
+  container.innerHTML = "";
+  if (!lista.length) { container.innerHTML = '<div class="sl-section-empty">Sin canciones.</div>'; return; }
+  lista.forEach((titulo, i) => {
     const song = SONGS.find(s => s.titulo === titulo);
-    const div = document.createElement("div"); div.className = "sl-item"; div.draggable = true;
-    div.innerHTML = `<span class="drag-handle">&#9776;</span><span class="sl-num">${i+1}</span><span class="sl-title">${titulo}</span>${song?.tono ? `<span class="sl-tono" style="color:var(--green-tx);font-weight:500;font-size:11px;flex-shrink:0">${song.tono}</span>` : ""}<span class="sl-meta">${song ? song.slides.length+" diap." : ""}</span><button class="sl-remove">&#10005;</button>`;
-    div.querySelector(".sl-remove").addEventListener("click", () => { setlist.splice(i,1); saveToStorage(); updateBadge(); renderSetlist(); renderList(); });
-    div.querySelector(".sl-title").addEventListener("click", () => { if (song) openSong(song, [...setlist]); });
-    setupDrag(div, i); items.appendChild(div);
+    const div = document.createElement("div"); div.className = "sl-item";
+    if (removable) div.draggable = true;
+    div.innerHTML = `${removable ? '<span class="drag-handle">&#9776;</span>' : ''}<span class="sl-num">${i+1}</span><span class="sl-title">${titulo}</span>${song?.tono ? `<span class="sl-tono" style="color:var(--green-tx);font-weight:500;font-size:11px;flex-shrink:0">${song.tono}</span>` : ""}<span class="sl-meta">${song ? song.slides.length+" diap." : ""}</span>${removable ? '<button class="sl-remove">&#10005;</button>' : ''}`;
+    if (removable) {
+      div.querySelector(".sl-remove").addEventListener("click", () => onRemove(i));
+      setupDrag(div, i);
+    }
+    div.querySelector(".sl-title").addEventListener("click", () => { if (song) openSong(song, [...lista]); });
+    container.appendChild(div);
+  });
+}
+
+function renderSetlist() {
+  // ── Sección lista del servicio ──
+  const secServicio = document.getElementById("sl-servicio-section");
+  if (servicioSetlist.length > 0) {
+    secServicio.style.display = "";
+    document.getElementById("sl-servicio-nombre").textContent = servicioNombre ? `— ${servicioNombre}` : "";
+    renderSetlistItems(servicioSetlist, document.getElementById("sl-servicio-items"), false, null);
+  } else {
+    secServicio.style.display = "none";
+  }
+
+  // ── Sección mi lista ──
+  document.getElementById("sl-count").textContent = setlist.length ? `(${setlist.length})` : "";
+  document.getElementById("sl-name").value = slName;
+  document.getElementById("play-btn").disabled = setlist.length === 0;
+  const items = document.getElementById("sl-items");
+  renderSetlistItems(setlist, items, true, (i) => {
+    setlist.splice(i, 1); saveToStorage(); updateBadge(); renderSetlist(); renderList();
   });
 }
 let dragSrc = -1;
@@ -1449,13 +1488,14 @@ function setupDrag(el, idx) {
   el.addEventListener("drop", e => {
     e.preventDefault(); el.classList.remove("drag-over");
     if (dragSrc === idx) return;
-    const m = setlist.splice(dragSrc,1)[0]; setlist.splice(idx,0,m); saveToStorage(); renderSetlist();
+    const m = setlist.splice(dragSrc,1)[0]; setlist.splice(idx,0,m); saveToStorage(); renderSetlist(); renderList();
   });
 }
 document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); updateBadge(); });
 document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist], false); });
+document.getElementById("play-servicio-btn").addEventListener("click", () => { if (servicioSetlist.length) openSetlist([...servicioSetlist], false); });
 document.getElementById("clear-btn").addEventListener("click", () => {
-  if (confirm("¿Limpiar la lista?")) { setlist = []; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
+  if (confirm("¿Limpiar mi lista?")) { setlist = []; slName = ""; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
 });
 document.getElementById("export-btn").addEventListener("click", () => {
   const name = document.getElementById("sl-name").value.trim() || "setlist";
