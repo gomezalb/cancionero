@@ -564,13 +564,22 @@
     color: var(--text4); font-size: 16px; cursor: pointer;
     padding: 0; line-height: 1; margin-top: -2px;
   }
+
+  /* ── Punto de notificación en tab ── */
+  #tab-setlist { position: relative; }
+  #tab-setlist .notif-dot {
+    position: absolute; top: 4px; right: 4px;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #e05050; display: none;
+  }
+  #tab-setlist .notif-dot.visible { display: block; }
   </style>
 </head>
 <body>
 <div id="app">
   <div id="tabs">
     <div class="tab active" data-tab="cancionero">Cancionero</div>
-    <div class="tab" data-tab="setlist" id="tab-setlist">Crear lista</div>
+    <div class="tab" data-tab="setlist" id="tab-setlist">Listas<span class="notif-dot" id="tab-setlist-dot"></span></div>
     <div class="tab" data-tab="editar">Editar</div>
     <button id="help-btn" title="Ayuda">?</button>
   </div>
@@ -599,7 +608,7 @@
     <!-- Lista del servicio (setlist.json) -->
     <div class="sl-section" id="sl-servicio-section" style="display:none">
       <div class="sl-section-header">
-        Lista del servicio <span id="sl-servicio-nombre"></span>
+        &#128204; Lista fijada <span id="sl-servicio-nombre"></span>
       </div>
       <div class="sl-section-body">
         <div id="sl-servicio-items"></div>
@@ -1180,13 +1189,9 @@ function hlTexto(text, q) {
 }
 function inList(t) { return setlist.includes(t); }
 function updateBadge() {
-  const tab = document.getElementById("tab-setlist");
-  if (setlist.length === 0) {
-    tab.textContent = "Crear lista";
-  } else {
-    const nombre = slName && slName !== "Setlist" ? slName : "";
-    tab.textContent = nombre ? `Lista: ${nombre}` : `Lista (${setlist.length})`;
-  }
+  // Tab siempre dice "Listas" — solo mostramos/ocultamos el punto rojo
+  const dot = document.getElementById("tab-setlist-dot");
+  if (dot) dot.classList.toggle("visible", servicioSetlist.length > 0);
 }
 
 // ── HTML para fullscreen ───────────────────────────────────────
