@@ -44,7 +44,7 @@
     "preview": "A quién iré en necesidad,\na quién iré en busca de paz,\ny quién podrá mi vida saciar de verdad.\n\nQuién más tendrá de mi compasión,\ny entenderá mi corazón.\nQuién cambiará mi eternidad, \nsino tú Jesús",
     "slides": [
       "<b>A quién iré en necesidad,<br>a quién iré en busca de paz,<br>y quién podrá mi vida saciar de verdad.<br><br><br>Quién más tendrá de mi compasión,<br>y entenderá mi corazón.<br>Quién cambiará mi eternidad, <br>sino tú Jesús</b>",
-      "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Sólo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
+      "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Solo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
     ],
     "tono": "LA",
     "bpm": 80,
@@ -56,9 +56,9 @@
   },
   {
     "titulo": "A ti el alfa y la omega",
-    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy\nme rindo\n\nA ti, el Todopoderoso\nEl que es y que será\nY el gran yo soy\nMe entrego",
+    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy\nme rindo\n\nA ti, el todopoderoso\nEl que es y que será\nY el gran yo soy\nMe entrego",
     "slides": [
-      "<b>A ti, el alfa y la omega<br>El principio y el fin<br>Y el gran yo soy<br>me rindo<br><br><br>A ti, el Todopoderoso<br>El que es y que será<br>Y el gran yo soy<br>Me entrego</b>",
+      "<b>A ti, el alfa y la omega<br>El principio y el fin<br>Y el gran yo soy<br>me rindo<br><br><br>A ti, el todopoderoso<br>El que es y que será<br>Y el gran yo soy<br>Me entrego</b>",
       "<b>Yo quiero que gobiernes mi vida<br>Me doy en sacrificio a ti<br>Yo quiero que tú ordenes mi caminar<br>que siempre viva en tu voluntad</b>"
     ],
     "tono": "RE",
@@ -83,7 +83,9 @@
     "preview": "A tus pies arde mi corazón\nA tus pies entrego lo que soy\nEs el lugar de mi seguridad\nDonde nadie me puede señalar\n\nMe perdonaste\nMe acercaste a tu presencia\nMe levantaste\nHoy me postro adorarte",
     "slides": [
       "<b>A tus pies arde mi corazón<br>A tus pies entrego lo que soy<br>Es el lugar de mi seguridad<br>Donde nadie me puede señalar<br><br><br>Me perdonaste<br>Me acercaste a tu presencia<br>Me levantaste<br>Hoy me postro adorarte</b>",
-      "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/<br><br><br>/Y aquí permaneceré<br>Postrado a tus pies<br>Y aquí permaneceré<br>A los pies de Cristo/<br><br><br>No hay lugar más alto...</b>"
+      "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>",
+      "<b>/Y aquí permaneceré<br>Postrado a tus pies.<br>Y aquí permaneceré<br>A los pies de Cristo/</b>",
+      "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>"
     ],
     "tono": "LA",
     "bpm": 60,
@@ -95,9 +97,10 @@
   },
   {
     "titulo": "Abre mis ojos oh Cristo",
-    "preview": "/Abre mis ojos, oh Cristo,\nabre mis ojos te pido,\nyo quiero verte, yo quiero verte/\n\n/Y contemplar tu majestad,\ny el resplandor de tu gloria,\nderrama tu amor y poder\ncuando cantamos, Santo, Santo/\n\n//Santo, Santo, Santo//\nyo quiero verte.",
+    "preview": "/Abre mis ojos, oh Cristo,\nabre mis ojos te pido,\nyo quiero verte, yo quiero verte/",
     "slides": [
-      "<b>/Abre mis ojos, oh Cristo,<br>abre mis ojos te pido,<br>yo quiero verte, yo quiero verte/<br><br><br>/Y contemplar tu majestad,<br>y el resplandor de tu gloria,<br>derrama tu amor y poder<br>cuando cantamos, Santo, Santo/<br><br><br>//Santo, Santo, Santo//<br>yo quiero verte.</b>"
+      "<b>/Abre mis ojos, oh Cristo,<br>abre mis ojos te pido,<br>yo quiero verte, yo quiero verte/</b>",
+      "<b>/Y contemplar tu majestad,<br>y el resplandor de tu gloria,<br>derrama tu amor y poder<br>cuando cantamos, Santo, Santo/<br><br><br>//Santo, Santo, Santo//<br>yo quiero verte.</b>"
     ],
     "tono": "RE",
     "carpeta": "A",
@@ -116,10 +119,11 @@
   },
   {
     "titulo": "Aclamad a Dios con alegría",
-    "preview": "Aclamad a Dios con alegría, \u000btoda la tierra, toda la tierra\u000bcantad la gloria de su nombre,\u000bponed gloria en su alabanza\u000b\u000bDecid a Dios cuán asombrosas \nson tus obras \u000bpor la grandeza de tu poder \u000bSe someterán a ti tus enemigos, \u000btoda la tierra te adorará",
+    "preview": "Aclamad a Dios con alegría, \u000btoda la tierra, toda la tierra\u000bcantad la gloria de su nombre,\u000bponed gloria en su alabanza",
     "slides": [
-      "<b>Aclamad a Dios con alegría, <br>toda la tierra, toda la tierra<br>cantad la gloria de su nombre,<br>poned gloria en su alabanza<br><br>Decid a Dios cuán asombrosas <br>son tus obras <br>por la grandeza de tu poder <br>Se someterán a ti tus enemigos, <br>toda la tierra te adorará</b>",
-      "<b>/Y cantarán a ti, y cantarán a ti, <br>y cantarán a ti,<br>A tu nombre, a tu nombre cantarán/</b>"
+      "<b>Aclamad a Dios con alegría, <br>toda la tierra, toda la tierra<br>cantad la gloria de su nombre,<br>poned gloria en su alabanza</b>",
+      "<b>Decid a Dios cuán asombrosas <br>son tus obras <br>por la grandeza de tu poder <br>Se someterán a ti tus enemigos, <br>toda la tierra te adorará</b>",
+      "<b>/Y cantarán a ti, <br>y cantarán a ti, <br>y cantarán a ti,<br>A tu nombre, <br>a tu nombre cantarán/</b>"
     ],
     "tono": "RE",
     "carpeta": "A"
@@ -137,16 +141,16 @@
     "preview": "Adorarte quiero hoy, \u000bentregarme a tu amor,\u000bllenarme del calor de tu presencia.\u000b\nAmarte es un placer,\u000bconocerte es mi querer,\u000bdescansar en el saber que tú me amas.",
     "slides": [
       "<b>Adorarte quiero hoy, <br>entregarme a tu amor,<br>llenarme del calor de tu presencia.<br><br>Amarte es un placer,<br>conocerte es mi querer,<br>descansar en el saber que tú me amas.</b>",
-      "<b>/Amarte más y darte más mi corazón,<br>mi amado Dios es mi oración<br>rendirme a ti, de corazón.<br>nadie es igual a ti, por eso canto así,<br>de tu amor por mí,<br>y de mi dulce amor por ti/<br><br><br>/Y de mi dulce amor por ti/</b>"
+      "<b>/Amarte más y darte más mi corazón,<br>mi amado Dios es mi oración<br>rendirme a ti, de corazón.<br>Nadie es igual a ti, por eso canto así,<br>de tu amor por mí,<br>y de mi dulce amor por ti/<br><br><br>/Y de mi dulce amor por ti/</b>"
     ],
     "tono": "RE",
     "carpeta": "A"
   },
   {
     "titulo": "Al entrar a tu Santo lugar",
-    "preview": "Al entrar en tu santo lugar,\u000bme asombra que me pueda acercar,\u000bpara ver tu gloria y tu belleza\u000by adorarte en intimidad\u000b\u000bEn confianza yo me puedo acercar,\u000bde tu mesa quiero participar,\u000btodo lo que puedo hacer\u000bes postrarme, \u000by con mis labios proclamar",
+    "preview": "Al entrar en tu santo lugar,\u000bme asombra que me pueda acercar,\u000bpara ver tu gloria y tu belleza\u000by adorarte en intimidad\u000b\u000bEn confianza yo me puedo acercar,\u000bde tu mesa quiero participar,\u000btodo lo que puedo hacer\u000bes postrarme, y con mis labios proclamar",
     "slides": [
-      "<b>Al entrar en tu santo lugar,<br>me asombra que me pueda acercar,<br>para ver tu gloria y tu belleza<br>y adorarte en intimidad<br><br>En confianza yo me puedo acercar,<br>de tu mesa quiero participar,<br>todo lo que puedo hacer<br>es postrarme, <br>y con mis labios proclamar</b>",
+      "<b>Al entrar en tu santo lugar,<br>me asombra que me pueda acercar,<br>para ver tu gloria y tu belleza<br>y adorarte en intimidad<br><br>En confianza yo me puedo acercar,<br>de tu mesa quiero participar,<br>todo lo que puedo hacer<br>es postrarme, y con mis labios proclamar</b>",
       "<b>Mi pan, mi luz, mi oración<br>eres tu Jesús<br>Mi Dios, mi amor y mi canción<br>eres tú, Jesús solo tú<br><br>/Me cuidas, me abrazas, <br>me cantas, me amas/<br><br><br>Mi pan, mi luz…</b>"
     ],
     "tono": "SOL",
@@ -168,9 +172,10 @@
   },
   {
     "titulo": "Al estar en la presencia",
-    "preview": "Al estar en la presencia de tu divinidad,\u000by al contemplar la hermosura \nde tu santidad,\u000bmi espíritu se alegra en tu majestad.\nTe adoro a ti, te adoro a ti.\u000b\u000bCuando veo la grandeza de tu dulce amor,\u000by compruebo la pureza de tu corazón,\u000bmi espíritu se alegra en tu majestad.\u000bTe adoro a ti, te adoro a ti.",
+    "preview": "Al estar en la presencia \nde tu divinidad,\u000by al contemplar la hermosura \nde tu santidad,\u000bmi espíritu se alegra \nen tu majestad.\nTe adoro a ti, te adoro a ti.",
     "slides": [
-      "<b>Al estar en la presencia de tu divinidad,<br>y al contemplar la hermosura <br>de tu santidad,<br>mi espíritu se alegra en tu majestad.<br>Te adoro a ti, te adoro a ti.<br><br>Cuando veo la grandeza de tu dulce amor,<br>y compruebo la pureza de tu corazón,<br>mi espíritu se alegra en tu majestad.<br>Te adoro a ti, te adoro a ti. </b>",
+      "<b>Al estar en la presencia <br>de tu divinidad,<br>y al contemplar la hermosura <br>de tu santidad,<br>mi espíritu se alegra <br>en tu majestad.<br>Te adoro a ti, te adoro a ti.</b>",
+      "<b>Cuando veo la grandeza <br>de tu dulce amor,<br>y compruebo la pureza <br>de tu corazón,<br>mi espíritu se alegra <br>en tu majestad.<br>Te adoro a ti, te adoro a ti. </b>",
       "<b>/Y al estar aquí delante de ti, te adoraré,<br>postrado ante ti, mi corazón <br>te adora oh Dios.<br>Y siempre quiero estar para adorar, <br>y contemplar tu santidad.<br>Te adoro a ti, Señor, te adoro a ti./<br><br><br>Te adoro a ti, Señor, te adoro a ti</b>"
     ],
     "tono": "SOL",
@@ -204,9 +209,10 @@
   },
   {
     "titulo": "Al que es digno",
-    "preview": "/Al que es Digno, de recibir la gloria.\u000bAl que es Digno, de recibir el honor/\u000b\u000bLevantemos nuestras manos y adoremos,\u000bA Jesús, Cordero de gloria.\u000bY exaltemos su incomparable majestad\u000b\u000bAl que vive por siempre, al gran Yo Soy,\u000ba Jesús.",
+    "preview": "/Al que es Digno, \u000bde recibir la gloria.\u000bAl que es Digno, \u000bde recibir el honor/",
     "slides": [
-      "<b>/Al que es Digno, de recibir la gloria.<br>Al que es Digno, de recibir el honor/<br><br>Levantemos nuestras manos y adoremos,<br>A Jesús, Cordero de gloria.<br>Y exaltemos su incomparable majestad<br><br>Al que vive por siempre, al gran Yo Soy,<br>a Jesús.</b>"
+      "<b>/Al que es Digno, <br>de recibir la gloria.<br>Al que es Digno, <br>de recibir el honor/</b>",
+      "<b>Levantemos nuestras manos <br>y adoremos,<br>A Jesús, Cordero de gloria.<br>Y exaltemos su incomparable majestad<br><br>Al que vive por siempre, <br>al gran Yo Soy,<br>a Jesús.</b>"
     ],
     "tono": "LA",
     "carpeta": "A"
@@ -269,7 +275,8 @@
     "preview": "Alza tus ojos y mira\u000bla cosecha está lista,\u000bel tiempo ha llegado,\u000bla mies está madura.\u000b\u000bEsfuérzate y se valiente,\u000blevántate y predica\u000ba todas las naciones\u000bque Cristo es la vida.",
     "slides": [
       "<b>Alza tus ojos y mira<br>la cosecha está lista,<br>el tiempo ha llegado,<br>la mies está madura.<br><br>Esfuérzate y se valiente,<br>levántate y predica<br>a todas las naciones<br>que Cristo es la vida.</b>",
-      "<b>/Y será<br>llena la tierra de su gloria<br>y se cubrirá<br>como las aguas cubren al mar/ <br><br>No, no hay otro nombre<br>dado a los hombres, <br>Jesucristo es el Señor.<br><br><br>Y será..</b>"
+      "<b>/Y será <br>llena la tierra de su gloria<br>y se cubrirá<br>como las aguas cubren al mar/ <br><br>No, no hay otro nombre<br>dado a los hombres, <br>Jesucristo es el Señor.</b>",
+      "<b>/Y será <br>llena la tierra de su gloria<br>y se cubrirá<br>como las aguas cubren al mar/ </b>"
     ],
     "tono": "MIm",
     "carpeta": "A",
@@ -291,7 +298,7 @@
     "preview": "/Aquel que la buena obra empezó/ \u000bserá fiel en completarla, \u000bél es fiel en completarla.\u000bEl que la comenzó \u000bserá fiel en completarla en ti.",
     "slides": [
       "<b>/Aquel que la buena obra empezó/ <br>será fiel en completarla, <br>él es fiel en completarla.<br>El que la comenzó <br>será fiel en completarla en ti.</b>",
-      "<b>Si la lucha que enfrentas<br>a tu esperanza tornó ya sin paz<br>o de tanto esperar<br>ya perdiendo tu canción estás,<br>puedes creer que en sus manos estás, <br>seguro estarás<br>nunca te ha de abandonar,<br>eres su gozo, y su gran tesoro aquí.</b>"
+      "<b>Si la lucha que enfrentas<br>a tu esperanza tornó ya sin paz<br>o de tanto esperar<br>ya perdiendo tu canción estás,<br>puedes creer que en sus manos estás, <br>seguro estarás, <br>nunca te ha de abandonar,<br>eres su gozo, y su gran tesoro aquí.</b>"
     ],
     "tono": "SOL",
     "carpeta": "A"
@@ -327,10 +334,10 @@
   },
   {
     "titulo": "Aunque mis ojos",
-    "preview": "Aunque mis ojos no te puedan ver,\nte puedo sentir, se que estas aquí,\u000baunque mis manos no puedan tocar\u000btu rostro Señor, se que estás aquí.\u000b\u000bMi corazón puede sentir tu presencia.\u000b/Tu estás aquí/.\u000bPuedo sentir tu majestad.\u000b/Tu estás aquí/",
+    "preview": "Aunque mis ojos no te puedan ver,\nte puedo sentir, se que estas aquí,\u000baunque mis manos no puedan tocar\u000btu rostro Señor, se que estás aquí.\u000b\u000bMi corazón puede sentir tu presencia.\u000b/Tú estás aquí/.\u000bPuedo sentir tu majestad.\u000b/Tú estás aquí/",
     "slides": [
-      "<b>Aunque mis ojos no te puedan ver,<br>te puedo sentir, se que estas aquí,<br>aunque mis manos no puedan tocar<br>tu rostro Señor, se que estás aquí.<br><br>Mi corazón puede sentir tu presencia.<br>/Tu estás aquí/.<br>Puedo sentir tu majestad.<br>/Tu estás aquí/</b>",
-      "<b>Mi corazón puede mirar tu hermosura.<br>/Tu estás aquí/.<br>Puedo sentir tu majestad.<br>/Tu estás aquí/<br><br><br>///Tu estás aquí///</b>"
+      "<b>Aunque mis ojos no te puedan ver,<br>te puedo sentir, se que estas aquí,<br>aunque mis manos no puedan tocar<br>tu rostro Señor, se que estás aquí.<br><br>Mi corazón puede sentir tu presencia.<br>/Tú estás aquí/.<br>Puedo sentir tu majestad.<br>/Tú estás aquí/</b>",
+      "<b>Mi corazón puede mirar tu hermosura.<br>/Tú estás aquí/.<br>Puedo sentir tu majestad.<br>/Tú estás aquí/<br><br><br>///Tú estás aquí///</b>"
     ],
     "tono": "DO",
     "carpeta": "A"
@@ -342,7 +349,7 @@
       "<b>Aunque un ejército acampe contra mí, <br>no temeré.<br>Aunque haya guerra hoy alrededor de mí, <br>en ti confiaré.<br>No temeré a diez mil gentes<br>que hagan sitio contra mí,<br>aunque la tierra se estremezca,<br>mi salvación esta en ti.</b>",
       "<b>/Porque tú eres mi escudo,<br>tú mi fortaleza,<br>tú eres mi gloria,<br>y quien levanta mi cabeza./</b>",
       "<b>Aunque afligido esté, <br>tu pensarás en mí, no temeré.<br>Aunque mi corazón estremecido esté, <br>en ti confiaré.<br>No temeré a ningún hombre, <br>que se junte contra mí.<br>Tu eres mi Dios, mi fortaleza, <br>mi salvación esta en ti.</b>",
-      "<b>/Porque tú eres mi escudo,<br>tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/<br><br> /Levantate y salvame,<br>levantate y saname/<br><br>/Porque tú eres mi escudo,<br>tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/</b>"
+      "<b>/Porque tú eres mi escudo, tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/<br><br> /Levantate y salvame,<br>levantate y sáname/<br><br>/Porque tú eres mi escudo, tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/</b>"
     ],
     "tono": "FA#m",
     "carpeta": "A"
@@ -359,9 +366,10 @@
   },
   {
     "titulo": "Bellas palabras de vida",
-    "preview": "Bellas palabras de vida \u000bSon las de Cristo Jesús,\u000b\nEllas alientan mi alma,\ndan fortaleza y luz.\u000b\nBellas palabras de vida \u000bResplandecen en mi ser\u000b\n/Bellas palabras que nunca en la vida \u000bhabía escuchado hasta hoy/",
+    "preview": "Bellas palabras de vida \u000bSon las de Cristo Jesús,\u000b\nEllas alientan mi alma,\ndan fortaleza y luz.\u000b\nBellas palabras de vida \u000bResplandecen en mi ser",
     "slides": [
-      "<b>Bellas palabras de vida <br>Son las de Cristo Jesús,<br><br>Ellas alientan mi alma,<br>dan fortaleza y luz.<br><br>Bellas palabras de vida <br>Resplandecen en mi ser<br><br>/Bellas palabras que nunca en la vida <br>había escuchado hasta hoy/</b>"
+      "<b>Bellas palabras de vida <br>Son las de Cristo Jesús,<br><br>Ellas alientan mi alma,<br>dan fortaleza y luz.<br><br>Bellas palabras de vida <br>Resplandecen en mi ser</b>",
+      "<b>/Bellas palabras que nunca en la vida <br>había escuchado hasta hoy/</b>"
     ],
     "tono": "RE",
     "carpeta": "B"
@@ -389,17 +397,18 @@
   },
   {
     "titulo": "Bienvenida hermana",
-    "preview": "Bienvenida hermana,\u000bbienvenido hermano,\u000bvamos a cantar a Jesús el rey, \u000bel mas importante en este lugar.\u000bCon corazón puro, limpio por su sangre\u000bjuntos vos y yo\u000bdémosle la gloria al pastor eterno,\u000b al rey y Señor\u000b/A la roca eterna, al verbo hecho carne, \u000bal hijo de Dios/",
+    "preview": "Bienvenida hermana,\u000bbienvenido hermano, \u000bvamos a cantar, \u000ba Jesús el rey, \u000bel mas importante en este lugar.",
     "slides": [
-      "<b>Bienvenida hermana,<br>bienvenido hermano,<br>vamos a cantar a Jesús el rey, <br>el mas importante en este lugar.<br>Con corazón puro, limpio por su sangre<br>juntos vos y yo<br>démosle la gloria al pastor eterno,<br> al rey y Señor<br>/A la roca eterna, al verbo hecho carne, <br>al hijo de Dios/</b>"
+      "<b>Bienvenida hermana,<br>bienvenido hermano, <br>vamos a cantar, <br>a Jesús el rey, <br>el mas importante en este lugar.</b>",
+      "<b>Con corazón puro, <br>limpio por su sangre<br>juntos vos y yo<br>démosle la gloria al Pastor Eterno,<br> al Rey y Señor<br><br>/A la Roca Eterna, al Verbo hecho carne, <br>al Hijo de Dios/</b>"
     ],
     "carpeta": "B"
   },
   {
     "titulo": "Bueno es alabar oh Señor",
-    "preview": "/Bueno es alabar oh Señor tu nombre.\u000bDarte gloria, honra y honor, por siempre.\u000bBueno es alabarte Jesús\u000by gozarme en tu poder/",
+    "preview": "/Bueno es alabar oh Señor \ntu nombre.\u000bDarte gloria, honra y honor, \npor siempre.\u000bBueno es alabarte Jesús\u000by gozarme en tu poder/",
     "slides": [
-      "<b>/Bueno es alabar oh Señor tu nombre.<br>Darte gloria, honra y honor, por siempre.<br>Bueno es alabarte Jesús<br>y gozarme en tu poder/</b>",
+      "<b>/Bueno es alabar oh Señor <br>tu nombre.<br>Darte gloria, honra y honor, <br>por siempre.<br>Bueno es alabarte Jesús<br>y gozarme en tu poder/</b>",
       "<b>/Porque grande eres tú,<br>grandes  son tus obras,<br>porque grande eres tú, <br>grande es tu amor, grande es tu gloria/. <br><br>Bueno es alabarte Señor.</b>"
     ],
     "tono": "SOL",
@@ -430,17 +439,17 @@
     "preview": "Cada cosa en la vida\nTiene su justo lugar.\nCada cosa tiene un tiempo\nPara hacerse realidad.\n\nEs por eso que preciso\nQue me enseñes a mirar\nLo que tengo por delante\nY el presente que está acá.",
     "slides": [
       "<b>Cada cosa en la vida<br>Tiene su justo lugar.<br>Cada cosa tiene un tiempo<br>Para hacerse realidad.<br><br><br>Es por eso que preciso<br>Que me enseñes a mirar<br>Lo que tengo por delante<br>Y el presente que está acá.</b>",
-      "<b>/Enséñame a vivir el hoy<br>de tal manera que mañana <br>no tenga que reprocharme el ayer/.<br><br><br>Enséñame<br><br><br>Tiempo de nacer, tiempo de morir;<br>tiempo de llorar, también de reír.<br>Tiempo de buscar, tiempo de perder;<br>tiempo de saber lo que hay que hacer.</b>",
-      "<b>Es por eso que preciso<br>Que me enseñes a vivir<br>Y a no equivocarme<br>Cuando tenga que elegir.<br><br><br>/Enséñame a vivir el hoy <br>de tal manera que mañana <br>no tenga que reprocharme el ayer/<br><br><br>Enséñame</b>"
+      "<b>/Enséñame a vivir el hoy<br>de tal manera que mañana <br>no tenga que reprocharme el ayer/,<br>enséñame<br><br><br>Tiempo de nacer, tiempo de morir;<br>tiempo de llorar, también de reír.<br>Tiempo de buscar, tiempo de perder;<br>tiempo de saber lo que hay que hacer.</b>",
+      "<b>Es por eso que preciso<br>Que me enseñes a vivir<br>Y a no equivocarme<br>Cuando tenga que elegir.<br><br><br>/Enséñame a vivir el hoy <br>de tal manera que mañana <br>no tenga que reprocharme el ayer/,<br>enséñame</b>"
     ],
     "tono": "MI",
     "carpeta": "C"
   },
   {
     "titulo": "Cansado del camino",
-    "preview": "Cansado del camino, \nsediento de ti\u000bun desierto he cruzado,\u000bsin fuerzas he quedado, \nvengo a ti.\u000b\nLuché como soldado \ny a veces sufrí\u000by aunque la lucha he ganado,\u000bmi armadura he desgastado,\u000bvengo a ti.",
+    "preview": "Cansado del camino, sediento de ti\u000bun desierto he cruzado,\u000bsin fuerzas he quedado, \nvengo a ti.\u000b\nLuché como soldado y a veces sufrí\u000by aunque la lucha he ganado,\u000bmi armadura he desgastado,\u000bvengo a ti.",
     "slides": [
-      "<b>Cansado del camino, <br>sediento de ti<br>un desierto he cruzado,<br>sin fuerzas he quedado, <br>vengo a ti.<br><br>Luché como soldado <br>y a veces sufrí<br>y aunque la lucha he ganado,<br>mi armadura he desgastado,<br>vengo a ti.</b>",
+      "<b>Cansado del camino, sediento de ti<br>un desierto he cruzado,<br>sin fuerzas he quedado, <br>vengo a ti.<br><br>Luché como soldado y a veces sufrí<br>y aunque la lucha he ganado,<br>mi armadura he desgastado,<br>vengo a ti.</b>",
       "<b>/Sumérgeme <br>en el río de tu Espíritu,<br>necesito refrescar este seco corazón, <br>sediento de ti/</b>"
     ],
     "tono": "SOL",
@@ -458,9 +467,10 @@
   },
   {
     "titulo": "Cantemos a Jesús",
-    "preview": "/Cantemos a Jesús/\u000bSeñor de toda creación,\u000bDios de mi corazón\u000b\u000b/Cantemos a Jesús/\u000bvictorioso mas que vencedor\u000bRey sobre toda nación\u000b\u000b/Digno de loor/\u000b/Rey de mi corazón/",
+    "preview": "/Cantemos a Jesús/\u000bSeñor de toda creación,\u000bDios de mi corazón\u000b\u000b/Cantemos a Jesús/\u000bvictorioso mas que vencedor\u000bRey sobre toda nación",
     "slides": [
-      "<b>/Cantemos a Jesús/<br>Señor de toda creación,<br>Dios de mi corazón<br><br>/Cantemos a Jesús/<br>victorioso mas que vencedor<br>Rey sobre toda nación<br><br>/Digno de loor/<br>/Rey de mi corazón/</b>"
+      "<b>/Cantemos a Jesús/<br>Señor de toda creación,<br>Dios de mi corazón<br><br>/Cantemos a Jesús/<br>victorioso mas que vencedor<br>Rey sobre toda nación</b>",
+      "<b>/Digno de loor/<br>/Rey de mi corazón/</b>"
     ],
     "tono": "SOL",
     "carpeta": "C"
@@ -478,9 +488,10 @@
   },
   {
     "titulo": "Celebrad a Cristo",
-    "preview": "/Celebrad a Cristo, celebrad;\u000bcelebrad a Cristo, celebrad/\n\u000bResucitó, resucitó.\u000bÉl vive para siempre; \u000bresucitó, resucitó.\n\u000bVamos a celebrar, ¡si!, \u000bVamos a celebrar, ¡si!\u000bVamos a celebrar, \nresucitó el Señor.",
+    "preview": "/Celebrad a Cristo, celebrad;\u000bcelebrad a Cristo, celebrad/",
     "slides": [
-      "<b>/Celebrad a Cristo, celebrad;<br>celebrad a Cristo, celebrad/<br><br>Resucitó, resucitó.<br>Él vive para siempre; <br>resucitó, resucitó.<br><br>Vamos a celebrar, ¡si!, <br>Vamos a celebrar, ¡si!<br>Vamos a celebrar, <br>resucitó el Señor.</b>"
+      "<b>/Celebrad a Cristo, celebrad;<br>celebrad a Cristo, celebrad/</b>",
+      "<b>Resucitó, resucitó.<br>Él vive para siempre; <br>resucitó, resucitó.<br><br>/Vamos a celebrar, ¡si!/<br>Vamos a celebrar, <br>resucitó el Señor.</b>"
     ],
     "tono": "MI",
     "carpeta": "C",
@@ -490,18 +501,19 @@
   },
   {
     "titulo": "Cerca de ti yo quiero estar",
-    "preview": "Cerca de ti yo quiero estar\u000bpara escuchar tu voz\u000by aprender de ti.\u000bQuiero ser un reflejo de tu amor,\u000byo quiero vivir solo en tu voluntad.\u000b\u000bJesús, eres mi buen pastor,\u000btú conoces mi camino.\u000bJesús, puedo confiar en ti.\u000bOh mi Dios, me rindo hoy.",
+    "preview": "Cerca de ti yo quiero estar\u000bpara escuchar tu voz \u000by aprender de ti.\u000bQuiero ser un reflejo de tu amor,\u000byo quiero vivir \u000bsolo en tu voluntad.",
     "slides": [
-      "<b>Cerca de ti yo quiero estar<br>para escuchar tu voz<br>y aprender de ti.<br>Quiero ser un reflejo de tu amor,<br>yo quiero vivir solo en tu voluntad.<br><br>Jesús, eres mi buen pastor,<br>tú conoces mi camino.<br>Jesús, puedo confiar en ti.<br>Oh mi Dios, me rindo hoy.</b>"
+      "<b>Cerca de ti yo quiero estar<br>para escuchar tu voz <br>y aprender de ti.<br>Quiero ser un reflejo de tu amor,<br>yo quiero vivir <br>solo en tu voluntad.</b>",
+      "<b>Jesús, eres mi buen pastor,<br>tú conoces mi camino.<br>Jesús, puedo confiar en ti.<br>Oh mi Dios, me rindo hoy.</b>"
     ],
     "tono": "SOL",
     "carpeta": "C"
   },
   {
-    "titulo": "Cerca, mas cerca",
-    "preview": "Cerca, mas cerca, oh Dios de ti\ncerca yo quiero mi vida llevar\ncerca mas cerca, oh Dios de ti\n/creo en tu gracia que puede salvar/\n\nCerca, mas cerca, cual pobre soy\nnada Señor yo te puedo ofrecer\nsólo mi ser contrito te doy\n/pueda contigo la paz obtener/",
+    "titulo": "Cerca, más cerca",
+    "preview": "Cerca, mas cerca, oh Dios de ti\ncerca yo quiero mi vida llevar\ncerca mas cerca, oh Dios de ti\n/creo en tu gracia que puede salvar/\n\nCerca, mas cerca, cual pobre soy\nnada Señor yo te puedo ofrecer\nsolo mi ser contrito te doy\n/pueda contigo la paz obtener/",
     "slides": [
-      "Cerca, mas cerca, oh Dios de ti<br>cerca yo quiero mi vida llevar<br>cerca mas cerca, oh Dios de ti<br>/creo en tu gracia que puede salvar/<br><br><br>Cerca, mas cerca, cual pobre soy<br>nada Señor yo te puedo ofrecer<br>sólo mi ser contrito te doy<br>/pueda contigo la paz obtener/",
+      "Cerca, mas cerca, oh Dios de ti<br>cerca yo quiero mi vida llevar<br>cerca mas cerca, oh Dios de ti<br>/creo en tu gracia que puede salvar/<br><br><br>Cerca, mas cerca, cual pobre soy<br>nada Señor yo te puedo ofrecer<br>solo mi ser contrito te doy<br>/pueda contigo la paz obtener/",
       "Cerca, mas cerca, Señor de ti<br>quiero ser tuyo dejando el pecar<br>goces y pompas vanas aquí,<br>/todo Señor quiero ahora dejar/<br><br><br>Cerca, mas cerca, mientras el ser<br>aliente vida y busque tu paz<br>y cuando al cielo pueda ascender<br>/ya para siempre conmigo estarás/"
     ],
     "carpeta": "Himnos"
@@ -527,18 +539,20 @@
   },
   {
     "titulo": "Con mi Dios yo saltaré los muros",
-    "preview": "/Con mi Dios yo saltaré los muros,\u000bcon mi Dios ejércitos derribaré/\u000b\u000bÉl adiestra mis manos para la batalla,\u000bpuedo tomar con mis manos\u000bel arco de bronce.\u000b\u000bÉl es escudo, la roca mía,\u000bél es la fuerza de mi salvación,\u000bmi alto refugio y mi fortaleza.\u000bÉl es mi libertador.",
+    "preview": "/Con mi Dios yo saltaré los muros,\u000bcon mi Dios ejércitos derribaré/",
     "slides": [
-      "<b>/Con mi Dios yo saltaré los muros,<br>con mi Dios ejércitos derribaré/<br><br>Él adiestra mis manos para la batalla,<br>puedo tomar con mis manos<br>el arco de bronce.<br><br>Él es escudo, la roca mía,<br>él es la fuerza de mi salvación,<br>mi alto refugio y mi fortaleza.<br>Él es mi libertador.</b>"
+      "<b>/Con mi Dios yo saltaré los muros,<br>con mi Dios ejércitos derribaré/</b>",
+      "<b>Él adiestra mis manos para la batalla,<br>puedo tomar con mis manos<br>el arco de bronce.<br><br>Él es escudo, la roca mía,<br>él es la fuerza de mi salvación,<br>mi alto refugio y mi fortaleza.<br>Él es mi libertador.</b>"
     ],
     "tono": "DOm",
     "carpeta": "C"
   },
   {
     "titulo": "Con mis manos levantadas hacia el cielo",
-    "preview": "Con mis manos levantadas hacia el cielo\nMe presento ante ti hoy mi Señor\nPara recibir de ti la fuerza y el poder\nPara vivir junto a ti\n\nLlenas hoy mi corazón con tu presencia\nLlenas de alegría y paz todo mi ser\nDe cualquier necesidad tú me responderás\nPorque me amas, me amas",
+    "preview": "Con mis manos levantadas \nhacia el cielo\nMe presento ante ti hoy mi Señor\nPara recibir de ti \nla fuerza y el poder\nPara vivir junto a ti",
     "slides": [
-      "<b>Con mis manos levantadas hacia el cielo<br>Me presento ante ti hoy mi Señor<br>Para recibir de ti la fuerza y el poder<br>Para vivir junto a ti<br><br><br>Llenas hoy mi corazón con tu presencia<br>Llenas de alegría y paz todo mi ser<br>De cualquier necesidad tú me responderás<br>Porque me amas, me amas</b>"
+      "<b>Con mis manos levantadas <br>hacia el cielo<br>Me presento ante ti hoy mi Señor<br>Para recibir de ti <br>la fuerza y el poder<br>Para vivir junto a ti</b>",
+      "<b>/Llenas hoy mi corazón <br>con tu presencia<br>Llenas de alegría y paz <br>todo mi ser<br>De cualquier necesidad <br>tú me responderás<br>Porque me amas, me amas/</b>"
     ],
     "tono": "MI",
     "carpeta": "C"
@@ -608,9 +622,9 @@
   },
   {
     "titulo": "Cristo tan solo pudo amarme",
-    "preview": "Cristo tan sólo pudo amarme,\u000bNada podrá de él separarme,\u000bPues con su sangre me redimió:\u000bAhora soy de él.\u000b\u000bAhora soy de Cristo,\u000bMío también es él,\u000bPuedo gozar de su amistad\u000bPor la eternidad",
+    "preview": "Cristo tan solo pudo amarme,\u000bNada podrá de él separarme,\u000bPues con su sangre me redimió:\u000bAhora soy de él.\u000b\u000bAhora soy de Cristo,\u000bMío también es él,\u000bPuedo gozar de su amistad\u000bPor la eternidad",
     "slides": [
-      "<b>Cristo tan sólo pudo amarme,<br>Nada podrá de él separarme,<br>Pues con su sangre me redimió:<br>Ahora soy de él.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
+      "<b>Cristo tan solo pudo amarme,<br>Nada podrá de él separarme,<br>Pues con su sangre me redimió:<br>Ahora soy de él.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
       "<b>Antes vivía en el pecado,<br>Mi corazón de Dios alejado;<br>Mas mi vergüenza él me quitó:<br>Ya pertenezco a él.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
       "<b>Mi ser rebosa de pleno gozo,<br>Dios me liberta, me da reposo;<br>Pues con su sangre me redimió:<br>Ahora soy de El.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>"
     ],
@@ -619,9 +633,10 @@
   },
   {
     "titulo": "Cristo te necesita para amar",
-    "preview": "/Cristo te necesita para amar, para amar,\u000bCristo te necesita para amar/\u000b\u000b/No te importe la raza ni el color de la piel\u000bama a todos por igual y haz el bien/\u000b\u000b/Al que está a tu lado dale amor, dale amor\u000bal que esta a tu lado dale amor/\u000b\u000b/Al que viene desde lejos dale amor, dale amor\u000bal que viene desde lejos dale amor/",
+    "preview": "/Cristo te necesita para amar, para amar,\u000bCristo te necesita para amar/\u000b\u000b/No te importe la raza ni el color de la piel\u000bama a todos por igual y haz el bien/",
     "slides": [
-      "<b>/Cristo te necesita para amar, para amar,<br>Cristo te necesita para amar/<br><br>/No te importe la raza ni el color de la piel<br>ama a todos por igual y haz el bien/<br><br>/Al que está a tu lado dale amor, dale amor<br>al que esta a tu lado dale amor/<br><br>/Al que viene desde lejos dale amor, dale amor<br>al que viene desde lejos dale amor/</b>"
+      "<b>/Cristo te necesita para amar, para amar,<br>Cristo te necesita para amar/<br><br>/No te importe la raza ni el color de la piel<br>ama a todos por igual y haz el bien/</b>",
+      "<b>/Al que está a tu lado dale amor, dale amor<br>al que esta a tu lado dale amor/<br><br>/Al que viene desde lejos dale amor, dale amor<br>al que viene desde lejos dale amor/</b>"
     ],
     "tono": "REm",
     "carpeta": "C"
@@ -727,11 +742,13 @@
   },
   {
     "titulo": "Cuando vengas a buscarme",
-    "preview": "Cuando vengas a buscarme\u000bquizás me halles en el campo\u000bcosechando las espigas \u000bque sembré con mi trabajo.\u000b\u000bCuando vengas a buscarme\u000bquizás esté en el molino\u000blas manos blancas de harina\u000bhaciendo el pan de mi trigo\u000b\u000bCuando vengas a buscarme\u000bte voy a estar esperando.",
+    "preview": "Cuando vengas a buscarme\u000bquizás me halles en el campo\u000bcosechando las espigas \u000bque sembré con mi trabajo.\u000b\u000bCuando vengas a buscarme\u000bquizás esté en el molino\u000blas manos blancas de harina \u000bhaciendo el pan de mi trigo",
     "slides": [
-      "<b>Cuando vengas a buscarme<br>quizás me halles en el campo<br>cosechando las espigas <br>que sembré con mi trabajo.<br><br>Cuando vengas a buscarme<br>quizás esté en el molino<br>las manos blancas de harina<br>haciendo el pan de mi trigo<br><br>Cuando vengas a buscarme<br>te voy a estar esperando.</b>",
+      "<b>Cuando vengas a buscarme<br>quizás me halles en el campo<br>cosechando las espigas <br>que sembré con mi trabajo.<br><br>Cuando vengas a buscarme<br>quizás esté en el molino<br>las manos blancas de harina <br>haciendo el pan de mi trigo</b>",
+      "<b>Cuando vengas a buscarme <br>te voy a estar esperando.</b>",
       "<b>En que lugar me encontraré <br>quizás durmiendo, no lo sé<br>será mañana, tal vez hoy,<br>nadie lo sabe Señor<br><br>Me prometiste regresar,<br>como un ladrón sin avisar<br>y yo te espero mi Señor,<br>porque confío en tu amor</b>",
-      "<b>Cuando vengas a buscarme<br>te voy a estar esperando,<br>haciendo el bien sin distingo<br>al opresor o al hermano.<br><br>Cuando vengas a buscarme<br>quiero que me halles velando<br>practicando tu palabra<br>y el evangelio llevando.<br><br>Cuando vengas a buscarme<br>te voy a estar esperando.</b>",
+      "<b>Cuando vengas a buscarme<br>te voy a estar esperando,<br>haciendo el bien sin distingo<br>al opresor o al hermano.<br><br>Cuando vengas a buscarme<br>quiero que me halles velando<br>practicando tu palabra<br>y el evangelio llevando.</b>",
+      "<b>Cuando vengas a buscarme<br>te voy a estar esperando.</b>",
       "<b>En que lugar me encontraré <br>quizás durmiendo, no lo sé<br>será mañana, tal vez hoy,<br>nadie lo sabe Señor<br><br>Me prometiste regresar,<br>como ladrón sin avisar<br>y yo te espero mi Señor,<br>porque confío en tu amor</b>"
     ],
     "tono": "REm",
@@ -739,31 +756,33 @@
   },
   {
     "titulo": "Cuantas veces Señor perdonaré",
-    "preview": "/¿Cuantas veces Señor perdonaré?/\u000b\u000bYo quiero perdonar para estar cerca de ti,\u000b¿cuantas veces Señor perdonaré?\u000b\u000b//Setenta veces siete//\u000bSeñor perdonaré\u000b\u000bYo quiero perdonar para estar cerca de ti,\u000b¿cuantas veces Señor perdonaré?",
+    "preview": "/¿Cuantas veces Señor perdonaré?/\u000b\u000bYo quiero perdonar \u000bpara estar cerca de ti,\u000b¿cuantas veces Señor perdonaré?",
     "slides": [
-      "<b>/¿Cuantas veces Señor perdonaré?/<br><br>Yo quiero perdonar para estar cerca de ti,<br>¿cuantas veces Señor perdonaré?<br><br>//Setenta veces siete//<br>Señor perdonaré<br><br>Yo quiero perdonar para estar cerca de ti,<br>¿cuantas veces Señor perdonaré?</b>"
+      "<b>/¿Cuantas veces Señor perdonaré?/<br><br>Yo quiero perdonar <br>para estar cerca de ti,<br>¿cuantas veces Señor perdonaré?</b>",
+      "<b>//Setenta veces siete//<br>Señor perdonaré<br><br>Yo quiero perdonar <br>para estar cerca de ti,<br>¿cuantas veces Señor perdonaré?</b>"
     ],
     "tono": "REm",
     "carpeta": "C"
   },
   {
     "titulo": "Cómo podré estar triste",
-    "preview": "¿Cómo podré estar triste?\n¿Cómo entre sombras ir?\n¿Cómo sentirme solo\nY en el dolor vivir?\n\nSi Cristo es mi consuelo, \nmi amigo siempre fiel.\n/Si aún las aves tienen \nseguro asilo en él/",
+    "preview": "¿Cómo podré estar triste?\n¿Cómo entre sombras ir?\n¿Cómo sentirme solo\ny en el dolor vivir?\n\nSi Cristo es mi consuelo, \nmi amigo siempre fiel.\n/Si aún las aves tienen \nseguro asilo en él/",
     "slides": [
-      "<b>¿Cómo podré estar triste?<br>¿Cómo entre sombras ir?<br>¿Cómo sentirme solo<br>Y en el dolor vivir?<br><br><br>Si Cristo es mi consuelo, <br>mi amigo siempre fiel.<br>/Si aún las aves tienen <br>seguro asilo en él/</b>",
+      "<b>¿Cómo podré estar triste?<br>¿Cómo entre sombras ir?<br>¿Cómo sentirme solo<br>y en el dolor vivir?<br><br><br>Si Cristo es mi consuelo, <br>mi amigo siempre fiel.<br>/Si aún las aves tienen <br>seguro asilo en él/</b>",
       "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
       "<b>Nunca te desalientes,<br>oigo al Señor decir,<br>y en su palabra fiado,<br>hago al dolor huir.<br><br><br>A Cristo, paso a paso<br>yo sigo sin cesar.<br>/Y todas sus bondades,<br>por siempre me ha de dar/</b>",
       "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
-      "<b>Siempre que soy tentado,<br>o si en la prueba estoy,<br>más cerca de él camino,<br>y protegido voy;<br><br><br>Si en mí la fe desmaya,<br>y sufro de ansiedad,<br>/Tan sólo él me levanta,<br>me da seguridad/</b>",
+      "<b>Siempre que soy tentado,<br>o si en la prueba estoy,<br>más cerca de él camino,<br>y protegido voy;<br><br><br>Si en mí la fe desmaya,<br>y sufro de ansiedad,<br>/Tan solo él me levanta,<br>me da seguridad/</b>",
       "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>"
     ],
     "carpeta": "Himnos"
   },
   {
     "titulo": "Cúbreme con tu poder",
-    "preview": "Cúbreme con tu poder,\u000btómame y no me dejes ir.\u000b\u000bAún en tempestad te buscaré\u000ba ti clamaré y te encontraré\u000bsobre la tormenta tu eres rey\u000beres mi Dios, no callaré.\u000b\u000bDescansaré en ti, Jesús\u000bsolo en ti seguro estaré.",
+    "preview": "Cúbreme con tu poder,\u000btómame y no me dejes ir.\u000b\u000bAún en tempestad te buscaré\u000ba ti clamaré y te encontraré\u000bsobre la tormenta tu eres rey\u000beres mi Dios, no callaré.",
     "slides": [
-      "<b>Cúbreme con tu poder,<br>tómame y no me dejes ir.<br><br>Aún en tempestad te buscaré<br>a ti clamaré y te encontraré<br>sobre la tormenta tu eres rey<br>eres mi Dios, no callaré.<br><br>Descansaré en ti, Jesús<br>solo en ti seguro estaré.</b>"
+      "<b>Cúbreme con tu poder,<br>tómame y no me dejes ir.<br><br>Aún en tempestad te buscaré<br>a ti clamaré y te encontraré<br>sobre la tormenta tu eres rey<br>eres mi Dios, no callaré.</b>",
+      "<b>Descansaré en ti, Jesús<br>solo en ti seguro estaré.<br><br>Aún en tempestad te buscaré<br>a ti clamaré y te encontraré<br>sobre la tormenta tu eres rey<br>eres mi Dios, no callaré.</b>"
     ],
     "tono": "DO",
     "carpeta": "C"
@@ -803,7 +822,7 @@
     "preview": "De tal manera me amó,\u000bque su vida no escatimó,\u000bhasta el final él se entregó,\u000by a la muerte fue porque me amó.\u000b\u000bDe tal manera me amó,\u000bque no hay forma en que podré pagar,\u000bel precio de su grande amor,\u000bpero toda mi alma quiero dar.",
     "slides": [
       "<b>De tal manera me amó,<br>que su vida no escatimó,<br>hasta el final él se entregó,<br>y a la muerte fue porque me amó.<br><br>De tal manera me amó,<br>que no hay forma en que podré pagar,<br>el precio de su grande amor,<br>pero toda mi alma quiero dar.</b>",
-      "<b>Por su amor yo viviré, <br>de su amor yo cantaré,<br>con mi Jesús caminaré, <br>porque él me amó a mí.<br><br>Por su amor yo viviré, <br>de su amor yo cantaré, <br>con mi Jesús caminaré,<br>porque él murió por mí,<br>le seguiré.</b>"
+      "<b>Por su amor yo viviré, <br>de su amor yo cantaré,<br>con mi Jesús caminaré, <br>porque él me amó a mí.<br><br>Por su amor yo viviré, <br>de su amor yo cantaré, <br>con mi Jesús caminaré,<br>porque él murió por mí, le seguiré.</b>"
     ],
     "tono": "DO",
     "carpeta": "D"
@@ -899,10 +918,11 @@
   },
   {
     "titulo": "Dios ha sido bueno",
-    "preview": "//Dios ha sido bueno//\u000bBueno es Dios\u000b\u000bSu bondad me alcanzó\u000bsu amor me rescató\u000bsu gracia me salvó.\u000bBueno es Dios\n\n//Dios ha sido bueno//\u000bBueno es Dios",
+    "preview": "//Dios ha sido bueno//\u000bBueno es Dios\u000b\u000bSu bondad me alcanzó\u000bsu amor me rescató\u000bsu gracia me salvó.\u000bBueno es Dios",
     "slides": [
-      "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br>Su bondad me alcanzó<br>su amor me rescató<br>su gracia me salvó.<br>Bueno es Dios<br><br><br>//Dios ha sido bueno//<br>Bueno es Dios</b>",
-      "<b>Por eso cantaré <br>y siempre alabaré<br>y nunca olvidaré <br>bueno es Dios<br><br><br>//Dios ha sido bueno//<br>//Bueno es Dios//</b>"
+      "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br>Su bondad me alcanzó<br>su amor me rescató<br>su gracia me salvó.<br>Bueno es Dios</b>",
+      "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br><br>Por eso cantaré <br>y siempre alabaré<br>y nunca olvidaré <br>bueno es Dios</b>",
+      "<b>//Dios ha sido bueno//<br>//Bueno es Dios//</b>"
     ],
     "tono": "RE",
     "carpeta": "D"
@@ -925,9 +945,9 @@
   },
   {
     "titulo": "Dios nos envió a su hijo Cristo (Porque El Vive)",
-    "preview": "Dios nos envió a su hijo Cristo, \u000bél es salud, paz y perdón, \u000bsufrió y murió por mis pecados\u000bvacía esta la tumba\u000bporque él triunfó.\u000b\u000bPorque él vive triunfaré mañana\u000bporque él vive ya no hay temor\u000bporque yo sé, yo sé\u000bque el futuro es suyo\u000bla vida vale más y más solo por él.",
+    "preview": "Dios nos envió a su hijo Cristo, \u000bél es salud, paz y perdón, \u000bsufrió y murió por mis pecados\u000bvacía esta la tumba porque él triunfó.\u000b\u000bPorque él vive triunfaré mañana\u000bporque él vive ya no hay temor\u000bporque yo sé, yo sé\u000bque el futuro es suyo\u000bla vida vale más y más solo por él.",
     "slides": [
-      "<b>Dios nos envió a su hijo Cristo, <br>él es salud, paz y perdón, <br>sufrió y murió por mis pecados<br>vacía esta la tumba<br>porque él triunfó.<br><br>Porque él vive triunfaré mañana<br>porque él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por él.</b>",
+      "<b>Dios nos envió a su hijo Cristo, <br>él es salud, paz y perdón, <br>sufrió y murió por mis pecados<br>vacía esta la tumba porque él triunfó.<br><br>Porque él vive triunfaré mañana<br>porque él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por él.</b>",
       "<b>Yo sé que un día el río cruzaré,<br>con el dolor batallaré,<br>y al ver la vida triunfando invicta,<br>veré gloriosas luces y veré al Rey.<br><br>Porque él vive triunfaré mañana<br>porque él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por él.</b>"
     ],
     "tono": "SOL",
@@ -1076,12 +1096,12 @@
   },
   {
     "titulo": "En el monte Calvario",
-    "preview": "En el monte Calvario estaba una cruz,\u000bemblema de afrenta y dolor.\u000bMas yo amo a Jesús, que murió en la cruz\u000bpor salvar al mas vil pecador.\u000b\u000bGloriaréme sólo en la cruz\u000ben sus triunfos mi gozo será\u000by en el día de eterna salud\u000bmi corona Jesús me dará.",
+    "preview": "En el monte Calvario estaba una cruz,\u000bemblema de afrenta y dolor.\u000bMas yo amo a Jesús, que murió en la cruz\u000bpor salvar al mas vil pecador.\u000b\u000bGloriaréme solo en la cruz\u000ben sus triunfos mi gozo será\u000by en el día de eterna salud\u000bmi corona Jesús me dará.",
     "slides": [
-      "<b>En el monte Calvario estaba una cruz,<br>emblema de afrenta y dolor.<br>Mas yo amo a Jesús, que murió en la cruz<br>por salvar al mas vil pecador.<br><br>Gloriaréme sólo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
-      "<b>Y aunque el mundo desprecie <br>la cruz de Jesús<br>para mí tiene suma atracción:<br>pues en ella llevó el cordero de Dios<br>de mi alma la condenación.<br><br> Gloriaréme sólo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
-      "<b>En la cruz de Jesús do su sangre vertió<br>hermosura contemplo sin par<br>pues en ella triunfante a la muerte venció<br>y mi ser puede santificar.<br><br> Gloriaréme sólo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
-      "<b>Yo quisiera seguir en pos de Jesús<br>y su menosprecio llevar<br>y algún día feliz con los santos en luz<br>en la gloria con él he de estar.<br><br>Gloriaréme sólo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>"
+      "<b>En el monte Calvario estaba una cruz,<br>emblema de afrenta y dolor.<br>Mas yo amo a Jesús, que murió en la cruz<br>por salvar al mas vil pecador.<br><br>Gloriaréme solo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
+      "<b>Y aunque el mundo desprecie <br>la cruz de Jesús<br>para mí tiene suma atracción:<br>pues en ella llevó el cordero de Dios<br>de mi alma la condenación.<br><br> Gloriaréme solo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
+      "<b>En la cruz de Jesús do su sangre vertió<br>hermosura contemplo sin par<br>pues en ella triunfante a la muerte venció<br>y mi ser puede santificar.<br><br>Gloriaréme solo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>",
+      "<b>Yo quisiera seguir en pos de Jesús<br>y su menosprecio llevar<br>y algún día feliz con los santos en luz<br>en la gloria con él he de estar.<br><br>Gloriaréme solo en la cruz<br>en sus triunfos mi gozo será<br>y en el día de eterna salud<br>mi corona Jesús me dará.</b>"
     ],
     "carpeta": "Himnos"
   },
@@ -1565,10 +1585,10 @@
     "preview": "Las cadenas de la muerte me quitó\u000bPara mí ya no hay condenación\u000bHay libertad, libertad\n\nSiendo esclavo del pecado me libró\u000bEn la cruz compró mi redención\u000bY libertad, libertad",
     "slides": [
       "<b>Las cadenas de la muerte me quitó<br>Para mí ya no hay condenación<br>Hay libertad, libertad<br><br><br>Siendo esclavo del pecado me libró<br>En la cruz compró mi redención<br>Y libertad, libertad</b>",
-      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Sólo en el nombre de Jesús<br>Hay libertad</b>",
+      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>",
       "<b>Yo proclamo al que en la cruz por mi murió<br>Y cambió mi duro corazón<br>Por libertad, libertad<br><br>El poder de su evangelio me salvó<br>Y no me avergüenzo del Señor<br>Mi libertad, libertad</b>",
-      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Sólo en el nombre de Jesús<br>Hay libertad</b>",
-      "<b>///Al que el Hijo hace libre<br>Es libre en verdad///<br><br><br>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Sólo en el nombre de Jesús<br>Hay libertad</b>"
+      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>",
+      "<b>///Al que el Hijo hace libre<br>Es libre en verdad///<br><br><br>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>"
     ],
     "tono": "DO",
     "carpeta": "L"
@@ -1725,7 +1745,8 @@
     "preview": "Ningún problema es tan grande que Dios\u000bno pueda resolverlo,\u000bninguna montaña es tan alta que él\u000bno pueda moverla.\u000bNinguna tormenta es tan oscura que Dios\u000bno pueda calmarla.\u000bNinguna tristeza es tan profunda que él\u000bno pueda aliviarla.",
     "slides": [
       "<b>Ningún problema es tan grande que Dios<br>no pueda resolverlo,<br>ninguna montaña es tan alta que él<br>no pueda moverla.<br>Ninguna tormenta es tan oscura que Dios<br>no pueda calmarla.<br>Ninguna tristeza es tan profunda que él<br>no pueda aliviarla.</b>",
-      "<b>/Si sobre sus hombros llevó<br>el pecado del mundo,<br>yo sé mi hermano tus cargas él las llevará/<br><br><br>Dijo Jesús: “venid a mi,<br>todos los que estáis cargados,<br>y yo os haré descansar”<br><br>/Si sobre sus hombros llevó<br>el pecado del mundo<br>yo sé mi hermano tus cargas él las llevará/</b>"
+      "<b>/Si sobre sus hombros llevó<br>el pecado del mundo,<br>yo sé mi hermano tus cargas <br>él las llevará/</b>",
+      "<b>Dijo Jesús: “venid a mi,<br>todos los que estáis cargados,<br>y yo os haré descansar”<br><br>/Si sobre sus hombros llevó<br>el pecado del mundo<br>yo sé mi hermano tus cargas <br>él las llevará/</b>"
     ],
     "tono": "SOL",
     "carpeta": "N"
@@ -1854,7 +1875,7 @@
     "slides": [
       "<b>Oh, qué amigo nos es Cristo,<br>Nuestras culpas El llevó,<br>Y nos manda que llevemos<br>Todo a Dios en oración.<br>¿Somos tristes agobiados<br>y cargados de aflicción?<br>Esto es porque no le llevamos<br>todo a Dios en oración.</b>",
       "<b>Te hallas débil y oprimido<br>de cuidados y temor,<br>a Jesús, refugio eterno<br>dile todo en oración.<br>¿Te desprecian tus amigos?<br>Cuéntale en oración,<br>en sus brazos de amor tierno,<br>paz tendrá tu corazón.</b>",
-      "<b>Jesucristo es nuestro amigo,<br>De esto pruebas nos mostró,<br>Pues para llevar consigo<br>Al culpable se humanó.<br>El castigo de su pueblo<br>En su muerte El sufrió,<br>Cristo es el amigo eterno,<br>Sólo en El confío yo.</b>"
+      "<b>Jesucristo es nuestro amigo,<br>De esto pruebas nos mostró,<br>Pues para llevar consigo<br>Al culpable se humanó.<br>El castigo de su pueblo<br>En su muerte El sufrió,<br>Cristo es el amigo eterno,<br>Solo en El confío yo.</b>"
     ],
     "carpeta": "Himnos"
   },
@@ -2022,10 +2043,10 @@
   },
   {
     "titulo": "Quero cantar una linda canción",
-    "preview": "Quiero cantar una linda canción\u000bde un hombre que me transformó.\u000bQuiero cantar una linda canción\u000bde aquel que mi vida cambió.\n\u000bEs mi amigo Jesús, es mi amigo Jesús;\u000bél es Dios, él es Rey,\u000b es amor y es verdad.\u000bSólo en él encontré \u000besa paz que busqué,\u000bsólo en él encontré la felicidad.",
+    "preview": "Quiero cantar una linda canción\u000bde un hombre que me transformó.\u000bQuiero cantar una linda canción\u000bde aquel que mi vida cambió.\n\u000bEs mi amigo Jesús, es mi amigo Jesús;\u000bél es Dios, él es Rey,\u000b es amor y es verdad.\u000bSolo en él encontré \u000besa paz que busqué,\u000bsolo en él encontré la felicidad.",
     "slides": [
-      "<b>Quiero cantar una linda canción<br>de un hombre que me transformó.<br>Quiero cantar una linda canción<br>de aquel que mi vida cambió.<br><br>Es mi amigo Jesús, es mi amigo Jesús;<br>él es Dios, él es Rey,<br> es amor y es verdad.<br>Sólo en él encontré <br>esa paz que busqué,<br>sólo en él encontré la felicidad.</b>",
-      "<b>¿Quieres amigo, cantar y alabar <br>a quién puede tu vida salvar?<br>¿Quieres amigo, cantar y alabar <br>a quién puede tu vida cambiar?<br><br>Él será para ti el amigo más fiel,<br>él es Dios, él es Rey, <br>es amor y es verdad;<br>sólo en él encontré <br>esa paz que busqué,<br>sólo en él encontré //la felicidad//</b>"
+      "<b>Quiero cantar una linda canción<br>de un hombre que me transformó.<br>Quiero cantar una linda canción<br>de aquel que mi vida cambió.<br><br>Es mi amigo Jesús, es mi amigo Jesús;<br>él es Dios, él es Rey,<br> es amor y es verdad.<br>Solo en él encontré <br>esa paz que busqué,<br>solo en él encontré la felicidad.</b>",
+      "<b>¿Quieres amigo, cantar y alabar <br>a quién puede tu vida salvar?<br>¿Quieres amigo, cantar y alabar <br>a quién puede tu vida cambiar?<br><br>Él será para ti el amigo más fiel,<br>él es Dios, él es Rey, <br>es amor y es verdad;<br>solo en él encontré <br>esa paz que busqué,<br>solo en él encontré //la felicidad//</b>"
     ],
     "tono": "DO",
     "carpeta": "Q"
@@ -2162,7 +2183,7 @@
     "slides": [
       "<b>Corrió su sangre por un madero<br>A él no lo mataron, se entregó primero<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz<br><br>No dijo nada, no abrió su boca<br>Le hieren, le golpean, pero él perdona<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz</b>",
       "<b>/Santo es el que vive, santo es <br>el que reina.<br>Santo en las alturas, santo aquí <br>en la tierra.<br>Santo en el pesebre, santo <br>en el sepulcro.<br>Santa es su sangre derramada <br>en la Cruz/</b>",
-      "<b>/Todos lo verán<br>Como un rey en las nubes volverá<br>Coronado en poder y autoridad<br>El cordero y león reinará/</b>",
+      "<b>/Todos lo verán<br>Como un rey en las nubes volverá<br>Coronado en poder y autoridad<br>El Cordero y León reinará/</b>",
       "<b>/Santo es el que vive, santo es <br>el que reina.<br>Santo en las alturas, santo aquí <br>en la tierra.<br>Santo en el pesebre, santo <br>en el sepulcro<br>Santa es su sangre derramada <br>en la Cruz/</b>",
       "<b>//Santo, Santo, Santo<br>es Jesús de Nazareth//</b>"
     ],
@@ -2308,7 +2329,7 @@
       "<b>Si paz cual un río es aquí mi porción<br>si es como las olas del mar,<br>cualquiera mi suerte, es ya mi canción:<br>está bien, con mi alma está bien.<br><br>Está bien… está bien…<br>está bien con mi alma, está bien.</b>",
       "<b>Por más que Satán me tentare a mí,<br>en esto consuelo tendré:<br>que Cristo al ver cuan perdido yo fui,<br>en la cruz por mi alma murió.<br><br> Está bien… está bien…<br>está bien con mi alma, está bien.</b>",
       "<b>Pecado llevó, y las gracias le doy,<br>Completo el trabajo está;<br>Llevólo en la cruz y ya libre estoy,<br>¡oh mi alma bendice al Señor!<br><br> Está bien… está bien…<br>está bien con mi alma, está bien.</b>",
-      "<b>Que viva por Cristo, y sólo por él;<br>y si yo muriese bien sé<br>que no temeré, porque Cristo es fiel<br>y mi alma en su paz guardará.<br><br> Está bien… está bien…<br>está bien con mi alma, está bien.</b>",
+      "<b>Que viva por Cristo, y solo por él;<br>y si yo muriese bien sé<br>que no temeré, porque Cristo es fiel<br>y mi alma en su paz guardará.<br><br> Está bien… está bien…<br>está bien con mi alma, está bien.</b>",
       "<b>Mas no es la muerte que espero, Señor,<br>la tumba mi meta no es,<br>tu pronta venida, en tu tierno amor,<br>esperando mi alma hoy está.<br><br> Está bien… está bien…<br>está bien con mi alma, está bien.</b>"
     ],
     "tono": "LA",

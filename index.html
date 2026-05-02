@@ -601,6 +601,30 @@
   #novedad-help:hover { border-color: #555; color: var(--text2); }
   #novedad-ok { background: var(--green-bg); border: 0.5px solid var(--green-bd); color: var(--green-tx); font-size: 12px; padding: 6px 16px; border-radius: 8px; cursor: pointer; transition: all .12s; }
   #novedad-ok:hover { background: #254a25; }
+
+
+  /* ── Popup desbordamiento ───────────────────────────────── */
+  #overflow-bg {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.75); z-index: 9200;
+    align-items: center; justify-content: center; padding: 1rem;
+  }
+  #overflow-bg.open { display: flex; }
+  #overflow-card {
+    background: var(--bg2); border: 0.5px solid var(--border2);
+    border-radius: var(--radius-lg); width: 100%; max-width: 420px;
+    padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;
+    animation: slideUp .2s ease;
+  }
+  #overflow-card h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 0; }
+  #overflow-card p { font-size: 13px; color: var(--text2); line-height: 1.6; margin: 0; }
+  #overflow-card p b { color: var(--text); font-weight: 500; }
+  #overflow-card ul { font-size: 12px; color: var(--text4); margin: 0; padding-left: 1.2rem; line-height: 1.8; }
+  #overflow-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  #overflow-auto { background: var(--green-bg); border: 0.5px solid var(--green-bd); color: var(--green-tx); font-size: 12px; padding: 7px 16px; border-radius: 8px; cursor: pointer; transition: all .12s; }
+  #overflow-auto:hover { background: #254a25; }
+  #overflow-igual { background: none; border: 0.5px solid var(--border2); color: var(--text4); font-size: 12px; padding: 7px 14px; border-radius: 8px; cursor: pointer; transition: all .12s; }
+  #overflow-igual:hover { border-color: #555; color: var(--text2); }
   </style>
 </head>
 <body>
@@ -812,6 +836,21 @@
     <div id="novedad-actions">
       <button id="novedad-help">Ver ayuda completa</button>
       <button id="novedad-ok">&#10003; Entendido</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Popup desbordamiento de diapositivas -->
+<div id="overflow-bg">
+  <div id="overflow-card">
+    <h3>⚠️ Algunas diapositivas pueden desbordarse</h3>
+    <p>Se detectaron <b id="overflow-count"></b> que podrían no entrar en pantalla con el tamaño de texto actual.</p>
+    <ul id="overflow-list"></ul>
+    <p>¿Qué querés hacer?</p>
+    <div id="overflow-actions">
+      <button id="overflow-igual">Proyectar igual</button>
+      <button id="overflow-auto">✓ Ajustar automáticamente</button>
     </div>
   </div>
 </div>
@@ -2068,7 +2107,7 @@ document.getElementById("fs-btn").addEventListener("click", () => {
   o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
   liberarOrientacion(); activarWakeLock();
-  renderFSNewSong();
+  verificarYProyectar(() => renderFSNewSong());
 });
 document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = true; actualizarBotonRetomar();
@@ -2105,7 +2144,7 @@ document.getElementById("fs-btn-edges").addEventListener("click", () => {
   o.classList.remove("modo-acordes");
   if (o.requestFullscreen) o.requestFullscreen();
   liberarOrientacion(); activarWakeLock();
-  renderFSNewSong();
+  verificarYProyectar(() => renderFSNewSong());
 });
 document.getElementById("fs-cl").addEventListener("click", () => {
   const o = document.getElementById("fso");
@@ -2742,6 +2781,91 @@ document.getElementById("novedad-bg").addEventListener("click", e => {
     localStorage.setItem(LS_NOVEDAD, "1");
     document.getElementById("novedad-bg").classList.remove("open");
   }
+});
+
+
+// ── Detección y ajuste de desbordamiento ───────────────────────
+let _overflowCallback = null; // función a ejecutar tras cerrar el popup
+
+function detectarDesbordamiento() {
+  // Solo en desktop (en móvil es scroll normal, no hay overflow)
+  if (isMobile()) return [];
+  const content = document.getElementById("fs-content");
+  if (!content) return [];
+  // Comparar scrollHeight vs clientHeight del contenedor
+  // En modo diapositiva, cada slide ocupa toda la pantalla
+  const fso = document.getElementById("fso");
+  const desbordadas = [];
+  // Recorrer todos los slides del viewerSlides (solo tipo "slide")
+  const slidesInfo = viewerSlides.filter(s => s.type === "slide");
+  slidesInfo.forEach(s => {
+    // Renderizar el slide en un div oculto para medir
+    const tmp = document.createElement("div");
+    tmp.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;
+      width:${content.clientWidth}px;
+      font-size:${content.style.fontSize || getFsSize() + "px"};
+      line-height:${content.style.lineHeight || fsLineHeight};
+      padding:${window.getComputedStyle(content).padding};
+      box-sizing:border-box;`;
+    tmp.innerHTML = s.html || "";
+    document.body.appendChild(tmp);
+    const desborda = tmp.scrollHeight > fso.clientHeight * 0.88; // 88% de la pantalla
+    document.body.removeChild(tmp);
+    if (desborda) desbordadas.push(s.songTitle || "");
+  });
+  // Deduplicar por canción
+  return [...new Set(desbordadas)];
+}
+
+function ajustarFontSizeAutomatico() {
+  // Reducir fsSizeOffset de a un paso hasta que no haya overflow, con límite
+  const limite = FS_MIN - getFsBaseSize();
+  let intentos = 0;
+  const maxIntentos = 15;
+  function paso() {
+    if (intentos++ > maxIntentos || fsSizeOffset <= limite) {
+      aplicarFontSize();
+      return;
+    }
+    fsSizeOffset = Math.max(limite, fsSizeOffset - FS_STEP);
+    guardarFontOffset();
+    aplicarFontSize();
+    // Verificar si ya no hay desbordamiento
+    const restantes = detectarDesbordamiento();
+    if (restantes.length > 0) paso();
+  }
+  paso();
+}
+
+function verificarYProyectar(callback) {
+  // Ejecutar primero el callback para que el contenido esté renderizado
+  callback();
+  // Esperar un frame para que el DOM se actualice
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const desbordadas = detectarDesbordamiento();
+      if (!desbordadas.length) return; // todo bien, seguir
+      // Mostrar popup
+      _overflowCallback = callback;
+      const count = desbordadas.length;
+      document.getElementById("overflow-count").textContent =
+        count === 1 ? "1 diapositiva" : `${count} diapositivas`;
+      const lista = document.getElementById("overflow-list");
+      // Mostrar hasta 5 canciones afectadas
+      const canciones = [...new Set(desbordadas)].slice(0, 5);
+      lista.innerHTML = canciones.map(t => `<li>${t}</li>`).join("");
+      document.getElementById("overflow-bg").classList.add("open");
+    });
+  });
+}
+
+document.getElementById("overflow-auto").addEventListener("click", () => {
+  document.getElementById("overflow-bg").classList.remove("open");
+  ajustarFontSizeAutomatico();
+});
+
+document.getElementById("overflow-igual").addEventListener("click", () => {
+  document.getElementById("overflow-bg").classList.remove("open");
 });
 
 // ── Ayuda ─────────────────────────────────────────────────────
