@@ -198,9 +198,9 @@
     /* Franja superior: título + minimizar + cerrar */
     #fs-top {
       display: flex; align-items: center;
-      padding: 1rem 1.5rem;
+      padding: .5rem 1rem;
       flex-shrink: 0;
-      gap: 1rem;
+      gap: .75rem;
     }
     #fs-song-title { font-size: 20px; font-weight: 500; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
     #fs-song-counter { font-size: 13px; color: #555; white-space: nowrap; flex-shrink: 0; }
@@ -231,7 +231,7 @@
     }
     #fs-content {
       color: #f0f0f0; text-align: center;
-      max-width: 900px; width: 100%;
+      max-width: 1100px; width: 100%;
     }
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
     #fs-content .stanza-sep { display: block; height: 1.5em; }
@@ -283,10 +283,11 @@
     /* Franja inferior: paginador + nav canciones */
     #fs-bottom {
       flex-shrink: 0;
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
-      padding: 1rem 0 1.25rem;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: .4rem 0 .6rem;
     }
     #fs-dots { display: flex; gap: 12px; align-items: center; }
+    @media (min-width: 1024px) { #fs-dots { display: none; } }
     .fs-dot {
       width: 14px; height: 14px; border-radius: 50%;
       background: #333; transition: background .15s; flex-shrink: 0;
@@ -300,8 +301,6 @@
     .fs-snb:hover:not(:disabled) { color: #aaa; }
     .fs-snb:disabled { opacity: .2; cursor: default; }
     #fs-slide-ctr { font-size: 18px; color: #555; min-width: 64px; text-align: center; }
-    #fs-hint { font-size: 12px; color: #222; }
-
     /* Controles de tamaño de fuente en fullscreen */
     #fs-size-ctrl { display: flex; align-items: center; gap: 4px; }
     #fs-size-ctrl button { background: none; border: 0.5px solid #333; color: #666; border-radius: 5px; cursor: pointer; transition: all .12s; line-height: 1; padding: 3px 7px; }
@@ -312,8 +311,13 @@
     #fs-size-reset.auto { color: #444; border-color: #2a2a2a; }
     #fs-lh-down, #fs-lh-reset, #fs-lh-up { font-size: 13px; }
     #fs-lh-reset.auto { color: #444; border-color: #2a2a2a; }
-    /* Solo visible en móvil */
-    /* #fs-size-ctrl visible en todos los dispositivos */
+    /* En móvil: size-ctrl va al bottom; en desktop va al top */
+    @media (max-width: 1023px) {
+      #fs-size-ctrl { order: 10; } /* dentro de fs-bottom en móvil via JS */
+    }
+    /* fs-hint: solo móvil */
+    #fs-hint { font-size: 12px; color: #222; }
+    @media (min-width: 1024px) { #fs-hint { display: none; } }
   /* ── Metrónomo ─────────────────────────────────────────────── */
 
   /* ── Metrónomo desktop: flotante, solo ≥1024px ── */
@@ -360,7 +364,7 @@
   }
   #metro-mob-beat.pulse { background: #7eb8f7; box-shadow: 0 0 14px #7eb8f7cc; border-color: #aad4ff; }
   #metro-mob-beat.pulse-acento { background: #fff; box-shadow: 0 0 18px #ffffffee; border-color: #fff; }
-  @media (max-width: 1023px) { #fs-size-ctrl { justify-content: flex-start; } }
+
 
   /* ── Botón ayuda ── */
   #help-btn {
@@ -1008,6 +1012,16 @@
       <span class="transp-tono" id="fs-transp-tono"></span>
       <button class="transp-btn" id="fs-transp-up">&#9650;</button>
     </div>
+    <!-- Controles tamaño: en desktop van en el top, en móvil en el bottom -->
+    <div id="fs-size-ctrl">
+      <button id="fs-size-down" title="Reducir texto">A&#8722;</button>
+      <button id="fs-size-reset" title="Tamaño automático">A</button>
+      <button id="fs-size-up" title="Agrandar texto">A&#43;</button>
+      <span style="display:inline-block;width:1px;height:16px;background:#333;margin:0 4px"></span>
+      <button id="fs-lh-down" title="Reducir interlineado">&#8801;&#8722;</button>
+      <button id="fs-lh-reset" title="Interlineado automático">&#8801;</button>
+      <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
+    </div>
     <button id="fs-minimize" title="Minimizar">&#8722;</button>
     <button id="fs-cl">&#10005;</button>
   </div>
@@ -1029,21 +1043,13 @@
       <span id="fs-slide-ctr"></span>
       <button class="fs-snb" id="fs-ns">canción sig. &#9654;</button>
     </div>
-    <div id="fs-size-ctrl">
-      <button id="fs-size-down" title="Reducir texto">A&#8722;</button>
-      <button id="fs-size-reset" title="Tamaño automático">A</button>
-      <button id="fs-size-up" title="Agrandar texto">A&#43;</button>
-      <span style="display:inline-block;width:1px;height:16px;background:#2a2a2a;margin:0 4px"></span>
-      <button id="fs-lh-down" title="Reducir interlineado">&#8801;&#8722;</button>
-      <button id="fs-lh-reset" title="Interlineado automático">&#8801;</button>
-      <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
-      <span id="metro-mob-sep" style="display:none;width:1px;height:16px;background:#2a2a2a;margin:0 4px;vertical-align:middle"></span>
-      <div id="metro-mob-beat" title="Play/Stop" style="display:none"></div>
-      <span id="metro-mob-bpm" style="display:none;font-size:11px;font-weight:600;color:#aaa;min-width:26px;text-align:center">120</span>
-      <button class="metro-btn" id="metro-mob-down" style="display:none">&#8722;</button>
-      <button class="metro-btn" id="metro-mob-up" style="display:none">&#43;</button>
+    <div id="metro-mob-wrap" style="display:none;align-items:center;gap:4px">
+      <span id="metro-mob-sep" style="width:1px;height:16px;background:#2a2a2a;margin:0 4px;display:inline-block;vertical-align:middle"></span>
+      <div id="metro-mob-beat" title="Play/Stop"></div>
+      <span id="metro-mob-bpm" style="font-size:11px;font-weight:600;color:#aaa;min-width:26px;text-align:center">120</span>
+      <button class="metro-btn" id="metro-mob-down">&#8722;</button>
+      <button class="metro-btn" id="metro-mob-up">&#43;</button>
     </div>
-    <div id="fs-hint">&#8592; &#8594; diapositivas &nbsp;|&nbsp; Shift+&#8592; Shift+&#8594; canciones &nbsp;|&nbsp; Esc salir</div>
   </div>
 
   <!-- Metrónomo flotante (solo desktop) -->
@@ -1308,7 +1314,7 @@ function getFsBaseSize() {
   if (w < 480) return 24;
   if (w < 768) return 30;
   if (w < 1024) return 36;
-  return 40;
+  return 46;
 }
 function aplicarFontSize() {
   const size = Math.min(FS_MAX, Math.max(FS_MIN, getFsBaseSize() + fsSizeOffset));
@@ -1406,6 +1412,12 @@ async function cargarCanciones() { // retorna promesa — cargarSetlist() se enc
     SONGS = await res.json();
     setlist = setlist.filter(t => SONGS.some(s => s.titulo === t));
     aplicarLocalStorageAlInicio();
+  // En móvil, mover fs-size-ctrl al fs-bottom (en desktop queda en fs-top)
+  if (isMobile()) {
+    const sizeCtrl = document.getElementById("fs-size-ctrl");
+    const bottom = document.getElementById("fs-bottom");
+    if (sizeCtrl && bottom) bottom.insertBefore(sizeCtrl, bottom.firstChild);
+  }
     document.getElementById("loading").style.display = "none";
     updateBadge(); renderList();
     if (activeTab === "setlist") renderSetlist();
@@ -2077,7 +2089,7 @@ function renderFS() {
   }
 
   // Contador numérico — solo desktop y fuera de modo acordes
-  document.getElementById("fs-slide-ctr").textContent = (!mobile && !isPause && !fsMostrarAcordes) ? (s.slideNum + " / " + s.totalSlides) : "";
+  document.getElementById("fs-slide-ctr").textContent = (!mobile && !isPause && !fsMostrarAcordes && s.totalSlides > 1) ? (s.slideNum + " / " + s.totalSlides) : "";
 
   // Flechas laterales — ocultar en modo acordes desktop (navegan por diapositiva, no tiene sentido)
   document.getElementById("fs-prev-slide").style.display = (!mobile && fsMostrarAcordes) ? "none" : "";
@@ -2097,7 +2109,6 @@ function renderFS() {
 document.getElementById("fs-btn").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
   metroOcultar();
-  document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) viewerSlides = buildSlides(viewerQueue, false);
@@ -2111,7 +2122,6 @@ document.getElementById("fs-btn").addEventListener("click", () => {
 });
 document.getElementById("fs-btn-acordes").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = true; actualizarBotonRetomar();
-  document.getElementById("fs-hint").textContent = "← → canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) viewerSlides = buildSlides(viewerQueue, false);
@@ -2131,7 +2141,6 @@ document.getElementById("fs-btn-acordes").addEventListener("click", () => {
 document.getElementById("fs-btn-edges").addEventListener("click", () => {
   fsMinimizado = false; fsMostrarAcordes = false; actualizarBotonRetomar();
   metroOcultar();
-  document.getElementById("fs-hint").textContent = "← → diapositivas  |  Shift+← Shift+→ canciones  |  Esc salir";
   const curSlide = viewerSlides.find(s => s.type === "slide");
   const curSong = curSlide ? SONGS.find(c => c.titulo === curSlide.songTitle) : null;
   if (viewerQueue && viewerQueue.length > 0) {
@@ -2326,16 +2335,16 @@ function metroMostrar(bpm) {
   metroUpdateBpmDisplay();
   // Desktop: widget flotante
   document.getElementById("metronomo").classList.add("visible");
-  // Móvil: controles inline
-  const inlineParts = ["metro-mob-sep","metro-mob-beat","metro-mob-bpm","metro-mob-down","metro-mob-up"];
-  inlineParts.forEach(id => { document.getElementById(id).style.display = ""; });
+  // Móvil: wrap inline
+  const wrap = document.getElementById("metro-mob-wrap");
+  if (wrap) wrap.style.display = "flex";
 }
 
 function metroOcultar() {
   metroStop();
   document.getElementById("metronomo").classList.remove("visible");
-  const inlineParts = ["metro-mob-sep","metro-mob-beat","metro-mob-bpm","metro-mob-down","metro-mob-up"];
-  inlineParts.forEach(id => { document.getElementById(id).style.display = "none"; });
+  const wrap = document.getElementById("metro-mob-wrap");
+  if (wrap) wrap.style.display = "none";
 }
 
 // Listeners desktop
@@ -2818,23 +2827,23 @@ function detectarDesbordamiento() {
 }
 
 function ajustarFontSizeAutomatico() {
-  // Reducir fsSizeOffset de a un paso hasta que no haya overflow, con límite
   const limite = FS_MIN - getFsBaseSize();
+  const maxIntentos = 12;
   let intentos = 0;
-  const maxIntentos = 15;
+
   function paso() {
-    if (intentos++ > maxIntentos || fsSizeOffset <= limite) {
-      aplicarFontSize();
-      return;
-    }
+    const restantes = detectarDesbordamiento();
+    if (restantes.length === 0 || intentos >= maxIntentos || fsSizeOffset <= limite) return;
+    intentos++;
     fsSizeOffset = Math.max(limite, fsSizeOffset - FS_STEP);
     guardarFontOffset();
     aplicarFontSize();
-    // Verificar si ya no hay desbordamiento
-    const restantes = detectarDesbordamiento();
-    if (restantes.length > 0) paso();
+    // Esperar dos frames para que el browser repinte antes de medir de nuevo
+    requestAnimationFrame(() => requestAnimationFrame(paso));
   }
-  paso();
+
+  // Primer paso
+  requestAnimationFrame(() => requestAnimationFrame(paso));
 }
 
 function verificarYProyectar(callback) {
