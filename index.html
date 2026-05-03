@@ -202,6 +202,19 @@
       flex-shrink: 0;
       gap: .75rem;
     }
+    /* Desktop: fs-top flotante para que fs-center use toda la altura */
+    @media (min-width: 1024px) {
+      #fs-top {
+        position: fixed; top: 0; left: 0; right: 0;
+        z-index: 20;
+        background: linear-gradient(to bottom, rgba(0,0,0,.85) 60%, rgba(0,0,0,0));
+        padding: .5rem 1rem .9rem;
+      }
+      /* fs-center ocupa toda la pantalla, con padding-top para no quedar bajo el top */
+      #fs-center {
+        padding-top: 3rem;
+      }
+    }
     #fs-song-title { font-size: 20px; font-weight: 500; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
     #fs-song-counter { font-size: 13px; color: #555; white-space: nowrap; flex-shrink: 0; }
 
@@ -229,6 +242,13 @@
       padding: 0 80px;
       overflow-y: auto;
       min-height: 0;
+    }
+    @media (min-width: 1024px) {
+      #fs-center {
+        height: 100vh;
+        flex: none;
+        padding: 0 80px;
+      }
     }
     #fs-content {
       color: #f0f0f0; text-align: center;
@@ -2836,23 +2856,11 @@ function detectarDesbordamiento() {
 }
 
 function ajustarFontSizeAutomatico() {
-  const limite = FS_MIN - getFsBaseSize();
-  let intentos = 0;
-  const maxIntentos = 10;
-
-  function paso() {
-    if (intentos >= maxIntentos || fsSizeOffset <= limite) return;
-    const restantes = detectarDesbordamiento();
-    if (restantes.length === 0) return; // listo
-    intentos++;
-    fsSizeOffset = Math.max(limite, fsSizeOffset - FS_STEP);
-    guardarFontOffset();
-    aplicarFontSize();
-    // Esperar repintado real antes de medir de nuevo
-    requestAnimationFrame(() => requestAnimationFrame(paso));
-  }
-
-  paso(); // medir primero, reducir solo si hace falta
+  // Ajuste simple y confiable: fijar tamaño en 43px
+  const targetSize = 43;
+  fsSizeOffset = targetSize - getFsBaseSize();
+  guardarFontOffset();
+  aplicarFontSize();
 }
 
 function verificarYProyectar(callback) {
