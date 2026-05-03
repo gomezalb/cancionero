@@ -213,6 +213,7 @@
     /* Versión fullscreen — un poco más grande */
     #fs-transp .transp-btn { width: 28px; height: 28px; font-size: 14px; border-color: #444; }
     #fs-transp .transp-tono { font-size: 15px; min-width: 42px; }
+    @media (min-width: 1024px) { #fs-transp { display: none !important; } }
     #fs-minimize, #fs-cl {
       background: none; border: none; color: #888; cursor: pointer; transition: color .12s;
       flex-shrink: 0; padding: 0 4px; line-height: 1;
@@ -226,7 +227,7 @@
       flex: 1;
       display: flex; align-items: center; justify-content: center;
       padding: 0 80px;
-      overflow: hidden;
+      overflow-y: auto;
       min-height: 0;
     }
     #fs-content {
@@ -280,12 +281,13 @@
       #sl-count { display: none; }
     }
 
-    /* Franja inferior: paginador + nav canciones */
+    /* Franja inferior: paginador + nav canciones — oculto en desktop */
     #fs-bottom {
       flex-shrink: 0;
       display: flex; flex-direction: column; align-items: center; gap: 6px;
       padding: .4rem 0 .6rem;
     }
+    @media (min-width: 1024px) { #fs-bottom { display: none; } }
     #fs-dots { display: flex; gap: 12px; align-items: center; }
     @media (min-width: 1024px) { #fs-dots { display: none; } }
     .fs-dot {
@@ -301,6 +303,14 @@
     .fs-snb:hover:not(:disabled) { color: #aaa; }
     .fs-snb:disabled { opacity: .2; cursor: default; }
     #fs-slide-ctr { font-size: 18px; color: #555; min-width: 64px; text-align: center; }
+    /* Desktop: flotante abajo a la derecha */
+    @media (min-width: 1024px) {
+      #fs-slide-ctr {
+        position: fixed; bottom: .75rem; right: 1.25rem;
+        font-size: 13px; color: #444; z-index: 10;
+        pointer-events: none;
+      }
+    }
     /* Controles de tamaño de fuente en fullscreen */
     #fs-size-ctrl { display: flex; align-items: center; gap: 4px; }
     #fs-size-ctrl button { background: none; border: 0.5px solid #333; color: #666; border-radius: 5px; cursor: pointer; transition: all .12s; line-height: 1; padding: 3px 7px; }
@@ -1040,7 +1050,7 @@
     <div id="fs-dots"></div>
     <div id="fs-song-nav">
       <button class="fs-snb" id="fs-ps">&#9664; canción ant.</button>
-      <span id="fs-slide-ctr"></span>
+
       <button class="fs-snb" id="fs-ns">canción sig. &#9654;</button>
     </div>
     <div id="metro-mob-wrap" style="display:none;align-items:center;gap:4px">
@@ -1051,6 +1061,9 @@
       <button class="metro-btn" id="metro-mob-up">&#43;</button>
     </div>
   </div>
+
+  <!-- Contador de diapositiva flotante (desktop) -->
+  <span id="fs-slide-ctr"></span>
 
   <!-- Metrónomo flotante (solo desktop) -->
   <div id="metronomo">
@@ -2797,53 +2810,49 @@ document.getElementById("novedad-bg").addEventListener("click", e => {
 let _overflowCallback = null; // función a ejecutar tras cerrar el popup
 
 function detectarDesbordamiento() {
-  // Solo en desktop (en móvil es scroll normal, no hay overflow)
-  if (isMobile()) return [];
-  const content = document.getElementById("fs-content");
-  if (!content) return [];
-  // Comparar scrollHeight vs clientHeight del contenedor
-  // En modo diapositiva, cada slide ocupa toda la pantalla
-  const fso = document.getElementById("fso");
+  if (isMobile() || fsMostrarAcordes) return []; // móvil y acordes usan scroll, no overflow
+  const fsCenter = document.getElementById("fs-center");
+  const fsContent = document.getElementById("fs-content");
+  if (!fsCenter || !fsContent) return [];
+
+  const alturaDisponible = fsCenter.clientHeight;
+  const anchoCont = fsContent.clientWidth || fsCenter.clientWidth - 160;
+  const fontSize = fsContent.style.fontSize || (getFsBaseSize() + fsSizeOffset) + "px";
+  const lineH = fsContent.style.lineHeight || String(fsLineHeight);
+
   const desbordadas = [];
-  // Recorrer todos los slides del viewerSlides (solo tipo "slide")
-  const slidesInfo = viewerSlides.filter(s => s.type === "slide");
-  slidesInfo.forEach(s => {
-    // Renderizar el slide en un div oculto para medir
+  viewerSlides.filter(s => s.type === "slide").forEach(s => {
     const tmp = document.createElement("div");
-    tmp.style.cssText = `position:absolute;visibility:hidden;pointer-events:none;
-      width:${content.clientWidth}px;
-      font-size:${content.style.fontSize || getFsSize() + "px"};
-      line-height:${content.style.lineHeight || fsLineHeight};
-      padding:${window.getComputedStyle(content).padding};
-      box-sizing:border-box;`;
+    tmp.style.cssText = `position:fixed;visibility:hidden;pointer-events:none;top:-9999px;left:0;
+      width:${anchoCont}px;font-size:${fontSize};line-height:${lineH};
+      text-align:center;box-sizing:border-box;padding:0 8px;`;
     tmp.innerHTML = s.html || "";
     document.body.appendChild(tmp);
-    const desborda = tmp.scrollHeight > fso.clientHeight * 0.88; // 88% de la pantalla
+    const desborda = tmp.scrollHeight > alturaDisponible;
     document.body.removeChild(tmp);
     if (desborda) desbordadas.push(s.songTitle || "");
   });
-  // Deduplicar por canción
   return [...new Set(desbordadas)];
 }
 
 function ajustarFontSizeAutomatico() {
   const limite = FS_MIN - getFsBaseSize();
-  const maxIntentos = 12;
   let intentos = 0;
+  const maxIntentos = 10;
 
   function paso() {
+    if (intentos >= maxIntentos || fsSizeOffset <= limite) return;
     const restantes = detectarDesbordamiento();
-    if (restantes.length === 0 || intentos >= maxIntentos || fsSizeOffset <= limite) return;
+    if (restantes.length === 0) return; // listo
     intentos++;
     fsSizeOffset = Math.max(limite, fsSizeOffset - FS_STEP);
     guardarFontOffset();
     aplicarFontSize();
-    // Esperar dos frames para que el browser repinte antes de medir de nuevo
+    // Esperar repintado real antes de medir de nuevo
     requestAnimationFrame(() => requestAnimationFrame(paso));
   }
 
-  // Primer paso
-  requestAnimationFrame(() => requestAnimationFrame(paso));
+  paso(); // medir primero, reducir solo si hace falta
 }
 
 function verificarYProyectar(callback) {
