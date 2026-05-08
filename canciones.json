@@ -46,19 +46,19 @@
       "<b>A quién iré en necesidad,<br>a quién iré en busca de paz,<br>y quién podrá mi vida saciar de verdad.<br><br><br>Quién más tendrá de mi compasión,<br>y entenderá mi corazón.<br>Quién cambiará mi eternidad, <br>sino tú Jesús</b>",
       "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Solo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
     ],
-    "tono": "LA",
+    "tono": "DO",
     "bpm": 80,
     "carpeta": "A",
     "acordes": [
-      "<b>[LA]A quién iré en necesidad,<br>[FA#m]a quién iré en busca de paz,<br>[RE]y quién podrá mi vida saciar de ver[LA]dad.[MI]<br><br><br>[LA]Quién más tendrá de mi compasión,<br>[FA#m]y entenderá mi corazón.<br>[RE]Quién cambiará mi eternidad, <br>sino [LA]tú Je[MI]sús</b>",
-      "<b>[LA]Cristo ¿A dónde [DO#m]más podría [RE]ir?<br>[LA]Cristo ¿Qué otro lu[DO#m]gar puede exis[RE]tir?<br>[SIm]Sólo tu tienes palabras de amor<br>Ca[RE]mino al Padre y ver[MI]dad eres tú.<br>[LA]Cristo ¿Adónde [DO#m]más podría [RE]ir?</b>"
+      "<b>[DO]A quién iré en necesidad,<br>[LAm]a quién iré en busca de paz,<br>[FA]y quién podrá mi vida saciar de ver[DO]dad.[SOL]<br><br><br>[DO]Quién más tendrá de mi compasión,<br>[LAm]y entenderá mi corazón.<br>[FA]Quién cambiará mi eternidad, <br>sino [DO]tú Je[SOL]sús</b>",
+      "<b>[DO]Cristo ¿A dónde [MIm]más podría [FA]ir?<br>[DO]Cristo ¿Qué otro lu[MIm]gar puede exis[FA]tir?<br>[REm]Sólo tu tienes palabras de amor<br>Ca[FA]mino al Padre y ver[SOL]dad eres tú.<br>[DO]Cristo ¿Adónde [MIm]más podría [FA]ir?</b>"
     ]
   },
   {
     "titulo": "A ti el alfa y la omega",
-    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy\nme rindo\n\nA ti, el todopoderoso\nEl que es y que será\nY el gran yo soy\nMe entrego",
+    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy, me rindo\n\nA ti, el todopoderoso\nEl que es y que será\nY el gran yo soy, me entrego",
     "slides": [
-      "<b>A ti, el alfa y la omega<br>El principio y el fin<br>Y el gran yo soy<br>me rindo<br><br><br>A ti, el todopoderoso<br>El que es y que será<br>Y el gran yo soy<br>Me entrego</b>",
+      "<b>A ti, el alfa y la omega<br>El principio y el fin<br>Y el gran yo soy, me rindo<br><br><br>A ti, el todopoderoso<br>El que es y que será<br>Y el gran yo soy, me entrego</b>",
       "<b>Yo quiero que gobiernes mi vida<br>Me doy en sacrificio a ti<br>Yo quiero que tú ordenes mi caminar<br>que siempre viva en tu voluntad</b>"
     ],
     "tono": "RE",
@@ -222,7 +222,7 @@
     "preview": "/Al que me ciñe de poder,\u000baquel que mi victoria es,\u000bsolo a él alabaré, \u000bsolo a él exaltaré/",
     "slides": [
       "<b>/Al que me ciñe de poder,<br>aquel que mi victoria es,<br>solo a él alabaré, <br>solo a él exaltaré/</b>",
-      "<b>De ti será mi alabanza,<br>en la congregación,<br>cantaré y alabare.<br><br>//Tu nombre Señor//</b>"
+      "<b>De ti será mi alabanza,<br>en la congregación,<br>cantaré y alabaré<br><br>//Tu nombre Señor//</b>"
     ],
     "tono": "MI",
     "carpeta": "A"
@@ -334,9 +334,10 @@
   },
   {
     "titulo": "Aunque mis ojos",
-    "preview": "Aunque mis ojos no te puedan ver,\nte puedo sentir, se que estas aquí,\u000baunque mis manos no puedan tocar\u000btu rostro Señor, se que estás aquí.\u000b\u000bMi corazón puede sentir tu presencia.\u000b/Tú estás aquí/.\u000bPuedo sentir tu majestad.\u000b/Tú estás aquí/",
+    "preview": "Aunque mis ojos no te puedan ver,\nte puedo sentir, se que estas aquí,\u000baunque mis manos no puedan tocar\u000btu rostro Señor, se que estás aquí.",
     "slides": [
-      "<b>Aunque mis ojos no te puedan ver,<br>te puedo sentir, se que estas aquí,<br>aunque mis manos no puedan tocar<br>tu rostro Señor, se que estás aquí.<br><br>Mi corazón puede sentir tu presencia.<br>/Tú estás aquí/.<br>Puedo sentir tu majestad.<br>/Tú estás aquí/</b>",
+      "<b>Aunque mis ojos no te puedan ver,<br>te puedo sentir, se que estas aquí,<br>aunque mis manos no puedan tocar<br>tu rostro Señor, se que estás aquí.</b>",
+      "<b>Mi corazón puede sentir tu presencia.<br>/Tú estás aquí/.<br>Puedo sentir tu majestad.<br>/Tú estás aquí/</b>",
       "<b>Mi corazón puede mirar tu hermosura.<br>/Tú estás aquí/.<br>Puedo sentir tu majestad.<br>/Tú estás aquí/<br><br><br>///Tú estás aquí///</b>"
     ],
     "tono": "DO",
@@ -1451,12 +1452,15 @@
   },
   {
     "titulo": "Incomparable inigualable es tu amor",
-    "preview": "Incomparable, \nInigualable es tu amor, y me rodea.\nTu me abrazaste, \nMe perdonaste Señor, en mi pecado.\nTu amor me alimenta, \ntu amor me sustenta.\n\n/Celebraré tu amor todos los días,\nCelebraré tu gran misericordia,\nCelebraré tu gracia inmerecida,\nCelebraré tu amor/",
+    "preview": "Incomparable, \nInigualable es tu amor, y me rodea.\nTu me abrazaste, \nMe perdonaste Señor, en mi pecado.\nTu amor me alimenta, \ntu amor me sustenta.",
     "slides": [
-      "<b>Incomparable, <br>Inigualable es tu amor, y me rodea.<br>Tu me abrazaste, <br>Me perdonaste Señor, en mi pecado.<br>Tu amor me alimenta, <br>tu amor me sustenta.<br><br><br>/Celebraré tu amor todos los días,<br>Celebraré tu gran misericordia,<br>Celebraré tu gracia inmerecida,<br>Celebraré tu amor/</b>",
-      "<b>Inmensurable, inagotable es tu amor <br>y nunca cambia.<br>Estas conmigo, y no me puedo escapar,<br>aunque lo Intente.<br>Tu amor es eterno, tu amor es perfecto.<br><br>/Celebraré tu amor todos los días,<br>Celebraré tu gran misericordia,<br>Celebraré tu gracia inmerecida,<br>Celebraré tu amor/ </b>",
+      "<b>Incomparable, <br>Inigualable es tu amor, y me rodea.<br>Tu me abrazaste, <br>Me perdonaste Señor, en mi pecado.<br>Tu amor me alimenta, <br>tu amor me sustenta.</b>",
+      "<b>/Celebraré tu amor todos los días,<br>Celebraré tu gran misericordia,<br>Celebraré tu gracia inmerecida,<br>Celebraré tu amor/</b>",
+      "<b>Inmensurable, inagotable es tu amor <br>y nunca cambia.<br>Estas conmigo, y no me puedo escapar,<br>aunque lo Intente.<br>Tu amor es eterno, tu amor es perfecto.</b>",
+      "<b>/Celebraré tu amor todos los días,<br>Celebraré tu gran misericordia,<br>Celebraré tu gracia inmerecida,<br>Celebraré tu amor/ </b>",
       "<b>//Celebraré tu amor <br>y tu misericordia oh Dios//<br><br><br>/Celebraré tu amor todos los días,<br>Celebraré tu gran misericordia,<br>Celebraré tu gracia inmerecida,<br>Celebraré tu amor/</b>"
     ],
+    "tono": "MI",
     "carpeta": "I"
   },
   {
