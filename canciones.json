@@ -543,9 +543,13 @@
     "preview": "/Con mi Dios yo saltaré los muros,\u000bcon mi Dios ejércitos derribaré/",
     "slides": [
       "<b>/Con mi Dios yo saltaré los muros,<br>con mi Dios ejércitos derribaré/</b>",
-      "<b>Él adiestra mis manos para la batalla,<br>puedo tomar con mis manos<br>el arco de bronce.<br><br>Él es escudo, la roca mía,<br>él es la fuerza de mi salvación,<br>mi alto refugio y mi fortaleza.<br>Él es mi libertador.</b>"
+      "<b>Él adiestra mis manos para la batalla,<br>puedo tomar con mis manos<br>el arco de bronce.<br><br>Él es escudo, la roca mía,<br>Él es la fuerza de mi salvación,<br>mi alto refugio y mi fortaleza.<br>Él es mi libertador.</b>"
     ],
-    "tono": "DOm",
+    "acordes": [
+      "<b>/[REm]Con mi Dios yo [DO]saltaré los [REm]muros,<br>[REm]con mi Dios [DO]ejércitos [REm]derribaré/</b>",
+      "<b>[FA]Él adiestra mis [DO]manos para la [REm]batalla,<br>[DO]puedo tomar con mis manos<br>el arco de [REm]bronce.<br><br>[DO]Él es escudo, la [FA]roca mía,<br>[DO]Él es la fuerza de mi [FA]salvación,<br>mi [LA7]alto refugio y mi [REm]fortaleza.<br>[SOLm]Él [LA7]es mi [REm]libertador.</b>"
+    ],
+    "tono": "REm",
     "carpeta": "C"
   },
   {
@@ -1008,10 +1012,16 @@
   },
   {
     "titulo": "El es el rey infinito en poder",
-    "preview": "El es el rey infinito en poder, \u000bél es el rey de los cielos. \u000bSeré para el siervo fiel, \u000bpues mi vida compró con su amor.\u000b\u000bEl es el rey lo confiesa mi ser, \u000bél es el rey de los siglos. \u000bMi vida la rindo a sus pies, \u000bél es rey sobre mi corazón.",
+    "preview": "El es el rey infinito en poder, \u000bÉl es el rey de los cielos. \u000bSeré para Él siervo fiel, \u000bpues mi vida compró con su amor.",
     "slides": [
-      "<b>El es el rey infinito en poder, <br>él es el rey de los cielos. <br>Seré para el siervo fiel, <br>pues mi vida compró con su amor.<br><br>El es el rey lo confiesa mi ser, <br>él es el rey de los siglos. <br>Mi vida la rindo a sus pies, <br>él es rey sobre mi corazón.</b>",
-      "<b>/El es el rey/<br>él es el rey de mi vida.<br>/El es el rey/<br>reina con autoridad.<br>Su reino eterno es, <br>su trono el cielo es.<br>El es el rey que viene a su pueblo a llevar.</b>"
+      "<b>El es el rey infinito en poder, <br>Él es el rey de los cielos. <br>Seré para Él siervo fiel, <br>pues mi vida compró con su amor.</b>",
+      "<b>Él es el rey lo confiesa mi ser, <br>Él es el rey de los siglos. <br>Mi vida la rindo a sus pies, <br>Él es rey sobre mi corazón.</b>",
+      "<b>/Él es el rey/<br>Él es el rey de mi vida.<br>/Él es el rey/<br>reina con autoridad.<br><br>Su reino eterno es, <br>su trono el cielo es.<br>Él es el rey que viene a su pueblo a llevar.</b>"
+    ],
+    "acordes": [
+      "<b>[REm]El es el rey [LA#]infinito en poder, <br>[REm]Él es el rey de los [LA#]cielos. <br>[REm]Seré para [LA#]Él siervo fiel, <br>pues mi [FA]vida compró con su [DO]amor.</b>",
+      "<b>[REm]Él es el rey lo [LA#]confiesa mi ser, <br>[REm]Él es el rey de los [LA#]siglos. <br>[REm]Mi vida la [LA#]rindo a sus pies, <br>Él es [FA]rey sobre mi [DO]corazón.</b>",
+      "<b>[REm]Él es el rey<br>[LA#]Él es el rey<br>[FA]Él es el rey de mi [DO]vida.<br>[REm]Él es el rey<br>[LA#]Él es el rey<br>[FA]reina con [DO]autoridad.<br><br>Su [LA#]reino eterno [DO]es, <br>su [REm]trono el cielo [LA#]es.<br>[SOL#m]Él es el rey que [DO]viene a su pueblo a [REm]llevar.<br>[REm] [LA#] [FA] [DO]</b>"
     ],
     "tono": "REm",
     "carpeta": "E"
@@ -1054,9 +1064,12 @@
   },
   {
     "titulo": "El Señor es mi rey, mi todo",
-    "preview": "El Señor es mi rey, mi todo\u000bel Señor es mi luz, mi rey\u000bél me hace vibrar de gozo\u000bél guia mis pasos,\u000bextiende sus brazos,\u000bel creador de los cielos",
+    "preview": "El Señor es mi rey, mi todo.\u000bEl Señor es mi luz, mi rey.\u000bÉl me hace vibrar de gozo.\u000bÉl guía mis pasos,\u000bextiende sus brazos,\u000bel creador de los cielos.",
     "slides": [
-      "<b>El Señor es mi rey, mi todo<br>el Señor es mi luz, mi rey<br>él me hace vibrar de gozo<br>él guia mis pasos,<br>extiende sus brazos,<br>el creador de los cielos</b>"
+      "<b>El Señor es mi rey, mi todo.<br>El Señor es mi luz, mi rey.<br>Él me hace vibrar de gozo.<br>Él guía mis pasos,<br>extiende sus brazos,<br>el creador de los cielos.</b>"
+    ],
+    "acordes": [
+      "<b>[REm]El Señor es mi rey, mi [DO]todo.<br>[REm]El Señor es mi luz, mi [DO]rey.<br>[LA#]Él me hace vibrar de [FA]gozo.<br>[LA#]Él guía mis [FA]pasos,<br>[SOLm]extiende sus [DO#m]brazos,<br>[LA#]el creador de los [FA]cie[DO]los.[REm]</b>"
     ],
     "tono": "REm",
     "carpeta": "E"
@@ -2351,9 +2364,12 @@
   },
   {
     "titulo": "Siempre te alabaré",
-    "preview": "/Siempre te alabaré/\u000bhay pruebas, problemas que quieren \u000bque no sea así,\u000b/igual te alabaré/\u000btu eres mi Rey mientras viva \u000byo no callaré.",
+    "preview": "/Siempre te alabaré/\u000bhay pruebas, problemas que quieren \u000bque no sea así,\u000b/igual te alabaré/\u000btú eres mi Rey mientras viva \u000byo no callaré.",
     "slides": [
-      "<b>/Siempre te alabaré/<br>hay pruebas, problemas que quieren <br>que no sea así,<br>/igual te alabaré/<br>tu eres mi Rey mientras viva <br>yo no callaré.</b>"
+      "<b>/Siempre te alabaré/<br>hay pruebas, problemas que quieren <br>que no sea así,<br>/igual te alabaré/<br>tú eres mi Rey mientras viva <br>yo no callaré.</b>"
+    ],
+    "acordes": [
+      "<b>Siempre te [SOL]alabaré<br>Siempre te [RE]alabaré<br>hay [DO]pruebas, problemas que [LAm]quieren <br>que no sea [RE]así,<br>igual te alab[DO]aré[LAm]<br>igual te alab[RE]aré<br>tú [DO]eres mi Rey mientras [LAm]viva <br>yo [RE]no calla[SOL]ré.</b>"
     ],
     "tono": "SOL",
     "carpeta": "S"
@@ -2435,11 +2451,14 @@
   },
   {
     "titulo": "Somos un cuerpo en Cristo",
-    "preview": "/Somos un cuerpo en Cristo,\u000b¡aleluya!/\u000b\nCuando estamos juntos,\u000bentre nosotros Jesús está.\u000bCuando estamos juntos,\u000bhay poder y autoridad,\u000ben su nombre.",
+    "preview": "/Somos un cuerpo en Cristo, ¡Aleluya!/\u000b\nCuando estamos juntos,\u000bentre nosotros Jesús está.\u000bCuando estamos juntos,\u000bhay poder y autoridad,\u000ben su nombre.",
     "slides": [
-      "<b>/Somos un cuerpo en Cristo,<br>¡aleluya!/<br><br>Cuando estamos juntos,<br>entre nosotros Jesús está.<br>Cuando estamos juntos,<br>hay poder y autoridad,<br>en su nombre.</b>"
+      "<b>/Somos un cuerpo en Cristo, ¡Aleluya!/<br><br>Cuando estamos juntos,<br>entre nosotros Jesús está.<br>Cuando estamos juntos,<br>hay poder y autoridad,<br>en su nombre.</b>"
     ],
-    "tono": "MI",
+    "acordes": [
+      "<b>[SOL]/So[SIm]mos un [MIm]cuerpo en Cristo, [DO]¡Ale[RE]luya!/<br><br>[SI]Cuando estamos [MIm]juntos,<br>entre [LAm]nosotros Jesús [RE]está.<br>[SI]Cuando estamos [MIm]juntos,<br>hay [LAm]poder y [RE]autoridad,<br>en su [DO]nom[SOL]bre.</b>"
+    ],
+    "tono": "SOL",
     "carpeta": "S"
   },
   {
@@ -2677,11 +2696,20 @@
   },
   {
     "titulo": "Tu eres la luz que brillo (vine a adorarte)",
-    "preview": "Tú eres la luz que brilló en las tinieblas,\u000babrió mis ojos pude ver.\u000bMi corazón adora tu hermosura\u000besperanza de vida eres tú\u000b\u000bVine a adorarte, vine a postrarme\u000bvine a decir que eres mi Dios,\u000bsolo tú eres grande, solo tú eres digno\u000beres asombroso para mí",
+    "preview": "Tú eres la luz que brilló en las tinieblas,\u000babrió mis ojos pude ver.\u000bMi corazón adora tu hermosura\u000besperanza de vida eres tú",
     "slides": [
-      "<b>Tú eres la luz que brilló en las tinieblas,<br>abrió mis ojos pude ver.<br>Mi corazón adora tu hermosura<br>esperanza de vida eres tú<br><br>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí</b>",
-      "<b>Tú eres el Rey grandemente exaltado,<br>glorioso por siempre Señor,<br>al mundo que creaste humilde viniste,<br>y pobre te hiciste por amor.<br><br>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>",
+      "<b>Tú eres la luz que brilló en las tinieblas,<br>abrió mis ojos pude ver.<br>Mi corazón adora tu hermosura<br>esperanza de vida eres tú</b>",
+      "<b>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí</b>",
+      "<b>Tú eres el Rey grandemente exaltado,<br>glorioso por siempre Señor,<br>al mundo que creaste humilde viniste,<br>y pobre te hiciste por amor.</b>",
+      "<b>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>",
       "<b>/Nunca sabré cuanto costó<br>ver mi maldad sobre esa cruz/<br><br>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>"
+    ],
+    "acordes": [
+      "<b>[RE]Tú eres la [LA]luz que [MIm]brilló en las [SOL]tinieblas,<br>[RE]abrió mis [LA]ojos pude [SOL]ver.<br>[RE]Mi [LA]corazón [MIm]adora tu [SOL]hermosura<br>[RE]esperanza de [LA]vida eres [SOL]tú</b>",
+      "<b>Vine a [RE]adorarte, vine a [LA]postrarme<br>vine a [SIm]decir que eres mi [SOL]Dios,<br>solo tú eres [RE]grande, solo tú eres [LA]digno<br>eres [SIm]asombroso para [SOL]mí</b>",
+      "<b>[RE]Tú eres el [LA]Rey grande[MIm]mente [SOL]exaltado,<br>[RE]glorioso por [LA]siempre [SOL]Señor,<br>al [RE]mundo que [LA]creaste [MIm]humilde [SOL]viniste,<br>y [RE]pobre te [LA]hiciste por [SOL]amor.</b>",
+      "<b>Vine a [RE]adorarte, vine a [LA]postrarme<br>vine a [SIm]decir que eres mi [SOL]Dios,<br>solo tú eres [RE]grande, solo tú eres [LA]digno<br>eres [SIm]asombroso para [SOL]mí</b>",
+      "<b>/[LA]Nunca [SIm]sabré [SOL]cuanto costó<br>ver [LA]mi [SIm]maldad sobre [SOL]esa cruz/<br><br>Vine a [RE]adorarte, vine a [LA]postrarme<br>vine a [SIm]decir que eres mi [SOL]Dios,<br>solo tú eres [RE]grande, solo tú eres [LA]digno<br>eres [SIm]asombroso para [SOL]mí </b>"
     ],
     "tono": "RE",
     "carpeta": "T"
@@ -2697,9 +2725,14 @@
   },
   {
     "titulo": "Tu hermano soy",
-    "preview": "Tu hermano soy,\u000bpues Cristo nos ha comprado.\u000bTu hermano soy,\u000bsu Espíritu nos ha ligado.\u000bQue gozo tengo al tenerte a mi lado.\u000b\u000b/Te doy la mano, querido hermano\u000by alabemos al Señor/",
+    "preview": "Tu hermano soy,\u000bpues Cristo nos ha comprado.\u000bTu hermano soy,\u000bsu Espíritu nos ha ligado.\u000bQue gozo tengo \nal tenerte a mi lado.",
     "slides": [
-      "<b>Tu hermano soy,<br>pues Cristo nos ha comprado.<br>Tu hermano soy,<br>su Espíritu nos ha ligado.<br>Que gozo tengo al tenerte a mi lado.<br><br>/Te doy la mano, querido hermano<br>y alabemos al Señor/</b>"
+      "<b>Tu hermano soy,<br>pues Cristo nos ha comprado.<br>Tu hermano soy,<br>su Espíritu nos ha ligado.<br>Que gozo tengo <br>al tenerte a mi lado.</b>",
+      "<b>/Te doy la mano, querido hermano<br>y alabemos al Señor/</b>"
+    ],
+    "acordes": [
+      "<b>[SOL]Tu hermano soy,<br>pues Cristo nos ha comprado.[SOL7]<br>Tu [DO]hermano soy,<br>su Es[SOL]píritu nos ha [RE]ligado.<br>Que [SOL]gozo tengo <br>al [SOL]tenerte [SIm]a mi [MIm]lado.</b>",
+      "<b>Te [DO]doy la mano, [SOL]querido [MIm]hermano<br>y [LAm]alabemos [RE]al [SOL]Señor.[SOL7]<br>Te [DO]doy la mano, [SOL]querido [MIm]hermano<br>y [LAm]alabemos [RE]al [SOL]Señor</b>"
     ],
     "tono": "SOL",
     "carpeta": "T"
@@ -2728,9 +2761,14 @@
   },
   {
     "titulo": "Tu pueblo esta clamando",
-    "preview": "Tu pueblo está clamando, \u000bte estamos esperando,\u000bqueremos ver lo que vas a hacer.\nEnvíanos tu fuego,\u000bque todos seamos llenos,\u000bde tu espíritu y de tu amor.\n\n/Aviva tu obra, en medio de los tiempos,\u000baviva tu obra, da nuevos sentimientos,\u000bdanos hoy Señor, un despertar, \u000bdanos un nuevo cantar/",
+    "preview": "Tu pueblo está clamando, \u000bte estamos esperando,\u000bqueremos ver lo que vas a hacer.\n\nEnvíanos tu fuego,\u000bque todos seamos llenos,\u000bde tu espíritu y de tu amor.",
     "slides": [
-      "<b>Tu pueblo está clamando, <br>te estamos esperando,<br>queremos ver lo que vas a hacer.<br>Envíanos tu fuego,<br>que todos seamos llenos,<br>de tu espíritu y de tu amor.<br><br><br>/Aviva tu obra, en medio de los tiempos,<br>aviva tu obra, da nuevos sentimientos,<br>danos hoy Señor, un despertar, <br>danos un nuevo cantar/</b>"
+      "<b>Tu pueblo está clamando, <br>te estamos esperando,<br>queremos ver lo que vas a hacer.<br><br><br>Envíanos tu fuego,<br>que todos seamos llenos,<br>de tu espíritu y de tu amor.</b>",
+      "<b>/Aviva tu obra, en medio de los tiempos,<br>aviva tu obra, da nuevos sentimientos,<br>danos hoy Señor, un despertar, <br>danos un nuevo cantar/</b>"
+    ],
+    "acordes": [
+      "<b>[SOL]Tu [SIm]pueblo [MIm]está clamando, <br>[DO]te estamos [RE]esperando,<br>[SI]queremos [MIm]ver [LAm]lo que vas a [RE]hacer.<br><br>[SOL]En[SIm]vía[MIm]nos tu fuego,<br>[DO]que todos [RE]seamos llenos,<br>[SI]de tu [MIm]espíritu [LA]y de tu [RE]amor.</b>",
+      "<b>[SOL]/Aviva tu obra, en [SI]medio de los tiempos,<br>[MIm]aviva tu obra, da [REm]nuevos [SOL]sentimientos,<br>danos [DO]hoy Señor, un [SOL]desper[MIm]tar, <br>danos un [LAm]nuevo [RE]cantar/</b>"
     ],
     "tono": "SOL",
     "carpeta": "T"

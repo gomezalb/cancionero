@@ -342,6 +342,9 @@
     #fs-size-reset.auto { color: #444; border-color: #2a2a2a; }
     #fs-lh-down, #fs-lh-reset, #fs-lh-up { font-size: 13px; }
     #fs-lh-reset.auto { color: #444; border-color: #2a2a2a; }
+    #fs-mayus { font-size: 11px; font-weight: 600; letter-spacing: .03em; }
+    #fs-mayus.activo { color: #7eb8f7; border-color: #7eb8f7; }
+    #fs-content.mayus { text-transform: uppercase; }
     /* En móvil: size-ctrl va al bottom; en desktop va al top */
     @media (max-width: 1023px) {
       #fs-size-ctrl { order: 10; } /* dentro de fs-bottom en móvil via JS */
@@ -1052,6 +1055,8 @@
       <button id="fs-lh-down" title="Reducir interlineado">&#8801;&#8722;</button>
       <button id="fs-lh-reset" title="Interlineado automático">&#8801;</button>
       <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
+      <span style="display:inline-block;width:1px;height:16px;background:#333;margin:0 4px"></span>
+      <button id="fs-mayus" title="Convertir a mayúsculas">AA</button>
     </div>
     <button id="fs-minimize" title="Minimizar">&#8722;</button>
     <button id="fs-cl">&#10005;</button>
@@ -2893,6 +2898,14 @@ document.getElementById("overflow-auto").addEventListener("click", () => {
 
 document.getElementById("overflow-igual").addEventListener("click", () => {
   document.getElementById("overflow-bg").classList.remove("open");
+});
+
+// ── Toggle mayúsculas ─────────────────────────────────────────
+let fsMayus = false;
+document.getElementById("fs-mayus").addEventListener("click", () => {
+  fsMayus = !fsMayus;
+  document.getElementById("fs-content").classList.toggle("mayus", fsMayus);
+  document.getElementById("fs-mayus").classList.toggle("activo", fsMayus);
 });
 
 // ── Ayuda ─────────────────────────────────────────────────────
