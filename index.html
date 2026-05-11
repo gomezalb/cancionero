@@ -131,9 +131,9 @@
     .match-item.err .match-select { display: block; }
 
     /* Acordes */
-    .acorde-wrap { display: inline-block; vertical-align: bottom; text-align: center; margin-top: 0; }
-    .acorde-txt { display: block; font-size: .6em; font-weight: 700; color: #7eb8f7; line-height: 1; margin-bottom: 0; white-space: nowrap; }
-    .acorde-sil { display: block; }
+    .acorde-wrap { display: inline-flex; flex-direction: column; align-items: center; vertical-align: bottom; text-align: center; gap: 1px; }
+    .acorde-txt { font-size: .6em; font-weight: 700; color: #7eb8f7; line-height: 1; white-space: nowrap; }
+    .acorde-sil { line-height: inherit; }
     #viewer { display: none; flex-direction: column; }
     #back { font-size: 13px; color: var(--text4); cursor: pointer; margin-bottom: 1rem; display: flex; align-items: center; gap: 5px; border: none; background: none; padding: 0; }
     #back:hover { color: var(--text2); }
@@ -279,11 +279,9 @@
       background: #1a3a5c;
       color: #a8d4ff;
       border-radius: 3px;
-      padding: 0px 4px;
+      padding: 0 4px;
       font-weight: 700;
-      display: inline-block;
-      margin-bottom: 0;
-      line-height: 1.2;
+      line-height: 1.3;
     }
 
     /* Botones laterales de diapositiva */
