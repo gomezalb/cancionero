@@ -40,19 +40,13 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "A quién iré en necesidad",
+    "titulo": "A quién iré en necesidad.DO.BPM80",
     "preview": "A quién iré en necesidad,\na quién iré en busca de paz,\ny quién podrá mi vida saciar de verdad.\n\nQuién más tendrá de mi compasión,\ny entenderá mi corazón.\nQuién cambiará mi eternidad, \nsino tú Jesús",
     "slides": [
       "<b>A quién iré en necesidad,<br>a quién iré en busca de paz,<br>y quién podrá mi vida saciar de verdad.<br><br><br>Quién más tendrá de mi compasión,<br>y entenderá mi corazón.<br>Quién cambiará mi eternidad, <br>sino tú Jesús</b>",
       "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Solo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
     ],
-    "tono": "DO",
-    "bpm": 80,
-    "carpeta": "A",
-    "acordes": [
-      "<b>[DO]A quién iré en necesidad,<br>[LAm]a quién iré en busca de paz,<br>[FA]y quién podrá mi vida saciar de ver[DO]dad.[SOL]<br><br><br>[DO]Quién más tendrá de mi compasión,<br>[LAm]y entenderá mi corazón.<br>[FA]Quién cambiará mi eternidad, <br>sino [DO]tú Je[SOL]sús</b>",
-      "<b>[DO]Cristo ¿A dónde [MIm]más podría [FA]ir?<br>[DO]Cristo ¿Qué otro lu[MIm]gar puede exis[FA]tir?<br>[REm]Sólo tu tienes palabras de amor<br>Ca[FA]mino al Padre y ver[SOL]dad eres tú.<br>[DO]Cristo ¿Adónde [MIm]más podría [FA]ir?</b>"
-    ]
+    "carpeta": "A"
   },
   {
     "titulo": "A ti el alfa y la omega",
@@ -79,7 +73,7 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "A tus pies",
+    "titulo": "A tus pies.LA.BPM60",
     "preview": "A tus pies arde mi corazón\nA tus pies entrego lo que soy\nEs el lugar de mi seguridad\nDonde nadie me puede señalar\n\nMe perdonaste\nMe acercaste a tu presencia\nMe levantaste\nHoy me postro adorarte",
     "slides": [
       "<b>A tus pies arde mi corazón<br>A tus pies entrego lo que soy<br>Es el lugar de mi seguridad<br>Donde nadie me puede señalar<br><br><br>Me perdonaste<br>Me acercaste a tu presencia<br>Me levantaste<br>Hoy me postro adorarte</b>",
@@ -87,13 +81,7 @@
       "<b>/Y aquí permaneceré<br>Postrado a tus pies.<br>Y aquí permaneceré<br>A los pies de Cristo/</b>",
       "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>"
     ],
-    "tono": "LA",
-    "bpm": 60,
-    "carpeta": "A",
-    "acordes": [
-      "<b>A tus [LA]pies arde mi [MI]corazón<br>A tus [FA#m]pies entrego lo que [RE]soy<br>Es el [LA]lugar de mi [MI]seguridad<br>Donde [FA#m]nadie me puede [RE]señalar<br><br><br>Me [RE]perdonaste<br>Me acercaste a tu [MI]presencia<br>Me [FA#m]levantaste<br>Hoy me postro [MI]adorarte</b>",
-      "<b>/No hay [LA/DO#]lugar más [RE]alto<br>Más [MI]grande<br>Que estar a tus [FA#m]pies<br>Que estar a tus pies/<br><br><br>/Y [RE]aquí [MI]permaneceré<br>[LA]Postrado [DO#m]a tus [FA#m]pies<br>Y [RE]aquí [MI]permaneceré<br>A los pies de [FA#m]Cristo [LA] /<br><br><br>No hay lugar más [RE]alto...</b>"
-    ]
+    "carpeta": "A"
   },
   {
     "titulo": "Abre mis ojos oh Cristo",
@@ -323,6 +311,17 @@
     ]
   },
   {
+    "titulo": "Aquí se siente la presencia de Dios.",
+    "preview": "/Aquí se siente \nla presencia de Dios/",
+    "slides": [
+      "<b>/Aquí se siente <br>la presencia de Dios/</b>",
+      "<b>/Siento el fuego del Espíritu Santo/</b>",
+      "<b> /Siento gozo, siento paz,<br>Siento el amor que mi Dios me da/</b>",
+      "<b>/Aquí se siente <br>la presencia de Dios/</b>"
+    ],
+    "carpeta": "A"
+  },
+  {
     "titulo": "Aquí tu rostro puedo ver",
     "preview": "Aquí tu rostro puedo ver Señor\u000ba lo invisible alcanza aquí la fe\u000bde nuevo abrazo aquí tu inmenso amor\u000by mi solicitud en ti echaré.\u000b\u000bAquí del pan partido tomaré\u000by de la copa de tu comunión\u000bel nombre de mi Dios invocaré\u000bgozándome en la paz de salvación.",
     "slides": [
@@ -448,9 +447,10 @@
   },
   {
     "titulo": "Cansado del camino",
-    "preview": "Cansado del camino, sediento de ti\u000bun desierto he cruzado,\u000bsin fuerzas he quedado, \nvengo a ti.\u000b\nLuché como soldado y a veces sufrí\u000by aunque la lucha he ganado,\u000bmi armadura he desgastado,\u000bvengo a ti.",
+    "preview": "Cansado del camino, sediento de ti\u000bun desierto he cruzado,\u000bsin fuerzas he quedado, \nvengo a ti.",
     "slides": [
-      "<b>Cansado del camino, sediento de ti<br>un desierto he cruzado,<br>sin fuerzas he quedado, <br>vengo a ti.<br><br>Luché como soldado y a veces sufrí<br>y aunque la lucha he ganado,<br>mi armadura he desgastado,<br>vengo a ti.</b>",
+      "<b>Cansado del camino, sediento de ti<br>un desierto he cruzado,<br>sin fuerzas he quedado, <br>vengo a ti.</b>",
+      "<b>Luché como soldado y a veces sufrí<br>y aunque la lucha he ganado,<br>mi armadura he desgastado,<br>vengo a ti.</b>",
       "<b>/Sumérgeme <br>en el río de tu Espíritu,<br>necesito refrescar este seco corazón, <br>sediento de ti/</b>"
     ],
     "tono": "SOL",
@@ -804,9 +804,10 @@
   },
   {
     "titulo": "De gloria en gloria",
-    "preview": "De gloria en gloria te veo.\u000bCuanto más te conozco, \u000bquiero saber más de ti.\u000b\u000bMi Dios cual buen alfarero\u000bquebrántame, transfórmame,\u000bmoldéame a tu imagen Señor.",
+    "preview": "De gloria en gloria te veo.\u000bCuanto más te conozco, \u000bquiero saber más de ti.",
     "slides": [
-      "<b>De gloria en gloria te veo.<br>Cuanto más te conozco, <br>quiero saber más de ti.<br><br>Mi Dios cual buen alfarero<br>quebrántame, transfórmame,<br>moldéame a tu imagen Señor.</b>",
+      "<b>De gloria en gloria te veo.<br>Cuanto más te conozco, <br>quiero saber más de ti.</b>",
+      "<b>Mi Dios cual buen alfarero<br>quebrántame, transfórmame,<br>moldéame a tu imagen Señor.</b>",
       "<b>Quiero ser más como tú.<br> Ver la vida como tú. <br>Saturarme de tu espíritu,<br>y reflejar al mundo tu amor.</b>"
     ],
     "tono": "RE",
@@ -1036,6 +1037,15 @@
     "carpeta": "E"
   },
   {
+    "titulo": "El hombre de Galilea",
+    "preview": "///El hombre de Galilea\nva pasando va///",
+    "slides": [
+      "<b>///El hombre de Galilea<br>va pasando va///</b>",
+      "<b>//Déjalo que te toque//<br>y recibe la bendición<br><br><br>//Déjalo que te toque//<br>y recibe la bendición</b>"
+    ],
+    "carpeta": "E"
+  },
+  {
     "titulo": "El justo florecerá como la palmera",
     "preview": "/El justo florecerá como la palmera,\u000bcrecerá como cedro en el Líbano/\u000b\u000b/Plantados en la casa de Jehová,\u000ben los atrios de nuestro Dios,\nen los atrios de nuestro Dios,\u000bel justo florecerá/",
     "slides": [
@@ -1152,6 +1162,15 @@
     "preview": "/En ti confía mi corazón\u000bEn ti reposa mi alma\u000bMi ser descansa en ti\u000bPuedo ser feliz/\u000b\u000bPorque sé que estás obrando\u000bTu perfecta voluntad\u000bEn mi vida estás obrando\u000bTu perfecta voluntad",
     "slides": [
       "<b>/En ti confía mi corazón<br>En ti reposa mi alma<br>Mi ser descansa en ti<br>Puedo ser feliz/<br><br>Porque sé que estás obrando<br>Tu perfecta voluntad<br>En mi vida estás obrando<br>Tu perfecta voluntad</b>"
+    ],
+    "carpeta": "E"
+  },
+  {
+    "titulo": "Enamorado de Jesús",
+    "preview": "/Enamorado de Jesús\nenamorado\nenamorado de Jesús/",
+    "slides": [
+      "<b>/Enamorado de Jesús<br>enamorado<br>enamorado de Jesús/</b>",
+      "<b>/Enamorado de Él<br>Enamorado de Él<br><br><br>En mi corazón llevo escrito<br>Jesucristo de Nazareth/</b>"
     ],
     "carpeta": "E"
   },
@@ -1397,9 +1416,10 @@
   },
   {
     "titulo": "Hay victoria",
-    "preview": "/Hay victoria, hay victoria\u000bhay victoria en el nombre de Jesús/\u000b\u000bNo podrá el enemigo \u000bdañar a nuestras almas,\u000b\u000b/porque hay victoria, \u000bporque hay victoria\u000bporque hay victoria \u000ben el nombre de Jesús/",
+    "preview": "/Hay victoria, hay victoria\u000bhay victoria en el nombre de Jesús/",
     "slides": [
-      "<b>/Hay victoria, hay victoria<br>hay victoria en el nombre de Jesús/<br><br>No podrá el enemigo <br>dañar a nuestras almas,<br><br>/porque hay victoria, <br>porque hay victoria<br>porque hay victoria <br>en el nombre de Jesús/</b>",
+      "<b>/Hay victoria, hay victoria<br>hay victoria en el nombre de Jesús/</b>",
+      "<b>No podrá el enemigo <br>dañar a nuestras almas.<br><br>/Porque hay victoria, <br>porque hay victoria<br>porque hay victoria <br>en el nombre de Jesús/</b>",
       "<b>Si me preguntan porque estoy contento,<br>si me preguntan porque canto así,<br>/Es porque Cristo me ha lavado con su sangre<br>y en una nube blanca volverá por mí/</b>"
     ],
     "tono": "REm",
@@ -1669,9 +1689,11 @@
   },
   {
     "titulo": "Maravilloso Dios",
-    "preview": "/Maravilloso Dios,\u000btú permaneces siempre fiel.\u000bTu gloria y tu poder\u000bllenan mi vida de tu ser.\u000bSostenme con tu amor\u000bcon tu victoria y tu perdón.\u000bDesde mi corazón te canto hoy./\u000b\u000b/Desde mi corazón te canto hoy/",
+    "preview": "Maravilloso Dios,\u000btú permaneces siempre fiel.\u000bTu gloria y tu poder\u000bllenan mi vida de tu ser.",
     "slides": [
-      "<b>/Maravilloso Dios,<br>tú permaneces siempre fiel.<br>Tu gloria y tu poder<br>llenan mi vida de tu ser.<br>Sostenme con tu amor<br>con tu victoria y tu perdón.<br>Desde mi corazón te canto hoy./<br><br>/Desde mi corazón te canto hoy/</b>"
+      "<b>Maravilloso Dios,<br>tú permaneces siempre fiel.<br>Tu gloria y tu poder<br>llenan mi vida de tu ser.</b>",
+      "<b>Sostenme con tu amor<br>con tu victoria y tu perdón.<br>Desde mi corazón te canto hoy.</b>",
+      "<b>/Desde mi corazón te canto hoy/</b>"
     ],
     "tono": "SOL",
     "carpeta": "M"
@@ -1850,10 +1872,11 @@
   },
   {
     "titulo": "Nunca se apartará de tu boca",
-    "preview": "Nunca se apartará de tu boca \u000beste libro de la ley, \u000bsino que de día y de noche \nmeditarás en él,\u000bpara que guardes y hagas conforme \u000ba todo lo que en él está escrito;\u000bporque entonces harás \nprosperar  tu camino \u000by todo te saldrá bien",
+    "preview": "Nunca se apartará de tu boca \u000beste libro de la ley, \u000bsino que de día y de noche \nmeditarás en Él,",
     "slides": [
-      "<b>Nunca se apartará de tu boca <br>este libro de la ley, <br>sino que de día y de noche <br>meditarás en él,<br>para que guardes y hagas conforme <br>a todo lo que en él está escrito;<br>porque entonces harás <br>prosperar  tu camino <br>y todo te saldrá bien</b>",
-      "<b>/Mira que te mando que te esfuerces<br>que seas valiente; no temas, ni desmayes<br>porque Jehová tú Dios<br>estará contigo en donde quiera que vallas./</b>"
+      "<b>Nunca se apartará de tu boca <br>este libro de la ley, <br>sino que de día y de noche <br>meditarás en Él,</b>",
+      "<b>Para que guardes y hagas conforme <br>a todo lo que en él está escrito;<br>porque entonces harás <br>prosperar tu camino <br>y todo te saldrá bien</b>",
+      "<b>/Mira que te mando que te esfuerces<br>que seas valiente; no temas, ni desmayes<br>porque Jehová tú Dios estará contigo <br>en donde quiera que vallas/</b>"
     ],
     "tono": "DO",
     "carpeta": "N"
@@ -2112,12 +2135,14 @@
     "carpeta": "Q"
   },
   {
-    "titulo": "Quiero levantar a ti mis manos maravilloso Jesus.FA#m",
+    "titulo": "Quiero levantar a ti mis manos maravilloso Jesus",
     "preview": "Quiero levantar a ti mis manos\u000bMaravilloso Jesús, milagroso Señor\u000bllena este lugar de tu presencia\u000bY haz descender tu poder \na los que estamos aquí",
     "slides": [
       "<b>Quiero levantar a ti mis manos<br>Maravilloso Jesús, milagroso Señor<br>llena este lugar de tu presencia<br>Y haz descender tu poder <br>a los que estamos aquí</b>",
-      "<b>/Creo en ti, Jesús<br>Y en lo que harás en mí/<br><br>En mí, en mí<br><br><br>/Recibe toda la gloria<br>recibe toda la honra<br>Precioso hijo de Dios/</b>"
+      "<b>/Creo en ti, Jesús<br>Y en lo que harás en mí/<br><br>En mí, en mí</b>",
+      "<b>/Recibe toda la gloria<br>recibe toda la honra<br>Precioso hijo de Dios/</b>"
     ],
+    "tono": "FA#m",
     "carpeta": "Q"
   },
   {
@@ -2702,7 +2727,8 @@
       "<b>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí</b>",
       "<b>Tú eres el Rey grandemente exaltado,<br>glorioso por siempre Señor,<br>al mundo que creaste humilde viniste,<br>y pobre te hiciste por amor.</b>",
       "<b>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>",
-      "<b>/Nunca sabré cuanto costó<br>ver mi maldad sobre esa cruz/<br><br>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>"
+      "<b>/Nunca sabré cuanto costó<br>ver mi maldad sobre esa cruz/</b>",
+      "<b>Vine a adorarte, vine a postrarme<br>vine a decir que eres mi Dios,<br>solo tú eres grande, solo tú eres digno<br>eres asombroso para mí </b>"
     ],
     "tono": "RE",
     "carpeta": "T",
