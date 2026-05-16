@@ -40,12 +40,13 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "A quién iré en necesidad.DO.BPM80",
+    "titulo": "A quién iré en necesidad",
     "preview": "A quién iré en necesidad,\na quién iré en busca de paz,\ny quién podrá mi vida saciar de verdad.\n\nQuién más tendrá de mi compasión,\ny entenderá mi corazón.\nQuién cambiará mi eternidad, \nsino tú Jesús",
     "slides": [
       "<b>A quién iré en necesidad,<br>a quién iré en busca de paz,<br>y quién podrá mi vida saciar de verdad.<br><br><br>Quién más tendrá de mi compasión,<br>y entenderá mi corazón.<br>Quién cambiará mi eternidad, <br>sino tú Jesús</b>",
       "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Solo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
     ],
+    "tono": "DO",
     "carpeta": "A"
   },
   {
@@ -73,14 +74,16 @@
     "carpeta": "Himnos"
   },
   {
-    "titulo": "A tus pies.LA.BPM60",
-    "preview": "A tus pies arde mi corazón\nA tus pies entrego lo que soy\nEs el lugar de mi seguridad\nDonde nadie me puede señalar\n\nMe perdonaste\nMe acercaste a tu presencia\nMe levantaste\nHoy me postro adorarte",
+    "titulo": "A tus pies",
+    "preview": "A tus pies, arde mi corazón\nA tus pies, entrego lo que soy\nEs el lugar de mi seguridad\nDonde nadie me puede señalar",
     "slides": [
-      "<b>A tus pies arde mi corazón<br>A tus pies entrego lo que soy<br>Es el lugar de mi seguridad<br>Donde nadie me puede señalar<br><br><br>Me perdonaste<br>Me acercaste a tu presencia<br>Me levantaste<br>Hoy me postro adorarte</b>",
+      "<b>A tus pies, arde mi corazón<br>A tus pies, entrego lo que soy<br>Es el lugar de mi seguridad<br>Donde nadie me puede señalar</b>",
+      "<b>Me perdonaste<br>Me acercaste a tu presencia<br>Me levantaste<br>Hoy me postro a adorarte</b>",
       "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>",
-      "<b>/Y aquí permaneceré<br>Postrado a tus pies.<br>Y aquí permaneceré<br>A los pies de Cristo/</b>",
+      "<b>/Y aquí permaneceré,<br>postrado a tus pies.<br>Y aquí permaneceré,<br>a los pies de Cristo/</b>",
       "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>"
     ],
+    "tono": "LA",
     "carpeta": "A"
   },
   {
