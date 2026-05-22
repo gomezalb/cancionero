@@ -354,7 +354,6 @@
     #fs-mayus { font-size: 11px; font-weight: 600; letter-spacing: .03em; }
     #fs-mayus.activo { color: #7eb8f7; border-color: #7eb8f7; }
     #fs-content.mayus { text-transform: uppercase; }
-    #fs-content.mayus .acorde-txt { text-transform: none; }
     /* En móvil: size-ctrl va al bottom; en desktop va al top */
     @media (max-width: 1023px) {
       #fs-size-ctrl { order: 10; } /* dentro de fs-bottom en móvil via JS */
@@ -1347,17 +1346,16 @@ function htmlParaFS(html) {
 
 // ── Tamaño de fuente en proyección ────────────────────────────
 const LS_FONT_SIZE = "cancionero_fs_size";
-const LS_MAYUS = "cancionero_fs_mayus";
 const FS_STEP = 3;
 const FS_MIN = 14;
 const FS_MAX = 80;
 let fsSizeOffset = 0; // delta respecto al tamaño automático
 
 function cargarFontOffset() {
-  if (isMobile()) try { fsSizeOffset = parseInt(localStorage.getItem(LS_FONT_SIZE)) || 0; } catch(e) {}
+  try { fsSizeOffset = parseInt(localStorage.getItem(LS_FONT_SIZE)) || 0; } catch(e) {}
 }
 function guardarFontOffset() {
-  if (isMobile()) try { localStorage.setItem(LS_FONT_SIZE, fsSizeOffset); } catch(e) {}
+  try { localStorage.setItem(LS_FONT_SIZE, fsSizeOffset); } catch(e) {}
 }
 function getFsBaseSize() {
   const w = window.innerWidth;
@@ -1396,13 +1394,13 @@ const LH_MAX  = 2.5;
 let fsLineHeight = LH_BASE;
 
 function cargarLineHeight() {
-  if (isMobile()) try {
+  try {
     const v = parseFloat(localStorage.getItem(LS_LINE_HEIGHT));
     if (!isNaN(v)) fsLineHeight = v;
   } catch(e) {}
 }
 function guardarLineHeight() {
-  if (isMobile()) try { localStorage.setItem(LS_LINE_HEIGHT, fsLineHeight); } catch(e) {}
+  try { localStorage.setItem(LS_LINE_HEIGHT, fsLineHeight); } catch(e) {}
 }
 function aplicarLineHeight() {
   document.getElementById("fs-content").style.lineHeight = fsLineHeight;
@@ -2913,17 +2911,10 @@ document.getElementById("overflow-igual").addEventListener("click", () => {
 
 // ── Toggle mayúsculas ─────────────────────────────────────────
 let fsMayus = false;
-// Leer y aplicar estado guardado
-try { fsMayus = localStorage.getItem(LS_MAYUS) === "1"; } catch(e) {}
-if (fsMayus) {
-  document.getElementById("fs-content").classList.add("mayus");
-  document.getElementById("fs-mayus").classList.add("activo");
-}
 document.getElementById("fs-mayus").addEventListener("click", () => {
   fsMayus = !fsMayus;
   document.getElementById("fs-content").classList.toggle("mayus", fsMayus);
   document.getElementById("fs-mayus").classList.toggle("activo", fsMayus);
-  try { localStorage.setItem(LS_MAYUS, fsMayus ? "1" : "0"); } catch(e) {}
 });
 
 // ── Ayuda ─────────────────────────────────────────────────────

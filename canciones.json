@@ -1588,8 +1588,9 @@
     "slides": [
       "<b>Te amo Dios<br>Tu amor nunca me falla<br>Mi existir<br>En tus manos está<br>Desde el momento en que despierto<br>Hasta el anochecer<br>Yo cantaré de la bondad de Dios</b>",
       "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios</b>",
-      "<b>Yo amo tu voz<br>Me has guiado por el fuego<br>Tú cerca estás<br>En la oscuridad<br><br><br>Te conozco como Padre<br>Y como amigo fiel<br>Mi vida está<br>En la bondad de Dios</b>",
-      "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios<br><br><br>Tu fidelidad sigue persiguiéndome<br>Tu fidelidad sigue persiguiéndome<br>Todo lo que soy te lo entrego hoy<br>A ti me rendiré<br>Tu fidelidad sigue persiguiéndome</b>"
+      "<b>Yo amo tu voz<br>Me has guiado por el fuego<br>Tú cerca estás<br>En la oscuridad<br>Te conozco como Padre<br>Y como amigo fiel<br>Mi vida está<br>En la bondad de Dios</b>",
+      "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios</b>",
+      "<b>Tu fidelidad sigue persiguiéndome<br>Tu fidelidad sigue persiguiéndome<br>Todo lo que soy te lo entrego hoy<br>A ti me rendiré<br>Tu fidelidad sigue persiguiéndome</b>"
     ],
     "nueva": true,
     "tono": "LA",
@@ -1757,9 +1758,10 @@
     "preview": "Mejor es un día en la casa de Dios, \u000bque mil años lejos de él,\u000bprefiero un rincón en la casa de Dios\u000bque todo el palacio de un rey\u000bque todo el palacio de un rey",
     "slides": [
       "<b>Mejor es un día en la casa de Dios, <br>que mil años lejos de él,<br>prefiero un rincón en la casa de Dios<br>que todo el palacio de un rey<br>que todo el palacio de un rey</b>",
-      "<b>Ven conmigo a la casa de Dios, <br>celebraremos juntos su amor,<br>haremos fiesta en honor<br>de aquel que nos amó.<br>Estando aquí en la casa de Dios, <br>alegraremos su corazón,<br>le brindaremos ofrenda<br>de obediencia y amor<br>/en la casa de Dios/</b>",
+      "<b>Ven conmigo a la casa de Dios, <br>celebraremos juntos su amor,<br>haremos fiesta en honor<br>de aquel que nos amó.<br>Estando aquí en la casa de Dios, <br>alegraremos su corazón,<br>le brindaremos ofrenda<br>de obediencia y amor<br>/En la casa de Dios/</b>",
       "<b>Arde mi alma, <br>arde de amor<br>por aquel que me dio la vida<br>por eso le anhela mi corazón<br>anhela de su compañía<br>anhela de su compañía</b>",
-      "<b>Ven conmigo a la casa de Dios, <br>celebraremos juntos su amor<br>haremos fiesta en honor<br>de aquel que nos amó.<br>Estando aquí en la casa de Dios, <br>alegraremos su corazón<br>le brindaremos ofrenda<br>de obediencia y amor<br>///en la casa de Dios///<br>En la casa de Dios</b>"
+      "<b>Ven conmigo a la casa de Dios, <br>celebraremos juntos su amor<br>haremos fiesta en honor <br>de aquel que nos amó.<br>Estando aquí en la casa de Dios, <br>alegraremos su corazón<br>le brindaremos ofrenda<br>de obediencia y amor</b>",
+      "<b>///En la casa de Dios///<br>En la casa de Dios</b>"
     ],
     "tono": "DO",
     "carpeta": "M"
@@ -2958,9 +2960,10 @@
   },
   {
     "titulo": "Yo quiero mas de ti",
-    "preview": "/Yo quiero más de ti,\u000by habitar en tu presencia,\u000bmenguar, para que crezcas tú\u000by cada día ser más como tú/\u000b\u000bQuebranta mi corazón, quebranta mi vida.\u000bTe entrego mi voluntad a ti,\u000btodo lo que soy, Señor,\u000btodo cuanto tengo es tuyo.\u000b/Yo quiero menguar \u000bpara que crezcas tú/.",
+    "preview": "/Yo quiero más de ti,\u000by habitar en tu presencia,\u000bmenguar, para que crezcas tú\u000by cada día ser más como tú/",
     "slides": [
-      "<b>/Yo quiero más de ti,<br>y habitar en tu presencia,<br>menguar, para que crezcas tú<br>y cada día ser más como tú/<br><br>Quebranta mi corazón, quebranta mi vida.<br>Te entrego mi voluntad a ti,<br>todo lo que soy, Señor,<br>todo cuanto tengo es tuyo.<br>/Yo quiero menguar <br>para que crezcas tú/.</b>"
+      "<b>/Yo quiero más de ti,<br>y habitar en tu presencia,<br>menguar, para que crezcas tú<br>y cada día ser más como tú/</b>",
+      "<b>Quebranta mi corazón, quebranta mi vida.<br>Te entrego mi voluntad a ti,<br>todo lo que soy, Señor,<br>todo cuanto tengo es tuyo.<br>/Yo quiero menguar <br>para que crezcas tú/</b>"
     ],
     "tono": "SOL",
     "carpeta": "Y"
