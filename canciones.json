@@ -83,15 +83,15 @@
       "<b>/Y aquí permaneceré,<br>postrado a tus pies.<br>Y aquí permaneceré,<br>a los pies de Cristo/</b>",
       "<b>/No hay lugar más alto<br>Más grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>"
     ],
+    "tono": "LA",
+    "carpeta": "A",
     "acordes": [
       "<b>A tus [LA]pies, arde mi [MI]corazón<br>A tus [FA#m]pies, entrego lo que [RE]soy<br>Es el [LA]lugar de mi [MI]seguridad<br>Donde [FA#m]nadie me puede [RE]señalar</b>",
       "<b>Me [RE]perdonaste<br>Me acercaste a tu [MI]presencia<br>Me [FA#m]levantaste<br>Hoy me postro a [MI]adorarte</b>",
       "<b>/No hay [LA/DO#]lugar más [RE]alto<br>Más [MI]grande<br>Que estar a tus pies<br>Que estar a tus pies/</b>",
       "<b>/Y [RE]aquí [MI]permaneceré,<br>[LA]postrado [DO#m]a tus [FA#m]pies.<br>Y [RE]aquí [MI]permaneceré,<br>a los pies de [FA#m]Cristo [LA]/</b>",
       "<b>/No hay lugar más [RE]alto<br>Más [MI]grande<br>Que estar a tus [FA#m]pies<br>Que estar a tus pies/</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "A"
+    ]
   },
   {
     "titulo": "Abre mis ojos oh Cristo",
@@ -830,12 +830,12 @@
       "<b>De tal manera al mundo tú amaste<br>que hasta tu vida entregaste<br>tu costado abierto fue.<br>Y fueron esas gotas de tu sangre<br>que mi corazón limpiaron<br>me hiciste un nuevo ser</b>",
       "<b>Gracias, te doy gracias<br>por tu amor sin condición en esa cruz<br>gracias, te doy gracias<br>por tu perdón, la salvación en esa cruz<br><br>/Amor sin condición, <br>amor sin condición/</b>"
     ],
+    "tono": "MI",
+    "carpeta": "D",
     "acordes": [
       "<b>[MI]De tal manera al mundo tú [SI]amaste<br>que hasta tu vida [DO#m]entregaste<br>tu [LA]costado abierto [SI]fue.<br>Y [MI]fueron esas gotas de tu [SI]sangre<br>que mi corazón [DO#m]limpiaron<br>me [LA]hiciste un nuevo [SI]ser</b>",
       "<b>[MI]Gracias, te doy [SI]gracias<br>por tu [DO#m]amor sin [LA]condición en esa [SI]cruz<br>[MI]gracias, te doy [SI]gracias<br>por tu [DO#m]perdón, la [LA]salvación en esa [SI]cruz<br><br>/[MI]Amor sin [SI]condición, <br>[SOL#m]amor sin [LA]condición/</b>"
-    ],
-    "tono": "MI",
-    "carpeta": "D"
+    ]
   },
   {
     "titulo": "De tal manera me amó",
@@ -844,12 +844,12 @@
       "<b>De tal manera me amó,<br>que su vida no escatimó,<br>hasta el final él se entregó,<br>y a la muerte fue porque me amó.<br><br>De tal manera me amó,<br>que no hay forma en que podré pagar,<br>el precio de su grande amor,<br>pero toda mi alma quiero dar.</b>",
       "<b>Por su amor yo viviré, <br>de su amor yo cantaré,<br>con mi Jesús caminaré, <br>porque él me amó a mí.<br><br>Por su amor yo viviré, <br>de su amor yo cantaré, <br>con mi Jesús caminaré,<br>porque él murió por mí, le seguiré.</b>"
     ],
+    "tono": "DO",
+    "carpeta": "D",
     "acordes": [
       "<b>[DO]De tal manera me [SOL]amó,<br>que su [REm]vida no [LAm]escati[SOL]mó,<br>[DO]hasta el final él se [SOL]entregó,<br>y a la [FA]muerte fue [SOL]porque me [DO]amó.<br><br>[DO]De tal manera me [SOL]amó,<br>que no hay [REm]forma en que [LAm]podré [SOL]pagar,<br>el [DO]precio de su grande [SOL]amor,<br>pero [FA]toda mi alma [SOL]quiero [DO]dar.</b>",
       "<b>Por su [LAm]amor yo [SOL]vivi[DO]ré, <br>de su [LAm]amor yo [SOL]canta[DO]ré,<br>con mi [LAm]Jesús [SOL]camina[FA]ré, <br>porque él me [SOL]amó a mí.[FA] [SOL]<br><br>Por su [LAm]amor yo [SOL]vivi[DO]ré, <br>de su [LAm]amor yo [SOL]canta[DO]ré, <br>con mi [LAm]Jesús [SOL]camina[FA]ré,<br>porque él [SOL]murió por mí, [FA] [SOL] le [DO]seguiré.</b>"
-    ],
-    "tono": "DO",
-    "carpeta": "D"
+    ]
   },
   {
     "titulo": "Dicen que no existes",
@@ -871,17 +871,17 @@
   },
   {
     "titulo": "Digno es el Cordero Santo",
-    "preview": "Digno es el Cordero Santo, \u000bSanto, Santo es él. \u000bLevantamos nuestra alabanza, \u000bal que en el trono está.",
+    "preview": "Digno es el Cordero Santo, \u000bSanto, Santo es Él. \u000bLevantamos nuestra alabanza, \u000bal que en el trono está.",
     "slides": [
-      "<b>Digno es el Cordero Santo, <br>Santo, Santo es él. <br>Levantamos nuestra alabanza, <br>al que en el trono está.</b>",
-      "<b>Santo, santo, santo, <br>Dios todopoderoso. <br>Quien fue, quien es y quien vendrá.<br><br>La creación hoy canta, <br>y damos gloria a él. <br>Tu eres digno, <br>por siempre y siempre.  </b>"
+      "<b>Digno es el Cordero Santo, <br>Santo, Santo es Él. <br>Levantamos nuestra alabanza, <br>al que en el trono está.</b>",
+      "<b>Santo, santo, santo, <br>Dios todopoderoso. <br>Quien fue, quien es y quien vendrá.<br><br>La creación hoy canta, <br>y damos gloria a Él. <br>Tu eres digno, <br>por siempre y siempre.  </b>"
     ],
+    "tono": "DO",
+    "carpeta": "D",
     "acordes": [
       "<b>[RE]Digno es el [LAm]Cordero Santo, <br>[DO]Santo, Santo es [SOL]él. <br>[RE]Levantamos [LAm]nuestra alabanza, <br>[DO]al que en el trono [SOL]está.</b>",
       "<b>[RE]Santo, santo, santo, <br>[LAm]Dios todopoderoso. <br>[DO]Quien fue, quien es y quien [SOL]vendrá.<br><br>[RE]La creación hoy [LAm]canta, <br>y damos gloria a él. <br>[DO]Tu eres digno, <br>[SOL]por siempre y siempre. [RE]</b>"
-    ],
-    "tono": "RE",
-    "carpeta": "D"
+    ]
   },
   {
     "titulo": "Digno, digno es el Cordero",
@@ -1618,7 +1618,8 @@
       "<b>Te amo [LA]Dios<br>Tu [RE]amor nunca me [LA]falla<br>Mi [FA#m]existir<br>En tus [RE]manos [MI]está<br>Desde el momento en que [FA#m]despierto[RE]<br>Hasta el [LA]anochecer[FA#m]<br>Yo [SIm]cantaré de la [MI]bondad de [LA]Dios</b>",
       "<b>[RE]En mi vida has sido [LA]bueno<br>[RE]En mi vida has sido [LA]tan, tan [MI]fiel<br>[RE]Con mi ser con cada [LA]aliento [FA#m]<br>Yo [SIm]cantaré de [MI]la bondad de [LA]Dios</b>",
       "<b>Yo amo tu [LA]voz<br>Me has [RE]guiado por el [LA]fuego<br>Tú cerca [FA#m]estás<br>En [RE]la [MI]oscuridad<br><br><br>Te conozco como [FA#m]Padre[RE]<br>Y como [LA]amigo [FA#m]fiel<br>Mi vida [SI]está<br>En la [MI]bondad de [LA]Dios</b>",
-      "<b>[RE]En mi vida has sido [LA]bueno<br>[RE]En mi vida has sido [LA]tan, tan [MI]fiel<br>[RE]Con mi ser con cada [LA]aliento [FA#m]<br>Yo [SIm]cantaré de [MI]la bondad de [LA]Dios<br><br><br>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]<br>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[FA#m]<br>Todo [LA]lo que soy te lo [RE]entrego hoy<br>A [MI]ti me [FA#m]rendiré<br>[LA]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]</b>"
+      "<b>[RE]En mi vida has sido [LA]bueno<br>[RE]En mi vida has sido [LA]tan, tan [MI]fiel<br>[RE]Con mi ser con cada [LA]aliento [FA#m]<br>Yo [SIm]cantaré de [MI]la bondad de [LA]Dios</b>",
+      "<b>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]<br>[LA/DO#]Tu fidelidad [RE]sigue [MI]persiguiéndome[FA#m]<br>Todo [LA]lo que soy te lo [RE]entrego hoy<br>A [MI]ti me [FA#m]rendiré<br>[LA]Tu fidelidad [RE]sigue [MI]persiguiéndome[LA]</b>"
     ]
   },
   {
@@ -1782,15 +1783,15 @@
       "<b>Ven conmigo a la casa de Dios, <br>celebraremos juntos su amor<br>haremos fiesta en honor <br>de aquel que nos amó.<br>Estando aquí en la casa de Dios, <br>alegraremos su corazón<br>le brindaremos ofrenda<br>de obediencia y amor</b>",
       "<b>///En la casa de Dios///<br>En la casa de Dios</b>"
     ],
+    "tono": "DO",
+    "carpeta": "M",
     "acordes": [
       "<b>[DO]Mejor es un [SOL]día en la [LAm]casa de [FA]Dios, <br>que [DO]mil años [SOL]lejos de [FA]él,<br>[DO]prefiero un [SOL]rincón en la [LAm]casa de [FA]Dios<br>que [DO]todo el [SOL]palacio de un [FA]rey<br>[DO]que todo el [SOL]palacio de un [FA]rey</b>",
       "<b>Ven [DO]conmigo a la casa de [SOL]Dios, <br>[LAm]celebraremos juntos su [FA]amor,<br>haremos [DO]fiesta en honor<br>de [SOL]aquel que nos [FA]amó.<br>Estando [DO]aquí en la casa de [SOL]Dios, <br>alegra[LAm]remos su cora[FA]zón,<br>le [DO]brindaremos ofrenda<br>de [SOL]obediencia y [FA]amor<br>En la casa de [DO]Dios [SOL] [LAm] [FA]<br>En la casa de [DO]Dios [SOL] [FA]</b>",
       "<b>[DO]Arde mi [SOL]alma, <br>[LAm]arde de [FA]amor<br>por [DO]aquel que [SOL]me [LAm]dio la [FA]vida<br>[DO]por eso le [SOL]anhela [LAm]mi [FA]corazón<br>[DO]anhela de [SOL]su [FA]compañía<br>[DO]anhela de [SOL]su [FA]compañía</b>",
       "<b>Ven [DO]conmigo a la casa de [SOL]Dios, <br>[LAm]celebraremos juntos su [FA]amor<br>haremos [DO]fiesta en honor <br>de [SOL]aquel que nos [FA]amó.<br>Estando [DO]aquí en la casa de [SOL]Dios, <br>[LAm]alegraremos su [FA]corazón<br>le [DO]brindaremos ofrenda<br>de [SOL]obediencia y [FA]amor</b>",
       "<b>/En la casa de [DO]Dios [SOL] [LAm] [FA]<br>En la casa de [DO]Dios [SOL] [FA]/<br>En la casa de [DO]Dios</b>"
-    ],
-    "tono": "DO",
-    "carpeta": "M"
+    ]
   },
   {
     "titulo": "Mirad cuál amor",
@@ -2349,12 +2350,12 @@
       "<b>/Señor eres fiel y tu misericordia es eterna/<br>Gente de toda lengua y nación <br>de generación a generación.</b>",
       "<b>Te adoramos hoy, aleluya, aleluya<br>te adoramos hoy, eres Señor.<br>Te adoramos hoy aleluya, aleluya.<br>te adoramos hoy, eres Señor.... eres fiel</b>"
     ],
+    "tono": "LA",
+    "carpeta": "S",
     "acordes": [
       "<b>/[LA]Señor eres fiel y tu [MI/LA]misericordia es [SOL/LA]eterna[RE]/<br>[RE]Gente de toda [MI]lengua y nación <br>de [FA]generación a [SOL]generación.</b>",
       "<b>[LA]Te adoramos [MI]hoy, [SOL]aleluya, [RE]aleluya<br>[LA]te adoramos [MI]hoy, eres [SOL]Señor. [RE]<br>[LA]Te adoramos [MI]hoy [SOL]aleluya, [RE]aleluya.<br>te [FA#m]adoramos [MI]hoy, eres [FA]Señor [SOL].... eres [LA]fiel</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "S"
+    ]
   },
   {
     "titulo": "Señor me alegro en ti",
@@ -2995,12 +2996,12 @@
       "<b>/Yo quiero más de ti,<br>y habitar en tu presencia,<br>menguar, para que crezcas tú<br>y cada día ser más como tú/</b>",
       "<b>Quebranta mi corazón, quebranta mi vida.<br>Te entrego mi voluntad a ti,<br>todo lo que soy, Señor,<br>todo cuanto tengo es tuyo.<br>/Yo quiero menguar <br>para que crezcas tú/</b>"
     ],
+    "tono": "SOL",
+    "carpeta": "Y",
     "acordes": [
       "<b>/[SOL]Yo quiero más de [DO]ti,<br>[RE]y habitar en tu [SOL]presencia,<br>[MIm]menguar, [SIm]para que crezcas [MIm]tú<br>y cada día [DO]ser[LAm] más como [RE]tú/</b>",
       "<b>Quebranta mi [DO]cora[RE]zón, quebranta mi [SIm]vi[MIm]da.<br>Te entrego mi [LAm]volun[RE]tad a [SOL]ti,<br>todo lo que [DO]soy, [RE]Señor,<br>todo cuanto [SIm]tengo es [MIm]tuyo.<br>/Yo quiero [DO]menguar<br>[RE]para que crezcas [SOL]tú/</b>"
-    ],
-    "tono": "SOL",
-    "carpeta": "Y"
+    ]
   },
   {
     "titulo": "Yo quiero más y más de Cristo",

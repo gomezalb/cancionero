@@ -318,6 +318,8 @@
       padding: .4rem 0 .6rem;
     }
     @media (min-width: 1024px) { #fs-bottom { display: none; } }
+    @media (min-width: 1024px) { #fs-btn { display: none; } #fs-btn-acordes { display: none; } }
+    @media (max-width: 1023px) { .pptx-btn { display: none !important; } }
     #fs-dots { display: flex; gap: 12px; align-items: center; }
     @media (min-width: 1024px) { #fs-dots { display: none; } }
     .fs-dot {
@@ -337,7 +339,7 @@
     @media (min-width: 1024px) {
       #fs-slide-ctr {
         position: fixed; bottom: .75rem; right: 1.25rem;
-        font-size: 13px; color: #444; z-index: 10;
+        font-size: 16px; color: #ccc; z-index: 10;
         pointer-events: none;
       }
     }
@@ -713,6 +715,7 @@
         <div id="sl-servicio-items"></div>
         <div class="sl-section-btns">
           <button class="sl-btn primary" id="play-servicio-btn">&#9654; Proyectar esta lista</button>
+          <button class="sl-btn pptx-btn" id="pptx-servicio-btn">&#8659; Generar .PPTX</button>
         </div>
       </div>
     </div>
@@ -730,6 +733,7 @@
         </div>
         <div id="sl-toolbar" style="display:flex;gap:6px;flex-wrap:wrap">
           <button class="sl-btn primary" id="play-btn" disabled>&#9654; Proyectar mi lista</button>
+          <button class="sl-btn pptx-btn" id="pptx-btn" disabled>&#8659; Generar .PPTX</button>
           <button class="sl-btn" id="txt-btn">&#9776; Cargar lista</button>
           <button class="sl-btn danger" id="clear-btn">Limpiar</button>
           <button class="sl-btn" id="export-btn" style="margin-left:auto;opacity:.45;font-size:11px">&#8595; Json</button>
@@ -775,7 +779,7 @@
       <button id="fs-retomar" style="display:none">&#9654; Retomar</button>
       <button id="fs-btn">&#9654; Proyectar</button>
       <button id="fs-btn-acordes">&#9654; Con acordes</button>
-      <button id="fs-btn-edges" title="Proyectar con pantalla negra al inicio y al final">&#9654; Con pausas</button>
+      <button id="fs-btn-edges" title="Proyectar con pantalla negra al inicio y al final">&#9654; Proyectar</button>
     </div>
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
@@ -1629,6 +1633,7 @@ function renderSetlist() {
   document.getElementById("sl-count").textContent = setlist.length ? `(${setlist.length})` : "";
   document.getElementById("sl-name").value = slName;
   document.getElementById("play-btn").disabled = setlist.length === 0;
+  document.getElementById("pptx-btn").disabled = setlist.length === 0;
   const items = document.getElementById("sl-items");
   renderSetlistItems(setlist, items, true, (i) => {
     setlist.splice(i, 1); saveToStorage(); updateBadge(); renderSetlist(); renderList();
@@ -2950,6 +2955,144 @@ if ("serviceWorker" in navigator) {
     if (!recargando) { recargando = true; window.location.reload(); }
   });
 }
+
+// ── Generar PPTX ──────────────────────────────────────────────
+let _pptxGenModule = null;
+async function cargarPptxGen() {
+  if (_pptxGenModule) return _pptxGenModule;
+  const mod = await import("https://esm.run/pptxgenjs@3.12.0");
+  _pptxGenModule = mod.default ?? mod;
+  return _pptxGenModule;
+}
+function htmlToPlainLines(html) {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  const result = [];
+  let currentLine = [];
+
+  function walk(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+      if (node.textContent) currentLine.push({ text: node.textContent, bold: false });
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      const tag = node.tagName.toLowerCase();
+      if (tag === "br") {
+        result.push(currentLine);
+        currentLine = [];
+      } else if (tag === "b") {
+        node.childNodes.forEach(ch => {
+          if (ch.nodeType === Node.TEXT_NODE && ch.textContent) {
+            currentLine.push({ text: ch.textContent, bold: true });
+          } else { walk(ch); }
+        });
+        return;
+      } else {
+        node.childNodes.forEach(walk);
+      }
+    }
+  }
+  tmp.childNodes.forEach(walk);
+  if (currentLine.length) result.push(currentLine);
+  return result;
+}
+
+async function generarPPTX(queue, nombreArchivo) {
+  if (!queue || !queue.length) return;
+  const PptxGenJS = await cargarPptxGen();
+  const pptx = new PptxGenJS();
+  pptx.layout = "LAYOUT_4x3";
+  const ediciones = cargarEdiciones();
+  const BG_BLACK = "000000";
+  const BG_SLIDE = "111111";
+  const COLOR_TEXT = "F0F0F0";
+  const FONT_FACE = "Arial";
+  const FONT_SIZE = 36;
+
+  for (let qi = 0; qi < queue.length; qi++) {
+    const titulo = queue[qi];
+    const song = SONGS.find(s => s.titulo === titulo);
+    if (!song) continue;
+
+    // Pausa negra antes de la primera canción solamente
+    if (qi === 0) pptx.addSlide().background = { color: BG_BLACK };
+
+    for (let i = 0; i < song.slides.length; i++) {
+      const htmlEfectivo = ediciones[song.titulo]?.[i] ?? song.slides[i];
+      const lines = htmlToPlainLines(htmlEfectivo);
+      const slide = pptx.addSlide();
+      slide.background = { color: BG_SLIDE };
+
+      // Título discreto arriba a la izquierda (en mayúsculas)
+      slide.addText(song.titulo.toUpperCase(), {
+        x: 0.2, y: 0.08, w: 8.8, h: 0.3,
+        fontSize: 10, color: "444444", fontFace: FONT_FACE,
+        align: "left", valign: "top",
+      });
+
+      // Indicador slideNum / totalSlides (solo si hay más de 1 slide)
+      if (song.slides.length > 1) {
+        slide.addText(`${i + 1} / ${song.slides.length}`, {
+          x: 7.0, y: 0.08, w: 2.8, h: 0.3,
+          fontSize: 13, color: "aaaaaa", fontFace: FONT_FACE,
+          align: "right", valign: "top",
+        });
+      }
+
+      // Contenido centrado en mayúsculas
+      const textObjs = [];
+      lines.forEach((lineTokens, li) => {
+        lineTokens.forEach(tok => {
+          textObjs.push({ text: tok.text.toUpperCase(), options: { bold: tok.bold, breakLine: false } });
+        });
+        if (li < lines.length - 1) {
+          textObjs.push({ text: "", options: { breakLine: true } });
+        }
+      });
+
+      if (textObjs.length) {
+        slide.addText(textObjs, {
+          x: 0, y: 0.4, w: 10, h: 7.1,
+          fontSize: FONT_SIZE, color: COLOR_TEXT, fontFace: FONT_FACE,
+          align: "center", valign: "middle", lineSpacingMultiple: 1.0, wrap: true,
+        });
+      }
+    }
+
+    // Una sola diapositiva negra después de cada canción (sirve de separador con la siguiente)
+    pptx.addSlide().background = { color: BG_BLACK };
+  }
+
+  await pptx.writeFile({ fileName: nombreArchivo });
+}
+
+document.getElementById("pptx-btn").addEventListener("click", async () => {
+  if (!setlist.length) return;
+  const btn = document.getElementById("pptx-btn");
+  const orig = btn.textContent;
+  btn.textContent = "Generando…";
+  btn.disabled = true;
+  try {
+    const nombre = (slName || "mi-lista").replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ _-]/g, "") || "lista";
+    await generarPPTX([...setlist], `${nombre}.pptx`);
+  } finally {
+    btn.textContent = orig;
+    btn.disabled = setlist.length === 0;
+  }
+});
+
+document.getElementById("pptx-servicio-btn").addEventListener("click", async () => {
+  if (!servicioSetlist.length) return;
+  const btn = document.getElementById("pptx-servicio-btn");
+  const orig = btn.textContent;
+  btn.textContent = "Generando…";
+  btn.disabled = true;
+  try {
+    const nombre = (servicioNombre || "lista-fijada").replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ _-]/g, "") || "lista-fijada";
+    await generarPPTX([...servicioSetlist], `${nombre}.pptx`);
+  } finally {
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
+});
 </script>
 </body>
 </html>
