@@ -322,12 +322,9 @@
   },
   {
     "titulo": "Aquí se siente la presencia de Dios",
-    "preview": "///Aquí se siente \nla presencia de Dios///",
+    "preview": "/Aquí se siente la presencia de Dios/\n\n/Siento el fuego del Espíritu Santo/\n\n/Siento gozo, siento paz,\nSiento el amor que mi Dios me da/",
     "slides": [
-      "<b>///Aquí se siente <br>la presencia de Dios///</b>",
-      "<b>/Siento el fuego del Espíritu Santo/</b>",
-      "<b> /Siento gozo, siento paz,<br>Siento el amor que mi Dios me da/</b>",
-      "<b>/Aquí se siente <br>la presencia de Dios/</b>"
+      "<b>/Aquí se siente la presencia de Dios/<br><br><br>/Siento el fuego del Espíritu Santo/<br><br><br>/Siento gozo, siento paz,<br>Siento el amor que mi Dios me da/</b>"
     ],
     "carpeta": "A"
   },
@@ -814,10 +811,9 @@
   },
   {
     "titulo": "De gloria en gloria",
-    "preview": "De gloria en gloria te veo.\u000bCuanto más te conozco, \u000bquiero saber más de ti.",
+    "preview": "De gloria en gloria te veo.\u000bCuanto más te conozco, \u000bquiero saber más de ti.\u000b\u000bMi Dios cual buen alfarero\u000bquebrántame, transfórmame,\u000bmoldéame a tu imagen Señor.",
     "slides": [
-      "<b>De gloria en gloria te veo.<br>Cuanto más te conozco, <br>quiero saber más de ti.</b>",
-      "<b>Mi Dios cual buen alfarero<br>quebrántame, transfórmame,<br>moldéame a tu imagen Señor.</b>",
+      "<b>De gloria en gloria te veo.<br>Cuanto más te conozco, <br>quiero saber más de ti.<br><br>Mi Dios cual buen alfarero<br>quebrántame, transfórmame,<br>moldéame a tu imagen Señor.</b>",
       "<b>Quiero ser más como tú.<br> Ver la vida como tú. <br>Saturarme de tu espíritu,<br>y reflejar al mundo tu amor.</b>"
     ],
     "tono": "RE",
@@ -1461,12 +1457,17 @@
   },
   {
     "titulo": "Hemos venido a este lugar",
-    "preview": "/Hemos venido a este lugar \u000bjuntos en su nombre a adorar/\u000bHemos venido a este lugar\u000bjuntos en su nombre a adorarle a él, \u000ba Cristo, nuestro Dios y Rey",
+    "preview": "/Hemos venido a este lugar \u000bjuntos en su nombre a adorar/\u000bHemos venido a este lugar\u000bjuntos en su nombre a adorarle a Él, \u000ba Cristo, nuestro Dios y Rey",
     "slides": [
-      "<b>/Hemos venido a este lugar <br>juntos en su nombre a adorar/<br>Hemos venido a este lugar<br>juntos en su nombre a adorarle a él, <br>a Cristo, nuestro Dios y Rey</b>",
-      "<b>/Olvidemos lo demás, <br>pensemos solo en El para adorar/<br>olvidemos lo demás, <br>pensemos solo en El para adorarle a El,<br>a Cristo, nuestro Dios y Rey.</b>"
+      "<b>/Hemos venido a este lugar <br>juntos en su nombre a adorar/<br>Hemos venido a este lugar<br>juntos en su nombre a adorarle a Él, <br>a Cristo, nuestro Dios y Rey</b>",
+      "<b>/Olvidemos lo demás, <br>pensemos solo en Él para adorar/<br>olvidemos lo demás, <br>pensemos solo en Él para adorarle a Él,<br>a Cristo, nuestro Dios y Rey.</b>"
     ],
-    "carpeta": "H"
+    "tono": "RE",
+    "carpeta": "H",
+    "acordes": [
+      "<b>[RE]Hemos venido a este lugar <br>juntos en su nombre a [MIm]adorar[LA]<br>Hemos [MIm]venido a este lugar <br>[LA]juntos en su nombre a [RE]adorar<br>Hemos [RE7]venido a este lugar<br>juntos en su nombre a [SOL]adorarle a [SOLm]Él, <br>a [RE]Cris[SIm]to, [MIm]nuestro [LA]Dios y [RE]Rey</b>",
+      "<b>[RE]Olvidemos lo demás, <br>pensemos solo en Él [MIm]para adorar[LA]<br>[MIm]Olvidemos lo demás, <br>[LA]pensemos solo en Él para [RE]adorar<br>[RE7]olvidemos lo demás, <br>pensemos solo en Él para [SOL]adorarle a [SOLm]Él,<br>a [RE]Cris[SIm]to, [MIm]nuestro [LA]Dios y [RE]Rey.</b>"
+    ]
   },
   {
     "titulo": "Hermano yo deseo que tu seas prosperado",
@@ -1716,8 +1717,7 @@
     "preview": "Maravilloso Dios,\u000btú permaneces siempre fiel.\u000bTu gloria y tu poder\u000bllenan mi vida de tu ser.",
     "slides": [
       "<b>Maravilloso Dios,<br>tú permaneces siempre fiel.<br>Tu gloria y tu poder<br>llenan mi vida de tu ser.</b>",
-      "<b>Sostenme con tu amor<br>con tu victoria y tu perdón.<br>Desde mi corazón te canto hoy.</b>",
-      "<b>/Desde mi corazón te canto hoy/</b>"
+      "<b>Sostenme con tu amor<br>con tu victoria y tu perdón.<br>Desde mi corazón te canto hoy.<br><br><br>/Desde mi corazón te canto hoy/</b>"
     ],
     "tono": "LA",
     "carpeta": "M"
@@ -1843,12 +1843,17 @@
   },
   {
     "titulo": "No hay Dios tan grande como tú",
-    "preview": "/No hay Dios tan grande como tú, \u000bno lo hay, no lo hay./\u000b/No hay Dios que pueda hacer las obras,\u000bcomo las que haces tú./\u000b\u000b/No es con ejército, ni con espada,\u000bmas con tu Santo Espíritu./\u000b//Y esos montes se moverán//\u000bpor tu Santo Espíritu.",
+    "preview": "/No hay Dios tan grande como tú, \u000bno lo hay, no lo hay/\u000b\n/No hay Dios que pueda hacer las obras,\u000bcomo las que haces tú/",
     "slides": [
-      "<b>/No hay Dios tan grande como tú, <br>no lo hay, no lo hay./<br>/No hay Dios que pueda hacer las obras,<br>como las que haces tú./<br><br>/No es con ejército, ni con espada,<br>mas con tu Santo Espíritu./<br>//Y esos montes se moverán//<br>por tu Santo Espíritu.</b>"
+      "<b>/No hay Dios tan grande como tú, <br>no lo hay, no lo hay/<br><br>/No hay Dios que pueda hacer las obras,<br>como las que haces tú/</b>",
+      "<b>/No es con ejército, ni con espada,<br>mas con tu Santo Espíritu/<br><br>//Y esos montes se moverán//<br>por tu Santo Espíritu.</b>"
     ],
     "tono": "MI",
-    "carpeta": "N"
+    "carpeta": "N",
+    "acordes": [
+      "<b>/No hay [MI]Dios tan grande como tú, <br>no lo [FA#m]hay[SI], no lo [MI]hay/<br><br>/No hay [LA]Dios que [SI]pueda hacer las [SOL#m]obras,[DO#m]<br>como [FA#m]las que [SI]haces [MI]tú/</b>",
+      "<b>/No es con [MI]ejército, ni con espada,<br>mas con tu [FA#m]Santo [SI]Espíri[MI]tu/<br><br>Y esos [LA]montes[SI] se [SOL#m]move[DO#m]rán<br>Y esos [FA#m]montes[SI] se [MI]moverán<br>Y esos [LA]montes[SI] se [SOL#m]move[DO#m]rán<br>por tu [FA#m]Santo [SI]Espíri[MI]tu.</b>"
+    ]
   },
   {
     "titulo": "No puede estar triste un corazón que alaba a Cristo",
@@ -2046,10 +2051,12 @@
   },
   {
     "titulo": "Porque tu eres bueno, porque para siempre",
-    "preview": "Porque tú eres bueno,\u000bporque para siempre, tú misericordia es.\u000bCada mañana al despertar\u000bse que en ti puedo confiar,\u000bme sostienes por tu gran fidelidad.\u000b\u000bPorque tú eres bueno,\u000bporque tu justicia, justicia eterna es,\u000by en ella yo me deleitaré\u000ben tu verdad caminaré\u000bpor tu senda de justicia, guíame",
+    "preview": "Porque tú eres bueno,\u000bporque para siempre, tú misericordia es.\u000bCada mañana al despertar\u000bse que en ti puedo confiar,\u000bme sostienes por tu gran fidelidad",
     "slides": [
-      "<b>Porque tú eres bueno,<br>porque para siempre, tú misericordia es.<br>Cada mañana al despertar<br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad.<br><br>Porque tú eres bueno,<br>porque tu justicia, justicia eterna es,<br>y en ella yo me deleitaré<br>en tu verdad caminaré<br>por tu senda de justicia, guíame</b>",
-      "<b>Porque tu eres bueno,<br>porque para siempre, tu misericordia es.<br>Cada mañana al despertar, <br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad,<br><br>Y cada mañana al despertar, <br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad</b>"
+      "<b>Porque tú eres bueno,<br>porque para siempre, tú misericordia es.<br>Cada mañana al despertar<br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad</b>",
+      "<b>Porque tú eres bueno,<br>porque tu justicia, justicia eterna es,<br>y en ella yo me deleitaré<br>en tu verdad caminaré<br>por tu senda de justicia, guíame</b>",
+      "<b>Porque tu eres bueno,<br>porque para siempre, tu misericordia es.<br>Cada mañana al despertar, <br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad</b>",
+      "<b>Y cada mañana al despertar, <br>se que en ti puedo confiar,<br>me sostienes por tu gran fidelidad</b>"
     ],
     "tono": "DO",
     "carpeta": "P"
@@ -2102,7 +2109,6 @@
       "<b>/Gloria, gloria en lo alto<br>Gloria en lo alto, gloria al Rey<br>Gloria, gloria a ti mi Cristo<br>Tu nombre por siempre exaltaré/</b>",
       "<b>/Digno, solo tú eres digno<br>Solo tú eres digno<br>Solo tú eres Dios/<br><br>/Gloria, gloria en lo alto<br>Gloria en lo alto, gloria al rey<br>Gloria, gloria a ti mi Cristo<br>Tu nombre por siempre exaltaré/</b>"
     ],
-    "nueva": true,
     "tono": "MI",
     "carpeta": "Q",
     "acordes": [
@@ -2144,7 +2150,6 @@
       "<b>/Digno es el Cordero de Dios<br>Digno es el rey que la muerte venció/<br><br>Digno es el Cordero de Dios<br>¡Digno! ¡Digno! ¡Digno!</b>",
       "<b>Gracia sublime es<br>Perfecto es tu amor<br>Tomaste mi lugar<br>Cargaste tú mi cruz<br>Tu vida diste ahí<br>Y ahora libre soy<br>Jesús te adoro<br>Por lo que hiciste en mí</b>"
     ],
-    "nueva": true,
     "tono": "MI",
     "carpeta": "Q",
     "acordes": [
@@ -2253,9 +2258,10 @@
   },
   {
     "titulo": "Santo es el que vive",
-    "preview": "Corrió su sangre por un madero\u000bA él no lo mataron, se entregó primero\u000bDe tal manera amó Jesús\u000bQue entregó su vida en la cruz\u000b\u000bNo dijo nada, no abrió su boca\u000bLe hieren, le golpean, pero él perdona\u000bDe tal manera amó Jesús\u000bQue entregó su vida en la cruz",
+    "preview": "Corrió su sangre por un madero\u000bA Él no lo mataron, se entregó primero\u000bDe tal manera amó Jesús\u000bQue entregó su vida en la cruz",
     "slides": [
-      "<b>Corrió su sangre por un madero<br>A él no lo mataron, se entregó primero<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz<br><br>No dijo nada, no abrió su boca<br>Le hieren, le golpean, pero él perdona<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz</b>",
+      "<b>Corrió su sangre por un madero<br>A Él no lo mataron, se entregó primero<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz</b>",
+      "<b>No dijo nada, no abrió su boca<br>Le hieren, le golpean, pero Él perdona<br>De tal manera amó Jesús<br>Que entregó su vida en la cruz</b>",
       "<b>/Santo es el que vive, santo es <br>el que reina.<br>Santo en las alturas, santo aquí <br>en la tierra.<br>Santo en el pesebre, santo <br>en el sepulcro.<br>Santa es su sangre derramada <br>en la Cruz/</b>",
       "<b>/Todos lo verán<br>Como un rey en las nubes volverá<br>Coronado en poder y autoridad<br>El Cordero y León reinará/</b>",
       "<b>/Santo es el que vive, santo es <br>el que reina.<br>Santo en las alturas, santo aquí <br>en la tierra.<br>Santo en el pesebre, santo <br>en el sepulcro<br>Santa es su sangre derramada <br>en la Cruz/</b>",
@@ -2271,6 +2277,23 @@
       "<b>/[MIm]Santo es el que vive, <br>santo es el que reina<br><br>[RE]Santo en las alturas, <br>santo aquí en la tierra<br><br>[DO]Santo en el pesebre, <br>[LAm]santo en el sepulcro<br><br>[SI7]Santa es su sangre <br>derramada en la Cruz/</b>",
       "<b>//[MIm]Santo, [RE]Santo, [DO]Santo [SI7]<br>es Jesús de [MIm]Nazareth//</b>"
     ]
+  },
+  {
+    "titulo": "Santo por siempre",
+    "preview": "Mil generaciones\u000bSe postran adorarle\u000bLe cantan al cordero que venció\u000b\u000bLos que nos precedieron\u000bY los que en Él creerán\u000bLe cantarán a aquel que ya venció",
+    "slides": [
+      "<b>Mil generaciones<br>Se postran adorarle<br>Le cantan al cordero que venció<br><br>Los que nos precedieron<br>Y los que en Él creerán<br>Le cantarán a aquel que ya venció</b>",
+      "<b>Tu nombre, es más alto<br>Tu nombre, es más grande<br>Tu nombre, sobre todo es<br><br>Sean tronos, dominios<br>Poderes, potestades<br>Tu nombre, sobre todo es</b>",
+      "<b>Claman ángeles<br>Santo<br>Clama la creación<br>Santo<br>Exaltado Dios<br>Santo<br>Santo por siempre</b>",
+      "<b>Si te ha perdonado<br>Y tienes salvación<br>Cántale al cordero que venció<br><br>Si te ha libertado<br>Su nombre ha puesto en ti<br>Cántale al cordero que venció<br><br>Cantaremos siempre &quot;amén&quot;</b>",
+      "<b>Claman ángeles<br>Santo<br>Clama la creación<br>Santo<br>Exaltado Dios<br>Santo<br>Santo por siempre</b>",
+      "<b>Canta el pueblo al Rey<br>Santo<br>Soberano es Él<br>Santo<br>Y por siempre es<br>Santo<br>Santo por siempre</b>",
+      "<b>Tu nombre, es más alto<br>Tu nombre, es más grande<br>Tu nombre, sobre todo es<br><br>Sean tronos, dominios<br>Poderes, potestades<br>Tu nombre, sobre todo es</b>",
+      "<b>Claman ángeles<br>Santo<br>Clama la creación<br>Santo<br>Exaltado Dios<br>Santo<br>Santo por siempre</b>",
+      "<b>Canta el pueblo al Rey<br>Santo<br>Soberano es Él<br>Santo<br>Y por siempre es<br>Santo<br>Santo por siempre</b>"
+    ],
+    "tono": "SOL",
+    "carpeta": "S"
   },
   {
     "titulo": "Santo santo santo",
@@ -2369,13 +2392,20 @@
   },
   {
     "titulo": "Señor mi Dios (cuan grande es él)",
-    "preview": "Señor mi Dios, al contemplar los cielos\u000bel firmamento y las estrellas mil\u000bal oír tu voz en los potentes truenos\u000by ver brillar al sol en su cenit.\u000b\n/Mi corazón entona la canción,\u000bcuan grande es él, cuan grande es él/",
+    "preview": "Señor mi Dios, al contemplar los cielos\u000bel firmamento y las estrellas mil\u000bal oír tu voz en los potentes truenos\u000by ver brillar al sol en su cenit.\u000b\n/Mi corazón entona la canción,\u000bcuan grande es Él, cuan grande es Él/",
     "slides": [
-      "<b>Señor mi Dios, al contemplar los cielos<br>el firmamento y las estrellas mil<br>al oír tu voz en los potentes truenos<br>y ver brillar al sol en su cenit.<br><br>/Mi corazón entona la canción,<br>cuan grande es él, cuan grande es él/</b>",
-      "<b>Al recorrer los montes y los valles, <br>y ver las bellas flores al pasar<br>al escuchar el canto de las aves<br>y el murmurar del claro manantial.<br><br>/Mi corazón entona la canción,<br>cuan grande es él, cuan grande es él/</b>",
-      "<b>Cuando recuerdo del amor divino<br>que desde el cielo al Salvador envió<br>aquel Jesús que por salvarme vino<br>y en una cruz sufrió y por mi murió.<br><br>/Mi corazón entona la canción,<br>cuan grande es él, cuan grande es él/</b>",
-      "<b>Cuando el Señor me llame a su presencia<br>al dulce hogar, al cielo de esplendor<br>le adoraré cantando la grandeza<br>de su poder y su infinito amor.<br><br>/Mi corazón entona la canción,<br>cuan grande es él, cuan grande es él/</b>"
+      "<b>Señor mi Dios, al contemplar los cielos<br>el firmamento y las estrellas mil<br>al oír tu voz en los potentes truenos<br>y ver brillar al sol en su cenit.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>",
+      "<b>Al recorrer los montes y los valles, <br>y ver las bellas flores al pasar<br>al escuchar el canto de las aves<br>y el murmurar del claro manantial.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>",
+      "<b>Cuando recuerdo del amor divino<br>que desde el cielo al Salvador envió<br>aquel Jesús que por salvarme vino<br>y en una cruz sufrió y por mi murió.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>",
+      "<b>Cuando el Señor me llame a su presencia<br>al dulce hogar, al cielo de esplendor<br>le adoraré cantando la grandeza<br>de su poder y su infinito amor.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>"
     ],
+    "acordes": [
+      "<b>Señor mi [LA]Dios, al [LA7]contemplar los [RE]cielos[SIm]<br>el [LA]firmamento y las [MI]estrellas [LA]mil<br>al oír tu [LA]voz en [LA7]los potentes [RE]truenos[SIm]<br>y ver [LA]brillar al [MI]sol en su [LA]cenit.[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción, [FA#]<br>cuan grande es [SIm]Él,[MI] cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción, [FA#]<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
+      "<b>Al [LA]recorrer los [LA7]montes y los [RE]valles[SIm], <br>y ver las [LA]bellas [MI]flores al [LA]pasar[MI]<br>al [LA]escuchar el [LA7]canto de las [RE]aves[SIm]<br>y el [LA]murmurar del [MI]claro [LA]manantial[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,<br>cuan grande es [SIm]Él[MI], cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción[FA#m],<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
+      "<b>Cuando [LA]recuerdo [LA7]del amor [RE]divino[SIm]<br>que desde el [LA]cielo al [MI]Salvador [LA]envió[MI]<br>aquel [LA]Jesús que [LA7]por salvarme [RE]vino[SIm]<br>y en una [LA]cruz [MI]sufrió y por mi [LA]murió[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él[MI], cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
+      "<b>Cuando el [LA]Señor me [LA7]llame a su [RE]presencia[SIm]<br>al dulce [LA]hogar, al [MI]cielo de [LA]esplendor[MI]<br>le [LA]adoraré [LA7]cantando la [RE]grandeza[SIm]<br>de su [LA]poder y su [MI]infinito [LA]amor[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él,[MI] cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él, cuan [MI]grande es Él</b>"
+    ],
+    "tono": "LA",
     "carpeta": "Himnos"
   },
   {
@@ -2462,9 +2492,9 @@
   },
   {
     "titulo": "Solamente en Cristo",
-    "preview": "Solamente en Cristo, solamente en él.\u000bSolamente en Cristo, hay Salvación.\u000b\u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, hay Salvación. \u000b\u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, solamente en él",
+    "preview": "Solamente en Cristo, solamente en Él.\u000bSolamente en Cristo, hay Salvación.\u000b\u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, hay Salvación. \u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, solamente en Él",
     "slides": [
-      "<b>Solamente en Cristo, solamente en él.<br>Solamente en Cristo, hay Salvación.<br><br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, hay Salvación. <br><br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, solamente en él</b>"
+      "<b>Solamente en Cristo, solamente en Él.<br>Solamente en Cristo, hay Salvación.<br><br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, hay Salvación. <br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, solamente en Él</b>"
     ],
     "tono": "DO",
     "carpeta": "S",
