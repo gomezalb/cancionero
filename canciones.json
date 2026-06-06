@@ -416,7 +416,11 @@
     "preview": "/Bueno es alabar oh Señor \ntu nombre.\u000bDarte gloria, honra y honor, \npor siempre.\u000bBueno es alabarte Jesús\u000by gozarme en tu poder/",
     "slides": [
       "<b>/Bueno es alabar oh Señor <br>tu nombre.<br>Darte gloria, honra y honor, <br>por siempre.<br>Bueno es alabarte Jesús<br>y gozarme en tu poder/</b>",
-      "<b>/Porque grande eres tú,<br>grandes  son tus obras,<br>porque grande eres tú, <br>grande es tu amor, grande es tu gloria/. <br><br>Bueno es alabarte Señor.</b>"
+      "<b>/Porque grande eres tú,<br>grandes  son tus obras,<br>porque grande eres tú, <br>grande es tu amor, <br>grande es tu gloria/ <br><br>Bueno es alabarte Señor.</b>"
+    ],
+    "acordes": [
+      "<b>/[SOL]Bueno es [DO]alabar oh [RE]Señor<br>tu [DO]nom[RE]bre.<br>[SOL]Darte gloria, [DO]honra y [RE]honor, <br>por [DO]siem[RE]pre.<br>[SOL]Bueno es [DO]alabarte [RE]Jesús<br>y [MIm]gozarme en tu [RE]poder/</b>",
+      "<b>/Porque [SOL]grande [DO]eres [RE]tú,<br>[SOL]grandes [DO]son tus [RE]obras,<br>porque [SOL]grande [DO]eres [RE]tú, <br>grande es tu [MIm]amor, <br>grande es tu [RE]gloria/ <br><br>[DO]Bueno es [RE]alabarte [SOL]Señor</b>"
     ],
     "tono": "SOL",
     "carpeta": "B"
@@ -710,11 +714,22 @@
   },
   {
     "titulo": "Cuando allá se pase lista",
-    "preview": "Cuando la trompeta del Señor \nse toque la final,\ncon fulgor apunte el día eternal,\ny los redimidos suban a su casa celestial,\ncuando allá se pase lista yo estaré.\n\n//Cuando allá se pase lista//\ncierto estoy que por su gracia allí estaré",
+    "preview": "Cuando la trompeta del Señor \nse toque la final,\ncon fulgor apunte el día eternal,\ny los redimidos suban a su casa celestial,\ncuando allá se pase lista yo estaré.",
     "slides": [
-      "<b>Cuando la trompeta del Señor <br>se toque la final,<br>con fulgor apunte el día eternal,<br>y los redimidos suban a su casa celestial,<br>cuando allá se pase lista yo estaré.<br><br><br>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>",
-      "<b>Cuando todas sombras huyan <br>en la gran resurrección<br>de los muertos en Jesús sin corrupción,<br>y en las nubes al Señor reciban, <br>¡qué consolación!,<br>cuando allá se pase lista yo estaré.<br><br><br>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>",
-      "<b>Trabajar es mi deseo <br>sin cesar por el Señor,<br>siempre hablando de su gracia <br>y de su amor.<br>Cuando acabe aquí mi obra <br>y me llame el Salvador,<br>cuando allá se pase lista yo estaré.<br><br><br>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>"
+      "<b>Cuando la trompeta del Señor <br>se toque la final,<br>con fulgor apunte el día eternal,<br>y los redimidos suban a su casa celestial,<br>cuando allá se pase lista yo estaré.</b>",
+      "<b>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>",
+      "<b>Cuando todas sombras huyan <br>en la gran resurrección<br>de los muertos en Jesús sin corrupción,<br>y en las nubes al Señor reciban, <br>¡qué consolación!,<br>cuando allá se pase lista yo estaré.</b>",
+      "<b>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>",
+      "<b>Trabajar es mi deseo <br>sin cesar por el Señor,<br>siempre hablando de su gracia <br>y de su amor.<br>Cuando acabe aquí mi obra <br>y me llame el Salvador,<br>cuando allá se pase lista yo estaré.</b>",
+      "<b>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>"
+    ],
+    "acordes": [
+      "<b>[MI]Cuando la trompeta del Señor <br>se [LA]toque la [MI]final,<br>con [MI]fulgor apunte el día [SI]eternal,<br>y los [MI]redimidos suban a su [LA]casa [MI]celestial,<br>cuando [MI]allá se pase [SI]lista yo [MI]estaré.</b>",
+      "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>",
+      "<b>[MI]Cuando todas sombras huyan <br>en la [LA]gran [MI]resurrección<br>de los [MI]muertos en Jesús sin [SI]corrupción,<br>y en las [MI]nubes al Señor reciban, <br>[LA]¡qué [MI]consolación!,<br>cuando [MI]allá se pase [SI]lista yo [MI]estaré.</b>",
+      "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>",
+      "<b>[MI]Trabajar es mi deseo <br>sin [LA]cesar por el [MI]Señor,<br>siempre [MI]hablando de su gracia <br>y de su [SI]amor.<br>Cuando [MI]acabe aquí mi obra <br>y me [LA]llame el [MI]Salvador,<br>cuando [MI]allá se pase [SI]lista yo [MI]estaré.</b>",
+      "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>"
     ],
     "tono": "MI",
     "carpeta": "Himnos"
@@ -1008,13 +1023,22 @@
   },
   {
     "titulo": "El Dios que adoramos",
-    "preview": "El Dios que hizo los cielos y la tierra\u000bCon el poder de su palabra\u000bY reina con autoridad\nEl Dios que aún los vientos le obedecen\u000bUna palabra es suficiente\u000bPara los muertos levantar\n\nNadie es como él\u000bOh, gran yo soy",
+    "preview": "El Dios que hizo los cielos y la tierra\u000bCon el poder de su palabra\u000bY reina con autoridad\nEl Dios que aún los vientos le obedecen\u000bUna palabra es suficiente\u000bPara los muertos levantar\n\nNadie es como Él\u000bOh, gran yo soy",
     "slides": [
-      "<b>El Dios que hizo los cielos y la tierra<br>Con el poder de su palabra<br>Y reina con autoridad<br>El Dios que aún los vientos le obedecen<br>Una palabra es suficiente<br>Para los muertos levantar<br><br><br>Nadie es como él<br>Oh, gran yo soy</b>",
+      "<b>El Dios que hizo los cielos y la tierra<br>Con el poder de su palabra<br>Y reina con autoridad<br>El Dios que aún los vientos le obedecen<br>Una palabra es suficiente<br>Para los muertos levantar<br><br><br>Nadie es como Él<br>Oh, gran yo soy</b>",
       "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>",
-      "<b>El Dios que descendió desde su trono<br>Para llevar sobre sus hombros<br>Nuestra culpa y transgresión<br>Jesús, exaltado sobre todo<br>Nombre sobre todo nombre<br>Solo en él hay salvación<br><br><br>Nadie es como él<br>Oh, gran yo soy</b>",
+      "<b>El Dios que descendió desde su trono<br>Para llevar sobre sus hombros<br>Nuestra culpa y transgresión<br>Jesús, exaltado sobre todo<br>Nombre sobre todo nombre<br>Solo en Él hay salvación<br><br><br>Nadie es como Él<br>Oh, gran yo soy</b>",
       "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>",
-      "<b>/A él sea la gloria y el poder<br>Todo es de él y para él/<br><br><br>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>"
+      "<b>/A Él sea la gloria y el poder<br>Todo es de Él y para Él/</b>",
+      "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br><br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>"
+    ],
+    "acordes": [
+      "<b>[SOL]El Dios que hizo los cielos y la [RE]tierra<br>Con el poder de su [MIm]palabra<br>Y reina con [DO]autoridad<br>El [SOL]Dios que aún los vientos le [RE]obedecen<br>Una palabra es [MIm]suficiente<br>Para los muertos [DO]levantar<br><br><br>Nadie es [DO]como Él<br>Oh, [RE]gran yo soy</b>",
+      "<b>Tú eres el [SOL]Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>",
+      "<b>[SOL]El Dios que descendió desde su [RE]trono<br>Para llevar sobre sus [MIm]hombros<br>Nuestra culpa y [DO]transgresión<br>[SOL]Jesús, exaltado sobre todo<br>[RE]Nombre sobre todo [MIm]nombre<br>Solo en Él hay [DO]salvación<br><br><br>Nadie es [DO]como Él<br>Oh, [RE]gran yo soy</b>",
+      "<b>[SOL]Tú eres el Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>",
+      "<b>/A Él [DO]sea la gloria y [RE]el poder<br>Todo [DO]es de Él y [RE]para Él/</b>",
+      "<b>Tú eres el [SOL]Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br><br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>"
     ],
     "tono": "SOL",
     "carpeta": "E"
@@ -2399,14 +2423,14 @@
       "<b>Cuando recuerdo del amor divino<br>que desde el cielo al Salvador envió<br>aquel Jesús que por salvarme vino<br>y en una cruz sufrió y por mi murió.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>",
       "<b>Cuando el Señor me llame a su presencia<br>al dulce hogar, al cielo de esplendor<br>le adoraré cantando la grandeza<br>de su poder y su infinito amor.<br><br>/Mi corazón entona la canción,<br>cuan grande es Él, cuan grande es Él/</b>"
     ],
+    "tono": "LA",
+    "carpeta": "Himnos",
     "acordes": [
       "<b>Señor mi [LA]Dios, al [LA7]contemplar los [RE]cielos[SIm]<br>el [LA]firmamento y las [MI]estrellas [LA]mil<br>al oír tu [LA]voz en [LA7]los potentes [RE]truenos[SIm]<br>y ver [LA]brillar al [MI]sol en su [LA]cenit.[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción, [FA#]<br>cuan grande es [SIm]Él,[MI] cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción, [FA#]<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
       "<b>Al [LA]recorrer los [LA7]montes y los [RE]valles[SIm], <br>y ver las [LA]bellas [MI]flores al [LA]pasar[MI]<br>al [LA]escuchar el [LA7]canto de las [RE]aves[SIm]<br>y el [LA]murmurar del [MI]claro [LA]manantial[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,<br>cuan grande es [SIm]Él[MI], cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción[FA#m],<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
       "<b>Cuando [LA]recuerdo [LA7]del amor [RE]divino[SIm]<br>que desde el [LA]cielo al [MI]Salvador [LA]envió[MI]<br>aquel [LA]Jesús que [LA7]por salvarme [RE]vino[SIm]<br>y en una [LA]cruz [MI]sufrió y por mi [LA]murió[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él[MI], cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él, cuan [MI]grande es [LA]Él</b>",
       "<b>Cuando el [LA]Señor me [LA7]llame a su [RE]presencia[SIm]<br>al dulce [LA]hogar, al [MI]cielo de [LA]esplendor[MI]<br>le [LA]adoraré [LA7]cantando la [RE]grandeza[SIm]<br>de su [LA]poder y su [MI]infinito [LA]amor[MI]<br><br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él,[MI] cuan grande es [LA]Él[MI]<br>Mi [LA]corazón [RE]entona la [LA]canción,[FA#m]<br>cuan grande es [SIm]Él, cuan [MI]grande es Él</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "Himnos"
+    ]
   },
   {
     "titulo": "Señor quién entrará en tu santuario para adorar",
