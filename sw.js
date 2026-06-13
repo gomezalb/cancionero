@@ -1,7 +1,7 @@
 // sw.js — Service Worker del Cancionero
 // Versión del caché — cambiá este número cada vez que subas cambios a GitHub
 
-const CACHE_VERSION = "cancionero-v96";
+const CACHE_VERSION = "cancionero-v97";
 
 const ARCHIVOS = [
   "./",
