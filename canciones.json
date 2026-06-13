@@ -418,12 +418,12 @@
       "<b>/Bueno es alabar oh Señor <br>tu nombre.<br>Darte gloria, honra y honor, <br>por siempre.<br>Bueno es alabarte Jesús<br>y gozarme en tu poder/</b>",
       "<b>/Porque grande eres tú,<br>grandes  son tus obras,<br>porque grande eres tú, <br>grande es tu amor, <br>grande es tu gloria/ <br><br>Bueno es alabarte Señor.</b>"
     ],
+    "tono": "SOL",
+    "carpeta": "B",
     "acordes": [
       "<b>/[SOL]Bueno es [DO]alabar oh [RE]Señor<br>tu [DO]nom[RE]bre.<br>[SOL]Darte gloria, [DO]honra y [RE]honor, <br>por [DO]siem[RE]pre.<br>[SOL]Bueno es [DO]alabarte [RE]Jesús<br>y [MIm]gozarme en tu [RE]poder/</b>",
       "<b>/Porque [SOL]grande [DO]eres [RE]tú,<br>[SOL]grandes [DO]son tus [RE]obras,<br>porque [SOL]grande [DO]eres [RE]tú, <br>grande es tu [MIm]amor, <br>grande es tu [RE]gloria/ <br><br>[DO]Bueno es [RE]alabarte [SOL]Señor</b>"
-    ],
-    "tono": "SOL",
-    "carpeta": "B"
+    ]
   },
   {
     "titulo": "Busca la voluntad del Señor",
@@ -723,6 +723,8 @@
       "<b>Trabajar es mi deseo <br>sin cesar por el Señor,<br>siempre hablando de su gracia <br>y de su amor.<br>Cuando acabe aquí mi obra <br>y me llame el Salvador,<br>cuando allá se pase lista yo estaré.</b>",
       "<b>//Cuando allá se pase lista//<br>cierto estoy que por su gracia allí estaré</b>"
     ],
+    "tono": "MI",
+    "carpeta": "Himnos",
     "acordes": [
       "<b>[MI]Cuando la trompeta del Señor <br>se [LA]toque la [MI]final,<br>con [MI]fulgor apunte el día [SI]eternal,<br>y los [MI]redimidos suban a su [LA]casa [MI]celestial,<br>cuando [MI]allá se pase [SI]lista yo [MI]estaré.</b>",
       "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>",
@@ -730,9 +732,7 @@
       "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>",
       "<b>[MI]Trabajar es mi deseo <br>sin [LA]cesar por el [MI]Señor,<br>siempre [MI]hablando de su gracia <br>y de su [SI]amor.<br>Cuando [MI]acabe aquí mi obra <br>y me [LA]llame el [MI]Salvador,<br>cuando [MI]allá se pase [SI]lista yo [MI]estaré.</b>",
       "<b>[MI]Cuando allá se pase lista<br>[SI]Cuando allá se pase lista<br>Cuando [MI]allá[MI7] se pase [LA]lis[LAm]ta<br>cierto [MI]estoy que por su [SI]gracia allí [MI]estaré</b>"
-    ],
-    "tono": "MI",
-    "carpeta": "Himnos"
+    ]
   },
   {
     "titulo": "Cuando combatido",
@@ -932,7 +932,7 @@
       "<b>Dios es nuestro amparo y fortaleza<br>nuestro pronto auxilio <br>en las tribulaciones<br><br><br>Por tanto no temeremos <br>aunque la tierra sea removida <br>y se traspasen los montes <br>al corazón del mar</b>",
       "<b>/Cielo y tierra pasará <br>más su palabra no pasará/<br>/No, no, no pasará./</b>"
     ],
-    "tono": "DOm",
+    "tono": "REm",
     "carpeta": "D"
   },
   {
@@ -1032,6 +1032,8 @@
       "<b>/A Él sea la gloria y el poder<br>Todo es de Él y para Él/</b>",
       "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br><br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>"
     ],
+    "tono": "SOL",
+    "carpeta": "E",
     "acordes": [
       "<b>[SOL]El Dios que hizo los cielos y la [RE]tierra<br>Con el poder de su [MIm]palabra<br>Y reina con [DO]autoridad<br>El [SOL]Dios que aún los vientos le [RE]obedecen<br>Una palabra es [MIm]suficiente<br>Para los muertos [DO]levantar<br><br><br>Nadie es [DO]como Él<br>Oh, [RE]gran yo soy</b>",
       "<b>Tú eres el [SOL]Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>",
@@ -1039,9 +1041,7 @@
       "<b>[SOL]Tú eres el Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>",
       "<b>/A Él [DO]sea la gloria y [RE]el poder<br>Todo [DO]es de Él y [RE]para Él/</b>",
       "<b>Tú eres el [SOL]Dios que adoramos<br>[RE]Todopoderoso y soberano<br>Grande en [MIm]miseri[DO]cordia <br>y [SOL]poder para [RE]salvar<br><br>Tú eres el [SOL]Dios que adoramos<br>Quien derrotó la [RE]muerte y el pecado<br>[MIm]Glorioso [DO]redentor y [MIm]rey, te [RE]adoramos</b>"
-    ],
-    "tono": "SOL",
-    "carpeta": "E"
+    ]
   },
   {
     "titulo": "El es el rey de reyes",
@@ -1240,7 +1240,7 @@
     "slides": [
       "<b>Entra en la presencia del Señor<br>con gratitud,<br>y adórale de corazón;<br>entra en la presencia del Señor <br>con gratitud,<br>y alza tu voz con loor.<br><br>Dad gloria y honra y alabanzas al Señor.<br>/Oh Cristo, Nombre sin igual/</b>"
     ],
-    "tono": "SOL",
+    "tono": "LA",
     "carpeta": "E"
   },
   {
@@ -1328,7 +1328,7 @@
       "<b>Este es mi deseo, honrarte a ti,<br>con todo mi ser, te adoro a ti,<br>con todas mis fuerzas, te alabaré.<br>Mi adoración eres tú.</b>",
       "<b>Hoy te rindo mi ser,<br>te doy mi corazón, <br>yo vivo para ti.<br>En cada palpitar, <br>mientras haya aliento en mi,<br>Dios haz tu obra en mi.</b>"
     ],
-    "tono": "RE",
+    "tono": "MI",
     "carpeta": "E"
   },
   {
