@@ -358,14 +358,14 @@
       "<b>Aunque afligido esté, <br>tu pensarás en mí, no temeré.<br>Aunque mi corazón estremecido esté, <br>en ti confiaré.<br>No temeré a ningún hombre, <br>que se junte contra mí.<br>Tu eres mi Dios, mi fortaleza, <br>mi salvación esta en ti.</b>",
       "<b>/Porque tú eres mi escudo, tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/<br><br> /Levantate y salvame,<br>levantate y sáname/<br><br>/Porque tú eres mi escudo, tú mi fortaleza.<br>Tú eres mi gloria,<br>y quién levanta mi cabeza/</b>"
     ],
+    "tono": "FA#m",
+    "carpeta": "A",
     "acordes": [
       "<b>[FA#m]Aunque un ejérci[RE]to acampe contra [LA]mí, <br>no teme[MI]ré.<br>[FA#m]Aunque haya guerra [RE]hoy alrededor de [LA]mí, <br>en ti [MI]confiaré.<br>No [RE]temeré a [MI]diez mil [FA#m]gentes<br>que hagan [RE]sitio contra [LA]mí[MI],<br>aunque la [RE]tierra se [MI]estre[FA#m]mezca,<br>mi [RE]salvación esta en [MI]ti.</b>",
       "<b>/Porque [RE]tú [MI]eres mi [FA#m]escudo,<br>[RE]tú mi [MI]forta[FA#M]leza,<br>[RE]tú [MI]eres mi [FA#m]gloria,<br>y quien [RE]levanta [LA]mi [MI]cabeza./</b>",
       "<b>[FA#m]Aunque afligido [RE]esté, <br>tu pensarás en [LA]mí, no [MI]temeré.<br>[FA#m]Aunque mi [RE]corazón estremecido [LA]esté, <br>en ti [MI]confiaré.<br>No [RE]temeré a [MI]ningún [FA#m]hombre, <br>que se [RE]junte contra [LA]mí[MI]<br>Tu eres mi [RE]Dios, mi [MI]forta[FA#m]leza, <br>mi [RE]salvación esta en [MI]ti.</b>",
       "<b>/Porque [RE]tú [MI]eres mi [FA#m]escudo, [RE]tú mi [MI]forta[FA#m]leza.<br>[RE]Tú [MI]eres mi [FA#m]gloria,<br>y quién [RE]levanta [LA]mi [MI]cabeza/<br><br> /[FA#m]Levanta[RE]te y [LA]salva[MI]me,<br>[FA#m]levanta[RE]te y [LA]sána[MI]me/<br><br>/Porque [RE]tú [MI]eres mi [FA#m]escudo, [RE]tú mi [MI]forta[FA#m]leza.<br>[RE]Tú [MI]eres mi [FA#m]gloria,<br>y quién [RE]levanta [LA]mi [MI]cabeza/</b>"
-    ],
-    "tono": "FA#m",
-    "carpeta": "A"
+    ]
   },
   {
     "titulo": "Ayudame a mirar con tus ojos",
@@ -482,6 +482,16 @@
       "<b>Canta, oh buen cristiano;<br>Dios guardará tus pies,<br>Y El sostendrá tu mano<br>hasta la vejez.<br>¿Sabes que el diablo invitas<br>cuando medroso estás?<br>Pon ante Dios tus cuitas,<br>y él daráte paz.</b>"
     ],
     "carpeta": "Himnos"
+  },
+  {
+    "titulo": "Cantaré al Señor por siempre",
+    "preview": "/Cantaré al Señor por siempre\nsu diestra es todo poder/\n\n/Echó a la mar\nQuien los perseguía\nJinete y caballo\nEchó a la mar/",
+    "slides": [
+      "<b>/Cantaré al Señor por siempre<br>su diestra es todo poder/<br><br><br>/Echó a la mar<br>Quien los perseguía<br>Jinete y caballo<br>Echó a la mar/</b>",
+      "<b>Echó a la mar los carros del faraón<br><br><br>//La-ra-la-la-la-la… //<br><br><br>/Mi padre es Dios<br>Y yo le exalto<br>Mi padre es Dios<br>Y le exaltaré/</b>"
+    ],
+    "tono": "REm",
+    "carpeta": "Escuela bíblica"
   },
   {
     "titulo": "Cantemos a Jesús",
@@ -883,11 +893,11 @@
     "slides": [
       "<b>/Digno eres de gloria, de alabanza.<br>Elevamos nuestras manos, <br>te exaltamos Señor/<br><br>/Grande eres tú, <br>maravillas haces tú,<br>no hay otro como tú, <br>no hay otro como tú/</b>"
     ],
+    "tono": "LA",
+    "carpeta": "D",
     "acordes": [
       "<b>/Digno eres de [LA]gloria, de [DO#m]alabanza.<br>[RE]Elevamos nuestras [SIm]manos, <br>te [MI]exaltamos [MI7]Señor/<br><br>/Grande eres [LA]tú, <br>maravillas haces [FA#m]tú,<br>no hay otro como [SIm]tú, <br>no hay [MI]otro como [MI7]tú/</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "D"
+    ]
   },
   {
     "titulo": "Digno es el Cordero Santo",
@@ -941,12 +951,12 @@
       "<b>Dios es nuestro amparo y fortaleza<br>nuestro pronto auxilio <br>en las tribulaciones<br><br><br>Por tanto no temeremos <br>aunque la tierra sea removida <br>y se traspasen los montes <br>al corazón del mar</b>",
       "<b>/Cielo y tierra pasará <br>más su palabra no pasará/<br>/No, no, no pasará./</b>"
     ],
+    "tono": "REm",
+    "carpeta": "D",
     "acordes": [
       "<b>[REm]Dios es nuestro amparo y [LA]fortaleza<br>nuestro pronto auxilio <br>en las [REm]tribulaciones<br><br><br>Por [REm]tanto no temeremos <br>aunque la tierra sea [LA]removida <br>y se traspasen los montes <br>al corazón del [REm]mar</b>",
       "<b>/[REm]Cielo y tierra [LA]pasará <br>más su palabra no [REm]pasará/<br>/[SOLm]No, [FA]no, [LA]no [REm]pasará./</b>"
-    ],
-    "tono": "REm",
-    "carpeta": "D"
+    ]
   },
   {
     "titulo": "Dios esta aqui, tan cierto como el aire que respiro",
@@ -997,10 +1007,12 @@
   },
   {
     "titulo": "Dios nos envió a su hijo Cristo (Porque El Vive)",
-    "preview": "Dios nos envió a su hijo Cristo, \u000bél es salud, paz y perdón, \u000bsufrió y murió por mis pecados\u000bvacía esta la tumba porque él triunfó.\u000b\u000bPorque él vive triunfaré mañana\u000bporque él vive ya no hay temor\u000bporque yo sé, yo sé\u000bque el futuro es suyo\u000bla vida vale más y más solo por él.",
+    "preview": "Dios nos envió a su hijo Cristo, \u000bÉl es salud, paz y perdón, \u000bsufrió y murió por mis pecados\u000bvacía esta la tumba porque Él triunfó.",
     "slides": [
-      "<b>Dios nos envió a su hijo Cristo, <br>él es salud, paz y perdón, <br>sufrió y murió por mis pecados<br>vacía esta la tumba porque él triunfó.<br><br>Porque él vive triunfaré mañana<br>porque él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por él.</b>",
-      "<b>Yo sé que un día el río cruzaré,<br>con el dolor batallaré,<br>y al ver la vida triunfando invicta,<br>veré gloriosas luces y veré al Rey.<br><br>Porque él vive triunfaré mañana<br>porque él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por él.</b>"
+      "<b>Dios nos envió a su hijo Cristo, <br>Él es salud, paz y perdón, <br>sufrió y murió por mis pecados<br>vacía esta la tumba porque Él triunfó.</b>",
+      "<b>Porque Él vive triunfaré mañana<br>porque Él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por Él</b>",
+      "<b>Yo sé que un día el río cruzaré,<br>con el dolor batallaré,<br>y al ver la vida triunfando invicta,<br>veré gloriosas luces y veré al Rey.</b>",
+      "<b>Porque Él vive triunfaré mañana<br>porque Él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por Él.</b>"
     ],
     "tono": "SOL",
     "carpeta": "D"
@@ -1253,11 +1265,11 @@
     "slides": [
       "<b>Entra en la presencia del Señor<br>con gratitud,<br>y adórale de corazón;<br>entra en la presencia del Señor <br>con gratitud,<br>y alza tu voz con loor.<br><br>Dad gloria y honra y alabanzas al Señor.<br>/Oh Cristo, Nombre sin igual/</b>"
     ],
+    "tono": "LA",
+    "carpeta": "E",
     "acordes": [
       "<b>[LA]Entra en la presencia del [DO#m]Señor<br>con gratitud,<br>y [SIm]adórale de [MI]corazón;<br>[LA]entra en la presencia del [DO#m]Señor <br>con gratitud,<br>y alza tu [RE]voz[SIm] con [MI]loor.<br><br>Dad [RE]gloria y [DO#m]honra y [FA#m]alabanzas[SI] al [SIm]Señor[MI]<br>/Oh [LA]Cristo[FA#m], [SIm]Nombre [MI]sin [LA]igual/</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "E"
+    ]
   },
   {
     "titulo": "Eres tú la unica razón de mi adoración",
@@ -1344,12 +1356,12 @@
       "<b>Este es mi deseo, honrarte a ti,<br>con todo mi ser, te adoro a ti,<br>con todas mis fuerzas, te alabaré.<br>Mi adoración eres tú.</b>",
       "<b>Hoy te rindo mi ser,<br>te doy mi corazón, <br>yo vivo para ti.<br>En cada palpitar, <br>mientras haya aliento en mi,<br>Dios haz tu obra en mi.</b>"
     ],
-     "acordes": [
+    "tono": "MI",
+    "carpeta": "E",
+    "acordes": [
       "<b>[MI]Este es mi [DO#m]deseo, [LA]honrarte a [SI]ti,<br>[DO#m]con todo mi [MI]ser, te adoro a [RE]ti[SI],<br>[MI]con todas mis [DO#m]fuerzas, te [FA#m]alaba[SI]ré.<br>[DO#m]Mi adora[MI]ción eres [RE]tú[SI].</b>",
       "<b>[MI]Hoy te rindo mi [SI]ser,<br>te doy mi [FA#m]corazón, <br>yo [SI]vivo para [MI]ti.<br>En cada [SI]palpitar, <br>mientras haya aliento en [FA#m]mi,<br>Dios [SI]haz tu obra en [MI]mi.</b>"
-    ],
-    "tono": "MI",
-    "carpeta": "E"
+    ]
   },
   {
     "titulo": "Este pueblo que has formado",
@@ -1696,15 +1708,15 @@
       "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>",
       "<b>///Al que el Hijo hace libre<br>Es libre en verdad///<br><br><br>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>"
     ],
+    "tono": "DO",
+    "carpeta": "L",
     "acordes": [
       "<b>Las [FA]cadenas de la muerte me [DO]quitó<br>Para [LAm]mí ya no hay [SOL]condenación<br>Hay [FA]liber[DO]tad, [LAm]liber[SOL]tad<br><br><br>Siendo [FA]esclavo del pecado me [DO]libró<br>En la [LAm]cruz compró mi [SOL]redención<br>Y [FA]liber[DO]tad, [SOL]libertad</b>",
       "<b>Rompió mis [DO]cadenas, me dio vida [FA]nueva<br>Y al fondo del [LAm]mar echó mi [SOL]maldad<br>Lavó mis [DO]pecados y me ha [FA]perdonado<br>Solo en el [LAm]nombre de [SOL]Jesús<br>Hay [DO]libertad</b>",
       "<b>Yo [FA]proclamo al que en la cruz por [DO]mi murió<br>Y [LAm]cambió mi duro [SOL]corazón<br>Por [FA]liber[DO]tad, [LAm]liber[SOL]tad<br><br>El [FA]poder de su evangelio me [DO]salvó<br>Y no me [LAm]avergüenzo del [SOL]Señor<br>Mi [FA]liber[DO]tad, [SOL]libertad</b>",
       "<b>Rompió mis [DO]cadenas, me dio vida [FA]nueva<br>Y al fondo del [LAm]mar echó mi [SOL]maldad<br>Lavó mis [DO]pecados y me ha [FA]perdonado<br>Solo en el [LAm]nombre de [SOL]Jesús<br>Hay [DO]libertad</b>",
       "<b>///Al que el [DO]Hijo hace [SOL]libre<br>Es [FA]libre en [DO]verdad[SOL]///<br><br><br>Rompió mis [DO]cadenas, me dio vida [FA]nueva<br>Y al fondo del [LAm]mar echó mi [SOL]maldad<br>Lavó mis [DO]pecados y me ha [FA]perdonado<br>Solo en el [LAm]nombre de [SOL]Jesús<br>Hay [DO]libertad [FA] [LAm] [SOL]</b>"
-    ],
-    "tono": "DO",
-    "carpeta": "L"
+    ]
   },
   {
     "titulo": "Levanto mis manos aunque no tenga fuerzas",
@@ -1723,12 +1735,12 @@
       "<b>/Los que esperan,<br>los que esperan en Jehová/<br><br>/Como las águilas, <br>como las águilas,<br>sus alas levantarán/</b>",
       "<b>Correrán y no se cansarán<br>caminarán y no se fatigarán<br><br>/Nuevas fuerzas tendrán, <br>nuevas fuerzas tendrán<br>los que esperan,<br>los que esperan en Jehová/</b>"
     ],
+    "tono": "REm",
+    "carpeta": "L",
     "acordes": [
       "<b>[REm]Los que esperan,<br>los que esperan en [LA]Jehová<br>Los que [LA7]esperan,<br>los que esperan en [REm]Jehová[RE7]<br>/Como las [SOLm]águilas, <br>como las [FA]águilas,<br>sus [LA7]alas [REm]levantarán/</b>",
       "<b>[DO]Correrán y no se [FA]cansarán<br>[DO]caminarán y no se [FA]fatigarán<br><br>/Nuevas [SOLm]fuerzas tendrán, <br>nuevas [FA]fuerzas tendrán<br>los que [LA7]esperan,<br>los que esperan en [REm]Jehová/</b>"
-    ],
-    "tono": "REm",
-    "carpeta": "L"
+    ]
   },
   {
     "titulo": "Majestad gloria a su majestad",
@@ -2040,9 +2052,10 @@
   },
   {
     "titulo": "Padre del cielo te adoramos",
-    "preview": "Padre del cielo te adoramos,\u000balzamos hoy tu nombre en alto\u000bque tu reino se establezca  \u000ben la alabanza de tu pueblo,\u000bque declara tu poder.\n\u000bBendito sea el Señor, Dios poderoso,\u000bquien fue, quién es y quién vendrá.\u000bBendito sea el Señor, Dios poderoso,\u000bpor siempre reinarás.",
+    "preview": "Padre del cielo te adoramos,\u000balzamos hoy tu nombre en alto\u000bque tu reino se establezca  \u000ben la alabanza de tu pueblo,\u000bque declara tu poder.",
     "slides": [
-      "<b>Padre del cielo te adoramos,<br>alzamos hoy tu nombre en alto<br>que tu reino se establezca  <br>en la alabanza de tu pueblo,<br>que declara tu poder.<br><br>Bendito sea el Señor, Dios poderoso,<br>quien fue, quién es y quién vendrá.<br>Bendito sea el Señor, Dios poderoso,<br>por siempre reinarás. </b>"
+      "<b>Padre del cielo te adoramos,<br>alzamos hoy tu nombre en alto<br>que tu reino se establezca  <br>en la alabanza de tu pueblo,<br>que declara tu poder.</b>",
+      "<b>Bendito sea el Señor, Dios poderoso,<br>quien fue, quién es y quién vendrá.<br>Bendito sea el Señor, Dios poderoso,<br>por siempre reinarás. </b>"
     ],
     "tono": "DO",
     "carpeta": "P"
