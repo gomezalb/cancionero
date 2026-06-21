@@ -488,7 +488,11 @@
     "preview": "/Cantaré al Señor por siempre\nsu diestra es todo poder/\n\n/Echó a la mar\nQuien los perseguía\nJinete y caballo\nEchó a la mar/",
     "slides": [
       "<b>/Cantaré al Señor por siempre<br>su diestra es todo poder/<br><br><br>/Echó a la mar<br>Quien los perseguía<br>Jinete y caballo<br>Echó a la mar/</b>",
-      "<b>Echó a la mar los carros del faraón<br><br><br>//La-ra-la-la-la-la… //<br><br><br>/Mi padre es Dios<br>Y yo le exalto<br>Mi padre es Dios<br>Y le exaltaré/</b>"
+      "<b>Echó a la mar los carros del faraón<br><br><br>/La-ra-la-la-la-la… /<br><br><br>/Mi padre es Dios<br>Y yo le exalto<br>Mi padre es Dios<br>Y le exaltaré/</b>"
+    ],
+    "acordes": [
+      "<b>/[REm]Cantaré al Señor por [DO]siempre<br>su [LA#]diestra es [DO]todo [REm]poder/<br><br><br>/Echó a la mar [DO]<br>Quien los perseguía [REm]<br>Jinete y caballo [DO]<br>[LA7]Echó a la mar [REm]/</b>",
+      "<b>[DO]Echó a la [FA]mar los [SOLm]carros del [LA]faraón<br><br><br>/La-ra-[REm]la-la-la-la…<br>La-ra-[DO]la-la-la-la…<br>La-ra-[LA#]la-la [LA]-la-la [REm]/<br><br><br>/Mi padre es Dios [DO]<br>Y yo le exalto [REm]<br>Mi padre es Dios [DO]<br>Y [LA]le exaltaré [REm]/<br><br>[DO]Echó a la [FA]mar...</b>"
     ],
     "tono": "REm",
     "carpeta": "Escuela bíblica"
@@ -1013,6 +1017,12 @@
       "<b>Porque Él vive triunfaré mañana<br>porque Él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por Él</b>",
       "<b>Yo sé que un día el río cruzaré,<br>con el dolor batallaré,<br>y al ver la vida triunfando invicta,<br>veré gloriosas luces y veré al Rey.</b>",
       "<b>Porque Él vive triunfaré mañana<br>porque Él vive ya no hay temor<br>porque yo sé, yo sé<br>que el futuro es suyo<br>la vida vale más y más solo por Él.</b>"
+    ],
+    "acordes": [
+      "<b>Dios nos [SOL]envió [SOL7] a su hijo [DO]Cristo, [LAm] <br>Él es [SOL]salud, [MIm] paz y [LAm]perdón, [RE] <br>sufrió y [SOL]murió [SOL7] por mis [DO]pecados [DOm]<br>vacía [SOL]está la [MIm]tumba [LAm]porque [RE]Él [SOL]triunfó.</b>",
+      "<b>Porque Él [SOL]vive [SOL7] triunfaré [DO]mañana [LAm]<br>porque Él [SOL]vive [MIm] ya no hay [FA]temor [RE]<br>porque yo [SOL]sé, yo [SOL7]sé<br>que el futuro es [DO]suyo [DOm]<br>la vida [SOL]vale [MIm]más y [LAm]más [RE]solo por [SOL]Él</b>",
+      "<b>Yo sé que un [SOL]día el río [DO]cruzaré, [LAm]<br>con el [SOL]dolor [MIm] batalla[LAm]ré, [RE]<br>y al ver la [SOL]vida [SOL7] triunfando [DO]invicta, [DOm]<br>veré [SOL]gloriosas [MIm]luces [LAm]y [RE]veré al [SOL]Rey.</b>",
+      "<b>Porque Él [SOL]vive [SOL7] triunfaré [DO]mañana [LAm]<br>porque Él [SOL]vive [MIm] ya no hay [FA]temor [RE]<br>porque yo [SOL]sé, yo [SOL7]sé<br>que el futuro es [DO]suyo [DOm]<br>la vida [SOL]vale más y [RE]más solo por [DO]Él [SOL]</b>"
     ],
     "tono": "SOL",
     "carpeta": "D"
@@ -2056,6 +2066,10 @@
     "slides": [
       "<b>Padre del cielo te adoramos,<br>alzamos hoy tu nombre en alto<br>que tu reino se establezca  <br>en la alabanza de tu pueblo,<br>que declara tu poder.</b>",
       "<b>Bendito sea el Señor, Dios poderoso,<br>quien fue, quién es y quién vendrá.<br>Bendito sea el Señor, Dios poderoso,<br>por siempre reinarás. </b>"
+    ],
+    "acordes": [
+      "<b>[DO]Padre del [LA7]cielo te [REm]adoramos,<br>[SOL]alzamos hoy tu nombre en [DO]alto<br>que tu [DO]reino se [LA7]establezca  <br>en la [REm]alabanza de tu [SOL]pueblo,<br>que [FA]declara [SOL]tu [DO]poder.</b>",
+      "<b>[SOL]Bendito sea el [DO]Señor, [MIm]Dios [FA]poderoso, [REm]<br>quien [SOL]fue, quién es y [SOL7]quién [DO]vendrá.<br>[SOL]Bendito sea el [DO]Señor, [MIm]Dios [FA]poderoso, [REm]<br>por [SOL]siempre [SOL7]reinarás. [DO]</b>"
     ],
     "tono": "DO",
     "carpeta": "P"
