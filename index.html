@@ -1559,12 +1559,14 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
 function renderList() {
   const q = norm(query);
   const filtered = SONGS.filter(c => {
-    // Filtro de categoría
-    if (activeFilter === "alabanza" && ["Himnos","Escuela bíblica","Navidad"].includes(c.carpeta)) return false;
-    if (activeFilter === "himnos" && c.carpeta !== "Himnos") return false;
-    if (activeFilter === "nuevas" && !c.nueva) return false;
-    if (activeFilter === "escuela" && c.carpeta !== "Escuela bíblica") return false;
-    if (activeFilter === "navidad" && c.carpeta !== "Navidad") return false;
+    // Filtro de categoría (se ignora si hay texto en el buscador)
+    if (!q) {
+      if (activeFilter === "alabanza" && ["Himnos","Escuela bíblica","Navidad"].includes(c.carpeta)) return false;
+      if (activeFilter === "himnos" && c.carpeta !== "Himnos") return false;
+      if (activeFilter === "nuevas" && !c.nueva) return false;
+      if (activeFilter === "escuela" && c.carpeta !== "Escuela bíblica") return false;
+      if (activeFilter === "navidad" && c.carpeta !== "Navidad") return false;
+    }
     // Filtro de búsqueda
     return norm(c.titulo).includes(q) || (c.preview && norm(c.preview).includes(q));
   });

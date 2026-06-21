@@ -134,13 +134,16 @@ def extraer_html_slide(slide):
     if not lineas:
         return ""
 
+    # Unir líneas con <br>; las líneas vacías (separadores de estrofa)
+    # ya representan un salto extra, por lo que se convierten en <br><br>
+    # sin agregar el <br> del join entre ellas.
     partes = []
     for linea in lineas:
-        if linea == "":
-            partes.append("<br>")
-        else:
-            partes.append(linea)
+        partes.append("<br>" if linea == "" else linea)
     html = "<br>".join(partes)
+    # Un separador vacío queda como "...<br><br><br>..." (el <br> propio
+    # más los dos del join con sus vecinos); reducir a exactamente dos.
+    html = html.replace("<br><br><br>", "<br><br>")
 
     # Si toda la slide está en negrita, reemplazar múltiples <b>...</b>
     # por un único par que envuelva todo el contenido
