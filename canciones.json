@@ -888,7 +888,7 @@
     "slides": [
       "<b>Dicen que no existes,<br>que no eres realidad,<br>pero estás obrando dentro mío <br>una vez más;<br>obras en tu pueblo,<br>con amor y santidad, <br>y te siento más y más.</b>"
     ],
-    "tono": "DO",
+    "tono": "RE",
     "carpeta": "D"
   },
   {
@@ -2586,9 +2586,9 @@
   },
   {
     "titulo": "Somos el pueblo de Dios",
-    "preview": "Somos el pueblo de Dios,\u000bsomos un pueblo especial,\u000bllamados para anunciar\u000blas virtudes de aquel,\u000bque nos llamó a su luz.\u000b\u000bSomos el pueblo de Dios,\u000bsu sangre nos redimió,\u000by su espíritu dio,\u000bpara darnos poder,\u000by ser testigos de él.",
+    "preview": "Somos el pueblo de Dios,\u000bsomos un pueblo especial,\u000bllamados para anunciar\u000blas virtudes de aquel,\u000bque nos llamó a su luz.\u000b\u000bSomos el pueblo de Dios,\u000bsu sangre nos redimió,\u000by su espíritu dio,\u000bpara darnos poder,\u000by ser testigos de Él.",
     "slides": [
-      "<b>Somos el pueblo de Dios,<br>somos un pueblo especial,<br>llamados para anunciar<br>las virtudes de aquel,<br>que nos llamó a su luz.<br><br>Somos el pueblo de Dios,<br>su sangre nos redimió,<br>y su espíritu dio,<br>para darnos poder,<br>y ser testigos de él.</b>",
+      "<b>Somos el pueblo de Dios,<br>somos un pueblo especial,<br>llamados para anunciar<br>las virtudes de aquel,<br>que nos llamó a su luz.<br><br>Somos el pueblo de Dios,<br>su sangre nos redimió,<br>y su espíritu dio,<br>para darnos poder,<br>y ser testigos de Él.</b>",
       "<b>Y llevaremos su gloria,<br>a cada pueblo y nación,<br>trayéndoles esperanzas,<br>y nuevas de salvación.<br>Y su amor nos impulsa,<br>no nos podemos callar.<br>Anunciaremos al mundo <br>de su amor y verdad.</b>"
     ],
     "tono": "MI",
@@ -3155,11 +3155,12 @@
   },
   {
     "titulo": "Yo sé que mi redentor",
-    "preview": "/Yo sé que mi redentor me tiene que levantar/\u000b/Del polvo de donde estoy\u000b ponerme en un buen lugar/\u000b\u000b/Si quieres también confiar en esa promesa fiel/\u000b/Tendrás que ser como Job y estar esperando en él/\u000b\u000b/No pierdas la fe, te tienes que levantar/\u000b/confía, pero confía, te tienes que levantar/",
+    "preview": "/Yo sé que mi redentor \u000bme tiene que levantar/\u000b/Del polvo de donde estoy\u000b ponerme en un buen lugar/\u000b\u000b/Si quieres también confiar \u000ben esa promesa fiel/\u000b/Tendrás que ser como Job \u000by estar esperando en Él/",
     "slides": [
-      "<b>/Yo sé que mi redentor me tiene que levantar/<br>/Del polvo de donde estoy<br> ponerme en un buen lugar/<br><br>/Si quieres también confiar en esa promesa fiel/<br>/Tendrás que ser como Job y estar esperando en él/<br><br>/No pierdas la fe, te tienes que levantar/<br>/confía, pero confía, te tienes que levantar/</b>"
+      "<b>/Yo sé que mi redentor <br>me tiene que levantar/<br>/Del polvo de donde estoy<br> ponerme en un buen lugar/<br><br>/Si quieres también confiar <br>en esa promesa fiel/<br>/Tendrás que ser como Job <br>y estar esperando en Él/</b>",
+      "<b>/No pierdas la fe, <br>te tienes que levantar/<br><br>/confía, pero confía, <br>te tienes que levantar/</b>"
     ],
-    "tono": "MI",
+    "tono": "SOL",
     "carpeta": "Y"
   },
   {
