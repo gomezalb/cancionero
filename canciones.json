@@ -1177,7 +1177,10 @@
       "<b>///El Señor está en este lugar///<br>para sanar, para librar,<br>para romper toda obra de maldad.<br>Para sanar, para librar mi alma.<br><br>El Señor, el Señor,<br>el Señor está aquí.</b>"
     ],
     "tono": "REm",
-    "carpeta": "E"
+    "carpeta": "E",
+    "acordes": [
+      "<b>///El [REm]Señor [LA#]está en este [DO]lugar///<br>[LA#]para sanar, [DO]para librar,<br>[REm]para romper toda obra de maldad.<br>[LA#]Para sanar, [DO]para librar mi [REm]alma.<br><br>[LA#]El [LAm][SOLm]Señor, [LA#]el [LAm][SOLm]Señor,<br>[LA#]el [LAm][SOLm]Señor está [REm]aquí.</b>"
+    ]
   },
   {
     "titulo": "El Señor ha sido tan bueno",
@@ -1613,11 +1616,15 @@
   },
   {
     "titulo": "Jesus tu eres la persona más importante",
-    "preview": "/Jesús tu eres la persona \u000bmás importante, de este lugar/.\u000b \u000b/Rey de reyes, Señor de señores,\u000btú eres aquel que mi vida cambió/.",
+    "preview": "/Jesús tu eres la persona \u000bmás importante, de este lugar/\u000b \u000b/Rey de reyes, Señor de señores,\u000btú eres aquel que mi vida cambió/",
     "slides": [
-      "<b>/Jesús tu eres la persona <br>más importante, de este lugar/.<br> <br>/Rey de reyes, Señor de señores,<br>tú eres aquel que mi vida cambió/.</b>"
+      "<b>/Jesús tu eres la persona <br>más importante, de este lugar/<br> <br>/Rey de reyes, Señor de señores,<br>tú eres aquel que mi vida cambió/</b>"
     ],
-    "carpeta": "J"
+    "tono": "SOL",
+    "carpeta": "J",
+    "acordes": [
+      "<b>/Jesús tu [SOL]eres[SOL7] la [DO]persona[LAm] <br>más [RE]importante, de este [SOL]lugar[RE]/<br> <br>/Rey de [SOL]reyes[SOL7], Señor de [DO]señores[LAm],<br>tú eres [RE]aquel que mi vida [SOL]cambió/</b>"
+    ]
   },
   {
     "titulo": "Jesús cuanto amor hay en ti",
@@ -2333,7 +2340,7 @@
     "preview": "Roca eterna, verdadero y fiel,\u000btú prometes cumplir con tu palabra.\nRoca eterna, eres justo y fiel,\u000bmi confianza siempre en ti pondré.\n\nMi refugio contra la tormenta,\u000bla torre de mi protección, \u000bfortaleza en dificultades, \u000bmi escondedero eres tú.",
     "slides": [
       "<b>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>mi confianza siempre en ti pondré.<br><br>Mi refugio contra la tormenta,<br>la torre de mi protección, <br>fortaleza en dificultades, <br>mi escondedero eres tú.</b>",
-      "<b>Sanas todas mis enfermedades, <br>consuelas todo mi dolor.<br>Eres fuerza al sentirme débil,<br>mi ayuda en necesidad.<br><br>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>/mi confianza siempre en ti pondré/.</b>"
+      "<b>Sanas todas mis enfermedades, <br>consuelas todo mi dolor.<br>Eres fuerza al sentirme débil,<br>mi ayuda en necesidad.<br><br>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>//mi confianza siempre en ti pondré//</b>"
     ],
     "tono": "SOL",
     "carpeta": "R"
