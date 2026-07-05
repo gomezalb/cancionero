@@ -2342,7 +2342,11 @@
       "<b>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>mi confianza siempre en ti pondré.<br><br>Mi refugio contra la tormenta,<br>la torre de mi protección, <br>fortaleza en dificultades, <br>mi escondedero eres tú.</b>",
       "<b>Sanas todas mis enfermedades, <br>consuelas todo mi dolor.<br>Eres fuerza al sentirme débil,<br>mi ayuda en necesidad.<br><br>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>//mi confianza siempre en ti pondré//</b>"
     ],
-    "tono": "SOL",
+    "acordes": [
+      "<b>Roca [LA]eterna, [FA#m]verdadero y fiel,<br>tú [SIm]prometes cumplir con tu [MI]palabra.<br>Roca [LA]eterna, eres [FA#]justo y fiel,<br>mi [SIm]confianza siempre en [MI]ti [LA]pondré.<br><br>Mi [LA]refugio contra la tormenta,<br>la [FA#m]torre de mi protección, <br>[SIm]fortaleza en dificultades, <br>mi [MI]escondedero eres tú.</b>",
+      "<b>Sanas [LA]todas mis enfermedades, <br>[FAm]consuelas todo mi dolor.<br>Eres [SIm]fuerza al sentirme débil,<br>mi [MI]ayuda en necesidad.<br><br>Roca [LA]eterna, [FAm]verdadero y fiel,<br>tú [SIm]prometes cumplir con tu [MI]palabra.<br>Roca [LA]eterna, eres [FA#m]justo y fiel,<br>/mi [SIm]confianza siempre en [MI]ti [LA]pondré[FA#m]/<br>mi [SIm]confianza siempre en [MI]ti [RE]pondré [LA]</b>"
+    ],
+    "tono": "LA",
     "carpeta": "R"
   },
   {
@@ -2804,10 +2808,10 @@
     "slides": [
       "<b>/Todo es posible, <br>si puedes creer/<br><br>/Fe mueve la mano de Dios,<br>fe en su Palabra viva,<br>todo es posible, <br>si puedes creer/</b>"
     ],
-    "tono": "MI",
+    "tono": "DO",
     "carpeta": "T",
     "acordes": [
-      "<b>Todo es [FA#m]posible, [SI]<br>si puedes [MI]creer<br>Todo es [FA#m]posible, [SI]<br>si puedes [MI]creer [MI7]<br><br>Fe mueve la [LA]mano de Dios, [LAm]<br>fe en su Palabra [SOL#m]viva, [DO#m]<br>todo es [FA#m]posible, [SI]<br>si puedes [MI]creer [MI7]<br> Fe mueve la [LA]mano de Dios, [LAm]<br>fe en su [SOL#m]Palabra viva, [DO#m]<br>todo es [FA#m]posible, [SI]<br>si puedes [MI]creer</b>"
+      "<b>Todo es [REm]posible, [SOL]<br>si puedes [DO]creer<br>Todo es [REm]posible, [SOL]<br>si puedes [DO]creer [DO7]<br><br>Fe mueve la [FA]mano de Dios, [FAm]<br>fe en su Palabra [MIm]viva, [LAm]<br>todo es [REm]posible, [SOL]<br>si puedes [DO]creer [DO7]<br> Fe mueve la [FA]mano de Dios, [FAm]<br>fe en su [MIm]Palabra viva, [LAm]<br>todo es [REm]posible, [SOL]<br>si puedes [DO]creer</b>"
     ]
   },
   {
