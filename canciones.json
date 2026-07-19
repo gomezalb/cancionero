@@ -2342,12 +2342,12 @@
       "<b>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>mi confianza siempre en ti pondré.<br><br>Mi refugio contra la tormenta,<br>la torre de mi protección, <br>fortaleza en dificultades, <br>mi escondedero eres tú.</b>",
       "<b>Sanas todas mis enfermedades, <br>consuelas todo mi dolor.<br>Eres fuerza al sentirme débil,<br>mi ayuda en necesidad.<br><br>Roca eterna, verdadero y fiel,<br>tú prometes cumplir con tu palabra.<br>Roca eterna, eres justo y fiel,<br>//mi confianza siempre en ti pondré//</b>"
     ],
+    "tono": "LA",
+    "carpeta": "R",
     "acordes": [
       "<b>Roca [LA]eterna, [FA#m]verdadero y fiel,<br>tú [SIm]prometes cumplir con tu [MI]palabra.<br>Roca [LA]eterna, eres [FA#]justo y fiel,<br>mi [SIm]confianza siempre en [MI]ti [LA]pondré.<br><br>Mi [LA]refugio contra la tormenta,<br>la [FA#m]torre de mi protección, <br>[SIm]fortaleza en dificultades, <br>mi [MI]escondedero eres tú.</b>",
       "<b>Sanas [LA]todas mis enfermedades, <br>[FAm]consuelas todo mi dolor.<br>Eres [SIm]fuerza al sentirme débil,<br>mi [MI]ayuda en necesidad.<br><br>Roca [LA]eterna, [FAm]verdadero y fiel,<br>tú [SIm]prometes cumplir con tu [MI]palabra.<br>Roca [LA]eterna, eres [FA#m]justo y fiel,<br>/mi [SIm]confianza siempre en [MI]ti [LA]pondré[FA#m]/<br>mi [SIm]confianza siempre en [MI]ti [RE]pondré [LA]</b>"
-    ],
-    "tono": "LA",
-    "carpeta": "R"
+    ]
   },
   {
     "titulo": "Santo es el que vive",
