@@ -606,6 +606,15 @@
     "carpeta": "Himnos"
   },
   {
+    "titulo": "Creo yo en la biblia",
+    "preview": "//Creo yo en la Biblia//,\nporque es de Dios\n\n//Creo en Jesucristo//,\nel Hijo de Dios\n\n//Tú y yo pecamos//,\nse entristece a Dios",
+    "slides": [
+      "<b>//Creo yo en la Biblia//,<br>porque es de Dios<br><br>//Creo en Jesucristo//,<br>el Hijo de Dios<br><br>//Tú y yo pecamos//,<br>se entristece a Dios</b>",
+      "<b>//Cristo dio su vida//,<br>en la cruz por mi<br><br>//Jesucristo vive//,<br>Él resucitó<br><br>//¿Estarás tú listo?//,<br>pronto volverá</b>"
+    ],
+    "carpeta": "Escuela bíblica"
+  },
+  {
     "titulo": "Cristo es el nombre sin igual",
     "preview": "Cristo es el nombre sin igual\u000bvence, hoy y por la eternidad.\u000bCristo resplandece por su amor\u000byo su nombre glorificaré.",
     "slides": [
