@@ -996,7 +996,8 @@
     "preview": "//Dios ha sido bueno//\u000bBueno es Dios\u000b\u000bSu bondad me alcanzó\u000bsu amor me rescató\u000bsu gracia me salvó.\u000bBueno es Dios",
     "slides": [
       "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br>Su bondad me alcanzó<br>su amor me rescató<br>su gracia me salvó.<br>Bueno es Dios</b>",
-      "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br>Por eso cantaré <br>y siempre alabaré<br>y nunca olvidaré <br>bueno es Dios</b>",
+      "<b>Por eso cantaré <br>y siempre alabaré<br>y nunca olvidaré <br>bueno es Dios<br><br>//Dios ha sido bueno//<br>Bueno es Dios</b>",
+      "<b>Mis manos alzaré<br>Mi vida entregaré<br>Mi voz levantaré<br>Bueno es Dios<br><br>Y no me cansaré<br>De darle todo a Él<br>Yo quiero serle fiel<br>Bueno es Dios</b>",
       "<b>//Dios ha sido bueno//<br>//Bueno es Dios//</b>"
     ],
     "tono": "RE",
@@ -2015,10 +2016,12 @@
   },
   {
     "titulo": "Obrando tú, quién impedirá",
-    "preview": "///¿Obrando tú quién lo impedirá?/// \u000b\u000bTú eres Señor, eres Dios de amor, \u000bEstás conmigo donde quieras este, \u000b\u000bAntes de ti ninguno se formó, después de ti ninguno otro habrá.",
+    "preview": "///Obrando tú, ¿quién impedirá?/// \u000b\u000bTú eres Señor, eres Dios de amor, \u000bestás conmigo donde quiera este, \u000bantes de ti ninguno se formó, \u000bdespués de ti ninguno otro habrá.",
     "slides": [
-      "<b>///¿Obrando tú quién lo impedirá?/// <br><br>Tú eres Señor, eres Dios de amor, <br>Estás conmigo donde quieras este, <br><br>Antes de ti ninguno se formó, después de ti ninguno otro habrá.</b>"
+      "<b>///Obrando tú, ¿quién impedirá?/// <br><br>Tú eres Señor, eres Dios de amor, <br>estás conmigo donde quiera este, <br>antes de ti ninguno se formó, <br>después de ti ninguno otro habrá.</b>",
+      "<b>///Obrando tú, ¿quién impedirá?/// <br><br>No temas nada, así dijo el Señor<br>Estoy contigo donde quiera estés,<br>si subo al monte, allí te encontraré<br>si bajo al mar, allí Tú estarás<br><br>///Obrando tú, ¿quién impedirá?/// </b>"
     ],
+    "tono": "SOL",
     "carpeta": "O"
   },
   {
@@ -2071,9 +2074,9 @@
   },
   {
     "titulo": "Oh ven, ven y deleitate",
-    "preview": "/Oh ven, ven y deléitate en el Señor\u000by él te concederá,\u000blas peticiones de tu corazón/\u000b\u000bConfía solo en él, y él te dará,\u000bespera solo en él y él hará.",
+    "preview": "/Oh ven, ven y deléitate en el Señor\u000by Él te concederá,\u000blas peticiones de tu corazón/\u000b\u000bConfía solo en Él, y Él te dará,\u000bespera solo en Él y Él hará.",
     "slides": [
-      "<b>/Oh ven, ven y deléitate en el Señor<br>y él te concederá,<br>las peticiones de tu corazón/<br><br>Confía solo en él, y él te dará,<br>espera solo en él y él hará.</b>"
+      "<b>/Oh ven, ven y deléitate en el Señor<br>y Él te concederá,<br>las peticiones de tu corazón/<br><br>Confía solo en Él, y Él te dará,<br>espera solo en Él y Él hará.</b>"
     ],
     "tono": "DO",
     "carpeta": "O"
