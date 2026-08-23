@@ -1000,6 +1000,12 @@
       "<b>Mis manos alzaré<br>Mi vida entregaré<br>Mi voz levantaré<br>Bueno es Dios<br><br>Y no me cansaré<br>De darle todo a Él<br>Yo quiero serle fiel<br>Bueno es Dios</b>",
       "<b>//Dios ha sido bueno//<br>//Bueno es Dios//</b>"
     ],
+    "acordes": [
+      "<b>[RE]Dios[SIm] ha sido [MIm]bueno[LA]<br>[MIm]Dios[LA] ha sido [SOL]bueno[RE]<br>[RE7]Dios ha sido [SOL]bue[MI]no<br>[MIm]Bueno [LA]es [RE]Dios<br><br>[SOL]Su bondad me [FA#m]alcanzó<br>[SOL]su amor me [FA#m]rescató<br>[SOL]su gracia me [FA#m]salvó.<br>Bueno es [LA]Dios</b>",
+      "<b>[SOL]Por eso [FA#m]cantaré <br>[SOL]y siempre [FA#m]alabaré<br>[SOL]y nunca [FA#m]olvidaré <br>bueno es [LA]Dios<br><br>[RE]Dios[SIm] ha sido [MIm]bueno[LA]<br>[MIm]Dios[LA] ha sido [SOL]bueno[RE]<br>[RE7]Dios ha sido [SOL]bue[MI]no<br>[MIm]Bueno [LA]es [RE]Dios</b>",
+      "<b>[SOL]Mis manos [FA#m]alzaré<br>[SOL]Mi vida [FA#m]entregaré<br>[SOL]Mi voz [FA#m]levantaré<br>Bueno es [LA]Dios<br><br>[SOL]Y no me [FA#m]cansaré<br>[SOL]De darle todo a [FA#m]Él<br>[SOL]Yo quiero serle [FA#m]fiel<br>Bueno es [LA]Dios</b>",
+      "<b>[RE]Dios[SIm] ha sido [MIm]bueno[LA]<br>[MIm]Dios[LA] ha sido [SOL]bueno[RE]<br>[RE7]Dios ha sido [SOL]bue[MI]no<br>//[MIm]Bueno [LA]es [RE]Dios//</b>"
+    ],
     "tono": "RE",
     "carpeta": "D"
   },
@@ -2021,6 +2027,10 @@
       "<b>///Obrando tú, ¿quién impedirá?/// <br><br>Tú eres Señor, eres Dios de amor, <br>estás conmigo donde quiera este, <br>antes de ti ninguno se formó, <br>después de ti ninguno otro habrá.</b>",
       "<b>///Obrando tú, ¿quién impedirá?/// <br><br>No temas nada, así dijo el Señor<br>Estoy contigo donde quiera estés,<br>si subo al monte, allí te encontraré<br>si bajo al mar, allí Tú estarás<br><br>///Obrando tú, ¿quién impedirá?/// </b>"
     ],
+     "acordes": [
+      "<b>/Obrando [SOL]tú, ¿quién impedirá?[FA][FA#][SOL]<br>Obrando [DO]tú, [RE]¿quién impedirá?[FA][FA#][SOL]/ <br><br>Tú eres [DO]Señor, [RE]eres Dios de [SIm]amor[MIm], <br>estás [LAm]conmigo [RE]donde quiera [SOL]este[SOL7], <br>antes de [DO]ti [RE]ninguno se [SIm]formó[MIm], <br>después de [LAm]ti [RE]ninguno otro [SOL]habrá.[FA][FA#][SOL]</b>",
+      "<b>/Obrando [SOL]tú, ¿quién impedirá?[FA][FA#][SOL]<br>Obrando [DO]tú, [RE]¿quién impedirá?[FA][FA#][SOL]/ <br><br>No temas [DO]nada, [RE]así dijo el [SIm]Señor[MIm]<br>Estoy [LAm]contigo [RE]donde quiera [SOL]estés[SOL7],<br>si subo al [DO]monte, [RE]allí te [SIm]encontraré[MIm]<br>si bajo al [LAm]mar, [RE]allí Tú [SOL]estarás[FA][FA#][SOL]<br><br>/Obrando [SOL]tú, ¿quién impedirá?[FA][FA#][SOL]<br>Obrando [DO]tú, [RE]¿quién impedirá?[FA][FA#][SOL]/ </b>"
+    ],
     "tono": "SOL",
     "carpeta": "O"
   },
@@ -2077,6 +2087,9 @@
     "preview": "/Oh ven, ven y deléitate en el Señor\u000by Él te concederá,\u000blas peticiones de tu corazón/\u000b\u000bConfía solo en Él, y Él te dará,\u000bespera solo en Él y Él hará.",
     "slides": [
       "<b>/Oh ven, ven y deléitate en el Señor<br>y Él te concederá,<br>las peticiones de tu corazón/<br><br>Confía solo en Él, y Él te dará,<br>espera solo en Él y Él hará.</b>"
+    ],
+     "acordes": [
+      "<b>/[DO]Oh ven, [FA]ven y deléitate en [DO]el Se[SOL]ñor<br>y [DO]Él te [DO7]concede[FA]rá[FAm],<br>las [DO]peticiones de [SOL]tu [DO]corazón/<br><br>[LAm]Confía solo en [MIm]Él, y [FA]Él te [DO]dará,<br>[LAm]espera solo en [MIm]Él [RE]y Él [SOL]hará[SOL7]</b>"
     ],
     "tono": "DO",
     "carpeta": "O"
