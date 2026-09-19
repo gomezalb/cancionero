@@ -452,6 +452,15 @@
     "carpeta": "B"
   },
   {
+    "titulo": "Busco por aquí, busco por allá",
+    "preview": "Busco por aquí, \nbusco por allá\nAlgo tan valioso \ncomo nadie pudo hallar\nY en la Biblia al fin, \npuedo descubrir\nSon esas promesas \nque Jesús me hizo a mí",
+    "slides": [
+      "<b>Busco por aquí, <br>busco por allá<br>Algo tan valioso <br>como nadie pudo hallar<br>Y en la Biblia al fin, <br>puedo descubrir<br>Son esas promesas <br>que Jesús me hizo a mí</b>",
+      "<b>Me prometió la salvación<br>Me prometió conmigo estar<br>Me prometió que pronto un día volverá<br>Me prometió que al cielo iré<br>y una casita allí tendré<br>Lo prometió y cumplirá porque Él es fiel</b>"
+    ],
+    "carpeta": "Escuela bíblica"
+  },
+  {
     "titulo": "Cada cosa en la vida",
     "preview": "Cada cosa en la vida\nTiene su justo lugar.\nCada cosa tiene un tiempo\nPara hacerse realidad.\n\nEs por eso que preciso\nQue me enseñes a mirar\nLo que tengo por delante\nY el presente que está acá.",
     "slides": [
