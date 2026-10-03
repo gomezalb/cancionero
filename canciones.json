@@ -98,7 +98,8 @@
     "preview": "/Abre mis ojos, oh Cristo,\nabre mis ojos te pido,\nyo quiero verte, yo quiero verte/",
     "slides": [
       "<b>/Abre mis ojos, oh Cristo,<br>abre mis ojos te pido,<br>yo quiero verte, yo quiero verte/</b>",
-      "<b>/Y contemplar tu majestad,<br>y el resplandor de tu gloria,<br>derrama tu amor y poder<br>cuando cantamos, Santo, Santo/<br><br>//Santo, Santo, Santo//<br>yo quiero verte.</b>"
+      "<b>/Y contemplar tu majestad,<br>y el resplandor de tu gloria,<br>derrama tu amor y poder<br>cuando cantamos, Santo, Santo/</b>",
+      "<b>//Santo, Santo, Santo//<br>yo quiero verte.</b>"
     ],
     "tono": "RE",
     "carpeta": "A",
@@ -676,11 +677,14 @@
   },
   {
     "titulo": "Cristo tan solo pudo amarme",
-    "preview": "Cristo tan solo pudo amarme,\u000bNada podrá de él separarme,\u000bPues con su sangre me redimió:\u000bAhora soy de él.\u000b\u000bAhora soy de Cristo,\u000bMío también es él,\u000bPuedo gozar de su amistad\u000bPor la eternidad",
+    "preview": "Cristo tan solo pudo amarme,\u000bNada podrá de él separarme,\u000bPues con su sangre me redimió:\u000bAhora soy de él.",
     "slides": [
-      "<b>Cristo tan solo pudo amarme,<br>Nada podrá de él separarme,<br>Pues con su sangre me redimió:<br>Ahora soy de él.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
-      "<b>Antes vivía en el pecado,<br>Mi corazón de Dios alejado;<br>Mas mi vergüenza él me quitó:<br>Ya pertenezco a él.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
-      "<b>Mi ser rebosa de pleno gozo,<br>Dios me liberta, me da reposo;<br>Pues con su sangre me redimió:<br>Ahora soy de El.<br><br>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>"
+      "<b>Cristo tan solo pudo amarme,<br>Nada podrá de él separarme,<br>Pues con su sangre me redimió:<br>Ahora soy de él.</b>",
+      "<b>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
+      "<b>Antes vivía en el pecado,<br>Mi corazón de Dios alejado;<br>Mas mi vergüenza él me quitó:<br>Ya pertenezco a él.</b>",
+      "<b>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>",
+      "<b>Mi ser rebosa de pleno gozo,<br>Dios me liberta, me da reposo;<br>Pues con su sangre me redimió:<br>Ahora soy de El.</b>",
+      "<b>Ahora soy de Cristo,<br>Mío también es él,<br>Puedo gozar de su amistad<br>Por la eternidad</b>"
     ],
     "tono": "SOL",
     "carpeta": "Himnos"
@@ -806,12 +810,16 @@
   },
   {
     "titulo": "Cuando pienso en tu amor",
-    "preview": "Cuando pienso en tu amor y tu fidelidad,\u000bno puedo hacer más \u000bque postrarme y adorar.\u000bY cuando pienso en como he sido\u000by hasta donde me has traido,\u000bme asombro de ti.\u000b\u000b/No me quiero conformar, \u000bhe probado y quiero más/",
+    "preview": "Cuando pienso en tu amor y tu fidelidad,\u000bno puedo hacer más \u000bque postrarme y adorar.\u000bY cuando pienso en como he sido\u000by hasta donde me has traido,\u000bme asombro de ti.",
     "slides": [
-      "<b>Cuando pienso en tu amor y tu fidelidad,<br>no puedo hacer más <br>que postrarme y adorar.<br>Y cuando pienso en como he sido<br>y hasta donde me has traido,<br>me asombro de ti.<br><br>/No me quiero conformar, <br>he probado y quiero más/</b>",
-      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar<br><br>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>",
-      "<b>Cuando pienso en tu cruz <br>y en todo lo que has dado,<br>tu sangre por mi, <br>por llevar mi pecado.<br>Cuando pienso en tu mano, <br>que hasta aquí hemos llegado, <br>por tu fidelidad.<br><br>/Y no me quiero conformar, <br>he probado y quiero más/</b>",
-      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar<br><br>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>"
+      "<b>Cuando pienso en tu amor y tu fidelidad,<br>no puedo hacer más <br>que postrarme y adorar.<br>Y cuando pienso en como he sido<br>y hasta donde me has traido,<br>me asombro de ti.</b>",
+      "<b>/No me quiero conformar, <br>he probado y quiero más/</b>",
+      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar</b>",
+      "<b>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>",
+      "<b>Cuando pienso en tu cruz <br>y en todo lo que has dado,<br>tu sangre por mi, <br>por llevar mi pecado.<br>Cuando pienso en tu mano, <br>que hasta aquí hemos llegado, <br>por tu fidelidad.</b>",
+      "<b>/Y no me quiero conformar, <br>he probado y quiero más/</b>",
+      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar</b>",
+      "<b>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>"
     ],
     "tono": "MI",
     "carpeta": "C"
@@ -1540,13 +1548,18 @@
   },
   {
     "titulo": "Hay poder",
-    "preview": "¿Quieres ser libre del vicio y del mal?\u000bvirtud hay en El, virtud en El,\u000b¿Quieres por El la victoria ganar?\u000bPor siempre virtud hay en El.\u000b\u000bHay poder, sí, sin igual poder,\u000ben Jesús que murió,\u000bHay poder, sí, sin igual poder\u000bpor la sangre que vertió.",
+    "preview": "¿Quieres ser libre del vicio y del mal?\u000bvirtud hay en El, virtud en El,\u000b¿Quieres por El la victoria ganar?\u000bPor siempre virtud hay en El.",
     "slides": [
-      "<b>¿Quieres ser libre del vicio y del mal?<br>virtud hay en El, virtud en El,<br>¿Quieres por El la victoria ganar?<br>Por siempre virtud hay en El.<br><br>Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
-      "<b>¿Quieres ser puro, aceptable al Señor?<br>virtud hay en El, virtud en El,<br>Te limpiará con la sangre que dio,<br>por siempre virtud hay en El.<br><br> Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
-      "<b>¿Quieres ser libre de tu vanidad?<br>virtud hay en El, virtud en El,<br>Pide a Jesús que te dé su humildad,<br>por siempre virtud hay en El.<br><br> Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
-      "<b>¿Quieres a Cristo servir y agradar?<br>virtud hay en El, virtud en El,<br>¿Quieres corona de vida ganar?<br>Por siempre virtud hay en El.<br><br> Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>"
+      "<b>¿Quieres ser libre del vicio y del mal?<br>virtud hay en El, virtud en El,<br>¿Quieres por El la victoria ganar?<br>Por siempre virtud hay en El.</b>",
+      "<b>Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
+      "<b>¿Quieres ser puro, aceptable al Señor?<br>virtud hay en El, virtud en El,<br>Te limpiará con la sangre que dio,<br>por siempre virtud hay en El.</b>",
+      "<b>Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
+      "<b>¿Quieres ser libre de tu vanidad?<br>virtud hay en El, virtud en El,<br>Pide a Jesús que te dé su humildad,<br>por siempre virtud hay en El.</b>",
+      "<b>Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>",
+      "<b>¿Quieres a Cristo servir y agradar?<br>virtud hay en El, virtud en El,<br>¿Quieres corona de vida ganar?<br>Por siempre virtud hay en El.</b>",
+      "<b>Hay poder, sí, sin igual poder,<br>en Jesús que murió,<br>Hay poder, sí, sin igual poder<br>por la sangre que vertió.</b>"
     ],
+    "tono": "SOL",
     "carpeta": "Himnos"
   },
   {
@@ -2736,11 +2749,13 @@
   },
   {
     "titulo": "Sublime gracia",
-    "preview": "Sublime gracia del Señor,\u000bque a un infeliz salvó.\u000bYo ciego fui mas veo ya,\u000bperdido y él me halló.\u000b\u000bEn los peligros o aflicción\u000bque yo he tenido aquí,\u000bSu gracia siempre me libró\u000by me guiará feliz.",
+    "preview": "Sublime gracia del Señor,\u000bque a un infeliz salvó.\u000bYo ciego fui mas veo ya,\u000bperdido y él me halló.",
     "slides": [
-      "<b>Sublime gracia del Señor,<br>que a un infeliz salvó.<br>Yo ciego fui mas veo ya,<br>perdido y él me halló.<br><br>En los peligros o aflicción<br>que yo he tenido aquí,<br>Su gracia siempre me libró<br>y me guiará feliz.</b>",
+      "<b>Sublime gracia del Señor,<br>que a un infeliz salvó.<br>Yo ciego fui mas veo ya,<br>perdido y él me halló.</b>",
+      "<b>En los peligros o aflicción<br>que yo he tenido aquí,<br>Su gracia siempre me libró<br>y me guiará feliz.</b>",
       "<b>Y cuando en Sión por siglos mil<br>brillando esté cual sol,<br>yo cantaré por siempre allí<br>Su amor que me salvó.</b>"
     ],
+    "tono": "MI",
     "carpeta": "Himnos"
   },
   {
@@ -2993,9 +3008,10 @@
   },
   {
     "titulo": "Tu nombre oh Dios",
-    "preview": "/Tu nombre oh Dios exaltaré,\u000btu majestad levantaré.\u000bPor siempre te proclamaré,\u000bmi alabanza elevaré.\u000b\nPorque digno, digno eres tú,\u000ba ti sea honor y poder.\u000bDigno, digno eres tú,\u000brecibe adoración, Señor./",
+    "preview": "Tu nombre oh Dios exaltaré,\u000btu majestad levantaré.\u000bPor siempre te proclamaré,\u000bmi alabanza elevaré.",
     "slides": [
-      "<b>/Tu nombre oh Dios exaltaré,<br>tu majestad levantaré.<br>Por siempre te proclamaré,<br>mi alabanza elevaré.<br><br>Porque digno, digno eres tú,<br>a ti sea honor y poder.<br>Digno, digno eres tú,<br>recibe adoración, Señor./</b>"
+      "<b>Tu nombre oh Dios exaltaré,<br>tu majestad levantaré.<br>Por siempre te proclamaré,<br>mi alabanza elevaré.</b>",
+      "<b>Porque digno, digno eres tú,<br>a ti sea honor y poder.<br>Digno, digno eres tú,<br>recibe adoración, Señor./</b>"
     ],
     "tono": "SOL",
     "carpeta": "T"
