@@ -47,7 +47,11 @@
       "<b>Cristo ¿A dónde más podría ir?<br>Cristo ¿Qué otro lugar puede existir?<br>Solo tu tienes palabras de amor<br>Camino al Padre y verdad eres tú.<br>Cristo ¿Adónde más podría ir?</b>"
     ],
     "tono": "DO",
-    "carpeta": "A"
+    "carpeta": "A",
+    "acordes": [
+      "[LA]A quién iré en necesidad,\n[FA#m]a quién iré en busca de paz,\n[RE]y quién podrá mi vida saciar de ver[LA]dad.[MI]\n\n\n[LA]Quién más tendrá de mi compasión,\n[FA#m]y entenderá mi corazón.\n[RE]Quién cambiará mi eternidad, \nsino [LA]tú Je[MI]sús",
+      "[LA]Cristo ¿A dónde [DO#m]más podría [RE]ir?\n[LA]Cristo ¿Qué otro lu[DO#m]gar puede exis[RE]tir?\n[SIm]Sólo tu tienes palabras de amor\nCa[RE]mino al Padre y ver[MI]dad eres tú.\n[LA]Cristo ¿Adónde [DO#m]más podría [RE]ir?"
+    ]
   },
   {
     "titulo": "A ti el alfa y la omega",
@@ -104,7 +108,9 @@
     "tono": "RE",
     "carpeta": "A",
     "acordes": [
-      "<b>/[RE]Abre mis ojos, oh Cristo,</b><br><b>[FA#m]abre mis ojos te pido,</b><br><b>[SOL]yo quiero verte, yo quiero [RE]verte/</b><br><br><br><b>/Y contem[LA]plar tu majes[SIm]tad,</b><br><b>[SOL]y el resplandor de tu [LA]gloria,</b><br><b>[LA]derrama tu amor y po[SIm]der</b><br><b>[SOL]cuando cantamos, [LA]Santo, Santo/</b><br><br><br><b>[RE]Santo, Santo, Santo<b>[FA#m]Santo, Santo, Santo</b><b>[SOL]Santo, Santo, Santo<br><b>yo quiero [RE]verte.</b>"
+      "/[RE]Abre mis ojos, oh Cristo,\n[FA#m]abre mis ojos te pido,\n[SOL]yo quiero verte, yo quiero [RE]verte/",
+      "/Y contem[LA]plar tu majes[SIm]tad,\n[SOL]y el resplandor de tu [LA]gloria,\n[LA]derrama tu amor y po[SIm]der\n[SOL]cuando cantamos, [LA]Santo, Santo/",
+      "[RE]Santo, Santo, Santo\n[FA#m]Santo, Santo, Santo\n[SOL]Santo, Santo, Santo\nyo quiero [RE]verte."
     ]
   },
   {
@@ -311,7 +317,6 @@
       "<b>Aquí estás, tocando mi corazón<br>Te adoraré, Te adoraré<br>Aquí estás, sanando mi corazón<br>Te adoraré, Te adoraré <br><br>Milagroso, abres camino<br>Cumples promesas, luz en tinieblas<br>Mi Dios, así eres tú</b>",
       "<b>///Así eres tú, así eres tú///<br><br>/Aunque no pueda ver estás obrando<br>Aunque no pueda ver estás obrando<br>Siempre estás, siempre estás obrando<br>Siempre estás, siempre estás obrando/</b>"
     ],
-    "nueva": true,
     "tono": "LA",
     "carpeta": "A",
     "acordes": [
@@ -570,6 +575,19 @@
     "carpeta": "C"
   },
   {
+    "titulo": "Cómo podré estar triste",
+    "preview": "¿Cómo podré estar triste?\n¿Cómo entre sombras ir?\n¿Cómo sentirme solo\ny en el dolor vivir?\n\nSi Cristo es mi consuelo, \nmi amigo siempre fiel.\n/Si aún las aves tienen \nseguro asilo en él/",
+    "slides": [
+      "<b>¿Cómo podré estar triste?<br>¿Cómo entre sombras ir?<br>¿Cómo sentirme solo<br>y en el dolor vivir?<br><br>Si Cristo es mi consuelo, <br>mi amigo siempre fiel.<br>/Si aún las aves tienen <br>seguro asilo en él/</b>",
+      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
+      "<b>Nunca te desalientes,<br>oigo al Señor decir,<br>y en su palabra fiado,<br>hago al dolor huir.<br><br>A Cristo, paso a paso<br>yo sigo sin cesar.<br>/Y todas sus bondades,<br>por siempre me ha de dar/</b>",
+      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
+      "<b>Siempre que soy tentado,<br>o si en la prueba estoy,<br>más cerca de él camino,<br>y protegido voy;<br><br>Si en mí la fe desmaya,<br>y sufro de ansiedad,<br>/Tan solo él me levanta,<br>me da seguridad/</b>",
+      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>"
+    ],
+    "carpeta": "Himnos"
+  },
+  {
     "titulo": "Con gran gozo y gran placer",
     "preview": "Con gran gozo y gran placer\u000bnos volvemos hoy a ver\u000bnuestras manos otra vez estrechamos.\u000bSe contenta el corazón\u000bensanchándose de amor\u000btodos a una voz a Dios, gracias damos.\u000b\u000b¡Bienvenido, bienvenido!\u000bLos hermanos de aquí\u000bnos gozamos en decir:\u000b¡bienvenido, bienvenido!\u000bAl volvernos a reunir, bienvenido.",
     "slides": [
@@ -804,7 +822,6 @@
       "<b>Cuando flaquea mi fe<br>Y siento desfallecer<br>Cuando no puedo seguir<br>Y faltan fuerzas en mí<br>Puedo a la mesa venir <br>y puedo el pan compartir</b>",
       "<b>Es Jesús el pan de vida<br>El maná de mi desierto, <br>mi energía, mi sustento<br>Es Jesús el pan de vida<br>Mi necesidad primera <br>y sin ti yo nada fuera<br>Porque Jesús es pan de vida eterna</b>"
     ],
-    "nueva": true,
     "tono": "SOL",
     "carpeta": "C"
   },
@@ -847,19 +864,6 @@
     ],
     "tono": "REm",
     "carpeta": "C"
-  },
-  {
-    "titulo": "Cómo podré estar triste",
-    "preview": "¿Cómo podré estar triste?\n¿Cómo entre sombras ir?\n¿Cómo sentirme solo\ny en el dolor vivir?\n\nSi Cristo es mi consuelo, \nmi amigo siempre fiel.\n/Si aún las aves tienen \nseguro asilo en él/",
-    "slides": [
-      "<b>¿Cómo podré estar triste?<br>¿Cómo entre sombras ir?<br>¿Cómo sentirme solo<br>y en el dolor vivir?<br><br>Si Cristo es mi consuelo, <br>mi amigo siempre fiel.<br>/Si aún las aves tienen <br>seguro asilo en él/</b>",
-      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
-      "<b>Nunca te desalientes,<br>oigo al Señor decir,<br>y en su palabra fiado,<br>hago al dolor huir.<br><br>A Cristo, paso a paso<br>yo sigo sin cesar.<br>/Y todas sus bondades,<br>por siempre me ha de dar/</b>",
-      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>",
-      "<b>Siempre que soy tentado,<br>o si en la prueba estoy,<br>más cerca de él camino,<br>y protegido voy;<br><br>Si en mí la fe desmaya,<br>y sufro de ansiedad,<br>/Tan solo él me levanta,<br>me da seguridad/</b>",
-      "<b>Feliz, cantando alegre,<br>yo vivo siempre aquí;<br>Si él cuida de las aves,<br>cuidará también de mí</b>"
-    ],
-    "carpeta": "Himnos"
   },
   {
     "titulo": "Cúbreme con tu poder",
@@ -918,6 +922,15 @@
       "<b>[DO]De tal manera me [SOL]amó,<br>que su [REm]vida no [LAm]escati[SOL]mó,<br>[DO]hasta el final él se [SOL]entregó,<br>y a la [FA]muerte fue [SOL]porque me [DO]amó.<br><br>[DO]De tal manera me [SOL]amó,<br>que no hay [REm]forma en que [LAm]podré [SOL]pagar,<br>el [DO]precio de su grande [SOL]amor,<br>pero [FA]toda mi alma [SOL]quiero [DO]dar.</b>",
       "<b>Por su [LAm]amor yo [SOL]vivi[DO]ré, <br>de su [LAm]amor yo [SOL]canta[DO]ré,<br>con mi [LAm]Jesús [SOL]camina[FA]ré, <br>porque él me [SOL]amó a mí.[FA] [SOL]<br><br>Por su [LAm]amor yo [SOL]vivi[DO]ré, <br>de su [LAm]amor yo [SOL]canta[DO]ré, <br>con mi [LAm]Jesús [SOL]camina[FA]ré,<br>porque él [SOL]murió por mí, [FA] [SOL] le [DO]seguiré.</b>"
     ]
+  },
+  {
+    "titulo": "Día a día te anhelo más",
+    "preview": "/Día a día te anhelo más,\u000bdía a día más te buscaré/\u000bporque tú has sido tan bueno,\u000bporque tú has sido tan bello.\u000b\u000bTe necesito más que a mi vida,\u000bte necesito más que a mi ser;\u000bte necesito más y más cada día,\u000b\u000b/Quiero vivir bajo tu amor./",
+    "slides": [
+      "<b>/Día a día te anhelo más,<br>día a día más te buscaré/<br>porque tú has sido tan bueno,<br>porque tú has sido tan bello.<br><br>Te necesito más que a mi vida,<br>te necesito más que a mi ser;<br>te necesito más y más cada día,<br><br>/Quiero vivir bajo tu amor./</b>"
+    ],
+    "tono": "MI",
+    "carpeta": "D"
   },
   {
     "titulo": "Dicen que no existes",
@@ -1000,21 +1013,21 @@
     ]
   },
   {
-    "titulo": "Dios esta aqui, tan cierto como el aire que respiro",
-    "preview": "/Dios esta aquí \ntan cierto como el aire que respiro,\ntan cierto como la mañana se levanta\ntan cierto como que le canto \ny me puede oír/",
-    "slides": [
-      "<b>/Dios esta aquí <br>tan cierto como el aire que respiro,<br>tan cierto como la mañana se levanta<br>tan cierto como que le canto <br>y me puede oír/</b>",
-      "<b>Lo puedes notar, <br>a tu lado en este mismo instante.<br>Lo puedes sentir, <br>en ese problema que tienes.<br>Lo puedes llevar, <br>muy dentro de tu corazón,<br>Jesús esta aquí, <br>si tu quieres lo puedes seguir</b>"
-    ],
-    "tono": "DO",
-    "carpeta": "D"
-  },
-  {
     "titulo": "Dios está aqui, que precioso es",
     "preview": "Dios está aquí, qué precioso es\nÉl lo prometió donde están dos o tres\nQuédate Señor con tu bendición\nQuédate Señor en cada corazón\nQuédate Señor con tu bendición\nQuédate Señor aquí",
     "slides": [
       "<b>Dios está aquí, qué precioso es<br>Él lo prometió donde están dos o tres<br>Quédate Señor con tu bendición<br>Quédate Señor en cada corazón<br>Quédate Señor con tu bendición<br>Quédate Señor aquí</b>",
       "<b>/Oh Cristo mío haz de mi alma un altar<br>para adorarte con devoción.<br>Para beber del agua de la vida <br>y así saciar siempre mi corazón/</b>"
+    ],
+    "tono": "DO",
+    "carpeta": "D"
+  },
+  {
+    "titulo": "Dios esta aqui, tan cierto como el aire que respiro",
+    "preview": "/Dios esta aquí \ntan cierto como el aire que respiro,\ntan cierto como la mañana se levanta\ntan cierto como que le canto \ny me puede oír/",
+    "slides": [
+      "<b>/Dios esta aquí <br>tan cierto como el aire que respiro,<br>tan cierto como la mañana se levanta<br>tan cierto como que le canto <br>y me puede oír/</b>",
+      "<b>Lo puedes notar, <br>a tu lado en este mismo instante.<br>Lo puedes sentir, <br>en ese problema que tienes.<br>Lo puedes llevar, <br>muy dentro de tu corazón,<br>Jesús esta aquí, <br>si tu quieres lo puedes seguir</b>"
     ],
     "tono": "DO",
     "carpeta": "D"
@@ -1079,15 +1092,6 @@
       "<b>Vengo a reposar en él,<br>él es mi amigo fiel.<br>Una poderosa y fresca unción,<br>llenará mi corazón<br><br>Dulce refugio en la tormenta,<br>//es Jesucristo el salvador//</b>"
     ],
     "tono": "LA",
-    "carpeta": "D"
-  },
-  {
-    "titulo": "Día a día te anhelo más",
-    "preview": "/Día a día te anhelo más,\u000bdía a día más te buscaré/\u000bporque tú has sido tan bueno,\u000bporque tú has sido tan bello.\u000b\u000bTe necesito más que a mi vida,\u000bte necesito más que a mi ser;\u000bte necesito más y más cada día,\u000b\u000b/Quiero vivir bajo tu amor./",
-    "slides": [
-      "<b>/Día a día te anhelo más,<br>día a día más te buscaré/<br>porque tú has sido tan bueno,<br>porque tú has sido tan bello.<br><br>Te necesito más que a mi vida,<br>te necesito más que a mi ser;<br>te necesito más y más cada día,<br><br>/Quiero vivir bajo tu amor./</b>"
-    ],
-    "tono": "MI",
     "carpeta": "D"
   },
   {
@@ -1657,7 +1661,6 @@
       "<b>Fuimos alcanzados<br>Por su gran amor<br>Con brazos abiertos<br>Nos recibe hoy<br><br>Tal y como somos nos amó<br>Hoy nos acercamos sin temor<br><br>Él es el agua que al beber<br>Nunca más tendremos sed<br>Jesucristo basta, Jesucristo basta<br>Mi castigo recibió<br>Y su herencia me entregó<br>/Jesucristo basta, Jesucristo basta/</b>",
       "<b>/Tal y como somos nos amó<br>Hoy nos acercamos sin temor/<br><br>Él es el agua que al beber<br>Nunca más tendremos sed<br>Jesucristo basta, Jesucristo basta<br>Mi castigo recibió<br>Y su herencia me entregó<br>Jesucristo basta, Jesucristo basta<br><br>Ahora hay un futuro<br>Y esperanza fiel<br>En su amor confiamos<br>Hay descanso en Él</b>"
     ],
-    "nueva": true,
     "tono": "LA",
     "carpeta": "J",
     "acordes": [
@@ -1667,11 +1670,28 @@
     ]
   },
   {
+    "titulo": "Jesús cuanto amor hay en ti",
+    "preview": "/Jesús, cuanto amor hay en ti.\u000bEres tan bueno, tan dulce Señor.\u000bComo el alba amaneces en mí,\u000bJesús, cuanto amor hay en ti./",
+    "slides": [
+      "<b>/Jesús, cuanto amor hay en ti.<br>Eres tan bueno, tan dulce Señor.<br>Como el alba amaneces en mí,<br>Jesús, cuanto amor hay en ti./</b>"
+    ],
+    "carpeta": "J"
+  },
+  {
     "titulo": "Jesus mi buen pastor",
     "preview": "Jesús mi buen pastor\u000btoma en mí el control.\u000bPor donde me guíes, te seguiré.\u000bHe tomado la decisión de escuchar tu voz\u000bpor donde me guíes, yo iré.",
     "slides": [
       "<b>Jesús mi buen pastor<br>toma en mí el control.<br>Por donde me guíes, te seguiré.<br>He tomado la decisión de escuchar tu voz<br>por donde me guíes, yo iré.</b>",
       "<b>En los delicados pastos o en un claro manantial,<br>Jesús, mi buen pastor conmigo está.<br>Aún frente a altas montañas<br>o en profunda oscuridad,<br>mi buen pastor Jesús me guiará.</b>"
+    ],
+    "carpeta": "J"
+  },
+  {
+    "titulo": "Jesús tu eres el amigo que me ama",
+    "preview": "Jesús tu eres el amigo que me ama. \u000bJesús tu eres la esperanza de mi vida. \u000bEres, eres, eres tú.\nEres, eres tú.\n\nJesús tu eres el camino y la vida. \u000bJesús tu eres salvación y alegría. \u000bEres, eres, eres tú.\nEres, eres tú.",
+    "slides": [
+      "<b>Jesús tu eres el amigo que me ama. <br>Jesús tu eres la esperanza de mi vida. <br>Eres, eres, eres tú.<br>Eres, eres tú.<br><br>Jesús tu eres el camino y la vida. <br>Jesús tu eres salvación y alegría. <br>Eres, eres, eres tú.<br>Eres, eres tú.</b>",
+      "<b>Tú eres Rey, eres Señor, <br>y en una cruz fuiste a vencer. <br>Engrandecido eres Dios, <br>Te levantaste con poder.</b>"
     ],
     "carpeta": "J"
   },
@@ -1686,23 +1706,6 @@
     "acordes": [
       "<b>/Jesús tu [SOL]eres[SOL7] la [DO]persona[LAm] <br>más [RE]importante, de este [SOL]lugar[RE]/<br> <br>/Rey de [SOL]reyes[SOL7], Señor de [DO]señores[LAm],<br>tú eres [RE]aquel que mi vida [SOL]cambió/</b>"
     ]
-  },
-  {
-    "titulo": "Jesús cuanto amor hay en ti",
-    "preview": "/Jesús, cuanto amor hay en ti.\u000bEres tan bueno, tan dulce Señor.\u000bComo el alba amaneces en mí,\u000bJesús, cuanto amor hay en ti./",
-    "slides": [
-      "<b>/Jesús, cuanto amor hay en ti.<br>Eres tan bueno, tan dulce Señor.<br>Como el alba amaneces en mí,<br>Jesús, cuanto amor hay en ti./</b>"
-    ],
-    "carpeta": "J"
-  },
-  {
-    "titulo": "Jesús tu eres el amigo que me ama",
-    "preview": "Jesús tu eres el amigo que me ama. \u000bJesús tu eres la esperanza de mi vida. \u000bEres, eres, eres tú.\nEres, eres tú.\n\nJesús tu eres el camino y la vida. \u000bJesús tu eres salvación y alegría. \u000bEres, eres, eres tú.\nEres, eres tú.",
-    "slides": [
-      "<b>Jesús tu eres el amigo que me ama. <br>Jesús tu eres la esperanza de mi vida. <br>Eres, eres, eres tú.<br>Eres, eres tú.<br><br>Jesús tu eres el camino y la vida. <br>Jesús tu eres salvación y alegría. <br>Eres, eres, eres tú.<br>Eres, eres tú.</b>",
-      "<b>Tú eres Rey, eres Señor, <br>y en una cruz fuiste a vencer. <br>Engrandecido eres Dios, <br>Te levantaste con poder.</b>"
-    ],
-    "carpeta": "J"
   },
   {
     "titulo": "Junto a la cruz",
@@ -1746,7 +1749,6 @@
       "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios</b>",
       "<b>Tu fidelidad sigue persiguiéndome<br>Tu fidelidad sigue persiguiéndome<br>Todo lo que soy te lo entrego hoy<br>A ti me rendiré<br>Tu fidelidad sigue persiguiéndome</b>"
     ],
-    "nueva": true,
     "tono": "LA",
     "carpeta": "L",
     "acordes": [
@@ -2430,7 +2432,6 @@
       "<b>/Santo es el que vive, santo es <br>el que reina.<br>Santo en las alturas, santo aquí <br>en la tierra.<br>Santo en el pesebre, santo <br>en el sepulcro<br>Santa es su sangre derramada <br>en la Cruz/</b>",
       "<b>//Santo, Santo, Santo<br>es Jesús de Nazareth//</b>"
     ],
-    "nueva": true,
     "tono": "MIm",
     "carpeta": "S",
     "acordes": [
@@ -2649,7 +2650,6 @@
       "<b>¿De dónde viene mi esperanza?<br>Mi ayuda viene de Ti<br>¿Quién da descanso para el alma?<br>Mi ayuda viene de Ti</b>",
       "<b>Alzaré mis manos a los cielos<br>Te veré obrando a mi favor<br>Seguiré tomado de tu mano<br>Porque sé que tú sigues siendo Dios<br>/Tú sigues siendo Dios/<br><br>Si me encuentro perdido<br>Sé dónde te puedo encontrar</b>"
     ],
-    "nueva": true,
     "tono": "RE",
     "carpeta": "S"
   },
@@ -2674,7 +2674,6 @@
       "<b>La luz del mundo padeció<br>Y en una tumba reposó<br>Pero el tercer día llegó<br>Cristo el Señor resucitó<br><br>Hoy en victoria reina Él<br>Perdió el pecado su poder<br>Él mío es, y suyo soy<br>Pues con Su sangre me compró</b>",
       "<b>Ya no habrá más condenación<br>Cristo es mi plena libertad<br>No temeré, seguro estoy<br>Mi vida en Su mano está<br><br>Ningún poder, ningún afán<br>De Él me puede arrebatar<br>Hasta que llegue a estar con Él<br>En Su poder me sostendré</b>"
     ],
-    "nueva": true,
     "carpeta": "S"
   },
   {
@@ -2696,7 +2695,6 @@
       "<b>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>",
       "<b>Somos iglesia, reino de luz<br>Nuestra bandera la cruz de Jesús<br>Somos iglesia, somos nación<br>/La tumba vacía es nuestra canción/<br><br>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>"
     ],
-    "nueva": true,
     "tono": "RE",
     "carpeta": "S",
     "acordes": [
@@ -2984,6 +2982,16 @@
     ]
   },
   {
+    "titulo": "Tú estás sentado",
+    "preview": "Tú estas sentado, en tu trono\u000bsiempre reinando, soberano.\u000bÁngeles cantan, hombres alaban,\u000bDios reunido con su pueblo.\u000b\u000b Oh, oh alfa, omega, Cristo, Santo,\u000b//oh, oh ven// \u000bSeñor Jesús.",
+    "slides": [
+      "<b>Tú estas sentado, en tu trono<br>siempre reinando, soberano.<br>Ángeles cantan, hombres alaban,<br>Dios reunido con su pueblo.<br><br> Oh, oh alfa, omega, Cristo, Santo,<br>//oh, oh ven// <br>Señor Jesús.</b>",
+      "<b>Con muchas ansias, esperamos<br>ese gran día de tu vuelta.<br>Y subiremos a estar contigo<br>para siempre<br><br>Maranata, ven Señor, Cristo, Santo,<br>//Oh, oh ven// <br>Señor Jesús.</b>"
+    ],
+    "tono": "SOL",
+    "carpeta": "T"
+  },
+  {
     "titulo": "Tu fidelidad es grande",
     "preview": "/Tu fidelidad es grande,\u000btu fidelidad incomparable es.\u000bNadie como tú, bendito Dios,\u000bgrande es tú fidelidad./",
     "slides": [
@@ -3063,16 +3071,6 @@
     "carpeta": "T"
   },
   {
-    "titulo": "Tú estás sentado",
-    "preview": "Tú estas sentado, en tu trono\u000bsiempre reinando, soberano.\u000bÁngeles cantan, hombres alaban,\u000bDios reunido con su pueblo.\u000b\u000b Oh, oh alfa, omega, Cristo, Santo,\u000b//oh, oh ven// \u000bSeñor Jesús.",
-    "slides": [
-      "<b>Tú estas sentado, en tu trono<br>siempre reinando, soberano.<br>Ángeles cantan, hombres alaban,<br>Dios reunido con su pueblo.<br><br> Oh, oh alfa, omega, Cristo, Santo,<br>//oh, oh ven// <br>Señor Jesús.</b>",
-      "<b>Con muchas ansias, esperamos<br>ese gran día de tu vuelta.<br>Y subiremos a estar contigo<br>para siempre<br><br>Maranata, ven Señor, Cristo, Santo,<br>//Oh, oh ven// <br>Señor Jesús.</b>"
-    ],
-    "tono": "SOL",
-    "carpeta": "T"
-  },
-  {
     "titulo": "Una mirada de fe",
     "preview": "/Una mirada de fe, una mirada al Señor, \u000bes la que puede salvar al pecador/\u000b\u000b/Y si tu vienes a Cristo Jesús,\u000b él te perdonará;\u000bporque una mirada de fe \u000bes aquella que puede salvar/",
     "slides": [
@@ -3088,7 +3086,6 @@
       "<b>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>Cantamos para exaltar tu nombre<br><br>Amamos todo de ti<br>Tu creación, te adora<br>En los reinos se rinden<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy</b>",
       "<b>Eres quien nos liberta<br>Eres la luz que guía<br>Y con un fuego ardiente<br>Hijo de Dios, eres por quien<br>Eres por quien vivimos hoy<br><br>Vamos a cantar<br>Con la música del cielo<br>Vamos a cantar<br>Alegres porque escuchas cuando<br>cantamos para exaltar tu nombre</b>"
     ],
-    "nueva": true,
     "tono": "MI",
     "carpeta": "V",
     "acordes": [
