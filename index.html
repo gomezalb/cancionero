@@ -7,6 +7,8 @@
   <link rel="icon" href="./logo-32.png" type="image/png"/>
   <link rel="manifest" href="./manifest.json"/>
   <title>Cancionero</title>
+  <script src="./config.js"></script>
+  <script src="./config.local.js" onerror="void 0"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -557,6 +559,20 @@
     transition: all .12s; white-space: nowrap; flex-shrink: 0;
   }
   #btn-export-json:hover { border-color: #555; color: var(--text); }
+  .edit-tabs { display: flex; gap: 2px; margin-bottom: .75rem; border-bottom: 0.5px solid var(--border); }
+  .edit-tab-btn { background: none; border: none; border-bottom: 2px solid transparent; color: var(--text4); font-size: 13px; padding: 6px 14px; cursor: pointer; font-family: inherit; margin-bottom: -1px; transition: color .12s; }
+  .edit-tab-btn.active { color: var(--text); border-bottom-color: #43a5cc; }
+  .edit-tab-btn:hover:not(.active) { color: var(--text2); }
+  .edit-tab-pane { display: none; }
+  .edit-tab-pane.active { display: flex; flex-direction: column; gap: .75rem; }
+  #btn-publicar {
+    background: #4a2080; border: 0.5px solid #5a2a90;
+    color: #ffffff; font-size: 13px; padding: 8px 20px;
+    border-radius: 8px; cursor: pointer; transition: all .12s; white-space: nowrap; flex-shrink: 0;
+    font-weight: 500;
+  }
+  #btn-publicar:hover { background: #5e2ea8; border-color: #6e3ab8; }
+  #btn-publicar:disabled { opacity: .4; cursor: default; }
 
   /* Botones compartidos */
   .btn-primary {
@@ -801,24 +817,65 @@
         </div>
         <div id="edit-search-results"></div>
         <div id="acorde-form">
-          <div id="acorde-form-titulo"></div>
-          <div class="acorde-field">
-            <label>Tonalidad (ej: SOL, LAm, FA#)</label>
-            <input id="acorde-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
+          <input id="acorde-form-titulo" type="text" style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:14px;font-weight:600;font-family:inherit;outline:none;width:100%;box-sizing:border-box;margin-bottom:.5rem"/>
+
+          <!-- Tabs: Acordes / Letra -->
+          <div class="edit-tabs">
+            <button class="edit-tab-btn active" data-etab="tab-acordes">Acordes</button>
+            <button class="edit-tab-btn" data-etab="tab-letra">Letra</button>
           </div>
-          <div class="acorde-field">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
-              <label style="margin:0">Acordes — escribí la letra con los acordes entre corchetes [SOL] en la línea correspondiente</label>
-              <button id="btn-insertar-acorde" class="btn-secondary" style="flex-shrink:0;margin-left:8px;padding:3px 10px;font-size:11px">+ Acorde</button>
+
+          <!-- Tab: Acordes -->
+          <div class="edit-tab-pane active" id="tab-acordes">
+            <div class="acorde-field">
+              <label>Tonalidad (ej: SOL, LAm, FA#)</label>
+              <input id="acorde-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
             </div>
-            <textarea id="acorde-textarea" placeholder="Ejemplo:&#10;[SOL]Sublime gracia del [RE]Señor&#10;[DO]que a un [SOL]pecador salvó&#10;---&#10;[SOL]Cuán dulce el [RE]nombre de Jesús&#10;[DO]al [SOL]oído del [RE]creyente"></textarea>
+            <div class="acorde-field">
+              <label>Categoría</label>
+              <select id="acorde-carpeta-select" style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;cursor:pointer">
+                <option value="Alabanza">Alabanza / Adoración</option>
+                <option value="Himnos">Himnos</option>
+                <option value="Navidad">Navidad</option>
+              </select>
+            </div>
+            <div class="acorde-field">
+              <label>Link de YouTube (opcional)</label>
+              <input id="acorde-youtube-input" type="url" placeholder="https://www.youtube.com/watch?v=..." style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;box-sizing:border-box"/>
+            </div>
+            <div class="acorde-field">
+              <label>Link de YouTube — arreglos vocales (opcional)</label>
+              <input id="acorde-vocal-input" type="url" placeholder="https://www.youtube.com/watch?v=..." style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;box-sizing:border-box"/>
+            </div>
+            <div class="acorde-field">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+                <label style="margin:0">Acordes — escribí la letra con los acordes entre corchetes [SOL] en la línea correspondiente</label>
+                <button id="btn-insertar-acorde" class="btn-secondary" style="flex-shrink:0;margin-left:8px;padding:3px 10px;font-size:11px">+ Acorde</button>
+              </div>
+              <textarea id="acorde-textarea" placeholder="Ejemplo:&#10;[SOL]Sublime gracia del [RE]Señor&#10;[DO]que a un [SOL]pecador salvó&#10;---&#10;[SOL]Cuán dulce el [RE]nombre de Jesús&#10;[DO]al [SOL]oído del [RE]creyente"></textarea>
+            </div>
+            <p class="acorde-hint">Separá las diapositivas con <strong>---</strong> en una línea sola.</p>
+            <div class="acorde-actions">
+              <button class="btn-primary" id="acorde-guardar">Guardar cambios</button>
+              <button class="btn-secondary" id="acorde-cancelar">Cancelar</button>
+              <button class="btn-danger" id="acorde-borrar">Borrar acordes</button>
+              <button class="btn-danger" id="acorde-eliminar-cancion" style="margin-left:auto">🗑 Eliminar canción</button>
+            </div>
           </div>
-          <p class="acorde-hint">Separá las diapositivas con <strong>---</strong> en una línea sola.</p>
-          <div class="acorde-actions">
-            <button class="btn-primary" id="acorde-guardar">Guardar</button>
-            <button class="btn-secondary" id="acorde-cancelar">Cancelar</button>
-            <button class="btn-danger" id="acorde-borrar">Borrar acordes</button>
+
+          <!-- Tab: Letra -->
+          <div class="edit-tab-pane" id="tab-letra">
+            <div class="acorde-field">
+              <label>Letra — separá las diapositivas con <strong>---</strong> en una línea sola</label>
+              <textarea id="letra-textarea" style="min-height:220px;width:100%;box-sizing:border-box" placeholder="Escribí o pegá la letra aquí&#10;&#10;---&#10;&#10;Segunda diapositiva..."></textarea>
+            </div>
+            <p class="acorde-hint">Los cambios en la letra reemplazan los slides de la canción. Los acordes existentes se conservan.</p>
+            <div class="acorde-actions">
+              <button class="btn-primary" id="letra-guardar">Guardar letra</button>
+              <button class="btn-secondary" id="acorde-cancelar-letra">Cancelar</button>
+            </div>
           </div>
+
           <div id="acorde-msg" class="edit-msg"></div>
         </div>
       </div>
@@ -830,7 +887,8 @@
         <span>Agregar canción nueva</span>
       </div>
       <div class="edit-section-body">
-        <div id="nueva-form">
+        <button id="btn-mostrar-nueva-form" class="btn-primary" style="align-self:flex-start">＋ Nueva canción</button>
+        <div id="nueva-form" style="display:none;flex-direction:column;gap:.75rem">
           <div class="acorde-field">
             <label>Título</label>
             <input id="nueva-titulo-input" type="text" placeholder="Nombre de la canción"/>
@@ -838,6 +896,22 @@
           <div class="acorde-field">
             <label>Tonalidad (opcional, ej: SOL, LAm)</label>
             <input id="nueva-tono-input" type="text" placeholder="Dejar vacío si no aplica"/>
+          </div>
+          <div class="acorde-field">
+            <label>Link de YouTube (opcional)</label>
+            <input id="nueva-youtube-input" type="url" placeholder="https://www.youtube.com/watch?v=..." style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;box-sizing:border-box"/>
+          </div>
+          <div class="acorde-field">
+            <label>Link de YouTube — arreglos vocales (opcional)</label>
+            <input id="nueva-vocal-input" type="url" placeholder="https://www.youtube.com/watch?v=..." style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;box-sizing:border-box"/>
+          </div>
+          <div class="acorde-field">
+            <label>Categoría</label>
+            <select id="nueva-carpeta-select" style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:13px;font-family:inherit;outline:none;width:100%;cursor:pointer">
+              <option value="Alabanza">Alabanza / Adoración</option>
+              <option value="Himnos">Himnos</option>
+              <option value="Navidad">Navidad</option>
+            </select>
           </div>
           <div class="acorde-field">
             <label>Letra — separá las diapositivas con <strong>---</strong> en una línea sola</label>
@@ -853,10 +927,28 @@
       </div>
     </div>
 
-    <!-- Exportar JSON -->
+    <!-- Publicar en GitHub -->
     <div id="export-section">
-      <p>Exportá el cancionero completo con todos los cambios para hacer push desde tu computadora.</p>
-      <button id="btn-export-json">&#8595; Exportar canciones.json</button>
+      <p>Publicá los cambios directamente en el cancionero para que queden disponibles para todos.</p>
+      <button id="btn-export-json" style="display:none">&#8595; Exportar canciones.json</button>
+      <button id="btn-publicar">&#9729; Publicar cambios</button>
+    </div>
+
+    <!-- Fijar lista para todos -->
+    <div id="fijar-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:0.5px solid var(--border)">
+      <p style="margin:0 0 .75rem;font-size:13px;color:var(--text4)">Fijá una lista para que todos los usuarios la vean en la pestaña Listas.</p>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <input id="fijar-nombre" type="text" placeholder="Nombre de la lista (ej: Reunión del domingo)..."
+          style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.5rem .75rem;font-size:13px;font-family:inherit;outline:none"/>
+        <input id="fijar-expira" type="date"
+          style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.5rem .75rem;font-size:13px;font-family:inherit;outline:none;color-scheme:dark"/>
+        <div style="font-size:12px;color:var(--text4)">Canciones de <b>Mi lista</b> actual: <span id="fijar-count">0</span></div>
+        <div style="display:flex;gap:8px">
+          <button id="btn-fijar-lista" style="background:#0a4a3a;border:0.5px solid #0e5a48;color:#ffffff;font-size:13px;padding:7px 16px;border-radius:8px;cursor:pointer;font-weight:500;transition:all .12s">&#128204; Fijar lista</button>
+          <button id="btn-borrar-lista" style="background:none;border:0.5px solid var(--border2);color:var(--text4);font-size:13px;padding:7px 14px;border-radius:8px;cursor:pointer">&#10006; Borrar lista fijada</button>
+        </div>
+        <div id="fijar-msg" style="font-size:12px;color:var(--text4)"></div>
+      </div>
     </div>
 
   </div>
@@ -1121,6 +1213,68 @@
 
 
 <script>
+// ── Token de administración (localStorage) ────────────────────
+const LS_ADMIN_TOKEN = "cancionero_admin_token";
+function getAdminToken() { try { return localStorage.getItem(LS_ADMIN_TOKEN) || ""; } catch(e) { return ""; } }
+function setAdminToken(t) { try { localStorage.setItem(LS_ADMIN_TOKEN, t); } catch(e) {} }
+function clearAdminToken() { try { localStorage.removeItem(LS_ADMIN_TOKEN); } catch(e) {} }
+
+// ── Configuración GitHub (datos del repo desde config.js) ─────
+const GH_CONFIG = {
+  owner:  typeof GH_OWNER  !== "undefined" ? GH_OWNER  : "gomezalb",
+  repo:   typeof GH_REPO   !== "undefined" ? GH_REPO   : "cancionero",
+  file:   typeof GH_FILE   !== "undefined" ? GH_FILE   : "canciones.json",
+  branch: typeof GH_BRANCH !== "undefined" ? GH_BRANCH : "main",
+  token:  "" // se carga desde localStorage al autenticar
+};
+
+let adminAutenticado = false;
+
+function mostrarAuthModal(onSuccess) {
+  const bg = document.getElementById("auth-modal-bg");
+  const input = document.getElementById("auth-password");
+  const error = document.getElementById("auth-error");
+
+  const tokenGuardado = getAdminToken();
+  if (tokenGuardado) {
+    GH_CONFIG.token = tokenGuardado;
+    adminAutenticado = true;
+    onSuccess();
+    return;
+  }
+
+  bg.style.display = "flex";
+  input.value = "";
+  error.style.display = "none";
+  document.getElementById("auth-desc").textContent = "Ingresá el token de acceso. Se guardará en este dispositivo para futuras sesiones.";
+  input.focus();
+
+  const confirmar = () => {
+    const token = input.value.trim();
+    if (!token || !token.startsWith("github_")) {
+      error.style.display = "block";
+      return;
+    }
+    setAdminToken(token);
+    GH_CONFIG.token = token;
+    adminAutenticado = true;
+    bg.style.display = "none";
+    onSuccess();
+  };
+
+  document.getElementById("auth-confirmar").onclick = confirmar;
+  document.getElementById("auth-cancelar").onclick = () => { bg.style.display = "none"; };
+  document.getElementById("auth-olvidar").onclick = () => {
+    clearAdminToken();
+    GH_CONFIG.token = "";
+    adminAutenticado = false;
+    input.value = "";
+    error.style.display = "none";
+    document.getElementById("auth-desc").textContent = "Token olvidado. Ingresá el nuevo token de acceso.";
+  };
+  input.onkeydown = e => { if (e.key === "Enter") confirmar(); };
+}
+
 const LS_KEY = "cancionero_setlist";
 const LS_MI_LISTA = "cancionero_mi_lista"; // lista del usuario, independiente
 let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
@@ -1546,7 +1700,27 @@ function cargarMiLista() {
   } catch(e) {}
 }
 document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
-  activeTab = t.dataset.tab;
+  const tab = t.dataset.tab;
+
+  // Tab Editar: requiere token de admin
+  if (tab === "editar") {
+    const tokenGuardado = getAdminToken();
+    if (!tokenGuardado) {
+      mostrarAuthModal(() => {
+        activeTab = "editar";
+        document.querySelectorAll(".tab").forEach(x => x.classList.remove("active")); t.classList.add("active");
+        document.getElementById("cancionero-panel").style.display = "none";
+        document.getElementById("setlist-panel").style.display = "none";
+        document.getElementById("editar-panel").style.display = "flex";
+        renderNuevasGuardadas();
+      });
+      return;
+    }
+    GH_CONFIG.token = tokenGuardado;
+    adminAutenticado = true;
+  }
+
+  activeTab = tab;
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("active")); t.classList.add("active");
   document.getElementById("cancionero-panel").style.display = activeTab === "cancionero" ? "block" : "none";
   document.getElementById("setlist-panel").style.display = activeTab === "setlist" ? "flex" : "none";
@@ -2475,8 +2649,11 @@ function abrirEditorAcordes(cancion) {
   acordeCancionActual = cancion;
   const acordesLS = getAcordesLS();
   const override = acordesLS[cancion.titulo] || {};
-  document.getElementById("acorde-form-titulo").textContent = cancion.titulo;
+  document.getElementById("acorde-form-titulo").value = cancion.titulo;
   document.getElementById("acorde-tono-input").value = override.tono ?? cancion.tono ?? "";
+  document.getElementById("acorde-carpeta-select").value = override.carpeta ?? cancion.carpeta ?? "Alabanza";
+  document.getElementById("acorde-youtube-input").value = override.youtube ?? cancion.youtube ?? "";
+  document.getElementById("acorde-vocal-input").value = override.youtube_vocal ?? cancion.youtube_vocal ?? "";
 
   // Prioridad: 1) localStorage, 2) acordes del JSON, 3) letra plana de los slides
   let textoAcordes = override.acordes_texto || "";
@@ -2493,14 +2670,24 @@ function abrirEditorAcordes(cancion) {
   textarea.value = textoAcordes;
 
   // Hint dinámico según si ya tiene acordes o no
-  const hint = document.querySelector(".acorde-hint");
-  if (sinAcordes) {
-    hint.innerHTML = `La letra ya está cargada. Agregá los acordes escribiendo <strong>[SOL]</strong>, <strong>[LAm]</strong>, etc. justo antes de la sílaba donde cambia. Separá las diapositivas con <strong>---</strong> en una línea sola.`;
-  } else {
-    hint.innerHTML = `Separá las diapositivas con <strong>---</strong> en una línea sola.`;
+  const hint = document.querySelector("#tab-acordes .acorde-hint");
+  if (hint) {
+    if (sinAcordes) {
+      hint.innerHTML = `La letra ya está cargada. Agregá los acordes escribiendo <strong>[SOL]</strong>, <strong>[LAm]</strong>, etc. justo antes de la sílaba donde cambia. Separá las diapositivas con <strong>---</strong> en una línea sola.`;
+    } else {
+      hint.innerHTML = `Separá las diapositivas con <strong>---</strong> en una línea sola.`;
+    }
   }
 
   document.getElementById("acorde-msg").textContent = "";
+
+  // Cargar letra plana en el tab Letra
+  document.getElementById("letra-textarea").value = slidesATextoPlano(cancion.slides);
+
+  // Volver siempre al tab Acordes al abrir
+  document.querySelectorAll(".edit-tab-btn").forEach(b => b.classList.toggle("active", b.dataset.etab === "tab-acordes"));
+  document.querySelectorAll(".edit-tab-pane").forEach(p => p.classList.toggle("active", p.id === "tab-acordes"));
+
   document.getElementById("acorde-form").classList.add("visible");
   textarea.focus();
 }
@@ -2513,6 +2700,16 @@ function cerrarEditorAcordes() {
 }
 
 document.getElementById("edit-search").addEventListener("input", e => renderEditSearch(e.target.value));
+
+// ── Tabs del editor (Acordes / Letra) ─────────────────────────
+document.querySelectorAll(".edit-tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".edit-tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".edit-tab-pane").forEach(p => p.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.etab).classList.add("active");
+  });
+});
 
 // Transposición automática al cambiar tonalidad en el editor de acordes
 let acordeTonoPrevio = "";
@@ -2550,40 +2747,133 @@ document.getElementById("acorde-tono-input").addEventListener("change", function
 
 document.getElementById("acorde-guardar").addEventListener("click", () => {
   if (!acordeCancionActual) return;
-  const tono = document.getElementById("acorde-tono-input").value.trim();
-  const texto = document.getElementById("acorde-textarea").value.trim();
+  const nuevoTitulo = document.getElementById("acorde-form-titulo").value.trim();
+  const tono    = document.getElementById("acorde-tono-input").value.trim();
+  const texto   = document.getElementById("acorde-textarea").value.replace(/\r\n/g,"\n").replace(/\r/g,"\n").trim();
+  const carpeta = document.getElementById("acorde-carpeta-select").value;
+  const youtube = document.getElementById("acorde-youtube-input").value.trim();
+  const vocal   = document.getElementById("acorde-vocal-input").value.trim();
+  const msg = document.getElementById("acorde-msg");
+
+  if (!nuevoTitulo) { msg.textContent = "El título no puede estar vacío."; msg.className = "edit-msg err"; return; }
+
+  const tituloOriginal = acordeCancionActual.titulo;
   const obj = getAcordesLS();
-  obj[acordeCancionActual.titulo] = { tono, acordes_texto: texto };
+
+  // Si el título cambió, renombrar en LS y en SONGS
+  if (nuevoTitulo !== tituloOriginal) {
+    if (SONGS.find(s => s.titulo !== tituloOriginal && norm(s.titulo) === norm(nuevoTitulo))) {
+      msg.textContent = "Ya existe una canción con ese nombre."; msg.className = "edit-msg err"; return;
+    }
+    if (obj[tituloOriginal]) { obj[nuevoTitulo] = obj[tituloOriginal]; delete obj[tituloOriginal]; }
+    const nuevasArr = getNuevasLS();
+    const nIdx = nuevasArr.findIndex(n => n.titulo === tituloOriginal);
+    if (nIdx >= 0) { nuevasArr[nIdx].titulo = nuevoTitulo; setNuevasLS(nuevasArr); }
+    const slIdx = setlist.indexOf(tituloOriginal);
+    if (slIdx >= 0) { setlist[slIdx] = nuevoTitulo; saveToStorage(); }
+    acordeCancionActual = { ...acordeCancionActual, titulo: nuevoTitulo };
+  }
+
+  obj[nuevoTitulo] = { tono, acordes_texto: texto, carpeta, youtube, youtube_vocal: vocal };
   setAcordesLS(obj);
-  // Actualizar SONGS en memoria
-  const song = SONGS.find(s => s.titulo === acordeCancionActual.titulo);
+
+  const song = SONGS.find(s => s.titulo === tituloOriginal) || SONGS.find(s => s.titulo === nuevoTitulo);
   if (song) {
+    song.titulo = nuevoTitulo;
     if (tono) song.tono = tono; else delete song.tono;
     if (texto) song.acordes = textoToAcordesArray(texto); else delete song.acordes;
+    song.carpeta = carpeta;
+    if (youtube) song.youtube = youtube; else delete song.youtube;
+    if (vocal) song.youtube_vocal = vocal; else delete song.youtube_vocal;
   }
-  document.getElementById("acorde-msg").textContent = "✓ Guardado";
-  document.getElementById("acorde-msg").className = "edit-msg ok";
+  SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
+  msg.textContent = "✓ Guardado";
+  msg.className = "edit-msg ok";
   renderList();
 });
 
 document.getElementById("acorde-cancelar").addEventListener("click", cerrarEditorAcordes);
+document.getElementById("acorde-cancelar-letra").addEventListener("click", cerrarEditorAcordes);
 
 document.getElementById("acorde-borrar").addEventListener("click", () => {
   if (!acordeCancionActual) return;
   const obj = getAcordesLS();
-  delete obj[acordeCancionActual.titulo];
+  const tituloOriginal = acordeCancionActual.titulo;
+  delete obj[tituloOriginal];
   setAcordesLS(obj);
-  const song = SONGS.find(s => s.titulo === acordeCancionActual.titulo);
-  if (song) { delete song.tono; delete song.acordes; }
-  document.getElementById("acorde-msg").textContent = "Acordes eliminados";
-  document.getElementById("acorde-msg").className = "edit-msg";
+  const song = SONGS.find(s => s.titulo === tituloOriginal);
+  if (song) { delete song.acordes; }
+  document.getElementById("acorde-msg").textContent = "✓ Acordes eliminados (se aplicará al publicar)";
+  document.getElementById("acorde-msg").className = "edit-msg ok";
   document.getElementById("acorde-tono-input").value = "";
   document.getElementById("acorde-textarea").value = "";
+  document.getElementById("acorde-youtube-input").value = "";
+  document.getElementById("acorde-vocal-input").value = "";
+  document.getElementById("acorde-carpeta-select").value = song?.carpeta || "Alabanza";
+  renderList();
+});
+
+document.getElementById("acorde-eliminar-cancion").addEventListener("click", () => {
+  if (!acordeCancionActual) return;
+  const titulo = acordeCancionActual.titulo;
+  if (!confirm(`¿Eliminar "${titulo}" del cancionero?\n\nEsta acción no se puede deshacer. Se aplicará al publicar.`)) return;
+
+  const idx = SONGS.findIndex(s => s.titulo === titulo);
+  if (idx >= 0) SONGS.splice(idx, 1);
+
+  const obj = getAcordesLS();
+  delete obj[titulo];
+  setAcordesLS(obj);
+
+  const nuevasArr = getNuevasLS();
+  const nIdx = nuevasArr.findIndex(n => n.titulo === titulo);
+  if (nIdx >= 0) { nuevasArr.splice(nIdx, 1); setNuevasLS(nuevasArr); }
+
+  const slIdx = setlist.indexOf(titulo);
+  if (slIdx >= 0) { setlist.splice(slIdx, 1); saveToStorage(); }
+
+  const eliminadas = JSON.parse(localStorage.getItem("cancionero_eliminadas") || "[]");
+  if (!eliminadas.includes(titulo)) eliminadas.push(titulo);
+  localStorage.setItem("cancionero_eliminadas", JSON.stringify(eliminadas));
+
+  acordeCancionActual = null;
+  document.getElementById("acorde-form").classList.remove("visible");
+  document.getElementById("edit-search").value = "";
+  document.getElementById("edit-search-results").innerHTML = "";
+  document.getElementById("acorde-msg").textContent = `✓ "${titulo}" eliminada (se aplicará al publicar)`;
+  document.getElementById("acorde-msg").className = "edit-msg ok";
+
+  renderList();
+  renderNuevasGuardadas();
+});
+
+document.getElementById("letra-guardar").addEventListener("click", () => {
+  if (!acordeCancionActual) return;
+  const texto = document.getElementById("letra-textarea").value.replace(/\r\n/g,"\n").replace(/\r/g,"\n").trim();
+  const msg = document.getElementById("acorde-msg");
+  if (!texto) { msg.textContent = "La letra no puede estar vacía."; msg.className = "edit-msg err"; return; }
+
+  const nuevosSlides = textoToSlides(texto);
+  const nuevoPreview = texto.split(/^---$/m)[0].trim();
+
+  const song = SONGS.find(s => s.titulo === acordeCancionActual.titulo);
+  if (song) { song.slides = nuevosSlides; song.preview = nuevoPreview; }
+
+  const arr = getNuevasLS();
+  const idx = arr.findIndex(n => n.titulo === acordeCancionActual.titulo);
+  if (idx >= 0) { arr[idx].slides = nuevosSlides; arr[idx].preview = nuevoPreview; setNuevasLS(arr); }
+
+  const acordeTA = document.getElementById("acorde-textarea");
+  if (!acordeTA.value.trim()) acordeTA.value = texto;
+
+  msg.textContent = "✓ Letra actualizada";
+  msg.className = "edit-msg ok";
   renderList();
 });
 
 // Convertir texto con --- a array de slides (igual que generar_canciones.py)
 function textoToAcordesArray(texto) {
+  texto = texto.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
   return texto.split(/^---$/m).map(bloque => bloque.trim()).filter(Boolean);
 }
 
@@ -2601,11 +2891,23 @@ function textoToSlides(texto) {
   }).filter(Boolean);
 }
 
+// ── Mostrar/ocultar formulario nueva canción ───────────────────
+document.getElementById("btn-mostrar-nueva-form").addEventListener("click", () => {
+  const form = document.getElementById("nueva-form");
+  const btn  = document.getElementById("btn-mostrar-nueva-form");
+  const visible = form.style.display === "flex";
+  form.style.display = visible ? "none" : "flex";
+  btn.textContent = visible ? "＋ Nueva canción" : "✕ Cancelar";
+});
+
 document.getElementById("nueva-guardar").addEventListener("click", () => {
-  const titulo = document.getElementById("nueva-titulo-input").value.trim();
-  const tono   = document.getElementById("nueva-tono-input").value.trim();
-  const texto  = document.getElementById("nueva-letra-textarea").value.trim();
-  const msg    = document.getElementById("nueva-msg");
+  const titulo  = document.getElementById("nueva-titulo-input").value.trim();
+  const tono    = document.getElementById("nueva-tono-input").value.trim();
+  const youtube = document.getElementById("nueva-youtube-input").value.trim();
+  const vocal   = document.getElementById("nueva-vocal-input").value.trim();
+  const texto   = document.getElementById("nueva-letra-textarea").value.replace(/\r\n/g,"\n").replace(/\r/g,"\n").trim();
+  const carpeta = document.getElementById("nueva-carpeta-select").value;
+  const msg     = document.getElementById("nueva-msg");
   if (!titulo) { msg.textContent = "El título es obligatorio."; msg.className = "edit-msg err"; return; }
   if (!texto)  { msg.textContent = "La letra no puede estar vacía."; msg.className = "edit-msg err"; return; }
   if (SONGS.find(s => norm(s.titulo) === norm(titulo))) {
@@ -2613,20 +2915,26 @@ document.getElementById("nueva-guardar").addEventListener("click", () => {
   }
   const slides  = textoToSlides(texto);
   const preview = texto.split(/^---$/m)[0].trim();
-  const nueva = { titulo, preview, slides, carpeta: "Nuevas", nueva: true };
+  const esNueva = carpeta === "Nuevas";
+  const nueva = { titulo, preview, slides, carpeta, nueva: esNueva };
   if (tono) nueva.tono = tono;
-  // Guardar en LS y en SONGS
+  if (youtube) nueva.youtube = youtube;
+  if (vocal) nueva.youtube_vocal = vocal;
   const arr = getNuevasLS();
   arr.push(nueva);
   setNuevasLS(arr);
   SONGS.push(nueva);
   SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
-  // Limpiar form
   document.getElementById("nueva-titulo-input").value = "";
   document.getElementById("nueva-tono-input").value = "";
+  document.getElementById("nueva-youtube-input").value = "";
+  document.getElementById("nueva-vocal-input").value = "";
+  document.getElementById("nueva-carpeta-select").value = "Alabanza";
   document.getElementById("nueva-letra-textarea").value = "";
   msg.textContent = `✓ "${titulo}" guardada`;
   msg.className = "edit-msg ok";
+  document.getElementById("nueva-form").style.display = "none";
+  document.getElementById("btn-mostrar-nueva-form").textContent = "＋ Nueva canción";
   renderList();
   renderNuevasGuardadas();
 });
@@ -2634,6 +2942,9 @@ document.getElementById("nueva-guardar").addEventListener("click", () => {
 document.getElementById("nueva-limpiar").addEventListener("click", () => {
   document.getElementById("nueva-titulo-input").value = "";
   document.getElementById("nueva-tono-input").value = "";
+  document.getElementById("nueva-youtube-input").value = "";
+  document.getElementById("nueva-vocal-input").value = "";
+  document.getElementById("nueva-carpeta-select").value = "Alabanza";
   document.getElementById("nueva-letra-textarea").value = "";
   document.getElementById("nueva-msg").textContent = "";
 });
@@ -2642,13 +2953,35 @@ function renderNuevasGuardadas() {
   const wrap = document.getElementById("nuevas-guardadas");
   const nuevas = getNuevasLS();
   if (!nuevas.length) { wrap.innerHTML = ""; return; }
-  wrap.innerHTML = `<div style="font-size:11px;color:var(--text4);margin-top:.5rem;margin-bottom:.35rem">Guardadas en este dispositivo (${nuevas.length}):</div>` +
-    nuevas.map((c, i) => `
-      <div class="edit-song-row" style="cursor:default">
-        <span class="edit-song-row-title">${c.titulo}</span>
-        ${c.tono ? `<span class="edit-song-row-tono">${c.tono}</span>` : ""}
-        <button class="btn-danger" style="padding:2px 8px;font-size:11px" data-i="${i}">&#10005;</button>
-      </div>`).join("");
+
+  const yaAbierto = wrap.querySelector("#nuevas-guardadas-list")?.style.display === "block";
+
+  wrap.innerHTML = `
+    <button id="nuevas-guardadas-toggle" style="
+      display:flex;align-items:center;gap:6px;background:none;border:none;
+      color:var(--text4);font-size:11px;cursor:pointer;padding:.35rem 0;margin-top:.5rem;
+      font-family:inherit;
+    ">
+      <span id="nuevas-guardadas-chevron" style="font-size:10px;transition:transform .15s">${yaAbierto ? "▼" : "▶"}</span>
+      Guardadas en este dispositivo (${nuevas.length})
+    </button>
+    <div id="nuevas-guardadas-list" style="display:${yaAbierto ? "block" : "none"}">
+      ${nuevas.map((c, i) => `
+        <div class="edit-song-row" style="cursor:default">
+          <span class="edit-song-row-title">${c.titulo}</span>
+          ${c.tono ? `<span class="edit-song-row-tono">${c.tono}</span>` : ""}
+          <button class="btn-danger" style="padding:2px 8px;font-size:11px" data-i="${i}">&#10005;</button>
+        </div>`).join("")}
+    </div>`;
+
+  wrap.querySelector("#nuevas-guardadas-toggle").addEventListener("click", () => {
+    const list = wrap.querySelector("#nuevas-guardadas-list");
+    const chevron = wrap.querySelector("#nuevas-guardadas-chevron");
+    const abierto = list.style.display === "block";
+    list.style.display = abierto ? "none" : "block";
+    chevron.textContent = abierto ? "▶" : "▼";
+  });
+
   wrap.querySelectorAll(".btn-danger").forEach(btn => {
     btn.addEventListener("click", () => {
       const i = parseInt(btn.dataset.i);
@@ -2656,7 +2989,6 @@ function renderNuevasGuardadas() {
       const titulo = arr[i].titulo;
       arr.splice(i, 1);
       setNuevasLS(arr);
-      // Quitar de SONGS
       const idx = SONGS.findIndex(s => s.titulo === titulo && s.carpeta === "Nuevas");
       if (idx >= 0) SONGS.splice(idx, 1);
       renderNuevasGuardadas();
@@ -2691,6 +3023,188 @@ document.getElementById("btn-export-json").addEventListener("click", () => {
   const a    = document.createElement("a");
   a.href = url; a.download = "canciones.json"; a.click();
   URL.revokeObjectURL(url);
+});
+
+// ── Administración: publicar y fijar lista ─────────────────────
+function actualizarFijarCount() {
+  const el = document.getElementById("fijar-count");
+  if (el) el.textContent = setlist.length;
+}
+
+document.getElementById("btn-fijar-lista").addEventListener("click", () => {
+  const nombre = document.getElementById("fijar-nombre").value.trim();
+  const expira = document.getElementById("fijar-expira").value;
+  const msg = document.getElementById("fijar-msg");
+  if (!nombre) { msg.textContent = "Ponele un nombre a la lista."; return; }
+  if (!setlist.length) { msg.textContent = "Mi lista está vacía. Agregá canciones primero."; return; }
+  if (!adminAutenticado) {
+    mostrarAuthModal(() => publicarSetlist(nombre, expira));
+  } else {
+    publicarSetlist(nombre, expira);
+  }
+});
+
+document.getElementById("btn-borrar-lista").addEventListener("click", () => {
+  setlist = []; slName = ""; saveToStorage(); updateBadge();
+  if (!adminAutenticado) {
+    mostrarAuthModal(() => publicarSetlist(null, null, true));
+  } else {
+    publicarSetlist(null, null, true);
+  }
+});
+
+async function publicarSetlist(nombre, expira, borrar = false) {
+  const msg = document.getElementById("fijar-msg");
+  msg.textContent = "Conectando…";
+  const datos = borrar ? {} : {
+    name: nombre,
+    expira: expira || null,
+    songs: [...setlist]
+  };
+  const jsonStr = JSON.stringify(datos, null, 2);
+  const base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+  const headers = {
+    "Authorization": "token " + getAdminToken(),
+    "Accept": "application/vnd.github+json",
+    "Content-Type": "application/json",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/setlist.json`;
+  let sha = null;
+  try {
+    const res = await fetch(url, { headers });
+    if (res.ok) { const d = await res.json(); sha = d.sha; }
+  } catch(e) {}
+  const body = {
+    message: borrar ? "Borrar lista fijada" : `Fijar lista: ${nombre}`,
+    content: base64,
+    branch: GH_CONFIG.branch
+  };
+  if (sha) body.sha = sha;
+  try {
+    const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+    if (res.ok) {
+      if ("caches" in window) {
+        caches.keys().then(keys => keys.forEach(k => caches.open(k).then(c => {
+          c.delete(new Request("./setlist.json"));
+        })));
+      }
+      msg.textContent = borrar ? "✓ Lista fijada borrada" : `✓ Lista "${nombre}" fijada para todos`;
+      msg.style.color = "var(--green-tx)";
+    } else {
+      const err = await res.json();
+      msg.textContent = "Error: " + (err.message || "desconocido");
+      msg.style.color = "#f14c4c";
+    }
+  } catch(e) {
+    msg.textContent = "Error de conexión";
+    msg.style.color = "#f14c4c";
+  }
+}
+
+function construirExportado() {
+  const acordesLS  = getAcordesLS();
+  const nuevasLS   = getNuevasLS();
+  const eliminadas = JSON.parse(localStorage.getItem("cancionero_eliminadas") || "[]");
+  const exportado = SONGS
+    .filter(s => !eliminadas.includes(s.titulo))
+    .filter(s => s.carpeta !== "Nuevas" || !getNuevasLS().find(n => n.titulo === s.titulo))
+    .map(s => {
+      const c = { ...s };
+      const ov = acordesLS[s.titulo];
+      if (ov) {
+        if (ov.tono) c.tono = ov.tono; else delete c.tono;
+        if (ov.acordes_texto) c.acordes = textoToAcordesArray(ov.acordes_texto); else delete c.acordes;
+      }
+      delete c.nueva;
+      return c;
+    });
+  nuevasLS.forEach(n => {
+    if (!eliminadas.includes(n.titulo) && !exportado.find(s => s.titulo === n.titulo)) {
+      const c = { ...n }; delete c.nueva; exportado.push(c);
+    }
+  });
+  exportado.sort((a,b) => a.titulo.localeCompare(b.titulo));
+  return exportado;
+}
+
+function mostrarPubModal(titulo, msg, conBotonCerrar = false) {
+  const bg = document.getElementById("pub-modal-bg");
+  bg.style.display = "flex";
+  document.getElementById("pub-title").textContent = titulo;
+  document.getElementById("pub-msg").innerHTML = msg;
+  const actions = document.getElementById("pub-actions");
+  actions.style.display = conBotonCerrar ? "flex" : "none";
+  if (conBotonCerrar) {
+    document.getElementById("pub-cerrar").onclick = () => { bg.style.display = "none"; };
+  }
+}
+
+async function publicarEnGitHub() {
+  const exportado = construirExportado();
+  const jsonStr = JSON.stringify(exportado, null, 2);
+  const base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+  const headers = {
+    "Authorization": "token " + getAdminToken(),
+    "Accept": "application/vnd.github+json",
+    "Content-Type": "application/json",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+  const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${GH_CONFIG.file}`;
+  mostrarPubModal("Publicando…", "Conectando con GitHub…");
+  let sha = null;
+  try {
+    const res = await fetch(url, { headers });
+    if (res.ok) {
+      const data = await res.json();
+      sha = data.sha;
+    } else if (res.status !== 404) {
+      const err = await res.json();
+      throw new Error(err.message || `Error HTTP ${res.status}`);
+    }
+  } catch(e) {
+    mostrarPubModal("Error de conexión", `No se pudo conectar con GitHub.<br><small style="color:var(--text4)">${e.message}</small>`, true);
+    return;
+  }
+  mostrarPubModal("Publicando…", `Subiendo ${exportado.length} canciones…`);
+  const body = {
+    message: `Actualización del cancionero — ${new Date().toLocaleDateString("es-AR", {day:"2-digit",month:"2-digit",year:"numeric"})}`,
+    content: base64,
+    branch: GH_CONFIG.branch
+  };
+  if (sha) body.sha = sha;
+  try {
+    const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+    if (res.ok) {
+      localStorage.removeItem("cancionero_eliminadas");
+      if ("caches" in window) {
+        caches.keys().then(keys => keys.forEach(k => caches.open(k).then(c => {
+          c.delete(new Request("./canciones.json"));
+          c.delete(new Request("./setlist.json"));
+        })));
+      }
+      mostrarPubModal(
+        "✓ Publicado",
+        `El cancionero se actualizó correctamente con <b>${exportado.length} canciones</b>.<br><br>
+         Los cambios estarán visibles en aproximadamente <b>1 minuto</b>.`,
+        true
+      );
+    } else {
+      const err = await res.json();
+      throw new Error(err.message || `Error HTTP ${res.status}`);
+    }
+  } catch(e) {
+    mostrarPubModal("Error al publicar", `No se pudieron guardar los cambios.<br><small style="color:var(--text4)">${e.message}</small>`, true);
+  }
+}
+
+document.getElementById("btn-publicar").addEventListener("click", () => {
+  if (!adminAutenticado || !getAdminToken()) {
+    adminAutenticado = false;
+    mostrarAuthModal(() => publicarEnGitHub());
+  } else {
+    publicarEnGitHub();
+  }
 });
 
 // ── Cargar acordes y canciones nuevas del LS al iniciar ────────
@@ -3096,5 +3610,33 @@ document.getElementById("pptx-servicio-btn").addEventListener("click", async () 
   }
 });
 </script>
+    <!-- Modal token admin -->
+    <div id="auth-modal-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;padding:1rem">
+      <div style="background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius-lg);padding:1.5rem;width:100%;max-width:380px;display:flex;flex-direction:column;gap:1rem">
+        <div style="font-size:15px;font-weight:600;color:var(--text)">🔒 Acceso de administración</div>
+        <div id="auth-desc" style="font-size:13px;color:var(--text4);line-height:1.5">Ingresá el token de acceso. Se guardará en este dispositivo.</div>
+        <input id="auth-password" type="password" placeholder="github_pat_..." style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.6rem .75rem;font-size:13px;outline:none;font-family:monospace;width:100%;box-sizing:border-box">
+        <div id="auth-error" style="font-size:12px;color:#f14c4c;display:none">Token inválido — debe comenzar con github_</div>
+        <div style="display:flex;gap:8px;justify-content:space-between;align-items:center">
+          <button id="auth-olvidar" style="background:none;border:none;color:var(--text4);font-size:11px;cursor:pointer;padding:0;text-decoration:underline">Olvidar token guardado</button>
+          <div style="display:flex;gap:8px">
+            <button id="auth-cancelar" style="background:none;border:0.5px solid var(--border2);color:var(--text4);font-size:12px;padding:6px 14px;border-radius:8px;cursor:pointer">Cancelar</button>
+            <button id="auth-confirmar" style="background:var(--green-bg);border:0.5px solid var(--green-bd);color:var(--green-tx);font-size:12px;padding:6px 16px;border-radius:8px;cursor:pointer">Ingresar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal progreso publicación -->
+    <div id="pub-modal-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9999;align-items:center;justify-content:center;padding:1rem">
+      <div style="background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--radius-lg);padding:1.5rem;width:100%;max-width:380px;display:flex;flex-direction:column;gap:1rem">
+        <div id="pub-title" style="font-size:15px;font-weight:600;color:var(--text)">Publicando cambios…</div>
+        <div id="pub-msg" style="font-size:13px;color:var(--text2);line-height:1.6"></div>
+        <div id="pub-actions" style="display:none;justify-content:flex-end">
+          <button id="pub-cerrar" style="background:var(--green-bg);border:0.5px solid var(--green-bd);color:var(--green-tx);font-size:12px;padding:6px 16px;border-radius:8px;cursor:pointer">Aceptar</button>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>
