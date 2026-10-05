@@ -1,7 +1,7 @@
 // sw.js — Service Worker del Cancionero
 // Versión del caché — cambiá este número cada vez que subas cambios a GitHub
 
-const CACHE_VERSION = "cancionero-v1024";
+const CACHE_VERSION = "cancionero-v1025";
 
 const ARCHIVOS = [
   "./",
@@ -40,13 +40,21 @@ self.addEventListener("activate", e => {
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
 
+  // Solo interceptar http y https — ignorar chrome-extension:// y otros
+  if (!e.request.url.startsWith("http")) return;
+
   const url = new URL(e.request.url);
 
-  // Nunca interceptar sw.js — el navegador debe poder compararlo siempre con la red
+  // Nunca interceptar sw.js ni requests a APIs externas (GitHub, etc.)
   if (url.pathname.endsWith("sw.js")) return;
+  if (!url.hostname.includes("localhost") && !url.hostname.includes("github.io") && !url.hostname.includes("127.0.0.1")) return;
 
-  // index.html y manifest.json: network-first para detectar cambios rápido
-  if (url.pathname.endsWith("/") || url.pathname.endsWith("index.html") || url.pathname.endsWith("manifest.json")) {
+  // network-first: index.html, manifest.json, canciones.json, setlist.json
+  // Así siempre se muestra la versión más reciente cuando hay red
+  const networkFirst = ["/", "index.html", "manifest.json", "canciones.json", "setlist.json"];
+  const esNetworkFirst = networkFirst.some(p => url.pathname.endsWith(p));
+
+  if (esNetworkFirst) {
     e.respondWith(
       fetch(e.request)
         .then(response => {
@@ -61,7 +69,7 @@ self.addEventListener("fetch", e => {
     return;
   }
 
-  // Resto: stale-while-revalidate
+  // Resto (imágenes, etc.): stale-while-revalidate
   e.respondWith(
     caches.match(e.request).then(cached => {
       const fetchPromise = fetch(e.request)
