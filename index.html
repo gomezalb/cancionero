@@ -3056,6 +3056,13 @@ document.getElementById("btn-borrar-lista").addEventListener("click", () => {
   }
 });
 
+function utf8ToBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let b = "";
+  bytes.forEach(byte => b += String.fromCharCode(byte));
+  return btoa(b);
+}
+
 async function publicarSetlist(nombre, expira, borrar = false) {
   const msg = document.getElementById("fijar-msg");
   msg.textContent = "Conectando…";
@@ -3065,7 +3072,7 @@ async function publicarSetlist(nombre, expira, borrar = false) {
     songs: [...setlist]
   };
   const jsonStr = JSON.stringify(datos, null, 2);
-  const base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+  const base64 = utf8ToBase64(jsonStr);
   const headers = {
     "Authorization": "token " + getAdminToken(),
     "Accept": "application/vnd.github+json",
@@ -3116,8 +3123,11 @@ function construirExportado() {
       const c = { ...s };
       const ov = acordesLS[s.titulo];
       if (ov) {
-        if (ov.tono) c.tono = ov.tono; else delete c.tono;
-        if (ov.acordes_texto) c.acordes = textoToAcordesArray(ov.acordes_texto); else delete c.acordes;
+        if (ov.tono)          c.tono          = ov.tono;          else delete c.tono;
+        if (ov.acordes_texto) c.acordes        = textoToAcordesArray(ov.acordes_texto); else delete c.acordes;
+        if (ov.carpeta)       c.carpeta        = ov.carpeta;
+        if (ov.youtube)       c.youtube        = ov.youtube;       else delete c.youtube;
+        if (ov.youtube_vocal) c.youtube_vocal  = ov.youtube_vocal; else delete c.youtube_vocal;
       }
       delete c.nueva;
       return c;
@@ -3146,7 +3156,7 @@ function mostrarPubModal(titulo, msg, conBotonCerrar = false) {
 async function publicarEnGitHub() {
   const exportado = construirExportado();
   const jsonStr = JSON.stringify(exportado, null, 2);
-  const base64 = btoa(unescape(encodeURIComponent(jsonStr)));
+  const base64 = utf8ToBase64(jsonStr);
   const headers = {
     "Authorization": "token " + getAdminToken(),
     "Accept": "application/vnd.github+json",
