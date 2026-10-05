@@ -1392,15 +1392,19 @@ function actualizarBotonRetomar() {
 // Convierte texto con [Am]sílaba en HTML con el acorde encima
 function renderizarAcordes(texto) {
   if (!texto) return "";
-  // Limpiar solo etiquetas de tamaño (fs-XX) pero preservar <b> y <br>
+  // Limpiar etiquetas de tamaño (fs-XX)
   texto = texto.replace(/<span[^>]*class="fs-[^"]*"[^>]*>/gi, "").replace(/<\/span>/gi, "");
   // Desescapar entidades HTML básicas
   texto = texto.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"');
-  // Dividir por <br> preservándolos
-  const lineas = texto.split(/(<br>)/gi);
-  return lineas.map(linea => {
-    if (/^<br>$/i.test(linea)) return "<br>";
-    if (!linea.includes("[")) return linea;
+  // Normalizar saltos: \n y <br> equivalen a lo mismo
+  texto = texto.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  texto = texto.replace(/<br\s*\/?>/gi, "\n");
+  // Quitar tags <b> del texto de acordes — el bold se aplica globalmente por CSS
+  texto = texto.replace(/<\/?b>/gi, "");
+  // Dividir en líneas por \n
+  const lineas = texto.split("\n");
+  const htmlLineas = lineas.map(linea => {
+    if (!linea.includes("[")) return `<b>${linea}</b>`;
     const partes = linea.split(/(\[[^\]]+\])/);
     let html = "";
     let acordePendiente = null;
@@ -1409,16 +1413,14 @@ function renderizarAcordes(texto) {
         acordePendiente = parte.slice(1, -1);
       } else {
         if (acordePendiente) {
-          // Extraer texto hasta el primer espacio como ancla, preservando HTML
-          const stripped = parte.replace(/<[^>]+>/g, "");
-          const match = stripped.match(/^(\S*)(\s*.*)?$/s);
+          const match = parte.match(/^(\S*)(\s*.*)?$/s);
           const anclaLen = match ? match[1].length : 0;
           const ancla = parte.slice(0, anclaLen) || "&nbsp;";
           const resto = parte.slice(anclaLen);
-          html += `<span class="acorde-wrap"><span class="acorde-txt">${acordePendiente}</span><span class="acorde-sil">${ancla}</span></span>${resto}`;
+          html += `<span class="acorde-wrap"><span class="acorde-txt">${acordePendiente}</span><span class="acorde-sil"><b>${ancla}</b></span></span><b>${resto}</b>`;
           acordePendiente = null;
         } else {
-          html += parte;
+          html += `<b>${parte}</b>`;
         }
       }
     }
@@ -1426,7 +1428,8 @@ function renderizarAcordes(texto) {
       html += `<span class="acorde-wrap"><span class="acorde-txt">${acordePendiente}</span><span class="acorde-sil">&nbsp;</span></span>`;
     }
     return html;
-  }).join("");
+  });
+  return htmlLineas.join("<br>");
 }
 
 function cancionTieneAcordes(song) {
@@ -3151,21 +3154,22 @@ async function publicarEnGitHub() {
     "X-GitHub-Api-Version": "2022-11-28"
   };
   const url = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/${GH_CONFIG.file}`;
-  mostrarPubModal("Publicando…", "Conectando con GitHub…");
+  mostrarPubModal("Publicando…", "Obteniendo versión actual…");
+
+  // Siempre obtener el SHA fresco justo antes del PUT
   let sha = null;
   try {
     const res = await fetch(url, { headers });
     if (res.ok) {
-      const data = await res.json();
-      sha = data.sha;
+      sha = (await res.json()).sha;
     } else if (res.status !== 404) {
-      const err = await res.json();
-      throw new Error(err.message || `Error HTTP ${res.status}`);
+      throw new Error((await res.json()).message || `Error HTTP ${res.status}`);
     }
   } catch(e) {
     mostrarPubModal("Error de conexión", `No se pudo conectar con GitHub.<br><small style="color:var(--text4)">${e.message}</small>`, true);
     return;
   }
+
   mostrarPubModal("Publicando…", `Subiendo ${exportado.length} canciones…`);
   const body = {
     message: `Actualización del cancionero — ${new Date().toLocaleDateString("es-AR", {day:"2-digit",month:"2-digit",year:"numeric"})}`,
@@ -3173,6 +3177,7 @@ async function publicarEnGitHub() {
     branch: GH_CONFIG.branch
   };
   if (sha) body.sha = sha;
+
   try {
     const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
     if (res.ok) {
@@ -3191,6 +3196,25 @@ async function publicarEnGitHub() {
       );
     } else {
       const err = await res.json();
+      // 409 = SHA desactualizado — reintentar automáticamente una vez
+      if (res.status === 409) {
+        mostrarPubModal("Publicando…", "Conflicto detectado, reintentando…");
+        try {
+          const res2 = await fetch(url, { headers });
+          if (res2.ok) sha = (await res2.json()).sha; else throw new Error();
+          body.sha = sha;
+          const res3 = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+          if (res3.ok) {
+            localStorage.removeItem("cancionero_eliminadas");
+            mostrarPubModal("✓ Publicado", `El cancionero se actualizó correctamente con <b>${exportado.length} canciones</b>.<br><br>Los cambios estarán visibles en aproximadamente <b>1 minuto</b>.`, true);
+            return;
+          }
+          throw new Error((await res3.json()).message || "Error al reintentar");
+        } catch(e2) {
+          mostrarPubModal("Error al publicar", `Conflicto persistente. Recargá la página e intentá de nuevo.<br><small style="color:var(--text4)">${e2.message}</small>`, true);
+          return;
+        }
+      }
       throw new Error(err.message || `Error HTTP ${res.status}`);
     }
   } catch(e) {
