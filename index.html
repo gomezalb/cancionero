@@ -932,6 +932,9 @@
       <p>Publicá los cambios directamente en el cancionero para que queden disponibles para todos.</p>
       <button id="btn-export-json" style="display:none">&#8595; Exportar canciones.json</button>
       <button id="btn-publicar">&#9729; Publicar cambios</button>
+      <div id="cambios-pendientes" style="display:none;font-size:12px;color:#f0a500;margin-top:6px">
+        ⚠ Tenés cambios guardados localmente pendientes de publicar. No refresques la página hasta publicar.
+      </div>
     </div>
 
     <!-- Fijar lista para todos -->
@@ -1729,7 +1732,7 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
   document.getElementById("setlist-panel").style.display = activeTab === "setlist" ? "flex" : "none";
   document.getElementById("editar-panel").style.display = activeTab === "editar" ? "flex" : "none";
   if (activeTab === "setlist") renderSetlist();
-  if (activeTab === "editar") renderNuevasGuardadas();
+  if (activeTab === "editar") { renderNuevasGuardadas(); actualizarCambiosPendientes(); }
 }));
 
 // ── Cancionero ─────────────────────────────────────────────────
@@ -2792,6 +2795,7 @@ document.getElementById("acorde-guardar").addEventListener("click", () => {
   SONGS.sort((a,b) => a.titulo.localeCompare(b.titulo));
   msg.textContent = "✓ Guardado";
   msg.className = "edit-msg ok";
+  actualizarCambiosPendientes(true);
   renderList();
 });
 
@@ -2871,6 +2875,7 @@ document.getElementById("letra-guardar").addEventListener("click", () => {
 
   msg.textContent = "✓ Letra actualizada";
   msg.className = "edit-msg ok";
+  actualizarCambiosPendientes(true);
   renderList();
 });
 
@@ -2938,6 +2943,7 @@ document.getElementById("nueva-guardar").addEventListener("click", () => {
   msg.className = "edit-msg ok";
   document.getElementById("nueva-form").style.display = "none";
   document.getElementById("btn-mostrar-nueva-form").textContent = "＋ Nueva canción";
+  actualizarCambiosPendientes(true);
   renderList();
   renderNuevasGuardadas();
 });
@@ -3029,6 +3035,13 @@ document.getElementById("btn-export-json").addEventListener("click", () => {
 });
 
 // ── Administración: publicar y fijar lista ─────────────────────
+let _cambiosPendientes = false;
+function actualizarCambiosPendientes(hay) {
+  if (hay !== undefined) _cambiosPendientes = hay;
+  const el = document.getElementById("cambios-pendientes");
+  if (el) el.style.display = _cambiosPendientes ? "block" : "none";
+}
+
 function actualizarFijarCount() {
   const el = document.getElementById("fijar-count");
   if (el) el.textContent = setlist.length;
@@ -3197,6 +3210,7 @@ async function publicarEnGitHub() {
     const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
     if (res.ok) {
       localStorage.removeItem("cancionero_eliminadas");
+      actualizarCambiosPendientes(false);
       if ("caches" in window) {
         caches.keys().then(keys => keys.forEach(k => caches.open(k).then(c => {
           c.delete(new Request("./canciones.json"));
