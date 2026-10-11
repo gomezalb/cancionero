@@ -298,13 +298,21 @@
   },
   {
     "titulo": "Aquel que la buena obra empezó",
-    "preview": "/Aquel que la buena obra empezó/ \u000bserá fiel en completarla, \u000bél es fiel en completarla.\u000bEl que la comenzó \u000bserá fiel en completarla en ti.",
+    "preview": "/Aquel que la buena obra empezó/ \nserá fiel en completarla, \nél es fiel en completarla.\nEl que la comenzó \nserá fiel en completarla en ti.",
     "slides": [
-      "<b>/Aquel que la buena obra empezó/ <br>será fiel en completarla, <br>él es fiel en completarla.<br>El que la comenzó <br>será fiel en completarla en ti.</b>",
-      "<b>Si la lucha que enfrentas<br>a tu esperanza tornó ya sin paz<br>o de tanto esperar<br>ya perdiendo tu canción estás,<br>puedes creer que en sus manos estás, <br>seguro estarás, <br>nunca te ha de abandonar,<br>eres su gozo, y su gran tesoro aquí.</b>"
+      "<b>/Aquel que la buena obra empezó/</b><br><b>será fiel en completarla,</b><br><b>él es fiel en completarla.</b><br><b>El que la comenzó</b><br><b>será fiel en completarla en ti.</b>",
+      "<b>Si la lucha que enfrentas</b><br><b>a tu esperanza tornó ya sin paz</b><br><b>o de tanto esperar</b><br><b>ya perdiendo tu canción estás,</b>",
+      "<b>puedes creer que en sus manos estás,</b><br><b>seguro estarás,</b><br><b>nunca te ha de abandonar,</b><br><b>eres su gozo, y su gran tesoro aquí.</b>",
+      "<b>/Aquel que la buena obra empezó/</b><br><b>será fiel en completarla,</b><br><b>él es fiel en completarla.</b><br><b>El que la comenzó</b><br><b>será fiel en completarla en ti.</b>"
     ],
     "tono": "SOL",
-    "carpeta": "A"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "/Aquel que la buena obra empezó/ \nserá fiel en completarla, \nél es fiel en completarla.\nEl que la comenzó \nserá fiel en completarla en ti.",
+      "Si la lucha que enfrentas\na tu esperanza tornó ya sin paz\no de tanto esperar\nya perdiendo tu canción estás,",
+      "puedes creer que en sus manos estás, \nseguro estarás, \nnunca te ha de abandonar,\neres su gozo, y su gran tesoro aquí.",
+      "/Aquel que la buena obra empezó/ \nserá fiel en completarla, \nél es fiel en completarla.\nEl que la comenzó \nserá fiel en completarla en ti."
+    ]
   },
   {
     "titulo": "Aquí estás, te vemos mover",
@@ -1485,13 +1493,21 @@
   },
   {
     "titulo": "Gracias por la cruz",
-    "preview": "Gracias por la cruz, oh Dios\u000bEl precio que pagaste por mí\u000bLlevando mi pecado allí\u000bSublime amor, tu gracia me salvó\u000b\u000bGracias por tu amor, oh Dios\u000bTus manos clavadas por mí\u000bMe haz lavado, oh Señor\u000bConozco hoy \u000btu abrazo y tu perdón",
+    "preview": "Gracias por la cruz, oh Dios\nEl precio que pagaste por mí\nLlevando mi pecado allí\nSublime amor, tu gracia me salvó",
     "slides": [
-      "<b>Gracias por la cruz, oh Dios<br>El precio que pagaste por mí<br>Llevando mi pecado allí<br>Sublime amor, tu gracia me salvó<br><br>Gracias por tu amor, oh Dios<br>Tus manos clavadas por mí<br>Me haz lavado, oh Señor<br>Conozco hoy <br>tu abrazo y tu perdón</b>",
-      "<b>Digno es el Señor<br>En su trono está<br>Hoy te coronamos Rey<br>Y reinas con poder<br>Altísimo Señor<br>Jesús hijo de Dios<br>El amado del cielo en la cruz murió<br>//Digno es el Señor//</b>"
+      "<b>Gracias por la cruz, oh Dios</b><br><b>El precio que pagaste por mí</b><br><b>Llevando mi pecado allí</b><br><b>Sublime amor, tu gracia me salvó</b>",
+      "<b>Gracias por tu amor, oh Dios</b><br><b>Tus manos clavadas por mí</b><br><b>Me haz lavado, oh Señor</b><br><b>Conozco hoy</b><br><b>tu abrazo y tu perdón</b>",
+      "<b>Digno es el Señor</b><br><b>En su trono está</b><br><b>Hoy te coronamos Rey</b><br><b>Y reinas con poder</b><br><b>Altísimo Señor</b><br><b>Jesús hijo de Dios</b><br><b>El amado del cielo en la cruz murió</b>",
+      "<b>//Digno es el Señor//</b>"
     ],
     "tono": "LA",
-    "carpeta": "G"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "Gracias por la cruz, oh Dios\nEl precio que pagaste por mí\nLlevando mi pecado allí\nSublime amor, tu gracia me salvó",
+      "Gracias por tu amor, oh Dios\nTus manos clavadas por mí\nMe haz lavado, oh Señor\nConozco hoy \ntu abrazo y tu perdón",
+      "Digno es el Señor\nEn su trono está\nHoy te coronamos Rey\nY reinas con poder\nAltísimo Señor\nJesús hijo de Dios\nEl amado del cielo en la cruz murió",
+      "//Digno es el Señor//"
+    ]
   },
   {
     "titulo": "Gracias Señor te damos",
@@ -2053,15 +2069,29 @@
   },
   {
     "titulo": "Nos hemos congregado",
-    "preview": "Nos hemos congregado \u000ben este día para darle gloria,\u000bla música tocamos,\u000blas voces elevamos\u000bpara darle honra.\u000bUn son de júbilo \u000bha llenado este lugar,\u000bcon el propósito \u000bde su nombre levantar.",
+    "preview": "Nos hemos congregado \nen este día para darle gloria,\nla música tocamos,\nlas voces elevamos\npara darle honra.",
     "slides": [
-      "<b>Nos hemos congregado <br>en este día para darle gloria,<br>la música tocamos,<br>las voces elevamos<br>para darle honra.<br>Un son de júbilo <br>ha llenado este lugar,<br>con el propósito <br>de su nombre levantar.</b>",
-      "<b>Alabadle, alabadle, solo a él.<br>Adoradle, adoradle, él ha sido fiel.<br>Cantad la gloria de su nombre,<br>pues es digno de exaltar;<br>declaremos a los pueblos <br>de su amor y majestad.<br><br> Alabadle, adorad a Jesús el rey.</b>",
-      "<b>Las manos levantadas,<br>corazones hacia el cielo esperando,<br>sin duda lo sabremos,<br>que su presencia se esta manifestando.<br>Sentado sobre el trono de nuestra adoración, <br>dejamos que el gobierne sobre toda creación.</b>",
-      "<b>Alabadle, alabadle, solo a él.<br>Adoradle, adoradle, él ha sido fiel.<br>Cantad la gloria de su nombre,<br>pues es digno de exaltar;<br>declaremos a los pueblos <br>de su amor y majestad.<br><br> Alabadle, adorad a Jesús el rey.</b>"
+      "<b>Nos hemos congregado</b><br><b>en este día para darle gloria,</b><br><b>la música tocamos,</b><br><b>las voces elevamos</b><br><b>para darle honra.</b>",
+      "<b>Un son de júbilo</b><br><b>ha llenado este lugar,</b><br><b>con el propósito</b><br><b>de su nombre levantar.</b>",
+      "<b>Alabadle, alabadle, solo a él.</b><br><b>Adoradle, adoradle, él ha sido fiel.</b><br><b>Cantad la gloria de su nombre,</b><br><b>pues es digno de exaltar;</b><br><b>declaremos a los pueblos</b><br><b>de su amor y majestad.</b>",
+      "<b>Alabadle, adorad a Jesús el rey.</b>",
+      "<b>Las manos levantadas,</b><br><b>corazones hacia el cielo esperando,</b><br><b>sin duda lo sabremos,</b><br><b>que su presencia se esta manifestando.</b>",
+      "<b>Sentado sobre el trono de nuestra adoración,</b><br><b>dejamos que el gobierne sobre toda creación.</b>",
+      "<b>Alabadle, alabadle, solo a él.</b><br><b>Adoradle, adoradle, él ha sido fiel.</b><br><b>Cantad la gloria de su nombre,</b><br><b>pues es digno de exaltar;</b><br><b>declaremos a los pueblos</b><br><b>de su amor y majestad.</b>",
+      "<b>Alabadle, adorad a Jesús el rey.</b>"
     ],
     "tono": "MI",
-    "carpeta": "N"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "Nos hemos congregado\nen este día para darle gloria,\nla música tocamos,\nlas voces elevamos\npara darle honra.",
+      "Un son de júbilo\nha llenado este lugar,\ncon el propósito\nde su nombre levantar.",
+      "Alabadle, alabadle, solo a él.\nAdoradle, adoradle, él ha sido fiel.\nCantad la gloria de su nombre,\npues es digno de exaltar;\ndeclaremos a los pueblos\nde su amor y majestad.",
+      "Alabadle, adorad a Jesús el rey.",
+      "Las manos levantadas,\ncorazones hacia el cielo esperando,\nsin duda lo sabremos,\nque su presencia se esta manifestando.",
+      "Sentado sobre el trono de nuestra adoración,\ndejamos que el gobierne sobre toda creación.",
+      "Alabadle, alabadle, solo a él.\nAdoradle, adoradle, él ha sido fiel.\nCantad la gloria de su nombre,\npues es digno de exaltar;\ndeclaremos a los pueblos\nde su amor y majestad.",
+      "Alabadle, adorad a Jesús el rey."
+    ]
   },
   {
     "titulo": "Nunca se apartará de tu boca",
@@ -2182,13 +2212,19 @@
   },
   {
     "titulo": "Pertenezco a ti",
-    "preview": "Pertenezco a ti Señor Jesús,\u000by no hay nada que pueda borrar,\u000bese amor que un día tú \u000bpusiste dentro de mí,\u000by que ahora quiero recordar.\u000b\u000bHoy mi vaso cae ante ti,\u000bderramado a tus pies Señor.\u000bA rogarte tú perdón, por tanta rebelión\u000bque impide que pueda\u000bdarte mi amor.",
+    "preview": "Pertenezco a ti Señor Jesús,\ny no hay nada que pueda borrar,\nese amor que un día tú \npusiste dentro de mí,\ny que ahora quiero recordar.",
     "slides": [
-      "<b>Pertenezco a ti Señor Jesús,<br>y no hay nada que pueda borrar,<br>ese amor que un día tú <br>pusiste dentro de mí,<br>y que ahora quiero recordar.<br><br>Hoy mi vaso cae ante ti,<br>derramado a tus pies Señor.<br>A rogarte tú perdón, por tanta rebelión<br>que impide que pueda<br>darte mi amor.</b>",
-      "<b>/Alcanza oh Dios, mi corazón.<br>Rómpelo y límpialo,<br>que tu puedas a través de mí,<br>reflejar tu gloria y tu amor/<br><br>/Reflejar tu gloria y tu amor/</b>"
+      "<b>Pertenezco a ti Señor Jesús,</b><br><b>y no hay nada que pueda borrar,</b><br><b>ese amor que un día tú</b><br><b>pusiste dentro de mí,</b><br><b>y que ahora quiero recordar.</b>",
+      "<b>Hoy mi vaso cae ante ti,</b><br><b>derramado a tus pies Señor.</b><br><b>A rogarte tú perdón, por tanta rebelión</b><br><b>que impide que pueda</b><br><b>darte mi amor.</b>",
+      "<b>/Alcanza oh Dios, mi corazón.</b><br><b>Rómpelo y límpialo,</b><br><b>que tu puedas a través de mí,</b><br><b>reflejar tu gloria y tu amor/</b><br><br><br><b>/Reflejar tu gloria y tu amor/</b>"
     ],
     "tono": "SOL",
-    "carpeta": "P"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "Pertenezco a ti Señor Jesús,\ny no hay nada que pueda borrar,\nese amor que un día tú \npusiste dentro de mí,\ny que ahora quiero recordar.",
+      "Hoy mi vaso cae ante ti,\nderramado a tus pies Señor.\nA rogarte tú perdón, por tanta rebelión\nque impide que pueda\ndarte mi amor.",
+      "/Alcanza oh Dios, mi corazón.\nRómpelo y límpialo,\nque tu puedas a través de mí,\nreflejar tu gloria y tu amor/\n\n/Reflejar tu gloria y tu amor/"
+    ]
   },
   {
     "titulo": "Por mucho tiempo busqué",
@@ -2665,9 +2701,10 @@
   },
   {
     "titulo": "Solamente en Cristo",
-    "preview": "Solamente en Cristo, solamente en Él.\u000bSolamente en Cristo, hay Salvación.\u000b\u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, hay Salvación. \u000bNo hay otro nombre dado a los hombres,\u000bsolamente en Cristo, solamente en Él",
+    "preview": "Solamente en Cristo, solamente en Él.\nSolamente en Cristo, hay Salvación.",
     "slides": [
-      "<b>Solamente en Cristo, solamente en Él.<br>Solamente en Cristo, hay Salvación.<br><br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, hay Salvación. <br>No hay otro nombre dado a los hombres,<br>solamente en Cristo, solamente en Él</b>"
+      "<b>Solamente en Cristo, solamente en Él.</b><br><b>Solamente en Cristo, hay Salvación.</b>",
+      "<b>No hay otro nombre dado a los hombres,</b><br><b>solamente en Cristo, hay Salvación.</b><br><b>No hay otro nombre dado a los hombres,</b><br><b>solamente en Cristo, solamente en Él</b>"
     ],
     "tono": "DO",
     "carpeta": "S",
@@ -3106,13 +3143,21 @@
   },
   {
     "titulo": "Vamos escalando peldaños",
-    "preview": "Vamos escalando peldaños\nvamos llevando la cruz\nsigamos el camino angosto\nque con Cristo es mucho mejor\n\n/Ya viene la recompensa\nya no voy a llorar\ntengo a Cristo en mi vida\ny por eso puedo escalar/",
+    "preview": "Vamos escalando peldaños\nvamos llevando la cruz\nsigamos el camino angosto\nque con Cristo es mucho mejor",
     "slides": [
-      "<b>Vamos escalando peldaños<br>vamos llevando la cruz<br>sigamos el camino angosto<br>que con Cristo es mucho mejor<br><br>/Ya viene la recompensa<br>ya no voy a llorar<br>tengo a Cristo en mi vida<br>y por eso puedo escalar/</b>",
-      "<b>A veces me siento débil<br>ya no puedo escalar<br>alzo mis manos al cielo<br>viene Cristo y fuerzas me da<br><br>/Ya viene la recompensa<br>ya no voy a llorar<br>tengo a Cristo en mi vida<br>y por eso puedo escalar./</b>"
+      "<b>Vamos escalando peldaños</b><br><b>vamos llevando la cruz</b><br><b>sigamos el camino angosto</b><br><b>que con Cristo es mucho mejor</b>",
+      "<b>/Ya viene la recompensa</b><br><b>ya no voy a llorar</b><br><b>tengo a Cristo en mi vida</b><br><b>y por eso puedo escalar/</b>",
+      "<b>A veces me siento débil</b><br><b>ya no puedo escalar</b><br><b>alzo mis manos al cielo</b><br><b>viene Cristo y fuerzas me da</b>",
+      "<b>/Ya viene la recompensa</b><br><b>ya no voy a llorar</b><br><b>tengo a Cristo en mi vida</b><br><b>y por eso puedo escalar./</b>"
     ],
     "tono": "REm",
-    "carpeta": "V"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "Vamos escalando peldaños\nvamos llevando la cruz\nsigamos el camino angosto\nque con Cristo es mucho mejor",
+      "/Ya viene la recompensa\nya no voy a llorar\ntengo a Cristo en mi vida\ny por eso puedo escalar/",
+      "A veces me siento débil\nya no puedo escalar\nalzo mis manos al cielo\nviene Cristo y fuerzas me da",
+      "/Ya viene la recompensa\nya no voy a llorar\ntengo a Cristo en mi vida\ny por eso puedo escalar./"
+    ]
   },
   {
     "titulo": "Ven a mi corazón oh Cristo",
