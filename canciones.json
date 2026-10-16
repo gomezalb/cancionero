@@ -1604,14 +1604,16 @@
   },
   {
     "titulo": "He decidido no salir de la roca",
-    "preview": "/He decidido no salir de la roca, \nNo seré movido/\u000bme he propuesto en mi corazón,\u000bser santo como él.\u000bHe decidido no salir de la roca, Jesús…\u000b\u000b/Jesús tu eres la roca,\u000bJesús mi santo refugio\u000bJesús el poder\u000bpara vencer y destruir, \u000bfortalezas del mal/",
+    "preview": "/He decidido no salir de la roca, \nNo seré movido/\nme he propuesto en mi corazón,\nser santo como él.\nHe decidido no salir de la roca, Jesús…",
     "slides": [
-      "<b>/He decidido no salir de la roca, <br>No seré movido/<br>me he propuesto en mi corazón,<br>ser santo como él.<br>He decidido no salir de la roca, Jesús…<br><br>/Jesús tu eres la roca,<br>Jesús mi santo refugio<br>Jesús el poder<br>para vencer y destruir, <br>fortalezas del mal/</b>"
+      "<b>/He decidido no salir de la roca,</b><br><b>No seré movido/</b><br><b>me he propuesto en mi corazón,</b><br><b>ser santo como él.</b><br><b>He decidido no salir de la roca, Jesús…</b>",
+      "<b>/Jesús tu eres la roca,</b><br><b>Jesús mi santo refugio</b><br><b>Jesús el poder</b><br><b>para vencer y destruir,</b><br><b>fortalezas del mal/</b>"
     ],
     "tono": "DO",
-    "carpeta": "H",
+    "carpeta": "Alabanza",
     "acordes": [
-      "/He [DO]decidido no salir de la [REm]roca,\nNo [SOL]seré [DO]movido/\nme he [FA]propuesto en mi [SOL]corazón,\nser [MIm]santo como [LAm]él.\nHe [REm]decidido no salir de la [SOL]roca, [DO]Jesús…\n\n/[REm]Jesús [SOL]tu eres la [DO]roca,\n[REm]Jesús [SOL]mi santo [DO]refugio [DO7]\n[FA]Jesús el [SOL]poder\npara [MIm]vencer y [LAm]destruir,\n[REm]fortalezas [SOL]del [DO]mal/"
+      "/He [DO]decidido no salir de la [REm]roca,\nNo [SOL]seré [DO]movido/\nme he [FA]propuesto en mi [SOL]corazón,\nser [MIm]santo como [LAm]él.\nHe [REm]decidido no salir de la [SOL]roca, [DO]Jesús…",
+      "/[REm]Jesús [SOL]tu eres la [DO]roca,\n[REm]Jesús [SOL]mi santo [DO]refugio [DO7]\n[FA]Jesús el [SOL]poder\npara [MIm]vencer y [LAm]destruir,\n[REm]fortalezas [SOL]del [DO]mal/"
     ]
   },
   {
@@ -1756,13 +1758,20 @@
   },
   {
     "titulo": "La alegría está en el corazón",
-    "preview": "La alegría está en el corazón \u000bde aquel que conoce a Jesús.\u000bLa verdadera paz la tiene aquel\u000bque ya conoce a Jesús.\u000b\u000bEl sentimiento más precioso\u000bque viene de nuestro Señor, \u000bes el amor, de aquel\u000bque ya conoce a Jesús.",
+    "preview": "La alegría está en el corazón \nde aquel que conoce a Jesús.\nLa verdadera paz la tiene aquel\nque ya conoce a Jesús.",
     "slides": [
-      "<b>La alegría está en el corazón <br>de aquel que conoce a Jesús.<br>La verdadera paz la tiene aquel<br>que ya conoce a Jesús.<br><br>El sentimiento más precioso<br>que viene de nuestro Señor, <br>es el amor, de aquel<br>que ya conoce a Jesús.</b>",
-      "<b>/Puedo pisar una tropa y saltar<br>la muralla, aleluya, aleluya/<br><br>Cristo es la roca de mi salvación<br>en el no hay condenación</b>",
-      "<b>/Alelu, aleluya; alelu, aleluya/<br><br>El sentimiento más precioso<br>que viene de nuestro Señor Jesús<br>es el amor, de aquel<br>que ya conoce a Jesús.</b>"
+      "<b>La alegría está en el corazón</b><br><b>de aquel que conoce a Jesús.</b><br><b>La verdadera paz la tiene aquel</b><br><b>que ya conoce a Jesús.</b>",
+      "<b>El sentimiento más precioso</b><br><b>que viene de nuestro Señor,</b><br><b>es el amor, de aquel</b><br><b>que ya conoce a Jesús.</b>",
+      "<b>/Puedo pisar una tropa y saltar</b><br><b>la muralla, aleluya, aleluya/</b><br><br><br><b>Cristo es la roca de mi salvación</b><br><b>en el no hay condenación</b>",
+      "<b>/Alelu, aleluya; alelu, aleluya/</b><br><br><br><b>El sentimiento más precioso</b><br><b>que viene de nuestro Señor Jesús</b><br><b>es el amor, de aquel</b><br><b>que ya conoce a Jesús.</b>"
     ],
-    "carpeta": "L"
+    "carpeta": "Alabanza",
+    "acordes": [
+      "La alegría está en el corazón \nde aquel que conoce a Jesús.\nLa verdadera paz la tiene aquel\nque ya conoce a Jesús.",
+      "El sentimiento más precioso\nque viene de nuestro Señor, \nes el amor, de aquel\nque ya conoce a Jesús.",
+      "/Puedo pisar una tropa y saltar\nla muralla, aleluya, aleluya/\n\nCristo es la roca de mi salvación\nen el no hay condenación",
+      "/Alelu, aleluya; alelu, aleluya/\n\nEl sentimiento más precioso\nque viene de nuestro Señor Jesús\nes el amor, de aquel\nque ya conoce a Jesús."
+    ]
   },
   {
     "titulo": "La bondad de Dios (Te amo Dios)",
@@ -2015,13 +2024,13 @@
   },
   {
     "titulo": "No hay Dios tan grande como tú",
-    "preview": "/No hay Dios tan grande como tú, \u000bno lo hay, no lo hay/\u000b\n/No hay Dios que pueda hacer las obras,\u000bcomo las que haces tú/",
+    "preview": "/No hay Dios tan grande como tú, \nno lo hay, no lo hay/\n\n/No hay Dios que pueda hacer las obras,\ncomo las que haces tú/",
     "slides": [
-      "<b>/No hay Dios tan grande como tú, <br>no lo hay, no lo hay/<br><br>/No hay Dios que pueda hacer las obras,<br>como las que haces tú/</b>",
-      "<b>/No es con ejército, ni con espada,<br>mas con tu Santo Espíritu/<br><br>//Y esos montes se moverán//<br>por tu Santo Espíritu.</b>"
+      "<b>/No hay Dios tan grande como tú,</b><br><b>no lo hay, no lo hay/</b><br><br><br><b>/No hay Dios que pueda hacer las obras,</b><br><b>como las que haces tú/</b>",
+      "<b>/No es con ejército, ni con espada,</b><br><b>mas con tu Santo Espíritu/</b><br><br><br><b>//Y esos montes se moverán//</b><br><b>por tu Santo Espíritu.</b>"
     ],
     "tono": "MI",
-    "carpeta": "N",
+    "carpeta": "Alabanza",
     "acordes": [
       "/No hay [MI]Dios tan grande como tú,\nno lo [FA#m]hay[SI], no lo [MI]hay/\n\n/No hay [LA]Dios que [SI]pueda hacer las [SOL#m]obras,[DO#m]\ncomo [FA#m]las que [SI]haces [MI]tú/",
       "/No es con [MI]ejército, ni con espada,\nmas con tu [FA#m]Santo [SI]Espíri[MI]tu/\n\nY esos [LA]montes[SI] se [SOL#m]move[DO#m]rán\nY esos [FA#m]montes[SI] se [MI]moverán\nY esos [LA]montes[SI] se [SOL#m]move[DO#m]rán\npor tu [FA#m]Santo [SI]Espíri[MI]tu."
