@@ -2902,12 +2902,24 @@ function textoToSlides(texto) {
   // Divide por --- y convierte cada bloque a HTML en negrita
   return texto.split(/^---$/m).map(bloque => {
     const lineas = bloque.trim().split(/\n/);
-    const html = lineas.map((l, i) => {
+    const partes = [];
+    let bloqueActual = [];
+
+    for (const l of lineas) {
       const t = l.trim();
-      if (!t) return i === 0 ? "" : "<br>";
-      return `<b>${t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</b>`;
-    }).filter((l, i, arr) => !(l === "" && (i === 0 || i === arr.length - 1)));
-    return html.join("<br>");
+      if (!t) {
+        // Línea vacía = separador de estrofa
+        if (bloqueActual.length) {
+          partes.push(bloqueActual.join("<br>"));
+          bloqueActual = [];
+        }
+      } else {
+        bloqueActual.push(`<b>${t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</b>`);
+      }
+    }
+    if (bloqueActual.length) partes.push(bloqueActual.join("<br>"));
+
+    return partes.join('<span class="stanza-sep"></span>');
   }).filter(Boolean);
 }
 
@@ -3590,6 +3602,10 @@ function htmlToPlainLines(html) {
       if (tag === "br") {
         result.push(currentLine);
         currentLine = [];
+      } else if (tag === "span" && node.className === "stanza-sep") {
+        // Separador de estrofa → línea vacía
+        if (currentLine.length) { result.push(currentLine); currentLine = []; }
+        result.push([]); // línea vacía
       } else if (tag === "b") {
         node.childNodes.forEach(ch => {
           if (ch.nodeType === Node.TEXT_NODE && ch.textContent) {
@@ -3680,14 +3696,20 @@ async function generarPPTX(queue, nombreArchivo) {
         });
       }
 
-      // Contenido centrado en mayúsculas con sombra por run
+      // Contenido centrado en mayúsculas
       const textObjs = [];
       lines.forEach((lineTokens, li) => {
-        lineTokens.forEach(tok => {
-          textObjs.push({ text: tok.text.toUpperCase(), options: { bold: true, breakLine: false } });
-        });
-        if (li < lines.length - 1) {
+        const isEmpty = lineTokens.length === 0;
+        if (isEmpty) {
+          // Línea vacía (separador de estrofa) → un solo salto
           textObjs.push({ text: "", options: { breakLine: true } });
+        } else {
+          lineTokens.forEach(tok => {
+            textObjs.push({ text: tok.text.toUpperCase(), options: { bold: true, breakLine: false } });
+          });
+          if (li < lines.length - 1) {
+            textObjs.push({ text: "", options: { breakLine: true } });
+          }
         }
       });
 
