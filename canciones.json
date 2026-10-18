@@ -1762,8 +1762,8 @@
     "slides": [
       "<b>La alegría está en el corazón</b><br><b>de aquel que conoce a Jesús.</b><br><b>La verdadera paz la tiene aquel</b><br><b>que ya conoce a Jesús.</b>",
       "<b>El sentimiento más precioso</b><br><b>que viene de nuestro Señor,</b><br><b>es el amor, de aquel</b><br><b>que ya conoce a Jesús.</b>",
-      "<b>/Puedo pisar una tropa y saltar</b><br><b>la muralla, aleluya, aleluya/</b><br><br><br><b>Cristo es la roca de mi salvación</b><br><b>en el no hay condenación</b>",
-      "<b>/Alelu, aleluya; alelu, aleluya/</b><br><br><br><b>El sentimiento más precioso</b><br><b>que viene de nuestro Señor Jesús</b><br><b>es el amor, de aquel</b><br><b>que ya conoce a Jesús.</b>"
+      "<b>/Puedo pisar una tropa y saltar</b><br><b>la muralla, aleluya, aleluya/</b><span class=\"stanza-sep\"></span><b>Cristo es la roca de mi salvación</b><br><b>en el no hay condenación</b>",
+      "<b>/Alelu, aleluya; alelu, aleluya/</b><span class=\"stanza-sep\"></span><b>El sentimiento más precioso</b><br><b>que viene de nuestro Señor Jesús</b><br><b>es el amor, de aquel</b><br><b>que ya conoce a Jesús.</b>"
     ],
     "carpeta": "Alabanza",
     "acordes": [
@@ -2027,8 +2027,8 @@
     "titulo": "No hay Dios tan grande como tú",
     "preview": "/No hay Dios tan grande como tú,\nno lo hay, no lo hay/\n\n/No hay Dios que pueda hacer las obras,\ncomo las que haces tú/",
     "slides": [
-      "<b>/No hay Dios tan grande como tú,</b><br><b>no lo hay, no lo hay/</b><br><br><br><b>/No hay Dios que pueda hacer las obras,</b><br><b>como las que haces tú/</b>",
-      "<b>/No es con ejército, ni con espada,</b><br><b>mas con tu Santo Espíritu/</b><br><br><br><b>//Y esos montes se moverán//</b><br><b>por tu Santo Espíritu.</b>"
+      "<b>/No hay Dios tan grande como tú,</b><br><b>no lo hay, no lo hay/</b><span class=\"stanza-sep\"></span><b>/No hay Dios que pueda hacer las obras,</b><br><b>como las que haces tú/</b>",
+      "<b>/No es con ejército, ni con espada,</b><br><b>mas con tu Santo Espíritu/</b><span class=\"stanza-sep\"></span><b>//Y esos montes se moverán//</b><br><b>por tu Santo Espíritu.</b>"
     ],
     "tono": "MI",
     "carpeta": "Alabanza",
