@@ -1767,11 +1767,12 @@
     ],
     "carpeta": "Alabanza",
     "acordes": [
-      "La alegría está en el corazón \nde aquel que conoce a Jesús.\nLa verdadera paz la tiene aquel\nque ya conoce a Jesús.",
-      "El sentimiento más precioso\nque viene de nuestro Señor, \nes el amor, de aquel\nque ya conoce a Jesús.",
-      "/Puedo pisar una tropa y saltar\nla muralla, aleluya, aleluya/\n\nCristo es la roca de mi salvación\nen el no hay condenación",
-      "/Alelu, aleluya; alelu, aleluya/\n\nEl sentimiento más precioso\nque viene de nuestro Señor Jesús\nes el amor, de aquel\nque ya conoce a Jesús."
-    ]
+      "[SOL]La alegría está en el corazón \nde [DO]aquel que conoce a [SOL]Jesús.[RE]\n[SOL]La verdadera [MIm]paz la tiene aquel\nque [LA]ya conoce a [RE]Jesús.",
+      "[SOL]El sentimiento más precioso\nque [DO]viene de nuestro [DOm]Señor, \nes el [SOL]amor, de [RE]aquel\nque ya conoce a [SOL]Jesús.",
+      "/[SOL]Puedo pisar una tropa y [SOL7]saltar\nla muralla, [DO]aleluya, [SOL]aleluya/\n\n[SOL]Cristo es la roca de mi salvación\nen [SOL]Él no hay condena[RE]ción",
+      "[SOL]Alelu, alelu[SOL7]ya; [DO]alelu, alelu[SOL]ya\n[SOL]Alelu, alelu[MIm]ya; [LA7]alelu, alelu[RE]ya\n\n[SOL]El sentimiento más [SOL7]precioso\nque [DO]viene de nuestro [DOm]Señor Jesús\nes el [SOL]amor, de [RE]aquel\nque ya conoce a [SOL]Jesús."
+    ],
+    "tono": "SOL"
   },
   {
     "titulo": "La bondad de Dios (Te amo Dios)",
@@ -2396,6 +2397,15 @@
     ],
     "tono": "FA#m",
     "carpeta": "Q"
+  },
+  {
+    "titulo": "Recíbela",
+    "preview": "Recíbela, recíbela\nLa alabanza que hoy te canto\nRecíbela, recíbela\nDe adentro de mi corazón",
+    "slides": [
+      "<b>Recíbela, recíbela</b><br><b>La alabanza que hoy te canto</b><br><b>Recíbela, recíbela</b><br><b>De adentro de mi corazón</b>",
+      "<b>Tú eres omnipotente</b><br><b>No hay otro como Tú</b><br><b>Cuán grandes son tus obras</b><br><b>Te amo mi Jesús</b>"
+    ],
+    "carpeta": "Alabanza"
   },
   {
     "titulo": "Regocíjate y canta",
