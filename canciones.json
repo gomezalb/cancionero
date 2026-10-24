@@ -391,10 +391,10 @@
   },
   {
     "titulo": "Bellas palabras de vida",
-    "preview": "Bellas palabras de vida \u000bSon las de Cristo Jesús,\u000b\nEllas alientan mi alma,\ndan fortaleza y luz.\u000b\nBellas palabras de vida \u000bResplandecen en mi ser",
+    "preview": "Bellas palabras de vida, son las de Cristo Jesús,\nEllas alientan mi alma, dan fortaleza y luz.\nBellas palabras de vida, resplandecen en mi ser.",
     "slides": [
-      "<b>Bellas palabras de vida <br>Son las de Cristo Jesús,<br><br>Ellas alientan mi alma,<br>dan fortaleza y luz.<br><br>Bellas palabras de vida <br>Resplandecen en mi ser</b>",
-      "<b>/Bellas palabras que nunca en la vida <br>había escuchado hasta hoy/</b>"
+      "<b>Bellas palabras de vida, son las de Cristo Jesús,</b><br><b>Ellas alientan mi alma, dan fortaleza y luz.</b><br><b>Bellas palabras de vida, resplandecen en mi ser.</b>",
+      "<b>/Bellas palabras que nunca en la vida</b><br><b>había escuchado hasta hoy/</b>"
     ],
     "tono": "RE",
     "carpeta": "B"
@@ -814,10 +814,12 @@
   },
   {
     "titulo": "Cuando Cristo vino a mi corazón",
-    "preview": "Cuando Cristo vino a mi corazón,\u000bmi vida entera cambió.\u000bSu paz y su amor alejaron de mi\u000blas dudas, las sombras y el temor.\u000b\u000b/Mi vida comenzó cuando el Señor llegó,\u000by hoy puedo cantar de su amor/.",
+    "preview": "Cuando Cristo vino a mi corazón,\nmi vida entera cambió.\nSu paz y su amor alejaron de mi\nlas dudas, las sombras y el temor.",
     "slides": [
-      "<b>Cuando Cristo vino a mi corazón,<br>mi vida entera cambió.<br>Su paz y su amor alejaron de mi<br>las dudas, las sombras y el temor.<br><br>/Mi vida comenzó cuando el Señor llegó,<br>y hoy puedo cantar de su amor/.</b>",
-      "<b>Hoy quiero que Cristo te transforme a ti, <br>que cambie tu vida también,<br>piensa en la cruz donde murió por ti, <br>y ábrele tu corazón.<br><br>/ Y así comenzará la vida para ti,<br>y así podrás cantar de su amor/.</b>"
+      "<b>Cuando Cristo vino a mi corazón,</b><br><b>mi vida entera cambió.</b><br><b>Su paz y su amor alejaron de mi</b><br><b>las dudas, las sombras y el temor.</b>",
+      "<b>/Mi vida comenzó cuando el Señor llegó,</b><br><b>y hoy puedo cantar de su amor/</b>",
+      "<b>Hoy quiero que Cristo te transforme a ti,</b><br><b>que cambie tu vida también,</b><br><b>piensa en la cruz donde murió por ti,</b><br><b>y ábrele tu corazón.</b>",
+      "<b>/ Y así comenzará la vida para ti,</b><br><b>y así podrás cantar de su amor/</b>"
     ],
     "tono": "DO",
     "carpeta": "C"
@@ -3139,12 +3141,17 @@
   },
   {
     "titulo": "Una mirada de fe",
-    "preview": "/Una mirada de fe, una mirada al Señor, \u000bes la que puede salvar al pecador/\u000b\u000b/Y si tu vienes a Cristo Jesús,\u000b él te perdonará;\u000bporque una mirada de fe \u000bes aquella que puede salvar/",
+    "preview": "/Una mirada de fe, una mirada al Señor,\nes la que puede salvar al pecador/",
     "slides": [
-      "<b>/Una mirada de fe, una mirada al Señor, <br>es la que puede salvar al pecador/<br><br>/Y si tu vienes a Cristo Jesús,<br> él te perdonará;<br>porque una mirada de fe <br>es aquella que puede salvar/</b>"
+      "<b>/Una mirada de fe, una mirada al Señor,</b><br><b>es la que puede salvar al pecador/</b>",
+      "<b>/Y si tu vienes a Cristo Jesús,</b><br><b>Él te perdonará;</b><br><b>porque una mirada de fe</b><br><b>es aquella que puede salvar/</b>"
     ],
     "tono": "RE",
-    "carpeta": "U"
+    "carpeta": "",
+    "acordes": [
+      "/Una mirada de fe, una mirada al Señor,\nes la que puede salvar al pecador/",
+      "/Y si tu vienes a Cristo Jesús,\nÉl te perdonará;\nporque una mirada de fe\nes aquella que puede salvar/"
+    ]
   },
   {
     "titulo": "Vamos a cantar con la música del cielo",
