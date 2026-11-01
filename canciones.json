@@ -906,10 +906,12 @@
   },
   {
     "titulo": "De tal manera al mundo tu amaste",
-    "preview": "De tal manera al mundo tú amaste\u000bque hasta tu vida entregaste\u000btu costado abierto fue.\u000bY fueron esas gotas de tu sangre\u000bque mi corazón limpiaron\u000bme hiciste un nuevo ser",
+    "preview": "De tal manera al mundo tú amaste\nque hasta tu vida entregaste\ntu costado abierto fue.",
     "slides": [
-      "<b>De tal manera al mundo tú amaste<br>que hasta tu vida entregaste<br>tu costado abierto fue.<br>Y fueron esas gotas de tu sangre<br>que mi corazón limpiaron<br>me hiciste un nuevo ser</b>",
-      "<b>Gracias, te doy gracias<br>por tu amor sin condición en esa cruz<br>gracias, te doy gracias<br>por tu perdón, la salvación en esa cruz<br><br>/Amor sin condición, <br>amor sin condición/</b>"
+      "<b>De tal manera al mundo tú amaste</b><br><b>que hasta tu vida entregaste</b><br><b>tu costado abierto fue.</b>",
+      "<b>Y fueron esas gotas de tu sangre</b><br><b>que mi corazón limpiaron</b><br><b>me hiciste un nuevo ser</b>",
+      "<b>Gracias, te doy gracias</b><br><b>por tu amor sin condición en esa cruz</b><br><b>gracias, te doy gracias</b><br><b>por tu perdón, la salvación en esa cruz</b>",
+      "<b>/Amor sin condición,</b><br><b>amor sin condición/</b>"
     ],
     "tono": "MI",
     "carpeta": "D",
@@ -1780,11 +1782,11 @@
     "titulo": "La bondad de Dios (Te amo Dios)",
     "preview": "Te amo Dios\nTu amor nunca me falla\nMi existir\nEn tus manos está\nDesde el momento en que despierto\nHasta el anochecer\nYo cantaré de la bondad de Dios",
     "slides": [
-      "<b>Te amo Dios<br>Tu amor nunca me falla<br>Mi existir<br>En tus manos está<br>Desde el momento en que despierto<br>Hasta el anochecer<br>Yo cantaré de la bondad de Dios</b>",
-      "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios</b>",
-      "<b>Yo amo tu voz<br>Me has guiado por el fuego<br>Tú cerca estás<br>En la oscuridad<br>Te conozco como Padre<br>Y como amigo fiel<br>Mi vida está<br>En la bondad de Dios</b>",
-      "<b>En mi vida has sido bueno<br>En mi vida has sido tan, tan fiel<br>Con mi ser con cada aliento<br>Yo cantaré de la bondad de Dios</b>",
-      "<b>Tu fidelidad sigue persiguiéndome<br>Tu fidelidad sigue persiguiéndome<br>Todo lo que soy te lo entrego hoy<br>A ti me rendiré<br>Tu fidelidad sigue persiguiéndome</b>"
+      "<b>Te amo Dios</b><br><b>Tu amor nunca me falla</b><br><b>Mi existir</b><br><b>En tus manos está</b><br><b>Desde el momento en que despierto</b><br><b>Hasta el anochecer</b><br><b>Yo cantaré de la bondad de Dios</b>",
+      "<b>En mi vida has sido bueno</b><br><b>En mi vida has sido tan, tan fiel</b><br><b>Con mi ser con cada aliento</b><br><b>Yo cantaré de la bondad de Dios</b>",
+      "<b>Yo amo tu voz</b><br><b>Me has guiado por el fuego</b><br><b>Tú cerca estás</b><br><b>En la oscuridad</b><br><b>Te conozco como Padre</b><br><b>Y como amigo fiel</b><br><b>Mi vida está</b><br><b>En la bondad de Dios</b>",
+      "<b>En mi vida has sido bueno</b><br><b>En mi vida has sido tan, tan fiel</b><br><b>Con mi ser con cada aliento</b><br><b>Yo cantaré de la bondad de Dios</b>",
+      "<b>Tu fidelidad sigue persiguiéndome</b><br><b>Tu fidelidad sigue persiguiéndome</b><br><b>Todo lo que soy te lo entrego hoy</b><br><b>A ti me rendiré</b><br><b>Tu fidelidad sigue persiguiéndome</b>"
     ],
     "tono": "LA",
     "carpeta": "L",
@@ -1817,13 +1819,16 @@
   },
   {
     "titulo": "Las cadenas de la muerte",
-    "preview": "Las cadenas de la muerte me quitó\u000bPara mí ya no hay condenación\u000bHay libertad, libertad\n\nSiendo esclavo del pecado me libró\u000bEn la cruz compró mi redención\u000bY libertad, libertad",
+    "preview": "Las cadenas de la muerte me quitó\nPara mí ya no hay condenación\nHay libertad, libertad",
     "slides": [
-      "<b>Las cadenas de la muerte me quitó<br>Para mí ya no hay condenación<br>Hay libertad, libertad<br><br>Siendo esclavo del pecado me libró<br>En la cruz compró mi redención<br>Y libertad, libertad</b>",
-      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>",
-      "<b>Yo proclamo al que en la cruz por mi murió<br>Y cambió mi duro corazón<br>Por libertad, libertad<br><br>El poder de su evangelio me salvó<br>Y no me avergüenzo del Señor<br>Mi libertad, libertad</b>",
-      "<b>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>",
-      "<b>///Al que el Hijo hace libre<br>Es libre en verdad///<br><br>Rompió mis cadenas, me dio vida nueva<br>Y al fondo del mar echó mi maldad<br>Lavó mis pecados y me ha perdonado<br>Solo en el nombre de Jesús<br>Hay libertad</b>"
+      "<b>Las cadenas de la muerte me quitó</b><br><b>Para mí ya no hay condenación</b><br><b>Hay libertad, libertad</b>",
+      "<b>Siendo esclavo del pecado me libró</b><br><b>En la cruz compró mi redención</b><br><b>Y libertad, libertad</b>",
+      "<b>Rompió mis cadenas, me dio vida nueva</b><br><b>Y al fondo del mar echó mi maldad</b><br><b>Lavó mis pecados y me ha perdonado</b><br><b>Solo en el nombre de Jesús</b><br><b>Hay libertad</b>",
+      "<b>Yo proclamo al que en la cruz por mi murió</b><br><b>Y cambió mi duro corazón</b><br><b>Por libertad, libertad</b>",
+      "<b>El poder de su evangelio me salvó</b><br><b>Y no me avergüenzo del Señor</b><br><b>Mi libertad, libertad</b>",
+      "<b>Rompió mis cadenas, me dio vida nueva</b><br><b>Y al fondo del mar echó mi maldad</b><br><b>Lavó mis pecados y me ha perdonado</b><br><b>Solo en el nombre de Jesús</b><br><b>Hay libertad</b>",
+      "<b>///Al que el Hijo hace libre</b><br><b>Es libre en verdad///</b>",
+      "<b>Rompió mis cadenas, me dio vida nueva</b><br><b>Y al fondo del mar echó mi maldad</b><br><b>Lavó mis pecados y me ha perdonado</b><br><b>Solo en el nombre de Jesús</b><br><b>Hay libertad</b>"
     ],
     "tono": "DO",
     "carpeta": "L",
@@ -2319,13 +2324,16 @@
   },
   {
     "titulo": "Quebrantado fuiste oh Jesús (Gloria en lo alto)",
-    "preview": "Quebrantado fuiste, oh Jesús \u000bpor mi rebelión\u000bResucitaste y hoy puedo vivir \u000by de nuevo nacer\u000b\u000bCuánto amaste al mundo, Dios\u000bCuánto te quiero agradecer",
+    "preview": "Quebrantado fuiste, oh Jesús \npor mi rebelión\nResucitaste y hoy puedo vivir \ny de nuevo nacer",
     "slides": [
-      "<b>Quebrantado fuiste, oh Jesús <br>por mi rebelión<br>Resucitaste y hoy puedo vivir <br>y de nuevo nacer<br><br>Cuánto amaste al mundo, Dios<br>Cuánto te quiero agradecer</b>",
-      "<b>Gloria, gloria en lo alto<br>Gloria en lo alto, gloria al Rey<br>Gloria, gloria a ti mi Cristo<br>Tu nombre por siempre exaltaré</b>",
-      "<b>Venciste el mundo pecador<br>Con tu gran amor<br>Ahora el Padre te ha exaltado<br>Al más alto lugar<br><br>Cuánto amaste al mundo Dios<br>Cuánto te quiero enaltecer</b>",
-      "<b>/Gloria, gloria en lo alto<br>Gloria en lo alto, gloria al Rey<br>Gloria, gloria a ti mi Cristo<br>Tu nombre por siempre exaltaré/</b>",
-      "<b>/Digno, solo tú eres digno<br>Solo tú eres digno<br>Solo tú eres Dios/<br><br>/Gloria, gloria en lo alto<br>Gloria en lo alto, gloria al rey<br>Gloria, gloria a ti mi Cristo<br>Tu nombre por siempre exaltaré/</b>"
+      "<b>Quebrantado fuiste, oh Jesús</b><br><b>por mi rebelión</b><br><b>Resucitaste y hoy puedo vivir</b><br><b>y de nuevo nacer</b>",
+      "<b>Cuánto amaste al mundo, Dios</b><br><b>Cuánto te quiero agradecer</b>",
+      "<b>Gloria, gloria en lo alto</b><br><b>Gloria en lo alto, gloria al Rey</b><br><b>Gloria, gloria a ti mi Cristo</b><br><b>Tu nombre por siempre exaltaré</b>",
+      "<b>Venciste el mundo pecador</b><br><b>Con tu gran amor</b><br><b>Ahora el Padre te ha exaltado</b><br><b>Al más alto lugar</b>",
+      "<b>Cuánto amaste al mundo Dios</b><br><b>Cuánto te quiero enaltecer</b>",
+      "<b>/Gloria, gloria en lo alto</b><br><b>Gloria en lo alto, gloria al Rey</b><br><b>Gloria, gloria a ti mi Cristo</b><br><b>Tu nombre por siempre exaltaré/</b>",
+      "<b>/Digno, solo tú eres digno</b><br><b>Solo tú eres digno</b><br><b>Solo tú eres Dios/</b>",
+      "<b>/Gloria, gloria en lo alto</b><br><b>Gloria en lo alto, gloria al rey</b><br><b>Gloria, gloria a ti mi Cristo</b><br><b>Tu nombre por siempre exaltaré/</b>"
     ],
     "tono": "MI",
     "carpeta": "Q",
@@ -2359,14 +2367,17 @@
   },
   {
     "titulo": "Quien rompe el poder del pecado (Gracia sublime es)",
-    "preview": "Quién rompe el poder de el pecado\u000bSu amor es fuerte y poderoso\u000bEl rey de gloria, el rey de majestad\u000b\u000bConmueve el mundo con su estruendo\u000bY nos asombra con maravillas\u000bEl rey de gloria, el rey de majestad",
+    "preview": "Quién rompe el poder de el pecado\nSu amor es fuerte y poderoso\nEl rey de gloria, el rey de majestad",
     "slides": [
-      "<b>Quién rompe el poder de el pecado<br>Su amor es fuerte y poderoso<br>El rey de gloria, el rey de majestad<br><br>Conmueve el mundo con su estruendo<br>Y nos asombra con maravillas<br>El rey de gloria, el rey de majestad</b>",
-      "<b>Gracia sublime es<br>Perfecto es tu amor<br>Tomaste mi lugar<br>Cargaste tú mi cruz<br>Tu vida diste ahí<br>Y ahora libre soy<br>Jesús te adoro<br>Por lo que hiciste en mí</b>",
-      "<b>Pusiste en orden todo el caos<br>Nos adoptaste como tus hijos<br>El rey de gloria, el rey de majestad.<br><br>El que gobierna con su justicia<br>Y resplandece con su belleza<br>El rey de gloria, el rey de majestad</b>",
-      "<b>Gracia sublime es<br>Perfecto es tu amor<br>Tomaste mi lugar<br>Cargaste tú mi cruz<br>Tu vida diste ahí<br>Y ahora libre soy<br>Jesús te adoro<br>Por lo que hiciste en mí</b>",
-      "<b>/Digno es el Cordero de Dios<br>Digno es el rey que la muerte venció/<br><br>Digno es el Cordero de Dios<br>¡Digno! ¡Digno! ¡Digno!</b>",
-      "<b>Gracia sublime es<br>Perfecto es tu amor<br>Tomaste mi lugar<br>Cargaste tú mi cruz<br>Tu vida diste ahí<br>Y ahora libre soy<br>Jesús te adoro<br>Por lo que hiciste en mí</b>"
+      "<b>Quién rompe el poder de el pecado</b><br><b>Su amor es fuerte y poderoso</b><br><b>El rey de gloria, el rey de majestad</b>",
+      "<b>Conmueve el mundo con su estruendo</b><br><b>Y nos asombra con maravillas</b><br><b>El rey de gloria, el rey de majestad</b>",
+      "<b>Gracia sublime es</b><br><b>Perfecto es tu amor</b><br><b>Tomaste mi lugar</b><br><b>Cargaste tú mi cruz</b><br><b>Tu vida diste ahí</b><br><b>Y ahora libre soy</b><br><b>Jesús te adoro</b><br><b>Por lo que hiciste en mí</b>",
+      "<b>Pusiste en orden todo el caos</b><br><b>Nos adoptaste como tus hijos</b><br><b>El rey de gloria, el rey de majestad.</b>",
+      "<b>El que gobierna con su justicia</b><br><b>Y resplandece con su belleza</b><br><b>El rey de gloria, el rey de majestad</b>",
+      "<b>Gracia sublime es</b><br><b>Perfecto es tu amor</b><br><b>Tomaste mi lugar</b><br><b>Cargaste tú mi cruz</b><br><b>Tu vida diste ahí</b><br><b>Y ahora libre soy</b><br><b>Jesús te adoro</b><br><b>Por lo que hiciste en mí</b>",
+      "<b>/Digno es el Cordero de Dios</b><br><b>Digno es el rey que la muerte venció/</b>",
+      "<b>Digno es el Cordero de Dios</b><br><b>¡Digno! ¡Digno! ¡Digno!</b>",
+      "<b>Gracia sublime es</b><br><b>Perfecto es tu amor</b><br><b>Tomaste mi lugar</b><br><b>Cargaste tú mi cruz</b><br><b>Tu vida diste ahí</b><br><b>Y ahora libre soy</b><br><b>Jesús te adoro</b><br><b>Por lo que hiciste en mí</b>"
     ],
     "tono": "MI",
     "carpeta": "Q",
