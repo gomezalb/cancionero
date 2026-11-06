@@ -389,11 +389,11 @@
 
     #fs-video-ctl { display: none; align-items: center; gap: 4px; }
     #fs-video-ctl .fs-sep { display: inline-block; width: 1px; height: 16px; background: #333; margin: 0 4px; }
-    #fs-video-extra { display: none; align-items: center; gap: 4px; }
+    #fs-video-extra { display: none; align-items: center; gap: 4px; flex: none; }
     #fs-video-extra .vid-ico { font-size: 12px; color: #777; }
-    #fs-video-extra input[type=range] { width: 70px; accent-color: #7eb8f7; cursor: pointer; }
+    #fs-video-extra input[type=range] { width: 70px; flex: none; accent-color: #7eb8f7; cursor: pointer; }
     #fs-video-clear { font-size: 11px; }
-    #fs-video-vel-val { min-width: 38px; font-size: 11px; }
+    #fs-video-extra #fs-video-vel-val { width: 46px; min-width: 46px; flex: none; padding: 0; text-align: center; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
     #fs-video-btn { font-size: 13px; }
     #fs-video-btn.activo { color: #7eb8f7; border-color: #7eb8f7; }
     @media (min-width: 1024px) {
@@ -1236,8 +1236,8 @@
           <span class="vid-ico" title="Oscurecer fondo">&#9680;</span>
           <input type="range" id="fs-video-dim" min="0" max="90" value="45" title="Oscurecer fondo"/>
           <span class="vid-ico" title="Velocidad del video">&#9201;</span>
-          <input type="range" id="fs-video-vel" min="25" max="200" step="5" value="100" title="Velocidad del video"/>
-          <button id="fs-video-vel-val" title="Velocidad (clic para volver a 1×)">1×</button>
+          <input type="range" id="fs-video-vel" min="25" max="200" step="1" value="100" title="Velocidad del video"/>
+          <button id="fs-video-vel-val" title="Velocidad (clic para volver a 1×)">1.00×</button>
           <button id="fs-video-clear" title="Quitar video">&#10005;</button>
         </span>
       </span>
@@ -3667,7 +3667,7 @@ function fsVideoAplicarVel() {
   const r = (parseInt(document.getElementById("fs-video-vel").value) || 100) / 100;
   const v = document.getElementById("fs-bg-video");
   v.defaultPlaybackRate = r; v.playbackRate = r;
-  document.getElementById("fs-video-vel-val").textContent = (+r.toFixed(2)) + "×";
+  document.getElementById("fs-video-vel-val").textContent = r.toFixed(2) + "×";
 }
 function fsVideoAplicarDim() {
   const val = parseInt(document.getElementById("fs-video-dim").value) || 0;
