@@ -218,6 +218,8 @@
       /* Modo acordes en desktop: restaurar fs-transp */
       #fso.modo-acordes #fs-transp { display: flex !important; }
     }
+    #fs-song-title.fs-link { cursor: pointer; }
+    #fs-song-title.fs-link:hover { color: #fff; text-decoration: underline; }
     #fs-song-title { font-size: 20px; font-weight: 500; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
     #fs-song-counter { font-size: 13px; color: #555; white-space: nowrap; flex-shrink: 0; }
 
@@ -358,6 +360,50 @@
     #fs-mayus { font-size: 11px; font-weight: 600; letter-spacing: .03em; }
     #fs-mayus.activo { color: #7eb8f7; border-color: #7eb8f7; }
     #fs-content.mayus { text-transform: uppercase; }
+
+    /* ── Estilo de proyección en PC = mismo estilo que el .PPTX (Arial, negrita, MAYÚSCULAS, blanco) ── */
+    @media (min-width: 1024px) {
+      #fso:not(.modo-acordes) #fs-content {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        /* Evita que el navegador "engorde" el texto blanco sobre fondo oscuro */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: geometricPrecision;
+      }
+      #fso:not(.modo-acordes) #fs-content.sin-mayus { text-transform: none; }
+    }
+
+    /* ── Video de fondo (solo en memoria, solo proyección en PC) ── */
+    #fs-bg-video, #fs-bg-dim {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      z-index: -1; pointer-events: none; opacity: 0; transition: opacity .35s;
+    }
+    #fs-bg-video { object-fit: cover; background: #000; }
+    #fs-bg-dim { background: #000; }
+    #fso.video-on #fs-bg-video { opacity: 1; }
+    #fso.video-on #fs-bg-dim { opacity: var(--fs-dim, .45); }
+    #fso.video-on #fs-content { text-shadow: 0 1px 6px rgba(0,0,0,.7); }
+
+    #fs-video-ctl { display: none; align-items: center; gap: 4px; }
+    #fs-video-ctl .fs-sep { display: inline-block; width: 1px; height: 16px; background: #333; margin: 0 4px; }
+    #fs-video-extra { display: none; align-items: center; gap: 4px; }
+    #fs-video-extra .vid-ico { font-size: 12px; color: #777; }
+    #fs-video-extra input[type=range] { width: 70px; accent-color: #7eb8f7; cursor: pointer; }
+    #fs-video-clear { font-size: 11px; }
+    #fs-video-vel-val { min-width: 38px; font-size: 11px; }
+    #fs-video-btn { font-size: 13px; }
+    #fs-video-btn.activo { color: #7eb8f7; border-color: #7eb8f7; }
+    @media (min-width: 1024px) {
+      #fso:not(.modo-acordes) #fs-video-ctl { display: flex; }
+      #fso:not(.modo-acordes).tiene-video #fs-video-extra { display: flex; }
+    }
+    #fs-video-pre { display: none; background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+    #fs-video-pre:hover { background: var(--border); color: var(--text); }
+    #fs-video-pre.activo { color: #7eb8f7; border-color: #7eb8f7; }
+    @media (min-width: 1024px) { #fs-video-pre { display: inline-block; } }
     /* En móvil: size-ctrl va al bottom; en desktop va al top */
     @media (max-width: 1023px) {
       #fs-size-ctrl { order: 10; } /* dentro de fs-bottom en móvil via JS */
@@ -808,6 +854,7 @@
       <button id="fs-btn">&#9654; Proyectar</button>
       <button id="fs-btn-acordes">&#9654; Con acordes</button>
       <button id="fs-btn-edges" title="Proyectar con pantalla negra al inicio y al final">&#9654; Proyectar</button>
+      <button id="fs-video-pre" title="Video de fondo para la proyección (solo en memoria)">&#127916; Video</button>
     </div>
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
@@ -1155,8 +1202,13 @@
   </div>
 </div>
 
+<!-- Video de fondo: el archivo se lee del disco, no se sube ni se guarda -->
+<input type="file" id="fs-video-input" accept="video/*" style="display:none"/>
+
 <!-- Fullscreen -->
 <div id="fso">
+  <video id="fs-bg-video" muted loop playsinline autoplay></video>
+  <div id="fs-bg-dim"></div>
   <!-- Top: título + minimizar + cerrar -->
   <div id="fs-top">
     <div id="fs-song-title"></div>
@@ -1177,6 +1229,18 @@
       <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
       <span style="display:inline-block;width:1px;height:16px;background:#333;margin:0 4px"></span>
       <button id="fs-mayus" title="Convertir a mayúsculas">AA</button>
+      <span id="fs-video-ctl">
+        <span class="fs-sep"></span>
+        <button id="fs-video-btn" title="Elegir video de fondo (solo en esta sesión, no se guarda)">&#127916;</button>
+        <span id="fs-video-extra">
+          <span class="vid-ico" title="Oscurecer fondo">&#9680;</span>
+          <input type="range" id="fs-video-dim" min="0" max="90" value="45" title="Oscurecer fondo"/>
+          <span class="vid-ico" title="Velocidad del video">&#9201;</span>
+          <input type="range" id="fs-video-vel" min="25" max="200" step="5" value="100" title="Velocidad del video"/>
+          <button id="fs-video-vel-val" title="Velocidad (clic para volver a 1×)">1×</button>
+          <button id="fs-video-clear" title="Quitar video">&#10005;</button>
+        </span>
+      </span>
     </div>
     <button id="fs-minimize" title="Minimizar">&#8722;</button>
     <button id="fs-cl">&#10005;</button>
@@ -1521,10 +1585,11 @@ function htmlParaFS(html) {
 }
 
 // ── Tamaño de fuente en proyección ────────────────────────────
-const LS_FONT_SIZE = "cancionero_fs_size";
-const FS_STEP = 3;
+// En PC se guarda aparte del celular: el tamaño base cambió y no se mezclan los ajustes viejos
+const LS_FONT_SIZE = (window.innerWidth < 1024) ? "cancionero_fs_size" : "cancionero_fs_size_pc";
 const FS_MIN = 14;
-const FS_MAX = 80;
+function getFsStep() { return isMobile() ? 3 : Math.max(3, Math.round(getFsBaseSize() * 0.05)); }
+function getFsMax()  { return isMobile() ? 80 : Math.max(80, Math.round(getFsBaseSize() * 1.6)); }
 let fsSizeOffset = 0; // delta respecto al tamaño automático
 
 function cargarFontOffset() {
@@ -1538,10 +1603,12 @@ function getFsBaseSize() {
   if (w < 480) return 24;
   if (w < 768) return 30;
   if (w < 1024) return 36;
-  return 46;
+  // PC: igual que el PowerPoint. El .pptx usa 40 pt sobre una diapositiva de 7,5 in (540 pt) de alto,
+  // o sea 40/540 = 7,4 % de la altura de pantalla → 80 px en 1080p.
+  return Math.round(window.innerHeight * 40 / 540);
 }
 function aplicarFontSize() {
-  const size = Math.min(FS_MAX, Math.max(FS_MIN, getFsBaseSize() + fsSizeOffset));
+  const size = Math.min(getFsMax(), Math.max(FS_MIN, getFsBaseSize() + fsSizeOffset));
   document.getElementById("fs-content").style.fontSize = size + "px";
   document.getElementById("fs-content").style.lineHeight = fsLineHeight;
   // Botón reset: apagado si estamos en automático
@@ -1549,11 +1616,11 @@ function aplicarFontSize() {
 }
 
 document.getElementById("fs-size-down").addEventListener("click", () => {
-  fsSizeOffset = Math.max(FS_MIN - getFsBaseSize(), fsSizeOffset - FS_STEP);
+  fsSizeOffset = Math.max(FS_MIN - getFsBaseSize(), fsSizeOffset - getFsStep());
   guardarFontOffset(); aplicarFontSize();
 });
 document.getElementById("fs-size-up").addEventListener("click", () => {
-  fsSizeOffset = Math.min(FS_MAX - getFsBaseSize(), fsSizeOffset + FS_STEP);
+  fsSizeOffset = Math.min(getFsMax() - getFsBaseSize(), fsSizeOffset + getFsStep());
   guardarFontOffset(); aplicarFontSize();
 });
 document.getElementById("fs-size-reset").addEventListener("click", () => {
@@ -1562,8 +1629,8 @@ document.getElementById("fs-size-reset").addEventListener("click", () => {
 cargarFontOffset();
 
 // ── Interlineado en proyección ─────────────────────────────────
-const LS_LINE_HEIGHT = "cancionero_fs_lh";
-const LH_BASE = 1.4;
+const LS_LINE_HEIGHT = (window.innerWidth < 1024) ? "cancionero_fs_lh" : "cancionero_fs_lh_pc";
+const LH_BASE = (window.innerWidth < 1024) ? 1.4 : 1.15; // PC: espaciado simple como el .pptx
 const LH_STEP = 0.15;
 const LH_MIN  = 1.0;
 const LH_MAX  = 2.5;
@@ -2310,6 +2377,11 @@ function renderFS() {
 
   document.getElementById("fs-song-title").textContent = isPause ? "" : s.songTitle;
   document.getElementById("fs-song-counter").textContent = (!isPause && viewerQueue && viewerQueue.length > 1) ? `Canción ${s.songIdx + 1} de ${viewerQueue.length}` : "";
+  // Como en el .pptx: desde la 2.ª diapositiva en adelante el título vuelve a la primera de la canción (solo PC, sin acordes)
+  const tEl = document.getElementById("fs-song-title");
+  const tLink = !isPause && !mobile && !fsMostrarAcordes && s.slideNum > 1;
+  tEl.classList.toggle("fs-link", tLink);
+  tEl.title = tLink ? "Ir a la primera diapositiva de esta canción" : "";
 
   if (isPause) {
     document.getElementById("fs-content").innerHTML = "";
@@ -2320,6 +2392,8 @@ function renderFS() {
     document.getElementById("fs-content").innerHTML = htmlParaFS(s.html);
   }
   aplicarFontSize();
+  actualizarMayusPC();
+  fsVideoActualizar();
 
   // Controles de transposición en fullscreen
   actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
@@ -2406,6 +2480,7 @@ document.getElementById("fs-cl").addEventListener("click", () => {
   const o = document.getElementById("fso");
   o.style.display = "none";
   o.classList.remove("modo-acordes");
+  fsVideoActualizar();
   if (document.fullscreenElement) document.exitFullscreen();
   bloquearPortrait(); liberarWakeLock();
   metroOcultar();
@@ -2426,6 +2501,7 @@ document.getElementById("fs-minimize").addEventListener("click", () => {
   metroOcultar();
   const o = document.getElementById("fso");
   o.style.display = "none";
+  fsVideoActualizar();
   document.getElementById("cancionero-panel").style.display = "none";
   document.getElementById("setlist-panel").style.display = "none";
   document.getElementById("editar-panel").style.display = "none";
@@ -2442,11 +2518,18 @@ document.getElementById("fs-retomar").addEventListener("click", () => {
 });
 document.getElementById("fs-prev-slide").addEventListener("click", () => goSlide(-1));
 document.getElementById("fs-next-slide").addEventListener("click", () => goSlide(1));
+document.getElementById("fs-song-title").addEventListener("click", () => {
+  if (!document.getElementById("fs-song-title").classList.contains("fs-link")) return;
+  const s = viewerSlides[viewerIdx]; if (!s) return;
+  const first = viewerSlides.findIndex(x => x.type === "slide" && x.songIdx === s.songIdx);
+  if (first < 0 || first === viewerIdx) return;
+  viewerIdx = first; renderViewerSlide(); renderFS();
+});
 document.getElementById("fs-ps").addEventListener("click", () => goSong(-1));
 document.getElementById("fs-ns").addEventListener("click", () => goSong(1));
 
 window.addEventListener("resize", () => {
-  if (document.getElementById("fso").style.display === "flex") aplicarFontSize();
+  if (document.getElementById("fso").style.display === "flex") { aplicarFontSize(); fsVideoActualizar(); }
 });
 
 document.addEventListener("keydown", e => {
@@ -2460,6 +2543,7 @@ document.addEventListener("keydown", e => {
     else if (e.key === "ArrowRight" && e.shiftKey) goSong(1);
     else if (e.key === "Escape" && fsOpen) {
       document.getElementById("fso").style.display = "none";
+      fsVideoActualizar();
       if (document.fullscreenElement) document.exitFullscreen();
     }
   }
@@ -3448,7 +3532,8 @@ function detectarDesbordamiento() {
   const fsContent = document.getElementById("fs-content");
   if (!fsCenter || !fsContent) return [];
 
-  const alturaDisponible = fsCenter.clientHeight;
+  const csC = getComputedStyle(fsCenter);
+  const alturaDisponible = fsCenter.clientHeight - (parseFloat(csC.paddingTop) || 0) - (parseFloat(csC.paddingBottom) || 0);
   const anchoCont = fsContent.clientWidth || fsCenter.clientWidth - 160;
   const fontSize = fsContent.style.fontSize || (getFsBaseSize() + fsSizeOffset) + "px";
   const lineH = fsContent.style.lineHeight || String(fsLineHeight);
@@ -3458,7 +3543,8 @@ function detectarDesbordamiento() {
     const tmp = document.createElement("div");
     tmp.style.cssText = `position:fixed;visibility:hidden;pointer-events:none;top:-9999px;left:0;
       width:${anchoCont}px;font-size:${fontSize};line-height:${lineH};
-      text-align:center;box-sizing:border-box;padding:0 8px;`;
+      text-align:center;box-sizing:border-box;padding:0 8px;
+      font-family:Arial,Helvetica,sans-serif;font-weight:700;${fsMinusPC ? "" : "text-transform:uppercase;"}`;
     tmp.innerHTML = s.html || "";
     document.body.appendChild(tmp);
     const desborda = tmp.scrollHeight > alturaDisponible;
@@ -3469,9 +3555,13 @@ function detectarDesbordamiento() {
 }
 
 function ajustarFontSizeAutomatico() {
-  // Ajuste simple y confiable: fijar tamaño en 43px
-  const targetSize = 43;
-  fsSizeOffset = targetSize - getFsBaseSize();
+  // Achica el texto de a poco hasta que ninguna diapositiva se desborde
+  const minOff = FS_MIN - getFsBaseSize();
+  for (let i = 0; i < 80; i++) {
+    aplicarFontSize();
+    if (!detectarDesbordamiento().length || fsSizeOffset <= minOff) break;
+    fsSizeOffset = Math.max(minOff, fsSizeOffset - getFsStep());
+  }
   guardarFontOffset();
   aplicarFontSize();
 }
@@ -3508,12 +3598,119 @@ document.getElementById("overflow-igual").addEventListener("click", () => {
 });
 
 // ── Toggle mayúsculas ─────────────────────────────────────────
-let fsMayus = false;
+// En proyección PC (sin acordes) las MAYÚSCULAS vienen activadas por defecto, igual que el .PPTX;
+// "AA" las desactiva. En móvil / modo acordes se mantiene el comportamiento anterior.
+let fsMayus = false;    // móvil y modo acordes
+let fsMinusPC = false;  // proyección PC: true = minúsculas (desactivar el estilo PPTX)
+function actualizarMayusPC() {
+  const pc = !isMobile() && !fsMostrarAcordes;
+  const c = document.getElementById("fs-content");
+  c.classList.toggle("mayus", !pc && fsMayus);
+  c.classList.toggle("sin-mayus", pc && fsMinusPC);
+  document.getElementById("fs-mayus").classList.toggle("activo", pc ? !fsMinusPC : fsMayus);
+}
 document.getElementById("fs-mayus").addEventListener("click", () => {
-  fsMayus = !fsMayus;
-  document.getElementById("fs-content").classList.toggle("mayus", fsMayus);
-  document.getElementById("fs-mayus").classList.toggle("activo", fsMayus);
+  if (!isMobile() && !fsMostrarAcordes) fsMinusPC = !fsMinusPC;
+  else fsMayus = !fsMayus;
+  actualizarMayusPC();
 });
+
+// ── Video de fondo — SOLO EN MEMORIA, SOLO PROYECCIÓN EN PC ───
+// El archivo se reproduce con un blob: URL leído del disco del equipo.
+// No se sube a GitHub, no se guarda en localStorage/IndexedDB ni en el caché del Service Worker.
+// Al recargar la página hay que volver a elegirlo.
+const LS_VIDEO_DIM = "cancionero_fs_dim";
+const LS_VIDEO_VEL = "cancionero_fs_vel";
+let fsVideoURL = null;
+let fsVideoNombre = "";
+
+function fsVideoActualizar() {
+  const fso = document.getElementById("fso");
+  const v = document.getElementById("fs-bg-video");
+  const abierto = fso.style.display === "flex";
+  const pc = !isMobile() && !fsMostrarAcordes;
+  const s = viewerSlides[viewerIdx];
+  const hay = !!fsVideoURL;
+  fso.classList.toggle("tiene-video", hay);
+  // En pantallas negras (pausas) se oculta pero sigue corriendo, así no se reinicia entre canciones
+  fso.classList.toggle("video-on", hay && pc && abierto && !(s && s.type === "pause"));
+  if (hay && pc && abierto) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+  else v.pause();
+  const btn = document.getElementById("fs-video-btn");
+  const pre = document.getElementById("fs-video-pre");
+  btn.classList.toggle("activo", hay);
+  pre.classList.toggle("activo", hay);
+  pre.innerHTML = hay ? "&#127916; Video &#10003;" : "&#127916; Video";
+  pre.title = hay ? ("Video de fondo: " + fsVideoNombre + " — clic para cambiarlo") : "Video de fondo para la proyección (solo en memoria)";
+}
+function fsVideoQuitar() {
+  const v = document.getElementById("fs-bg-video");
+  v.pause(); v.removeAttribute("src"); v.load();
+  if (fsVideoURL) URL.revokeObjectURL(fsVideoURL);
+  fsVideoURL = null; fsVideoNombre = "";
+  document.getElementById("fs-video-input").value = "";
+  fsVideoActualizar();
+}
+function fsVideoElegir(file) {
+  if (!file) return;
+  if (!file.type.startsWith("video/")) { alert("El archivo elegido no es un video."); return; }
+  const v = document.getElementById("fs-bg-video");
+  if (fsVideoURL) URL.revokeObjectURL(fsVideoURL);
+  fsVideoURL = URL.createObjectURL(file);
+  fsVideoNombre = file.name;
+  v.src = fsVideoURL;
+  v.muted = true; v.loop = true;
+  fsVideoAplicarVel();
+  fsVideoActualizar();
+}
+function fsVideoAplicarVel() {
+  const r = (parseInt(document.getElementById("fs-video-vel").value) || 100) / 100;
+  const v = document.getElementById("fs-bg-video");
+  v.defaultPlaybackRate = r; v.playbackRate = r;
+  document.getElementById("fs-video-vel-val").textContent = (+r.toFixed(2)) + "×";
+}
+function fsVideoAplicarDim() {
+  const val = parseInt(document.getElementById("fs-video-dim").value) || 0;
+  document.getElementById("fso").style.setProperty("--fs-dim", (val / 100).toString());
+}
+(function initFsVideo() {
+  const inp = document.getElementById("fs-video-input");
+  const dim = document.getElementById("fs-video-dim");
+  try { const g = localStorage.getItem(LS_VIDEO_DIM); if (g !== null) dim.value = g; } catch(e) {}
+  fsVideoAplicarDim();
+  inp.addEventListener("change", () => { fsVideoElegir(inp.files[0]); inp.value = ""; });
+  document.getElementById("fs-video-btn").addEventListener("click", () => inp.click());
+  document.getElementById("fs-video-pre").addEventListener("click", () => inp.click());
+  document.getElementById("fs-video-clear").addEventListener("click", fsVideoQuitar);
+  dim.addEventListener("input", () => {
+    fsVideoAplicarDim();
+    try { localStorage.setItem(LS_VIDEO_DIM, dim.value); } catch(e) {}
+  });
+  // Evitar que las flechas del slider cambien de diapositiva
+  dim.addEventListener("keydown", e => e.stopPropagation());
+  dim.addEventListener("change", () => dim.blur());
+  // Velocidad del video (0,25× a 2×)
+  const vel = document.getElementById("fs-video-vel");
+  try { const g = localStorage.getItem(LS_VIDEO_VEL); if (g !== null) vel.value = g; } catch(e) {}
+  fsVideoAplicarVel();
+  vel.addEventListener("input", () => {
+    fsVideoAplicarVel();
+    try { localStorage.setItem(LS_VIDEO_VEL, vel.value); } catch(e) {}
+  });
+  vel.addEventListener("keydown", e => e.stopPropagation());
+  vel.addEventListener("change", () => vel.blur());
+  document.getElementById("fs-video-vel-val").addEventListener("click", () => {
+    vel.value = 100; fsVideoAplicarVel();
+    try { localStorage.setItem(LS_VIDEO_VEL, "100"); } catch(e) {}
+  });
+  document.getElementById("fs-bg-video").addEventListener("loadedmetadata", fsVideoAplicarVel);
+  // Si el video no se puede reproducir (códec no soportado), avisar y quitarlo
+  document.getElementById("fs-bg-video").addEventListener("error", () => {
+    if (!fsVideoURL) return;
+    alert("No se pudo reproducir ese video. Probá con un MP4 (H.264) o WebM.");
+    fsVideoQuitar();
+  });
+})();
 
 // ── Ayuda ─────────────────────────────────────────────────────
 function helpAbrir() { document.getElementById("help-modal-bg").classList.add("open"); }
