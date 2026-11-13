@@ -51,10 +51,11 @@
   },
   {
     "titulo": "A ti el alfa y la omega",
-    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy, me rindo\n\nA ti, el todopoderoso\nEl que es y que será\nY el gran yo soy, me entrego",
+    "preview": "A ti, el alfa y la omega\nEl principio y el fin\nY el gran yo soy, me rindo",
     "slides": [
-      "<b>A ti, el alfa y la omega<br>El principio y el fin<br>Y el gran yo soy, me rindo<br><br>A ti, el todopoderoso<br>El que es y que será<br>Y el gran yo soy, me entrego</b>",
-      "<b>Yo quiero que gobiernes mi vida<br>Me doy en sacrificio a ti<br>Yo quiero que tú ordenes mi caminar<br>que siempre viva en tu voluntad</b>"
+      "<b>A ti, el alfa y la omega</b><br><b>El principio y el fin</b><br><b>Y el gran yo soy, me rindo</b>",
+      "<b>A ti, el todopoderoso</b><br><b>El que es y que será</b><br><b>Y el gran yo soy, me entrego</b>",
+      "<b>Yo quiero que gobiernes mi vida</b><br><b>Me doy en sacrificio a ti</b><br><b>Yo quiero que tú ordenes mi caminar</b><br><b>que siempre viva en tu voluntad</b>"
     ],
     "tono": "RE",
     "carpeta": "A",
@@ -506,10 +507,12 @@
   },
   {
     "titulo": "Cantaré al Señor por siempre",
-    "preview": "/Cantaré al Señor por siempre\nsu diestra es todo poder/\n\n/Echó a la mar\nQuien los perseguía\nJinete y caballo\nEchó a la mar/",
+    "preview": "/Cantaré al Señor por siempre\nsu diestra es todo poder/",
     "slides": [
-      "<b>/Cantaré al Señor por siempre<br>su diestra es todo poder/<br><br>/Echó a la mar<br>Quien los perseguía<br>Jinete y caballo<br>Echó a la mar/</b>",
-      "<b>Echó a la mar los carros del faraón<br><br>//La-ra-la-la-la-la… //<br><br>/Mi padre es Dios<br>Y yo le exalto<br>Mi padre es Dios<br>Y le exaltaré/</b>"
+      "<b>/Cantaré al Señor por siempre</b><br><b>su diestra es todo poder/</b>",
+      "<b>/Echó a la mar</b><br><b>Quien los perseguía</b><br><b>Jinete y caballo</b><br><b>Echó a la mar/</b>",
+      "<b>Echó a la mar los carros del faraón</b><span class=\"stanza-sep\"></span><b>//La-ra-la-la-la-la… //</b>",
+      "<b>/Mi padre es Dios</b><br><b>Y yo le exalto</b><br><b>Mi padre es Dios</b><br><b>Y le exaltaré/</b>"
     ],
     "tono": "REm",
     "carpeta": "Escuela bíblica",
@@ -1117,14 +1120,21 @@
   },
   {
     "titulo": "El Dios que adoramos",
-    "preview": "El Dios que hizo los cielos y la tierra\u000bCon el poder de su palabra\u000bY reina con autoridad\nEl Dios que aún los vientos le obedecen\u000bUna palabra es suficiente\u000bPara los muertos levantar\n\nNadie es como Él\u000bOh, gran yo soy",
+    "preview": "El Dios que hizo los cielos y la tierra\nCon el poder de su palabra\nY reina con autoridad",
     "slides": [
-      "<b>El Dios que hizo los cielos y la tierra<br>Con el poder de su palabra<br>Y reina con autoridad<br>El Dios que aún los vientos le obedecen<br>Una palabra es suficiente<br>Para los muertos levantar<br><br>Nadie es como Él<br>Oh, gran yo soy</b>",
-      "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>",
-      "<b>El Dios que descendió desde su trono<br>Para llevar sobre sus hombros<br>Nuestra culpa y transgresión<br>Jesús, exaltado sobre todo<br>Nombre sobre todo nombre<br>Solo en Él hay salvación<br><br>Nadie es como Él<br>Oh, gran yo soy</b>",
-      "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>",
-      "<b>/A Él sea la gloria y el poder<br>Todo es de Él y para Él/</b>",
-      "<b>Tú eres el Dios que adoramos<br>Todopoderoso y soberano<br>Grande en misericordia <br>y poder para salvar<br><br>Tú eres el Dios que adoramos<br>Quien derrotó la muerte y el pecado<br>Glorioso redentor y rey, te adoramos</b>"
+      "<b>El Dios que hizo los cielos y la tierra</b><br><b>Con el poder de su palabra</b><br><b>Y reina con autoridad</b>",
+      "<b>El Dios que aún los vientos le obedecen</b><br><b>Una palabra es suficiente</b><br><b>Para los muertos levantar</b>",
+      "<b>Nadie es como Él</b><br><b>Oh, gran yo soy</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Todopoderoso y soberano</b><br><b>Grande en misericordia</b><br><b>y poder para salvar</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Quien derrotó la muerte y el pecado</b><br><b>Glorioso redentor y rey, te adoramos</b>",
+      "<b>El Dios que descendió desde su trono</b><br><b>Para llevar sobre sus hombros</b><br><b>Nuestra culpa y transgresión</b>",
+      "<b>Jesús, exaltado sobre todo</b><br><b>Nombre sobre todo nombre</b><br><b>Solo en Él hay salvación</b>",
+      "<b>Nadie es como Él</b><br><b>Oh, gran yo soy</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Todopoderoso y soberano</b><br><b>Grande en misericordia</b><br><b>y poder para salvar</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Quien derrotó la muerte y el pecado</b><br><b>Glorioso redentor y rey, te adoramos</b>",
+      "<b>/A Él sea la gloria y el poder</b><br><b>Todo es de Él y para Él/</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Todopoderoso y soberano</b><br><b>Grande en misericordia</b><br><b>y poder para salvar</b>",
+      "<b>Tú eres el Dios que adoramos</b><br><b>Quien derrotó la muerte y el pecado</b><br><b>Glorioso redentor y rey, te adoramos</b>"
     ],
     "tono": "SOL",
     "carpeta": "E",
@@ -1740,12 +1750,16 @@
   },
   {
     "titulo": "Junto a la cruz",
-    "preview": "Junto a la cruz, do murió el Salvador\u000bpor mis pecados, clamaba al Señor.\u000bQué maravilla, Jesús me salvó;\u000bA su nombre gloria\u000b\u000b/A su nombre gloria/\u000bQué maravilla, Jesús me salvó\u000bA su nombre gloria",
+    "preview": "Junto a la cruz, do murió el Salvador\npor mis pecados, clamaba al Señor.\nQué maravilla, Jesús me salvó;\nA su nombre gloria",
     "slides": [
-      "<b>Junto a la cruz, do murió el Salvador<br>por mis pecados, clamaba al Señor.<br>Qué maravilla, Jesús me salvó;<br>A su nombre gloria<br><br>/A su nombre gloria/<br>Qué maravilla, Jesús me salvó<br>A su nombre gloria</b>",
-      "<b>Junto a la cruz recibí el perdón,<br>limpio en su sangre es mi corazón.<br>Me gozo ya de su bendición,<br>A su nombre gloria<br><br> /A su nombre gloria/<br>Qué maravilla, Jesús me salvó<br>A su nombre gloria</b>",
-      "<b>Junto a la cruz hay el manantial<br>de agua de vida, cual el cristal.<br>Mi sed allí Cristo pudo apagar,<br>A su nombre gloria<br><br>  /A su nombre gloria/<br>Qué maravilla, Jesús me salvó<br>A su nombre gloria</b>",
-      "<b>Ven sin tardar a la cruz, pecador,<br>donde te espera el gran Redentor.<br>Allí de Dios hallarás el amor;<br>A su nombre gloria<br><br> /A su nombre gloria/<br>Qué maravilla, Jesús me salvó<br>A su nombre gloria</b>"
+      "<b>Junto a la cruz, do murió el Salvador</b><br><b>por mis pecados, clamaba al Señor.</b><br><b>Qué maravilla, Jesús me salvó;</b><br><b>A su nombre gloria</b>",
+      "<b>/A su nombre gloria/</b><br><b>Qué maravilla, Jesús me salvó</b><br><b>A su nombre gloria</b>",
+      "<b>Junto a la cruz recibí el perdón,</b><br><b>limpio en su sangre es mi corazón.</b><br><b>Me gozo ya de su bendición,</b><br><b>A su nombre gloria</b>",
+      "<b>/A su nombre gloria/</b><br><b>Qué maravilla, Jesús me salvó</b><br><b>A su nombre gloria</b>",
+      "<b>Junto a la cruz hay el manantial</b><br><b>de agua de vida, cual el cristal.</b><br><b>Mi sed allí Cristo pudo apagar,</b><br><b>A su nombre gloria</b>",
+      "<b>/A su nombre gloria/</b><br><b>Qué maravilla, Jesús me salvó</b><br><b>A su nombre gloria</b>",
+      "<b>Ven sin tardar a la cruz, pecador,</b><br><b>donde te espera el gran Redentor.</b><br><b>Allí de Dios hallarás el amor;</b><br><b>A su nombre gloria</b>",
+      "<b>/A su nombre gloria/</b><br><b>Qué maravilla, Jesús me salvó</b><br><b>A su nombre gloria</b>"
     ],
     "tono": "SOL",
     "carpeta": "Himnos"
@@ -2767,12 +2781,15 @@
   },
   {
     "titulo": "Somos iglesia",
-    "preview": "Desolados ya no más\u000bSomos herederos con Jesús\u000bExtranjeros ya no más\u000bAhora somos hijos por la Cruz\u000b\u000bSomos iglesia, reino de luz\u000bNuestra bandera la Cruz de Jesús\u000bSomos iglesia, somos nación\u000bLa tumba vacía es nuestra canción",
+    "preview": "Desolados ya no más\nSomos herederos con Jesús\nExtranjeros ya no más\nAhora somos hijos por la Cruz",
     "slides": [
-      "<b>Desolados ya no más<br>Somos herederos con Jesús<br>Extranjeros ya no más<br>Ahora somos hijos por la Cruz<br><br>Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción</b>",
-      "<b>Extraviados ya no más<br>Nos llamas de vuelta a nuestro hogar<br>Separados ya no más<br>Siempre a nuestro lado tú estás<br><br>/Somos iglesia, reino de luz<br>Nuestra bandera la Cruz de Jesús<br>Somos iglesia, somos nación<br>La tumba vacía es nuestra canción/<br>La tumba vacía es nuestra canción</b>",
-      "<b>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>",
-      "<b>Somos iglesia, reino de luz<br>Nuestra bandera la cruz de Jesús<br>Somos iglesia, somos nación<br>/La tumba vacía es nuestra canción/<br><br>/Vivo estás en gloria y honor<br>Reinas en victoria Señor<br>Nuestro ser entona a una vos<br>Cristo eres Dios<br>Cristo eres Dios/</b>"
+      "<b>Desolados ya no más</b><br><b>Somos herederos con Jesús</b><br><b>Extranjeros ya no más</b><br><b>Ahora somos hijos por la Cruz</b>",
+      "<b>Somos iglesia, reino de luz</b><br><b>Nuestra bandera la Cruz de Jesús</b><br><b>Somos iglesia, somos nación</b><br><b>La tumba vacía es nuestra canción</b>",
+      "<b>Extraviados ya no más</b><br><b>Nos llamas de vuelta a nuestro hogar</b><br><b>Separados ya no más</b><br><b>Siempre a nuestro lado tú estás</b>",
+      "<b>/Somos iglesia, reino de luz</b><br><b>Nuestra bandera la Cruz de Jesús</b><br><b>Somos iglesia, somos nación</b><br><b>La tumba vacía es nuestra canción/</b><br><b>La tumba vacía es nuestra canción</b>",
+      "<b>/Vivo estás en gloria y honor</b><br><b>Reinas en victoria Señor</b><br><b>Nuestro ser entona a una vos</b><br><b>Cristo eres Dios</b><br><b>Cristo eres Dios/</b>",
+      "<b>Somos iglesia, reino de luz</b><br><b>Nuestra bandera la cruz de Jesús</b><br><b>Somos iglesia, somos nación</b><br><b>/La tumba vacía es nuestra canción/</b>",
+      "<b>/Vivo estás en gloria y honor</b><br><b>Reinas en victoria Señor</b><br><b>Nuestro ser entona a una vos</b><br><b>Cristo eres Dios</b><br><b>Cristo eres Dios/</b>"
     ],
     "tono": "RE",
     "carpeta": "S",
@@ -3245,10 +3262,12 @@
   },
   {
     "titulo": "Voy en el camino del hogar de gloria",
-    "preview": "/Voy en el camino del hogar de gloria/\u000b/Voy en el camino/\nVoy en el camino, del hogar de gloria\n\n/Veré a Jesús, llegando allá/\u000b/Veré a Jesús/\nVeré a Jesús, llegando allá\n\n/No habrá tristeza del otro lado/\n/No habrá tristeza/\nNo habrá tristeza, del otro lado",
+    "preview": "/Voy en el camino del hogar de gloria/\n/Voy en el camino/\nVoy en el camino, del hogar de gloria",
     "slides": [
-      "<b>/Voy en el camino del hogar de gloria/<br>/Voy en el camino/<br>Voy en el camino, del hogar de gloria<br><br>/Veré a Jesús, llegando allá/<br>/Veré a Jesús/<br>Veré a Jesús, llegando allá<br><br>/No habrá tristeza del otro lado/<br>/No habrá tristeza/<br>No habrá tristeza, del otro lado</b>",
-      "<b>Voy en el camino del hogar de gloria<br>Veré a Jesús, llegando allá<br>/No habrá tristeza/<br>No habrá tristeza, del otro lado</b>"
+      "<b>/Voy en el camino del hogar de gloria/</b><br><b>/Voy en el camino/</b><br><b>Voy en el camino, del hogar de gloria</b>",
+      "<b>/Veré a Jesús, llegando allá/</b><br><b>/Veré a Jesús/</b><br><b>Veré a Jesús, llegando allá</b>",
+      "<b>/No habrá tristeza del otro lado/</b><br><b>/No habrá tristeza/</b><br><b>No habrá tristeza, del otro lado</b>",
+      "<b>Voy en el camino del hogar de gloria</b><br><b>Veré a Jesús, llegando allá</b><br><b>/No habrá tristeza/</b><br><b>No habrá tristeza, del otro lado</b>"
     ],
     "carpeta": "V"
   },
