@@ -205,7 +205,7 @@
       gap: .75rem;
     }
     /* Desktop: fs-top flotante solo en modo letra/pausas (no en modo acordes) */
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fso:not(.modo-acordes) #fs-top {
         position: fixed; top: 0; left: 0; right: 0;
         z-index: 20;
@@ -231,7 +231,7 @@
     /* Versión fullscreen — un poco más grande */
     #fs-transp .transp-btn { width: 28px; height: 28px; font-size: 14px; border-color: #444; }
     #fs-transp .transp-tono { font-size: 15px; min-width: 42px; }
-    @media (min-width: 1024px) { #fs-transp { display: none !important; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-transp { display: none !important; } }
     #fs-minimize, #fs-cl {
       background: none; border: none; color: #888; cursor: pointer; transition: color .12s;
       flex-shrink: 0; padding: 0 4px; line-height: 1;
@@ -248,7 +248,7 @@
       overflow-y: auto;
       min-height: 0;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fs-center {
         height: 100vh;
         flex: none;
@@ -259,7 +259,7 @@
       color: #f0f0f0; text-align: center;
       max-width: 1100px; width: 100%;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fs-content { max-width: 94vw; padding: 0 2vw; }
     }
     #fs-content br.stanza { display: block; margin-top: 1.5em; }
@@ -300,7 +300,7 @@
     #fs-next-slide { right: .5rem; }
 
     /* En móvil y tablet: ocultar flechas y aprovechar todo el ancho */
-    @media (max-width: 1023px) {
+    @media (max-width: 1023px) and (hover: none), (max-width: 1023px) and (pointer: coarse), (max-width: 1023px) and (pointer: none) {
       .fs-side-btn { display: none; }
       #fs-center { padding: 0; overflow-y: auto; align-items: flex-start; }
       #fs-content { padding: 1rem; }
@@ -321,11 +321,11 @@
       display: flex; flex-direction: column; align-items: center; gap: 6px;
       padding: .4rem 0 .6rem;
     }
-    @media (min-width: 1024px) { #fs-bottom { display: none; } }
-    @media (min-width: 1024px) { #fs-btn { display: none; } #fs-btn-acordes { display: none; } }
-    @media (max-width: 1023px) { .pptx-btn { display: none !important; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-bottom { display: none; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-btn { display: none; } #fs-btn-acordes { display: none; } }
+    @media (max-width: 1023px) and (hover: none), (max-width: 1023px) and (pointer: coarse), (max-width: 1023px) and (pointer: none) { .pptx-btn { display: none !important; } }
     #fs-dots { display: flex; gap: 12px; align-items: center; }
-    @media (min-width: 1024px) { #fs-dots { display: none; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-dots { display: none; } }
     .fs-dot {
       width: 14px; height: 14px; border-radius: 50%;
       background: #333; transition: background .15s; flex-shrink: 0;
@@ -340,7 +340,7 @@
     .fs-snb:disabled { opacity: .2; cursor: default; }
     #fs-slide-ctr { font-size: 18px; color: #555; min-width: 64px; text-align: center; }
     /* Desktop: flotante abajo a la derecha */
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fs-slide-ctr {
         position: fixed; bottom: .75rem; right: 1.25rem;
         font-size: 16px; color: #ccc; z-index: 10;
@@ -362,7 +362,7 @@
     #fs-content.mayus { text-transform: uppercase; }
 
     /* ── Estilo de proyección en PC = mismo estilo que el .PPTX (Arial, negrita, MAYÚSCULAS, blanco) ── */
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fso:not(.modo-acordes) #fs-content {
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
@@ -396,21 +396,21 @@
     #fs-video-extra #fs-video-vel-val { width: 46px; min-width: 46px; flex: none; padding: 0; text-align: center; font-size: 11px; font-variant-numeric: tabular-nums; white-space: nowrap; }
     #fs-video-btn { font-size: 13px; }
     #fs-video-btn.activo { color: #7eb8f7; border-color: #7eb8f7; }
-    @media (min-width: 1024px) {
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) {
       #fso:not(.modo-acordes) #fs-video-ctl { display: flex; }
       #fso:not(.modo-acordes).tiene-video #fs-video-extra { display: flex; }
     }
     #fs-video-pre { display: none; background: var(--bg3); border: 0.5px solid var(--border); color: var(--text2); font-size: 12px; padding: 0 10px; height: 38px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
     #fs-video-pre:hover { background: var(--border); color: var(--text); }
     #fs-video-pre.activo { color: #7eb8f7; border-color: #7eb8f7; }
-    @media (min-width: 1024px) { #fs-video-pre { display: inline-block; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-video-pre { display: inline-block; } }
     /* En móvil: size-ctrl va al bottom; en desktop va al top */
-    @media (max-width: 1023px) {
+    @media (max-width: 1023px) and (hover: none), (max-width: 1023px) and (pointer: coarse), (max-width: 1023px) and (pointer: none) {
       #fs-size-ctrl { order: 10; } /* dentro de fs-bottom en móvil via JS */
     }
     /* fs-hint: solo móvil */
     #fs-hint { font-size: 12px; color: #222; }
-    @media (min-width: 1024px) { #fs-hint { display: none; } }
+    @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #fs-hint { display: none; } }
   /* ── Metrónomo ─────────────────────────────────────────────── */
 
   /* ── Metrónomo desktop: flotante, solo ≥1024px ── */
@@ -420,7 +420,7 @@
     background: rgba(0,0,0,.6); border: 0.5px solid #2a2a2a;
     border-radius: 14px; padding: 10px 12px; user-select: none;
   }
-  @media (min-width: 1024px) { #metronomo.visible { display: flex; } }
+  @media (min-width: 1024px), (hover: hover) and (pointer: fine) { #metronomo.visible { display: flex; } }
 
   #metro-beat {
     width: 36px; height: 36px; border-radius: 50%;
@@ -1586,7 +1586,7 @@ function htmlParaFS(html) {
 
 // ── Tamaño de fuente en proyección ────────────────────────────
 // En PC se guarda aparte del celular: el tamaño base cambió y no se mezclan los ajustes viejos
-const LS_FONT_SIZE = (window.innerWidth < 1024) ? "cancionero_fs_size" : "cancionero_fs_size_pc";
+const LS_FONT_SIZE = isMobile() ? "cancionero_fs_size" : "cancionero_fs_size_pc";
 const FS_MIN = 14;
 function getFsStep() { return isMobile() ? 3 : Math.max(3, Math.round(getFsBaseSize() * 0.05)); }
 function getFsMax()  { return isMobile() ? 80 : Math.max(80, Math.round(getFsBaseSize() * 1.6)); }
@@ -1600,9 +1600,11 @@ function guardarFontOffset() {
 }
 function getFsBaseSize() {
   const w = window.innerWidth;
-  if (w < 480) return 24;
-  if (w < 768) return 30;
-  if (w < 1024) return 36;
+  if (isMobile()) {
+    if (w < 480) return 24;
+    if (w < 768) return 30;
+    return 36;
+  }
   // PC: igual que el PowerPoint. El .pptx usa 40 pt sobre una diapositiva de 7,5 in (540 pt) de alto,
   // o sea 40/540 = 7,4 % de la altura de pantalla → 80 px en 1080p.
   return Math.round(window.innerHeight * 40 / 540);
@@ -1629,8 +1631,8 @@ document.getElementById("fs-size-reset").addEventListener("click", () => {
 cargarFontOffset();
 
 // ── Interlineado en proyección ─────────────────────────────────
-const LS_LINE_HEIGHT = (window.innerWidth < 1024) ? "cancionero_fs_lh" : "cancionero_fs_lh_pc";
-const LH_BASE = (window.innerWidth < 1024) ? 1.4 : 1.15; // PC: espaciado simple como el .pptx
+const LS_LINE_HEIGHT = isMobile() ? "cancionero_fs_lh" : "cancionero_fs_lh_pc";
+const LH_BASE = isMobile() ? 1.4 : 1.15; // PC: espaciado simple como el .pptx
 const LH_STEP = 0.15;
 const LH_MIN  = 1.0;
 const LH_MAX  = 2.5;
@@ -2312,7 +2314,13 @@ document.getElementById("next").addEventListener("click", () => goSlide(1));
 document.getElementById("prev-song").addEventListener("click", () => goSong(-1));
 document.getElementById("next-song").addEventListener("click", () => goSong(1));
 
-function isMobile() { return window.innerWidth < 1024; }
+// Móvil/tablet = pantalla angosta Y sin mouse. Una laptop con proyector a 800×600 sigue siendo "PC"
+// (así no cae en la vista con scroll pensada para celulares).
+function isMobile() {
+  if (window.innerWidth >= 1024) return false;
+  try { if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) return false; } catch(e) {}
+  return true;
+}
 
 // ── Orientación ────────────────────────────────────────────────
 function bloquearPortrait() {
