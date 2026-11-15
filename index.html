@@ -377,13 +377,15 @@
     }
 
     /* ── Video de fondo (solo en memoria, solo proyección en PC) ── */
-    #fs-bg-video, #fs-bg-dim {
+    #fs-bg-video, #fs-bg-img, #fs-bg-dim {
       position: absolute; inset: 0; width: 100%; height: 100%;
       z-index: -1; pointer-events: none; opacity: 0; transition: opacity .35s;
     }
-    #fs-bg-video { object-fit: cover; background: #000; }
+    #fs-bg-video, #fs-bg-img { object-fit: cover; background: #000; }
     #fs-bg-dim { background: #000; }
-    #fso.video-on #fs-bg-video { opacity: 1; }
+    #fso.video-on.fondo-video #fs-bg-video { opacity: 1; }
+    #fso.video-on.fondo-img #fs-bg-img { opacity: 1; }
+    #fso.fondo-img .solo-video { display: none !important; } /* la velocidad no aplica a imágenes */
     #fso.video-on #fs-bg-dim { opacity: var(--fs-dim, .45); }
     #fso.video-on #fs-content { text-shadow: 0 1px 6px rgba(0,0,0,.7); }
 
@@ -854,7 +856,7 @@
       <button id="fs-btn">&#9654; Proyectar</button>
       <button id="fs-btn-acordes">&#9654; Con acordes</button>
       <button id="fs-btn-edges" title="Proyectar con pantalla negra al inicio y al final">&#9654; Proyectar</button>
-      <button id="fs-video-pre" title="Video de fondo para la proyección (solo en memoria)">&#127916; Video</button>
+      <button id="fs-video-pre" title="Video o imagen de fondo para la proyección (solo en memoria)">&#127916; Fondo</button>
     </div>
     <div id="song-nav">
       <button class="snav-btn" id="prev-song" disabled></button>
@@ -1203,11 +1205,12 @@
 </div>
 
 <!-- Video de fondo: el archivo se lee del disco, no se sube ni se guarda -->
-<input type="file" id="fs-video-input" accept="video/*" style="display:none"/>
+<input type="file" id="fs-video-input" accept="video/*,image/*" style="display:none"/>
 
 <!-- Fullscreen -->
 <div id="fso">
   <video id="fs-bg-video" muted loop playsinline autoplay></video>
+  <img id="fs-bg-img" alt=""/>
   <div id="fs-bg-dim"></div>
   <!-- Top: título + minimizar + cerrar -->
   <div id="fs-top">
@@ -1231,14 +1234,14 @@
       <button id="fs-mayus" title="Convertir a mayúsculas">AA</button>
       <span id="fs-video-ctl">
         <span class="fs-sep"></span>
-        <button id="fs-video-btn" title="Elegir video de fondo (solo en esta sesión, no se guarda)">&#127916;</button>
+        <button id="fs-video-btn" title="Elegir video o imagen de fondo (solo en esta sesión, no se guarda)">&#127916;</button>
         <span id="fs-video-extra">
           <span class="vid-ico" title="Oscurecer fondo">&#9680;</span>
           <input type="range" id="fs-video-dim" min="0" max="90" value="45" title="Oscurecer fondo"/>
-          <span class="vid-ico" title="Velocidad del video">&#9201;</span>
-          <input type="range" id="fs-video-vel" min="25" max="200" step="1" value="100" title="Velocidad del video"/>
-          <button id="fs-video-vel-val" title="Velocidad (clic para volver a 1×)">1.00×</button>
-          <button id="fs-video-clear" title="Quitar video">&#10005;</button>
+          <span class="vid-ico solo-video" title="Velocidad del video">&#9201;</span>
+          <input type="range" class="solo-video" id="fs-video-vel" min="25" max="200" step="1" value="100" title="Velocidad del video"/>
+          <button id="fs-video-vel-val" class="solo-video" title="Velocidad (clic para volver a 1×)">1.00×</button>
+          <button id="fs-video-clear" title="Quitar fondo">&#10005;</button>
         </span>
       </span>
     </div>
@@ -3631,6 +3634,7 @@ const LS_VIDEO_DIM = "cancionero_fs_dim";
 const LS_VIDEO_VEL = "cancionero_fs_vel";
 let fsVideoURL = null;
 let fsVideoNombre = "";
+let fsFondoTipo = "";   // "video" | "imagen"
 
 function fsVideoActualizar() {
   const fso = document.getElementById("fso");
@@ -3639,36 +3643,49 @@ function fsVideoActualizar() {
   const pc = !isMobile() && !fsMostrarAcordes;
   const s = viewerSlides[viewerIdx];
   const hay = !!fsVideoURL;
-  fso.classList.toggle("tiene-video", hay);
+  const esVideo = hay && fsFondoTipo === "video";
+  fso.classList.toggle("tiene-video", hay);   // "hay fondo" (video o imagen)
+  fso.classList.toggle("fondo-video", esVideo);
+  fso.classList.toggle("fondo-img", hay && fsFondoTipo === "imagen");
   // En pantallas negras (pausas) se oculta pero sigue corriendo, así no se reinicia entre canciones
   fso.classList.toggle("video-on", hay && pc && abierto && !(s && s.type === "pause"));
-  if (hay && pc && abierto) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+  if (esVideo && pc && abierto) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
   else v.pause();
   const btn = document.getElementById("fs-video-btn");
   const pre = document.getElementById("fs-video-pre");
   btn.classList.toggle("activo", hay);
   pre.classList.toggle("activo", hay);
-  pre.innerHTML = hay ? "&#127916; Video &#10003;" : "&#127916; Video";
-  pre.title = hay ? ("Video de fondo: " + fsVideoNombre + " — clic para cambiarlo") : "Video de fondo para la proyección (solo en memoria)";
+  pre.innerHTML = !hay ? "&#127916; Fondo" : (esVideo ? "&#127916; Video &#10003;" : "&#128444; Imagen &#10003;");
+  pre.title = hay ? ((esVideo ? "Video" : "Imagen") + " de fondo: " + fsVideoNombre + " — clic para cambiarlo") : "Video o imagen de fondo para la proyección (solo en memoria)";
 }
-function fsVideoQuitar() {
+function fsFondoLimpiarMedios() {
   const v = document.getElementById("fs-bg-video");
   v.pause(); v.removeAttribute("src"); v.load();
+  document.getElementById("fs-bg-img").removeAttribute("src");
   if (fsVideoURL) URL.revokeObjectURL(fsVideoURL);
-  fsVideoURL = null; fsVideoNombre = "";
+  fsVideoURL = null; fsVideoNombre = ""; fsFondoTipo = "";
+}
+function fsVideoQuitar() {
+  fsFondoLimpiarMedios();
   document.getElementById("fs-video-input").value = "";
   fsVideoActualizar();
 }
 function fsVideoElegir(file) {
   if (!file) return;
-  if (!file.type.startsWith("video/")) { alert("El archivo elegido no es un video."); return; }
-  const v = document.getElementById("fs-bg-video");
-  if (fsVideoURL) URL.revokeObjectURL(fsVideoURL);
+  const tipo = file.type.startsWith("video/") ? "video" : file.type.startsWith("image/") ? "imagen" : "";
+  if (!tipo) { alert("El archivo elegido no es un video ni una imagen."); return; }
+  fsFondoLimpiarMedios();   // libera el anterior (solo hay un fondo a la vez)
   fsVideoURL = URL.createObjectURL(file);
   fsVideoNombre = file.name;
-  v.src = fsVideoURL;
-  v.muted = true; v.loop = true;
-  fsVideoAplicarVel();
+  fsFondoTipo = tipo;
+  if (tipo === "video") {
+    const v = document.getElementById("fs-bg-video");
+    v.src = fsVideoURL;
+    v.muted = true; v.loop = true;
+    fsVideoAplicarVel();
+  } else {
+    document.getElementById("fs-bg-img").src = fsVideoURL;
+  }
   fsVideoActualizar();
 }
 function fsVideoAplicarVel() {
@@ -3714,8 +3731,13 @@ function fsVideoAplicarDim() {
   document.getElementById("fs-bg-video").addEventListener("loadedmetadata", fsVideoAplicarVel);
   // Si el video no se puede reproducir (códec no soportado), avisar y quitarlo
   document.getElementById("fs-bg-video").addEventListener("error", () => {
-    if (!fsVideoURL) return;
+    if (!fsVideoURL || fsFondoTipo !== "video") return;
     alert("No se pudo reproducir ese video. Probá con un MP4 (H.264) o WebM.");
+    fsVideoQuitar();
+  });
+  document.getElementById("fs-bg-img").addEventListener("error", () => {
+    if (!fsVideoURL || fsFondoTipo !== "imagen") return;
+    alert("No se pudo mostrar esa imagen. Probá con JPG, PNG o WebP.");
     fsVideoQuitar();
   });
 })();
