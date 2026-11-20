@@ -839,16 +839,16 @@
   },
   {
     "titulo": "Cuando pienso en tu amor",
-    "preview": "Cuando pienso en tu amor y tu fidelidad,\u000bno puedo hacer más \u000bque postrarme y adorar.\u000bY cuando pienso en como he sido\u000by hasta donde me has traido,\u000bme asombro de ti.",
+    "preview": "Cuando pienso en tu amor y tu fidelidad,\nno puedo hacer más \nque postrarme y adorar.\nY cuando pienso en como he sido\ny hasta donde me has traido,\nme asombro de ti.",
     "slides": [
-      "<b>Cuando pienso en tu amor y tu fidelidad,<br>no puedo hacer más <br>que postrarme y adorar.<br>Y cuando pienso en como he sido<br>y hasta donde me has traido,<br>me asombro de ti.</b>",
-      "<b>/No me quiero conformar, <br>he probado y quiero más/</b>",
-      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar</b>",
-      "<b>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>",
-      "<b>Cuando pienso en tu cruz <br>y en todo lo que has dado,<br>tu sangre por mi, <br>por llevar mi pecado.<br>Cuando pienso en tu mano, <br>que hasta aquí hemos llegado, <br>por tu fidelidad.</b>",
-      "<b>/Y no me quiero conformar, <br>he probado y quiero más/</b>",
-      "<b>Yo quiero enamorarme más de ti,<br>enseñame a amarte y a vivir<br>conforme a tu justicia y tu verdad, <br>con mi vida quiero adorar</b>",
-      "<b>Con todo lo que tengo y lo que soy,<br>todo lo que he sido te lo doy.<br>Que mi vida sea para ti <br>como un perfume a tus pies.</b>"
+      "<b>Cuando pienso en tu amor y tu fidelidad,</b><br><b>no puedo hacer más</b><br><b>que postrarme y adorar.</b><br><b>Y cuando pienso en como he sido</b><br><b>y hasta donde me has traido,</b><br><b>me asombro de ti.</b>",
+      "<b>/No me quiero conformar,</b><br><b>he probado y quiero más/</b>",
+      "<b>Yo quiero enamorarme más de ti,</b><br><b>enseñame a amarte y a vivir</b><br><b>conforme a tu justicia y tu verdad,</b><br><b>con mi vida quiero adorar</b>",
+      "<b>Con todo lo que tengo y lo que soy,</b><br><b>todo lo que he sido te lo doy.</b><br><b>Que mi vida sea para ti</b><br><b>como un perfume a tus pies.</b>",
+      "<b>Cuando pienso en tu cruz</b><br><b>y en todo lo que has dado,</b><br><b>tu sangre por mi,</b><br><b>por llevar mi pecado.</b><br><b>Cuando pienso en tu mano,</b><br><b>que hasta aquí hemos llegado,</b><br><b>por tu fidelidad.</b>",
+      "<b>/Y no me quiero conformar,</b><br><b>he probado y quiero más/</b>",
+      "<b>Yo quiero enamorarme más de ti,</b><br><b>enseñame a amarte y a vivir</b><br><b>conforme a tu justicia y tu verdad,</b><br><b>con mi vida quiero adorar</b>",
+      "<b>Con todo lo que tengo y lo que soy,</b><br><b>todo lo que he sido te lo doy.</b><br><b>Que mi vida sea para ti</b><br><b>como un perfume a tus pies.</b>"
     ],
     "tono": "MI",
     "carpeta": "C"
@@ -1014,10 +1014,11 @@
   },
   {
     "titulo": "Dios es nuestro amparo y fortaleza",
-    "preview": "Dios es nuestro amparo y fortaleza\nnuestro pronto auxilio \nen las tribulaciones\n\nPor tanto no temeremos \naunque la tierra sea removida \ny se traspasen los montes \nal corazón del mar",
+    "preview": "Dios es nuestro amparo y fortaleza\nnuestro pronto auxilio \nen las tribulaciones",
     "slides": [
-      "<b>Dios es nuestro amparo y fortaleza<br>nuestro pronto auxilio <br>en las tribulaciones<br><br>Por tanto no temeremos <br>aunque la tierra sea removida <br>y se traspasen los montes <br>al corazón del mar</b>",
-      "<b>/Cielo y tierra pasará <br>más su palabra no pasará/<br>/No, no, no pasará./</b>"
+      "<b>Dios es nuestro amparo y fortaleza</b><br><b>nuestro pronto auxilio</b><br><b>en las tribulaciones</b>",
+      "<b>Por tanto no temeremos</b><br><b>aunque la tierra sea removida</b><br><b>y se traspasen los montes</b><br><b>al corazón del mar</b>",
+      "<b>/Cielo y tierra pasará</b><br><b>más su palabra no pasará/</b><br><b>/No, no, no pasará./</b>"
     ],
     "tono": "REm",
     "carpeta": "D",
@@ -1048,12 +1049,15 @@
   },
   {
     "titulo": "Dios ha sido bueno",
-    "preview": "//Dios ha sido bueno//\u000bBueno es Dios\u000b\u000bSu bondad me alcanzó\u000bsu amor me rescató\u000bsu gracia me salvó.\u000bBueno es Dios",
+    "preview": "//Dios ha sido bueno//\nBueno es Dios",
     "slides": [
-      "<b>//Dios ha sido bueno//<br>Bueno es Dios<br><br>Su bondad me alcanzó<br>su amor me rescató<br>su gracia me salvó.<br>Bueno es Dios</b>",
-      "<b>Por eso cantaré <br>y siempre alabaré<br>y nunca olvidaré <br>bueno es Dios<br><br>//Dios ha sido bueno//<br>Bueno es Dios</b>",
-      "<b>Mis manos alzaré<br>Mi vida entregaré<br>Mi voz levantaré<br>Bueno es Dios<br><br>Y no me cansaré<br>De darle todo a Él<br>Yo quiero serle fiel<br>Bueno es Dios</b>",
-      "<b>//Dios ha sido bueno//<br>//Bueno es Dios//</b>"
+      "<b>//Dios ha sido bueno//</b><br><b>Bueno es Dios</b>",
+      "<b>Su bondad me alcanzó</b><br><b>su amor me rescató</b><br><b>su gracia me salvó.</b><br><b>Bueno es Dios</b>",
+      "<b>Por eso cantaré</b><br><b>y siempre alabaré</b><br><b>y nunca olvidaré</b><br><b>bueno es Dios</b>",
+      "<b>//Dios ha sido bueno//</b><br><b>Bueno es Dios</b>",
+      "<b>Mis manos alzaré</b><br><b>Mi vida entregaré</b><br><b>Mi voz levantaré</b><br><b>Bueno es Dios</b>",
+      "<b>Y no me cansaré</b><br><b>De darle todo a Él</b><br><b>Yo quiero serle fiel</b><br><b>Bueno es Dios</b>",
+      "<b>//Dios ha sido bueno//</b><br><b>//Bueno es Dios//</b>"
     ],
     "tono": "RE",
     "carpeta": "D",
@@ -1866,10 +1870,12 @@
   },
   {
     "titulo": "Los que esperan en Jehová",
-    "preview": "/Los que esperan,\u000blos que esperan en Jehová/\u000b\n/Como las águilas, \ncomo las águilas,\nsus alas levantarán/",
+    "preview": "/Los que esperan,\nlos que esperan en Jehová/",
     "slides": [
-      "<b>/Los que esperan,<br>los que esperan en Jehová/<br><br>/Como las águilas, <br>como las águilas,<br>sus alas levantarán/</b>",
-      "<b>Correrán y no se cansarán<br>caminarán y no se fatigarán<br><br>/Nuevas fuerzas tendrán, <br>nuevas fuerzas tendrán<br>los que esperan,<br>los que esperan en Jehová/</b>"
+      "<b>/Los que esperan,</b><br><b>los que esperan en Jehová/</b>",
+      "<b>/Como las águilas,</b><br><b>como las águilas,</b><br><b>sus alas levantarán/</b>",
+      "<b>Correrán y no se cansarán</b><br><b>caminarán y no se fatigarán</b>",
+      "<b>/Nuevas fuerzas tendrán,</b><br><b>nuevas fuerzas tendrán</b><br><b>los que esperan,</b><br><b>los que esperan en Jehová/</b>"
     ],
     "tono": "REm",
     "carpeta": "L",
@@ -2406,10 +2412,12 @@
   },
   {
     "titulo": "Quiero escuchar tu dulce voz",
-    "preview": "Quiero escuchar tu dulce voz\u000brompiendo el silencio en mi ser,\u000bse que me haría estremecer,\u000bme haría llorar o reír\u000by caería rendido ante ti",
+    "preview": "Quiero escuchar tu dulce voz\nrompiendo el silencio en mi ser,",
     "slides": [
-      "<b>Quiero escuchar tu dulce voz<br>rompiendo el silencio en mi ser,<br>se que me haría estremecer,<br>me haría llorar o reír<br>y caería rendido ante ti</b>",
-      "<b>Y no podría estar ante ti<br>escuchándote hablar<br>sin llorar como un niño<br>y pasaría el tiempo así<br>sin querer nada más,<br>nada más que escucharte hablar.</b>"
+      "<b>Quiero escuchar tu dulce voz</b><br><b>rompiendo el silencio en mi ser,</b>",
+      "<b>se que me haría estremecer,</b><br><b>me haría llorar o reír</b><br><b>y caería rendido ante ti</b>",
+      "<b>Y no podría estar ante ti</b><br><b>escuchándote hablar</b><br><b>sin llorar como un niño</b>",
+      "<b>y pasaría el tiempo así</b><br><b>sin querer nada más,</b><br><b>nada más que escucharte hablar.</b>"
     ],
     "tono": "MI",
     "carpeta": "Q"
@@ -2901,9 +2909,10 @@
   },
   {
     "titulo": "Te alabaré oh Señor",
-    "preview": "/Te alabaré oh Señor,\u000binvocaré tu santo nombre.\u000bSiempre daré a conocer \u000ben los pueblos tus obras./\u000b\u000b//Grandes son// \ntus maravillas.",
+    "preview": "/Te alabaré oh Señor,\ninvocaré tu Santo Nombre.\nSiempre daré a conocer \nen los pueblos tus obras./",
     "slides": [
-      "<b>/Te alabaré oh Señor,<br>invocaré tu santo nombre.<br>Siempre daré a conocer <br>en los pueblos tus obras./<br><br>//Grandes son// <br>tus maravillas.</b>"
+      "<b>/Te alabaré oh Señor,</b><br><b>invocaré tu Santo Nombre.</b><br><b>Siempre daré a conocer</b><br><b>en los pueblos tus obras./</b>",
+      "<b>//Grandes son//</b><br><b>tus maravillas.</b>"
     ],
     "tono": "DO",
     "carpeta": "T"
@@ -3235,9 +3244,10 @@
   },
   {
     "titulo": "Venimos a ti oh Señor",
-    "preview": "/Venimos a ti oh Señor,\u000bcon el alma llena de gozo,\u000by juntos queremos agradecerte/\u000b\u000bPor darnos la vida, te agradecemos.\u000bPor darnos la fe, te agradecemos.\u000bPor darnos el gozo, te agradecemos.\u000bY por el amor que nos une…\u000b\nVenimos a ti…",
+    "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte/",
     "slides": [
-      "<b>/Venimos a ti oh Señor,<br>con el alma llena de gozo,<br>y juntos queremos agradecerte/<br><br>Por darnos la vida, te agradecemos.<br>Por darnos la fe, te agradecemos.<br>Por darnos el gozo, te agradecemos.<br>Y por el amor que nos une…<br><br>Venimos a ti…</b>"
+      "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte/</b>",
+      "<b>Por darnos la vida, te agradecemos.</b><br><b>Por darnos la fe, te agradecemos.</b><br><b>Por darnos el gozo, te agradecemos.</b><br><b>Y por el amor que nos une…</b><span class=\"stanza-sep\"></span><b>Venimos a ti…</b>"
     ],
     "tono": "DO",
     "carpeta": "V"
@@ -3253,9 +3263,10 @@
   },
   {
     "titulo": "Vine a adorar a Dios",
-    "preview": "/Vine a adorar a Dios/\u000bvine a adorar su santo nombre,\u000bvine a adorar a Dios.\u000b\u000bÉl vino a mi vida en un día muy especial, \u000bcambió mi corazón en un nuevo corazón,\u000by esa es la razón por la que digo que:\u000b//Vine a adorar a Dios//",
+    "preview": "/Vine a adorar a Dios/\nvine a adorar su santo nombre,\nvine a adorar a Dios.",
     "slides": [
-      "<b>/Vine a adorar a Dios/<br>vine a adorar su santo nombre,<br>vine a adorar a Dios.<br><br>Él vino a mi vida en un día muy especial, <br>cambió mi corazón en un nuevo corazón,<br>y esa es la razón por la que digo que:<br>//Vine a adorar a Dios//</b>"
+      "<b>/Vine a adorar a Dios/</b><br><b>vine a adorar su santo nombre,</b><br><b>vine a adorar a Dios.</b>",
+      "<b>Él vino a mi vida en un día muy especial,</b><br><b>cambió mi corazón en un nuevo corazón,</b><br><b>y esa es la razón por la que digo que:</b><br><b>//Vine a adorar a Dios//</b>"
     ],
     "tono": "LA",
     "carpeta": "V"
