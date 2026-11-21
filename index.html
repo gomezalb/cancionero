@@ -511,6 +511,13 @@
     color: var(--text3); font-family: monospace; white-space: nowrap;
   }
   .help-divider { border: none; border-top: 0.5px solid var(--border); margin: 0; }
+  .help-admin {
+    border: 0.5px solid #2f4a63; background: rgba(126,184,247,.06);
+    border-radius: var(--radius-lg); padding: .9rem 1rem;
+    display: flex; flex-direction: column; gap: .6rem;
+  }
+  .help-admin-head { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #7eb8f7; }
+  .help-admin-sub { margin: 0; font-size: 12px; color: var(--text3); line-height: 1.5; }
 
   /* ── Panel Editar ─────────────────────────────────────────── */
   #editar-panel { display: none; flex-direction: column; gap: 1rem; }
@@ -1075,7 +1082,7 @@
         </div>
         <div class="help-row">
           <span class="help-icon">&#9776;</span>
-          <span class="help-text"><b>Mi lista</b> es tuya y solo tuya. Agregá canciones tocando el <b>+</b> en el cancionero, reordenalas arrastrando, y proyectá cuando quieras. Podés limpiarla o armar una nueva en cualquier momento sin que eso afecte la lista fijada.</span>
+          <span class="help-text"><b>Mi lista</b> es tuya y solo tuya. Agregá canciones tocando el <b>+</b> en el cancionero, reordenalas arrastrando, y proyectá cuando quieras. Podés limpiarla o armar una nueva en cualquier momento sin que eso afecte las listas fijadas.</span>
         </div>
         <div class="help-row">
           <span class="help-icon">&#9997;</span>
@@ -1084,6 +1091,10 @@
         <div class="help-row">
           <span class="help-icon">&#128190;</span>
           <span class="help-text">Mi lista se guarda automáticamente en el dispositivo y persiste aunque cierres la app.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#8659;</span>
+          <span class="help-text">En la computadora, cada lista tiene el botón <b>Generar .PPTX</b> para descargar las letras como presentación de PowerPoint. Debajo de las listas fijadas podés elegir una <b>imagen de fondo</b> general y otra para las canciones de <b>Escuela bíblica</b>.</span>
         </div>
       </div>
 
@@ -1132,6 +1143,14 @@
           <span class="help-text">En el celular podés <b>deslizar</b> hacia los costados para cambiar de canción.</span>
         </div>
         <div class="help-row">
+          <span class="help-icon">&#127916;</span>
+          <span class="help-text"><b>Fondo de video o imagen</b> (solo en la computadora, sin acordes): elegilo con el botón <b>🎬 Fondo</b> junto a Proyectar o con el <b>🎬</b> de la barra superior. Se lee de tu equipo y <b>no se guarda ni se sube</b>: si recargás la página hay que elegirlo otra vez. En la barra podés ajustar cuánto se oscurece el fondo y, en los videos, la velocidad (tocá el valor para volver a 1×).</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#8617;</span>
+          <span class="help-text">Desde la segunda diapositiva, tocar el <b>título de la canción</b> (arriba a la izquierda) vuelve a la primera diapositiva de esa canción.</span>
+        </div>
+        <div class="help-row">
           <span class="help-icon">&#9837;</span>
           <span class="help-text">Las canciones con tono definido muestran controles de <b>transposición</b> (▲▼) para subir o bajar semitonos en el momento, sin modificar nada permanente.</span>
         </div>
@@ -1144,38 +1163,35 @@
       <hr class="help-divider"/>
 
       <div class="help-section">
-        <h3>Metrónomo visual</h3>
-        <div class="help-row">
-          <span class="help-icon">&#9711;</span>
-          <span class="help-text">En <b>modo acordes</b>, las canciones con tempo definido muestran un metrónomo visual (un círculo que pulsa). Dura <b>10 segundos</b> para ayudar a encontrar el ritmo al inicio. Podés ajustar el tempo con <b>+ −</b> o tocando el círculo para iniciarlo.</span>
-        </div>
-      </div>
-
-      <hr class="help-divider"/>
-
-      <div class="help-section">
-        <h3>Pestaña Editar</h3>
-        <div class="help-row">
-          <span class="help-icon">&#9835;</span>
-          <span class="help-text"><b>Acordes y tonalidad</b> — buscá cualquier canción y editá sus acordes escribiendo la letra con los acordes entre corchetes (ej: <b>[SOL]</b>, <b>[LAm]</b>) justo antes de la sílaba donde cambia. Si la canción no tiene acordes todavía, la letra aparece cargada para que solo tengas que agregarlos. Al cambiar la tonalidad, los acordes se transponen automáticamente.</span>
-        </div>
-        <div class="help-row">
-          <span class="help-icon">&#43;</span>
-          <span class="help-text"><b>Agregar canción nueva</b> — escribí o pegá la letra directamente en la app. Separá las diapositivas con <b>---</b> en una línea sola. La canción queda disponible en el cancionero de inmediato.</span>
-        </div>
-        <div class="help-row">
-          <span class="help-icon">&#8595;</span>
-          <span class="help-text"><b>Exportar canciones.json</b> — descarga el cancionero completo con todos los cambios (acordes, tonalidades y canciones nuevas) listo para hacer push desde tu computadora y que quede permanente para todos.</span>
-        </div>
-      </div>
-
-      <hr class="help-divider"/>
-
-      <div class="help-section">
         <h3>Funciona sin internet</h3>
         <div class="help-row">
           <span class="help-icon">&#128267;</span>
           <span class="help-text">El cancionero se puede <b>instalar en el celular o la computadora</b> como una app (buscá la opción "Agregar a pantalla de inicio" o "Instalar" en el navegador) y funciona completamente <b>sin conexión a internet</b>.</span>
+        </div>
+      </div>
+
+      <div class="help-admin">
+        <div class="help-admin-head">&#128274; Para administradores</div>
+        <p class="help-admin-sub">Estas funciones están en la pestaña <b>Editar</b>. Sirven para corregir el cancionero y fijar listas que ven todos los usuarios.</p>
+        <div class="help-row">
+          <span class="help-icon">&#128273;</span>
+          <span class="help-text"><b>Acceso</b> — al entrar a <b>Editar</b> se pide el <b>token de acceso</b> la primera vez; queda guardado en ese dispositivo. Para cambiarlo o quitarlo, en la misma ventana del token está el botón <b>Olvidar token guardado</b>.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9835;</span>
+          <span class="help-text"><b>Acordes y tonalidad</b> — buscá la canción y editá sus acordes escribiendo la letra con los acordes entre corchetes (ej: <b>[SOL]</b>, <b>[LAm]</b>) justo antes de la sílaba donde cambia. Si la canción no tiene acordes todavía, la letra aparece cargada para que solo tengas que agregarlos. Al cambiar la tonalidad, los acordes se transponen automáticamente.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#43;</span>
+          <span class="help-text"><b>Agregar canción nueva</b> — escribí o pegá la letra directamente en la app. Separá las diapositivas con <b>---</b> en una línea sola. La canción queda disponible de inmediato en este dispositivo; para que la vean todos, publicá los cambios.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#9729;</span>
+          <span class="help-text"><b>Publicar cambios</b> — los cambios de acordes, tonalidades y canciones nuevas se guardan primero en este dispositivo. Tocá <b>☁ Publicar cambios</b> para que queden para todos (puede tardar cerca de 1 minuto en verse). Si aparece el aviso naranja de cambios pendientes, no refresques la página hasta publicar.</span>
+        </div>
+        <div class="help-row">
+          <span class="help-icon">&#128204;</span>
+          <span class="help-text"><b>Fijar listas</b> — armá la lista en <b>Mi lista</b>, poné un nombre y, si querés, una <b>fecha de vencimiento</b> (se muestra hasta ese día inclusive). Podés tener <b>varias listas fijadas a la vez</b>, cada una con su vencimiento: si usás el mismo nombre se reemplaza esa lista, y con la <b>✕</b> del listado quitás la que ya no sirve. Las vencidas se ocultan solas.</span>
         </div>
       </div>
 
