@@ -1,3 +1,28 @@
 {
-  "listas": []
+  "name": "Domingo 22",
+  "expira": "2026-11-23",
+  "songs": [
+    "Vine a adorar a Dios",
+    "Te alabaré oh Señor",
+    "Dios es nuestro amparo y fortaleza",
+    "Los que esperan en Jehová",
+    "Señor eres fiel",
+    "Cuando pienso en tu amor",
+    "A tus pies"
+  ],
+  "listas": [
+    {
+      "name": "Domingo 22",
+      "expira": "2026-11-23",
+      "songs": [
+        "Vine a adorar a Dios",
+        "Te alabaré oh Señor",
+        "Dios es nuestro amparo y fortaleza",
+        "Los que esperan en Jehová",
+        "Señor eres fiel",
+        "Cuando pienso en tu amor",
+        "A tus pies"
+      ]
+    }
+  ]
 }
