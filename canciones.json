@@ -839,13 +839,15 @@
   },
   {
     "titulo": "Cuando pienso en tu amor",
-    "preview": "Cuando pienso en tu amor y tu fidelidad,\nno puedo hacer más \nque postrarme y adorar.\nY cuando pienso en como he sido\ny hasta donde me has traido,\nme asombro de ti.",
+    "preview": "Cuando pienso en tu amor y tu fidelidad,\nno puedo hacer más\nque postrarme y adorar.",
     "slides": [
-      "<b>Cuando pienso en tu amor y tu fidelidad,</b><br><b>no puedo hacer más</b><br><b>que postrarme y adorar.</b><br><b>Y cuando pienso en como he sido</b><br><b>y hasta donde me has traido,</b><br><b>me asombro de ti.</b>",
+      "<b>Cuando pienso en tu amor y tu fidelidad,</b><br><b>no puedo hacer más</b><br><b>que postrarme y adorar.</b>",
+      "<b>Y cuando pienso en como he sido</b><br><b>y hasta donde me has traído,</b><br><b>me asombro de ti.</b>",
       "<b>/No me quiero conformar,</b><br><b>he probado y quiero más/</b>",
       "<b>Yo quiero enamorarme más de ti,</b><br><b>enseñame a amarte y a vivir</b><br><b>conforme a tu justicia y tu verdad,</b><br><b>con mi vida quiero adorar</b>",
       "<b>Con todo lo que tengo y lo que soy,</b><br><b>todo lo que he sido te lo doy.</b><br><b>Que mi vida sea para ti</b><br><b>como un perfume a tus pies.</b>",
-      "<b>Cuando pienso en tu cruz</b><br><b>y en todo lo que has dado,</b><br><b>tu sangre por mi,</b><br><b>por llevar mi pecado.</b><br><b>Cuando pienso en tu mano,</b><br><b>que hasta aquí hemos llegado,</b><br><b>por tu fidelidad.</b>",
+      "<b>Cuando pienso en tu cruz</b><br><b>y en todo lo que has dado,</b><br><b>tu sangre por mi,</b><br><b>por llevar mi pecado.</b>",
+      "<b>Cuando pienso en tu mano,</b><br><b>que hasta aquí hemos llegado,</b><br><b>por tu fidelidad.</b>",
       "<b>/Y no me quiero conformar,</b><br><b>he probado y quiero más/</b>",
       "<b>Yo quiero enamorarme más de ti,</b><br><b>enseñame a amarte y a vivir</b><br><b>conforme a tu justicia y tu verdad,</b><br><b>con mi vida quiero adorar</b>",
       "<b>Con todo lo que tengo y lo que soy,</b><br><b>todo lo que he sido te lo doy.</b><br><b>Que mi vida sea para ti</b><br><b>como un perfume a tus pies.</b>"
@@ -1014,11 +1016,11 @@
   },
   {
     "titulo": "Dios es nuestro amparo y fortaleza",
-    "preview": "Dios es nuestro amparo y fortaleza\nnuestro pronto auxilio \nen las tribulaciones",
+    "preview": "Dios es nuestro amparo y fortaleza\nnuestro pronto auxilio\nen las tribulaciones",
     "slides": [
       "<b>Dios es nuestro amparo y fortaleza</b><br><b>nuestro pronto auxilio</b><br><b>en las tribulaciones</b>",
       "<b>Por tanto no temeremos</b><br><b>aunque la tierra sea removida</b><br><b>y se traspasen los montes</b><br><b>al corazón del mar</b>",
-      "<b>/Cielo y tierra pasará</b><br><b>más su palabra no pasará/</b><br><b>/No, no, no pasará./</b>"
+      "<b>/Cielo y tierra pasará</b><br><b>más su palabra no pasará/</b><span class=\"stanza-sep\"></span><b>/No, no, no pasará/</b>"
     ],
     "tono": "REm",
     "carpeta": "D",
@@ -1611,11 +1613,11 @@
   },
   {
     "titulo": "Hay victoria",
-    "preview": "/Hay victoria, hay victoria\u000bhay victoria en el nombre de Jesús/",
+    "preview": "/Hay victoria, hay victoria\nhay victoria en el nombre de Jesús/",
     "slides": [
-      "<b>/Hay victoria, hay victoria<br>hay victoria en el nombre de Jesús/</b>",
-      "<b>No podrá el enemigo <br>dañar a nuestras almas.<br><br>/Porque hay victoria, <br>porque hay victoria<br>porque hay victoria <br>en el nombre de Jesús/</b>",
-      "<b>Si me preguntan porque estoy contento,<br>si me preguntan porque canto así,<br>/Es porque Cristo me ha lavado con su sangre<br>y en una nube blanca volverá por mí/</b>"
+      "<b>/Hay victoria, hay victoria</b><br><b>hay victoria en el nombre de Jesús/</b>",
+      "<b>No podrá el enemigo</b><br><b>dañar a nuestras almas.</b><span class=\"stanza-sep\"></span><b>/Porque hay victoria,</b><br><b>porque hay victoria</b><br><b>porque hay victoria</b><br><b>en el nombre de Jesús/</b>",
+      "<b>Si me preguntan porque estoy contenta,</b><br><b>si me preguntan porque canto así,</b><br><b>/Es porque Cristo me ha lavado con su sangre</b><br><b>y en una nube blanca volverá por mí/</b>"
     ],
     "tono": "REm",
     "carpeta": "",
@@ -2653,10 +2655,10 @@
   },
   {
     "titulo": "Señor eres fiel",
-    "preview": "/Señor eres fiel y tu misericordia es eterna/\nGente de toda lengua y nación \nde generación a generación.",
+    "preview": "/Señor eres fiel y tu misericordia es eterna/\n\nGente de toda lengua y nación\nde generación a generación",
     "slides": [
-      "<b>/Señor eres fiel y tu misericordia es eterna/<br>Gente de toda lengua y nación <br>de generación a generación.</b>",
-      "<b>Te adoramos hoy, aleluya, aleluya<br>te adoramos hoy, eres Señor.<br>Te adoramos hoy aleluya, aleluya.<br>te adoramos hoy, eres Señor.... eres fiel</b>"
+      "<b>/Señor eres fiel y tu misericordia es eterna/</b><span class=\"stanza-sep\"></span><b>Gente de toda lengua y nación</b><br><b>de generación a generación</b>",
+      "<b>Te adoramos hoy, aleluya, aleluya</b><br><b>te adoramos hoy, eres Señor.</b><br><b>Te adoramos hoy, aleluya, aleluya.</b><br><b>te adoramos hoy, eres Señor.... eres fiel</b>"
     ],
     "tono": "LA",
     "carpeta": "S",
@@ -2930,9 +2932,9 @@
   },
   {
     "titulo": "Te alabaré oh Señor",
-    "preview": "/Te alabaré oh Señor,\ninvocaré tu Santo Nombre.\nSiempre daré a conocer \nen los pueblos tus obras./",
+    "preview": "/Te alabaré oh Señor,\ninvocaré tu Santo Nombre.\nSiempre daré a conocer\nen los pueblos tus obras/",
     "slides": [
-      "<b>/Te alabaré oh Señor,</b><br><b>invocaré tu Santo Nombre.</b><br><b>Siempre daré a conocer</b><br><b>en los pueblos tus obras./</b>",
+      "<b>/Te alabaré oh Señor,</b><br><b>invocaré tu Santo Nombre.</b><br><b>Siempre daré a conocer</b><br><b>en los pueblos tus obras/</b>",
       "<b>//Grandes son//</b><br><b>tus maravillas.</b>"
     ],
     "tono": "DO",
@@ -3232,7 +3234,7 @@
       "<b>Vamos escalando peldaños</b><br><b>vamos llevando la cruz</b><br><b>sigamos el camino angosto</b><br><b>que con Cristo es mucho mejor</b>",
       "<b>/Ya viene la recompensa</b><br><b>ya no voy a llorar</b><br><b>tengo a Cristo en mi vida</b><br><b>y por eso puedo escalar/</b>",
       "<b>A veces me siento débil</b><br><b>ya no puedo escalar</b><br><b>alzo mis manos al cielo</b><br><b>viene Cristo y fuerzas me da</b>",
-      "<b>/Ya viene la recompensa</b><br><b>ya no voy a llorar</b><br><b>tengo a Cristo en mi vida</b><br><b>y por eso puedo escalar./</b>"
+      "<b>/Ya viene la recompensa</b><br><b>ya no voy a llorar</b><br><b>tengo a Cristo en mi vida</b><br><b>y por eso puedo escalar/</b>"
     ],
     "tono": "REm",
     "carpeta": "Alabanza",
@@ -3285,13 +3287,17 @@
   },
   {
     "titulo": "Vine a adorar a Dios",
-    "preview": "/Vine a adorar a Dios/\nvine a adorar su santo nombre,\nvine a adorar a Dios.",
+    "preview": "/Vine a adorar a Dios/\nvine a adorar su santo nombre,\nvine a adorar a Dios",
     "slides": [
-      "<b>/Vine a adorar a Dios/</b><br><b>vine a adorar su santo nombre,</b><br><b>vine a adorar a Dios.</b>",
-      "<b>Él vino a mi vida en un día muy especial,</b><br><b>cambió mi corazón en un nuevo corazón,</b><br><b>y esa es la razón por la que digo que:</b><br><b>//Vine a adorar a Dios//</b>"
+      "<b>/Vine a adorar a Dios/</b><br><b>vine a adorar su santo nombre,</b><br><b>vine a adorar a Dios</b>",
+      "<b>Él vino a mi vida en un día muy especial,</b><br><b>cambió mi corazón en un nuevo corazón,</b><br><b>y esa es la razón por la que digo que:</b><span class=\"stanza-sep\"></span><b>//Vine a adorar a Dios//</b>"
     ],
     "tono": "LA",
-    "carpeta": "V"
+    "carpeta": "",
+    "acordes": [
+      "/Vine a adorar a Dios/\nvine a adorar su Santo Nombre,\nvine a adorar a Dios",
+      "Él vino a mi vida en un día muy especial,\ncambió mi corazón en un nuevo corazón,\ny esa es la razón por la que digo que:\n//Vine a adorar a Dios//"
+    ]
   },
   {
     "titulo": "Voy en el camino del hogar de gloria",
