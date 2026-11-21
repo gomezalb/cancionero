@@ -3130,17 +3130,17 @@
     "carpeta": "T"
   },
   {
-    "titulo": "Tu hermano soy",
+    "titulo": "Tu hermana soy",
     "preview": "Tu hermana soy,\npues Cristo nos ha comprado.\nTu hermana soy,\nsu Espíritu nos ha ligado.\nQue gozo tengo \nal tenerte a mi lado.",
     "slides": [
       "<b>Tu hermana soy,</b><br><b>pues Cristo nos ha comprado.</b><br><b>Tu hermana soy,</b><br><b>su Espíritu nos ha ligado.</b><br><b>Que gozo tengo</b><br><b>al tenerte a mi lado.</b>",
       "<b>/Te doy la mano, querida hermana</b><br><b>y alabemos al Señor/</b>"
     ],
     "tono": "SOL",
-    "carpeta": "T",
+    "carpeta": "",
     "acordes": [
-      "[SOL]Tu hermano soy,\npues Cristo nos ha comprado.[SOL7]\nTu [DO]hermano soy,\nsu Es[SOL]píritu nos ha [RE]ligado.\nQue [SOL]gozo tengo\nal [SOL]tenerte [SIm]a mi [MIm]lado.",
-      "Te [DO]doy la mano, [SOL]querido [MIm]hermano\ny [LAm]alabemos [RE]al [SOL]Señor.[SOL7]\nTe [DO]doy la mano, [SOL]querido [MIm]hermano\ny [LAm]alabemos [RE]al [SOL]Señor"
+      "[SOL]Tu hermana soy,\npues Cristo nos ha comprado.[SOL7]\nTu [DO]hermana soy,\nsu Es[SOL]píritu nos ha [RE]ligado.\nQue [SOL]gozo tengo\nal [SOL]tenerte [SIm]a mi [MIm]lado.",
+      "Te [DO]doy la mano, [SOL]querida [MIm]hermana\ny [LAm]alabemos [RE]al [SOL]Señor.[SOL7]\nTe [DO]doy la mano, [SOL]querida [MIm]hermana\ny [LAm]alabemos [RE]al [SOL]Señor"
     ]
   },
   {
@@ -3267,11 +3267,11 @@
   },
   {
     "titulo": "Venimos a ti oh Señor",
-    "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte/",
+    "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntas queremos agradecerte/",
     "slides": [
-      "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte/</b>",
+      "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntas queremos agradecerte/</b>",
       "<b>Por darnos la vida, te agradecemos.</b><br><b>Por darnos la fe, te agradecemos.</b><br><b>Por darnos el gozo, te agradecemos.</b><br><b>Y por el amor que nos une</b>",
-      "<b>Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte</b>"
+      "<b>Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntas queremos agradecerte</b>"
     ],
     "tono": "DO",
     "carpeta": "V"
