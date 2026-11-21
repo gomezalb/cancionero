@@ -770,18 +770,13 @@
 
   <div id="setlist-panel">
 
-    <!-- Lista del servicio (setlist.json) -->
-    <div class="sl-section" id="sl-servicio-section" style="display:none">
-      <div class="sl-section-header">
-        &#128204; Lista fijada <span id="sl-servicio-nombre"></span>
-      </div>
+    <!-- Listas fijadas (setlist.json): una sección por lista, se generan en renderSetlist() -->
+    <div id="sl-fijadas" style="display:contents"></div>
+
+    <!-- Fondos del .PPTX (compartidos por todas las listas fijadas) -->
+    <div class="sl-section pptx-btn" id="sl-fondos-section" style="display:none">
       <div class="sl-section-body">
-        <div id="sl-servicio-items"></div>
-        <div class="sl-section-btns">
-          <button class="sl-btn primary" id="play-servicio-btn">&#9654; Proyectar esta lista</button>
-          <button class="sl-btn pptx-btn" id="pptx-servicio-btn">&#8659; Generar .PPTX</button>
-        </div>
-        <div class="pptx-btn" id="pptx-img-opts" style="display:flex;flex-direction:column;gap:6px;margin-top:8px;font-size:12px;color:var(--text4)">
+        <div class="pptx-btn" id="pptx-img-opts" style="display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--text4)">
           <label style="display:flex;align-items:center;gap:8px">
             Fondo general:
             <input type="file" id="pptx-fondo-input" accept="image/*" style="font-size:11px;color:var(--text4)"/>
@@ -1000,16 +995,17 @@
 
     <!-- Fijar lista para todos -->
     <div id="fijar-section" style="margin-top:1.5rem;padding-top:1.5rem;border-top:0.5px solid var(--border)">
-      <p style="margin:0 0 .75rem;font-size:13px;color:var(--text4)">Fijá una lista para que todos los usuarios la vean en la pestaña Listas.</p>
+      <p style="margin:0 0 .75rem;font-size:13px;color:var(--text4)">Fijá listas para que todos las vean en la pestaña Listas. Podés tener varias a la vez, cada una con su propio vencimiento. Si usás el mismo nombre, se reemplaza esa lista.</p>
+      <div id="fijar-actuales" style="margin-bottom:.75rem"></div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <input id="fijar-nombre" type="text" placeholder="Nombre de la lista (ej: Reunión del domingo)..."
           style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.5rem .75rem;font-size:13px;font-family:inherit;outline:none"/>
+        <div style="font-size:12px;color:var(--text4)">Vencimiento (opcional) — la lista se muestra hasta ese día inclusive:</div>
         <input id="fijar-expira" type="date"
           style="background:var(--bg3);border:0.5px solid var(--border2);color:var(--text);border-radius:var(--radius);padding:.5rem .75rem;font-size:13px;font-family:inherit;outline:none;color-scheme:dark"/>
         <div style="font-size:12px;color:var(--text4)">Canciones de <b>Mi lista</b> actual: <span id="fijar-count">0</span></div>
         <div style="display:flex;gap:8px">
           <button id="btn-fijar-lista" style="background:#0a4a3a;border:0.5px solid #0e5a48;color:#ffffff;font-size:13px;padding:7px 16px;border-radius:8px;cursor:pointer;font-weight:500;transition:all .12s">&#128204; Fijar lista</button>
-          <button id="btn-borrar-lista" style="background:none;border:0.5px solid var(--border2);color:var(--text4);font-size:13px;padding:7px 14px;border-radius:8px;cursor:pointer">&#10006; Borrar lista fijada</button>
         </div>
         <div id="fijar-msg" style="font-size:12px;color:var(--text4)"></div>
       </div>
@@ -1075,7 +1071,7 @@
         <h3>Listas de canciones</h3>
         <div class="help-row">
           <span class="help-icon">&#128204;</span>
-          <span class="help-text"><b>Lista fijada</b> — si hay una lista preparada para la reunión, aparece automáticamente en la pestaña <b>Listas</b> y un punto rojo en la pestaña avisa que está disponible. Es de solo lectura: nadie puede modificarla ni borrarla por accidente.</span>
+          <span class="help-text"><b>Listas fijadas</b> — si hay listas preparadas para las reuniones, aparecen automáticamente en la pestaña <b>Listas</b> (cada una se oculta sola al vencer) y un punto rojo en la pestaña avisa que hay disponibles. Son de solo lectura: nadie puede modificarlas ni borrarlas por accidente.</span>
         </div>
         <div class="help-row">
           <span class="help-icon">&#9776;</span>
@@ -1362,7 +1358,7 @@ const LS_MI_LISTA = "cancionero_mi_lista"; // lista del usuario, independiente
 let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
 // Lista del servicio (setlist.json) — solo lectura, nunca se mezcla con la del usuario
-let servicioSetlist = [], servicioNombre = "";
+let listasFijadas = [];   // [{ name, expira, songs }] — varias listas, cada una con su vencimiento
 let activeFilter = "alabanza";
 let mostrarAcordes = false;
 let fsMinimizado = false;
@@ -1577,7 +1573,8 @@ function inList(t) { return setlist.includes(t); }
 function updateBadge() {
   // Tab siempre dice "Listas" — solo mostramos/ocultamos el punto rojo
   const dot = document.getElementById("tab-setlist-dot");
-  if (dot) dot.classList.toggle("visible", servicioSetlist.length > 0);
+  if (dot) dot.classList.toggle("visible", listasFijadas.length > 0);
+  renderFijadasAdmin();
 }
 
 // ── HTML para fullscreen ───────────────────────────────────────
@@ -1758,21 +1755,9 @@ async function cargarSetlist() {
     if (!res.ok) { updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist(); return; }
     const d = await res.json();
 
-    // Verificar vencimiento — si venció, no mostrar la lista del servicio
-    if (d.expira) {
-      const hoy = new Date(); hoy.setHours(0,0,0,0);
-      const expira = new Date(d.expira); expira.setHours(0,0,0,0);
-      if (hoy > expira) {
-        updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist(); return;
-      }
-    }
-
-    // Setlist del servicio válida — cargarla en sección separada
-    const songs = Array.isArray(d.songs) ? d.songs.filter(t => SONGS.some(s => s.titulo === t)) : [];
-    if (songs.length > 0) {
-      servicioSetlist = songs;
-      servicioNombre = d.name || "";
-    }
+    // Acepta el formato nuevo ({ listas: [...] }) y el anterior (una sola lista en la raíz).
+    // Las vencidas se descartan y se ordenan por fecha de vencimiento.
+    listasFijadas = normalizarListasFijadas(d, true);
 
     updateBadge(); renderList(); if (activeTab === "setlist") renderSetlist();
   } catch(e) {
@@ -1885,15 +1870,33 @@ function renderSetlistItems(lista, container, removable, onRemove) {
 }
 
 function renderSetlist() {
-  // ── Sección lista del servicio ──
-  const secServicio = document.getElementById("sl-servicio-section");
-  if (servicioSetlist.length > 0) {
-    secServicio.style.display = "";
-    document.getElementById("sl-servicio-nombre").textContent = servicioNombre ? `— ${servicioNombre}` : "";
-    renderSetlistItems(servicioSetlist, document.getElementById("sl-servicio-items"), false, null);
-  } else {
-    secServicio.style.display = "none";
-  }
+  // ── Listas fijadas (una sección por lista) ──
+  const cont = document.getElementById("sl-fijadas");
+  cont.innerHTML = "";
+  listasFijadas.forEach(l => {
+    const sec = document.createElement("div");
+    sec.className = "sl-section";
+    sec.innerHTML =
+      '<div class="sl-section-header">&#128204; Lista fijada <span class="sl-fij-nombre"></span></div>' +
+      '<div class="sl-section-body"><div class="sl-fij-items"></div>' +
+      '<div class="sl-section-btns"><button class="sl-btn primary sl-fij-play">&#9654; Proyectar esta lista</button>' +
+      '<button class="sl-btn pptx-btn sl-fij-pptx">&#8659; Generar .PPTX</button></div></div>';
+    sec.querySelector(".sl-fij-nombre").textContent =
+      (l.name ? `— ${l.name}` : "") + (l.expira ? `  ·  hasta el ${fmtFechaLocal(l.expira)}` : "");
+    renderSetlistItems(l.songs, sec.querySelector(".sl-fij-items"), false, null);
+    sec.querySelector(".sl-fij-play").addEventListener("click", () => openSetlist([...l.songs], false));
+    const bp = sec.querySelector(".sl-fij-pptx");
+    bp.addEventListener("click", async () => {
+      const orig = bp.textContent;
+      bp.textContent = "Generando…"; bp.disabled = true;
+      try {
+        const nombre = (l.name || "lista-fijada").replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ _-]/g, "") || "lista-fijada";
+        await generarPPTX([...l.songs], `${nombre}.pptx`);
+      } finally { bp.textContent = orig; bp.disabled = false; }
+    });
+    cont.appendChild(sec);
+  });
+  document.getElementById("sl-fondos-section").style.display = listasFijadas.length ? "" : "none";
 
   // ── Sección mi lista ──
   document.getElementById("sl-count").textContent = setlist.length ? `(${setlist.length})` : "";
@@ -1919,7 +1922,6 @@ function setupDrag(el, idx) {
 }
 document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); updateBadge(); });
 document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist], false); });
-document.getElementById("play-servicio-btn").addEventListener("click", () => { if (servicioSetlist.length) openSetlist([...servicioSetlist], false); });
 document.getElementById("clear-btn").addEventListener("click", () => {
   if (confirm("¿Limpiar mi lista?")) { setlist = []; slName = ""; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
 });
@@ -3179,15 +3181,6 @@ document.getElementById("btn-fijar-lista").addEventListener("click", () => {
   }
 });
 
-document.getElementById("btn-borrar-lista").addEventListener("click", () => {
-  setlist = []; slName = ""; saveToStorage(); updateBadge();
-  if (!adminAutenticado) {
-    mostrarAuthModal(() => publicarSetlist(null, null, true));
-  } else {
-    publicarSetlist(null, null, true);
-  }
-});
-
 function utf8ToBase64(str) {
   const bytes = new TextEncoder().encode(str);
   let b = "";
@@ -3195,16 +3188,74 @@ function utf8ToBase64(str) {
   return btoa(b);
 }
 
+// ── Listas fijadas: utilidades ─────────────────────────────────
+// "2026-10-19" → fecha LOCAL (new Date("2026-10-19") se interpreta en UTC y corre el día en Argentina)
+function fechaLocal(s) {
+  const [y, m, d] = String(s).split("-").map(Number);
+  return new Date(y, (m || 1) - 1, d || 1);
+}
+function fmtFechaLocal(s) {
+  const [y, m, d] = String(s).split("-");
+  return `${d}/${m}/${y}`;
+}
+function ordenarListasFijadas(arr) {
+  // Primero las que vencen antes; las que no vencen, al final
+  return arr.sort((a, b) => {
+    if (a.expira && b.expira) return a.expira.localeCompare(b.expira) || a.name.localeCompare(b.name);
+    if (a.expira) return -1;
+    if (b.expira) return 1;
+    return a.name.localeCompare(b.name);
+  });
+}
+// Acepta { listas: [...] } o el formato anterior (una sola lista en la raíz). Descarta vencidas y vacías.
+function normalizarListasFijadas(d, filtrarCanciones = true) {
+  let arr = [];
+  if (d && Array.isArray(d.listas)) arr = d.listas;
+  else if (d && Array.isArray(d.songs)) arr = [d];
+  const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+  const out = [];
+  arr.forEach(l => {
+    if (!l || !Array.isArray(l.songs)) return;
+    if (l.expira && fechaLocal(l.expira) < hoy) return;     // vence al terminar ese día
+    const songs = filtrarCanciones ? l.songs.filter(t => SONGS.some(s => s.titulo === t)) : l.songs.slice();
+    if (!songs.length) return;
+    out.push({ name: String(l.name || "").trim(), expira: l.expira || null, songs });
+  });
+  return ordenarListasFijadas(out);
+}
+function renderFijadasAdmin() {
+  const box = document.getElementById("fijar-actuales");
+  if (!box) return;
+  box.innerHTML = "";
+  const tit = document.createElement("div");
+  tit.style.cssText = "font-size:12px;color:var(--text4);margin-bottom:6px";
+  tit.textContent = listasFijadas.length ? "Listas fijadas ahora:" : "No hay listas fijadas.";
+  box.appendChild(tit);
+  listasFijadas.forEach(l => {
+    const row = document.createElement("div");
+    row.style.cssText = "display:flex;align-items:center;gap:8px;padding:6px 10px;margin-bottom:4px;background:var(--bg3);border:0.5px solid var(--border);border-radius:var(--radius);font-size:13px;color:var(--text)";
+    const info = document.createElement("span");
+    info.style.cssText = "flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap";
+    info.textContent = `${l.name || "(sin nombre)"} · ${l.songs.length} canc. · ` + (l.expira ? `vence ${fmtFechaLocal(l.expira)}` : "sin vencimiento");
+    const del = document.createElement("button");
+    del.textContent = "✕"; del.title = "Quitar esta lista fijada";
+    del.style.cssText = "background:none;border:0.5px solid var(--border2);color:var(--text4);border-radius:6px;cursor:pointer;font-size:12px;padding:2px 8px";
+    del.addEventListener("click", () => {
+      if (!confirm(`¿Quitar la lista fijada "${l.name}"?`)) return;
+      if (!adminAutenticado) mostrarAuthModal(() => publicarSetlist(l.name, null, true));
+      else publicarSetlist(l.name, null, true);
+    });
+    row.appendChild(info); row.appendChild(del);
+    box.appendChild(row);
+  });
+}
+
+// Agrega (o reemplaza, si el nombre ya existe) una lista fijada; con borrar=true quita la lista "nombre".
+// Lee siempre el setlist.json actual del repo para no pisar las demás listas.
 async function publicarSetlist(nombre, expira, borrar = false) {
   const msg = document.getElementById("fijar-msg");
+  msg.style.color = "";
   msg.textContent = "Conectando…";
-  const datos = borrar ? {} : {
-    name: nombre,
-    expira: expira || null,
-    songs: [...setlist]
-  };
-  const jsonStr = JSON.stringify(datos, null, 2);
-  const base64 = utf8ToBase64(jsonStr);
   const headers = {
     "Authorization": "token " + getAdminToken(),
     "Accept": "application/vnd.github+json",
@@ -3213,14 +3264,43 @@ async function publicarSetlist(nombre, expira, borrar = false) {
   };
   const url    = `https://api.github.com/repos/${GH_CONFIG.owner}/${GH_CONFIG.repo}/contents/setlist.json`;
   const urlRef = `${url}?ref=${GH_CONFIG.branch}`;
-  let sha = null;
+  let sha = null, actuales = [];
   try {
     const res = await fetch(urlRef, { headers, cache: "no-store" });
-    if (res.ok) { const d = await res.json(); sha = d.sha; }
-  } catch(e) {}
+    if (res.ok) {
+      const d = await res.json();
+      sha = d.sha;
+      try {
+        const bytes = Uint8Array.from(atob(String(d.content).replace(/\s/g, "")), c => c.charCodeAt(0));
+        actuales = normalizarListasFijadas(JSON.parse(new TextDecoder().decode(bytes)), false);
+      } catch(e) { actuales = []; }
+    } else if (res.status !== 404) {
+      msg.textContent = "No se pudieron leer las listas actuales (error " + res.status + ")";
+      msg.style.color = "#f14c4c";
+      return;
+    }
+  } catch(e) {
+    msg.textContent = "Error de conexión";
+    msg.style.color = "#f14c4c";
+    return;
+  }
+
+  let nuevas = actuales.slice();
+  if (borrar) {
+    nuevas = nuevas.filter(l => l.name.toLowerCase() !== String(nombre).trim().toLowerCase());
+  } else {
+    const nueva = { name: nombre.trim(), expira: expira || null, songs: [...setlist] };
+    const i = nuevas.findIndex(l => l.name.toLowerCase() === nueva.name.toLowerCase());
+    if (i >= 0) nuevas[i] = nueva; else nuevas.push(nueva);
+  }
+  ordenarListasFijadas(nuevas);
+  // La raíz repite la primera lista para que versiones viejas de la app (que leen una sola lista) sigan funcionando
+  const datos = nuevas.length
+    ? { name: nuevas[0].name, expira: nuevas[0].expira, songs: nuevas[0].songs, listas: nuevas }
+    : { listas: [] };
   const body = {
-    message: borrar ? "Borrar lista fijada" : `Fijar lista: ${nombre}`,
-    content: base64,
+    message: borrar ? `Quitar lista fijada: ${nombre}` : `Fijar lista: ${nombre}`,
+    content: utf8ToBase64(JSON.stringify(datos, null, 2)),
     branch: GH_CONFIG.branch
   };
   if (sha) body.sha = sha;
@@ -3232,7 +3312,13 @@ async function publicarSetlist(nombre, expira, borrar = false) {
           c.delete(new Request("./setlist.json"));
         })));
       }
-      msg.textContent = borrar ? "✓ Lista fijada borrada" : `✓ Lista "${nombre}" fijada para todos`;
+      // Reflejar el cambio enseguida (GitHub Pages tarda ~1 min en publicar)
+      listasFijadas = nuevas
+        .map(l => ({ ...l, songs: l.songs.filter(t => SONGS.some(s => s.titulo === t)) }))
+        .filter(l => l.songs.length);
+      updateBadge(); renderList();
+      if (activeTab === "setlist") renderSetlist();
+      msg.textContent = borrar ? `✓ Lista "${nombre}" quitada` : `✓ Lista "${nombre}" fijada para todos`;
       msg.style.color = "var(--green-tx)";
     } else {
       const err = await res.json();
@@ -3972,20 +4058,6 @@ document.getElementById("pptx-btn").addEventListener("click", async () => {
   }
 });
 
-document.getElementById("pptx-servicio-btn").addEventListener("click", async () => {
-  if (!servicioSetlist.length) return;
-  const btn = document.getElementById("pptx-servicio-btn");
-  const orig = btn.textContent;
-  btn.textContent = "Generando…";
-  btn.disabled = true;
-  try {
-    const nombre = (servicioNombre || "lista-fijada").replace(/[^a-zA-Z0-9áéíóúÁÉÍÓÚñÑ _-]/g, "") || "lista-fijada";
-    await generarPPTX([...servicioSetlist], `${nombre}.pptx`);
-  } finally {
-    btn.textContent = orig;
-    btn.disabled = false;
-  }
-});
 </script>
     <!-- Modal token admin -->
     <div id="auth-modal-bg" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;padding:1rem">
