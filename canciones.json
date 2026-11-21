@@ -1618,7 +1618,12 @@
       "<b>Si me preguntan porque estoy contento,<br>si me preguntan porque canto así,<br>/Es porque Cristo me ha lavado con su sangre<br>y en una nube blanca volverá por mí/</b>"
     ],
     "tono": "REm",
-    "carpeta": "H"
+    "carpeta": "",
+    "acordes": [
+      "/Hay victoria, hay victoria\nhay victoria en el nombre de Jesús/",
+      "No podrá el enemigo \ndañar a nuestras almas.\n\n/Porque hay victoria, porque hay victoria\nporque hay victoria en el nombre de Jesús/",
+      "Si me preguntan porque estoy contento,\nsi me preguntan porque canto así,\n/Es porque Cristo me ha lavado con su sangre\ny en una nube blanca volverá por mí/"
+    ]
   },
   {
     "titulo": "He decidido no salir de la roca",
@@ -2441,7 +2446,13 @@
       "<b>Padre solo a ti te ofrezco</b><br><b>mi vida y mi corazón</b><br><b>y me postro en tu presencia</b><br><b>en adoración</b>",
       "<b>/Hijo de Dios, recibe hoy</b><br><b>toda la gloria, la honra y el honor/</b>"
     ],
-    "carpeta": "Alabanza"
+    "carpeta": "Alabanza",
+    "tono": "SOL",
+    "acordes": [
+      "Quiero levantar mis manos\nquiero levantar mi voz\nofreciendo a ti mi vida\nen santidad y amor",
+      "Padre solo a ti te ofrezco\nmi vida y mi corazón\ny me postro en tu presencia\nen adoración",
+      "/Hijo de Dios, recibe hoy\ntoda la gloria, la honra y el honor/"
+    ]
   },
   {
     "titulo": "Recíbela",
@@ -3118,10 +3129,10 @@
   },
   {
     "titulo": "Tu hermano soy",
-    "preview": "Tu hermano soy,\u000bpues Cristo nos ha comprado.\u000bTu hermano soy,\u000bsu Espíritu nos ha ligado.\u000bQue gozo tengo \nal tenerte a mi lado.",
+    "preview": "Tu hermana soy,\npues Cristo nos ha comprado.\nTu hermana soy,\nsu Espíritu nos ha ligado.\nQue gozo tengo \nal tenerte a mi lado.",
     "slides": [
-      "<b>Tu hermano soy,<br>pues Cristo nos ha comprado.<br>Tu hermano soy,<br>su Espíritu nos ha ligado.<br>Que gozo tengo <br>al tenerte a mi lado.</b>",
-      "<b>/Te doy la mano, querido hermano<br>y alabemos al Señor/</b>"
+      "<b>Tu hermana soy,</b><br><b>pues Cristo nos ha comprado.</b><br><b>Tu hermana soy,</b><br><b>su Espíritu nos ha ligado.</b><br><b>Que gozo tengo</b><br><b>al tenerte a mi lado.</b>",
+      "<b>/Te doy la mano, querida hermana</b><br><b>y alabemos al Señor/</b>"
     ],
     "tono": "SOL",
     "carpeta": "T",
@@ -3257,7 +3268,8 @@
     "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte/",
     "slides": [
       "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte/</b>",
-      "<b>Por darnos la vida, te agradecemos.</b><br><b>Por darnos la fe, te agradecemos.</b><br><b>Por darnos el gozo, te agradecemos.</b><br><b>Y por el amor que nos une…</b><span class=\"stanza-sep\"></span><b>Venimos a ti…</b>"
+      "<b>Por darnos la vida, te agradecemos.</b><br><b>Por darnos la fe, te agradecemos.</b><br><b>Por darnos el gozo, te agradecemos.</b><br><b>Y por el amor que nos une</b>",
+      "<b>Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte</b>"
     ],
     "tono": "DO",
     "carpeta": "V"
