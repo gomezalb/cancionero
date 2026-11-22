@@ -3182,10 +3182,14 @@
   },
   {
     "titulo": "Tus ojos revelan que yo",
-    "preview": "Tus ojos revelan que yo, \nnada puedo esconder\nQue no soy nada sin ti, oh fiel Señor.\nTodo lo sabes de mí, \ncuando miras el corazón\nTodo lo puedes ver muy dentro de mí.\n\nLlevas mi vida a una sola verdad,\nQue cuando me miras \nnada puedo ocultar.",
+    "preview": "Tus ojos revelan que yo, \nnada puedo esconder\nQue no soy nada sin ti, oh fiel Señor.",
     "slides": [
-      "<b>Tus ojos revelan que yo, <br>nada puedo esconder<br>Que no soy nada sin ti, oh fiel Señor.<br>Todo lo sabes de mí, <br>cuando miras el corazón<br>Todo lo puedes ver muy dentro de mí.<br><br>Llevas mi vida a una sola verdad,<br>Que cuando me miras <br>nada puedo ocultar.</b>",
-      "<b>/Sé que es tu fidelidad, <br>que lleva mi vida más allá <br>De lo que puedo imaginar.<br>Sé que no puedo negar,<br>Que tu mirada puesta en mí, <br>Me llena de tu paz/<br><br>/Que tu mirada puesta en mí, <br>Me llena de tu paz/</b>"
+      "<b>Tus ojos revelan que yo,</b><br><b>nada puedo esconder</b><br><b>Que no soy nada sin ti, oh fiel Señor.</b>",
+      "<b>Todo lo sabes de mí,</b><br><b>cuando miras el corazón</b><br><b>Todo lo puedes ver muy dentro de mí.</b>",
+      "<b>Llevas mi vida a una sola verdad,</b><br><b>Que cuando me miras</b><br><b>nada puedo ocultar.</b>",
+      "<b>/Sé que es tu fidelidad,</b><br><b>que lleva mi vida más allá</b><br><b>De lo que puedo imaginar.</b>",
+      "<b>Sé que no puedo negar,</b><br><b>Que tu mirada puesta en mí,</b><br><b>Me llena de tu paz/</b>",
+      "<b>/Que tu mirada puesta en mí,</b><br><b>Me llena de tu paz/</b>"
     ],
     "tono": "MI",
     "carpeta": "T"
