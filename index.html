@@ -519,6 +519,32 @@
   .help-admin-head { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #7eb8f7; }
   .help-admin-sub { margin: 0; font-size: 12px; color: var(--text3); line-height: 1.5; }
 
+  /* ── Barra "Editando lista fijada" (visible en todas las pestañas) ── */
+  #edf-bar {
+    display: none; flex-direction: column; gap: .5rem;
+    margin: .5rem 0 .25rem; padding: .75rem 1rem;
+    border: 0.5px solid #6b5a1e; background: rgba(240,165,0,.08);
+    border-radius: var(--radius-lg);
+  }
+  #edf-bar.open { display: flex; }
+  #edf-bar .edf-title { font-size: 13px; color: #f0a500; font-weight: 600; }
+  #edf-bar .edf-title b { color: var(--text); font-weight: 600; }
+  #edf-bar .edf-hint { font-size: 12px; color: var(--text3); line-height: 1.5; }
+  #edf-bar .edf-fields { display: flex; gap: 8px; flex-wrap: wrap; }
+  #edf-bar input {
+    background: var(--bg3); border: 0.5px solid var(--border2); color: var(--text);
+    border-radius: var(--radius); padding: .45rem .7rem; font-size: 13px;
+    font-family: inherit; outline: none; color-scheme: dark;
+  }
+  #edf-nombre { flex: 1; min-width: 160px; }
+  #edf-bar .edf-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  #edf-guardar { background: #0a4a3a; border: 0.5px solid #0e5a48; color: #fff; font-size: 13px; padding: 7px 16px; border-radius: 8px; cursor: pointer; font-weight: 500; }
+  #edf-guardar:disabled { opacity: .5; cursor: default; }
+  #edf-cancelar { background: var(--bg3); border: 0.5px solid var(--border2); color: var(--text2); font-size: 13px; padding: 7px 16px; border-radius: 8px; cursor: pointer; }
+  #edf-msg { font-size: 12px; color: var(--text4); }
+  #edf-bar.listo .edf-title, #edf-bar.listo .edf-hint,
+  #edf-bar.listo .edf-fields, #edf-bar.listo .edf-actions { display: none; }
+
   /* ── Panel Editar ─────────────────────────────────────────── */
   #editar-panel { display: none; flex-direction: column; gap: 1rem; }
   .edit-section {
@@ -754,6 +780,21 @@
     <div class="tab" data-tab="setlist" id="tab-setlist">Listas<span class="notif-dot" id="tab-setlist-dot"></span></div>
     <div class="tab" data-tab="editar">Editar</div>
     <button id="help-btn" title="Ayuda">?</button>
+  </div>
+
+  <!-- Edición de una lista fijada: se carga en Mi lista y se publica desde acá -->
+  <div id="edf-bar">
+    <div class="edf-title">&#9998; Editando la lista fijada <b id="edf-orig"></b></div>
+    <div class="edf-hint">Modificá <b>Mi lista</b>: quitá, reordená o agregá canciones (con el <b>+</b> del cancionero). Cuando esté lista, tocá <b>Guardar y publicar</b>.</div>
+    <div class="edf-fields">
+      <input id="edf-nombre" type="text" placeholder="Nombre de la lista"/>
+      <input id="edf-expira" type="date" title="Vencimiento (opcional): se muestra hasta ese día inclusive"/>
+    </div>
+    <div class="edf-actions">
+      <button id="edf-guardar">&#9729; Guardar y publicar</button>
+      <button id="edf-cancelar">Cancelar</button>
+    </div>
+    <div id="edf-msg"></div>
   </div>
 
   <div id="cancionero-panel">
@@ -1191,7 +1232,7 @@
         </div>
         <div class="help-row">
           <span class="help-icon">&#128204;</span>
-          <span class="help-text"><b>Fijar listas</b> — armá la lista en <b>Mi lista</b>, poné un nombre y, si querés, una <b>fecha de vencimiento</b> (se muestra hasta ese día inclusive). Podés tener <b>varias listas fijadas a la vez</b>, cada una con su vencimiento: si usás el mismo nombre se reemplaza esa lista, y con la <b>✕</b> del listado quitás la que ya no sirve. Las vencidas se ocultan solas.</span>
+          <span class="help-text"><b>Fijar listas</b> — armá la lista en <b>Mi lista</b>, poné un nombre y, si querés, una <b>fecha de vencimiento</b> (se muestra hasta ese día inclusive). Podés tener <b>varias listas fijadas a la vez</b>, cada una con su vencimiento: si usás el mismo nombre se reemplaza esa lista, y con la <b>✕</b> del listado quitás la que ya no sirve. Las vencidas se ocultan solas.<br><b>Cambio de último momento:</b> tocá <b>✎</b> en la lista del listado; se carga en <b>Mi lista</b> (tu lista anterior queda guardada). Reemplazá, quitá o reordená canciones y tocá <b>Guardar y publicar</b>, o <b>Cancelar</b> para dejarla como estaba.</span>
         </div>
       </div>
 
@@ -1375,6 +1416,10 @@ let SONGS = [], query = "", activeTab = "cancionero", setlist = [], slName = "";
 let viewerSlides = [], viewerIdx = 0, viewerQueue = null;
 // Lista del servicio (setlist.json) — solo lectura, nunca se mezcla con la del usuario
 let listasFijadas = [];   // [{ name, expira, songs }] — varias listas, cada una con su vencimiento
+// Edición de una lista fijada: { nombre, expira, respaldo:{ songs, name } }. El respaldo es "Mi lista" del admin,
+// que se restaura al publicar o cancelar. Se guarda en localStorage por si se recarga la página a mitad de la edición.
+let edicionFijada = null;
+const LS_EDICION_FIJADA = "cancionero_edicion_fijada";
 let activeFilter = "alabanza";
 let mostrarAcordes = false;
 let fsMinimizado = false;
@@ -1765,6 +1810,7 @@ function aplicarSetlist(d) {
 async function cargarSetlist() {
   // Siempre cargar "mi lista" del usuario desde LS_MI_LISTA (independiente del servicio)
   cargarMiLista();
+  restaurarEdicionFijada();
 
   try {
     const res = await fetch("setlist.json");
@@ -1936,7 +1982,10 @@ function setupDrag(el, idx) {
     const m = setlist.splice(dragSrc,1)[0]; setlist.splice(idx,0,m); saveToStorage(); renderSetlist(); renderList();
   });
 }
-document.getElementById("sl-name").addEventListener("input", e => { slName = e.target.value; saveToStorage(); updateBadge(); });
+document.getElementById("sl-name").addEventListener("input", e => {
+  slName = e.target.value; saveToStorage(); updateBadge();
+  if (edicionFijada) document.getElementById("edf-nombre").value = slName;   // mantener sincronizado con la barra de edición
+});
 document.getElementById("play-btn").addEventListener("click", () => { if (setlist.length) openSetlist([...setlist], false); });
 document.getElementById("clear-btn").addEventListener("click", () => {
   if (confirm("¿Limpiar mi lista?")) { setlist = []; slName = ""; saveToStorage(); updateBadge(); renderSetlist(); renderList(); }
@@ -3261,15 +3310,125 @@ function renderFijadasAdmin() {
       if (!adminAutenticado) mostrarAuthModal(() => publicarSetlist(l.name, null, true));
       else publicarSetlist(l.name, null, true);
     });
-    row.appendChild(info); row.appendChild(del);
+    const ed = document.createElement("button");
+    ed.textContent = "✎"; ed.title = "Editar esta lista (cambiar canciones, nombre o vencimiento)";
+    ed.style.cssText = del.style.cssText;
+    ed.addEventListener("click", () => editarListaFijada(l));
+    if (edicionFijada && edicionFijada.nombre === l.name) row.style.borderColor = "#f0a500";
+    row.appendChild(info); row.appendChild(ed); row.appendChild(del);
     box.appendChild(row);
   });
 }
 
+// ── Edición ágil de una lista fijada ──────────────────────────
+function guardarEdicionFijadaLS() {
+  try { if (edicionFijada) localStorage.setItem(LS_EDICION_FIJADA, JSON.stringify(edicionFijada)); } catch(e) {}
+}
+function restaurarEdicionFijada() {
+  try {
+    const raw = localStorage.getItem(LS_EDICION_FIJADA);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    if (d && d.nombre && d.respaldo) { edicionFijada = d; actualizarEdicionFijadaUI(); }
+  } catch(e) {}
+}
+function actualizarEdicionFijadaUI() {
+  const editando = !!edicionFijada;
+  const bar = document.getElementById("edf-bar");
+  bar.classList.toggle("open", editando);
+  bar.classList.remove("listo");
+  if (editando) {
+    document.getElementById("edf-orig").textContent = "«" + edicionFijada.nombre + "»";
+    document.getElementById("edf-nombre").value = slName;
+    document.getElementById("edf-expira").value = edicionFijada.expira || "";
+    const m = document.getElementById("edf-msg"); m.textContent = ""; m.style.color = "";
+  }
+  // Mientras se edita, el formulario "Fijar lista" queda deshabilitado para no mezclar los dos caminos
+  const bf = document.getElementById("btn-fijar-lista");
+  bf.disabled = editando;
+  bf.style.opacity = editando ? ".5" : "";
+  bf.title = editando ? "Terminá o cancelá la edición de la lista fijada primero" : "";
+}
+function editarListaFijada(l) {
+  if (edicionFijada && !confirm(`Ya estás editando "${edicionFijada.nombre}". ¿Descartar esos cambios y editar "${l.name}"?`)) return;
+  // El respaldo es el de la primera edición: nunca se pisa con el contenido de otra lista fijada
+  const respaldo = edicionFijada ? edicionFijada.respaldo : { songs: [...setlist], name: slName };
+  edicionFijada = { nombre: l.name, expira: l.expira || "", respaldo };
+  setlist = [...l.songs];
+  slName = l.name;
+  saveToStorage();
+  guardarEdicionFijadaLS();
+  actualizarEdicionFijadaUI();
+  updateBadge(); renderList();
+  document.querySelector('.tab[data-tab="setlist"]').click();   // ir a Listas, donde se modifica Mi lista
+}
+// Cierra la edición y devuelve a "Mi lista" lo que el admin tenía antes. textoListo: mensaje breve de éxito (opcional).
+function finalizarEdicionFijada(textoListo) {
+  const r = edicionFijada && edicionFijada.respaldo;
+  edicionFijada = null;
+  try { localStorage.removeItem(LS_EDICION_FIJADA); } catch(e) {}
+  if (r) {
+    setlist = (r.songs || []).filter(t => SONGS.some(s => s.titulo === t));
+    slName = r.name || "";
+    saveToStorage();
+  }
+  const bf = document.getElementById("btn-fijar-lista");
+  bf.disabled = false; bf.style.opacity = ""; bf.title = "";
+  updateBadge(); renderList();
+  if (activeTab === "setlist") renderSetlist();
+  const bar = document.getElementById("edf-bar");
+  if (textoListo) {
+    bar.classList.add("open", "listo");
+    const m = document.getElementById("edf-msg");
+    m.textContent = textoListo; m.style.color = "var(--green-tx)";
+    setTimeout(() => { if (!edicionFijada) bar.classList.remove("open", "listo"); }, 6000);
+  } else {
+    bar.classList.remove("open", "listo");
+  }
+}
+document.getElementById("edf-nombre").addEventListener("input", e => {
+  slName = e.target.value;
+  document.getElementById("sl-name").value = slName;
+  saveToStorage();
+});
+document.getElementById("edf-expira").addEventListener("change", e => {
+  if (edicionFijada) { edicionFijada.expira = e.target.value; guardarEdicionFijadaLS(); }
+});
+document.getElementById("edf-cancelar").addEventListener("click", () => {
+  if (!confirm("¿Cancelar la edición? Se descartan los cambios y se restaura tu lista anterior.")) return;
+  finalizarEdicionFijada(null);
+});
+document.getElementById("edf-guardar").addEventListener("click", () => {
+  if (!edicionFijada) return;
+  const nombre = document.getElementById("edf-nombre").value.trim();
+  const expira = document.getElementById("edf-expira").value;
+  const m = document.getElementById("edf-msg");
+  m.style.color = "";
+  if (!nombre) { m.textContent = "Ponele un nombre a la lista."; return; }
+  if (!setlist.length) { m.textContent = "La lista está vacía. Agregá canciones o cancelá la edición."; return; }
+  const original = edicionFijada.nombre;
+  const btn = document.getElementById("edf-guardar");
+  const ejecutar = async () => {
+    btn.disabled = true;
+    try { await publicarSetlist(nombre, expira, false, original); }
+    finally { btn.disabled = false; }
+  };
+  if (!adminAutenticado) mostrarAuthModal(ejecutar); else ejecutar();
+});
+// Escribe el mensaje de estado en el formulario de Editar y en la barra de edición (si está a la vista)
+function mensajeFijar() {
+  const els = ["fijar-msg", "edf-msg"].map(id => document.getElementById(id)).filter(Boolean);
+  return {
+    set textContent(v) { els.forEach(e => e.textContent = v); },
+    style: { set color(v) { els.forEach(e => e.style.color = v); } }
+  };
+}
+
 // Agrega (o reemplaza, si el nombre ya existe) una lista fijada; con borrar=true quita la lista "nombre".
+// nombreOriginal: al editar una lista fijada, el nombre que tenía (así un cambio de nombre no deja una copia).
 // Lee siempre el setlist.json actual del repo para no pisar las demás listas.
-async function publicarSetlist(nombre, expira, borrar = false) {
-  const msg = document.getElementById("fijar-msg");
+async function publicarSetlist(nombre, expira, borrar = false, nombreOriginal = null) {
+  const msg = mensajeFijar();
   msg.style.color = "";
   msg.textContent = "Conectando…";
   const headers = {
@@ -3306,6 +3465,7 @@ async function publicarSetlist(nombre, expira, borrar = false) {
     nuevas = nuevas.filter(l => l.name.toLowerCase() !== String(nombre).trim().toLowerCase());
   } else {
     const nueva = { name: nombre.trim(), expira: expira || null, songs: [...setlist] };
+    if (nombreOriginal) nuevas = nuevas.filter(l => l.name.toLowerCase() !== String(nombreOriginal).trim().toLowerCase());
     const i = nuevas.findIndex(l => l.name.toLowerCase() === nueva.name.toLowerCase());
     if (i >= 0) nuevas[i] = nueva; else nuevas.push(nueva);
   }
@@ -3336,6 +3496,9 @@ async function publicarSetlist(nombre, expira, borrar = false) {
       if (activeTab === "setlist") renderSetlist();
       msg.textContent = borrar ? `✓ Lista "${nombre}" quitada` : `✓ Lista "${nombre}" fijada para todos`;
       msg.style.color = "var(--green-tx)";
+      if (!borrar && nombreOriginal && edicionFijada) {
+        finalizarEdicionFijada(`✓ Lista "${nombre}" publicada. Para los demás puede tardar cerca de 1 minuto en verse.`);
+      }
     } else {
       const err = await res.json();
       msg.textContent = "Error: " + (err.message || "desconocido");
