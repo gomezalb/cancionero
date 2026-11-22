@@ -3347,10 +3347,11 @@
   },
   {
     "titulo": "Yo quiero mas de ti",
-    "preview": "/Yo quiero más de ti,\u000by habitar en tu presencia,\u000bmenguar, para que crezcas tú\u000by cada día ser más como tú/",
+    "preview": "/Yo quiero más de ti,\ny habitar en tu presencia,\nmenguar, para que crezcas tú\ny cada día ser más como tú/",
     "slides": [
-      "<b>/Yo quiero más de ti,<br>y habitar en tu presencia,<br>menguar, para que crezcas tú<br>y cada día ser más como tú/</b>",
-      "<b>Quebranta mi corazón, quebranta mi vida.<br>Te entrego mi voluntad a ti,<br>todo lo que soy, Señor,<br>todo cuanto tengo es tuyo.<br>/Yo quiero menguar <br>para que crezcas tú/</b>"
+      "<b>/Yo quiero más de ti,</b><br><b>y habitar en tu presencia,</b><br><b>menguar, para que crezcas tú</b><br><b>y cada día ser más como tú/</b>",
+      "<b>Quebranta mi corazón,</b><br><b>quebranta mi vida.</b><br><b>Te entrego mi voluntad a ti,</b>",
+      "<b>todo lo que soy, Señor,</b><br><b>todo cuanto tengo es tuyo.</b><span class=\"stanza-sep\"></span><b>/Yo quiero menguar</b><br><b>para que crezcas tú/</b>"
     ],
     "tono": "SOL",
     "carpeta": "Y",
