@@ -2427,7 +2427,13 @@
       "<b>y pasaría el tiempo así</b><br><b>sin querer nada más,</b><br><b>nada más que escucharte hablar.</b>"
     ],
     "tono": "MI",
-    "carpeta": "Q"
+    "carpeta": "",
+    "acordes": [
+      "[MI]Quiero escuchar tu [SI]dulce voz\n[LA]rompiendo el silencio en mi [SI]ser,",
+      "[MI]se que me haría estr[SI]emecer,\nme har[LA]ía llorar o re[SI]ír\ny caer[FA#]ía rendido ante [SI]ti",
+      "Y [MI]no podría es[SI]tar ante ti\nescu[FA#]chándote hablar\nsin llo[LA]rar como un [SI]niño",
+      "y [MI]pasaría el ti[SI]empo así\nsin que[FA#]rer nada más,\nnada [LA]más que escu[SI]charte ha[MI]blar."
+    ]
   },
   {
     "titulo": "Quiero levantar a ti mis manos maravilloso Jesus",
