@@ -2457,9 +2457,9 @@
     "carpeta": "Alabanza",
     "tono": "SOL",
     "acordes": [
-      "[SOL]Quiero levantar mis [SIm]manos\n[MI]quiero levantar mi [LAm]voz\n[MI]ofreciendo a ti mi [LAm]vida\n[RE]en santidad y [Sol]amor",
-      "[MIm]Padre solo a ti te ofrezco\nmi [SIm]vida y mi corazón\n[LAm]y me postro en tu pre[RE]sencia\n[LAm]en adora[RE]ción",
-      "[SOL]/Hijo de [SIm]Dios,[REm] [SOL]recibe [DO]hoy[DOm]\ntoda la [SOL]glor[MIm]ia, la [LAm]honra [RE]y hon[SOL]or/"
+      "Quiero levantar mis manos\nquiero levantar mi voz\nofreciendo a ti mi vida\nen santidad y amor",
+      "Padre solo a ti te ofrezco\nmi vida y mi corazón\ny me postro en tu presencia\nen adoración",
+      "/Hijo de Dios, recibe hoy\ntoda la gloria, la honra y el honor/"
     ]
   },
   {
@@ -3136,17 +3136,17 @@
     "carpeta": "T"
   },
   {
-    "titulo": "Tu hermana soy",
-    "preview": "Tu hermana soy,\npues Cristo nos ha comprado.\nTu hermana soy,\nsu Espíritu nos ha ligado.\nQue gozo tengo \nal tenerte a mi lado.",
+    "titulo": "Tu hermano soy",
+    "preview": "Tu hermano soy,\npues Cristo nos ha comprado.\nTu hermano soy,\nsu Espíritu nos ha ligado.\nQue gozo tengo\nal tenerte a mi lado.",
     "slides": [
-      "<b>Tu hermana soy,</b><br><b>pues Cristo nos ha comprado.</b><br><b>Tu hermana soy,</b><br><b>su Espíritu nos ha ligado.</b><br><b>Que gozo tengo</b><br><b>al tenerte a mi lado.</b>",
-      "<b>/Te doy la mano, querida hermana</b><br><b>y alabemos al Señor/</b>"
+      "<b>Tu hermano soy,</b><br><b>pues Cristo nos ha comprado.</b><br><b>Tu hermano soy,</b><br><b>su Espíritu nos ha ligado.</b><br><b>Que gozo tengo</b><br><b>al tenerte a mi lado.</b>",
+      "<b>/Te doy la mano, querido hermano</b><br><b>y alabemos al Señor/</b>"
     ],
     "tono": "SOL",
     "carpeta": "",
     "acordes": [
-      "[SOL]Tu hermana soy,\npues Cristo nos ha comprado.[SOL7]\nTu [DO]hermana soy,\nsu Es[SOL]píritu nos ha [RE]ligado.\nQue [SOL]gozo tengo\nal [SOL]tenerte [SIm]a mi [MIm]lado.",
-      "Te [DO]doy la mano, [SOL]querida [MIm]hermana\ny [LAm]alabemos [RE]al [SOL]Señor.[SOL7]\nTe [DO]doy la mano, [SOL]querida [MIm]hermana\ny [LAm]alabemos [RE]al [SOL]Señor"
+      "[SOL]Tu hermano soy,\npues Cristo nos ha comprado.[SOL7]\nTu [DO]hermano soy,\nsu Es[SOL]píritu nos ha [RE]ligado.\nQue [SOL]gozo tengo\nal [SOL]tenerte [SIm]a mi [MIm]lado.",
+      "Te [DO]doy la mano, [SOL]querido [MIm]hermano\ny [LAm]alabemos [RE]al [SOL]Señor.[SOL7]\nTe [DO]doy la mano, [SOL]querido [MIm]hermano\ny [LAm]alabemos [RE]al [SOL]Señor"
     ]
   },
   {
@@ -3277,14 +3277,19 @@
   },
   {
     "titulo": "Venimos a ti oh Señor",
-    "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntas queremos agradecerte/",
+    "preview": "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte/",
     "slides": [
-      "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntas queremos agradecerte/</b>",
+      "<b>/Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte/</b>",
       "<b>Por darnos la vida, te agradecemos.</b><br><b>Por darnos la fe, te agradecemos.</b><br><b>Por darnos el gozo, te agradecemos.</b><br><b>Y por el amor que nos une</b>",
-      "<b>Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntas queremos agradecerte</b>"
+      "<b>Venimos a ti oh Señor,</b><br><b>con el alma llena de gozo,</b><br><b>y juntos queremos agradecerte</b>"
     ],
     "tono": "DO",
-    "carpeta": "V"
+    "carpeta": "",
+    "acordes": [
+      "/Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte/",
+      "Por darnos la vida, te agradecemos.\nPor darnos la fe, te agradecemos.\nPor darnos el gozo, te agradecemos.\nY por el amor que nos une",
+      "Venimos a ti oh Señor,\ncon el alma llena de gozo,\ny juntos queremos agradecerte"
+    ]
   },
   {
     "titulo": "Ver tu faz mi alma anhela",
