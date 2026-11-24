@@ -288,6 +288,47 @@
       line-height: 1.3;
     }
 
+    /* ── Acordes en 2 columnas (tablets: ancho >= 768px). Solo modo "Con acordes" ── */
+    .fs-cols-sep, #fs-cols-btn { display: none; }
+    @media (min-width: 768px) {
+      #fso.modo-acordes .fs-cols-sep { display: inline-block; }
+      #fso.modo-acordes #fs-cols-btn { display: inline-block; font-size: 11px; font-weight: 600; white-space: nowrap; padding: 3px 9px; }
+      #fso.modo-acordes #fs-cols-btn.activo { color: #7eb8f7; border-color: #7eb8f7; }
+
+      /* Con 2 columnas el grupo A− A A+ sube a la barra superior (puede pasar a una 2.ª fila si no entra) */
+      #fso.modo-acordes.dos-cols #fs-top { flex-wrap: wrap; row-gap: .4rem; }
+      #fso.modo-acordes.dos-cols #fs-top #fs-size-ctrl { order: 0; margin-left: auto; flex-wrap: wrap; }
+
+      /* El contenido ocupa toda el área visible y fluye en columnas con scroll horizontal */
+      #fso.modo-acordes.dos-cols #fs-center {
+        flex: 1; height: auto; min-height: 0; padding: 0;
+        display: block; position: relative; overflow: hidden;
+      }
+      #fso.modo-acordes.dos-cols #fs-content {
+        position: absolute; inset: 0; box-sizing: border-box;
+        width: auto; max-width: none; height: auto;
+        padding: 1rem 1.25rem;
+        column-width: var(--fs-colw, calc((100vw - 5rem) / 2));  /* JS lo ajusta para que entren exactamente 2 */
+        column-gap: 2.5rem;
+        column-fill: auto;
+        column-rule: 1px solid #2a2a2a;
+        overflow-x: auto; overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        -webkit-overflow-scrolling: touch;
+      }
+      #fso.modo-acordes.dos-cols #fs-content .slide-divider { margin: 1em 0; }
+
+      /* Barra inferior siempre visible (aunque en pantallas grandes suela estar oculta), solo navegación entre canciones */
+      #fso.modo-acordes.dos-cols.con-nav #fs-bottom { display: flex !important; }
+      #fso.modo-acordes.dos-cols #fs-dots { display: none !important; }
+      #fso.modo-acordes.dos-cols .fs-snb {
+        font-size: 22px; padding: .45rem 1.4rem;
+        border: 1px solid #444; border-radius: 12px; color: #bbb;
+      }
+      #fso.modo-acordes.dos-cols .fs-snb:hover:not(:disabled) { color: #fff; border-color: #777; }
+    }
+
     /* Botones laterales de diapositiva */
     .fs-side-btn {
       position: fixed; top: 50%; transform: translateY(-50%);
@@ -1196,6 +1237,10 @@
           <span class="help-text">Las canciones con tono definido muestran controles de <b>transposición</b> (▲▼) para subir o bajar semitonos en el momento, sin modificar nada permanente.</span>
         </div>
         <div class="help-row">
+          <span class="help-icon">&#8862;</span>
+          <span class="help-text"><b>2 columnas</b> (solo tablets, en <b>Con acordes</b>): el botón <b>⊞ 2 columnas</b> junto a los controles de tamaño reparte la canción en dos columnas; si es larga, seguí deslizando hacia los costados. En ese modo se cambia de canción con los botones <b>◀ ▶</b> de abajo (el deslizamiento queda para el scroll). El botón <b>⊟ 1 columna</b> vuelve a la vista normal y la elección se recuerda.</span>
+        </div>
+        <div class="help-row">
           <span class="help-icon">&#8722;</span>
           <span class="help-text">El botón <b>−</b> (minimizar) te deja volver al cancionero sin cerrar la proyección. Podés retomarla con el botón <b>▶ Retomar</b>.</span>
         </div>
@@ -1285,6 +1330,8 @@
       <button id="fs-lh-up" title="Aumentar interlineado">&#8801;&#43;</button>
       <span style="display:inline-block;width:1px;height:16px;background:#333;margin:0 4px"></span>
       <button id="fs-mayus" title="Convertir a mayúsculas">AA</button>
+      <span class="fs-cols-sep" style="width:1px;height:16px;background:#333;margin:0 4px"></span>
+      <button id="fs-cols-btn" title="Alternar entre 1 y 2 columnas">&#8862; 2 columnas</button>
       <span id="fs-video-ctl">
         <span class="fs-sep"></span>
         <button id="fs-video-btn" title="Elegir video o imagen de fondo (solo en esta sesión, no se guarda)">&#127916;</button>
@@ -1424,6 +1471,14 @@ let activeFilter = "alabanza";
 let mostrarAcordes = false;
 let fsMinimizado = false;
 let fsMostrarAcordes = false;
+// Acordes en 2 columnas (solo tablets, ancho >= 768 px). La preferencia se recuerda aunque se use en pantallas chicas.
+const LS_COLS = "cancionero_fs_cols";
+const COLS_MIN_ANCHO = 768;
+let fsDosCols = false;
+try { fsDosCols = localStorage.getItem(LS_COLS) === "1"; } catch(e) {}
+let fsSizeHome = null;      // dónde estaba #fs-size-ctrl antes de subirlo a la barra superior
+let fsColsTimer = null;     // temporizador del "encastre" de columnas
+let fsTocando = false;      // dedo apoyado en el contenido
 let fsConAcordes = false;
 
 // ── Transposición ──────────────────────────────────────────────
@@ -1676,6 +1731,8 @@ function aplicarFontSize() {
   document.getElementById("fs-content").style.lineHeight = fsLineHeight;
   // Botón reset: apagado si estamos en automático
   document.getElementById("fs-size-reset").classList.toggle("auto", fsSizeOffset === 0);
+  // Con 2 columnas el texto se vuelve a repartir solo; luego se re-alinea el scroll horizontal
+  if (fsDosColsActivas()) requestAnimationFrame(fsColsSnap);
 }
 
 document.getElementById("fs-size-down").addEventListener("click", () => {
@@ -2423,12 +2480,92 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
+// ── Acordes en 2 columnas (tablets) ────────────────────────────
+function fsDosColsActivas() { return fsMostrarAcordes && fsDosCols && window.innerWidth >= COLS_MIN_ANCHO; }
+function fsColsBloqueaSwipe() {
+  // En 2 columnas el gesto horizontal es scroll; no debe cambiar de canción
+  return document.getElementById("fso").style.display === "flex" && fsDosColsActivas();
+}
+function fsColsReiniciarScroll() {
+  // En 2 columnas el desplazamiento puede estar en #fs-center o en #fs-content: se resetean ambos, vertical y horizontal
+  const c = document.getElementById("fs-center"), t = document.getElementById("fs-content");
+  c.scrollTop = 0; c.scrollLeft = 0; t.scrollTop = 0; t.scrollLeft = 0;
+}
+// Ajusta el ancho de columna para que entren exactamente 2 por pantalla
+function fsColsMedir() {
+  const c = document.getElementById("fs-content");
+  const cs = getComputedStyle(c);
+  const gap = parseFloat(cs.columnGap) || 40;
+  const w = c.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+  if (w <= 0) return;
+  c.style.setProperty("--fs-colw", ((w - gap) / 2 - 0.5) + "px");   // -0,5px: evita que el redondeo deje 1 sola columna
+}
+// "Encastre": si el scroll horizontal queda a medias, alinea a la columna más cercana
+function fsColsSnap() {
+  if (!fsDosColsActivas() || fsTocando) return;
+  const c = document.getElementById("fs-content");
+  const cs = getComputedStyle(c);
+  const gap = parseFloat(cs.columnGap) || 40;
+  const w = c.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+  const paso = (w + gap) / 2;     // ancho de una columna + el espacio entre columnas
+  if (paso <= 0) return;
+  const max = c.scrollWidth - c.clientWidth;
+  const destino = Math.max(0, Math.min(Math.round(c.scrollLeft / paso) * paso, max));
+  if (Math.abs(destino - c.scrollLeft) > 1) c.scrollTo({ left: destino, behavior: "smooth" });
+}
+function fsColsAgendarSnap() {
+  clearTimeout(fsColsTimer);
+  fsColsTimer = setTimeout(fsColsSnap, 140);
+}
+// Sincroniza clase, etiqueta del botón y ubicación de los controles (se llama al renderizar y al rotar/redimensionar)
+function fsColsSync() {
+  const fso = document.getElementById("fso");
+  const activas = fsDosColsActivas();
+  fso.classList.toggle("dos-cols", activas);
+  fso.classList.toggle("con-nav", activas && !!viewerQueue && viewerQueue.length > 1);
+  const btn = document.getElementById("fs-cols-btn");
+  btn.innerHTML = activas ? "&#8863; 1 columna" : "&#8862; 2 columnas";   // la etiqueta indica la ACCIÓN
+  btn.classList.toggle("activo", activas);
+
+  // El grupo de controles se mueve como un bloque (sin duplicar elementos ni listeners)
+  const ctrl = document.getElementById("fs-size-ctrl");
+  const top = document.getElementById("fs-top");
+  if (activas) {
+    if (ctrl.parentElement !== top) {
+      fsSizeHome = ctrl.parentElement;
+      top.insertBefore(ctrl, document.getElementById("fs-minimize"));
+    }
+    fsColsMedir();
+    requestAnimationFrame(fsColsSnap);
+  } else if (fsSizeHome) {
+    if (ctrl.parentElement !== fsSizeHome) fsSizeHome.insertBefore(ctrl, fsSizeHome.firstChild);
+    fsSizeHome = null;
+    document.getElementById("fs-content").style.removeProperty("--fs-colw");
+  }
+}
+document.getElementById("fs-cols-btn").addEventListener("click", () => {
+  fsDosCols = !fsDosColsActivas();   // el botón muestra la acción, así que se invierte lo que se está viendo
+  try { localStorage.setItem(LS_COLS, fsDosCols ? "1" : "0"); } catch(e) {}
+  fsColsReiniciarScroll();
+  fsColsSync();
+});
+(function initFsCols() {
+  const c = document.getElementById("fs-content");
+  c.addEventListener("scroll", () => { if (fsDosColsActivas()) fsColsAgendarSnap(); }, { passive: true });
+  c.addEventListener("touchstart", () => { fsTocando = true; }, { passive: true });
+  const soltar = () => { fsTocando = false; if (fsDosColsActivas()) fsColsAgendarSnap(); };
+  c.addEventListener("touchend", soltar, { passive: true });
+  c.addEventListener("touchcancel", soltar, { passive: true });
+})();
+
 function renderFSNewSong() {
   // En móvil y en modo acordes desktop: volver al tope al cambiar de canción
   if (isMobile() || fsMostrarAcordes) {
     document.getElementById("fs-center").scrollTop = 0;
   }
+  if (fsMostrarAcordes) fsColsReiniciarScroll();
   renderFS();
+  if (fsMostrarAcordes) fsColsReiniciarScroll();   // otra vez, ya con el contenido nuevo
 }
 
 function buildFullSongHtml(songIdx, conAcordes, offset) {
@@ -2472,6 +2609,7 @@ function renderFS() {
   aplicarFontSize();
   actualizarMayusPC();
   fsVideoActualizar();
+  fsColsSync();
 
   // Controles de transposición en fullscreen
   actualizarCtrlTransp(song?.titulo || "", song?.tono || "");
@@ -2607,7 +2745,7 @@ document.getElementById("fs-ps").addEventListener("click", () => goSong(-1));
 document.getElementById("fs-ns").addEventListener("click", () => goSong(1));
 
 window.addEventListener("resize", () => {
-  if (document.getElementById("fso").style.display === "flex") { aplicarFontSize(); fsVideoActualizar(); }
+  if (document.getElementById("fso").style.display === "flex") { aplicarFontSize(); fsVideoActualizar(); fsColsSync(); }
 });
 
 document.addEventListener("keydown", e => {
@@ -2637,6 +2775,7 @@ function onTouchStart(e) {
   touchStartY = e.touches[0].clientY;
 }
 function onTouchEnd(e) {
+  if (fsColsBloqueaSwipe()) return;   // 2 columnas: el gesto horizontal es scroll, no cambia de canción
   const dx = e.changedTouches[0].clientX - touchStartX;
   const dy = e.changedTouches[0].clientY - touchStartY;
   if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) < Math.abs(dy) * SWIPE_RATIO) return;
