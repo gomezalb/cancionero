@@ -1924,6 +1924,15 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
 }));
 
 // ── Cancionero ─────────────────────────────────────────────────
+// Categoría que se muestra en cada canción. "carpeta" mezcla dos cosas: las letras A–Y (orden alfabético de las
+// canciones de alabanza) y las categorías reales. Misma regla que usan los filtros de arriba.
+function categoriaDe(c) {
+  const k = String(c.carpeta || "").trim();
+  if (k === "Himnos") return "Himnos";
+  if (k === "Navidad") return "Navidad";
+  if (k === "Escuela bíblica" || k === "Escuela Biblica") return "Escuela bíblica";
+  return "Alabanza / Adoración";   // letras A–Y, "Alabanza" y "Nuevas"
+}
 function renderList() {
   const q = norm(query);
   const filtered = SONGS.filter(c => {
@@ -1953,7 +1962,7 @@ function renderList() {
     card.innerHTML = `
       <div class="sc-info">
         <div class="st">${hlTexto(c.titulo, query)}${c.acordes ? ' <span style="color:#7eb8f7;font-size:12px">♫</span>' : ""}</div>
-        <div class="sm">${c.tono ? `<span style="color:var(--green-tx);font-weight:500">${c.tono}</span> &middot; ` : ""}Carpeta ${c.carpeta} &middot; ${c.slides.length} diapositiva${c.slides.length !== 1 ? "s" : ""}</div>
+        <div class="sm">${c.tono ? `<span style="color:var(--green-tx);font-weight:500">${c.tono}</span> &middot; ` : ""}${categoriaDe(c)} &middot; ${c.slides.length} diapositiva${c.slides.length !== 1 ? "s" : ""}</div>
         ${previewHtml}
       </div>
       <button class="add-btn">${inL ? "&#8722;" : "&#43;"}</button>`;
